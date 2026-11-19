@@ -75,7 +75,6 @@ def render_scores(task, condition, title):
               </dl>
               <details class="score-checklist">
                 <summary>View all {count} rubric scores</summary>
-                <p>Full credit earns 1. Partial and no credit earn 0. Unresolved Harbor verdicts are unscored.</p>
                 <table aria-label="Rubric scores — {escape(title)}">
                   <thead><tr><th scope="col">Outcome criterion</th><th scope="col">Harbor RewardKit<span>gemini-4-carbon</span></th><th scope="col">Codex<span>GPT-6.2 Astra</span></th></tr></thead>
                   <tbody>{"".join(rows)}</tbody>

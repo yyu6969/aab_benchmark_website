@@ -305,8 +305,7 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .score-totals dt, .score-pending { font: .875rem/1.5 var(--sans); color: var(--muted); }
 .score-totals dd { font-variant-numeric: tabular-nums; }
 .score-checklist summary { width: fit-content; color: var(--accent); cursor: pointer; font-size: .875rem; }
-.score-checklist p { margin: .75rem 0; font: .875rem/1.5 var(--sans); color: var(--muted); }
-.score-checklist table { width: 100%; table-layout: fixed; border-collapse: collapse; font: 1rem/1.5 var(--sans); }
+.score-checklist table { margin-top: .75rem; width: 100%; table-layout: fixed; border-collapse: collapse; font: 1rem/1.5 var(--sans); }
 .score-checklist th, .score-checklist td { text-align: left; vertical-align: top; padding: .65rem .4rem; border-top: 1px solid var(--border); overflow-wrap: anywhere; }
 .score-checklist thead th { background: var(--subtle); font-size: .875rem; }
 .score-checklist thead th:first-child { width: 59%; }
