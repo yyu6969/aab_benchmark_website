@@ -122,7 +122,7 @@ def docx_preview(path):
         return body, revisions
 
 
-def markdown_preview(text, inline, prose):
+def markdown_preview(text, inline, prose, heading_offset=1):
     sections, paragraph = [], []
 
     def flush():
@@ -134,7 +134,7 @@ def markdown_preview(text, inline, prose):
         heading = re.match(r"^(#{1,6})\s+(.+)$", line)
         if heading:
             flush()
-            level = min(len(heading.group(1)) + 1, 6)
+            level = min(len(heading.group(1)) + heading_offset, 6)
             sections.append(f"<h{level}>{inline(heading.group(2))}</h{level}>")
         else:
             paragraph.append(line)

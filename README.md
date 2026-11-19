@@ -12,6 +12,8 @@ Small originals and full-length 540p MP4 and WebM video previews are included in
 
 Each task page includes its tutorial recording, measured duration, original software, and open-source benchmark application. The player streams the original MP4 from the repository’s `tutorial-videos-v1` release. Task slugs in `tutorial-videos.json` map the recordings and software to their pages.
 
+Expand **Reference guidance** beneath a video to read its walkthrough or download the Markdown. The public copies of the ten `reference_guidance.md` files are in `assets/tutorial-guidance/`, named by task slug. The Salesforce guide redacts the account-recovery answer.
+
 1. Push the project to a GitHub repository on `main` or `master`.
 2. In **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source.
 3. Open **Actions → Deploy task website to GitHub Pages** and run the workflow, or push a commit to trigger it.

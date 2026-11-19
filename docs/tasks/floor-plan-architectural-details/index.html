@@ -34,7 +34,8 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html#tasks">Tasks</a></li><li>CAD &amp; architecture</li><li aria-current="page">Task 10</li></ol></nav>
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> TASK 10 / 10</p>
         <h1>Draft a Floor Plan and Architectural Details</h1>
-        <figure class="tutorial">
+        <div class="tutorial-block">
+      <figure class="tutorial">
         <video controls playsinline preload="none" poster="../../assets/tutorial-posters/floor-plan-architectural-details.jpg" aria-labelledby="tutorial-title">
           <source src="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/floor-plan-architectural-details.mp4" type="video/mp4">
         </video>
@@ -48,6 +49,271 @@
           <a class="text-link" href="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/floor-plan-architectural-details.mp4" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download video</a>
         </figcaption>
       </figure>
+      <details class="tutorial-guidance" id="reference-guidance">
+        <summary>Reference guidance</summary>
+        <div class="guidance-body prose">
+          <a class="text-link" href="../../assets/tutorial-guidance/floor-plan-architectural-details.md" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download guidance (.md)</a>
+          <h3>Architectural Floor Plan Construction, Dynamic Block Authoring, Multi-Scale Layouts, and Publication</h3>
+
+<h4>Overall Objective</h4>
+<p>In Autodesk AutoCAD 2019, working within <code>floor plan exercise.dwg</code>, construct a complete multi-unit architectural floor plan from initial perimeter drafting to final multi-scale presentation layouts and PDF publication. The workflow encompasses configuring decimal meter units and precision drafting grid settings; drawing double-line exterior walls and interior partition layouts; drafting elevator shaft geometry; defining static and dynamic architectural blocks (single swing doors with dynamic flip, symmetrical double doors, restroom fixtures with dual-axis flips, and stretchable windows); structuring project layers with standardized colors; drafting detailed staircase flights; placing room designation labels with custom Candara typography; setting up paper space layouts with scaled viewports (1:200, 1:16, 1:10) and an annotative title block; applying viewport layer overrides; adding linear and continuous exterior and detail dimensions; and publishing borderless PDF sheets.</p>
+<hr>
+<h4>1. Project Setup, Units, Grid Spacing, and Wall Linework</h4>
+
+<h5>Drawing Units and Drafting Environment</h5>
+<ul>
+<li>Open the Drawing Units dialog using the <code>UNITS</code> command and configure:
+<ul>
+<li><strong>Length Type:</strong> Decimal
+</li>
+<li><strong>Insertion Scale (Units to scale inserted content):</strong> Meters
+</li>
+<li><strong>Precision:</strong> <code>0.0000</code> (or <code>0.00</code>)
+</li></ul>
+</li>
+<li>On the AutoCAD status bar, enable <strong>Grid Mode</strong> (<code>&lt;Grid on&gt;</code>) and <strong>Snap Mode</strong> (<code>&lt;Snap on&gt;</code>).
+</li>
+<li>Open the Drafting Settings dialog (<code>DSETTINGS</code>) under the <strong>Snap and Grid</strong> tab and set:
+<ul>
+<li><strong>Snap X spacing:</strong> <code>0.01</code>
+</li>
+<li><strong>Snap Y spacing:</strong> <code>0.01</code>
+</li>
+<li><strong>Grid X spacing:</strong> <code>0.01</code>
+</li>
+<li><strong>Grid Y spacing:</strong> <code>0.01</code>
+</li></ul>
+</li></ul>
+<h5>Exterior Wall Contour</h5>
+<ul>
+<li>Activate the polyline command (<code>PLINE</code>) and draw the closed exterior building perimeter, beginning with a <code>3.30</code> m horizontal segment along the 0° polar tracking axis, continuing around the perimeter profile, and closing the polyline back to its origin vertex (<code>Close</code> / <code>c</code>).
+</li>
+<li>Execute the <code>OFFSET</code> command with an offset distance of <code>0.30</code> m and offset the closed perimeter polyline inward to establish a continuous 0.30 m double-line exterior wall thickness.
+</li></ul>
+<h5>Interior Partitions, Angled Junctions, and Mirrored Corridors</h5>
+<ul>
+<li><strong>Upper Horizontal Dividing Wall:</strong> Activate <code>LINE</code>, acquire an Object Snap Tracking reference from the upper-right interior wall corner, track downward along the inner vertical wall by <code>3.45</code> m to establish the start point, and extend horizontally along 180° across the plan to intersect the opposite wall boundary.
+</li>
+<li><strong>Upper Vertical Partition:</strong> Activate <code>LINE</code>, track horizontally to the left from the upper-right interior corner along the upper inner wall by <code>3.75</code> m, draw vertically downward at 90°, and snap to the horizontal interior dividing wall. Offset this line by <code>0.10</code> m to the left to establish wall thickness, and erase any accidental extra offset line segment.
+</li>
+<li><strong>Central Vertical Wall &amp; Angled Corner Junction:</strong> Snap to the horizontal interior wall (near coordinates <code>1866.25, 1100.55</code>) and draw a <code>2.80</code> m vertical line upward at 90°. Offset this segment <code>0.30</code> m to the left. At the junction, draw a diagonal line segment at approximately 133° (~0.40 m length), offset it <code>0.30</code> m toward the lower right, and stretch its top endpoint grip along the extension line until it intersects the vertical wall line.
+</li>
+<li><strong>Junction Cleanup:</strong> Select and delete the two obsolete intersecting line segments inside the upper corner junction.
+</li>
+<li><strong>Symmetrical Corridor Generation:</strong> Execute the <code>MIRROR</code> command, select the 4 corner wall objects, define the mirror line using the Midpoint snap of the adjacent horizontal wall tracked vertically along 90°, and retain source objects (<code>No</code> to erase source objects).
+</li>
+<li><strong>Corridor Doorway Opening:</strong> Execute <code>TRIM</code> to trim away the horizontal wall segment between the two vertical wall extensions.
+</li></ul>
+<h5>Interior Room Bays and Boundary Partitions</h5>
+<ul>
+<li><strong>Partition Offsets:</strong> Offset vertical wall lines to the right at distances of <code>2.50</code> m and <code>3.10</code> m to define interior room bays.
+</li>
+<li><strong>Extend Partitions:</strong> Execute <code>EXTEND</code> using the bottom inner boundary polyline as the boundary edge, and extend the two pairs of vertical lines downward to terminate precisely at the lower boundary.
+</li>
+<li><strong>Lower Room Corner:</strong> Activate <code>LINE</code>, track downward <code>2.55</code> m from the upper wall, draw vertically downward <code>2.50</code> m, and then horizontally to the right <code>2.55</code> m along 0°. Convert these two perpendicular segments into a single polyline using <code>JOIN</code> (<code>2 objects converted to 1 polyline</code>). Offset the joined polyline <code>0.10</code> m for wall thickness, and trim intersecting wall lines at the corner junction.
+</li></ul>
+<h5>Layout Repositioning and Lift Shaft Geometry</h5>
+<ul>
+<li>Select all floor plan objects (56 objects) using a crossing window and execute <code>MOVE</code>, picking the upper-left corner vertex as the base point to reposition the layout comfortably on the drafting grid.
+</li>
+<li>Ensure 2D Object Snap (<code>&lt;Osnap on&gt;</code>) is active, navigate to the designated lift area, and construct the lift geometry using <code>RECTANG</code>:
+<ul>
+<li>Outer shaft enclosure: <code>1.80</code> m width by <code>-1.80</code> m height.
+</li>
+<li>Corner offset guide: <code>0.20</code> m by <code>0.20</code> m rectangle at the upper-left corner.
+</li>
+<li>Internal cab rectangle with crossed diagonal lines (<code>X</code>) connecting opposing vertices to complete the architectural elevator shaft symbol.
+</li></ul>
+</li></ul>
+<hr>
+<h4>2. Reusable Block Library Authoring and Dynamic Parameters</h4>
+
+<h5>Standard Single Door (<code>door standard</code>)</h5>
+<ul>
+<li><strong>Geometry Construction:</strong> In the door drafting workspace, create a <code>0.05</code> m wide by <code>0.10</code> m high rectangle for the left jamb (<code>RECTANG</code>). Copy the jamb horizontally to the right with a displacement distance of <code>0.95</code> m to create the right jamb (<code>COPY</code>). Draw a <code>0.90</code> m vertical line upward from the top-right corner of the left jamb for the door leaf (<code>LINE</code>). Construct a 90° door swing arc using the Start, Center, End method (<code>ARC</code>) connecting the door leaf endpoint to the inner corner of the right jamb.
+</li>
+<li><strong>Block Creation:</strong> Open the Block Definition dialog (<code>BLOCK</code>), name the block <code>door standard</code>, select the 4 door objects, and specify the insertion base point at the lower-left corner of the left jamb.
+</li>
+<li><strong>Dynamic Flip Parameter:</strong> Open <code>door standard</code> in the Block Editor (<code>BEDIT</code>). Add a Flip parameter (<code>Flip state1</code>) with its reflection line starting at the midpoint of the bottom threshold line and tracking vertically along 90°. Assign a Flip action (<code>BACTION</code>) associated with <code>Flip state1</code>, selecting all door geometry entities. Save block changes (<code>_BSAVE</code>) and close the Block Editor (<code>_BCLOSE</code>). Test the triangular flip grip in model space.
+</li>
+<li><strong>Door Population:</strong> Insert <code>door standard</code> into wall openings. Use <code>MIRROR</code> vertically and horizontally to generate 4 swing orientations, rotate a copy by 270° using <code>ROTATE</code> (Copy option) to generate vertical door symbols, and mirror door symbols across the central corridor into opposing doorways.
+</li>
+<li><strong>Angled Corridor Fitting:</strong> At the angled corridor opening, remove any existing door, delete the obsolete horizontal wall segment, stretch the top grip of the diagonal wall line northwest along 135° (~0.08 m) to accommodate the standard opening width, and insert <code>door standard</code> on the <code>doors</code> layer.
+</li></ul>
+<h5>Symmetrical Double Door (<code>double door</code>)</h5>
+<ul>
+<li>Reset the UCS to World (<code>WCS</code>). In the double door drafting area, construct one door leaf: jamb rectangle (<code>0.05</code> m by <code>0.10</code> m), vertical leaf line, and a 90° arc of radius <code>0.70</code> m. Mirror the 3 leaf objects vertically across the swing arc endpoint (retaining source objects) to create the complete 6-object double-door assembly.
+</li>
+<li>Create a block definition named <code>double door</code> containing the 6 objects, setting its insertion base point at the bottom corner of the right jamb.
+</li></ul>
+<h5>Dynamic Window Block (<code>windows</code>)</h5>
+<ul>
+<li>Draw a <code>0.90</code> m by <code>0.08</code> m rectangle on layer <code>windows</code> (<code>RECTANG</code>). Switch the active layer to <code>0</code> and define block <code>windows</code> from the 6 window geometry entities, specifying the lower-left corner as the insertion base point.
+</li>
+<li>Open <code>windows</code> in the Block Editor. Add a horizontal Linear parameter (<code>Distance1</code>) across the bottom width. Assign a Stretch action associated with the right parameter point, defining a stretch frame enclosing the right side and selecting the 4 rightward objects. Save and close the Block Editor.
+</li>
+<li>Test dynamic behavior on the canvas by stretching instances horizontally to <code>1.20</code> m and <code>1.36</code> m using the dynamic grip.
+</li></ul>
+<h5>Restroom Compartment and Fixture Block (<code>toilet</code>)</h5>
+<ul>
+<li><strong>Enclosure Construction:</strong> Using <code>PLINE</code>, draw perpendicular walls measuring <code>1.00</code> m vertical and <code>1.40</code> m horizontal. Apply <code>CHAMFER</code> with a distance of <code>0.25</code> m on both segments. Join the 3 segments into a single polyline (<code>JOIN</code>) and offset it by <code>0.10</code> m for double-line thickness.
+</li>
+<li><strong>Fixture Insertion:</strong> Using DesignCenter (<code>bath furnitures.dwg</code>), insert <code>toilet 3</code> and <code>sink 8</code> (scale 1). Move the sink into the inner chamfered corner. Rotate <code>toilet 3</code> by 270° and position it adjacent to the sink. Insert a <code>door standard</code> block at the entrance corner snap.
+</li>
+<li><strong>Block Definition (<code>toilet</code>):</strong> Create block <code>toilet</code> from the 7 fixture and enclosure objects, setting its insertion base point at the bottom-left endpoint snap.
+</li>
+<li><strong>Dual-Axis Dynamic Flips:</strong> In the Block Editor for <code>toilet</code>, add:
+<ul>
+<li><code>Flip state1</code>: vertical reflection line along the bottom boundary.
+</li>
+<li><code>Flip state2</code>: horizontal reflection line near the fixture base.
+</li>
+<li>Assign a Flip action to <code>Flip state2</code> selecting the fixture geometry. Save and close.
+</li></ul>
+</li>
+<li><strong>Restroom Deployment:</strong> Insert <code>toilet</code> blocks into private restrooms along the corridor. Relocate partition enclosures around lower fixtures with added door swing arcs. Insert private toilet dynamic blocks, flip horizontally as needed, snap base grips to horizontal/vertical partition intersections, and rotate stall toilet fixtures by 90°.
+</li></ul>
+<hr>
+<h4>3. Layer Management, Color Properties, and Staircase Detailing</h4>
+
+<h5>Layer Configuration</h5>
+<p>In the Layer Properties Manager (<code>LAYER</code>), configure the following drawing layers:</p>
+<ul>
+<li><code>walls</code>: Color White / Index 7 (assign existing floor plan wall linework to this layer).
+</li>
+<li><code>doors</code>: Color Index 140 (cyan), subsequently updated to Color Index 51 (yellow). Assign all door blocks to this layer.
+</li>
+<li><code>staircase</code>: Color Index 191 (purple); set as active layer.
+</li>
+<li><code>windows</code>: Standard drafting layer for window components.
+</li>
+<li><code>text labels</code>: Dedicated layer for all room designation typography.
+</li>
+<li><code>dimensions</code>: Color Index 81 (green); set default dimension layer (<code>DIMLAYER</code>) to <code>dimensions</code>.
+</li>
+<li><code>viewport</code>: Color Index 7 (white); set the Plot property to <strong>No Plot</strong> (disabled printer icon).
+</li></ul>
+<h5>Staircase Construction and Duplication</h5>
+<ul>
+<li>Set line color to <code>ByLayer</code>.
+</li>
+<li>Draw a <code>1.10</code> m horizontal tread line positioned <code>1.30</code> m from the upper-left wall corner.
+</li>
+<li>Use <code>OFFSET</code> with an offset distance of <code>0.25</code> m upward repeatedly to generate 8 parallel staircase treads.
+</li>
+<li>Mirror the 8 treads across a vertical axis defined from the bottom tread midpoint (retaining source treads).
+</li>
+<li>Draw an angled flight line across the right section and trim the 2 vertical bounding lines (<code>TRIM</code>).
+</li>
+<li>Copy the 21 staircase elements into the corridor area using the bottom edge midpoint as the base point (<code>COPY</code>).
+</li>
+<li>Mirror the right flight of the central staircase across its bottom midpoint and select <code>Yes</code> to erase source objects, properly orienting the landing flight.
+</li></ul>
+<hr>
+<h4>4. Typography, Text Formatting, and Annotative Dimensioning</h4>
+
+<h5>Room Designation Labels</h5>
+<ul>
+<li>In the Text Style dialog (<code>STYLE</code>), set the font for the <code>Standard</code> text style to <strong>Candara</strong> and click Apply.
+</li>
+<li>On layer <code>text labels</code>, create a single-line text label reading <code>common area</code> (<code>TEXT</code>) and copy it into each room across the floor plan.
+</li>
+<li>Use <code>TEXTEDIT</code> to update the room designations:
+<ul>
+<li>Public areas: <code>dinning area</code> (demonstrated spelling), <code>kitchen</code>, <code>office</code>, <code>stairs</code>
+</li>
+<li>Rental units: <code>unit 1</code>, <code>unit 2</code>, <code>unit 3</code>, <code>unit 4</code>, <code>unit 5</code>, <code>unit 6</code>, <code>unit 7</code>
+</li></ul>
+</li>
+<li>Isolate layer <code>text labels</code> (<code>LAYISO</code>). Open the Quick Properties palette, select all 13 text objects, and set:
+<ul>
+<li><strong>Height:</strong> <code>0.80</code>
+</li>
+<li><strong>Justify:</strong> <code>Right</code>
+</li></ul>
+</li>
+<li>Unisolate layers (<code>LAYUNISO</code>).
+</li>
+<li>Create a multiline text label (<code>MTEXT</code>) reading <code>disable bathroom</code> in the room adjacent to unit 5.
+</li></ul>
+<h5>Annotative Dimension Style (<code>Annotative meters</code>)</h5>
+<ul>
+<li>Set default dimension layer (<code>DIMLAYER</code>) to <code>dimensions</code>.
+</li>
+<li>In the Dimension Style Manager (<code>DIMSTYLE</code>), modify style <code>Annotative meters</code>:
+<ul>
+<li><strong>Symbols and Arrows tab:</strong> Center marks size <code>0.0025</code>, Break size <code>0.0038</code>.
+</li>
+<li><strong>Text tab:</strong> Text height <code>0.0015</code>, Offset from dim line <code>0.0005</code>.
+</li></ul>
+</li></ul>
+<h5>Exterior Wall Dimensions</h5>
+<ul>
+<li>Place a <code>1.44</code> m linear dimension (<code>DIMLINEAR</code>) above the top-right exterior wall of unit 4.
+</li>
+<li>Use <code>DIMCONTINUE</code> to place continuous dimensions across units 3 and 2 (consecutive segments: <code>2.49</code>, <code>1.36</code>, <code>1.55</code>, <code>1.20</code>, <code>0.90</code>, <code>0.50</code>, <code>0.90</code>, <code>1.20</code>, and <code>2.20</code> m).
+</li>
+<li>Select the continuous dimension string grips and shift the entire dimension line upward to clear the exterior wall perimeter.
+</li></ul>
+<hr>
+<h4>5. Sheet Layouts, Multi-Scale Viewports, Layer Overrides, and PDF Plotting</h4>
+
+<h5>Layout1 Page Setup and Main Viewport</h5>
+<ul>
+<li>Navigate to the <code>Layout1</code> tab. In the Page Setup Manager, modify <code>Layout1</code> to set the plot scale to <code>1000 mm = 1 unit</code>.
+</li>
+<li>In paper space, draw a rectangular sheet border inside the printable margin (<code>RECTANG</code>).
+</li>
+<li>In the Text Style dialog, create annotative styles:
+<ul>
+<li><code>Legend big</code>: Arial font, Annotative enabled, Paper Text Height <code>0.004</code>.
+</li>
+<li><code>legend small</code>: Arial font, Annotative enabled, Paper Text Height <code>0.002</code>.
+</li></ul>
+</li>
+<li>In the lower-right title block table, insert text:
+<ul>
+<li>Upper cells (using <code>Legend big</code>): <code>Project:</code>, <code>Location:</code>, <code>Drawing name:</code>
+</li>
+<li>Metadata cell (using <code>Standard</code> style with 1.5x line spacing): <code>Drawn:</code>, <code>Scale:</code>, <code>Date:</code>
+</li></ul>
+</li>
+<li>Create a rectangular layout viewport displaying the model space floor plan.
+</li>
+<li>Activate floating model space (<code>_.MSPACE</code>). Add a custom drawing scale <code>1:200</code> (1 paper unit = 200 drawing units) via <code>_SCALELISTEDIT</code> and set the viewport scale to <code>1:200</code>.
+</li></ul>
+<h5>Viewport Frame Hiding and PDF Output</h5>
+<ul>
+<li>Test-plot <code>Layout1</code> to <code>example.pdf</code> using plotter configuration <code>DWG To PDF.pc3</code>.
+</li>
+<li>Assign the layout viewport entity to the frozen <code>viewport</code> layer (with Plot disabled) to hide the visible rectangular border frame, and dismiss the layer warning dialog.
+</li>
+<li>Plot the borderless <code>Layout1</code> sheet to <code>example 2.pdf</code>.
+</li></ul>
+<h5>Viewport Layer Overrides (Layout1)</h5>
+<ul>
+<li>Activate model space in the <code>Layout1</code> viewport. In the Layer Properties Manager, apply viewport overrides:
+<ul>
+<li>Layer <code>Furnitures</code>: set <strong>VP Freeze</strong> to frozen (snowflake icon) and <strong>VP Color</strong> override to <code>164</code>.
+</li>
+<li>Layer <code>staircase</code>: set <strong>VP Color</strong> override to <code>194</code>.
+</li></ul>
+</li></ul>
+<h5>Architectural Details Layout Tab (<code>details</code>)</h5>
+<ul>
+<li>Right-click <code>Layout1</code>, select <strong>Move or Copy...</strong>, check <strong>Create a copy</strong>, position the copy after <code>Layout1</code>, and rename the tab to <code>details</code>.
+</li>
+<li><strong>Left Viewport (Door Detail):</strong> Activate model space inside the existing viewport, zoom in closely on the door detail, and set the viewport scale to <code>1:16</code>. Return to paper space (<code>_.PSPACE</code>), assign the viewport to layer <code>viewport</code>, and use its bottom-right grip to resize its width narrower horizontally.
+</li>
+<li><strong>Right Viewport (Architectural Detail):</strong> Draw a second rectangular layout viewport on the right half of the sheet. Activate floating model space, zoom into the architectural detail, and set its scale to <code>1:10</code>.
+</li>
+<li><strong>Detail Dimensions in Model Space:</strong> Switch to Model space and set the annotation scale (<code>CANNOSCALE</code>) to <code>1:16</code>. Add linear dimensions to the door swing geometry: <code>0.90</code> m vertical, <code>0.90</code> m horizontal, <code>0.10</code> m frame, and <code>0.05</code> m frame. Update the Model space annotation scale to <code>1:10</code>.
+</li>
+<li><strong>Viewport Color Overrides (<code>details</code> layout):</strong> On the <code>details</code> layout tab, activate floating model space in the left viewport (<code>1:16</code>) and set the <strong>VP Color</strong> override for layer <code>dimensions</code> to <code>86</code>. Activate the right viewport (<code>1:10</code>) and set its <strong>VP Color</strong> override for layer <code>dimensions</code> to <code>86</code>. Return to paper space to finalize the dual-detail presentation sheet.
+</li></ul>
+        </div>
+      </details>
+    </div>
         <p class="task-summary">Complete a ground-floor drawing and prepare scaled presentation sheets.</p>
         <div class="task-badges"><span class="badge category-badge">CAD &amp; architecture</span><a class="badge" href="#rubrics">38 outcome criteria</a><a class="badge" href="#support-materials">5 support files</a></div>
       </header>

@@ -34,7 +34,8 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html#tasks">Tasks</a></li><li>Data analysis</li><li aria-current="page">Task 06</li></ol></nav>
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> TASK 06 / 10</p>
         <h1>Prepare Survey Data and Frequency Analyses</h1>
-        <figure class="tutorial">
+        <div class="tutorial-block">
+      <figure class="tutorial">
         <video controls playsinline preload="none" poster="../../assets/tutorial-posters/survey-data-frequency-analyses.jpg" aria-labelledby="tutorial-title">
           <source src="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/survey-data-frequency-analyses.mp4" type="video/mp4">
         </video>
@@ -48,6 +49,164 @@
           <a class="text-link" href="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/survey-data-frequency-analyses.mp4" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download video</a>
         </figcaption>
       </figure>
+      <details class="tutorial-guidance" id="reference-guidance">
+        <summary>Reference guidance</summary>
+        <div class="guidance-body prose">
+          <a class="text-link" href="../../assets/tutorial-guidance/survey-data-frequency-analyses.md" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download guidance (.md)</a>
+          <p>Set up and populate a survey dataset in my open <code>Untitled3 [DataSet5]</code> (<code>*Untitled3 [DataSet5]</code>) workspace in IBM SPSS Statistics Data Editor—referencing the questionnaire in <code>Document1</code> in Microsoft Word (<code>&quot;Questionnaire on Teacher Emotional Support and Students&#x27; Emotional Engagement&quot;</code>)—and run <code>Frequencies</code> analyses on the demographic variables in IBM SPSS Statistics Viewer (<code>*Output2 [Document2]</code>), including updating the dataset and re-running the analysis after clearing a demographic cell value.</p>
+<h3>Workspace Context and Preparatory Actions</h3>
+<ul>
+<li>The work takes place in <code>*Untitled3 [DataSet5]</code> in IBM SPSS Statistics Data Editor, with analysis output generated in <code>*Output2 [Document2]</code> in IBM SPSS Statistics Viewer.
+</li>
+<li><code>Document1</code> in Microsoft Word contains the reference questionnaire (<code>&quot;Questionnaire on Teacher Emotional Support and Students&#x27; Emotional Engagement&quot;</code>, including a <code>&quot;Main Study&quot;</code> table). In the demonstration, <code>Document1</code> was briefly consulted for reference while naming the scale variables without modifying or saving any deliverable in Word.
+</li>
+<li>At the beginning of the demonstration, temporary placeholder data (<code>h</code>, <code>VAR00001</code>–<code>VAR00003</code>) pasted into <code>Untitled3 [DataSet5]</code> was deleted in <code>Variable View</code> via right-click -&gt; <code>Clear</code> so that variable definitions started from an empty grid. This cleanup is only needed if stray initial variables are present.
+</li></ul>
+<h3>1. Define Demographic and Questionnaire Variables in Variable View</h3>
+<p>In <code>Variable View</code> of <code>*Untitled3 [DataSet5]</code>, define 10 <code>Numeric</code> variables across rows 1 through 10 (retaining default <code>Width = 8</code>, <code>Missing = None</code>, <code>Columns = 8</code>, <code>Align = Right</code>, <code>Role = Input</code> unless noted):</p>
+<ul>
+<li><strong>Row 1 — <code>Gender_Plus</code></strong>
+<ul>
+<li><code>Name</code>: <code>Gender_Plus</code> <em>(demonstrated detail: initially typed as <code>Gender</code>, then updated to <code>Gender_Plus</code> after dismissing an <code>IBM SPSS Statistics 25</code> <code>&quot;Variable name contains an illegal character.&quot;</code> error dialog)</em>
+</li>
+<li><code>Decimals</code>: <code>0</code>
+</li>
+<li><code>Label</code>: <code>&quot;What is your age?&quot;</code> <em>(observed as <code>&quot;What is your age&quot;</code> while typing and confirmed as <code>&quot;What is your age?&quot;</code> in the <code>Frequencies</code> dialog and Statistics Viewer output, despite the variable name and gender value labels)</em>
+</li>
+<li><code>Values</code>: <code>1</code> = <code>&quot;Male&quot;</code>, <code>2</code> = <code>&quot;Female&quot;</code> (configured via the <code>Value Labels</code> dialog)
+</li>
+<li><code>Measure</code>: <code>Nominal</code>
+</li></ul>
+</li>
+<li><strong>Row 2 — <code>Country</code></strong>
+<ul>
+<li><code>Name</code>: <code>Country</code>
+</li>
+<li><code>Decimals</code>: <code>0</code>
+</li>
+<li><code>Label</code>: <code>&quot;What is your country?&quot;</code>
+</li>
+<li><code>Values</code>: <code>1</code> = <code>&quot;Nigeria&quot;</code>, <code>2</code> = <code>&quot;Ghana&quot;</code>, <code>3</code> = <code>&quot;UK&quot;</code>, <code>4</code> = <code>&quot;India&quot;</code> (configured via the <code>Value Labels</code> dialog)
+</li>
+<li><code>Measure</code>: <code>Nominal</code>
+</li></ul>
+</li>
+<li><strong>Row 3 — <code>Emotional_Teacher_Support</code></strong> (unpopulated construct header/placeholder variable)
+<ul>
+<li><code>Name</code>: <code>Emotional_Teacher_Support</code> <em>(initially mistyped as <code>acher_Support</code> before being corrected to <code>Emotional_Teacher_Support</code>)</em>
+</li>
+<li><code>Decimals</code>: <code>2</code> (default; not observed to be modified)
+</li>
+<li><code>Label</code>: empty
+</li>
+<li><code>Values</code>: <code>None</code>
+</li>
+<li><code>Measure</code>: <code>Unknown</code> (default; not modified)
+</li></ul>
+</li>
+<li><strong>Rows 4–6 — <code>EmoS1</code> (row 4), <code>EmoS2</code> (row 5), <code>EmoS3</code> (row 6)</strong> (Emotional Teacher Support scale items)
+<ul>
+<li><code>Name</code>: <code>EmoS1</code>, <code>EmoS2</code>, <code>EmoS3</code>
+</li>
+<li><code>Decimals</code>: <code>0</code> <em>(initially populated with default <code>2</code>, then set to <code>0</code> across rows 4–6)</em>
+</li>
+<li><code>Label</code>: empty
+</li>
+<li><code>Values</code>: 5-point Likert scale labels:
+<ul>
+<li><code>1</code> = <code>&quot;Strongly Disagree&quot;</code>
+</li>
+<li><code>2</code> = <code>&quot;Disagree&quot;</code>
+</li>
+<li><code>3</code> = <code>&quot;Neutral&quot;</code>
+</li>
+<li><code>4</code> = <code>&quot;Agree&quot;</code>
+</li>
+<li><code>5</code> = <code>&quot;Strongly Agree&quot;</code>
+</li></ul>
+<p><em>(Demonstrated method: entered via the <code>Value Labels</code> dialog on <code>EmoS1</code>, then copied from <code>EmoS1</code>&#x27;s <code>Values</code> cell using right-click <code>Copy</code> and pasted to the remaining items.)</em></p>
+</li>
+<li><code>Measure</code>: <code>Ordinal</code>
+</li></ul>
+</li>
+<li><strong>Row 7 — <code>Engagement</code></strong> (unpopulated construct header/placeholder variable)
+<ul>
+<li><code>Name</code>: <code>Engagement</code>
+</li>
+<li><code>Decimals</code>: <code>0</code> <em>(initially <code>2</code> upon creation; subsequently reflects integer formatting)</em>
+</li>
+<li><code>Label</code>: empty
+</li>
+<li><code>Values</code>: <code>None</code> <em>(Intermediate workflow state: the 5-point Likert labels copied from <code>EmoS3</code> were temporarily pasted into <code>Engagement</code>&#x27;s <code>Values</code> cell along with rows 8–10, and then all five labels <code>1</code> through <code>5</code> were removed via the <code>Value Labels</code> dialog <code>Remove</code> button to reset <code>Engagement</code> <code>Values</code> to <code>None</code>.)</em>
+</li>
+<li><code>Measure</code>: <code>Ordinal</code>
+</li></ul>
+</li>
+<li><strong>Rows 8–10 — <code>Eng1</code> (row 8), <code>Eng2</code> (row 9), <code>Eng3</code> (row 10)</strong> (Engagement scale items)
+<ul>
+<li><code>Name</code>: <code>Eng1</code>, <code>Eng2</code>, <code>Eng3</code>
+</li>
+<li><code>Decimals</code>: <code>0</code> <em>(initially <code>2</code> upon creation, then set to <code>0</code> across rows 8–10)</em>
+</li>
+<li><code>Label</code>: empty
+</li>
+<li><code>Values</code>: 5-point Likert scale labels (<code>1</code> = <code>&quot;Strongly Disagree&quot;</code>, <code>2</code> = <code>&quot;Disagree&quot;</code>, <code>3</code> = <code>&quot;Neutral&quot;</code>, <code>4</code> = <code>&quot;Agree&quot;</code>, <code>5</code> = <code>&quot;Strongly Agree&quot;</code>), copied from <code>EmoS3</code> and pasted into rows 8–10
+</li>
+<li><code>Measure</code>: <code>Ordinal</code>
+</li></ul>
+</li></ul>
+<h3>2. Populate Survey Response Data in Data View</h3>
+<p>Switch to <code>Data View</code> in <code>*Untitled3 [DataSet5]</code>. Leave the two construct columns (<code>Emotional_Teacher_Support</code> and <code>Engagement</code>) blank (system-missing <code>.</code>) across all cases, and populate rows 1 through 6 as follows:</p>
+<ul>
+<li><strong>Rows 1–3 (entered directly):</strong>
+<ul>
+<li><strong>Row 1:</strong> <code>Gender_Plus</code> = <code>1</code>, <code>Country</code> = <code>1</code>, <code>EmoS1</code> = <code>5</code>, <code>EmoS2</code> = <code>4</code>, <code>EmoS3</code> = <code>3</code>, <code>Eng1</code> = <code>4</code>, <code>Eng2</code> = <code>2</code>, <code>Eng3</code> = <code>1</code>
+</li>
+<li><strong>Row 2:</strong> <code>Gender_Plus</code> = <code>2</code>, <code>Country</code> = <code>4</code>, <code>EmoS1</code> = <code>2</code>, <code>EmoS2</code> = <code>1</code>, <code>EmoS3</code> = <code>5</code>, <code>Eng1</code> = <code>3</code>, <code>Eng2</code> = <code>2</code>, <code>Eng3</code> = <code>5</code>
+</li>
+<li><strong>Row 3:</strong> <code>Gender_Plus</code> = <code>2</code>, <code>Country</code> = <code>2</code>, <code>EmoS1</code> = <code>4</code>, <code>EmoS2</code> = <code>3</code>, <code>EmoS3</code> = <code>5</code>, <code>Eng1</code> = <code>1</code>, <code>Eng2</code> = <code>3</code>, <code>Eng3</code> = <code>4</code>
+</li></ul>
+</li>
+<li><em>(Demonstrated inspection detail: the <code>Value Labels</code> toolbar button was briefly toggled on—displaying descriptive text labels across all populated columns—and toggled back off to numeric display before pasting rows 4–6.)</em>
+</li>
+<li><strong>Rows 4–6 (populated via <code>Paste</code> starting at cell <code>(row 4, Gender_Plus)</code>):</strong>
+<ul>
+<li>Pasting at <code>(row 4, Gender_Plus)</code> populates rows 4 through 6 across the variable columns, with <code>Gender_Plus</code> directly observed as <code>1</code> in row 4, <code>2</code> in row 5, and <code>2</code> in row 6.
+</li>
+<li><em>Material uncertainty:</em> Because the <code>Gender_Plus</code> sequence in rows 4–6 (<code>1, 2, 2</code>) matches rows 1–3 (<code>1, 2, 2</code>) and no external window switch occurred before pasting, rows 4–6 were most plausibly populated by copying rows 1–3 and pasting them into rows 4–6 (duplicating rows 1–3). However, the copy action itself and the exact non-<code>Gender_Plus</code> values in rows 4–6 (<code>Country</code>, <code>EmoS1</code>–<code>EmoS3</code>, <code>Eng1</code>–<code>Eng3</code>) are not individually enumerated in the captured frame observations.
+</li></ul>
+</li></ul>
+<h3>3. Run Frequencies Analyses and Modify Cell <code>(row 5, Gender_Plus)</code></h3>
+<p>The demonstration performs two sequential <code>Frequencies</code> runs separated by a missing-value edit, followed by a final edit in <code>Data View</code>:</p>
+<ol>
+<li><strong>Initial <code>Frequencies</code> run (6 complete cases):</strong>
+<ul>
+<li>Open <code>Analyze</code> -&gt; <code>Descriptive Statistics</code> -&gt; <code>Frequencies...</code>.
+</li>
+<li>Move both demographic variables—<code>&quot;What is your age?&quot;</code> (<code>Gender_Plus</code>) and <code>&quot;What is your country?&quot;</code> (<code>Country</code>)—into the <code>Variable(s)</code> list, ensure <code>Display frequency tables</code> is checked, and click <code>OK</code>.
+</li>
+<li>This generates a <code>Statistics</code> summary table and frequency tables for <code>&quot;What is your age?&quot;</code> and <code>&quot;What is your country?&quot;</code> in <code>*Output2 [Document2]</code> in IBM SPSS Statistics Viewer (with <code>(row 5, Gender_Plus)</code> = <code>2</code>).
+</li></ul>
+</li>
+<li><strong>Clear <code>(row 5, Gender_Plus)</code> and re-run <code>Frequencies</code> (missing-value update):</strong>
+<ul>
+<li>Return to <code>*Untitled3 [DataSet5]</code> in the Data Editor and clear/delete the value <code>2</code> in cell <code>(row 5, Gender_Plus)</code>, leaving it blank (system-missing).
+</li>
+<li>Re-open the <code>Frequencies</code> dialog <em>(demonstrated via the <code>Recall recently used dialogs</code> toolbar button -&gt; <code>Frequencies</code>)</em> with <code>&quot;What is your age?&quot;</code> (<code>Gender_Plus</code>) and <code>&quot;What is your country?&quot;</code> (<code>Country</code>) in <code>Variable(s)</code> and <code>Display frequency tables</code> checked, and click <code>OK</code>.
+</li>
+<li>This appends a second set of <code>Frequencies</code> tables to <code>*Output2 [Document2]</code> reflecting 5 valid cases and 1 missing case for <code>&quot;What is your age?&quot;</code> (<code>Gender_Plus</code>) alongside 6 valid cases for <code>&quot;What is your country?&quot;</code> (<code>Country</code>).
+</li></ul>
+</li>
+<li><strong>Final edit in <code>Data View</code>:</strong>
+<ul>
+<li>Switch back to <code>*Untitled3 [DataSet5]</code> in the Data Editor and set cell <code>(row 5, Gender_Plus)</code> to <code>1</code> (<code>Male</code>), leaving <code>Gender_Plus</code> across rows 1–6 equal to <code>1, 2, 2, 1, 1, 2</code> at the end of the session without executing another <code>Frequencies</code> run <em>(trailing exploration of <code>Analyze</code> -&gt; <code>Classify</code> was closed without action)</em>.
+</li>
+<li><em>Scope uncertainty:</em> It is ambiguous whether the core task requires preserving both sequential <code>Frequencies</code> outputs in <code>*Output2 [Document2]</code> (complete 6-case output followed by the 1-missing-case output) plus the final edit <code>(row 5, Gender_Plus)</code> = <code>1</code> in Data View, or whether clearing <code>(row 5, Gender_Plus)</code> to illustrate missing-data output vs. setting <code>(row 5, Gender_Plus)</code> = <code>1</code> reflects live tutorial steps where either the missing-data output or the updated cell state was the primary objective.
+</li></ul>
+</li></ol>
+        </div>
+      </details>
+    </div>
         <p class="task-summary">Prepare survey records and compare complete and missing-response frequencies.</p>
         <div class="task-badges"><span class="badge category-badge">Data analysis</span><a class="badge" href="#rubrics">27 outcome criteria</a><a class="badge" href="#support-materials">1 support file</a></div>
       </header>

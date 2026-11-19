@@ -34,7 +34,8 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html#tasks">Tasks</a></li><li>Accounting</li><li aria-current="page">Task 03</li></ol></nav>
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> TASK 03 / 10</p>
         <h1>Reconcile a Business Bank Account</h1>
-        <figure class="tutorial">
+        <div class="tutorial-block">
+      <figure class="tutorial">
         <video controls playsinline preload="none" poster="../../assets/tutorial-posters/reconcile-business-bank-account.jpg" aria-labelledby="tutorial-title">
           <source src="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/reconcile-business-bank-account.mp4" type="video/mp4">
         </video>
@@ -48,6 +49,72 @@
           <a class="text-link" href="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/reconcile-business-bank-account.mp4" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download video</a>
         </figcaption>
       </figure>
+      <details class="tutorial-guidance" id="reference-guidance">
+        <summary>Reference guidance</summary>
+        <div class="guidance-body prose">
+          <a class="text-link" href="../../assets/tutorial-guidance/reconcile-business-bank-account.md" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download guidance (.md)</a>
+          <p>Reconcile my <code>Chase Bank 8145</code> account in my QuickBooks Online workspace (<code>HECTOR 2024 LLC</code>) for the statement period ending <code>01/31/2024</code> against my January 2024 Chase Bank statement PDF (<code>122354488145</code>), achieving a cleared balance of <code>$24,904.11</code> and a <code>$0.00</code> difference, and complete the reconciliation. In the demonstration, completing the reconciliation is followed by opening the resulting <code>Reconciliation report</code> for <code>Chase Bank 8145</code> (<code>Period Ending 01/31/2024</code>) and briefly opening and canceling its browser print preview, leaving the report displayed on screen.</p>
+<h3>Core Task Requirements and Expected Outcomes</h3>
+<ul>
+<li><strong>Target Application and Account</strong>: In my QuickBooks Online account for <code>HECTOR 2024 LLC</code>, reconcile the bank account <code>Chase Bank 8145</code> (which starts with a beginning balance of <code>$17,435.51</code>).
+</li>
+<li><strong>Statement Parameters</strong>:
+<ul>
+<li><strong>Ending balance</strong>: <code>$24,904.11</code> (<code>24,904.11</code>)
+</li>
+<li><strong>Ending date</strong>: <code>01/31/2024</code>
+</li></ul>
+</li>
+<li><strong>Transaction Clearing Criteria</strong>: Match and mark as cleared the transactions in QuickBooks Online that appear on the Chase Bank statement PDF for account <code>122354488145</code> covering <code>January 1 to January 31, 2024</code>. Across the <code>35</code> available transactions in the reconciliation workspace, the reconciled state clears <code>32</code> transactions in total:
+<ul>
+<li><strong>Cleared Payments</strong>: <code>30</code> payments totaling <code>$26,944.40</code> (explicitly observed to include <code>Check 1150</code> dated <code>12/30/2022</code> for <code>$1,000.00</code>, along with January 2024 statement-matching payment entries).
+</li>
+<li><strong>Cleared Deposits</strong>: <code>2</code> deposits totaling <code>$34,413.00</code> (explicitly observed to include the <code>01/01/2024</code> deposit for <code>$31,349.00</code>, plus one additional statement-matching deposit of <code>$3,064.00</code>).
+</li></ul>
+</li>
+<li><strong>Reconciliation Balance and Submission</strong>:
+<ul>
+<li>Reach a <strong>Cleared Balance</strong> of <code>$24,904.11</code>, matching the <strong>Statement Ending Balance</strong> of <code>$24,904.11</code> (<code>$17,435.51</code> beginning balance + <code>$34,413.00</code> deposits - <code>$26,944.40</code> payments = <code>$24,904.11</code>), and a <strong>Difference</strong> of <code>$0.00</code>.
+</li>
+<li>Finalize and submit the reconciliation (<code>Finish now</code>) so the account is officially reconciled for the period ending <code>01/31/2024</code>.
+</li></ul>
+</li>
+<li><strong>Post-Reconciliation Report View (Scope-Uncertain Outcome)</strong>:
+<ul>
+<li>After finishing the reconciliation, the demonstration opens and leaves displayed the QuickBooks Online <code>Reconciliation report</code> titled <code>HECTOR 2024 LLC Chase Bank 8145, Period Ending 01/31/2024</code>. Opening and leaving this report visible may have been a requested final view or optional post-completion verification by the demonstrator. By contrast, opening and canceling the browser print dialog produced no saved file or state change and is not an unconditional deliverable requirement.
+</li></ul>
+</li></ul>
+<h3>Demonstrated Workflow and Reference Execution Details</h3>
+<p>The following sequence describes how the demonstration accomplished the task, including transient intermediate balances and UI paths that serve as reference context rather than mandatory execution methods:</p>
+<ol>
+<li><strong>Navigating to Reconcile</strong>: Starting from the QuickBooks Online Home dashboard for <code>HECTOR 2024 LLC</code> (where the top search field incidentally contained <code>&#x27;expenses by&#x27;</code>), the demonstrator clicked the <code>Settings</code> gear icon in the top navigation bar and selected <code>Reconcile</code> under the <code>Tools</code> column (<code>https://app.qbo.intuit.com/app/reconcile</code>), opening the <code>Reconcile</code> page under <code>Transactions</code>. Equivalent navigation paths (such as via <code>Transactions</code> &gt; <code>Reconcile</code>) would reach the same setup screen.
+</li>
+<li><strong>Configuring Reconciliation Setup</strong>: Although <code>Chase Bank 8145</code> was already pre-selected on the <code>Reconcile</code> page with a beginning balance of <code>17,435.51</code>, the demonstrator opened the <code>Account</code> dropdown (listing <code>Chase Bank 8145</code>, <code>Company Savings Account</code>, and other asset accounts) and re-selected <code>Chase Bank 8145</code>. They then entered <code>24,904.11</code> into <code>Ending balance</code> and <code>01312024</code> into <code>Ending date</code> (which formatted to <code>01/31/2024</code> on blur), scrolled down, and clicked <code>Start reconciling</code>.
+</li>
+<li><strong>Initial Workspace State and Exploratory Select-All</strong>: Entering the active reconciliation workspace showed a statement ending balance of <code>$24,904.11</code>, an initial cleared balance of <code>$17,435.51</code>, and an initial difference of <code>$7,468.60</code>. After dismissing the <code>&#x27;Want more space to review transactions?&#x27;</code> callout tip over the transaction table, the demonstrator clicked the header select-all icon and confirmed <code>&#x27;Yes, select all&#x27;</code> in the <code>&#x27;Are you sure you want to select all 35 transactions?&#x27;</code> dialog. Selecting all <code>35</code> transactions produced a cleared balance of <code>$24,130.96</code> and an unresolved difference of <code>$773.15</code> (indicating 3 uncleared items with a net outflow of <code>$773.15</code>). The demonstrator then clicked the header select-all checkmark again to deselect all rows, resetting the cleared balance to <code>$17,435.51</code> (<code>0</code> payments, <code>0</code> deposits) and the difference to <code>$7,468.60</code>. Any valid selection method—selecting matching items individually or unchecking only the non-cleared items—achieves the same result.
+</li>
+<li><strong>Side-by-Side Statement Comparison and Clearing Transactions</strong>: The demonstrator tiled the <code>Chase Bank statement PDF</code> (account <code>122354488145</code>, <code>January 1 to January 31, 2024</code>) on the left half of the screen alongside the QuickBooks Online window on the right:
+<ul>
+<li>Checking <code>Check 1150</code> (<code>12/30/2022</code>, <code>$1,000.00</code>) updated the cleared balance to <code>$16,435.51</code> (<code>1 payment</code> of <code>-$1,000.00</code>) and the difference to <code>$8,468.60</code>.
+</li>
+<li>Checking the <code>01/01/2024</code> deposit (<code>$31,349.00</code>) updated the cleared balance to <code>$47,784.51</code> (<code>1 deposit</code> of <code>$31,349.00</code>, <code>1 payment</code> of <code>$1,000.00</code>) and the difference to <code>-$22,880.40</code>.
+</li>
+<li>Marking the remaining January 2024 statement-matching items through <code>January 31, 2024</code> brought the totals to <code>30</code> cleared payments (<code>$26,944.40</code>) and <code>2</code> cleared deposits (<code>$34,413.00</code>), updating the cleared balance to <code>$24,904.11</code> and the difference to <code>$0.00</code> (replacing <code>&#x27;Save for later&#x27;</code> with <code>&#x27;Finish now&#x27;</code>).
+</li></ul>
+</li>
+<li><strong>Completing Reconciliation and Inspecting the Report</strong>: After maximizing the Google Chrome window, the demonstrator clicked <code>Finish now</code>, opening the <code>&#x27;You reconciled this account&#x27;</code> confirmation modal. Rather than clicking <code>Done</code>, they clicked <code>View reconciliation report</code> to open the <code>Reconciliation report</code> for <code>Chase Bank 8145</code> (<code>Period Ending 01/31/2024</code>). Finally, they clicked the report&#x27;s <code>Print</code> icon—opening the browser print preview dialog with <code>Destination</code> set to <code>Save as PDF</code>, <code>Pages</code> set to <code>All</code>, and <code>Layout</code> set to <code>Portrait</code>—and clicked <code>Cancel</code> to return to the full <code>Reconciliation report</code> view.
+</li></ol>
+<h3>Scope Boundaries and Uncertainties</h3>
+<ul>
+<li><strong>Report Display vs. Reconciliation Only</strong>: While reconciling <code>Chase Bank 8145</code> to a <code>$0.00</code> difference and clicking <code>Finish now</code> is unambiguously required, it is uncertain whether opening and leaving displayed the <code>Reconciliation report</code> (<code>Period Ending 01/31/2024</code>) was an explicit part of the user&#x27;s request or performed as post-completion verification.
+</li>
+<li><strong>Canceled Print Preview</strong>: Because the demonstrator clicked <code>Cancel</code> in the print dialog without saving a PDF or printing, exporting/printing the report was clearly not completed; opening the print preview most plausibly represents either an aborted export attempt or a brief formatting check rather than a mandatory step.
+</li>
+<li><strong>Source of Statement Inputs</strong>: The ending balance (<code>$24,904.11</code>) and ending date (<code>01/31/2024</code>) were entered before the bank statement PDF window was tiled on screen, so those parameters may have been provided directly in the user instructions, read beforehand from the January 2024 Chase Bank statement PDF (<code>122354488145</code>), or both.
+</li></ul>
+        </div>
+      </details>
+    </div>
         <p class="task-summary">Reconcile a company ledger against a monthly bank statement.</p>
         <div class="task-badges"><span class="badge category-badge">Accounting</span><a class="badge" href="#rubrics">8 outcome criteria</a><a class="badge" href="#support-materials">1 support file</a></div>
       </header>

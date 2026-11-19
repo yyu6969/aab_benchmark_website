@@ -10,6 +10,7 @@ import shutil
 from pathlib import Path
 
 from agent_runs import load_agent_runs, render_agent_runs
+from guidance import render_guidance
 from materials import build_material_page, download_url, file_size, load_materials
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -229,6 +230,7 @@ def load_tutorials(tasks: list[dict]) -> None:
         raise ValueError("Expected one tutorial video for each task slug")
     for task in tasks:
         task["tutorial"] = videos[task["slug"]]
+        task["tutorial"]["guidance_path"] = f"assets/tutorial-guidance/{task['slug']}.md"
 
 
 def tutorial_player(task: dict) -> str:
@@ -238,7 +240,9 @@ def tutorial_player(task: dict) -> str:
     duration = f"{hours}:{minutes:02}:{seconds:02}" if hours else f"{minutes}:{seconds:02}"
     title = esc(video["title"])
     url = esc(video["url"])
-    return f'''<figure class="tutorial">
+    guidance = (ROOT / video["guidance_path"]).read_text(encoding="utf-8")
+    return f'''<div class="tutorial-block">
+      <figure class="tutorial">
         <video controls playsinline preload="none" poster="../../assets/tutorial-posters/{esc(task['slug'])}.jpg" aria-labelledby="tutorial-title">
           <source src="{url}" type="video/mp4">
         </video>
@@ -251,7 +255,15 @@ def tutorial_player(task: dict) -> str:
           </dl>
           <a class="text-link" href="{url}" download>{icon("download")} Download video</a>
         </figcaption>
-      </figure>'''
+      </figure>
+      <details class="tutorial-guidance" id="reference-guidance">
+        <summary>Reference guidance</summary>
+        <div class="guidance-body prose">
+          <a class="text-link" href="../../{esc(video['guidance_path'])}" download>{icon("download")} Download guidance (.md)</a>
+          {render_guidance(guidance)}
+        </div>
+      </details>
+    </div>'''
 
 
 def build_task(task: dict, tasks: list[dict]) -> str:

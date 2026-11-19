@@ -128,6 +128,9 @@ def check():
         instruction = re.sub(r"(?m)^\s*-\s+", "", plain_text(task["instruction"]))
         assert compact("".join(page.instruction)) == compact(instruction), f"Instruction changed in task {task['id']}"
         assert page.materials == task["materials"], f"Material paths changed in task {task['id']}"
+        guide = task["tutorial"]["guidance_path"]
+        assert "reference-guidance" in page.ids and f"../../{guide}" in page.links
+        assert sha256(OUTPUT / guide) == sha256(ROOT / guide), f"Guidance download differs: {guide}"
         assert (OUTPUT / "data" / f"{task['slug']}.md").read_text(encoding="utf-8") == task["markdown"]
         ordered = page.section_ids
         assert ordered.index("agent-run") == ordered.index("support-materials") + 1

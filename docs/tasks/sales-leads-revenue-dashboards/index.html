@@ -34,7 +34,8 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html#tasks">Tasks</a></li><li>Sales operations</li><li aria-current="page">Task 09</li></ol></nav>
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> TASK 09 / 10</p>
         <h1>Manage Sales Leads and Build Revenue Dashboards</h1>
-        <figure class="tutorial">
+        <div class="tutorial-block">
+      <figure class="tutorial">
         <video controls playsinline preload="none" poster="../../assets/tutorial-posters/sales-leads-revenue-dashboards.jpg" aria-labelledby="tutorial-title">
           <source src="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/sales-leads-revenue-dashboards.mp4" type="video/mp4">
         </video>
@@ -48,6 +49,230 @@
           <a class="text-link" href="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/sales-leads-revenue-dashboards.mp4" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download video</a>
         </figcaption>
       </figure>
+      <details class="tutorial-guidance" id="reference-guidance">
+        <summary>Reference guidance</summary>
+        <div class="guidance-body prose">
+          <a class="text-link" href="../../assets/tutorial-guidance/sales-leads-revenue-dashboards.md" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download guidance (.md)</a>
+          <p>This Reference Guidance reconstructs the complete Salesforce CRM setup, sales-pipeline execution, and analytics workflow demonstrated across steps 0–308. The overarching objective is to register and activate my new Salesforce Developer Edition organization, switch into the <code>Sales</code> application, manage an end-to-end lead-to-cash cycle for company <code>ABC</code> (converting a new lead into an account, contact, and opportunity, adding a second contact, and closing the <code>$100,000</code> opportunity as <code>Closed Won</code>), configure a filtered <code>My Open Leads</code> list view, build and chart a public <code>Closed Won Opportunities</code> report grouped by <code>Lead Source</code>, assemble and refresh a <code>Closed Won Dashboard</code> from that report, and subscribe to receive dashboard updates every Monday at <code>7:00 AM</code>.</p>
+<h3>1. Salesforce Developer Edition Registration and Account Activation</h3>
+<p>Provision and activate my new Salesforce Developer Edition account and sign in to Salesforce Lightning:</p>
+<ul>
+<li><strong>Signup Form Submission (Demonstrated in Steps 0–16):</strong>
+<ul>
+<li>Starting on the Salesforce Developer Edition registration page (<code>&#x27;Sign up for your Salesforce Developer Edition&#x27;</code>, initially showing validation prompts <code>&#x27;Enter your first name&#x27;</code> and <code>&#x27;Please select an item in the list.&#x27;</code>), populate the form with these exact values:
+<ul>
+<li><strong>First Name:</strong> <code>Emily</code>
+</li>
+<li><strong>Last Name:</strong> <code>Call</code>
+</li>
+<li><strong>Email:</strong> <code>sfemilycall@gmail.com</code>
+</li>
+<li><strong>Role:</strong> <code>Developer</code> (chosen from the <code>Role</code> dropdown with placeholder <code>&#x27;Your job role&#x27;</code>)
+</li>
+<li><strong>Company:</strong> <code>Call Solutions LLC</code>
+</li>
+<li><strong>Country/Region:</strong> <code>United States</code> (selecting <code>United States</code> dynamically reveals the <code>State/Province</code> dropdown)
+</li>
+<li><strong>State/Province:</strong> <code>Utah</code>
+</li>
+<li><strong>Postal Code:</strong> <code>98002</code>
+</li>
+<li><strong>Username:</strong> <code>EEC@callcompany.com</code>
+</li>
+<li><strong>Terms Agreement:</strong> Check the agreement checkbox (<code>Main Services Agreement – Developer Services and Salesforce Program Agreement</code>).
+</li></ul>
+</li>
+<li>Click <code>Sign me Up</code> to submit the registration, transitioning to <code>https://developer.salesforce.com/signup/account-verification</code> (<code>&#x27;Almost there...&#x27;</code> / <code>&#x27;Please check your email to verify your account.&#x27;</code>).
+</li></ul>
+</li>
+<li><strong>Email Verification and Password Setup (Demonstrated in Steps 17–21):</strong>
+<ul>
+<li>Switch to my Gmail browser tab, open the <code>&#x27;Welcome to Salesforce: Verify your account&#x27;</code> email, and click <code>Verify Account</code> to open the Salesforce <code>&#x27;Change Your Password&#x27;</code> page in a new tab.
+</li>
+<li>Enter matching valid passwords satisfying Salesforce&#x27;s password complexity requirements into <code>New Password</code> and <code>Confirm New Password</code> (characters are masked in the UI; all requirement indicators turn green).
+</li>
+<li>Retain the default <code>Security Question</code> selection and enter [redacted] in the <code>Answer</code> field, then click <code>Change Password</code>.
+</li>
+<li><strong>Outcome:</strong> Account activation completes and logs in to Salesforce Lightning <code>Setup Home</code> (displaying <code>Emily Call</code> in <code>Most Recently Used</code>). <em>(Uncertainty: The evidence does not establish whether a specific password string was externally prescribed or any compliant password sufficed, nor whether retaining the default security question with answer [redacted] was explicitly required.)</em>
+</li></ul>
+</li></ul>
+<h3>2. Accessing the Sales Application and Inspecting Contact Mr. John Bond</h3>
+<p>Enter the <code>Sales</code> workspace from <code>Setup Home</code> and inspect the existing sample contact record for <code>Mr. John Bond</code>:</p>
+<ul>
+<li><strong>Switch to the Sales Application (Demonstrated in Steps 22–25):</strong> Open the 3x3 <code>App Launcher</code> menu in the top navigation bar, type <code>sales</code> in <code>Search apps and items...</code>, and click <code>Sales</code> to load the <code>Seller Home</code> dashboard (displaying navigation tabs including <code>Home</code>, <code>Opportunities</code>, and <code>Leads</code>).
+</li>
+<li><strong>Inspect Contact <code>Mr. John Bond</code> (Demonstrated in Steps 32–39; Scope Qualification Below):</strong>
+<ul>
+<li>In the top <code>Global Search</code> bar (<code>Search...</code>), enter <code>john</code>, click <code>&#x27;Show more results for &quot;john&quot;&#x27;</code> from the search overlay, and click <code>John Bond</code> under <code>Recommended Result</code> on the <code>Search Results</code> page to open the <code>Mr. John Bond</code> contact record.
+</li>
+<li>Switch from the initial <code>Related</code> tab to the <code>Details</code> tab to view his loaded contact fields (<code>Name</code>, <code>Title</code>, <code>Account Name</code> <code>Grand Hotels &amp; Resorts Ltd</code>, <code>Phone</code>, <code>Email</code>, and <code>Address</code>).
+</li>
+<li><em>Scope Uncertainty and Non-Mutating Detour:</em> Prior to searching (steps 26–31), the demonstrator opened and immediately closed (<code>X</code>) the <code>App Launcher</code> -&gt; <code>View All</code> modal without selecting anything. Furthermore, the trajectory does not uniquely establish whether viewing <code>Mr. John Bond</code>&#x27;s <code>Details</code> tab was an explicitly requested lookup/inspection subtask or exploratory browsing of pre-populated Developer Edition sample data before creating new CRM records.
+</li></ul>
+</li></ul>
+<h3>3. Lead Creation, Conversion, Contact Association, and Opportunity Closing for ABC</h3>
+<p>Execute the CRM sales pipeline for <code>ABC</code> by creating and converting lead <code>Jane Doe</code>, adding contact <code>John Doe</code>, and closing opportunity <code>ABC- Initial Contract</code> at <code>$100,000</code>:</p>
+<ol>
+<li><strong>Create Lead <code>Jane Doe</code> (Demonstrated in Steps 40–60):</strong>
+<ul>
+<li>Navigate to <code>Leads</code> (<code>My Leads</code> Lead Intelligence View) and click <code>New</code> to open the <code>New Lead</code> modal.
+</li>
+<li>Populate the following exact fields:
+<ul>
+<li><strong>First Name:</strong> <code>Jane</code>
+</li>
+<li><strong>Last Name:</strong> <code>Doe</code>
+</li>
+<li><strong>Company:</strong> <code>ABC</code>
+</li>
+<li><strong>Lead Source:</strong> <code>Web</code> (updated from <code>--None--</code>)
+</li>
+<li><strong>Industry:</strong> <code>Education</code> (updated from <code>--None--</code>)
+</li>
+<li><strong>Lead Status:</strong> <code>Working - Contacted</code> (updated from default <code>Open - Not Contacted</code>)
+</li></ul>
+</li>
+<li>Leave optional address, additional, and description fields blank/default and click <code>Save</code>, producing toast <code>&#x27;Lead &quot;Jane Doe&quot; was created.&#x27;</code> and opening the <code>Jane Doe</code> Lead record (<code>Lead Owner</code>: <code>Emily Call</code>).
+</li></ul>
+</li>
+<li><strong>Convert Lead <code>Jane Doe</code> (Demonstrated in Steps 74–82):</strong>
+<ul>
+<li><em>Non-Mutating Detours (Steps 61–73):</em> Viewing <code>Details</code>, opening and canceling <code>Change Lead Owner</code>, switching to <code>Related</code>/<code>Activity</code>, and opening then closing the docked <code>Email</code> composer without sending made no persistent changes and are not required.
+</li>
+<li>Initiate lead conversion on <code>Jane Doe</code> (demonstrated by clicking <code>Converted</code> on the lead status path and clicking <code>&#x27;Select Converted Status&#x27;</code> to open the <code>Convert Lead</code> modal) with these target settings:
+<ul>
+<li><strong>Account:</strong> Create new Account <code>ABC</code>
+</li>
+<li><strong>Contact:</strong> Create new Contact <code>Jane Doe</code>
+</li>
+<li><strong>Opportunity:</strong> Expand <code>Opportunity</code> and set <strong>Opportunity Name</strong> to <code>ABC- Initial Contract</code> (updated from default <code>ABC-</code>; exact spacing has no space before <code>-</code> and one space after <code>-</code>)
+</li>
+<li><strong>Converted Status:</strong> <code>Closed - Converted</code>
+</li></ul>
+</li>
+<li>Click <code>Convert</code> to display <code>&#x27;Your lead has been converted&#x27;</code> with cards for Account <code>ABC</code>, Contact <code>Jane Doe</code>, and Opportunity <code>ABC- Initial Contract</code> (created at initial Stage <code>Prospecting</code>, default Close Date <code>6/30/2024</code>, and carrying over <code>Lead Source = Web</code>). Clicking <code>ABC</code> (step 82) opens the <code>ABC</code> Account record page.
+</li></ul>
+</li>
+<li><strong>Create Contact <code>John Doe</code> Under Account <code>ABC</code> (Demonstrated in Steps 96–102):</strong>
+<ul>
+<li><em>Non-Mutating Detours (Steps 83–95):</em> No-op inline editing/saving on <code>ABC</code>&#x27;s <code>Details</code> tab and opening/canceling <code>New Account</code> from <code>Accounts</code> made no persistent changes.
+</li>
+<li>Create a new contact (demonstrated via <code>Contacts</code> -&gt; <code>New</code>, where <code>My Contacts</code> initially listed 21 contacts; creating from <code>ABC</code>&#x27;s <code>Related</code> Contacts list is an equivalent path) with exact values:
+<ul>
+<li><strong>First Name:</strong> <code>John</code>
+</li>
+<li><strong>Last Name:</strong> <code>Doe</code>
+</li>
+<li><strong>Account Name:</strong> <code>ABC</code> (selected from <code>Recent Accounts</code>)
+</li></ul>
+</li>
+<li>Click <code>Save</code> to create the <code>John Doe</code> Contact record linked to Account <code>ABC</code> (<code>Contact Owner</code>: <code>Emily Call</code>).
+</li></ul>
+</li>
+<li><strong>Update Opportunity <code>ABC- Initial Contract</code> to <code>$100,000</code> and <code>Closed Won</code> (Demonstrated in Steps 103–142):</strong>
+<ul>
+<li>Navigate to <code>Opportunities</code> and open <code>ABC- Initial Contract</code>.
+</li>
+<li><strong>Amount Update (Steps 109–116):</strong> On the <code>Details</code> tab, inline-edit <code>Amount</code> to <code>100000</code> and click <code>Save</code>. Intermediate state: <code>Amount</code> formats as <code>$100,000.00</code>, and while Stage is still <code>Prospecting</code> (10% probability), <code>Expected Revenue</code> temporarily calculates as <code>$10,000.00</code>.
+</li>
+<li><em>Non-Mutating Detours (Steps 117–132):</em> Opening and canceling the header <code>Edit</code> modal, <code>Description</code> inline edit, and <code>Share</code> modal made no changes.
+</li>
+<li><strong>Stage Update (Steps 133–142):</strong> Advance <strong>Stage</strong> to <code>Closed Won</code> (demonstrated by clicking <code>Closed</code> on the sales path, clicking <code>&#x27;Select Closed Stage&#x27;</code> to open <code>&#x27;Close This Opportunity&#x27;</code>, selecting <code>Closed Won</code> in the <code>Stage</code> dropdown, and clicking <code>Save</code>; updating <code>Amount</code> and <code>Stage</code> together via standard record editing would reach the same persistent state).
+</li>
+<li><strong>Outcome:</strong> Banner <code>&#x27;Stage changed successfully.&#x27;</code> appears, leaving <code>ABC- Initial Contract</code> at <strong>Amount</strong> = <code>$100,000.00</code> and <strong>Stage</strong> = <code>Closed Won</code>.
+</li></ul>
+</li></ol>
+<h3>4. Creating and Filtering the &quot;My Open Leads&quot; List View</h3>
+<p>Create a custom lead list view named <code>My Open Leads</code> and filter it to display only open, unconverted leads:</p>
+<ul>
+<li><strong>Create List View (Demonstrated in Steps 143–152):</strong>
+<ul>
+<li>Navigate to <code>Leads</code> (initially displaying <code>22</code> leads in <code>My Leads</code>), open <code>List View Controls</code> (gear icon), and click <code>Create New View</code>.
+</li>
+<li>Set <strong>Lead View Name</strong> to <code>My Open Leads</code>, which auto-populates <strong>Lead View API Name</strong> as <code>My_Open_Leads</code>, keep <code>Who sees this lead view?</code> set to <code>Only I can see this view</code>, and click <code>Save</code> (toast <code>&#x27;Lead view My Open Leads was created.&#x27;</code>, loading <code>22</code> lead records).
+</li></ul>
+</li>
+<li><strong>Configure Filter Criteria (Demonstrated in Steps 153–185):</strong>
+<ul>
+<li>Click the <code>filter</code> button to open the <code>Filters</code> side panel (which retains default <code>Created Date</code> and <code>Owner</code> filters under <code>&#x27;Matching all of these filters&#x27;</code>).
+</li>
+<li>Add two field filters:
+<ol>
+<li><strong>Field:</strong> <code>Converted</code>, <strong>Operator:</strong> <code>equals</code>, <strong>Value:</strong> <code>False</code> (demonstrated by clicking <code>Add Filter</code>, selecting <code>Converted</code>, clicking <code>Done</code>, and clicking <code>Save</code>, which reloaded <code>22</code> Total Leads).
+</li>
+<li><strong>Field:</strong> <code>Lead Status</code>, <strong>Operator:</strong> <code>not equal to</code>, <strong>Value:</strong> <code>Closed - Converted</code> and <code>Closed - Not Converted</code> (<code>2 options selected</code>; demonstrated by clicking <code>Add Filter</code>, configuring both closed statuses, clicking <code>Done</code>, and clicking <code>Save</code>).
+</li></ol>
+</li>
+<li><strong>Outcome:</strong> Saving the complete filter criteria updates <code>My Open Leads</code> from <code>22</code> to <strong><code>15</code></strong> filtered leads (excluding converted lead <code>Jane Doe</code> and any closed sample leads). Closing the <code>Filters</code> sidebar (<code>X</code> at step 185) and saving after each filter individually rather than once at the end are UI execution details.
+</li></ul>
+</li></ul>
+<h3>5. Building, Saving, and Charting the &quot;Closed Won Opportunities&quot; Report</h3>
+<p>Create a public <code>Opportunities</code> summary report named <code>Closed Won Opportunities</code> grouped by <code>Lead Source</code> with <code>Amount</code> summed, and configure a Donut chart visualization:</p>
+<ul>
+<li><strong>Report Creation and Column Customization (Demonstrated in Steps 186–203 &amp; 224–229):</strong>
+<ul>
+<li>Go to <code>Reports</code> -&gt; <code>New Report</code>, choose the <strong><code>Opportunities</code></strong> report type, and click <code>Start Report</code> to open Report Builder (where <code>&#x27;Update Preview Automatically&#x27;</code> was toggled <code>on</code> as a builder convenience).
+</li>
+<li>Remove three default columns from the report: <strong><code>Owner Role</code></strong> (removed via column header menu -&gt; <code>Remove Column</code>), <strong><code>Age</code></strong> (<code># Age</code>, removed via the Outline <code>Columns</code> list), and <strong><code>Next Step</code></strong> (removed via the Outline <code>Columns</code> list).
+</li>
+<li>Add <strong><code>Last Modified Date</code></strong> to <code>Columns</code> (demonstrated via <code>Outline</code> -&gt; expanding <code>Fields</code> -&gt; clicking <code>Last Modified Date</code>, inserting it between <code>Stage</code> and <code>Fiscal Period</code>, then collapsing <code>Fields</code>).
+</li></ul>
+</li>
+<li><strong>Report Filters, Grouping, and Summary (Demonstrated in Steps 204–223 &amp; 230–236):</strong>
+<ul>
+<li>In <code>Filters</code>, set the <strong><code>Close Date</code></strong> standard filter <strong>Range</strong> to <strong><code>All Time</code></strong> (replacing <code>Current FQ</code>) and click <code>Apply</code>.
+</li>
+<li>Add a field filter for <strong><code>Stage</code></strong> <strong><code>equals</code></strong> <strong><code>Closed Won</code></strong> and click <code>Apply</code>.
+</li>
+<li>In <code>Outline</code> under <code>GROUP ROWS</code>, group rows by <strong><code>Lead Source</code></strong>.
+</li>
+<li>On the <strong><code>Amount</code></strong> column header menu, choose <code>Summarize</code> -&gt; <strong><code>Sum</code></strong>, producing <code>Lead Source</code> subtotals and a grand total of <strong><code>$3,745,000.00</code></strong>.
+</li></ul>
+</li>
+<li><strong>Naming, Public Folder Placement, and Run-View Donut Chart (Demonstrated in Steps 237–256):</strong>
+<ul>
+<li>Rename the report to <strong><code>Closed Won Opportunities</code></strong> and click <code>Save &amp; Run</code>. In <code>Save Report</code> (where <code>Report Unique Name</code> auto-generated as <code>Closed_Won_Opportunities_jM0</code>, an automatic API suffix rather than a required value), change <strong>Folder</strong> from <code>Private Reports</code> to <strong><code>Public Reports</code></strong> via <code>Select Folder</code>, and click <code>Save</code>.
+</li>
+<li><strong>Saved Report Outcome:</strong> Toast <code>&#x27;Report &quot;Closed Won Opportunities&quot; was saved&#x27;</code> appears, and the report runs displaying <strong><code>19</code></strong> Closed Won opportunity records grouped by <code>Lead Source</code> (including the <code>$100,000.00</code> <code>ABC- Initial Contract</code> under <code>Web</code>, bringing <code>Web</code> to <code>$335,000</code> and the grand total to <strong><code>$3,745,000.00</code></strong>).
+</li>
+<li><strong>Chart Visualization (Steps 250–256):</strong> On the saved report run view, click <code>Add Chart</code> (initially a Horizontal Bar chart), open <code>Chart Properties</code> (gear icon), select <strong><code>Donut</code></strong> under <code>Display As</code> (<code>Value</code> = <code>Sum of Amount</code>, <code>Sliced By</code> = <code>Lead Source</code>, <code>Show Values</code> = <code>True</code>, <code>Show Percentages</code> = <code>False</code>, <code>Combine Small Groups into &quot;Others&quot;</code> = <code>True</code>, central total <strong><code>3.7M</code></strong>), and close <code>Chart Properties</code>. <em>(Uncertainty: Because the chart was configured in the interactive run view without reopening Report Builder to re-save the report definition, it is uncertain whether run-view chart configuration satisfied an independent report-chart requirement, whether persisting the chart in Report Builder would also be expected, or whether this previewed the chart prior to dashboard creation.)</em>
+</li></ul>
+</li></ul>
+<h3>6. Building, Refreshing, and Subscribing to the &quot;Closed Won Dashboard&quot;</h3>
+<p>Create <code>Closed Won Dashboard</code> with Metric and Donut chart widgets sourced from <code>Closed Won Opportunities</code>, refresh its view-mode data, and schedule a weekly Monday <code>7:00 AM</code> subscription:</p>
+<ul>
+<li><strong>Create Dashboard and Add Components (Demonstrated in Steps 257–292):</strong>
+<ul>
+<li>Navigate to <code>Dashboards</code> -&gt; <code>New Dashboard</code>, enter <strong>Name</strong> <code>Closed Won Dashboard</code>, leave <strong>Folder</strong> at the default <code>Private Dashboards</code>, and click <code>Create</code>.
+</li>
+<li><strong>Metric Widget (Steps 266–279):</strong> Click <code>+ Widget</code> -&gt; <code>Chart or Table</code>, select <code>Closed Won Opportunities</code>, set <code>Display As</code> to <strong><code>123</code> (Metric)</strong> (<code>Measure</code> = <code>Sum of Amount</code>, <code>Display Units</code> = <code>Shortened Number</code>, <code>Title</code> = <code>Closed Won Opportunities</code>, showing <strong><code>$3.7M</code></strong>), and click <code>Add</code>. On the top-left of the grid, resize the widget from <code>2x2</code> to <strong>4 columns wide by 3 rows tall (<code>4x3</code>)</strong> so the full title is visible.
+</li>
+<li><strong>Donut Chart Widget (Steps 280–292):</strong> Click <code>+ Widget</code> -&gt; <code>Chart or Table</code>, select <code>Closed Won Opportunities</code> (under <code>All Folders</code> -&gt; <code>Public Reports</code>), set <code>Display As</code> to <strong><code>Donut</code></strong> (<code>Value</code> = <code>Sum of Amount</code>, <code>Sliced By</code> = <code>Lead Source</code>, <code>Display Units</code> = <code>Shortened Number</code>, <code>Title</code> = <code>Closed Won Opportunities</code>, showing <strong><code>$3.7M</code></strong> sliced by <code>Lead Source</code>), click <code>Add</code>, and position it immediately <strong>to the right of the Metric widget</strong> along the top row. <em>(Exact <code>4x3</code> sizing and side-by-side placement are preserved as demonstrated layout details that may reflect visual formatting preferences.)</em>
+</li></ul>
+</li>
+<li><strong>Save, Exit Editor, and Refresh (Demonstrated in Steps 293–297):</strong>
+<ul>
+<li>Click <code>Save</code> (<code>&#x27;Dashboard saved&#x27;</code>), click <code>Done</code> to enter view mode (where the left Metric component initially read <code>&#x27;No data. Try refreshing the dashboard.&#x27;</code> while the Donut widget showed <code>&#x27;$3.7M&#x27;</code>), and refresh the dashboard (step 297) so both components render <strong><code>$3.7M</code></strong>.
+</li></ul>
+</li>
+<li><strong>Configure Weekly Subscription (Demonstrated in Steps 298–308):</strong>
+<ul>
+<li>Click <code>Subscribe</code> in the dashboard header to open <code>Edit Subscription</code>.
+</li>
+<li>Set <strong>Frequency</strong> to <strong><code>Weekly</code></strong>, set <strong>Days</strong> to <strong><code>Mon</code></strong> only (deselecting <code>Sat</code> from the initial <code>Mon</code> + <code>Sat</code> selection), set <strong>Time</strong> to <strong><code>7:00 AM</code></strong> (changed from <code>12:00 PM</code>), keep the email notification option checked, and click <code>Save</code>.
+</li>
+<li><strong>Final Outcome:</strong> <code>Edit Subscription</code> closes and <code>Closed Won Dashboard</code> displays the green confirmation banner <strong><code>&#x27;You started a dashboard subscription.&#x27;</code></strong> above the populated <code>$3.7M</code> Metric and Donut chart components.
+</li></ul>
+</li></ul>
+<h3>7. Workflow Sequence, Cross-Stage Dependencies, and Flexible Execution Details</h3>
+<ul>
+<li><strong>Genuine Dependencies:</strong> Registering and verifying my Developer Edition org (steps 0–21) must precede all CRM operations. Lead <code>Jane Doe</code> must be created and converted via Salesforce lead conversion (rather than standalone manual record creation) before finalizing downstream views and analytics because conversion marks <code>Jane Doe</code> as <code>Converted = True</code> / <code>Closed - Converted</code> (excluding her from the <code>15</code> records in <code>My Open Leads</code>) and propagates <code>Lead Source = Web</code> onto <code>ABC- Initial Contract</code>. Likewise, updating <code>ABC- Initial Contract</code> to <code>$100,000</code> and <code>Closed Won</code> must precede final report/dashboard data evaluation so its <code>$100,000</code> value is included in the <code>$3,745,000.00</code> (<code>$3.7M</code>) total and <code>$335,000</code> <code>Web</code> slice. Finally, <code>Closed Won Opportunities</code> must be saved before adding its components to <code>Closed Won Dashboard</code>, which must be created before subscribing.
+</li>
+<li><strong>Flexible Execution Paths:</strong> Navigation routes, column removal method (table header dropdown vs. <code>Outline</code> panel), order of report customizations before <code>Save &amp; Run</code>, saving list-view filters individually vs. together, and updating opportunity <code>Amount</code> and <code>Stage</code> separately vs. in one edit are demonstrated UI mechanics rather than strict constraints.
+</li></ul>
+        </div>
+      </details>
+    </div>
         <p class="task-summary">Manage converted leads and build closed-won revenue reports and dashboards.</p>
         <div class="task-badges"><span class="badge category-badge">Sales operations</span><a class="badge" href="#rubrics">31 outcome criteria</a><a class="badge" href="#support-materials">0 support files</a></div>
       </header>

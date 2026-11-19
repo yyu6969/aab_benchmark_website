@@ -34,7 +34,8 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html#tasks">Tasks</a></li><li>Video editing</li><li aria-current="page">Task 07</li></ol></nav>
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> TASK 07 / 10</p>
         <h1>Edit a YouTube Video with Visual Effects</h1>
-        <figure class="tutorial">
+        <div class="tutorial-block">
+      <figure class="tutorial">
         <video controls playsinline preload="none" poster="../../assets/tutorial-posters/edit-youtube-video.jpg" aria-labelledby="tutorial-title">
           <source src="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/edit-youtube-video.mp4" type="video/mp4">
         </video>
@@ -48,6 +49,136 @@
           <a class="text-link" href="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/edit-youtube-video.mp4" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download video</a>
         </figcaption>
       </figure>
+      <details class="tutorial-guidance" id="reference-guidance">
+        <summary>Reference guidance</summary>
+        <div class="guidance-body prose">
+          <a class="text-link" href="../../assets/tutorial-guidance/edit-youtube-video.md" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download guidance (.md)</a>
+          <p>In Adobe Premiere Pro, set up a new video editing project named &quot;Justin Edit&quot;, assemble and edit a YouTube talking-head sequence named &quot;YouTube&quot; with B-roll overlays, a lower-third title graphic, visual effects, balanced background music, Essential Sound audio tags, and Lumetri Color grading, and configure 4K YouTube export settings.</p>
+<h3>1. Project Setup and Media Import</h3>
+<ul>
+<li>Create a new project named <strong>&quot;Justin Edit&quot;</strong> (<code>Justin Edit.prproj</code>; observed in the default project directory <code>/Users/justin/Documents/Adobe/Premiere Pro/23.0</code> with <code>Project template: None</code>) and open the editing workspace without pre-selecting media on the initial Import screen.
+</li>
+<li>Import all five video files from the <strong><code>Video Assets</code></strong> folder on my <strong><code>Desktop</code></strong> (<code>File &gt; Import...</code> in the demonstration, though any equivalent import method is valid):
+<ul>
+<li><code>Camera-Recording.mp4</code>
+</li>
+<li><code>Screen-Recording.mp4</code>
+</li>
+<li><code>IMG_0133.MOV</code>
+</li>
+<li><code>IMG_0261.MOV</code>
+</li>
+<li><code>Test 1.mov</code>
+</li></ul>
+<p><em>(Note: Only <code>Camera-Recording.mp4</code>, <code>IMG_0133.MOV</code>, and <code>IMG_0261.MOV</code> are placed on the timeline in the observed workflow, while <code>Screen-Recording.mp4</code> and <code>Test 1.mov</code> remain in the Project bin.)</em></p>
+</li></ul>
+<h3>2. Sequence Creation, Display Options, and Primary Footage Editing</h3>
+<ul>
+<li>Create a new sequence from <strong><code>Camera-Recording.mp4</code></strong> (populating tracks <code>Video 1</code> / <code>V1</code> and <code>Audio 1</code> / <code>A1</code> with an initial duration of <code>00:05:16:15</code>), and rename the sequence from <code>Camera-Recording</code> to <strong>&quot;YouTube&quot;</strong> so both the Project panel item and Timeline tab reflect the name <code>YouTube</code>.
+</li>
+<li>Enable <strong>Continuous Video Thumbnails</strong> from the Timeline panel menu.
+</li>
+<li><em>Source Monitor marking (demonstrated without timeline insertion)</em>: In the demonstration, <code>Camera-Recording.mp4</code> is also opened in the Source Monitor with an <strong>In point</strong> set at <code>00:01:23:18</code> and an <strong>Out point</strong> set at <code>00:02:03:06</code> (marked duration <code>00:00:39:19</code>), though this subclip is not inserted onto the timeline; whether preserving these Source Monitor markers on the master clip is required is uncertain.
+</li>
+<li>Trim and cut the primary talking-head clip <strong><code>Camera-Recording.mp4</code></strong> on <code>Video 1</code> and <code>Audio 1</code>. In the demonstrated sequence of edits:
+<ol>
+<li>With the timeline playhead at <code>00:00:06:18</code>, ripple-trim the start (in-point) of <code>Camera-Recording.mp4</code> (holding <code>Ctrl/Cmd</code>), shortening total sequence duration from <code>00:05:16:15</code> to <code>00:04:44:25</code>.
+</li>
+<li>Trim the clip&#x27;s end (out-point) leftward from <code>00:04:44:25</code> to <code>00:04:26:25</code>.
+</li>
+<li>Split <code>Camera-Recording.mp4</code> at <code>00:04:20:05</code> and <code>00:04:18:15</code> (demonstrated with <code>Ctrl/Cmd + K</code>) and ripple-delete (<code>Alt/Option + Delete</code>) the segment between <code>00:04:18:15</code> and <code>00:04:20:05</code>, reducing sequence duration to <code>00:04:25:05</code>.
+</li>
+<li>Split the clip using the Razor Tool (<code>C</code>) and Selection Tool (<code>V</code>)—with cuts observed near <code>00:04:12:00</code>, <code>00:03:50:08</code>, and <code>00:03:43:26</code>—and ripple-delete the <code>00:00:06:13</code> segment spanning <strong><code>00:03:43:26</code> to <code>00:03:50:08</code></strong>, reducing sequence duration to <code>00:04:18:22</code>.
+</li>
+<li><em>Rough-cut discontinuity</em>: Between Steps 42 and 43, an unrecorded set of additional cuts further condenses <code>Camera-Recording.mp4</code> on <code>Video 1</code> / <code>Audio 1</code> from <code>00:04:18:22</code> to a multi-segment rough cut totaling <strong><code>00:01:26:26</code></strong> (including a first clip ending at <code>00:00:12:19</code>, a second clip from <code>00:00:12:19</code> to <code>00:00:16:09</code> of duration <code>00:00:03:21</code>, and subsequent segments ending at <code>00:01:26:26</code>).
+</li></ol>
+</li></ul>
+<h3>3. B-Roll Overlay Placement on Video 2</h3>
+<ul>
+<li>Place two video-only B-roll overlay clips onto track <strong><code>Video 2</code></strong> (<code>V2</code>) without adding audio to <code>Audio 2</code>:
+<ul>
+<li><strong><code>IMG_0133.MOV</code></strong> (waterfall clip): Open in the Source Monitor, set an <strong>In point at <code>00:00:29:09</code></strong>, mark an <strong>Out point</strong> yielding a selection duration of <strong><code>00:00:05:01</code></strong>, and drag the <strong>video-only</strong> stream (<code>Drag Video Only</code>) onto <code>Video 2</code>. <em>(Although the timeline playhead rests at <code>00:01:11:14</code> during the drag in Steps 47–48, the drag preview shows <code>00:00:11:09</code> and subsequent transition editing in Steps 82–88 shows <code>IMG_0133.MOV</code> positioned on <code>Video 2</code> starting near *</em><code>00:00:15:00</code><em>*.)</em>
+</li>
+<li><strong><code>IMG_0261.MOV</code></strong> (ocean surf/raft footage): Open in the Source Monitor, position the playhead at <strong><code>00:00:02:09</code></strong> (with a <code>00:00:20:17</code> source duration shown during placement), and place its video stream onto <code>Video 2</code> starting at approximately <strong><code>00:00:36:00</code></strong> (confirmed under the playhead at <code>00:00:36:19</code>).
+</li></ul>
+</li></ul>
+<h3>4. Lower-Third Text Graphic (&quot;JUSTIN BROWN&quot;)</h3>
+<ul>
+<li>Using the <strong>Type Tool (<code>T</code>)</strong> in the Program Monitor at timecode <strong><code>00:00:00:16</code></strong>, create a Graphic text clip on track <strong><code>Video 2</code></strong> containing the uppercase text <strong><code>JUSTIN BROWN</code></strong>.
+</li>
+<li>Configure the <strong><code>JUSTIN BROWN</code></strong> text layer in the <strong>Essential Graphics</strong> panel (<code>Edit</code> tab):
+<ul>
+<li><strong>Font</strong>: <strong><code>Oswald</code></strong> with style <strong><code>Bold</code></strong> (<code>Oswald Bold</code>, changed from <code>Myriad Pro</code>).
+</li>
+<li><strong>Appearance &gt; Background</strong>: Enable <strong><code>Background</code></strong> (checked), set the background color swatch to <strong>solid blue</strong>, set <strong>Background Opacity</strong> to <strong><code>100%</code></strong> (from <code>75%</code>), and set <strong>Background Size</strong> to <strong><code>17.9</code></strong> (from <code>0.0</code>).
+</li>
+<li><strong>Align and Transform</strong>: Change vertical position (<strong>Position Y</strong>) from <code>614</code> to <strong><code>834</code></strong> (with horizontal position X observed at <code>664.2</code>) to place the title in the lower-third area.
+</li></ul>
+</li>
+<li>Trim the right edge (out-point) of the <code>JUSTIN BROWN</code> graphic clip on <code>Video 2</code> outward <strong>past <code>00:00:05:00</code></strong> (observed remaining visible at <code>00:00:05:17</code>–<code>00:00:05:19</code>).
+</li>
+<li><em>(Demonstration detail: Afterward, the user briefly views the <code>Browse</code> tab in Essential Graphics and selects <code>Window &gt; Workspaces &gt; Reset to Saved Layout</code> to restore the default panel layout before applying effects.)</em>
+</li></ul>
+<h3>5. Video Transitions, Motion Framing, Blur, and Stabilization</h3>
+<ul>
+<li><strong>Transition on <code>IMG_0133.MOV</code> (<code>Video 2</code>)</strong>: Apply the <strong><code>Dip to White</code></strong> transition (<code>Effects &gt; Video Transitions &gt; Dissolve</code>) to the <strong>in-point (head)</strong> of <code>IMG_0133.MOV</code> on <code>Video 2</code> and drag its right edge leftward to shorten its duration. <em>(In the demonstration, <code>Cube Spin</code> from <code>Obsolete</code> was first applied and extended to <code>00:00:01:29</code> before being overwritten by <code>Dip to White</code>; an exploratory <code>Dip to Black</code> transition placed between two <code>Camera-Recording.mp4</code> clips on <code>Video 1</code> was also immediately deleted.)</em>
+</li>
+<li><strong>Motion Zoom on <code>Camera-Recording.mp4</code> (<code>Video 1</code>)</strong>: Select the second <code>Camera-Recording.mp4</code> segment on <code>Video 1</code> (<code>00:00:12:19</code> to <code>00:00:16:09</code>, duration <code>00:00:03:21</code>) and, in <strong>Effect Controls</strong> under <strong><code>Motion</code></strong>, set <strong>Scale</strong> to <strong><code>117.0</code></strong> (from <code>100.0</code>; <strong>Position</strong> is also observed adjusted from <code>960.0, 540.0</code> to <code>960.0, 608.0</code> and <code>978.0, 608.0</code>).
+</li>
+<li><strong>Gaussian Blur on <code>Camera-Recording.mp4</code> (<code>Video 1</code>)</strong>: Apply <strong><code>Gaussian Blur</code></strong> (<code>Video Effects &gt; Blur &amp; Sharpen</code>) to that same <code>00:00:12:19</code>–<code>00:00:16:09</code> <code>Camera-Recording.mp4</code> segment on <code>Video 1</code> and configure <strong>Blurriness</strong> to <strong><code>25.0</code></strong> (adjusted via <code>26.0</code>) with <strong>Repeat Edge Pixels</strong> <strong>checked</strong> (<code>Blur Dimensions: Horizontal and Vertical</code>). <em>(Whether leaving Gaussian Blur on this single talking-head segment is an intended final creative choice or a feature demonstration is somewhat ambiguous, though it remains applied in the observed project state.)</em>
+</li>
+<li><strong>Video Stabilization on <code>IMG_0261.MOV</code> (<code>Video 2</code>)</strong>: Apply <strong><code>Warp Stabilizer</code></strong> (<code>Video Effects &gt; Distort &gt; Warp Stabilizer</code>) to the <strong><code>IMG_0261.MOV</code></strong> clip on <code>Video 2</code>.
+</li></ul>
+<h3>6. Background Music, Level Balancing, and Essential Sound Tagging</h3>
+<ul>
+<li>Import <strong><code>ES_San Pedro - Sugoi.mp3</code></strong> from my <strong><code>Downloads</code></strong> folder into the <code>Project: Justin Edit</code> panel.
+</li>
+<li>Place <strong><code>ES_San Pedro - Sugoi.mp3</code></strong> on track <strong><code>Audio 2</code></strong> (<code>A2</code>), align its start with the beginning of the sequence (<strong><code>00:00:00:00</code></strong>), and trim its out-point to <strong><code>00:01:26:26</code></strong> so it ends flush with the video clips on <code>Video 1</code> (keeping total sequence duration at <code>00:01:26:26</code>).
+</li>
+<li>Balance audio levels:
+<ul>
+<li>Keep track <code>Audio 1</code> track volume at <strong><code>0.0 dB</code></strong> and keep track <code>Audio 2</code> <strong>unmuted</strong> <em>(during mixing, track <code>A2</code> was temporarily muted and unmuted, <code>Window &gt; Audio Track Mixer</code> was opened, and the <code>Audio 1</code> fader was briefly tested at <code>-6.3 dB</code> before resetting to <code>0.0 dB</code>)</em>.
+</li>
+<li>Adjust the clip volume rubberband of <strong><code>ES_San Pedro - Sugoi.mp3</code></strong> on track <code>Audio 2</code> to <strong><code>-31.48 dB</code></strong> (after intermediate adjustments at <code>-31.4 dB</code> and <code>-2.3 dB</code>).
+</li></ul>
+</li>
+<li>Open the <strong>Essential Sound</strong> panel (<code>Window &gt; Essential Sound</code>) and assign audio types:
+<ul>
+<li>Select all audio clips on track <strong><code>Audio 1</code></strong> and tag them as <strong><code>Dialogue</code></strong>.
+</li>
+<li>Select <strong><code>ES_San Pedro - Sugoi.mp3</code></strong> on track <strong><code>Audio 2</code></strong> and tag it as <strong><code>Music</code></strong>. <em>(At the transition into color grading in Step 157, the <code>Loudness</code> checkbox in Essential Sound for the <code>Music</code> clip is also observed enabled.)</em>
+</li></ul>
+</li></ul>
+<h3>7. Lumetri Color Grading and Paste Attributes</h3>
+<ul>
+<li>Select the <strong>first clip</strong> (<code>Camera-Recording.mp4</code> starting at <code>00:00:00:00</code>) on <strong><code>Video 1</code></strong> and open the <strong>Lumetri Color</strong> panel (<code>Window &gt; Lumetri Color</code>).
+</li>
+<li>Under <strong>Basic Correction</strong> <em>(after briefly testing <code>Auto</code> at <code>Intensity: 77.3</code> and clicking <code>Reset</code> to return all sliders to neutral defaults)</em>, set:
+<ul>
+<li><strong>Exposure</strong>: <strong><code>0.5</code></strong>
+</li>
+<li><strong>Contrast</strong>: <strong><code>31.5</code></strong> (adjusted via <code>6.1</code>)
+</li>
+<li><strong>Temperature</strong>: <strong><code>17.1</code></strong>
+</li>
+<li><strong>Saturation</strong>: <strong><code>119.3</code></strong>
+</li>
+<li><em>(Leave *</em>Tint<em>* at <code>0.0</code>.)</em>
+</li></ul>
+</li>
+<li>Copy the graded first clip (<code>Edit &gt; Copy</code>), select the remaining primary clips on <strong><code>Video 1</code> and <code>Audio 1</code></strong> from approximately <code>00:00:15:00</code> to the end of the timeline (<code>00:01:26:26</code>), open the <strong>Paste Attributes</strong> dialog <em>(in the demonstration, <code>Edit &gt; Remove Attributes...</code> was briefly clicked/dismissed before opening <code>Paste Attributes</code>)</em>, <strong>uncheck <code>Motion</code></strong> under <code>Video Attributes</code> while keeping <strong><code>Scale Attribute Times</code></strong> <strong>checked</strong>, and click <strong><code>OK</code></strong> so the Lumetri Color grade is applied across the remaining talking-head clips without overwriting per-clip Motion framing.
+</li></ul>
+<h3>8. Export Settings Configuration</h3>
+<ul>
+<li>Switch to the <strong>Export</strong> workspace (<code>Export</code> tab in the top header).
+</li>
+<li>Under <strong>Settings: Media File</strong> (where <strong>File Name</strong> defaults to <strong><code>YouTube.mp4</code></strong> and <strong>Format</strong> is <strong><code>H.264</code></strong>), change <strong>Preset</strong> from <code>High Quality 1080p HD</code> to <strong><code>YouTube 2160p 4K Ultra HD</code></strong>.
+</li>
+<li><em>Scope boundary note</em>: The demonstrated workflow scrolls down and hovers over the blue <strong><code>Export</code></strong> button (<code>Export immediately with the current settings</code>) without clicking it to render an output file; whether final task completion requires leaving the export settings configured in the Export workspace or executing the render to produce <code>YouTube.mp4</code> is not uniquely established by the final frame.
+</li></ul>
+        </div>
+      </details>
+    </div>
         <p class="task-summary">Assemble an editable presenter video with cutaways, graphics, and music.</p>
         <div class="task-badges"><span class="badge category-badge">Video editing</span><a class="badge" href="#rubrics">29 outcome criteria</a><a class="badge" href="#support-materials">7 support files</a></div>
       </header>

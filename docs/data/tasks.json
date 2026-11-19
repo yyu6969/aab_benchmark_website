@@ -44,7 +44,8 @@
       "duration_seconds": 328.075,
       "original_software": "Microsoft Word",
       "open_source_software": "ONLYOFFICE Desktop Editors",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/finalize-document-tracked-changes.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/finalize-document-tracked-changes.mp4",
+      "guidance_path": "assets/tutorial-guidance/finalize-document-tracked-changes.md"
     },
     "agent_runs": {
       "guided": {
@@ -196,7 +197,8 @@
       "duration_seconds": 334.461,
       "original_software": "Microsoft Outlook",
       "open_source_software": "Mozilla Thunderbird",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/schedule-calendar-events.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/schedule-calendar-events.mp4",
+      "guidance_path": "assets/tutorial-guidance/schedule-calendar-events.md"
     },
     "agent_runs": {
       "guided": {
@@ -351,7 +353,8 @@
       "duration_seconds": 367.387,
       "original_software": "QuickBooks Online",
       "open_source_software": "KMyMoney",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/reconcile-business-bank-account.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/reconcile-business-bank-account.mp4",
+      "guidance_path": "assets/tutorial-guidance/reconcile-business-bank-account.md"
     },
     "agent_runs": {
       "guided": {
@@ -507,7 +510,8 @@
       "duration_seconds": 449.817,
       "original_software": "DrChrono",
       "open_source_software": "OpenEMR",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/complete-sign-clinical-note.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/complete-sign-clinical-note.mp4",
+      "guidance_path": "assets/tutorial-guidance/complete-sign-clinical-note.md"
     },
     "agent_runs": {
       "guided": {
@@ -680,7 +684,8 @@
       "duration_seconds": 901.422,
       "original_software": "Google Classroom",
       "open_source_software": "Moodle",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/update-class-gradebook.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/update-class-gradebook.mp4",
+      "guidance_path": "assets/tutorial-guidance/update-class-gradebook.md"
     },
     "agent_runs": {
       "guided": {
@@ -940,7 +945,8 @@
       "duration_seconds": 1513.361,
       "original_software": "IBM SPSS Statistics",
       "open_source_software": "GNU PSPP",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/survey-data-frequency-analyses.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/survey-data-frequency-analyses.mp4",
+      "guidance_path": "assets/tutorial-guidance/survey-data-frequency-analyses.md"
     },
     "agent_runs": {
       "guided": {
@@ -1257,7 +1263,8 @@
       "duration_seconds": 1781.366,
       "original_software": "Adobe Premiere Pro",
       "open_source_software": "Kdenlive",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/edit-youtube-video.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/edit-youtube-video.mp4",
+      "guidance_path": "assets/tutorial-guidance/edit-youtube-video.md"
     },
     "agent_runs": {
       "guided": {
@@ -1613,7 +1620,8 @@
       "duration_seconds": 1784.988,
       "original_software": "Asana",
       "open_source_software": "OpenProject",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/plan-website-launch.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/plan-website-launch.mp4",
+      "guidance_path": "assets/tutorial-guidance/plan-website-launch.md"
     },
     "agent_runs": {
       "guided": {
@@ -1992,7 +2000,8 @@
       "duration_seconds": 3140.801,
       "original_software": "Salesforce",
       "open_source_software": "SuiteCRM",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/sales-leads-revenue-dashboards.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/sales-leads-revenue-dashboards.mp4",
+      "guidance_path": "assets/tutorial-guidance/sales-leads-revenue-dashboards.md"
     },
     "agent_runs": {
       "guided": {
@@ -2534,7 +2543,8 @@
       "duration_seconds": 6665.312,
       "original_software": "Autodesk AutoCAD",
       "open_source_software": "Open CAD Studio",
-      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/floor-plan-architectural-details.mp4"
+      "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/floor-plan-architectural-details.mp4",
+      "guidance_path": "assets/tutorial-guidance/floor-plan-architectural-details.md"
     },
     "agent_runs": {
       "guided": {

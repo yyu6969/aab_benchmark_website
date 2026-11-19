@@ -34,7 +34,8 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html#tasks">Tasks</a></li><li>Calendar</li><li aria-current="page">Task 02</li></ol></nav>
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> TASK 02 / 10</p>
         <h1>Schedule Calendar Events and Recurrences</h1>
-        <figure class="tutorial">
+        <div class="tutorial-block">
+      <figure class="tutorial">
         <video controls playsinline preload="none" poster="../../assets/tutorial-posters/schedule-calendar-events.jpg" aria-labelledby="tutorial-title">
           <source src="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/schedule-calendar-events.mp4" type="video/mp4">
         </video>
@@ -48,6 +49,91 @@
           <a class="text-link" href="https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/schedule-calendar-events.mp4" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download video</a>
         </figcaption>
       </figure>
+      <details class="tutorial-guidance" id="reference-guidance">
+        <summary>Reference guidance</summary>
+        <div class="guidance-body prose">
+          <a class="text-link" href="../../assets/tutorial-guidance/schedule-calendar-events.md" download><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg> Download guidance (.md)</a>
+          <p>Schedule two calendar items in my Microsoft Outlook calendar: a one-time timed appointment titled &quot;SBS Study Session&quot; on September 19, 2019, and a yearly recurring all-day event titled &quot;National Dessert Day&quot; occurring every October 14 starting in 2019.</p>
+<h3>Required Calendar Entries and Parameters</h3>
+<ol>
+<li><strong>Single Timed Appointment: &quot;SBS Study Session&quot;</strong>
+<ul>
+<li><strong>Subject:</strong> <code>SBS Study Session</code>
+</li>
+<li><strong>Location:</strong> <code>Library Meeting Room</code>
+</li>
+<li><strong>Date:</strong> <code>September 19, 2019</code> (Thursday, <code>9/19/2019</code> for both start and end dates)
+</li>
+<li><strong>Time:</strong> <code>11:30 AM</code> to <code>12:30 PM</code> (1-hour duration)
+</li>
+<li><strong>Configuration:</strong> Standard non-recurring timed appointment (<code>All day event</code> left unchecked, body left blank), saved to my Outlook calendar.
+</li></ul>
+</li>
+<li><strong>Yearly Recurring All-Day Event: &quot;National Dessert Day&quot;</strong>
+<ul>
+<li><strong>Subject:</strong> <code>National Dessert Day</code>
+</li>
+<li><strong>Location:</strong> Left blank (empty, alongside a blank body)
+</li>
+<li><strong>Start / Effective Date:</strong> <code>October 14, 2019</code> (Monday, <code>10/14/2019</code>)
+</li>
+<li><strong>Event Type:</strong> <code>All day event</code> enabled/checked (setting start and end times to <code>12:00 AM</code> with a <code>1 day</code> duration)
+</li>
+<li><strong>Recurrence Pattern:</strong> <code>Yearly</code>, recurring every <code>1</code> year(s) on <code>October 14</code>, effective <code>10/14/2019</code> with no end-date modification (producing the Outlook summary <code>Occurs every October 14 effective 10/14/2019</code>), saved to my Outlook calendar.
+</li></ul>
+</li></ol>
+<h3>Demonstrated Workflow and Intermediate States</h3>
+<ul>
+<li><strong>Initial Workspace State:</strong> Microsoft Outlook begins in the Mail <code>Inbox</code> view for my account with the <code>Home</code> ribbon tab active, an email titled <code>SBS Test</code> selected in the reading pane, and <code>Thursday, September 12, 2019</code> (<code>Thu 9/12/2019</code>) as the current default calendar date.
+</li>
+<li><strong>Creating &quot;SBS Study Session&quot; from Mail View:</strong>
+<ol>
+<li>From the <code>Home</code> ribbon in Mail view, click <code>New Items</code> and select <code>Appointment</code> to open an <code>Untitled - Appointment</code> window.
+</li>
+<li>Enter <code>SBS Study Session</code> in the <code>Subject</code> field (updating the window title to <code>SBS Study Session - Appointment</code>) and <code>Library Meeting Room</code> in the <code>Location</code> field.
+</li>
+<li>Open the <code>Start time</code> calendar picker (initially showing <code>Thu 9/12/2019</code>) and select <code>September 19, 2019</code>, which updates both the <code>Start time</code> and <code>End time</code> date fields to <code>Thu 9/19/2019</code>.
+</li>
+<li>Open the <code>Start time</code> time dropdown (initially displaying <code>7:00 PM</code>), scroll up to daytime hours, and select <code>11:30 AM</code>; Outlook automatically adjusts the <code>End time</code> field to <code>12:00 PM</code>.
+</li>
+<li>Open the <code>End time</code> dropdown (initially highlighting <code>12:00 PM (30 minutes)</code>) and select <code>12:30 PM (1 hour)</code>, setting <code>End time</code> to <code>12:30 PM</code>.
+</li>
+<li>Click <code>Save &amp; Close</code> on the Appointment ribbon to save the appointment and return to the <code>Inbox</code> view.
+</li></ol>
+</li>
+<li><strong>Creating &quot;National Dessert Day&quot; from Calendar View:</strong>
+<ol>
+<li>Click the <code>Calendar</code> button in the bottom-left navigation bar to switch to the <code>September 2019</code> monthly calendar grid (where <code>September 12</code> is highlighted and <code>SBS Study Session</code> appears on <code>Thursday, September 19</code>).
+</li>
+<li>Click <code>New Appointment</code> on the <code>Home</code> ribbon to open an <code>Untitled - Appointment</code> window (initially defaulting to <code>Thu 9/12/2019</code> from <code>11:00 AM</code> to <code>11:30 AM</code>).
+</li>
+<li>Enter <code>National Dessert Day</code> in the <code>Subject</code> field while leaving <code>Location</code> empty.
+</li>
+<li>Open the <code>Start time</code> date picker dropdown (showing <code>September 2019</code>), click the next-month arrow to advance to <code>October 2019</code>, and select <code>October 14, 2019</code>, updating the <code>Start time</code> date to <code>Mon 10/14/2019</code>.
+</li>
+<li>Check the <code>All day event</code> checkbox, converting the window to <code>National Dessert Day - Event</code> and changing the start and end times to <code>12:00 AM</code>.
+</li>
+<li>Click <code>Recurrence</code> (<code>Ctrl+G</code>) on the ribbon to open the <code>Appointment Recurrence</code> modal dialog (<code>Start: 12:00 AM</code>, <code>End: 12:00 AM</code>, <code>Duration: 1 day</code>), change the <code>Recurrence pattern</code> radio button from the default <code>Weekly</code> to <code>Yearly</code> (displaying <code>Recur every 1 year(s)</code> and <code>On: October 14</code>), and click <code>OK</code>. The editor updates to <code>National Dessert Day - Recurring Event</code> displaying <code>Occurs every October 14 effective 10/14/2019</code>.
+</li>
+<li>Click <code>Save &amp; Close</code> to save the recurring event and return to the <code>September 2019</code> monthly calendar view.
+</li></ol>
+</li>
+<li><strong>Post-Save Calendar Navigation and Preview:</strong>
+<ul>
+<li>After saving the second item, the monthly Calendar view is navigated forward from <code>September 2019</code> to <code>October 2020</code>, and the cursor hovers over the <code>National Dessert Day</code> entry on <code>Wednesday, October 14, 2020</code> (<code>10/14/2020</code>–<code>10/15/2020</code>), opening its event details preview card.
+</li></ul>
+</li></ul>
+<h3>Expected Outcomes, Method Flexibility, and Scope Notes</h3>
+<ul>
+<li><strong>Persistent Outcomes:</strong> My Outlook calendar contains both saved entries: the single appointment <code>SBS Study Session</code> at <code>Library Meeting Room</code> on <code>September 19, 2019</code> from <code>11:30 AM</code> to <code>12:30 PM</code>, and the yearly all-day recurring event <code>National Dessert Day</code> occurring every <code>October 14</code> effective <code>10/14/2019</code>.
+</li>
+<li><strong>Method and Order Flexibility:</strong> Creating the first entry from the Mail <code>New Items</code> menu and the second after switching to <code>Calendar</code> view, using mouse dropdowns rather than direct keyboard input, and creating <code>SBS Study Session</code> prior to <code>National Dessert Day</code> are demonstrated execution choices rather than mandatory constraints; the two calendar entries have no dependency on each other.
+</li>
+<li><strong>Scope Qualification on Final Navigation:</strong> Navigating the Calendar view to <code>October 2020</code> and hovering over the <code>October 14, 2020</code> instance of <code>National Dessert Day</code> confirms that the yearly recurrence populates future years, but the trajectory alone does not establish whether displaying/checking <code>October 2020</code> was an explicit user requirement or voluntary post-save verification by the demonstrator. Accordingly, saving the two configured calendar items represents the core required work, while navigating to <code>October 2020</code> to inspect the recurring event is an optional or secondary verification step unless specifically desired.
+</li></ul>
+        </div>
+      </details>
+    </div>
         <p class="task-summary">Schedule a study session and a recurring all-day calendar event.</p>
         <div class="task-badges"><span class="badge category-badge">Calendar</span><a class="badge" href="#rubrics">5 outcome criteria</a><a class="badge" href="#support-materials">0 support files</a></div>
       </header>

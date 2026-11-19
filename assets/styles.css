@@ -227,12 +227,12 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 @media print{.material-toolbar,.related-materials{display:none}.material-preview{border:0}.document-preview{padding:0}.material-page{padding:0}.material-hero h1{font-size:20pt}}
 .rubric-material-link{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 
+.tutorial-block { margin: 1.75rem 0; border: 1px solid var(--border); }
 .tutorial {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(230px, 1fr);
   align-items: stretch;
-  margin: 1.75rem 0;
-  border: 1px solid var(--border);
+  margin: 0;
   background: var(--subtle);
 }
 .tutorial video {
@@ -248,6 +248,16 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .tutorial dl { display: grid; gap: .85rem; margin: 1.25rem 0; }
 .tutorial dt { color: var(--muted); font-size: .8125rem; }
 .tutorial dd { font: 500 1rem/1.5 var(--sans); }
+.tutorial-guidance { border-top: 1px solid var(--border); scroll-margin-top: 1rem; }
+.tutorial-guidance summary { padding: .9rem clamp(1rem, 2.3vw, 2rem); color: var(--accent); cursor: pointer; font-size: .9rem; }
+.tutorial-guidance summary:hover { background: var(--wash); }
+.tutorial-guidance[open] summary { border-bottom: 1px solid var(--border); }
+.guidance-body { max-width: 86ch; margin: 0 auto; padding: 1.25rem clamp(1rem, 3vw, 2rem) 2rem; }
+.guidance-body > .text-link { margin: 0 0 1rem; }
+.guidance-body :is(h3,h4,h5) { margin: 1.5rem 0 .5rem; line-height: 1.4; }
+.guidance-body :is(ol,ul) { margin: .5rem 0; padding-inline-start: 1.5rem; }
+.guidance-body li > p { margin: .5rem 0; }
+.guidance-body hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 @media (max-width: 760px) {
   .tutorial { grid-template-columns: minmax(0, 1fr); }
   .tutorial dl { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
