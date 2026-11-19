@@ -1,0 +1,21 @@
+task,condition,video_seconds,total_tokens,agent_seconds,criteria,harbor_points,codex_points,agent_error,trial,slug
+Microsoft Word,guided,328.075,14018782,1006,3,3,3,False,microsoft_word_env__finalize_sow__DmypM8j,finalize-document-tracked-changes
+Microsoft Word,unguided,328.075,11661585,1898,3,3,3,False,microsoft_word_env__finalize_sow__sp6sLR4,finalize-document-tracked-changes
+Microsoft Outlook,guided,334.461,10300144,1323,5,5,5,False,microsoft_outlook_env__add_calen__3zXqXbH,schedule-calendar-events
+Microsoft Outlook,unguided,334.461,3172424,368,5,5,5,False,microsoft_outlook_env__add_calen__BXVfcsr,schedule-calendar-events
+QuickBooks Online,guided,367.387,12203630,1076,8,8,8,False,quickbooks_online_env__reconcile__uJy75VA,reconcile-business-bank-account
+QuickBooks Online,unguided,367.387,5942733,952,8,8,8,False,quickbooks_online_env__reconcile__ngSLxRB,reconcile-business-bank-account
+DrChrono,guided,449.817,23068488,1554,6,6,6,False,drchrono_env__complete_lock_clin__9LqDMfB,complete-sign-clinical-note
+DrChrono,unguided,449.817,18917119,2122,6,6,6,False,drchrono_env__complete_lock_clin__m4gizss,complete-sign-clinical-note
+Google Classroom,guided,901.422,24445570,1818,8,8,8,False,google_classroom_env__grade_week__HpgBVV2,update-class-gradebook
+Google Classroom,unguided,901.422,50035211,1977,8,8,8,False,google_classroom_env__grade_week__pCa8WKA,update-class-gradebook
+IBM SPSS Statistics,guided,1513.361,4454088,1189,27,27,27,False,ibm_spss_statistics_env__teacher__ePZXicG,survey-data-frequency-analyses
+IBM SPSS Statistics,unguided,1513.361,5365864,1143,27,27,27,False,ibm_spss_statistics_env__teacher__PwPjuD3,survey-data-frequency-analyses
+Adobe Premiere Pro,guided,1781.366,91980523,4163,29,21,28,True,adobe_premiere_pro_env__justin_e__Ne6uaaw,edit-youtube-video
+Adobe Premiere Pro,unguided,1781.366,126358786,5693,29,25,27,False,adobe_premiere_pro_env__justin_e__U9hBPtb,edit-youtube-video
+Asana,guided,1784.988,106978780,4087,28,19,18,True,asana_env__marketing_website_wor__fG9gqZw,plan-website-launch
+Asana,unguided,1784.988,59098512,3716,28,23,26,False,asana_env__marketing_website_wor__oMeCmrW,plan-website-launch
+Salesforce,guided,3140.801,121146833,8030,31,27,26,True,salesforce_env__configure_sales__iyf3skk,sales-leads-revenue-dashboards
+Salesforce,unguided,3140.801,50919229,2950,31,9,29,False,salesforce_env__configure_sales__UB7YrEN,sales-leads-revenue-dashboards
+Autodesk AutoCAD,guided,6665.312,88554182,3197,38,21,22,False,autodesk_autocad_env__architectu__J5bb8Aa,floor-plan-architectural-details
+Autodesk AutoCAD,unguided,6665.312,91568411,4822,38,18,23,False,autodesk_autocad_env__architectu__uSVNvrf,floor-plan-architectural-details

@@ -52,6 +52,8 @@ Each run includes a criterion-by-criterion comparison of Harbor RewardKit with `
 
 The checked-in `run-scores.json` binds the scores to the selected trials and rubric IDs. To refresh it, run `python3 scripts/import_rubric_scores.py /path/to/aab_benchmark_archive /path/to/manual_review` before the normal build. The importer uses the latest matching production Carbon replay when available, checks trajectory and checklist hashes, and publishes only the verdicts and criterion text.
 
+The catalog links to three downloadable plots comparing the selected runs by tutorial duration. After changing the run or video data, regenerate the SVGs with `python scripts/plot_run_comparison.py` in a Matplotlib environment, then build as usual. The build checks the figures against the downloadable CSV and serves the checked-in plots without a plotting dependency.
+
 ## Files
 
 | Path | Purpose |
