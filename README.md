@@ -45,6 +45,9 @@ Runtime covers the Pi agent execution interval. Total tokens sum reported input 
 
 The selected trials are pinned in `agent-runs.json`. Their files live in `assets/agent-runs/`, so building or serving the site does not require the benchmark machine. To refresh the selection from the archive, run `python3 scripts/import_agent_runs.py /path/to/agent_runtime_tokens.csv` and then the normal build and check commands.
 
+An **Output files** subsection links the deliverables Harbor collected for that specific trial. The importer selects the approved guest paths from its artifact manifest and records a SHA-256 hash for each download. Runs without collected deliverables omit the subsection.
+The Google Classroom gradebook is excluded from the public downloads.
+
 Each run includes a criterion-by-criterion comparison of Harbor RewardKit with `gemini-4-carbon` and the independent Codex review with GPT-6.2 Astra. Harbor full credit maps to 1. Partial, no-credit and unresolved verdicts each map to 0. Codex reports binary scores and distinguishes incomplete work from insufficient evidence. The totals count criteria with full credit in each recorded run.
 
 The checked-in `run-scores.json` binds the scores to the selected trials and rubric IDs. To refresh it, run `python3 scripts/import_rubric_scores.py /path/to/aab_benchmark_archive /path/to/manual_review` before the normal build. The importer uses the latest matching production Carbon replay when available, checks trajectory and checklist hashes, and publishes only the verdicts and criterion text.

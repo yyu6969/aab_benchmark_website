@@ -8,6 +8,7 @@ from datetime import datetime
 from pathlib import Path
 
 from build import ROOT, SOURCE, parse_tasks
+from materials import sha256
 
 TASKS = {
     "word": "finalize-document-tracked-changes", "outlook": "schedule-calendar-events",
@@ -15,6 +16,15 @@ TASKS = {
     "google-classroom": "update-class-gradebook", "spss": "survey-data-frequency-analyses",
     "premiere-pro": "edit-youtube-video", "asana": "plan-website-launch",
     "salesforce": "sales-leads-revenue-dashboards", "autocad": "floor-plan-architectural-details",
+}
+# Only these task deliverables are intended for public download.
+OUTPUT_PATHS = {
+    "floor-plan-architectural-details": ("/home/ga/Documents/CAD/example 2.pdf",
+                                        "/home/ga/Documents/CAD/floor plan exercise.dwg"),
+    "finalize-document-tracked-changes": ("/home/ga/Documents/SOW-Revision 1.docx",),
+    "schedule-calendar-events": ("/home/ga/.local/share/outlook-calendar/Calendar.ics",),
+    "edit-youtube-video": ("/home/ga/Documents/Justin Edit/Justin Edit.kdenlive",),
+    "reconcile-business-bank-account": ("/home/ga/Documents/HECTOR 2024 LLC.kmy",),
 }
 CREDENTIAL = re.compile(
     r"password|passwd|credential|secret|api[_-]?key|token|authorization|bearer\s|"
@@ -51,6 +61,29 @@ def export_trajectory(source, dest):
                 line = line.replace(secret, REDACTED)
             out.write(line + "\n")
     return len(events)
+
+
+def import_outputs(trial, slug, output):
+    folder = output / "outputs"
+    files = []
+    manifest = trial / "artifacts/manifest.json"
+    entries = json.loads(manifest.read_text()) if manifest.is_file() else []
+    for entry in entries:
+        guest = entry["source"]
+        if guest not in OUTPUT_PATHS.get(slug, ()) or entry["status"] != "ok" or entry["type"] != "file":
+            continue
+        expected = Path("artifacts") / guest.lstrip("/")
+        source = trial / expected
+        if Path(entry["destination"]) != expected or source.resolve() != trial.resolve() / expected or not source.is_file():
+            raise ValueError(f"Invalid collected output for {trial.name}: {guest}")
+        folder.mkdir(exist_ok=True)
+        shutil.copyfile(source, folder / source.name)
+        files.append({"name": source.name, "guest_path": guest, "bytes": source.stat().st_size, "sha256": sha256(source)})
+    names = {item["name"] for item in files}
+    for stale in folder.glob("*"):
+        if stale.name not in names:
+            stale.unlink()
+    return files
 
 
 def import_runs(selection):
@@ -91,7 +124,7 @@ def import_runs(selection):
                                    agent="Pi", model=model, runtime_seconds=runtime,
                                    input_tokens=metrics["n_input_tokens"], output_tokens=metrics["n_output_tokens"],
                                    cached_input_tokens=metrics["n_cache_tokens"], total_tokens=total,
-                                   frame_count=len(frames), event_count=count,
+                                   frame_count=len(frames), event_count=count, output_files=import_outputs(trial, slug, output),
                                    agent_error=(result.get("exception_info") or {}).get("exception_type") == "PiRpcError")
     expected = {task["slug"] for task in parse_tasks(SOURCE.read_text(encoding="utf-8"))}
     if set(manifest) != expected or any(set(pair) != {"guided", "unguided"} for pair in manifest.values()):

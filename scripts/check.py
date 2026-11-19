@@ -9,7 +9,7 @@ from urllib.parse import unquote, urlsplit
 
 from agent_runs import CODEX_SCORES, HARBOR_SCORES, load_agent_runs
 from build import OUTPUT, ROOT, SOURCE, load_tutorials, parse_tasks, plain_text
-from materials import load_materials, sha256
+from materials import file_url, load_materials, sha256
 
 
 def compact(text):
@@ -153,6 +153,16 @@ def check():
                 expected_scores.append([score["id"], f"{rubric['number']:02d} {plain_text(rubric['criterion'])}", *cells])
             assert page.scores[condition] == expected_scores, f"Score checklist mismatch: {task['slug']}/{condition}"
             folder = Path(run["asset_path"])
+            outputs = run["output_files"]
+            assert (f"outputs-{condition}" in page.ids) == bool(outputs)
+            expected_files = {item["name"] for item in outputs}
+            for root in (ROOT, OUTPUT):
+                assert {p.name for p in (root / folder / "outputs").glob("*")} == expected_files
+            for item in outputs:
+                path = folder / "outputs" / item["name"]
+                assert f"../../{file_url(path.as_posix())}" in page.links
+                assert (OUTPUT / path).stat().st_size == item["bytes"]
+                assert sha256(OUTPUT / path) == sha256(ROOT / path) == item["sha256"]
             assert run["total_tokens"] == run["input_tokens"] + run["output_tokens"]
             assert 0 <= run["cached_input_tokens"] <= run["input_tokens"] and run["runtime_seconds"] > 0
             assert page.run_frames[condition] == [f"../../{folder}/{name}" for name in run["frames"]]

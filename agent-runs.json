@@ -13,7 +13,8 @@
       "total_tokens": 106978780,
       "frame_count": 133,
       "event_count": 1038,
-      "agent_error": true
+      "agent_error": true,
+      "output_files": []
     },
     "unguided": {
       "job": "asana_pi_20261119_102019_11207656",
@@ -28,7 +29,8 @@
       "total_tokens": 59098512,
       "frame_count": 34,
       "event_count": 742,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     }
   },
   "floor-plan-architectural-details": {
@@ -45,7 +47,21 @@
       "total_tokens": 88554182,
       "frame_count": 6,
       "event_count": 648,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": [
+        {
+          "name": "example 2.pdf",
+          "guest_path": "/home/ga/Documents/CAD/example 2.pdf",
+          "bytes": 91655,
+          "sha256": "84185a84d5cf985d261aa5d87af5836ea90d0f73f387b462d6d5e4c86b274d7f"
+        },
+        {
+          "name": "floor plan exercise.dwg",
+          "guest_path": "/home/ga/Documents/CAD/floor plan exercise.dwg",
+          "bytes": 119253,
+          "sha256": "27c3e0e7099ec144315048f8c30524ea57a0576ea0d5c646e07b9b9ef7d2f11f"
+        }
+      ]
     },
     "unguided": {
       "job": "autocad_pi_20261119_114205_11212848",
@@ -60,7 +76,21 @@
       "total_tokens": 91568411,
       "frame_count": 27,
       "event_count": 716,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": [
+        {
+          "name": "example 2.pdf",
+          "guest_path": "/home/ga/Documents/CAD/example 2.pdf",
+          "bytes": 42724,
+          "sha256": "8243a3c390a70047032d569d74fcf8c09101b8aa335b7d05f7082666b3bc3187"
+        },
+        {
+          "name": "floor plan exercise.dwg",
+          "guest_path": "/home/ga/Documents/CAD/floor plan exercise.dwg",
+          "bytes": 83821,
+          "sha256": "5f423a57ff865d209ad72f67bcc08ee39a1e15fc970bc16547ef5be7e1d0aeab"
+        }
+      ]
     }
   },
   "complete-sign-clinical-note": {
@@ -77,7 +107,8 @@
       "total_tokens": 23068488,
       "frame_count": 39,
       "event_count": 471,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     },
     "unguided": {
       "job": "drchrono_pi_20261119_054533_11205543",
@@ -92,7 +123,8 @@
       "total_tokens": 18917119,
       "frame_count": 37,
       "event_count": 439,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     }
   },
   "update-class-gradebook": {
@@ -109,7 +141,8 @@
       "total_tokens": 24445570,
       "frame_count": 28,
       "event_count": 474,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     },
     "unguided": {
       "job": "google-classroom_pi_20261119_054533_11205542",
@@ -124,7 +157,8 @@
       "total_tokens": 50035211,
       "frame_count": 26,
       "event_count": 640,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     }
   },
   "schedule-calendar-events": {
@@ -141,7 +175,15 @@
       "total_tokens": 10300144,
       "frame_count": 40,
       "event_count": 320,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": [
+        {
+          "name": "Calendar.ics",
+          "guest_path": "/home/ga/.local/share/outlook-calendar/Calendar.ics",
+          "bytes": 3763,
+          "sha256": "5a4dcfdf66b6778320fcfd3f206a8731f3748a0841c0bd3d35b3eb4c51c94e9f"
+        }
+      ]
     },
     "unguided": {
       "job": "outlook_pi_20261119_054533_11205541",
@@ -156,7 +198,8 @@
       "total_tokens": 3172424,
       "frame_count": 4,
       "event_count": 196,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     }
   },
   "edit-youtube-video": {
@@ -173,7 +216,15 @@
       "total_tokens": 91980523,
       "frame_count": 99,
       "event_count": 865,
-      "agent_error": true
+      "agent_error": true,
+      "output_files": [
+        {
+          "name": "Justin Edit.kdenlive",
+          "guest_path": "/home/ga/Documents/Justin Edit/Justin Edit.kdenlive",
+          "bytes": 47875,
+          "sha256": "8b1664d04a425a64a6e64f5038337312dc564ebf30e23c16290a6e90037e956b"
+        }
+      ]
     },
     "unguided": {
       "job": "premiere-pro_pi_20261119_054533_11205550",
@@ -188,7 +239,8 @@
       "total_tokens": 126358786,
       "frame_count": 60,
       "event_count": 956,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     }
   },
   "reconcile-business-bank-account": {
@@ -205,7 +257,15 @@
       "total_tokens": 12203630,
       "frame_count": 29,
       "event_count": 353,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": [
+        {
+          "name": "HECTOR 2024 LLC.kmy",
+          "guest_path": "/home/ga/Documents/HECTOR 2024 LLC.kmy",
+          "bytes": 3973,
+          "sha256": "5ec8655ec5be05e25e5c7ff5a3a1f772e0b6846ca8f4034ce18f7c7e16d405b1"
+        }
+      ]
     },
     "unguided": {
       "job": "quickbooks_pi_20261119_000121_11206472",
@@ -220,7 +280,15 @@
       "total_tokens": 5942733,
       "frame_count": 40,
       "event_count": 252,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": [
+        {
+          "name": "HECTOR 2024 LLC.kmy",
+          "guest_path": "/home/ga/Documents/HECTOR 2024 LLC.kmy",
+          "bytes": 4051,
+          "sha256": "a038d2862ef7031e661cdb87f73f2c93b74a7b128d764d3bf564411f3faba1c9"
+        }
+      ]
     }
   },
   "sales-leads-revenue-dashboards": {
@@ -237,7 +305,8 @@
       "total_tokens": 121146833,
       "frame_count": 211,
       "event_count": 1172,
-      "agent_error": true
+      "agent_error": true,
+      "output_files": []
     },
     "unguided": {
       "job": "salesforce_pi_20261119_002058_11199947",
@@ -252,7 +321,8 @@
       "total_tokens": 50919229,
       "frame_count": 22,
       "event_count": 712,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     }
   },
   "survey-data-frequency-analyses": {
@@ -269,7 +339,8 @@
       "total_tokens": 4454088,
       "frame_count": 12,
       "event_count": 194,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     },
     "unguided": {
       "job": "spss_pi_20261119_011501_11206471",
@@ -284,7 +355,8 @@
       "total_tokens": 5365864,
       "frame_count": 7,
       "event_count": 188,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": []
     }
   },
   "finalize-document-tracked-changes": {
@@ -301,7 +373,15 @@
       "total_tokens": 14018782,
       "frame_count": 41,
       "event_count": 409,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": [
+        {
+          "name": "SOW-Revision 1.docx",
+          "guest_path": "/home/ga/Documents/SOW-Revision 1.docx",
+          "bytes": 58625,
+          "sha256": "4e9eca867ebaf038c2a62c704a191fa34c1c424c41034587d63587c18d26e1d9"
+        }
+      ]
     },
     "unguided": {
       "job": "word_pi_20261118_225542_11199947",
@@ -316,7 +396,15 @@
       "total_tokens": 11661585,
       "frame_count": 29,
       "event_count": 349,
-      "agent_error": false
+      "agent_error": false,
+      "output_files": [
+        {
+          "name": "SOW-Revision 1.docx",
+          "guest_path": "/home/ga/Documents/SOW-Revision 1.docx",
+          "bytes": 58632,
+          "sha256": "37aff9b40229547fdc39cb8e0da8513cb889a76b8bacbdeb8e3b9744538fffee"
+        }
+      ]
     }
   }
 }

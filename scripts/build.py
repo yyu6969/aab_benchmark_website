@@ -335,6 +335,9 @@ def build() -> list[dict]:
     load_agent_runs(tasks, ROOT, plain_text)
     OUTPUT.mkdir(exist_ok=True)
     (OUTPUT / "data").mkdir(exist_ok=True)
+    for previous in (OUTPUT / "assets/agent-runs").glob("*/*/outputs/*"):
+        if previous.is_file() and not (ROOT / previous.relative_to(OUTPUT)).is_file():
+            previous.unlink()
     shutil.copytree(ROOT / "assets", OUTPUT / "assets", dirs_exist_ok=True)
     shutil.copyfile(SOURCE, OUTPUT / "data" / "new_10_tasks.md")
     shutil.copyfile(ROOT / "support-materials.json", OUTPUT / "data" / "support-materials.json")

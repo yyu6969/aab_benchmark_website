@@ -3,6 +3,7 @@ import json
 import re
 from html import escape
 from pathlib import Path
+from materials import file_size, file_url
 
 CONDITIONS = {"guided": "With guidance and rubrics", "unguided": "Without guidance or rubrics"}
 
@@ -78,6 +79,20 @@ def render_scores(task, condition, title):
             </div>'''
 
 
+def render_outputs(files, directory, condition):
+    if not files:
+        return ""
+    items = []
+    for item in files:
+        name = escape(item["name"])
+        href = directory + "outputs/" + file_url(item["name"])
+        preview = f' <a href="{href}" aria-label="View {name}">View PDF</a>' if item["name"].lower().endswith(".pdf") else ""
+        items.append(f'<li><a href="{href}" download aria-label="Download {name}">{name}</a>'
+                     f'<span class="section-meta">{file_size(item["bytes"])}</span>{preview}</li>')
+    return (f'<section class="run-outputs" id="outputs-{condition}" aria-labelledby="outputs-title-{condition}">'
+            f'<h4 id="outputs-title-{condition}">Output files</h4><ul>{"".join(items)}</ul></section>')
+
+
 def render_agent_runs(task, prefix):
     articles = []
     for condition, title in CONDITIONS.items():
@@ -98,7 +113,7 @@ def render_agent_runs(task, prefix):
         articles.append(f'''<article class="agent-run" id="run-{condition}" aria-labelledby="heading-{condition}">
             <h3 id="heading-{condition}">{title}</h3>
             <dl class="run-metrics">{metrics}</dl>{note}
-            {render_scores(task, condition, title)}
+            {render_scores(task, condition, title)}{render_outputs(run["output_files"], directory, condition)}
             <figure class="run-frames">
               <figcaption>Trajectory screenshots <span class="section-meta">{len(frames)} frames</span></figcaption>
               <a class="run-image-link" href="{first}" title="Open full-size screenshot">
