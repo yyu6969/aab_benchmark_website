@@ -9,6 +9,8 @@ import re
 import shutil
 from pathlib import Path
 
+from materials import build_material_page, download_url, file_size, load_materials
+
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "docs"
 SOURCE = ROOT / "new_10_tasks.md"
@@ -214,7 +216,7 @@ def build_catalog(tasks: list[dict]) -> str:
         <div class="empty-state" hidden><h3>No matching tasks</h3><p>Try another keyword or work domain.</p><button type="button" class="button reset-filters">Clear filters</button></div>
       </section>
       <section id="about" class="about-section" aria-labelledby="about-heading"><div class="section-heading"><h2 id="about-heading">About this collection</h2><span class="section-meta">From brief to outcome</span></div>
-        <div class="about-grid"><p>Each task presents a professional scenario with a concrete goal. Its outcome rubric records the individual criteria used to assess the completed work.</p><div><h3>What's included</h3><p>The complete task instructions, all original rubric criteria and their sources, and the support-material paths listed in the source document. Support files belong to the task environment and are not hosted here.</p><a class="text-link" href="./data/tasks.json" download>{icon('download')} Download structured task data</a></div></div>
+        <div class="about-grid"><p>Each task presents a professional scenario with a concrete goal. Its outcome rubric records the individual criteria used to assess the completed work.</p><div><h3>What's included</h3><p>The complete task instructions, all original rubric criteria and their sources, and the support materials listed in the source document. Open files from each task page to preview documents, play media, or download the originals.</p><a class="text-link" href="./data/tasks.json" download>{icon('download')} Download structured task data</a></div></div>
       </section>
     </main>'''
     return page("Tasks | AAB Benchmark", "Explore 10 professional tasks with complete instructions, 183 outcome criteria, and support-material references.", content, home=True)
@@ -223,14 +225,21 @@ def build_catalog(tasks: list[dict]) -> str:
 def build_task(task: dict, tasks: list[dict]) -> str:
     prefix = "../../"
     rows = []
+    sources = {material["name"]: material for material in task["material_files"]}
     for rubric in task["rubrics"]:
-        rows.append(f'<tr id="rubric-{rubric["number"]}"><th scope="row"><a href="#rubric-{rubric["number"]}" aria-label="Criterion {rubric["number"]} permalink">{rubric["number"]:02d}</a></th><td>{inline(rubric["criterion"])}</td><td class="rubric-source">{inline(rubric["source"])}</td></tr>')
+        source = inline(rubric["source"])
+        if rubric["source"] in sources:
+            source = f'<a class="rubric-material-link" href="{esc(prefix + sources[rubric["source"]]["page"])}">{source}</a>'
+        rows.append(f'<tr id="rubric-{rubric["number"]}"><th scope="row"><a href="#rubric-{rubric["number"]}" aria-label="Criterion {rubric["number"]} permalink">{rubric["number"]:02d}</a></th><td>{inline(rubric["criterion"])}</td><td class="rubric-source">{source}</td></tr>')
     materials = []
-    for path in task["materials"]:
+    for material in task["material_files"]:
+        path = material["path"]
         name = Path(path).name
         extension = Path(path).suffix[1:].upper() or "FILE"
-        materials.append(f'''<li class="material-row">{icon('file')}<div><div class="material-title"><strong>{esc(name)}</strong><span class="file-type">{esc(extension)}</span></div><code class="material-path">{esc(path)}</code></div><button type="button" class="icon-button copy-button" data-copy="{esc(path)}" aria-label="Copy path for {esc(name)}" title="Copy file path" hidden>{icon('copy')}</button></li>''')
-    materials_html = ('<p class="section-description">File paths in the task environment. These files are referenced by the task and are not hosted on this site.</p><ul class="material-list">' + "".join(materials) + '</ul>') if materials else '<div class="no-materials"><span class="empty-symbol" aria-hidden="true">—</span><div><strong>No support materials</strong><p>This task does not list any support materials.</p></div></div>'
+        preview = esc(prefix + material["page"])
+        download = esc(download_url(material, prefix))
+        materials.append(f'''<li class="material-row">{icon('file')}<div><div class="material-title"><a class="material-name" href="{preview}">{esc(name)}</a><span class="file-type">{esc(extension)}</span><span class="material-size">{file_size(material['bytes'])}</span></div><code class="material-path">{esc(path)}</code><div class="material-actions"><a href="{preview}" aria-label="Open {esc(name)}">Open</a><a href="{download}" download aria-label="Download {esc(name)}">Download original</a></div></div><button type="button" class="icon-button copy-button" data-copy="{esc(path)}" aria-label="Copy path for {esc(name)}" title="Copy file path" hidden>{icon('copy')}</button></li>''')
+    materials_html = ('<p class="section-description">Open a file to preview it or download the original. The paths below identify where each file belongs in the task environment.</p><ul class="material-list">' + "".join(materials) + '</ul>') if materials else '<div class="no-materials"><span class="empty-symbol" aria-hidden="true">—</span><div><strong>No support materials</strong><p>This task does not list any support materials.</p></div></div>'
     prev_task = tasks[task["id"] - 2] if task["id"] > 1 else None
     next_task = tasks[task["id"]] if task["id"] < len(tasks) else None
     pagination = []
@@ -274,10 +283,12 @@ def build_task(task: dict, tasks: list[dict]) -> str:
 
 def build() -> list[dict]:
     tasks = parse_tasks(SOURCE.read_text(encoding="utf-8"))
+    load_materials(tasks, ROOT)
     OUTPUT.mkdir(exist_ok=True)
     (OUTPUT / "data").mkdir(exist_ok=True)
     shutil.copytree(ROOT / "assets", OUTPUT / "assets", dirs_exist_ok=True)
     shutil.copyfile(SOURCE, OUTPUT / "data" / "new_10_tasks.md")
+    shutil.copyfile(ROOT / "support-materials.json", OUTPUT / "data" / "support-materials.json")
     (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
     (OUTPUT / "index.html").write_text(build_catalog(tasks), encoding="utf-8")
     for task in tasks:
@@ -285,6 +296,10 @@ def build() -> list[dict]:
         directory.mkdir(parents=True, exist_ok=True)
         (directory / "index.html").write_text(build_task(task, tasks), encoding="utf-8")
         (OUTPUT / "data" / f"{task['slug']}.md").write_text(task["markdown"], encoding="utf-8")
+        for material in task["material_files"]:
+            destination = OUTPUT / material["page"]
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(build_material_page(material, task, ROOT, page, inline, prose), encoding="utf-8")
     public_tasks = [{k: v for k, v in task.items() if k != "markdown"} for task in tasks]
     (OUTPUT / "data" / "tasks.json").write_text(json.dumps(public_tasks, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Built {len(tasks)} tasks, {sum(len(t['rubrics']) for t in tasks)} rubric criteria, "

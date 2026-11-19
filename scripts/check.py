@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 from build import OUTPUT, ROOT, SOURCE, parse_tasks, plain_text
+from materials import load_materials, sha256
 
 
 def compact(text):
@@ -81,11 +82,13 @@ class Page(HTMLParser):
 
 def check():
     tasks = parse_tasks(SOURCE.read_text(encoding="utf-8"))
+    manifest = load_materials(tasks, ROOT)
     assert (OUTPUT / "data/new_10_tasks.md").read_bytes() == SOURCE.read_bytes(), "Source download differs"
     exported = json.loads((OUTPUT / "data/tasks.json").read_text(encoding="utf-8"))
     assert exported == [{k: v for k, v in task.items() if k != "markdown"} for task in tasks], "JSON differs from source"
     pages = {path.resolve(): Page(path) for path in OUTPUT.rglob("*.html")}
-    assert len(pages) == 11, f"Expected 11 HTML pages, found {len(pages)}"
+    expected_pages = 11 + len(manifest["files"])
+    assert len(pages) == expected_pages, f"Expected {expected_pages} HTML pages, found {len(pages)}"
     checked_links = 0
     for path, page in pages.items():
         assert page.h1_count == 1, f"Expected one H1 in {path}"
@@ -114,8 +117,21 @@ def check():
     for css in (OUTPUT / "assets").glob("*.css"):
         for ref in re.findall(r"url\(['\"]?([^)'\"]+)", css.read_text(encoding="utf-8")):
             assert (css.parent / ref).is_file(), f"Missing CSS asset {ref}"
+    for material in manifest["files"]:
+        if "file_path" in material:
+            source = ROOT / material["file_path"]
+            published = OUTPUT / material["file_path"]
+            assert source.stat().st_size == material["bytes"], f"Incorrect original file size: {source}"
+            assert sha256(source) == material["sha256"], f"Original support file changed: {source}"
+            assert sha256(published) == material["sha256"], f"Published support file changed: {published}"
+        for key in ("preview_path", "webm_path"):
+            if key in material:
+                preview = ROOT / material[key]
+                assert preview.is_file() and preview.stat().st_size > 1000, f"Missing video preview: {preview}"
+                assert sha256(preview) == sha256(OUTPUT / material[key]), "Video preview copy differs"
+        assert (OUTPUT / material["page"]).is_file(), "Missing material preview page"
     assert (ROOT / "assets/fonts/LICENSE").is_file(), "Missing font license"
-    print(f"Passed: 11 pages, {checked_links} local links, 10 complete instructions, "
+    print(f"Passed: {expected_pages} pages, {checked_links} local links, 10 complete instructions, "
           f"{sum(len(t['rubrics']) for t in tasks)} exact rubric rows, "
           f"{sum(len(t['materials']) for t in tasks)} material paths, Markdown and JSON downloads.")
 

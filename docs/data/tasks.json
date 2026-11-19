@@ -25,6 +25,19 @@
         "criterion": "The finalized 'SOW-Revision 1.docx' document is saved in place at its original location.",
         "source": "instruction.md"
       }
+    ],
+    "material_files": [
+      {
+        "task_id": 1,
+        "task_slug": "finalize-document-tracked-changes",
+        "path": "/home/ga/Documents/SOW-Revision 1.docx",
+        "name": "SOW-Revision 1.docx",
+        "kind": "document",
+        "bytes": 54609,
+        "sha256": "30481e263778a061572dcc4b6241556e605e2f3d7566df74b4b6982997d3736d",
+        "page": "materials/finalize-document-tracked-changes/sow-revision-1.html",
+        "file_path": "assets/materials/finalize-document-tracked-changes/SOW-Revision 1.docx"
+      }
     ]
   },
   {
@@ -61,7 +74,8 @@
         "criterion": "The recurring 'National Dessert Day' event is saved in the existing calendar.",
         "source": "instruction.md"
       }
-    ]
+    ],
+    "material_files": []
   },
   {
     "id": 3,
@@ -114,6 +128,19 @@
         "criterion": "The updated Chase Bank 8145 reconciliation record and transaction clearance states for the period ending 01/31/2024 are saved in the HECTOR 2024 LLC company ledger.",
         "source": "instruction.md"
       }
+    ],
+    "material_files": [
+      {
+        "task_id": 3,
+        "task_slug": "reconcile-business-bank-account",
+        "path": "/home/ga/Documents/Reconciliation/Chase_8145_January_2024_statement.pdf",
+        "name": "Chase_8145_January_2024_statement.pdf",
+        "kind": "pdf",
+        "bytes": 3791,
+        "sha256": "0d94c3f3fb4ff167fcba967d8c2e76b532ca5fb3aa84d67ed941234ea44eb681",
+        "page": "materials/reconcile-business-bank-account/chase-8145-january-2024-statement.html",
+        "file_path": "assets/materials/reconcile-business-bank-account/Chase_8145_January_2024_statement.pdf"
+      }
     ]
   },
   {
@@ -155,7 +182,8 @@
         "criterion": "The clinical note for Gandalf Greyhame Wiz is signed by the rendering provider and locked.",
         "source": "instruction.md"
       }
-    ]
+    ],
+    "material_files": []
   },
   {
     "id": 5,
@@ -206,7 +234,8 @@
         "criterion": "Cell D7 in the saved 'Organize and Educate' gradebook contains the comment 'Needs to make corrections'.",
         "source": "instruction.md"
       }
-    ]
+    ],
+    "material_files": []
   },
   {
     "id": 6,
@@ -353,6 +382,19 @@
         "number": 27,
         "criterion": "The prepared dataset and both demographic frequency-analysis sets remain open and available for review in the final workspace.",
         "source": "instruction.md"
+      }
+    ],
+    "material_files": [
+      {
+        "task_id": 6,
+        "task_slug": "survey-data-frequency-analyses",
+        "path": "/home/ga/Documents/Teacher Support Study/Document1.docx",
+        "name": "Document1.docx",
+        "kind": "document",
+        "bytes": 2081,
+        "sha256": "022a64694dbe2c12bbf62eb1b2d68de747835521810210a6be3906bdfe1242ae",
+        "page": "materials/survey-data-frequency-analyses/document1.html",
+        "file_path": "assets/materials/survey-data-frequency-analyses/Document1.docx"
       }
     ]
   },
@@ -518,6 +560,95 @@
         "criterion": "Presenter dialogue and background music remain independently editable audio elements throughout the sequence.",
         "source": "justin_edit_visual_reference.md"
       }
+    ],
+    "material_files": [
+      {
+        "task_id": 7,
+        "task_slug": "edit-youtube-video",
+        "path": "/home/ga/Desktop/Video Assets/Camera-Recording.mp4",
+        "name": "Camera-Recording.mp4",
+        "kind": "video",
+        "bytes": 496306345,
+        "sha256": "3ce75e5ae23529a559851a413ec04feda62fcb1f5b0bc6456b9b0b1a93a73bfc",
+        "page": "materials/edit-youtube-video/camera-recording.html",
+        "download_url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/support-materials-v1/Camera-Recording.mp4",
+        "preview_path": "assets/materials/edit-youtube-video/camera-recording-preview.mp4",
+        "webm_path": "assets/materials/edit-youtube-video/camera-recording-preview.webm"
+      },
+      {
+        "task_id": 7,
+        "task_slug": "edit-youtube-video",
+        "path": "/home/ga/Desktop/Video Assets/Screen-Recording.mp4",
+        "name": "Screen-Recording.mp4",
+        "kind": "video",
+        "bytes": 234123635,
+        "sha256": "905d9c7af59858328e8c720a52320bb147aa43257dce955492ec3eeb02920eba",
+        "page": "materials/edit-youtube-video/screen-recording.html",
+        "download_url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/support-materials-v1/Screen-Recording.mp4",
+        "preview_path": "assets/materials/edit-youtube-video/screen-recording-preview.mp4",
+        "webm_path": "assets/materials/edit-youtube-video/screen-recording-preview.webm"
+      },
+      {
+        "task_id": 7,
+        "task_slug": "edit-youtube-video",
+        "path": "/home/ga/Desktop/Video Assets/IMG_0133.MOV",
+        "name": "IMG_0133.MOV",
+        "kind": "video",
+        "bytes": 128588309,
+        "sha256": "96be80468bc04a77f624ab5bcaed8275fb5782da16a82a0123ded15ae65a5dc6",
+        "page": "materials/edit-youtube-video/img-0133.html",
+        "download_url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/support-materials-v1/IMG_0133.MOV",
+        "preview_path": "assets/materials/edit-youtube-video/img-0133-preview.mp4",
+        "webm_path": "assets/materials/edit-youtube-video/img-0133-preview.webm"
+      },
+      {
+        "task_id": 7,
+        "task_slug": "edit-youtube-video",
+        "path": "/home/ga/Desktop/Video Assets/IMG_0261.MOV",
+        "name": "IMG_0261.MOV",
+        "kind": "video",
+        "bytes": 32079568,
+        "sha256": "b7dc3be9a8fe09dba7235ec23fa33433dbb0ea8dc9cf28def288b86249bbb71e",
+        "page": "materials/edit-youtube-video/img-0261.html",
+        "download_url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/support-materials-v1/IMG_0261.MOV",
+        "preview_path": "assets/materials/edit-youtube-video/img-0261-preview.mp4",
+        "webm_path": "assets/materials/edit-youtube-video/img-0261-preview.webm"
+      },
+      {
+        "task_id": 7,
+        "task_slug": "edit-youtube-video",
+        "path": "/home/ga/Desktop/Video Assets/Test 1.mov",
+        "name": "Test 1.mov",
+        "kind": "video",
+        "bytes": 145733,
+        "sha256": "b5c6dcb6c9ae399fd4174d7bc7f7f0a316d116cd243057521464589db8bdfa3b",
+        "page": "materials/edit-youtube-video/test-1.html",
+        "download_url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/support-materials-v1/Test-1.mov",
+        "preview_path": "assets/materials/edit-youtube-video/test-1-preview.mp4",
+        "webm_path": "assets/materials/edit-youtube-video/test-1-preview.webm"
+      },
+      {
+        "task_id": 7,
+        "task_slug": "edit-youtube-video",
+        "path": "/home/ga/Downloads/ES_San Pedro - Sugoi.mp3",
+        "name": "ES_San Pedro - Sugoi.mp3",
+        "kind": "audio",
+        "bytes": 3693690,
+        "sha256": "ed53e254821b64714d7c5b36be7206d81d606ae1df3f6bdb1bc9f065948079f3",
+        "page": "materials/edit-youtube-video/es-san-pedro-sugoi.html",
+        "file_path": "assets/materials/edit-youtube-video/ES_San Pedro - Sugoi.mp3"
+      },
+      {
+        "task_id": 7,
+        "task_slug": "edit-youtube-video",
+        "path": "/workspace/assets/justin_edit_visual_reference.md",
+        "name": "justin_edit_visual_reference.md",
+        "kind": "markdown",
+        "bytes": 1556,
+        "sha256": "b11139a9d4fc929b7b324ab25efd8d11b575e0f48ee63b281afc79f564d493f5",
+        "page": "materials/edit-youtube-video/justin-edit-visual-reference.html",
+        "file_path": "assets/materials/edit-youtube-video/justin_edit_visual_reference.md"
+      }
     ]
   },
   {
@@ -669,7 +800,8 @@
         "criterion": "The Recently assigned section of Paul Minors's personal task list in the 'Asana Demo' workspace is empty.",
         "source": "instruction.md"
       }
-    ]
+    ],
+    "material_files": []
   },
   {
     "id": 9,
@@ -835,7 +967,8 @@
         "criterion": "Email subscription for the 'Closed Won Dashboard' is saved with a Weekly frequency on Monday at 7:00 AM",
         "source": "instruction.md"
       }
-    ]
+    ],
+    "material_files": []
   },
   {
     "id": 10,
@@ -1041,6 +1174,63 @@
         "number": 38,
         "criterion": "The paired-leaf entrances shown in the reference contain correctly fitted and oriented double-door components.",
         "source": "floor plan exercise reference.pdf"
+      }
+    ],
+    "material_files": [
+      {
+        "task_id": 10,
+        "task_slug": "floor-plan-architectural-details",
+        "path": "/home/ga/Documents/CAD/floor plan exercise.dwg",
+        "name": "floor plan exercise.dwg",
+        "kind": "cad",
+        "bytes": 27672,
+        "sha256": "6ee81ab74462e8506ba1a4577a9dbbaa1b2fb376f17942925c34d0ebb8685186",
+        "page": "materials/floor-plan-architectural-details/floor-plan-exercise.html",
+        "file_path": "assets/materials/floor-plan-architectural-details/floor plan exercise.dwg"
+      },
+      {
+        "task_id": 10,
+        "task_slug": "floor-plan-architectural-details",
+        "path": "/home/ga/Documents/CAD/floor plan exercise reference.pdf",
+        "name": "floor plan exercise reference.pdf",
+        "kind": "pdf",
+        "bytes": 156488,
+        "sha256": "2b52f7adefa5ddc7e19d850d6e9df4b11cde7a74406431f52e8044b5324c427d",
+        "page": "materials/floor-plan-architectural-details/floor-plan-exercise-reference.html",
+        "file_path": "assets/materials/floor-plan-architectural-details/floor plan exercise reference.pdf"
+      },
+      {
+        "task_id": 10,
+        "task_slug": "floor-plan-architectural-details",
+        "path": "/home/ga/Documents/CAD/bath furnitures.dwg",
+        "name": "bath furnitures.dwg",
+        "kind": "cad",
+        "bytes": 32566,
+        "sha256": "23dfdeb15526069a141355960036a540b4803f0653534338434e36eae06c9928",
+        "page": "materials/floor-plan-architectural-details/bath-furnitures.html",
+        "file_path": "assets/materials/floor-plan-architectural-details/bath furnitures.dwg"
+      },
+      {
+        "task_id": 10,
+        "task_slug": "floor-plan-architectural-details",
+        "path": "/home/ga/Documents/CAD/Blocks/toilet 3.dwg",
+        "name": "toilet 3.dwg",
+        "kind": "cad",
+        "bytes": 25558,
+        "sha256": "c928dd81851e6328b2a380fea8ea285f97ee8293da0167dab8ba7fab39d37784",
+        "page": "materials/floor-plan-architectural-details/toilet-3.html",
+        "file_path": "assets/materials/floor-plan-architectural-details/toilet 3.dwg"
+      },
+      {
+        "task_id": 10,
+        "task_slug": "floor-plan-architectural-details",
+        "path": "/home/ga/Documents/CAD/Blocks/sink 8.dwg",
+        "name": "sink 8.dwg",
+        "kind": "cad",
+        "bytes": 22806,
+        "sha256": "b9e458becd3bbbc5f318c870ec4a0fc190a77bcecffa654cc28e91fb85fa59f4",
+        "page": "materials/floor-plan-architectural-details/sink-8.html",
+        "file_path": "assets/materials/floor-plan-architectural-details/sink 8.dwg"
       }
     ]
   }
