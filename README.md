@@ -35,6 +35,14 @@ python3 -m http.server 8000 --directory docs
 
 Open `http://localhost:8000`. Individual pages can also be opened directly from `docs/`; search and theme controls work without a server.
 
+## Agent runs
+
+Each task page compares the selected guided and unguided Harbor trials. The screenshot control opens every numbered Gym episode frame in chronological order. The JSONL download keeps the recorded event sequence. It omits private session connection details and redacts authentication-related payloads across linked tool events. The benchmark archive retains the originals.
+
+Runtime covers the Pi agent execution interval. Total tokens sum reported input and output across calls and include cached input once. The selection includes the newer unguided AutoCAD run and the graded unguided Asana run. A communication error is indicated for the three affected guided trials.
+
+The selected trials are pinned in `agent-runs.json`. Their files live in `assets/agent-runs/`, so building or serving the site does not require the benchmark machine. To refresh the selection from the archive, run `python3 scripts/import_agent_runs.py /path/to/agent_runtime_tokens.csv` and then the normal build and check commands.
+
 ## Files
 
 | Path | Purpose |

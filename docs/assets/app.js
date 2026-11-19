@@ -110,6 +110,73 @@
     applyFilters();
   }
 
+  document.querySelectorAll('.run-frames').forEach(gallery => {
+    const controls = gallery.querySelector('.frame-controls');
+    const picker = controls.querySelector('select');
+    const previous = controls.querySelector('.frame-back');
+    const next = controls.querySelector('.frame-forward');
+    const link = gallery.querySelector('.run-image-link');
+    const image = link.querySelector('img');
+    const heading = gallery.closest('article').querySelector('h3').textContent;
+    const show = index => {
+      picker.selectedIndex = index;
+      const path = picker.value;
+      link.href = path;
+      image.src = path;
+      image.alt = heading + ' — ' + path.split('/').pop();
+      previous.disabled = index === 0;
+      next.disabled = index === picker.length - 1;
+    };
+    previous.addEventListener('click', () => show(picker.selectedIndex - 1));
+    next.addEventListener('click', () => show(picker.selectedIndex + 1));
+    picker.addEventListener('change', () => show(picker.selectedIndex));
+    show(picker.selectedIndex);
+    controls.hidden = false;
+  });
+
+  if (location.protocol === 'http:' || location.protocol === 'https:') {
+    document.querySelectorAll('.event-viewer').forEach(viewer => {
+      const run = viewer.closest('article');
+      const link = run.querySelector('.run-trajectory a');
+      const controls = viewer.querySelector('.event-controls');
+      const number = controls.querySelector('input');
+      const previous = controls.querySelector('.event-back');
+      const next = controls.querySelector('.event-forward');
+      const record = viewer.querySelector('.event-record');
+      const status = viewer.querySelector('.event-status');
+      let events;
+      let loading = false;
+      const show = index => {
+        index = Math.max(1, Math.min(events.length, Math.round(index) || 1));
+        number.value = index;
+        previous.disabled = index === 1;
+        next.disabled = index === events.length;
+        record.textContent = JSON.stringify(JSON.parse(events[index - 1]), null, 2);
+        record.scrollTop = 0;
+      };
+      previous.addEventListener('click', () => show(number.valueAsNumber - 1));
+      next.addEventListener('click', () => show(number.valueAsNumber + 1));
+      number.addEventListener('change', () => show(number.valueAsNumber));
+      viewer.addEventListener('toggle', async () => {
+        if (!viewer.open || loading || events) return;
+        loading = true;
+        status.textContent = 'Loading trajectory…';
+        try {
+          const response = await fetch(link.href);
+          if (!response.ok) throw new Error();
+          events = (await response.text()).trimEnd().split(/\r?\n/);
+          show(1);
+          record.hidden = controls.hidden = false;
+          status.textContent = '';
+        } catch (_) {
+          events = undefined;
+          status.textContent = 'Could not open the event viewer. Use the JSONL download.';
+        } finally { loading = false; }
+      });
+      viewer.hidden = false;
+    });
+  }
+
   // Track the section at the reading position, including long rubric tables.
   const navLinks = [...document.querySelectorAll('.section-nav a')];
   if (navLinks.length) {

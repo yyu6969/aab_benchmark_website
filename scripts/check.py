@@ -7,6 +7,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+from agent_runs import load_agent_runs
 from build import OUTPUT, ROOT, SOURCE, load_tutorials, parse_tasks, plain_text
 from materials import load_materials, sha256
 
@@ -21,6 +22,9 @@ class Page(HTMLParser):
         self.path = path
         self.links = []
         self.ids = set()
+        self.section_ids = []
+        self.run_frames = {}
+        self.run_condition = None
         self.h1_count = 0
         self.in_table = False
         self.cell = None
@@ -34,6 +38,13 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "section" and attrs.get("id"):
+            self.section_ids.append(attrs["id"])
+        if tag == "article" and "agent-run" in attrs.get("class", "").split():
+            self.run_condition = attrs["id"].removeprefix("run-")
+            self.run_frames[self.run_condition] = []
+        if tag == "option" and self.run_condition:
+            self.run_frames[self.run_condition].append(attrs["value"])
         if attrs.get("id"):
             assert attrs["id"] not in self.ids, f"Duplicate ID in {self.path}: {attrs['id']}"
             self.ids.add(attrs["id"])
@@ -58,6 +69,8 @@ class Page(HTMLParser):
             self.cell = []
 
     def handle_endtag(self, tag):
+        if tag == "article":
+            self.run_condition = None
         if self.instruction_depth and tag == "div":
             self.instruction_depth -= 1
         if tag == "code" and self.material is not None:
@@ -84,6 +97,7 @@ def check():
     tasks = parse_tasks(SOURCE.read_text(encoding="utf-8"))
     manifest = load_materials(tasks, ROOT)
     load_tutorials(tasks)
+    load_agent_runs(tasks, ROOT)
     assert (OUTPUT / "data/new_10_tasks.md").read_bytes() == SOURCE.read_bytes(), "Source download differs"
     exported = json.loads((OUTPUT / "data/tasks.json").read_text(encoding="utf-8"))
     assert exported == [{k: v for k, v in task.items() if k != "markdown"} for task in tasks], "JSON differs from source"
@@ -115,6 +129,20 @@ def check():
         assert compact("".join(page.instruction)) == compact(instruction), f"Instruction changed in task {task['id']}"
         assert page.materials == task["materials"], f"Material paths changed in task {task['id']}"
         assert (OUTPUT / "data" / f"{task['slug']}.md").read_text(encoding="utf-8") == task["markdown"]
+        ordered = page.section_ids
+        assert ordered.index("agent-run") == ordered.index("support-materials") + 1
+        assert "#agent-run" in page.links
+        for condition, run in task["agent_runs"].items():
+            assert f"run-{condition}" in page.ids
+            folder = Path(run["asset_path"])
+            assert run["total_tokens"] == run["input_tokens"] + run["output_tokens"]
+            assert 0 <= run["cached_input_tokens"] <= run["input_tokens"] and run["runtime_seconds"] > 0
+            assert page.run_frames[condition] == [f"../../{folder}/{name}" for name in run["frames"]]
+            for name in [*run["frames"], "traj.jsonl"]:
+                assert sha256(ROOT / folder / name) == sha256(OUTPUT / folder / name)
+            assert f"../../{folder}/traj.jsonl" in page.links
+            with (OUTPUT / folder / "traj.jsonl").open(encoding="utf-8") as stream:
+                assert sum(1 for line in stream if json.loads(line)["event"]) == run["event_count"]
     for css in (OUTPUT / "assets").glob("*.css"):
         for ref in re.findall(r"url\(['\"]?([^)'\"]+)", css.read_text(encoding="utf-8")):
             assert (css.parent / ref).is_file(), f"Missing CSS asset {ref}"
