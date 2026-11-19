@@ -1,0 +1,72 @@
+{
+  "finalize-document-tracked-changes": {
+    "title": "Word for Microsoft 365 Tutorial for Lawyer",
+    "duration_seconds": 328.075,
+    "original_software": "Microsoft Word",
+    "open_source_software": "ONLYOFFICE Desktop Editors",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/finalize-document-tracked-changes.mp4"
+  },
+  "schedule-calendar-events": {
+    "title": "Outlook 2016 - Schedule Appointments and Events",
+    "duration_seconds": 334.461,
+    "original_software": "Microsoft Outlook",
+    "open_source_software": "Mozilla Thunderbird",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/schedule-calendar-events.mp4"
+  },
+  "reconcile-business-bank-account": {
+    "title": "QuickBooks Online Bank Reconciliation",
+    "duration_seconds": 367.387,
+    "original_software": "QuickBooks Online",
+    "open_source_software": "KMyMoney",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/reconcile-business-bank-account.mp4"
+  },
+  "complete-sign-clinical-note": {
+    "title": "Tutorial-Clinical Documentation",
+    "duration_seconds": 449.817,
+    "original_software": "DrChrono",
+    "open_source_software": "OpenEMR",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/complete-sign-clinical-note.mp4"
+  },
+  "update-class-gradebook": {
+    "title": "Grading Tips for Google Classroom",
+    "duration_seconds": 901.422,
+    "original_software": "Google Classroom",
+    "open_source_software": "Moodle",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/update-class-gradebook.mp4"
+  },
+  "survey-data-frequency-analyses": {
+    "title": "SPSS for Beginners",
+    "duration_seconds": 1513.361,
+    "original_software": "IBM SPSS Statistics",
+    "open_source_software": "GNU PSPP",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/survey-data-frequency-analyses.mp4"
+  },
+  "edit-youtube-video": {
+    "title": "Adobe Premiere Pro Tutorial for Beginners",
+    "duration_seconds": 1781.366,
+    "original_software": "Adobe Premiere Pro",
+    "open_source_software": "Kdenlive",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/edit-youtube-video.mp4"
+  },
+  "plan-website-launch": {
+    "title": "Asana Project Management Tutorial for Beginners",
+    "duration_seconds": 1784.988,
+    "original_software": "Asana",
+    "open_source_software": "OpenProject",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/plan-website-launch.mp4"
+  },
+  "sales-leads-revenue-dashboards": {
+    "title": "Salesforce CRM Training for Sales Reps",
+    "duration_seconds": 3140.801,
+    "original_software": "Salesforce",
+    "open_source_software": "SuiteCRM",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/sales-leads-revenue-dashboards.mp4"
+  },
+  "floor-plan-architectural-details": {
+    "title": "AutoCAD Care Home Floor Plan Exercise",
+    "duration_seconds": 6665.312,
+    "original_software": "Autodesk AutoCAD",
+    "open_source_software": "Open CAD Studio",
+    "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/floor-plan-architectural-details.mp4"
+  }
+}

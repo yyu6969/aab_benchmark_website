@@ -10,6 +10,8 @@ Small originals and full-length 540p MP4 and WebM video previews are included in
 
 ## Publish on GitHub Pages
 
+Each task page includes its tutorial recording, measured duration, original software, and open-source benchmark application. The player streams the original MP4 from the repository’s `tutorial-videos-v1` release. Task slugs in `tutorial-videos.json` map the recordings and software to their pages.
+
 1. Push the project to a GitHub repository on `main` or `master`.
 2. In **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source.
 3. Open **Actions → Deploy task website to GitHub Pages** and run the workflow, or push a commit to trigger it.

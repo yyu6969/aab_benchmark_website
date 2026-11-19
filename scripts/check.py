@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from build import OUTPUT, ROOT, SOURCE, parse_tasks, plain_text
+from build import OUTPUT, ROOT, SOURCE, load_tutorials, parse_tasks, plain_text
 from materials import load_materials, sha256
 
 
@@ -37,7 +37,7 @@ class Page(HTMLParser):
         if attrs.get("id"):
             assert attrs["id"] not in self.ids, f"Duplicate ID in {self.path}: {attrs['id']}"
             self.ids.add(attrs["id"])
-        for name in ("href", "src"):
+        for name in ("href", "src", "poster"):
             if attrs.get(name):
                 self.links.append(attrs[name])
         if tag == "h1":
@@ -83,6 +83,7 @@ class Page(HTMLParser):
 def check():
     tasks = parse_tasks(SOURCE.read_text(encoding="utf-8"))
     manifest = load_materials(tasks, ROOT)
+    load_tutorials(tasks)
     assert (OUTPUT / "data/new_10_tasks.md").read_bytes() == SOURCE.read_bytes(), "Source download differs"
     exported = json.loads((OUTPUT / "data/tasks.json").read_text(encoding="utf-8"))
     assert exported == [{k: v for k, v in task.items() if k != "markdown"} for task in tasks], "JSON differs from source"

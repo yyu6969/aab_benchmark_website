@@ -222,6 +222,37 @@ def build_catalog(tasks: list[dict]) -> str:
     return page("Tasks | AAB Benchmark", "Explore 10 professional tasks with complete instructions, 183 outcome criteria, and support-material references.", content, home=True)
 
 
+def load_tutorials(tasks: list[dict]) -> None:
+    videos = json.loads((ROOT / "tutorial-videos.json").read_text(encoding="utf-8"))
+    if set(videos) != {task["slug"] for task in tasks}:
+        raise ValueError("Expected one tutorial video for each task slug")
+    for task in tasks:
+        task["tutorial"] = videos[task["slug"]]
+
+
+def tutorial_player(task: dict) -> str:
+    video = task["tutorial"]
+    minutes, seconds = divmod(int(video["duration_seconds"]), 60)
+    hours, minutes = divmod(minutes, 60)
+    duration = f"{hours}:{minutes:02}:{seconds:02}" if hours else f"{minutes}:{seconds:02}"
+    title = esc(video["title"])
+    url = esc(video["url"])
+    return f'''<figure class="tutorial">
+        <video controls playsinline preload="none" poster="../../assets/tutorial-posters/{esc(task['slug'])}.jpg" aria-labelledby="tutorial-title">
+          <source src="{url}" type="video/mp4">
+        </video>
+        <figcaption>
+          <h2 id="tutorial-title">{title}</h2>
+          <dl>
+            <div><dt>Video duration</dt><dd><time datetime="PT{video['duration_seconds']}S">{duration}</time></dd></div>
+            <div><dt>Original software</dt><dd>{esc(video['original_software'])}</dd></div>
+            <div><dt>Open-source software</dt><dd>{esc(video['open_source_software'])}</dd></div>
+          </dl>
+          <a class="text-link" href="{url}" download>{icon("download")} Download video</a>
+        </figcaption>
+      </figure>'''
+
+
 def build_task(task: dict, tasks: list[dict]) -> str:
     prefix = "../../"
     rows = []
@@ -256,7 +287,9 @@ def build_task(task: dict, tasks: list[dict]) -> str:
       <header class="task-hero">
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../../index.html#tasks">Tasks</a></li><li>{esc(task['category'])}</li><li aria-current="page">Task {task['id']:02d}</li></ol></nav>
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> TASK {task['id']:02d} / 10</p>
-        <h1>{esc(task['title'])}</h1><p class="task-summary">{esc(task['summary'])}</p>
+        <h1>{esc(task['title'])}</h1>
+        {tutorial_player(task)}
+        <p class="task-summary">{esc(task['summary'])}</p>
         <div class="task-badges"><span class="badge category-badge">{esc(task['category'])}</span><a class="badge" href="#rubrics">{len(task['rubrics'])} outcome criteria</a><a class="badge" href="#support-materials">{len(task['materials'])} support {'file' if len(task['materials']) == 1 else 'files'}</a></div>
       </header>
       <div class="detail-layout">
@@ -284,6 +317,7 @@ def build_task(task: dict, tasks: list[dict]) -> str:
 def build() -> list[dict]:
     tasks = parse_tasks(SOURCE.read_text(encoding="utf-8"))
     load_materials(tasks, ROOT)
+    load_tutorials(tasks)
     OUTPUT.mkdir(exist_ok=True)
     (OUTPUT / "data").mkdir(exist_ok=True)
     shutil.copytree(ROOT / "assets", OUTPUT / "assets", dirs_exist_ok=True)
