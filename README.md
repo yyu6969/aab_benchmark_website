@@ -37,7 +37,7 @@ Open `http://localhost:8000`. Individual pages can also be opened directly from 
 
 ## Agent runs
 
-Each task page compares the selected guided and unguided Harbor trials. The screenshot control opens every numbered Gym episode frame in chronological order. The JSONL download keeps the recorded event sequence. It omits private session connection details and redacts authentication-related payloads across linked tool events. The benchmark archive retains the originals.
+Select **View agent runs** on any task to open its dedicated run page. Each guided and unguided trial has a **Download screenshots (ZIP)** link containing every numbered PNG in chronological order. Expand **Browse screenshots** to view the frames individually. The separate JSONL download keeps the recorded event sequence. It omits private session connection details and redacts authentication-related payloads across linked tool events. The benchmark archive retains the originals.
 
 Runtime covers the Pi agent execution interval. Total tokens sum reported input and output across calls and include cached input once. The selection includes the newer unguided AutoCAD run and the graded unguided Asana run. A communication error is indicated for the three affected guided trials.
 

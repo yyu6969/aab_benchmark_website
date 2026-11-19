@@ -6,6 +6,7 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from zipfile import ZipFile
 
 from agent_runs import load_agent_runs
 from build import OUTPUT, ROOT, SOURCE, load_tutorials, parse_tasks, plain_text
@@ -22,8 +23,8 @@ class Page(HTMLParser):
         self.path = path
         self.links = []
         self.ids = set()
-        self.section_ids = []
         self.run_frames = {}
+        self.run_downloads = {}
         self.run_condition = None
         self.h1_count = 0
         self.in_table = False
@@ -38,11 +39,12 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        if tag == "section" and attrs.get("id"):
-            self.section_ids.append(attrs["id"])
         if tag == "article" and "agent-run" in attrs.get("class", "").split():
             self.run_condition = attrs["id"].removeprefix("run-")
             self.run_frames[self.run_condition] = []
+            self.run_downloads[self.run_condition] = []
+        if self.run_condition and tag == "a" and "download" in attrs:
+            self.run_downloads[self.run_condition].append(attrs["href"])
         if tag == "option" and self.run_condition:
             self.run_frames[self.run_condition].append(attrs["value"])
         if attrs.get("id"):
@@ -102,7 +104,7 @@ def check():
     exported = json.loads((OUTPUT / "data/tasks.json").read_text(encoding="utf-8"))
     assert exported == [{k: v for k, v in task.items() if k != "markdown"} for task in tasks], "JSON differs from source"
     pages = {path.resolve(): Page(path) for path in OUTPUT.rglob("*.html")}
-    expected_pages = 11 + len(manifest["files"])
+    expected_pages = 1 + 2 * len(tasks) + len(manifest["files"])
     assert len(pages) == expected_pages, f"Expected {expected_pages} HTML pages, found {len(pages)}"
     checked_links = 0
     for path, page in pages.items():
@@ -129,18 +131,24 @@ def check():
         assert compact("".join(page.instruction)) == compact(instruction), f"Instruction changed in task {task['id']}"
         assert page.materials == task["materials"], f"Material paths changed in task {task['id']}"
         assert (OUTPUT / "data" / f"{task['slug']}.md").read_text(encoding="utf-8") == task["markdown"]
-        ordered = page.section_ids
-        assert ordered.index("agent-run") == ordered.index("support-materials") + 1
-        assert "#agent-run" in page.links
+        assert not page.run_frames and "runs/index.html" in page.links
+        run_page = pages[path.parent / "runs" / "index.html"]
+        assert "../index.html" in run_page.links
+        assert run_page.run_frames.keys() == task["agent_runs"].keys()
         for condition, run in task["agent_runs"].items():
-            assert f"run-{condition}" in page.ids
             folder = Path(run["asset_path"])
             assert run["total_tokens"] == run["input_tokens"] + run["output_tokens"]
             assert 0 <= run["cached_input_tokens"] <= run["input_tokens"] and run["runtime_seconds"] > 0
-            assert page.run_frames[condition] == [f"../../{folder}/{name}" for name in run["frames"]]
+            assert run_page.run_frames[condition] == [f"../../../{folder}/{name}" for name in run["frames"]]
+            assert set(run_page.run_downloads[condition]) == {
+                f"../../../{folder}/screenshots.zip", f"../../../{folder}/traj.jsonl"
+            }
+            with ZipFile(OUTPUT / folder / "screenshots.zip") as archive:
+                assert archive.namelist() == run["frames"], f"Incorrect screenshot sequence in {folder}"
+                for name in run["frames"]:
+                    assert archive.read(name) == (ROOT / folder / name).read_bytes(), f"Screenshot differs: {folder / name}"
             for name in [*run["frames"], "traj.jsonl"]:
                 assert sha256(ROOT / folder / name) == sha256(OUTPUT / folder / name)
-            assert f"../../{folder}/traj.jsonl" in page.links
             with (OUTPUT / folder / "traj.jsonl").open(encoding="utf-8") as stream:
                 assert sum(1 for line in stream if json.loads(line)["event"]) == run["event_count"]
     for css in (OUTPUT / "assets").glob("*.css"):
@@ -162,7 +170,8 @@ def check():
     assert (ROOT / "assets/fonts/LICENSE").is_file(), "Missing font license"
     print(f"Passed: {expected_pages} pages, {checked_links} local links, 10 complete instructions, "
           f"{sum(len(t['rubrics']) for t in tasks)} exact rubric rows, "
-          f"{sum(len(t['materials']) for t in tasks)} material paths, Markdown and JSON downloads.")
+          f"{sum(len(t['materials']) for t in tasks)} material paths, Markdown and JSON downloads, "
+          f"{sum(len(t['agent_runs']) for t in tasks)} screenshot ZIPs.")
 
 
 if __name__ == "__main__":
