@@ -310,7 +310,7 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .score-checklist th, .score-checklist td { text-align: left; vertical-align: top; padding: .65rem .4rem; border-top: 1px solid var(--border); overflow-wrap: anywhere; }
 .score-checklist thead th { background: var(--subtle); font-size: .875rem; }
 .score-checklist thead th:first-child { width: 59%; }
-.score-checklist thead span, .score-label { display: block; font-size: .875rem; font-weight: 400; color: var(--muted); }
+.score-checklist thead span { display: block; font-size: .875rem; font-weight: 400; color: var(--muted); }
 .score-checklist tbody th { font-weight: 400; }
 .score-checklist tbody th a { font: .875rem var(--mono); color: var(--accent); margin-right: .25rem; }
 .score-check, .score-checklist strong { font-variant-numeric: tabular-nums; }

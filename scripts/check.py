@@ -148,8 +148,8 @@ def check():
             expected_scores = []
             for rubric, score in zip(task["rubrics"], run["rubric_scores"]):
                 cells = []
-                for value, label in (HARBOR_SCORES[score["harbor_verdict"]], CODEX_SCORES[score["codex_finding"]]):
-                    cells.append(label if value is None else f"{'✓ ' if value else ''}{value} {label}")
+                for value in (HARBOR_SCORES[score["harbor_verdict"]], CODEX_SCORES[score["codex_finding"]]):
+                    cells.append({1: "✓ 1", 0: "0", None: "Unresolved"}[value])
                 expected_scores.append([score["id"], f"{rubric['number']:02d} {plain_text(rubric['criterion'])}", *cells])
             assert page.scores[condition] == expected_scores, f"Score checklist mismatch: {task['slug']}/{condition}"
             folder = Path(run["asset_path"])

@@ -7,9 +7,8 @@ from pathlib import Path
 CONDITIONS = {"guided": "With guidance and rubrics", "unguided": "Without guidance or rubrics"}
 
 
-HARBOR_SCORES = {"full": (1, "Full"), "partial": (0, "Partial"), "no_credit": (0, "No credit"),
-                 "unresolved": (None, "Unresolved")}
-CODEX_SCORES = {"met": (1, "Met"), "incomplete": (0, "Incomplete"), "insufficient": (0, "Insufficient evidence")}
+HARBOR_SCORES = {"full": 1, "partial": 0, "no_credit": 0, "unresolved": None}
+CODEX_SCORES = {"met": 1, "incomplete": 0, "insufficient": 0}
 
 
 def load_agent_runs(tasks, root, plain_text):
@@ -36,8 +35,8 @@ def load_agent_runs(tasks, root, plain_text):
             for criterion in criteria:
                 harbor = criterion[condition]["harbor"]
                 codex = criterion[condition]["codex"]
-                rubric_scores.append({"id": criterion["id"], "criterion": criterion["criterion"], "harbor_verdict": harbor, "harbor_score": HARBOR_SCORES[harbor][0],
-                                      "codex_finding": codex, "codex_score": CODEX_SCORES[codex][0]})
+                rubric_scores.append({"id": criterion["id"], "criterion": criterion["criterion"], "harbor_verdict": harbor, "harbor_score": HARBOR_SCORES[harbor],
+                                      "codex_finding": codex, "codex_score": CODEX_SCORES[codex]})
             path = Path("assets/agent-runs") / slug / condition
             folder = root / path
             frames = sorted((p.name for p in folder.glob("frame_*.png") if re.fullmatch(r"frame_\d+\.png", p.name)),
@@ -59,20 +58,20 @@ def render_scores(task, condition, title):
     for rubric, score in zip(task["rubrics"], scores):
         number = rubric["number"]
         cells = []
-        for value, label in (HARBOR_SCORES[score["harbor_verdict"]], CODEX_SCORES[score["codex_finding"]]):
+        for value in (score["harbor_score"], score["codex_score"]):
             if value is None:
                 cells.append('<td class="score-unresolved">Unresolved</td>')
             else:
                 mark = '<span class="score-check" aria-hidden="true">✓</span> ' if value else ""
-                cells.append(f'<td>{mark}<strong>{value}</strong> <span class="score-label">{label}</span></td>')
+                cells.append(f'<td>{mark}<strong>{value}</strong></td>')
         rows.append(f'<tr data-rubric-id="{escape(score["id"])}"><th scope="row">'
                     f'<a href="#rubric-{number}" aria-label="View outcome criterion {number}">{number:02d}</a> '
                     f'{escape(score["criterion"])}</th>{"".join(cells)}</tr>')
     return f'''<div class="run-scores" id="scores-{condition}">
               <h4>Rubric scores</h4>
               <dl class="score-totals">
-                <div><dt>Harbor RewardKit + gemini-4-carbon</dt><dd>{harbor_full} / {count} full{pending}</dd></div>
-                <div><dt>Codex + GPT-6.2 Astra</dt><dd>{codex_full} / {count} met</dd></div>
+                <div><dt>Harbor RewardKit + gemini-4-carbon</dt><dd>{harbor_full} / {count}{pending}</dd></div>
+                <div><dt>Codex + GPT-6.2 Astra</dt><dd>{codex_full} / {count}</dd></div>
               </dl>
               <details class="score-checklist">
                 <summary>View all {count} rubric scores</summary>
