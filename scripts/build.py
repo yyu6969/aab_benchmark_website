@@ -9,14 +9,12 @@ import re
 import shutil
 from pathlib import Path
 
-from agent_runs import load_agent_runs, render_agent_runs, write_screenshot_archives
-from materials import build_material_page, download_url, file_size, load_materials, sha256
+from agent_runs import load_agent_runs, render_agent_runs
+from materials import build_material_page, download_url, file_size, load_materials
 
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "docs"
 SOURCE = ROOT / "new_10_tasks.md"
-STYLE_VERSION = sha256(ROOT / "assets/styles.css")[:12]
-SCRIPT_VERSION = sha256(ROOT / "assets/app.js")[:12]
 
 # Editorial summaries and navigation labels; task content comes from the source.
 METADATA = [
@@ -154,9 +152,9 @@ def page(title: str, description: str, content: str, prefix: str = "./", home: b
   <title>{esc(title)}</title>
   <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="{prefix}assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="{prefix}assets/styles.css?v={STYLE_VERSION}">
+  <link rel="stylesheet" href="{prefix}assets/styles.css">
   <script src="{prefix}assets/theme.js"></script>
-  <script src="{prefix}assets/app.js?v={SCRIPT_VERSION}" defer></script>
+  <script src="{prefix}assets/app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -309,29 +307,13 @@ def build_task(task: dict, tasks: list[dict]) -> str:
           <section id="support-materials" class="task-section" aria-labelledby="materials-title">
             <div class="section-heading"><h2 id="materials-title">Support materials</h2><span class="section-meta">{len(task['materials'])} {'file' if len(task['materials']) == 1 else 'files'}</span></div>{materials_html}
           </section>
+          {render_agent_runs(task, prefix)}
           <nav class="task-pagination" aria-label="Task navigation">{''.join(pagination)}</nav>
         </div>
-        <aside class="task-sidebar" aria-label="Task page navigation"><div class="sidebar-sticky"><nav class="section-nav" aria-label="On this page"><h2>On this page</h2><a href="#instruction" class="current" aria-current="location">Task instruction</a><a href="#rubrics">Outcome rubric <span>{len(task['rubrics'])}</span></a><a href="#support-materials">Support materials <span>{len(task['materials'])}</span></a></nav>
-          <div class="task-actions"><a class="button" id="agent-run" href="runs/index.html">View agent runs <span aria-hidden="true">→</span></a><a class="button" href="../../data/{task['slug']}.md" download>{icon('download')} Download task</a></div>
-          <details class="browse-tasks" open><summary>In this collection</summary><ol>{''.join(task_links)}</ol></details></div></aside>
+        <aside class="task-sidebar" aria-label="Task page navigation"><div class="sidebar-sticky"><nav class="section-nav" aria-label="On this page"><h2>On this page</h2><a href="#instruction" class="current" aria-current="location">Task instruction</a><a href="#rubrics">Outcome rubric <span>{len(task['rubrics'])}</span></a><a href="#support-materials">Support materials <span>{len(task['materials'])}</span></a><a href="#agent-run">Agent run</a></nav><a class="button download-task" href="../../data/{task['slug']}.md" download>{icon('download')} Download task</a><details class="browse-tasks" open><summary>In this collection</summary><ol>{''.join(task_links)}</ol></details></div></aside>
       </div>
     </main>'''
     return page(f"{task['title']} | AAB Benchmark", task["summary"], content, prefix)
-
-
-def build_run_page(task: dict) -> str:
-    prefix = "../../../"
-    title = f"Agent runs · {task['title']}"
-    content = f'''<main id="main" class="container run-page" tabindex="-1">
-      <header class="task-hero">
-        <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="{prefix}index.html#tasks">Tasks</a></li><li><a href="../index.html">Task {task['id']:02d}</a></li><li aria-current="page">Agent runs</li></ol></nav>
-        <h1>Agent runs</h1>
-        <p class="task-summary"><a class="run-task-link" href="../index.html">{esc(task['title'])}</a></p>
-      </header>
-      {render_agent_runs(task, prefix)}
-      <p class="section-description run-note">Runtime covers Pi’s execution. Total tokens include input and output, counting cached input once. Published trajectories omit session credentials and redact authentication-related payloads.</p>
-    </main>'''
-    return page(f"{title} | AAB Benchmark", title, content, prefix)
 
 
 def build() -> list[dict]:
@@ -350,9 +332,6 @@ def build() -> list[dict]:
         directory = OUTPUT / "tasks" / task["slug"]
         directory.mkdir(parents=True, exist_ok=True)
         (directory / "index.html").write_text(build_task(task, tasks), encoding="utf-8")
-        write_screenshot_archives(task, OUTPUT)
-        (directory / "runs").mkdir(exist_ok=True)
-        (directory / "runs" / "index.html").write_text(build_run_page(task), encoding="utf-8")
         (OUTPUT / "data" / f"{task['slug']}.md").write_text(task["markdown"], encoding="utf-8")
         for material in task["material_files"]:
             destination = OUTPUT / material["page"]

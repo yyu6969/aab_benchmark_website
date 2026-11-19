@@ -1,9 +1,8 @@
-"""Publish the two recorded Pi trials for each task."""
+"""Render the two recorded Pi trials on each static task page."""
 import json
 import re
 from html import escape
 from pathlib import Path
-from zipfile import ZipFile, ZipInfo
 
 CONDITIONS = {"guided": "With guidance and rubrics", "unguided": "Without guidance or rubrics"}
 
@@ -28,18 +27,6 @@ def load_agent_runs(tasks, root):
             task["agent_runs"][condition] = dict(run, asset_path=path.as_posix(), frames=frames)
 
 
-def write_screenshot_archives(task, output):
-    for run in task["agent_runs"].values():
-        directory = output / run["asset_path"]
-        with ZipFile(directory / "screenshots.zip", "w") as archive:
-            for frame in run["frames"]:
-                # Fixed ZIP metadata keeps the archive identical across builds.
-                entry = ZipInfo(frame)
-                entry.create_system = 3
-                entry.external_attr = 0o100644 << 16
-                archive.writestr(entry, (directory / frame).read_bytes())
-
-
 def render_agent_runs(task, prefix):
     articles = []
     for condition, title in CONDITIONS.items():
@@ -57,17 +44,11 @@ def render_agent_runs(task, prefix):
                           for i, name in enumerate(frames, 1))
         links = " ".join(f'<a href="{directory}{name}">{name}</a>' for name in frames)
         note = '<p class="source-note">The recorded Pi session ended with a communication error.</p>' if run["agent_error"] else ""
-        archive_name = f"{task['slug']}-{condition}-screenshots.zip"
         articles.append(f'''<article class="agent-run" id="run-{condition}" aria-labelledby="heading-{condition}">
-            <h2 id="heading-{condition}">{title}</h2>
+            <h3 id="heading-{condition}">{title}</h3>
             <dl class="run-metrics">{metrics}</dl>{note}
-            <div class="run-downloads">
-              <a class="button" href="{directory}screenshots.zip" download="{archive_name}">Download screenshots (ZIP)</a>
-              <a class="button trajectory-download" href="{directory}traj.jsonl" download>Download trajectory (JSONL)</a>
-            </div>
-            <details class="screenshot-viewer">
-              <summary>Browse screenshots <span class="section-meta">({len(frames)} frames)</span></summary>
             <figure class="run-frames">
+              <figcaption>Trajectory screenshots <span class="section-meta">{len(frames)} frames</span></figcaption>
               <a class="run-image-link" href="{first}" title="Open full-size screenshot">
                 <img src="{first}" loading="lazy" decoding="async" alt="{title} — {frames[0]}">
               </a>
@@ -78,9 +59,12 @@ def render_agent_runs(task, prefix):
               </div>
               <noscript><details><summary>All screenshots</summary>{links}</details></noscript>
             </figure>
-            </details>
+            <div class="run-trajectory">
+              <a class="text-link" href="{directory}traj.jsonl" download>Download trajectory (JSONL)</a>
+              <span class="section-meta">{run["event_count"]:,} events</span>
+            </div>
             <details class="event-viewer" hidden>
-              <summary>Browse trajectory events <span class="section-meta">({run["event_count"]:,} events)</span></summary>
+              <summary>Browse trajectory events</summary>
               <p class="event-status source-note" role="status"></p>
               <div class="event-controls" hidden>
                 <button type="button" class="button event-back">Previous event</button>
@@ -90,4 +74,8 @@ def render_agent_runs(task, prefix):
               <pre class="event-record" tabindex="0" hidden></pre>
             </details>
           </article>''')
-    return "\n".join(articles)
+    return f'''<section id="agent-run" class="task-section" aria-labelledby="agent-run-title">
+            <div class="section-heading"><h2 id="agent-run-title">Agent run</h2></div>
+            <p class="section-description">Runtime covers Pi’s execution. Total tokens are input plus output, including cached input once. Trajectory downloads omit session credentials and redact authentication-related payloads.</p>
+            {"".join(articles)}
+          </section>'''

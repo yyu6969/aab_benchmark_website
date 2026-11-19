@@ -110,14 +110,6 @@
     applyFilters();
   }
 
-  // Keep bookmarks to the former inline run sections working.
-  const runsPage = document.querySelector('a#agent-run');
-  if (runsPage && ['#agent-run', '#run-guided', '#run-unguided'].includes(location.hash)) {
-    const fragment = location.hash === '#agent-run' ? '' : location.hash;
-    location.replace(runsPage.href + fragment);
-    return;
-  }
-
   document.querySelectorAll('.run-frames').forEach(gallery => {
     const controls = gallery.querySelector('.frame-controls');
     const picker = controls.querySelector('select');
@@ -125,7 +117,7 @@
     const next = controls.querySelector('.frame-forward');
     const link = gallery.querySelector('.run-image-link');
     const image = link.querySelector('img');
-    const heading = gallery.closest('article').querySelector('h2').textContent;
+    const heading = gallery.closest('article').querySelector('h3').textContent;
     const show = index => {
       picker.selectedIndex = index;
       const path = picker.value;
@@ -145,7 +137,7 @@
   if (location.protocol === 'http:' || location.protocol === 'https:') {
     document.querySelectorAll('.event-viewer').forEach(viewer => {
       const run = viewer.closest('article');
-      const link = run.querySelector('.trajectory-download');
+      const link = run.querySelector('.run-trajectory a');
       const controls = viewer.querySelector('.event-controls');
       const number = controls.querySelector('input');
       const previous = controls.querySelector('.event-back');
