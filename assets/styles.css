@@ -302,7 +302,7 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .run-scores { margin: 1rem 0; padding: 1rem 1.125rem; border: 1px solid var(--border); }
 .run-scores h4 { margin: 0; font: 600 1.0625rem var(--sans); }
 .score-totals { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin: .75rem 0; }
-.score-totals dt, .score-pending { font: .875rem/1.5 var(--sans); color: var(--muted); }
+.score-totals dt { font: .875rem/1.5 var(--sans); color: var(--muted); }
 .score-totals dd { font-variant-numeric: tabular-nums; }
 .score-checklist summary { width: fit-content; color: var(--accent); cursor: pointer; font-size: .875rem; }
 .score-checklist table { margin-top: .75rem; width: 100%; table-layout: fixed; border-collapse: collapse; font: 1rem/1.5 var(--sans); }
@@ -314,7 +314,6 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .score-checklist tbody th a { font: .875rem var(--mono); color: var(--accent); margin-right: .25rem; }
 .score-check, .score-checklist strong { font-variant-numeric: tabular-nums; }
 .score-check { color: var(--accent); }
-.score-unresolved { color: var(--muted); font-size: .875rem; }
 @media (max-width: 540px) {
   .run-scores { padding: .875rem .65rem; }
   .score-checklist thead th:first-child { width: 48%; }

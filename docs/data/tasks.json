@@ -2440,7 +2440,7 @@
             "id": "outcome_109219cb70d80e15004f",
             "criterion": "An on-screen lower-third near the opening introduces the presenter as \"JUSTIN BROWN\".",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -2448,7 +2448,7 @@
             "id": "outcome_c10071cea112bb627ab8",
             "criterion": "The \"JUSTIN BROWN\" lower-third uses white uppercase Oswald Bold lettering.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -2456,7 +2456,7 @@
             "id": "outcome_6f33d2ef259850c7ae96",
             "criterion": "A fully opaque bright blue rectangle closely surrounds the lower-third lettering with a small visible margin.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -2464,7 +2464,7 @@
             "id": "outcome_fe439d796aed537a758d",
             "criterion": "The name graphic is horizontally centered in the lower third of the presenter image.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -2472,7 +2472,7 @@
             "id": "outcome_f256185d2b99b56f4a2a",
             "criterion": "The opening \"JUSTIN BROWN\" lower-third remains visible beyond the first five seconds.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -2480,7 +2480,7 @@
             "id": "outcome_56f9bf1ac56bf0e0e1a9",
             "criterion": "The waterfall cutaway opens with a brief dip to white.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "incomplete",
             "codex_score": 0
           },
@@ -2488,7 +2488,7 @@
             "id": "outcome_a49a15e766796623a68f",
             "criterion": "One presenter segment has a modest punch-in while the remaining presenter segments retain their standard framing.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -2536,7 +2536,7 @@
             "id": "outcome_9d0f1f3de53915f077e9",
             "criterion": "The remaining presenter shots consistently share the required camera treatment while preserving their individual framing.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -2793,7 +2793,7 @@
             "id": "outcome_56f9bf1ac56bf0e0e1a9",
             "criterion": "The waterfall cutaway opens with a brief dip to white.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "insufficient",
             "codex_score": 0
           },
@@ -3285,7 +3285,7 @@
             "id": "outcome_56f9bf1ac56bf0e0e1a9",
             "criterion": "A published status update for 'Apple - Website Design' identifies the project as on track.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "insufficient",
             "codex_score": 0
           },
@@ -3293,7 +3293,7 @@
             "id": "outcome_6aff0ce93c8f8404a8db",
             "criterion": "The published project status update says work is progressing well and is expected to finish before Christmas.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "insufficient",
             "codex_score": 0
           },
@@ -3301,7 +3301,7 @@
             "id": "outcome_078db95fff663f48c6e0",
             "criterion": "The published project status update summarizes remaining incomplete tasks by assignee.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "insufficient",
             "codex_score": 0
           },
@@ -3325,7 +3325,7 @@
             "id": "outcome_ceb4a9be39952f0cc79c",
             "criterion": "Paul Minors's newly assigned commitments from 'Apple - Website Design' are in the Upcoming section of his personal task list in the 'Asana Demo' workspace.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "insufficient",
             "codex_score": 0
           },
@@ -3341,7 +3341,7 @@
             "id": "outcome_76d522e2d38e87ed462f",
             "criterion": "Paul Minors's personal task list in the 'Asana Demo' workspace is organized by section.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -3413,7 +3413,7 @@
             "id": "outcome_0b01337121b39ee0624c",
             "criterion": "The Recently assigned section of Paul Minors's personal task list in the 'Asana Demo' workspace is empty.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "insufficient",
             "codex_score": 0
           }
@@ -3476,7 +3476,7 @@
             "id": "outcome_8cb43c90cb2c4e5e86f8",
             "criterion": "A new team named Marketing exists in MinorCo.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -3484,7 +3484,7 @@
             "id": "outcome_7ab45f3b81373f1d39e5",
             "criterion": "Warwick Palm and Paul Minors are members of the Marketing team in MinorCo.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -3588,7 +3588,7 @@
             "id": "outcome_a49a15e766796623a68f",
             "criterion": "The production milestone for completed page designs contains a posted request for Warwick Palm to review the completed designs.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -3668,7 +3668,7 @@
             "id": "outcome_bde65b0e1bf09cc13be8",
             "criterion": "The 'Apple - Website Design' plan breaks multi-part deliverables into relevant subtasks.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4400,7 +4400,7 @@
             "id": "outcome_8cb43c90cb2c4e5e86f8",
             "criterion": "The registered workspace account has name 'Emily Call', role 'Developer', company 'Call Solutions LLC', email 'sfemilycall@gmail.com', username 'EEC@callcompany.com', and location Utah, United States, '98002'.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4416,7 +4416,7 @@
             "id": "outcome_4b5778c19a6daae9b844",
             "criterion": "Jane Doe's saved lead for ABC records Web as its source and Education as its industry.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "insufficient",
             "codex_score": 0
           },
@@ -4424,7 +4424,7 @@
             "id": "outcome_9830af1ead7fad8f473c",
             "criterion": "Jane Doe's lead for ABC is marked as converted.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4432,7 +4432,7 @@
             "id": "outcome_017ca97ec323077cf044",
             "criterion": "A saved ABC account is linked to Jane Doe's lead conversion.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4440,7 +4440,7 @@
             "id": "outcome_27cac5cf7fb6df36e418",
             "criterion": "Jane Doe's saved contact record is associated with the ABC account.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4448,7 +4448,7 @@
             "id": "outcome_43e4453e51abced1040c",
             "criterion": "The saved 'ABC- Initial Contract' opportunity is associated with the ABC account.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4456,7 +4456,7 @@
             "id": "outcome_a2ecfb7eaa1695ada96e",
             "criterion": "John Doe is recorded as an additional saved contact associated with the ABC account.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4480,7 +4480,7 @@
             "id": "outcome_0d58083f61cf7c2baa73",
             "criterion": "Jane Doe's contact record is linked to the 'ABC- Initial Contract' opportunity.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4504,7 +4504,7 @@
             "id": "outcome_b482a63c342b2adbc4e0",
             "criterion": "The 'My Open Leads' view excludes converted leads.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4512,7 +4512,7 @@
             "id": "outcome_4cb79d40d8d4e81e1778",
             "criterion": "The 'My Open Leads' view excludes closed leads, including leads closed without conversion.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4520,7 +4520,7 @@
             "id": "outcome_7631f996abad205c88ef",
             "criterion": "The 'My Open Leads' view includes only leads owned by the current user.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4528,7 +4528,7 @@
             "id": "outcome_11a2c54d1b86a9b60971",
             "criterion": "The 'Closed Won Opportunities' report omits owner role, age, and next step from its detail columns.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4536,7 +4536,7 @@
             "id": "outcome_6f33d2ef259850c7ae96",
             "criterion": "The 'Closed Won Opportunities' report covers all close dates.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4544,7 +4544,7 @@
             "id": "outcome_fe439d796aed537a758d",
             "criterion": "The 'Closed Won Opportunities' report includes only closed-won opportunities.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4552,7 +4552,7 @@
             "id": "outcome_f256185d2b99b56f4a2a",
             "criterion": "The 'Closed Won Opportunities' report includes last modified date among its detail columns.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4560,7 +4560,7 @@
             "id": "outcome_3c632b6fbcd092b470e5",
             "criterion": "The 'Closed Won Opportunities' report groups opportunities by lead source.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4568,7 +4568,7 @@
             "id": "outcome_a26b29d9c36ca57330dc",
             "criterion": "The 'Closed Won Opportunities' report summarizes opportunity revenue using summed amounts and an overall revenue total.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4576,7 +4576,7 @@
             "id": "outcome_776bf6383148b8f6e415",
             "criterion": "A public report named 'Closed Won Opportunities' is saved.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4584,7 +4584,7 @@
             "id": "outcome_9419ff6bb00f154b945f",
             "criterion": "The saved 'Closed Won Opportunities' report displays current revenue results including the closed $100,000 'ABC- Initial Contract' opportunity.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4592,7 +4592,7 @@
             "id": "outcome_e661ad325fe7bda7a768",
             "criterion": "The 'Closed Won Opportunities' report covers all accessible closed-won opportunities regardless of owner.",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4600,7 +4600,7 @@
             "id": "outcome_816b58e31be0b0cde52a",
             "criterion": "Embedded Donut chart visualization on the 'Closed Won Opportunities' report displays Sum of Amount sliced by Lead Source",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           },
@@ -4640,7 +4640,7 @@
             "id": "outcome_a49a15e766796623a68f",
             "criterion": "Email subscription for the 'Closed Won Dashboard' is saved with a Weekly frequency on Monday at 7:00 AM",
             "harbor_verdict": "unresolved",
-            "harbor_score": null,
+            "harbor_score": 0,
             "codex_finding": "met",
             "codex_score": 1
           }

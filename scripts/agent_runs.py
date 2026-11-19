@@ -7,7 +7,7 @@ from pathlib import Path
 CONDITIONS = {"guided": "With guidance and rubrics", "unguided": "Without guidance or rubrics"}
 
 
-HARBOR_SCORES = {"full": 1, "partial": 0, "no_credit": 0, "unresolved": None}
+HARBOR_SCORES = {"full": 1, "partial": 0, "no_credit": 0, "unresolved": 0}
 CODEX_SCORES = {"met": 1, "incomplete": 0, "insufficient": 0}
 
 
@@ -50,27 +50,22 @@ def load_agent_runs(tasks, root, plain_text):
 def render_scores(task, condition, title):
     scores = task["agent_runs"][condition]["rubric_scores"]
     count = len(scores)
-    harbor_full = sum(s["harbor_score"] == 1 for s in scores)
+    harbor_full = sum(s["harbor_score"] for s in scores)
     codex_full = sum(s["codex_score"] for s in scores)
-    unresolved = sum(s["harbor_score"] is None for s in scores)
-    pending = f' <span class="score-pending">({unresolved} unresolved)</span>' if unresolved else ""
     rows = []
     for rubric, score in zip(task["rubrics"], scores):
         number = rubric["number"]
         cells = []
         for value in (score["harbor_score"], score["codex_score"]):
-            if value is None:
-                cells.append('<td class="score-unresolved">Unresolved</td>')
-            else:
-                mark = '<span class="score-check" aria-hidden="true">✓</span> ' if value else ""
-                cells.append(f'<td>{mark}<strong>{value}</strong></td>')
+            mark = '<span class="score-check" aria-hidden="true">✓</span> ' if value else ""
+            cells.append(f'<td>{mark}<strong>{value}</strong></td>')
         rows.append(f'<tr data-rubric-id="{escape(score["id"])}"><th scope="row">'
                     f'<a href="#rubric-{number}" aria-label="View outcome criterion {number}">{number:02d}</a> '
                     f'{escape(score["criterion"])}</th>{"".join(cells)}</tr>')
     return f'''<div class="run-scores" id="scores-{condition}">
               <h4>Rubric scores</h4>
               <dl class="score-totals">
-                <div><dt>Harbor RewardKit + gemini-4-carbon</dt><dd>{harbor_full} / {count}{pending}</dd></div>
+                <div><dt>Harbor RewardKit + gemini-4-carbon</dt><dd>{harbor_full} / {count}</dd></div>
                 <div><dt>Codex + GPT-6.2 Astra</dt><dd>{codex_full} / {count}</dd></div>
               </dl>
               <details class="score-checklist">
