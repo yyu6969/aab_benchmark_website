@@ -7,24 +7,82 @@ from pathlib import Path
 CONDITIONS = {"guided": "With guidance and rubrics", "unguided": "Without guidance or rubrics"}
 
 
-def load_agent_runs(tasks, root):
+HARBOR_SCORES = {"full": (1, "Full"), "partial": (0, "Partial"), "no_credit": (0, "No credit"),
+                 "unresolved": (None, "Unresolved")}
+CODEX_SCORES = {"met": (1, "Met"), "incomplete": (0, "Incomplete"), "insufficient": (0, "Insufficient evidence")}
+
+
+def load_agent_runs(tasks, root, plain_text):
     manifest = json.loads((root / "agent-runs.json").read_text(encoding="utf-8"))
-    if manifest.keys() != {task["slug"] for task in tasks}:
+    scores = json.loads((root / "run-scores.json").read_text(encoding="utf-8"))
+    if manifest.keys() != {task["slug"] for task in tasks} or scores.keys() != manifest.keys():
         raise ValueError("Agent runs must cover every task")
     for task in tasks:
         slug = task["slug"]
         if manifest[slug].keys() != CONDITIONS.keys():
             raise ValueError(f"Expected both conditions for {slug}")
         task["agent_runs"] = {}
+        grading = scores[slug]
+        criteria = grading["criteria"]
+        if ([r["criterion"] for r in criteria] != [plain_text(r["criterion"]) for r in task["rubrics"]]
+                or len({r["id"] for r in criteria}) != len(criteria)):
+            raise ValueError(f"Scores do not match the published criteria for {slug}")
         for condition in CONDITIONS:
             run = manifest[slug][condition]
+            source = grading["runs"][condition]
+            if source["trial"] != run["trial"]:
+                raise ValueError(f"Scores refer to a different trial: {slug}/{condition}")
+            rubric_scores = []
+            for criterion in criteria:
+                harbor = criterion[condition]["harbor"]
+                codex = criterion[condition]["codex"]
+                rubric_scores.append({"id": criterion["id"], "criterion": criterion["criterion"], "harbor_verdict": harbor, "harbor_score": HARBOR_SCORES[harbor][0],
+                                      "codex_finding": codex, "codex_score": CODEX_SCORES[codex][0]})
             path = Path("assets/agent-runs") / slug / condition
             folder = root / path
             frames = sorted((p.name for p in folder.glob("frame_*.png") if re.fullmatch(r"frame_\d+\.png", p.name)),
                             key=lambda name: int(name[6:-4]))
             if not frames or len(frames) != run["frame_count"] or not (folder / "traj.jsonl").is_file():
                 raise ValueError(f"Incomplete agent recording: {folder}")
-            task["agent_runs"][condition] = dict(run, asset_path=path.as_posix(), frames=frames)
+            task["agent_runs"][condition] = dict(run, asset_path=path.as_posix(), frames=frames,
+                                                 rubric_scores=rubric_scores, harbor_source=source["harbor_source"])
+
+
+def render_scores(task, condition, title):
+    scores = task["agent_runs"][condition]["rubric_scores"]
+    count = len(scores)
+    harbor_full = sum(s["harbor_score"] == 1 for s in scores)
+    codex_full = sum(s["codex_score"] for s in scores)
+    unresolved = sum(s["harbor_score"] is None for s in scores)
+    pending = f' <span class="score-pending">({unresolved} unresolved)</span>' if unresolved else ""
+    rows = []
+    for rubric, score in zip(task["rubrics"], scores):
+        number = rubric["number"]
+        cells = []
+        for value, label in (HARBOR_SCORES[score["harbor_verdict"]], CODEX_SCORES[score["codex_finding"]]):
+            if value is None:
+                cells.append('<td class="score-unresolved">Unresolved</td>')
+            else:
+                mark = '<span class="score-check" aria-hidden="true">✓</span> ' if value else ""
+                cells.append(f'<td>{mark}<strong>{value}</strong> <span class="score-label">{label}</span></td>')
+        rows.append(f'<tr data-rubric-id="{escape(score["id"])}"><th scope="row">'
+                    f'<a href="#rubric-{number}" aria-label="View outcome criterion {number}">{number:02d}</a> '
+                    f'{escape(score["criterion"])}</th>{"".join(cells)}</tr>')
+    return f'''<div class="run-scores" id="scores-{condition}">
+              <h4>Rubric scores</h4>
+              <dl class="score-totals">
+                <div><dt>Harbor RewardKit + gemini-4-carbon</dt><dd>{harbor_full} / {count} full{pending}</dd></div>
+                <div><dt>Codex + GPT-6.2 Astra</dt><dd>{codex_full} / {count} met</dd></div>
+              </dl>
+              <details class="score-checklist">
+                <summary>View all {count} rubric scores</summary>
+                <p>Full credit earns 1. Partial and no credit earn 0. Unresolved Harbor verdicts are unscored.</p>
+                <table aria-label="Rubric scores — {escape(title)}">
+                  <thead><tr><th scope="col">Outcome criterion</th><th scope="col">Harbor RewardKit<span>gemini-4-carbon</span></th><th scope="col">Codex<span>GPT-6.2 Astra</span></th></tr></thead>
+                  <tbody>{"".join(rows)}</tbody>
+                </table>
+              </details>
+            </div>'''
 
 
 def render_agent_runs(task, prefix):
@@ -47,6 +105,7 @@ def render_agent_runs(task, prefix):
         articles.append(f'''<article class="agent-run" id="run-{condition}" aria-labelledby="heading-{condition}">
             <h3 id="heading-{condition}">{title}</h3>
             <dl class="run-metrics">{metrics}</dl>{note}
+            {render_scores(task, condition, title)}
             <figure class="run-frames">
               <figcaption>Trajectory screenshots <span class="section-meta">{len(frames)} frames</span></figcaption>
               <a class="run-image-link" href="{first}" title="Open full-size screenshot">

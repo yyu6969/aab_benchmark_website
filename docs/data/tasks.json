@@ -105,7 +105,34 @@
           "frame_00038.png",
           "frame_00039.png",
           "frame_00040.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_9830af1ead7fad8f473c",
+            "criterion": "All approved tracked revisions in 'SOW-Revision 1.docx' are incorporated as written into clean, finalized text with no pending revisions or revision markup.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a2ecfb7eaa1695ada96e",
+            "criterion": "Change tracking is disabled in the finalized 'SOW-Revision 1.docx' document.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_e068d9150be0da5f19f8",
+            "criterion": "The finalized 'SOW-Revision 1.docx' document is saved in place at its original location.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       },
       "unguided": {
         "job": "word_pi_20261118_225542_11199947",
@@ -152,7 +179,34 @@
           "frame_00026.png",
           "frame_00027.png",
           "frame_00028.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_9830af1ead7fad8f473c",
+            "criterion": "All approved tracked revisions in 'SOW-Revision 1.docx' are incorporated as written into clean, finalized text with no pending revisions or revision markup.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a2ecfb7eaa1695ada96e",
+            "criterion": "Change tracking is disabled in the finalized 'SOW-Revision 1.docx' document.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_e068d9150be0da5f19f8",
+            "criterion": "The finalized 'SOW-Revision 1.docx' document is saved in place at its original location.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       }
     }
   },
@@ -257,7 +311,50 @@
           "frame_00037.png",
           "frame_00038.png",
           "frame_00039.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "Calendar appointment is configured with subject 'SBS Study Session', location 'Library Meeting Room', date September 19, 2019, and time 11:30 AM to 12:30 PM",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "The 'SBS Study Session' appointment is saved in the existing calendar.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "Event titled 'National Dessert Day' is scheduled on October 14, 2019, and configured as an all-day event",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_71cfbecccbf035259a94",
+            "criterion": "Event recurrence is configured to repeat yearly every October 14, starting 10/14/2019",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0361cdd163e26eaab559",
+            "criterion": "The recurring 'National Dessert Day' event is saved in the existing calendar.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       },
       "unguided": {
         "job": "outlook_pi_20261119_054533_11205541",
@@ -279,7 +376,50 @@
           "frame_00001.png",
           "frame_00002.png",
           "frame_00003.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "Calendar appointment is configured with subject 'SBS Study Session', location 'Library Meeting Room', date September 19, 2019, and time 11:30 AM to 12:30 PM",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "The 'SBS Study Session' appointment is saved in the existing calendar.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "Event titled 'National Dessert Day' is scheduled on October 14, 2019, and configured as an all-day event",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_71cfbecccbf035259a94",
+            "criterion": "Event recurrence is configured to repeat yearly every October 14, starting 10/14/2019",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0361cdd163e26eaab559",
+            "criterion": "The recurring 'National Dessert Day' event is saved in the existing calendar.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T161221Z"
       }
     }
   },
@@ -402,7 +542,74 @@
           "frame_00026.png",
           "frame_00027.png",
           "frame_00028.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "The reconciliation targets Chase Bank 8145 in the HECTOR 2024 LLC company ledger.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "The Chase Bank 8145 reconciliation uses a statement ending date of 01/31/2024 and a statement ending balance of $24,904.11.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97884da3da28b028da7e",
+            "criterion": "Payment transactions marked as cleared include 30 payments totaling $26,944.40, with Check 1150 for $1,000.00 cleared",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+            "criterion": "Deposit transactions marked as cleared include 2 deposits totaling $34,413.00, with the 01/01/2024 deposit for $31,349.00 cleared",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d85870a880012c1e2336",
+            "criterion": "The Chase Bank 8145 reconciliation has a cleared balance of $24,904.11 and a difference of $0.00.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_96c65b3434d993e6ce4b",
+            "criterion": "Reconciliation for the Chase Bank 8145 account for the statement period ending January 31, 2024 is completed",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4be7bddbbd1fe8f15cf3",
+            "criterion": "Ledger transactions absent from the January 2024 Chase Bank 8145 statement remain uncleared.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d3d6f1c8dc1bd3825d55",
+            "criterion": "The updated Chase Bank 8145 reconciliation record and transaction clearance states for the period ending 01/31/2024 are saved in the HECTOR 2024 LLC company ledger.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       },
       "unguided": {
         "job": "quickbooks_pi_20261119_000121_11206472",
@@ -460,7 +667,74 @@
           "frame_00037.png",
           "frame_00038.png",
           "frame_00039.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "The reconciliation targets Chase Bank 8145 in the HECTOR 2024 LLC company ledger.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "The Chase Bank 8145 reconciliation uses a statement ending date of 01/31/2024 and a statement ending balance of $24,904.11.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97884da3da28b028da7e",
+            "criterion": "Payment transactions marked as cleared include 30 payments totaling $26,944.40, with Check 1150 for $1,000.00 cleared",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+            "criterion": "Deposit transactions marked as cleared include 2 deposits totaling $34,413.00, with the 01/01/2024 deposit for $31,349.00 cleared",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d85870a880012c1e2336",
+            "criterion": "The Chase Bank 8145 reconciliation has a cleared balance of $24,904.11 and a difference of $0.00.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_96c65b3434d993e6ce4b",
+            "criterion": "Reconciliation for the Chase Bank 8145 account for the statement period ending January 31, 2024 is completed",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4be7bddbbd1fe8f15cf3",
+            "criterion": "Ledger transactions absent from the January 2024 Chase Bank 8145 statement remain uncleared.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d3d6f1c8dc1bd3825d55",
+            "criterion": "The updated Chase Bank 8145 reconciliation record and transaction clearance states for the period ending 01/31/2024 are saved in the HECTOR 2024 LLC company ledger.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       }
     }
   },
@@ -569,7 +843,58 @@
           "frame_00036.png",
           "frame_00037.png",
           "frame_00038.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "The clinical note for Gandalf Greyhame Wiz documents abdominal pain in the gastrointestinal review of systems.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "The abdominal examination in Gandalf Greyhame Wiz's clinical note records right lower quadrant tenderness and a comment noting possible appendicitis.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4b5778c19a6daae9b844",
+            "criterion": "The clinical assessment for Gandalf Greyhame Wiz summarizes his presentation with abdominal pain and an impression of possible appendicitis.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9830af1ead7fad8f473c",
+            "criterion": "The encounter plan for Gandalf Greyhame Wiz includes an order for a CBC with differential.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_017ca97ec323077cf044",
+            "criterion": "The clinical plan for Gandalf Greyhame Wiz documents possible appendicitis and a plan to consult Dr. Mayfield to determine whether an appendectomy is appropriate.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a2ecfb7eaa1695ada96e",
+            "criterion": "The clinical note for Gandalf Greyhame Wiz is signed by the rendering provider and locked.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       },
       "unguided": {
         "job": "drchrono_pi_20261119_054533_11205543",
@@ -624,7 +949,58 @@
           "frame_00034.png",
           "frame_00035.png",
           "frame_00036.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "The clinical note for Gandalf Greyhame Wiz documents abdominal pain in the gastrointestinal review of systems.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "The abdominal examination in Gandalf Greyhame Wiz's clinical note records right lower quadrant tenderness and a comment noting possible appendicitis.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4b5778c19a6daae9b844",
+            "criterion": "The clinical assessment for Gandalf Greyhame Wiz summarizes his presentation with abdominal pain and an impression of possible appendicitis.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9830af1ead7fad8f473c",
+            "criterion": "The encounter plan for Gandalf Greyhame Wiz includes an order for a CBC with differential.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_017ca97ec323077cf044",
+            "criterion": "The clinical plan for Gandalf Greyhame Wiz documents possible appendicitis and a plan to consult Dr. Mayfield to determine whether an appendectomy is appropriate.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a2ecfb7eaa1695ada96e",
+            "criterion": "The clinical note for Gandalf Greyhame Wiz is signed by the rendering provider and locked.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T161221Z"
       }
     }
   },
@@ -732,7 +1108,74 @@
           "frame_00025.png",
           "frame_00026.png",
           "frame_00027.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "Casey Boehm's 'Week 1: Writing' submission has rubric scores recorded totaling 7/8 (Sentence Writing 2/2, Organization 2/2, Punctuation 2/2, and Spelling 1/2)",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_71cfbecccbf035259a94",
+            "criterion": "The private comment 'Awesome work sounding out your words and using sight words!' is posted on Casey Boehm's turned-in 'Week 1: Writing' submission before the requested returns begin.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "Casey Boehm's originally turned-in 'Week 1: Writing' record is returned to the learner.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_049d7b76276babc466c0",
+            "criterion": "Casey Boehm's originally unsubmitted 'Week 1: Writing' record is returned to the learner.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c976daa9bdfd785ca770",
+            "criterion": "Hannah Koenig's 'Week 1: Writing' record is returned to the learner.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_16367770e23cbc7442c0",
+            "criterion": "Both Casey Boehm entries and Hannah Koenig's entry for 'Week 1: Writing' include the private return comment 'Super sentence writing!'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4b5778c19a6daae9b844",
+            "criterion": "The complete 'Organize and Educate' class gradebook is saved as 'Grades Organize and Educate 08-06-2020.ods' at the required destination with updated grades after the 'Week 1: Writing' grading and returns are complete.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9830af1ead7fad8f473c",
+            "criterion": "Cell D7 in the saved 'Organize and Educate' gradebook contains the comment 'Needs to make corrections'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       },
       "unguided": {
         "job": "google-classroom_pi_20261119_054533_11205542",
@@ -776,7 +1219,74 @@
           "frame_00023.png",
           "frame_00024.png",
           "frame_00025.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "Casey Boehm's 'Week 1: Writing' submission has rubric scores recorded totaling 7/8 (Sentence Writing 2/2, Organization 2/2, Punctuation 2/2, and Spelling 1/2)",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_71cfbecccbf035259a94",
+            "criterion": "The private comment 'Awesome work sounding out your words and using sight words!' is posted on Casey Boehm's turned-in 'Week 1: Writing' submission before the requested returns begin.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "Casey Boehm's originally turned-in 'Week 1: Writing' record is returned to the learner.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_049d7b76276babc466c0",
+            "criterion": "Casey Boehm's originally unsubmitted 'Week 1: Writing' record is returned to the learner.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c976daa9bdfd785ca770",
+            "criterion": "Hannah Koenig's 'Week 1: Writing' record is returned to the learner.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_16367770e23cbc7442c0",
+            "criterion": "Both Casey Boehm entries and Hannah Koenig's entry for 'Week 1: Writing' include the private return comment 'Super sentence writing!'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4b5778c19a6daae9b844",
+            "criterion": "The complete 'Organize and Educate' class gradebook is saved as 'Grades Organize and Educate 08-06-2020.ods' at the required destination with updated grades after the 'Week 1: Writing' grading and returns are complete.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9830af1ead7fad8f473c",
+            "criterion": "Cell D7 in the saved 'Organize and Educate' gradebook contains the comment 'Needs to make corrections'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T161221Z"
       }
     }
   },
@@ -977,7 +1487,226 @@
           "frame_00009.png",
           "frame_00010.png",
           "frame_00011.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "The dataset contains an identifiable gender variable with a descriptive label that accurately reflects the questionnaire's gender item.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "The gender variable has distinct whole-number codes labeled Male and Female.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97884da3da28b028da7e",
+            "criterion": "The dataset contains an identifiable country-of-participation variable with an accurate descriptive label.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+            "criterion": "The country-of-participation variable has distinct whole-number codes labeled Nigeria, Ghana, UK, USA, and India.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b2e6be0d16a888b6ba8c",
+            "criterion": "The gender variable has a nominal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_8435aadfc7497a0c07bf",
+            "criterion": "The country-of-participation variable has a nominal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_71cfbecccbf035259a94",
+            "criterion": "The dataset contains separate identifiable variables for teacher care, encouragement during difficult tasks, and listening to students' opinions and ideas.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "The teacher-care statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_3fe5429d662feda6c3c1",
+            "criterion": "The teacher-listening statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_52b9b7f6f804d040d437",
+            "criterion": "The enjoyment-of-learning statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_39e6ecb2ed85a293b21f",
+            "criterion": "The interest-in-topics statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_1a5da20f8dca28908eeb",
+            "criterion": "The motivation-to-learn statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_dfbdc555c354f6047151",
+            "criterion": "The teacher-care statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_279b609616395082f917",
+            "criterion": "The statement about teacher encouragement during difficult tasks has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0413d170db931eac2def",
+            "criterion": "The teacher-listening statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_1d016a77edd8c1a2a466",
+            "criterion": "The enjoyment-of-learning statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a98750e098af810a245f",
+            "criterion": "The interest-in-topics statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9ae74fa2ed94b726a37e",
+            "criterion": "The motivation-to-learn statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4b5778c19a6daae9b844",
+            "criterion": "The baseline dataset contains six sample respondent records with varied, valid whole-number responses across both demographic items and all six study statements.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a2ecfb7eaa1695ada96e",
+            "criterion": "The complete-baseline results contain valid-and-missing summaries and labeled category frequency tables with counts and percentages for gender and country, each showing six valid cases and zero missing cases.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_dfdc7179a1e99af5cb8f",
+            "criterion": "The comparison dataset contains the same six respondents with exactly one gender response missing and every other demographic entry unchanged from the complete baseline.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d048632667e0604f2e0b",
+            "criterion": "The missing-response results contain labeled category frequency tables with counts and percentages for gender and country, with summaries showing five valid and one missing gender response and six valid and zero missing country responses.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_20b04a17e09f6b4e4571",
+            "criterion": "The prepared dataset contains no stray placeholder variables or entries.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ad75e66e1008ed2a1a",
+            "criterion": "All six study-statement variables have descriptive labels that accurately identify their corresponding questionnaire statements.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_ae010f0f2534698739a6",
+            "criterion": "The teacher-encouragement statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_35a444203e0f620e1ed6",
+            "criterion": "The demographic category counts and percentages reconcile with the respondent records for their respective complete and missing-response conditions.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_5c2cca578c371656ab26",
+            "criterion": "The prepared dataset and both demographic frequency-analysis sets remain open and available for review in the final workspace.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T065104Z"
       },
       "unguided": {
         "job": "spss_pi_20261119_011501_11206471",
@@ -1002,7 +1731,226 @@
           "frame_00004.png",
           "frame_00005.png",
           "frame_00006.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "The dataset contains an identifiable gender variable with a descriptive label that accurately reflects the questionnaire's gender item.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "The gender variable has distinct whole-number codes labeled Male and Female.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97884da3da28b028da7e",
+            "criterion": "The dataset contains an identifiable country-of-participation variable with an accurate descriptive label.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+            "criterion": "The country-of-participation variable has distinct whole-number codes labeled Nigeria, Ghana, UK, USA, and India.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b2e6be0d16a888b6ba8c",
+            "criterion": "The gender variable has a nominal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_8435aadfc7497a0c07bf",
+            "criterion": "The country-of-participation variable has a nominal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_71cfbecccbf035259a94",
+            "criterion": "The dataset contains separate identifiable variables for teacher care, encouragement during difficult tasks, and listening to students' opinions and ideas.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "The teacher-care statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_3fe5429d662feda6c3c1",
+            "criterion": "The teacher-listening statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_52b9b7f6f804d040d437",
+            "criterion": "The enjoyment-of-learning statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_39e6ecb2ed85a293b21f",
+            "criterion": "The interest-in-topics statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_1a5da20f8dca28908eeb",
+            "criterion": "The motivation-to-learn statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_dfbdc555c354f6047151",
+            "criterion": "The teacher-care statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_279b609616395082f917",
+            "criterion": "The statement about teacher encouragement during difficult tasks has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0413d170db931eac2def",
+            "criterion": "The teacher-listening statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_1d016a77edd8c1a2a466",
+            "criterion": "The enjoyment-of-learning statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a98750e098af810a245f",
+            "criterion": "The interest-in-topics statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9ae74fa2ed94b726a37e",
+            "criterion": "The motivation-to-learn statement variable has an ordinal measurement level.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4b5778c19a6daae9b844",
+            "criterion": "The baseline dataset contains six sample respondent records with varied, valid whole-number responses across both demographic items and all six study statements.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a2ecfb7eaa1695ada96e",
+            "criterion": "The complete-baseline results contain valid-and-missing summaries and labeled category frequency tables with counts and percentages for gender and country, each showing six valid cases and zero missing cases.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_dfdc7179a1e99af5cb8f",
+            "criterion": "The comparison dataset contains the same six respondents with exactly one gender response missing and every other demographic entry unchanged from the complete baseline.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d048632667e0604f2e0b",
+            "criterion": "The missing-response results contain labeled category frequency tables with counts and percentages for gender and country, with summaries showing five valid and one missing gender response and six valid and zero missing country responses.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_20b04a17e09f6b4e4571",
+            "criterion": "The prepared dataset contains no stray placeholder variables or entries.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ad75e66e1008ed2a1a",
+            "criterion": "All six study-statement variables have descriptive labels that accurately identify their corresponding questionnaire statements.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_ae010f0f2534698739a6",
+            "criterion": "The teacher-encouragement statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_35a444203e0f620e1ed6",
+            "criterion": "The demographic category counts and percentages reconcile with the respondent records for their respective complete and missing-response conditions.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_5c2cca578c371656ab26",
+            "criterion": "The prepared dataset and both demographic frequency-analysis sets remain open and available for review in the final workspace.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T165325Z"
       }
     }
   },
@@ -1382,7 +2330,242 @@
           "frame_00096.png",
           "frame_00097.png",
           "frame_00098.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "An editable video project is named \"Justin Edit\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97884da3da28b028da7e",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"Camera-Recording.mp4\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"Screen-Recording.mp4\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d85870a880012c1e2336",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"IMG_0133.MOV\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_96c65b3434d993e6ce4b",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"IMG_0261.MOV\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_aad9033bfd31446528cf",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"Test 1.mov\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "The main sequence matches the presenter source and contains its picture and synchronized dialogue.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "The main sequence is named \"YouTube\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_dfdc7179a1e99af5cb8f",
+            "criterion": "The trimmed presenter picture and dialogue begin at the sequence opening without a preceding gap.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d048632667e0604f2e0b",
+            "criterion": "The presenter picture and dialogue have trimmed source endpoints without an empty trailing picture interval.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_8a779ec83812ad61270f",
+            "criterion": "Interior joins in the edited presenter picture and dialogue have no unintended timeline gaps.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a4a65c38d61ff689062b",
+            "criterion": "An approximately five-second, video-only waterfall cutaway appears over the continuing presenter dialogue.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_39af0f27c2677e637b6c",
+            "criterion": "A video-only ocean cutaway appears over the continuing presenter dialogue.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_109219cb70d80e15004f",
+            "criterion": "An on-screen lower-third near the opening introduces the presenter as \"JUSTIN BROWN\".",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c10071cea112bb627ab8",
+            "criterion": "The \"JUSTIN BROWN\" lower-third uses white uppercase Oswald Bold lettering.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6f33d2ef259850c7ae96",
+            "criterion": "A fully opaque bright blue rectangle closely surrounds the lower-third lettering with a small visible margin.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_fe439d796aed537a758d",
+            "criterion": "The name graphic is horizontally centered in the lower third of the presenter image.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f256185d2b99b56f4a2a",
+            "criterion": "The opening \"JUSTIN BROWN\" lower-third remains visible beyond the first five seconds.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_56f9bf1ac56bf0e0e1a9",
+            "criterion": "The waterfall cutaway opens with a brief dip to white.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_a49a15e766796623a68f",
+            "criterion": "One presenter segment has a modest punch-in while the remaining presenter segments retain their standard framing.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9e2a41eb70b01f2cad2d",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"ES_San Pedro - Sugoi.mp3\" soundtrack.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_90de750ca0e620b8eb32",
+            "criterion": "The supplied background music spans the edited picture from its opening to its end.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c28e95c048f15645b588",
+            "criterion": "All presenter audio elements are identified as \"Dialogue\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_95d759b2697367ca3d2a",
+            "criterion": "The background soundtrack is identified as \"Music\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_468d2ae78c9c0985a66c",
+            "criterion": "The opening presenter shot has a warm, bright color treatment with enhanced contrast and vibrant saturation.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9d0f1f3de53915f077e9",
+            "criterion": "The remaining presenter shots consistently share the required camera treatment while preserving their individual framing.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f902392039b7a8775af1",
+            "criterion": "The \"YouTube\" sequence is configured for \"YouTube 2160p 4K Ultra HD\" export.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_ff0a4355ef5f49c0fb82",
+            "criterion": "The completed editable \"Justin Edit\" project is saved at the required delivery location.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_707d20547c3fa8073e7b",
+            "criterion": "Presenter dialogue and background music remain independently editable audio elements throughout the sequence.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T174742Z"
       },
       "unguided": {
         "job": "premiere-pro_pi_20261119_054533_11205550",
@@ -1460,7 +2643,242 @@
           "frame_00057.png",
           "frame_00058.png",
           "frame_00059.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "An editable video project is named \"Justin Edit\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97884da3da28b028da7e",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"Camera-Recording.mp4\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"Screen-Recording.mp4\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d85870a880012c1e2336",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"IMG_0133.MOV\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_96c65b3434d993e6ce4b",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"IMG_0261.MOV\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_aad9033bfd31446528cf",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"Test 1.mov\" media.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "The main sequence matches the presenter source and contains its picture and synchronized dialogue.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "The main sequence is named \"YouTube\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_dfdc7179a1e99af5cb8f",
+            "criterion": "The trimmed presenter picture and dialogue begin at the sequence opening without a preceding gap.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d048632667e0604f2e0b",
+            "criterion": "The presenter picture and dialogue have trimmed source endpoints without an empty trailing picture interval.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_8a779ec83812ad61270f",
+            "criterion": "Interior joins in the edited presenter picture and dialogue have no unintended timeline gaps.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a4a65c38d61ff689062b",
+            "criterion": "An approximately five-second, video-only waterfall cutaway appears over the continuing presenter dialogue.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_39af0f27c2677e637b6c",
+            "criterion": "A video-only ocean cutaway appears over the continuing presenter dialogue.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_109219cb70d80e15004f",
+            "criterion": "An on-screen lower-third near the opening introduces the presenter as \"JUSTIN BROWN\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c10071cea112bb627ab8",
+            "criterion": "The \"JUSTIN BROWN\" lower-third uses white uppercase Oswald Bold lettering.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_6f33d2ef259850c7ae96",
+            "criterion": "A fully opaque bright blue rectangle closely surrounds the lower-third lettering with a small visible margin.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_fe439d796aed537a758d",
+            "criterion": "The name graphic is horizontally centered in the lower third of the presenter image.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f256185d2b99b56f4a2a",
+            "criterion": "The opening \"JUSTIN BROWN\" lower-third remains visible beyond the first five seconds.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_56f9bf1ac56bf0e0e1a9",
+            "criterion": "The waterfall cutaway opens with a brief dip to white.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_a49a15e766796623a68f",
+            "criterion": "One presenter segment has a modest punch-in while the remaining presenter segments retain their standard framing.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9e2a41eb70b01f2cad2d",
+            "criterion": "The \"Justin Edit\" project contains the supplied \"ES_San Pedro - Sugoi.mp3\" soundtrack.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_90de750ca0e620b8eb32",
+            "criterion": "The supplied background music spans the edited picture from its opening to its end.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c28e95c048f15645b588",
+            "criterion": "All presenter audio elements are identified as \"Dialogue\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_95d759b2697367ca3d2a",
+            "criterion": "The background soundtrack is identified as \"Music\".",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_468d2ae78c9c0985a66c",
+            "criterion": "The opening presenter shot has a warm, bright color treatment with enhanced contrast and vibrant saturation.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9d0f1f3de53915f077e9",
+            "criterion": "The remaining presenter shots consistently share the required camera treatment while preserving their individual framing.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f902392039b7a8775af1",
+            "criterion": "The \"YouTube\" sequence is configured for \"YouTube 2160p 4K Ultra HD\" export.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_ff0a4355ef5f49c0fb82",
+            "criterion": "The completed editable \"Justin Edit\" project is saved at the required delivery location.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_707d20547c3fa8073e7b",
+            "criterion": "Presenter dialogue and background music remain independently editable audio elements throughout the sequence.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T180713Z"
       }
     }
   },
@@ -1773,7 +3191,234 @@
           "frame_00130.png",
           "frame_00131.png",
           "frame_00132.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "A new team named Marketing exists in MinorCo.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "Warwick Palm and Paul Minors are members of the Marketing team in MinorCo.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "A project named 'Apple - Website Design' exists in the 'Asana Demo' workspace.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_71cfbecccbf035259a94",
+            "criterion": "The 'Apple - Website Design' project is accessible to everyone in the 'Asana Demo' workspace.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "The 'Apple - Website Design' plan includes identifiable client onboarding work.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_049d7b76276babc466c0",
+            "criterion": "The 'Apple - Website Design' plan includes identifiable design and planning work.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c976daa9bdfd785ca770",
+            "criterion": "The 'Apple - Website Design' plan includes identifiable production work.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_16367770e23cbc7442c0",
+            "criterion": "The 'Apple - Website Design' plan includes identifiable go-live and final delivery work.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_109219cb70d80e15004f",
+            "criterion": "The 'Apple - Website Design' project overview describes a new Apple website launching before Christmas to increase conversion rates and sell more iPhones during the holiday season.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_816b58e31be0b0cde52a",
+            "criterion": "Warwick Palm has editing access to the 'Apple - Website Design' project.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0d4bcb53687d6fe21b9f",
+            "criterion": "Lindsay Amoroso has editing access to the 'Apple - Website Design' project.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_56f9bf1ac56bf0e0e1a9",
+            "criterion": "A published status update for 'Apple - Website Design' identifies the project as on track.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_6aff0ce93c8f8404a8db",
+            "criterion": "The published project status update says work is progressing well and is expected to finish before Christmas.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_078db95fff663f48c6e0",
+            "criterion": "The published project status update summarizes remaining incomplete tasks by assignee.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_a49a15e766796623a68f",
+            "criterion": "The production milestone for completed page designs contains a posted request for Warwick Palm to review the completed designs.",
+            "harbor_verdict": "no_credit",
+            "harbor_score": 0,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_fdb8d2dfa9c3c8f95d3b",
+            "criterion": "The production milestone for completed page designs exists and remains incomplete.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_ceb4a9be39952f0cc79c",
+            "criterion": "Paul Minors's newly assigned commitments from 'Apple - Website Design' are in the Upcoming section of his personal task list in the 'Asana Demo' workspace.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_d2b14acd0cbd73af7ff7",
+            "criterion": "'Planning session with client' is in the Upcoming section of Paul Minors's personal task list in the 'Asana Demo' workspace.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_76d522e2d38e87ed462f",
+            "criterion": "Paul Minors's personal task list in the 'Asana Demo' workspace is organized by section.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c28e95c048f15645b588",
+            "criterion": "Warwick Palm's latest comment on 'Troubleshoot: Pipedrive Document sync settings' in MinorCo has a thumbs-up reaction from Paul Minors.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_95d759b2697367ca3d2a",
+            "criterion": "The discussion of 'Session #3 Team Follow Up' in MinorCo contains Paul Minors's appreciation for Kayla Campos completing the task.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f935116ccd634186b9db",
+            "criterion": "The 'Troubleshoot: Pipedrive Document sync settings' notification in MinorCo is archived.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_287c77ed7592956d91bd",
+            "criterion": "Every task in the 'Apple - Website Design' plan has an identifiable responsible team member.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_8a54d72be27323ddd793",
+            "criterion": "The 'Apple - Website Design' plan schedules its work and prerequisite handoffs to support going live before Christmas.",
+            "harbor_verdict": "no_credit",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_bde65b0e1bf09cc13be8",
+            "criterion": "The 'Apple - Website Design' plan breaks multi-part deliverables into relevant subtasks.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_57a7a63ded41fc052d8d",
+            "criterion": "The 'Apple - Website Design' plan identifies meaningful approval and readiness milestones for the website launch.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f0f4614f85d1bc9349ae",
+            "criterion": "The 'Apple - Website Design' plan explicitly links dependent tasks or testing milestones to the earlier handoffs they require.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0b01337121b39ee0624c",
+            "criterion": "The Recently assigned section of Paul Minors's personal task list in the 'Asana Demo' workspace is empty.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T172409Z"
       },
       "unguided": {
         "job": "asana_pi_20261119_102019_11207656",
@@ -1825,7 +3470,234 @@
           "frame_00031.png",
           "frame_00032.png",
           "frame_00033.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "A new team named Marketing exists in MinorCo.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "Warwick Palm and Paul Minors are members of the Marketing team in MinorCo.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "A project named 'Apple - Website Design' exists in the 'Asana Demo' workspace.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_71cfbecccbf035259a94",
+            "criterion": "The 'Apple - Website Design' project is accessible to everyone in the 'Asana Demo' workspace.",
+            "harbor_verdict": "no_credit",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_0375f9f95947b3e2f72b",
+            "criterion": "The 'Apple - Website Design' plan includes identifiable client onboarding work.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_049d7b76276babc466c0",
+            "criterion": "The 'Apple - Website Design' plan includes identifiable design and planning work.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c976daa9bdfd785ca770",
+            "criterion": "The 'Apple - Website Design' plan includes identifiable production work.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_16367770e23cbc7442c0",
+            "criterion": "The 'Apple - Website Design' plan includes identifiable go-live and final delivery work.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_109219cb70d80e15004f",
+            "criterion": "The 'Apple - Website Design' project overview describes a new Apple website launching before Christmas to increase conversion rates and sell more iPhones during the holiday season.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_816b58e31be0b0cde52a",
+            "criterion": "Warwick Palm has editing access to the 'Apple - Website Design' project.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0d4bcb53687d6fe21b9f",
+            "criterion": "Lindsay Amoroso has editing access to the 'Apple - Website Design' project.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_56f9bf1ac56bf0e0e1a9",
+            "criterion": "A published status update for 'Apple - Website Design' identifies the project as on track.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6aff0ce93c8f8404a8db",
+            "criterion": "The published project status update says work is progressing well and is expected to finish before Christmas.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_078db95fff663f48c6e0",
+            "criterion": "The published project status update summarizes remaining incomplete tasks by assignee.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a49a15e766796623a68f",
+            "criterion": "The production milestone for completed page designs contains a posted request for Warwick Palm to review the completed designs.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_fdb8d2dfa9c3c8f95d3b",
+            "criterion": "The production milestone for completed page designs exists and remains incomplete.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_ceb4a9be39952f0cc79c",
+            "criterion": "Paul Minors's newly assigned commitments from 'Apple - Website Design' are in the Upcoming section of his personal task list in the 'Asana Demo' workspace.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d2b14acd0cbd73af7ff7",
+            "criterion": "'Planning session with client' is in the Upcoming section of Paul Minors's personal task list in the 'Asana Demo' workspace.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_76d522e2d38e87ed462f",
+            "criterion": "Paul Minors's personal task list in the 'Asana Demo' workspace is organized by section.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c28e95c048f15645b588",
+            "criterion": "Warwick Palm's latest comment on 'Troubleshoot: Pipedrive Document sync settings' in MinorCo has a thumbs-up reaction from Paul Minors.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_95d759b2697367ca3d2a",
+            "criterion": "The discussion of 'Session #3 Team Follow Up' in MinorCo contains Paul Minors's appreciation for Kayla Campos completing the task.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f935116ccd634186b9db",
+            "criterion": "The 'Troubleshoot: Pipedrive Document sync settings' notification in MinorCo is archived.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_287c77ed7592956d91bd",
+            "criterion": "Every task in the 'Apple - Website Design' plan has an identifiable responsible team member.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_8a54d72be27323ddd793",
+            "criterion": "The 'Apple - Website Design' plan schedules its work and prerequisite handoffs to support going live before Christmas.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_bde65b0e1bf09cc13be8",
+            "criterion": "The 'Apple - Website Design' plan breaks multi-part deliverables into relevant subtasks.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_57a7a63ded41fc052d8d",
+            "criterion": "The 'Apple - Website Design' plan identifies meaningful approval and readiness milestones for the website launch.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f0f4614f85d1bc9349ae",
+            "criterion": "The 'Apple - Website Design' plan explicitly links dependent tasks or testing milestones to the earlier handoffs they require.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0b01337121b39ee0624c",
+            "criterion": "The Recently assigned section of Paul Minors's personal task list in the 'Asana Demo' workspace is empty.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       }
     }
   },
@@ -2231,7 +4103,258 @@
           "frame_00208.png",
           "frame_00209.png",
           "frame_00210.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "The registered workspace account has name 'Emily Call', role 'Developer', company 'Call Solutions LLC', email 'sfemilycall@gmail.com', username 'EEC@callcompany.com', and location Utah, United States, '98002'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+            "criterion": "The registered workspace account is activated through email verification and permits authenticated access.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4b5778c19a6daae9b844",
+            "criterion": "Jane Doe's saved lead for ABC records Web as its source and Education as its industry.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_9830af1ead7fad8f473c",
+            "criterion": "Jane Doe's lead for ABC is marked as converted.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_017ca97ec323077cf044",
+            "criterion": "A saved ABC account is linked to Jane Doe's lead conversion.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_27cac5cf7fb6df36e418",
+            "criterion": "Jane Doe's saved contact record is associated with the ABC account.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_43e4453e51abced1040c",
+            "criterion": "The saved 'ABC- Initial Contract' opportunity is associated with the ABC account.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a2ecfb7eaa1695ada96e",
+            "criterion": "John Doe is recorded as an additional saved contact associated with the ABC account.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_dfdc7179a1e99af5cb8f",
+            "criterion": "The saved 'ABC- Initial Contract' opportunity has a value of $100,000.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d048632667e0604f2e0b",
+            "criterion": "The 'ABC- Initial Contract' Opportunity record stage is updated to 'Closed Won' and saved",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0d58083f61cf7c2baa73",
+            "criterion": "Jane Doe's contact record is linked to the 'ABC- Initial Contract' opportunity.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_be1b249f0cdcf8a784a3",
+            "criterion": "The 'ABC- Initial Contract' opportunity is attributed to Web in the closed-won revenue breakdown.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a4a65c38d61ff689062b",
+            "criterion": "A private lead view named 'My Open Leads' is saved.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b482a63c342b2adbc4e0",
+            "criterion": "The 'My Open Leads' view excludes converted leads.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4cb79d40d8d4e81e1778",
+            "criterion": "The 'My Open Leads' view excludes closed leads, including leads closed without conversion.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7631f996abad205c88ef",
+            "criterion": "The 'My Open Leads' view includes only leads owned by the current user.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_11a2c54d1b86a9b60971",
+            "criterion": "The 'Closed Won Opportunities' report omits owner role, age, and next step from its detail columns.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6f33d2ef259850c7ae96",
+            "criterion": "The 'Closed Won Opportunities' report covers all close dates.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_fe439d796aed537a758d",
+            "criterion": "The 'Closed Won Opportunities' report includes only closed-won opportunities.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f256185d2b99b56f4a2a",
+            "criterion": "The 'Closed Won Opportunities' report includes last modified date among its detail columns.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_3c632b6fbcd092b470e5",
+            "criterion": "The 'Closed Won Opportunities' report groups opportunities by lead source.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a26b29d9c36ca57330dc",
+            "criterion": "The 'Closed Won Opportunities' report summarizes opportunity revenue using summed amounts and an overall revenue total.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_776bf6383148b8f6e415",
+            "criterion": "A public report named 'Closed Won Opportunities' is saved.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_9419ff6bb00f154b945f",
+            "criterion": "The saved 'Closed Won Opportunities' report displays current revenue results including the closed $100,000 'ABC- Initial Contract' opportunity.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_e661ad325fe7bda7a768",
+            "criterion": "The 'Closed Won Opportunities' report covers all accessible closed-won opportunities regardless of owner.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_816b58e31be0b0cde52a",
+            "criterion": "Embedded Donut chart visualization on the 'Closed Won Opportunities' report displays Sum of Amount sliced by Lead Source",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_56f9bf1ac56bf0e0e1a9",
+            "criterion": "A private dashboard named 'Closed Won Dashboard' is saved.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_1cb8b2a92fb8ba9678cd",
+            "criterion": "The 'Closed Won Dashboard' contains an overall closed-won revenue metric sourced from 'Closed Won Opportunities'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_af9f11ddf53956f017bb",
+            "criterion": "The 'Closed Won Dashboard' contains a donut chart of closed-won revenue by lead source sourced from 'Closed Won Opportunities'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_296a8c281aa1c6d8a3b5",
+            "criterion": "The saved 'Closed Won Dashboard' displays current figures in its overall closed-won revenue metric and donut chart breakdown by lead source, including the closed $100,000 ABC contract.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a49a15e766796623a68f",
+            "criterion": "Email subscription for the 'Closed Won Dashboard' is saved with a Weekly frequency on Monday at 7:00 AM",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T154719Z"
       },
       "unguided": {
         "job": "salesforce_pi_20261119_002058_11199947",
@@ -2271,7 +4394,258 @@
           "frame_00019.png",
           "frame_00020.png",
           "frame_00021.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_8cb43c90cb2c4e5e86f8",
+            "criterion": "The registered workspace account has name 'Emily Call', role 'Developer', company 'Call Solutions LLC', email 'sfemilycall@gmail.com', username 'EEC@callcompany.com', and location Utah, United States, '98002'.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+            "criterion": "The registered workspace account is activated through email verification and permits authenticated access.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4b5778c19a6daae9b844",
+            "criterion": "Jane Doe's saved lead for ABC records Web as its source and Education as its industry.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_9830af1ead7fad8f473c",
+            "criterion": "Jane Doe's lead for ABC is marked as converted.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_017ca97ec323077cf044",
+            "criterion": "A saved ABC account is linked to Jane Doe's lead conversion.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_27cac5cf7fb6df36e418",
+            "criterion": "Jane Doe's saved contact record is associated with the ABC account.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_43e4453e51abced1040c",
+            "criterion": "The saved 'ABC- Initial Contract' opportunity is associated with the ABC account.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a2ecfb7eaa1695ada96e",
+            "criterion": "John Doe is recorded as an additional saved contact associated with the ABC account.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_dfdc7179a1e99af5cb8f",
+            "criterion": "The saved 'ABC- Initial Contract' opportunity has a value of $100,000.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d048632667e0604f2e0b",
+            "criterion": "The 'ABC- Initial Contract' Opportunity record stage is updated to 'Closed Won' and saved",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_0d58083f61cf7c2baa73",
+            "criterion": "Jane Doe's contact record is linked to the 'ABC- Initial Contract' opportunity.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_be1b249f0cdcf8a784a3",
+            "criterion": "The 'ABC- Initial Contract' opportunity is attributed to Web in the closed-won revenue breakdown.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a4a65c38d61ff689062b",
+            "criterion": "A private lead view named 'My Open Leads' is saved.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b482a63c342b2adbc4e0",
+            "criterion": "The 'My Open Leads' view excludes converted leads.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_4cb79d40d8d4e81e1778",
+            "criterion": "The 'My Open Leads' view excludes closed leads, including leads closed without conversion.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7631f996abad205c88ef",
+            "criterion": "The 'My Open Leads' view includes only leads owned by the current user.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_11a2c54d1b86a9b60971",
+            "criterion": "The 'Closed Won Opportunities' report omits owner role, age, and next step from its detail columns.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6f33d2ef259850c7ae96",
+            "criterion": "The 'Closed Won Opportunities' report covers all close dates.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_fe439d796aed537a758d",
+            "criterion": "The 'Closed Won Opportunities' report includes only closed-won opportunities.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f256185d2b99b56f4a2a",
+            "criterion": "The 'Closed Won Opportunities' report includes last modified date among its detail columns.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_3c632b6fbcd092b470e5",
+            "criterion": "The 'Closed Won Opportunities' report groups opportunities by lead source.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a26b29d9c36ca57330dc",
+            "criterion": "The 'Closed Won Opportunities' report summarizes opportunity revenue using summed amounts and an overall revenue total.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_776bf6383148b8f6e415",
+            "criterion": "A public report named 'Closed Won Opportunities' is saved.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9419ff6bb00f154b945f",
+            "criterion": "The saved 'Closed Won Opportunities' report displays current revenue results including the closed $100,000 'ABC- Initial Contract' opportunity.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_e661ad325fe7bda7a768",
+            "criterion": "The 'Closed Won Opportunities' report covers all accessible closed-won opportunities regardless of owner.",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_816b58e31be0b0cde52a",
+            "criterion": "Embedded Donut chart visualization on the 'Closed Won Opportunities' report displays Sum of Amount sliced by Lead Source",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_56f9bf1ac56bf0e0e1a9",
+            "criterion": "A private dashboard named 'Closed Won Dashboard' is saved.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_1cb8b2a92fb8ba9678cd",
+            "criterion": "The 'Closed Won Dashboard' contains an overall closed-won revenue metric sourced from 'Closed Won Opportunities'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_af9f11ddf53956f017bb",
+            "criterion": "The 'Closed Won Dashboard' contains a donut chart of closed-won revenue by lead source sourced from 'Closed Won Opportunities'.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_296a8c281aa1c6d8a3b5",
+            "criterion": "The saved 'Closed Won Dashboard' displays current figures in its overall closed-won revenue metric and donut chart breakdown by lead source, including the closed $100,000 ABC contract.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a49a15e766796623a68f",
+            "criterion": "Email subscription for the 'Closed Won Dashboard' is saved with a Weekly frequency on Monday at 7:00 AM",
+            "harbor_verdict": "unresolved",
+            "harbor_score": null,
+            "codex_finding": "met",
+            "codex_score": 1
+          }
+        ],
+        "harbor_source": "verifier"
       }
     }
   },
@@ -2569,7 +4943,314 @@
           "frame_00003.png",
           "frame_00004.png",
           "frame_00005.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "The editable drawing uses meters consistently for model geometry and inserted content.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97884da3da28b028da7e",
+            "criterion": "The ground-floor exterior footprint matches the reference geometry and dimensions.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_b2e6be0d16a888b6ba8c",
+            "criterion": "Exterior walls have the reference double-line contour and a thickness of 0.30 m.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "Interior partitions reproduce the reference room boundaries, unit arrangement, and central passage geometry.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_049d7b76276babc466c0",
+            "criterion": "Interior partition walls have the 0.10 m thickness specified in the reference.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_c976daa9bdfd785ca770",
+            "criterion": "Wall junctions and partition terminations meet cleanly without unintended gaps, overlaps, or stray segments.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_6901ce79258c98342393",
+            "criterion": "The central circulation connection has the reference openings between the common area and residential corridor.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_aba2cdd201bdd54a12c1",
+            "criterion": "The lift enclosure and cab reproduce the reference geometry, dimensions, clearances, and crossed-diagonal symbol.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_b482a63c342b2adbc4e0",
+            "criterion": "A reusable single-door component reproduces the reference leaf, opening, jambs, and swing arc.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_109219cb70d80e15004f",
+            "criterion": "Building elements, fixtures, room labels, and dimensions are organized on dedicated layers.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_549c001c6aa26f672d37",
+            "criterion": "Single-door openings contain correctly fitted and oriented door components matching the reference circulation.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_a49a15e766796623a68f",
+            "criterion": "A reusable symmetrical double-door component matches the reference geometry and dimensions.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9e2a41eb70b01f2cad2d",
+            "criterion": "A reusable private-restroom assembly contains the reference enclosure, toilet, basin, and entrance door.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_c28e95c048f15645b588",
+            "criterion": "The private restrooms contain correctly located and oriented enclosures, toilets, basins, and entrance doors matching the reference.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_f902392039b7a8775af1",
+            "criterion": "Both staircases reproduce the reference flights, treads, landings, and break symbols in their required locations and orientations.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_d9e114610803db74e8cc",
+            "criterion": "A reusable window component reproduces the reference window/profile geometry.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6357fe51e265cda2e77f",
+            "criterion": "Exterior window openings contain correctly oriented windows sized to the reference opening widths.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d0669253dc7d2e229bff",
+            "criterion": "The common area, dining area, kitchen, office, laundry, and both stair rooms are labeled in their reference locations.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7486fb2049efb1fcb8e1",
+            "criterion": "Residential units are labeled unit 1 through unit 7 in their reference locations.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_a1e1c947eb4c904a6207",
+            "criterion": "Room and unit labels are legible and unambiguously associated with their spaces at the ground-floor presentation scale.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_83bccfea7bb053fa52a6",
+            "criterion": "The reference bathroom beside units 4 and 5 is identified as an accessible or disabled bathroom.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_74abd4ad2f641147be3e",
+            "criterion": "Presentation viewports are assigned to a dedicated non-plotting layer that excludes their frames from sheet output.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_79c800812d81c953bc96",
+            "criterion": "The ground-floor presentation sheet displays the complete plan without clipping or unrelated model geometry.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b95eaaca21fc4217adb8",
+            "criterion": "The ground-floor plan is presented at a physical scale of 1:200.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b68c2d480a6ecb182bda",
+            "criterion": "The ground-floor presentation sheet has a complete rectangular border within the printable page.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c8b909c89596c3b80a95",
+            "criterion": "The ground-floor title block contains Project, Location, Drawing name, Drawn, Scale, and Date fields, with Project set to “Example 1”, Drawing name set to “Ground floor”, and Scale set to “1:200”.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_575a0dfe583c5de36883",
+            "criterion": "The ground-floor title block records Project “Example 1”, Drawing name “Ground floor”, and Scale “1:200”.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9b44eefe5c8083aeac37",
+            "criterion": "The ground-floor sheet is published as example 2.pdf with its plan, border, and title block visible and viewport frames absent.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_cd5a1ea0b5e34f7b3bd8",
+            "criterion": "The exterior plan and sheeted details have legible annotative dimensions in meters at their respective presentation scales.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_e24f920e305cd2abcd06",
+            "criterion": "The exterior plan has complete, accurate dimension chains in meters with clear spacing from the building geometry.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_314061ed6be507023f3f",
+            "criterion": "A presentation sheet named details contains a rectangular border and a title block.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7dea7aaac3787bb4b768",
+            "criterion": "The layout viewport on the 'details' sheet of floor plan exercise.dwg frames the door detail geometry at a scale of 1:16",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_ab4158fecf8e7d2716ee",
+            "criterion": "The single-door and window/profile detail views are arranged side by side without overlap.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d224466ee9953a96c685",
+            "criterion": "The window/profile detail is clearly framed at a physical scale of 1:10 on the details sheet.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6e4812d1dea3ba16f3c3",
+            "criterion": "The single-door detail has annotative dimensions of 0.90 m vertically and horizontally, 0.10 m for jamb height, and 0.05 m for jamb thickness.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_1de8cf8101242d6d94b7",
+            "criterion": "The window/profile detail has annotative meter dimensions matching every measurement marked in the reference.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_ddebfc9c61cc1713f3f9",
+            "criterion": "The completed plan, reusable components, annotations, and both presentation sheets are saved in the editable DWG deliverable at the designated destination.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97be3ca0d92cce65f83d",
+            "criterion": "The paired-leaf entrances shown in the reference contain correctly fitted and oriented double-door components.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          }
+        ],
+        "harbor_source": "verifier"
       },
       "unguided": {
         "job": "autocad_pi_20261119_114205_11212848",
@@ -2614,7 +5295,314 @@
           "frame_00024.png",
           "frame_00025.png",
           "frame_00026.png"
-        ]
+        ],
+        "rubric_scores": [
+          {
+            "id": "outcome_7ab45f3b81373f1d39e5",
+            "criterion": "The editable drawing uses meters consistently for model geometry and inserted content.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97884da3da28b028da7e",
+            "criterion": "The ground-floor exterior footprint matches the reference geometry and dimensions.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b2e6be0d16a888b6ba8c",
+            "criterion": "Exterior walls have the reference double-line contour and a thickness of 0.30 m.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_f123d18d5278575917d3",
+            "criterion": "Interior partitions reproduce the reference room boundaries, unit arrangement, and central passage geometry.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_049d7b76276babc466c0",
+            "criterion": "Interior partition walls have the 0.10 m thickness specified in the reference.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_c976daa9bdfd785ca770",
+            "criterion": "Wall junctions and partition terminations meet cleanly without unintended gaps, overlaps, or stray segments.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6901ce79258c98342393",
+            "criterion": "The central circulation connection has the reference openings between the common area and residential corridor.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_aba2cdd201bdd54a12c1",
+            "criterion": "The lift enclosure and cab reproduce the reference geometry, dimensions, clearances, and crossed-diagonal symbol.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b482a63c342b2adbc4e0",
+            "criterion": "A reusable single-door component reproduces the reference leaf, opening, jambs, and swing arc.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_109219cb70d80e15004f",
+            "criterion": "Building elements, fixtures, room labels, and dimensions are organized on dedicated layers.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "insufficient",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_549c001c6aa26f672d37",
+            "criterion": "Single-door openings contain correctly fitted and oriented door components matching the reference circulation.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_a49a15e766796623a68f",
+            "criterion": "A reusable symmetrical double-door component matches the reference geometry and dimensions.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9e2a41eb70b01f2cad2d",
+            "criterion": "A reusable private-restroom assembly contains the reference enclosure, toilet, basin, and entrance door.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_c28e95c048f15645b588",
+            "criterion": "The private restrooms contain correctly located and oriented enclosures, toilets, basins, and entrance doors matching the reference.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_f902392039b7a8775af1",
+            "criterion": "Both staircases reproduce the reference flights, treads, landings, and break symbols in their required locations and orientations.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d9e114610803db74e8cc",
+            "criterion": "A reusable window component reproduces the reference window/profile geometry.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6357fe51e265cda2e77f",
+            "criterion": "Exterior window openings contain correctly oriented windows sized to the reference opening widths.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d0669253dc7d2e229bff",
+            "criterion": "The common area, dining area, kitchen, office, laundry, and both stair rooms are labeled in their reference locations.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_7486fb2049efb1fcb8e1",
+            "criterion": "Residential units are labeled unit 1 through unit 7 in their reference locations.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_a1e1c947eb4c904a6207",
+            "criterion": "Room and unit labels are legible and unambiguously associated with their spaces at the ground-floor presentation scale.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_83bccfea7bb053fa52a6",
+            "criterion": "The reference bathroom beside units 4 and 5 is identified as an accessible or disabled bathroom.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_74abd4ad2f641147be3e",
+            "criterion": "Presentation viewports are assigned to a dedicated non-plotting layer that excludes their frames from sheet output.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_79c800812d81c953bc96",
+            "criterion": "The ground-floor presentation sheet displays the complete plan without clipping or unrelated model geometry.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b95eaaca21fc4217adb8",
+            "criterion": "The ground-floor plan is presented at a physical scale of 1:200.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_b68c2d480a6ecb182bda",
+            "criterion": "The ground-floor presentation sheet has a complete rectangular border within the printable page.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_c8b909c89596c3b80a95",
+            "criterion": "The ground-floor title block contains Project, Location, Drawing name, Drawn, Scale, and Date fields, with Project set to “Example 1”, Drawing name set to “Ground floor”, and Scale set to “1:200”.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_575a0dfe583c5de36883",
+            "criterion": "The ground-floor title block records Project “Example 1”, Drawing name “Ground floor”, and Scale “1:200”.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_9b44eefe5c8083aeac37",
+            "criterion": "The ground-floor sheet is published as example 2.pdf with its plan, border, and title block visible and viewport frames absent.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_cd5a1ea0b5e34f7b3bd8",
+            "criterion": "The exterior plan and sheeted details have legible annotative dimensions in meters at their respective presentation scales.",
+            "harbor_verdict": "no_credit",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_e24f920e305cd2abcd06",
+            "criterion": "The exterior plan has complete, accurate dimension chains in meters with clear spacing from the building geometry.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_314061ed6be507023f3f",
+            "criterion": "A presentation sheet named details contains a rectangular border and a title block.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_7dea7aaac3787bb4b768",
+            "criterion": "The layout viewport on the 'details' sheet of floor plan exercise.dwg frames the door detail geometry at a scale of 1:16",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_ab4158fecf8e7d2716ee",
+            "criterion": "The single-door and window/profile detail views are arranged side by side without overlap.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_d224466ee9953a96c685",
+            "criterion": "The window/profile detail is clearly framed at a physical scale of 1:10 on the details sheet.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_6e4812d1dea3ba16f3c3",
+            "criterion": "The single-door detail has annotative dimensions of 0.90 m vertically and horizontally, 0.10 m for jamb height, and 0.05 m for jamb thickness.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_1de8cf8101242d6d94b7",
+            "criterion": "The window/profile detail has annotative meter dimensions matching every measurement marked in the reference.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          },
+          {
+            "id": "outcome_ddebfc9c61cc1713f3f9",
+            "criterion": "The completed plan, reusable components, annotations, and both presentation sheets are saved in the editable DWG deliverable at the designated destination.",
+            "harbor_verdict": "full",
+            "harbor_score": 1,
+            "codex_finding": "met",
+            "codex_score": 1
+          },
+          {
+            "id": "outcome_97be3ca0d92cce65f83d",
+            "criterion": "The paired-leaf entrances shown in the reference contain correctly fitted and oriented double-door components.",
+            "harbor_verdict": "partial",
+            "harbor_score": 0,
+            "codex_finding": "incomplete",
+            "codex_score": 0
+          }
+        ],
+        "harbor_source": "production_adapter_20261119T184528Z"
       }
     }
   }

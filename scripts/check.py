@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from agent_runs import load_agent_runs
+from agent_runs import CODEX_SCORES, HARBOR_SCORES, load_agent_runs
 from build import OUTPUT, ROOT, SOURCE, load_tutorials, parse_tasks, plain_text
 from materials import load_materials, sha256
 
@@ -30,6 +30,8 @@ class Page(HTMLParser):
         self.cell = None
         self.row = []
         self.rubrics = []
+        self.scores = {}
+        self.score_row_id = None
         self.instruction_depth = 0
         self.instruction = []
         self.materials = []
@@ -43,6 +45,7 @@ class Page(HTMLParser):
         if tag == "article" and "agent-run" in attrs.get("class", "").split():
             self.run_condition = attrs["id"].removeprefix("run-")
             self.run_frames[self.run_condition] = []
+            self.scores[self.run_condition] = []
         if tag == "option" and self.run_condition:
             self.run_frames[self.run_condition].append(attrs["value"])
         if attrs.get("id"):
@@ -63,9 +66,11 @@ class Page(HTMLParser):
             self.material = []
         if tag == "table" and "rubric-table" in attrs.get("class", "").split():
             self.in_table = True
-        if self.in_table and tag == "tr":
+        if self.run_condition and tag == "tr":
+            self.score_row_id = attrs.get("data-rubric-id")
+        if (self.in_table or self.score_row_id) and tag == "tr":
             self.row = []
-        if self.in_table and tag in ("td", "th"):
+        if (self.in_table or self.score_row_id) and tag in ("td", "th"):
             self.cell = []
 
     def handle_endtag(self, tag):
@@ -76,11 +81,14 @@ class Page(HTMLParser):
         if tag == "code" and self.material is not None:
             self.materials.append("".join(self.material))
             self.material = None
-        if self.in_table and tag in ("td", "th"):
+        if (self.in_table or self.score_row_id) and tag in ("td", "th"):
             self.row.append(compact("".join(self.cell)))
             self.cell = None
         if self.in_table and tag == "tr" and self.row and self.row[0].isdigit():
             self.rubrics.append(self.row)
+        if tag == "tr" and self.score_row_id:
+            self.scores[self.run_condition].append([self.score_row_id, *self.row])
+            self.score_row_id = None
         if tag == "table":
             self.in_table = False
 
@@ -97,7 +105,7 @@ def check():
     tasks = parse_tasks(SOURCE.read_text(encoding="utf-8"))
     manifest = load_materials(tasks, ROOT)
     load_tutorials(tasks)
-    load_agent_runs(tasks, ROOT)
+    load_agent_runs(tasks, ROOT, plain_text)
     assert (OUTPUT / "data/new_10_tasks.md").read_bytes() == SOURCE.read_bytes(), "Source download differs"
     exported = json.loads((OUTPUT / "data/tasks.json").read_text(encoding="utf-8"))
     assert exported == [{k: v for k, v in task.items() if k != "markdown"} for task in tasks], "JSON differs from source"
@@ -137,6 +145,13 @@ def check():
         assert "#agent-run" in page.links
         for condition, run in task["agent_runs"].items():
             assert f"run-{condition}" in page.ids
+            expected_scores = []
+            for rubric, score in zip(task["rubrics"], run["rubric_scores"]):
+                cells = []
+                for value, label in (HARBOR_SCORES[score["harbor_verdict"]], CODEX_SCORES[score["codex_finding"]]):
+                    cells.append(label if value is None else f"{'✓ ' if value else ''}{value} {label}")
+                expected_scores.append([score["id"], f"{rubric['number']:02d} {plain_text(rubric['criterion'])}", *cells])
+            assert page.scores[condition] == expected_scores, f"Score checklist mismatch: {task['slug']}/{condition}"
             folder = Path(run["asset_path"])
             assert run["total_tokens"] == run["input_tokens"] + run["output_tokens"]
             assert 0 <= run["cached_input_tokens"] <= run["input_tokens"] and run["runtime_seconds"] > 0

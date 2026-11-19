@@ -332,7 +332,7 @@ def build() -> list[dict]:
     tasks = parse_tasks(SOURCE.read_text(encoding="utf-8"))
     load_materials(tasks, ROOT)
     load_tutorials(tasks)
-    load_agent_runs(tasks, ROOT)
+    load_agent_runs(tasks, ROOT, plain_text)
     OUTPUT.mkdir(exist_ok=True)
     (OUTPUT / "data").mkdir(exist_ok=True)
     shutil.copytree(ROOT / "assets", OUTPUT / "assets", dirs_exist_ok=True)

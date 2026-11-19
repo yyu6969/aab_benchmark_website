@@ -298,3 +298,26 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .event-controls button:disabled { opacity: .45; cursor: default; }
 .event-record { background: var(--subtle); border: 1px solid var(--border); padding: 1rem; max-height: 22rem; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font: .8125rem/1.55 var(--mono); }
 @media print { .event-viewer { display: none; } }
+
+.run-scores { margin: 1rem 0; padding: 1rem 1.125rem; border: 1px solid var(--border); }
+.run-scores h4 { margin: 0; font: 600 1.0625rem var(--sans); }
+.score-totals { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin: .75rem 0; }
+.score-totals dt, .score-pending { font: .875rem/1.5 var(--sans); color: var(--muted); }
+.score-totals dd { font-variant-numeric: tabular-nums; }
+.score-checklist summary { width: fit-content; color: var(--accent); cursor: pointer; font-size: .875rem; }
+.score-checklist p { margin: .75rem 0; font: .875rem/1.5 var(--sans); color: var(--muted); }
+.score-checklist table { width: 100%; table-layout: fixed; border-collapse: collapse; font: 1rem/1.5 var(--sans); }
+.score-checklist th, .score-checklist td { text-align: left; vertical-align: top; padding: .65rem .4rem; border-top: 1px solid var(--border); overflow-wrap: anywhere; }
+.score-checklist thead th { background: var(--subtle); font-size: .875rem; }
+.score-checklist thead th:first-child { width: 59%; }
+.score-checklist thead span, .score-label { display: block; font-size: .875rem; font-weight: 400; color: var(--muted); }
+.score-checklist tbody th { font-weight: 400; }
+.score-checklist tbody th a { font: .875rem var(--mono); color: var(--accent); margin-right: .25rem; }
+.score-check, .score-checklist strong { font-variant-numeric: tabular-nums; }
+.score-check { color: var(--accent); }
+.score-unresolved { color: var(--muted); font-size: .875rem; }
+@media (max-width: 540px) {
+  .run-scores { padding: .875rem .65rem; }
+  .score-checklist thead th:first-child { width: 48%; }
+  .score-checklist th, .score-checklist td { padding-inline: .25rem; }
+}
