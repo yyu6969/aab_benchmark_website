@@ -11,7 +11,6 @@ from pathlib import Path
 
 from agent_runs import load_agent_runs, render_agent_runs
 from guidance import render_guidance
-from run_comparison import render_comparison
 from materials import build_material_page, download_url, file_size, load_materials
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -206,7 +205,7 @@ def build_catalog(tasks: list[dict]) -> str:
     content = f'''<main id="main" class="container catalog-page" tabindex="-1">
       <section class="catalog-hero" aria-labelledby="catalog-title">
         <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> THE TASK COLLECTION</p>
-        <div class="hero-grid"><h1 id="catalog-title">Real work.<br><span>Ten tasks.</span></h1><div class="hero-description"><p>A collection of practical tasks across everyday professional workflows.</p><p>Explore the instructions, inspect every outcome criterion, and find the materials behind each task.</p><a class="text-link" href="./data/new_10_tasks.md" download>{icon('download')} Download the collection</a> <a class="text-link comparison-link" href="./comparisons/index.html">Compare agent runs</a></div></div>
+        <div class="hero-grid"><h1 id="catalog-title">Real work.<br><span>Ten tasks.</span></h1><div class="hero-description"><p>A collection of practical tasks across everyday professional workflows.</p><p>Explore the instructions, inspect every outcome criterion, and find the materials behind each task.</p><a class="text-link" href="./data/new_10_tasks.md" download>{icon('download')} Download the collection</a></div></div>
         {stats(tasks)}
       </section>
       <section id="tasks" class="task-collection" aria-labelledby="tasks-heading">
@@ -344,11 +343,6 @@ def build() -> list[dict]:
     shutil.copyfile(ROOT / "support-materials.json", OUTPUT / "data" / "support-materials.json")
     (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
     (OUTPUT / "index.html").write_text(build_catalog(tasks), encoding="utf-8")
-    (OUTPUT / "comparisons").mkdir(exist_ok=True)
-    comparison = render_comparison(tasks, ROOT, OUTPUT)
-    (OUTPUT / "comparisons/index.html").write_text(page(
-        "Run comparisons | AAB Benchmark", "Compare agent tokens, runtime and rubric scores by tutorial duration.",
-        comparison, prefix="../"), encoding="utf-8")
     for task in tasks:
         directory = OUTPUT / "tasks" / task["slug"]
         directory.mkdir(parents=True, exist_ok=True)

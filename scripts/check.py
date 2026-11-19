@@ -110,7 +110,7 @@ def check():
     exported = json.loads((OUTPUT / "data/tasks.json").read_text(encoding="utf-8"))
     assert exported == [{k: v for k, v in task.items() if k != "markdown"} for task in tasks], "JSON differs from source"
     pages = {path.resolve(): Page(path) for path in OUTPUT.rglob("*.html")}
-    expected_pages = 12 + len(manifest["files"])
+    expected_pages = 11 + len(manifest["files"])
     assert len(pages) == expected_pages, f"Expected {expected_pages} HTML pages, found {len(pages)}"
     checked_links = 0
     for path, page in pages.items():

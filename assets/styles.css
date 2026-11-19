@@ -324,19 +324,3 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
   .score-checklist thead th:first-child { width: 48%; }
   .score-checklist th, .score-checklist td { padding-inline: .25rem; }
 }
-
-.hero-description .comparison-link { margin-left: 1rem; }
-.comparison-page { max-width: 920px; margin-block: 2.5rem 5rem; }
-.comparison-page h1 { margin: 1rem 0 1.5rem; }
-.comparison-page p { max-width: 76ch; margin: .6rem 0; font: 1rem/1.6 var(--sans); }
-.comparison-page .text-link { font-size: .875rem; }
-.comparison-figure { margin: 2rem 0 0; display: flex; flex-direction: column; border: 1px solid var(--border); }
-.comparison-figure object, .comparison-figure img { width: 100%; height: auto; display: block; background: white; }
-.comparison-figure figcaption { order: 1; display: flex; gap: 1rem; padding: .6rem 1rem; border-top: 1px solid var(--border); }
-.comparison-values { margin-top: 2rem; }
-.comparison-values summary { cursor: pointer; color: var(--accent); }
-.comparison-scroll { overflow-x: auto; }
-.comparison-scroll table { width: 100%; border-collapse: collapse; font: .95rem/1.4 var(--sans); font-variant-numeric: tabular-nums; }
-.comparison-scroll :is(td, th) { padding: .55rem; border-bottom: 1px solid var(--border); text-align: right; }
-.comparison-scroll :is(td, th):is(:first-child, :nth-child(3)) { text-align: left; }
-.comparison-scroll a { text-decoration: underline; }
