@@ -5183,13 +5183,16 @@
         "locator": "word/document.xml",
         "clips": [
           {
-            "segment_id": 29,
-            "start_sec": 382.0,
-            "end_sec": 393.5,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-29.webm",
-            "label": "6:22–6:33.5",
-            "playback_start_sec": 380.0,
-            "playback_end_sec": 395.5
+            "source_segment_ids": [
+              16,
+              17
+            ],
+            "start_sec": 185.5,
+            "end_sec": 188,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-185500-188000.webm",
+            "label": "3:05.5–3:08",
+            "playback_start_sec": 183.5,
+            "playback_end_sec": 190
           }
         ]
       },
@@ -5197,6 +5200,7 @@
         "number": 2,
         "criterion": "The Gender variable has an accurate descriptive label identifying the Gender question.",
         "source": "Document1.docx",
+        "clip_note": "The demonstrator enters “What is your age?” for Gender. The assignment requires a label that identifies Gender.",
         "id": "outcome_7ab45f3b81373f1d39e5",
         "description": "Full credit if the variable's applied descriptive label accurately identifies Gender, such as 'Gender' or 'Respondent gender'. Partial credit if an applied label is relevant but vague or incomplete. No credit if the descriptive label is missing, merely proposed, or describes a different item, such as age. If an evidenced permission or workspace limitation prevents applying the label, record the uncontrollable blocker in reality_notes or the scoring justification and credit only the verifiable applied state. A blocker report alone does not satisfy this outcome; an incorrect or missing label when modification is available remains an agent-controllable shortfall.",
         "sources": [
@@ -5256,22 +5260,16 @@
         "locator": "word/document.xml",
         "clips": [
           {
-            "segment_id": 13,
-            "start_sec": 101.75,
-            "end_sec": 102.5,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-13.webm",
-            "label": "1:41.75–1:42.5",
-            "playback_start_sec": 99.75,
-            "playback_end_sec": 104.5
-          },
-          {
-            "segment_id": 33,
-            "start_sec": 421.0,
-            "end_sec": 427.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-33.webm",
-            "label": "7:01–7:07",
-            "playback_start_sec": 419.0,
-            "playback_end_sec": 429.0
+            "source_segment_ids": [
+              18,
+              19
+            ],
+            "start_sec": 267,
+            "end_sec": 273,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-267000-273000.webm",
+            "label": "4:27–4:33",
+            "playback_start_sec": 265,
+            "playback_end_sec": 275
           }
         ]
       },
@@ -5411,13 +5409,16 @@
         "locator": "word/document.xml",
         "clips": [
           {
-            "segment_id": 33,
-            "start_sec": 421.0,
-            "end_sec": 427.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-33.webm",
-            "label": "7:01–7:07",
-            "playback_start_sec": 419.0,
-            "playback_end_sec": 429.0
+            "source_segment_ids": [
+              31,
+              32
+            ],
+            "start_sec": 411,
+            "end_sec": 419,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-411000-419000.webm",
+            "label": "6:51–6:59",
+            "playback_start_sec": 409,
+            "playback_end_sec": 421
           }
         ]
       },
@@ -5498,6 +5499,7 @@
         "number": 6,
         "criterion": "The Country of Participation variable has an applied codebook assigning distinct, consistent whole-number codes with corresponding value labels to Nigeria, Ghana, UK, USA, and India.",
         "source": "Document1.docx",
+        "clip_note": "The questionnaire lists five countries. The demonstrator applies four and omits USA.",
         "id": "outcome_d85870a880012c1e2336",
         "description": "Full credit if all five countries have distinct whole-number codes and accurate corresponding value labels applied to this variable. Any consistent whole-number assignments are acceptable. Partial credit for a materially useful but incomplete or partly incorrect mapping, or an evidenced defined mapping that remains unapplied. No credit if no supported country mapping exists or it is applied only to another variable. If an evidenced environment blocker prevents defining or applying the mapping, record it in reality_notes or the scoring justification and distinguish it from controllable coding or application errors. A blocker report alone does not satisfy this outcome; partial credit must reflect supported mapping work.",
         "sources": [
@@ -5630,13 +5632,15 @@
         "locator": "document",
         "clips": [
           {
-            "segment_id": 51,
-            "start_sec": 512.75,
-            "end_sec": 513.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-51.webm",
-            "label": "8:32.75–8:33.25",
-            "playback_start_sec": 510.75,
-            "playback_end_sec": 515.25
+            "source_segment_ids": [
+              50
+            ],
+            "start_sec": 507,
+            "end_sec": 510,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-507000-510000.webm",
+            "label": "8:27–8:30",
+            "playback_start_sec": 505,
+            "playback_end_sec": 512
           }
         ]
       },
@@ -5708,6 +5712,7 @@
         "number": 9,
         "criterion": "The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher shows care and concern for my learning'.",
         "source": "Document1.docx",
+        "clip_note": "The demonstrator creates EmoS1. Its descriptive Label cell is blank.",
         "id": "outcome_f123d18d5278575917d3",
         "description": "Full credit if the resulting workspace dataset contains the corresponding variable with a descriptive label faithfully preserving the statement's meaning. Any clear identifier and accurate paraphrase are acceptable. Partial credit if the variable is identifiable but its label is missing, vague, or incomplete. No credit if the variable is absent, represents a different statement, or lacks supporting evidence. If a verified environment limitation beyond the agent's control prevents dataset access or editing, record the affected outcome and blocker in reality_notes or the scoring justification, distinguishing it from agent-controllable failure. Credit remains based on the evidenced resulting state; blocker reporting alone earns no outcome credit.",
         "sources": [
@@ -5786,13 +5791,16 @@
             "playback_end_sec": 574.0
           },
           {
-            "segment_id": 59,
-            "start_sec": 616.0,
-            "end_sec": 627.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm",
-            "label": "10:16–10:27",
-            "playback_start_sec": 614.0,
-            "playback_end_sec": 629.0
+            "source_segment_ids": [
+              57,
+              58
+            ],
+            "start_sec": 602,
+            "end_sec": 616,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-602000-616000.webm",
+            "label": "10:02–10:16",
+            "playback_start_sec": 600,
+            "playback_end_sec": 618
           }
         ]
       },
@@ -5800,6 +5808,7 @@
         "number": 10,
         "criterion": "The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher encourages me when I find tasks difficult'.",
         "source": "Document1.docx",
+        "clip_note": "The demonstrator creates EmoS2. Its descriptive Label cell is blank.",
         "id": "outcome_71cfbecccbf035259a94",
         "description": "Full credit if the resulting workspace dataset contains the corresponding variable with a descriptive label preserving both teacher encouragement and difficulty with tasks. Any clear identifier and accurate paraphrase are acceptable. Partial credit if the variable is identifiable but its label is missing, vague, or incomplete. No credit if the variable is absent, represents a different statement, or lacks supporting evidence. If a verified environment limitation beyond the agent's control prevents dataset access or editing, record the affected outcome and blocker in reality_notes or the scoring justification, distinguishing it from agent-controllable failure. Credit remains based on the evidenced resulting state; blocker reporting alone earns no outcome credit.",
         "sources": [
@@ -5878,13 +5887,15 @@
             "playback_end_sec": 574.0
           },
           {
-            "segment_id": 59,
-            "start_sec": 616.0,
-            "end_sec": 627.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm",
-            "label": "10:16–10:27",
-            "playback_start_sec": 614.0,
-            "playback_end_sec": 629.0
+            "source_segment_ids": [
+              59
+            ],
+            "start_sec": 618,
+            "end_sec": 625,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-618000-625000.webm",
+            "label": "10:18–10:25",
+            "playback_start_sec": 616,
+            "playback_end_sec": 627
           }
         ]
       },
@@ -5892,6 +5903,7 @@
         "number": 11,
         "criterion": "The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher listens to my opinions and ideas'.",
         "source": "Document1.docx",
+        "clip_note": "The demonstrator creates EmoS3. Its descriptive Label cell is blank.",
         "id": "outcome_0361cdd163e26eaab559",
         "description": "Full credit if the resulting workspace dataset contains the corresponding variable with a descriptive label preserving teacher listening to the student's opinions and ideas. Any clear identifier and accurate paraphrase are acceptable. Partial credit if the variable is identifiable but its label is missing, vague, or incomplete. No credit if the variable is absent, represents a different statement, or lacks supporting evidence. If a verified environment limitation beyond the agent's control prevents dataset access or editing, record the affected outcome and blocker in reality_notes or the scoring justification, distinguishing it from agent-controllable failure. Credit remains based on the evidenced resulting state; blocker reporting alone earns no outcome credit.",
         "sources": [
@@ -5970,13 +5982,16 @@
             "playback_end_sec": 574.0
           },
           {
-            "segment_id": 59,
-            "start_sec": 616.0,
-            "end_sec": 627.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm",
-            "label": "10:16–10:27",
-            "playback_start_sec": 614.0,
-            "playback_end_sec": 629.0
+            "source_segment_ids": [
+              59,
+              60
+            ],
+            "start_sec": 625,
+            "end_sec": 630,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-625000-630000.webm",
+            "label": "10:25–10:30",
+            "playback_start_sec": 623,
+            "playback_end_sec": 632
           }
         ]
       },
@@ -5984,6 +5999,7 @@
         "number": 12,
         "criterion": "The prepared pilot survey dataset is free of stray placeholder entries and variables that treat questionnaire section titles as response items.",
         "source": "instruction.md",
+        "clip_note": "The demonstrator clears the initial rows. Later, two questionnaire section headings still appear as variables.",
         "id": "outcome_08b9402e8a0b5e39266e",
         "description": "Full credit if the entire prepared dataset contains neither stray placeholder entries nor section-title-only response variables. Partial credit if exactly one of these defect classes remains. No credit if both remain or the resulting cleanliness is unsupported. Count a section-title-only response variable only in that defect class, without also treating it as a separate placeholder defect. Missing required items are evaluated by their item criteria. Ordinary empty insertion rows and meaningful identifiers or derived variables are not defects. Pre-existing stray placeholders elsewhere in the dataset are included. Environmental limitations may be recorded, but an inaccessible dataset or blocker report does not establish cleanliness.",
         "sources": [
@@ -6343,6 +6359,7 @@
         "number": 16,
         "criterion": "The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I enjoy learning in this class”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements.",
         "source": "Document1.docx",
+        "clip_note": "The demonstrator applies value labels to Eng1. Its descriptive Label cell is blank.",
         "id": "outcome_52b9b7f6f804d040d437",
         "description": "Full credit requires an individually identifiable enjoyment variable, an accurate descriptive label, and the complete applied agreement codebook consistent with the other main-study items. Equivalent variable names, meaning-preserving labels, and configuration methods are acceptable. Partial credit reflects evidenced completion of these components when others remain incomplete or incorrect. No credit if no distinct enjoyment variable is established, a section-title variable substitutes for it, or completion is unsupported. Do not require a named source variable or an inherited codebook. Record verified environmental limitations, but award credit only for achieved components rather than effort or a blocker report.",
         "sources": [
@@ -6464,6 +6481,7 @@
         "number": 17,
         "criterion": "The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I feel interested in the topics taught.”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements.",
         "source": "Document1.docx",
+        "clip_note": "The demonstrator applies value labels to Eng2. Its descriptive Label cell is blank.",
         "id": "outcome_39e6ecb2ed85a293b21f",
         "description": "Full credit requires an individually identifiable interest variable, an accurate descriptive label, and the complete applied agreement codebook consistent with the other main-study items. Equivalent variable names, meaning-preserving labels, and configuration methods are acceptable. Partial credit reflects evidenced completion of these components when others remain incomplete or incorrect. No credit if no distinct interest variable is established, a section-title variable substitutes for it, or completion is unsupported. Do not require a named source variable or an inherited codebook. Record verified environmental limitations, but award credit only for achieved components rather than effort or a blocker report.",
         "sources": [
@@ -6585,6 +6603,7 @@
         "number": 18,
         "criterion": "The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I feel motivated to learn in this class”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements.",
         "source": "Document1.docx",
+        "clip_note": "The demonstrator applies value labels to Eng3. Its descriptive Label cell is blank.",
         "id": "outcome_1a5da20f8dca28908eeb",
         "description": "Full credit requires an individually identifiable motivation variable, an accurate descriptive label, and the complete applied agreement codebook consistent with the other main-study items. Equivalent variable names, meaning-preserving labels, and configuration methods are acceptable. Partial credit reflects evidenced completion of these components when others remain incomplete or incorrect. No credit if no distinct motivation variable is established, a section-title variable substitutes for it, or completion is unsupported. Do not require a named source variable or an inherited codebook. Record verified environmental limitations, but award credit only for achieved components rather than effort or a blocker report.",
         "sources": [
@@ -6692,13 +6711,15 @@
             "playback_end_sec": 772.5
           },
           {
-            "segment_id": 97,
-            "start_sec": 828.25,
-            "end_sec": 828.75,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-97.webm",
-            "label": "13:48.25–13:48.75",
-            "playback_start_sec": 826.25,
-            "playback_end_sec": 830.75
+            "source_segment_ids": [
+              98
+            ],
+            "start_sec": 828.75,
+            "end_sec": 829.5,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-828750-829500.webm",
+            "label": "13:48.75–13:49.5",
+            "playback_start_sec": 826.75,
+            "playback_end_sec": 831.5
           }
         ]
       },
@@ -6775,13 +6796,13 @@
             "playback_end_sec": 574.0
           },
           {
-            "segment_id": 109,
-            "start_sec": 898.0,
-            "end_sec": 898.5,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-            "label": "14:58–14:58.5",
-            "playback_start_sec": 896.0,
-            "playback_end_sec": 900.5
+            "segment_id": 99,
+            "start_sec": 877.75,
+            "end_sec": 878.25,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-99.webm",
+            "label": "14:37.75–14:38.25",
+            "playback_start_sec": 875.75,
+            "playback_end_sec": 880.25
           }
         ]
       },
@@ -6858,13 +6879,13 @@
             "playback_end_sec": 574.0
           },
           {
-            "segment_id": 109,
-            "start_sec": 898.0,
-            "end_sec": 898.5,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-            "label": "14:58–14:58.5",
-            "playback_start_sec": 896.0,
-            "playback_end_sec": 900.5
+            "segment_id": 101,
+            "start_sec": 879.75,
+            "end_sec": 880.25,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-101.webm",
+            "label": "14:39.75–14:40.25",
+            "playback_start_sec": 877.75,
+            "playback_end_sec": 882.25
           }
         ]
       },
@@ -6941,13 +6962,13 @@
             "playback_end_sec": 574.0
           },
           {
-            "segment_id": 109,
-            "start_sec": 898.0,
-            "end_sec": 898.5,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-            "label": "14:58–14:58.5",
-            "playback_start_sec": 896.0,
-            "playback_end_sec": 900.5
+            "segment_id": 103,
+            "start_sec": 882.25,
+            "end_sec": 882.75,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-103.webm",
+            "label": "14:42.25–14:42.75",
+            "playback_start_sec": 880.25,
+            "playback_end_sec": 884.75
           }
         ]
       },
@@ -7024,13 +7045,13 @@
             "playback_end_sec": 772.5
           },
           {
-            "segment_id": 109,
-            "start_sec": 898.0,
-            "end_sec": 898.5,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-            "label": "14:58–14:58.5",
-            "playback_start_sec": 896.0,
-            "playback_end_sec": 900.5
+            "segment_id": 105,
+            "start_sec": 895.25,
+            "end_sec": 895.75,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-105.webm",
+            "label": "14:55.25–14:55.75",
+            "playback_start_sec": 893.25,
+            "playback_end_sec": 897.75
           }
         ]
       },
@@ -7107,13 +7128,13 @@
             "playback_end_sec": 772.5
           },
           {
-            "segment_id": 109,
-            "start_sec": 898.0,
-            "end_sec": 898.5,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-            "label": "14:58–14:58.5",
-            "playback_start_sec": 896.0,
-            "playback_end_sec": 900.5
+            "segment_id": 107,
+            "start_sec": 897.0,
+            "end_sec": 897.5,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-107.webm",
+            "label": "14:57–14:57.5",
+            "playback_start_sec": 895.0,
+            "playback_end_sec": 899.5
           }
         ]
       },
@@ -8204,13 +8225,15 @@
             "playback_end_sec": 745.0
           },
           {
-            "segment_id": 78,
-            "start_sec": 756.75,
-            "end_sec": 757.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-78.webm",
-            "label": "12:36.75–12:37.25",
-            "playback_start_sec": 754.75,
-            "playback_end_sec": 759.25
+            "source_segment_ids": [
+              79
+            ],
+            "start_sec": 757.25,
+            "end_sec": 758,
+            "file": "assets/rubric-clips/survey-data-frequency-analyses/range-757250-758000.webm",
+            "label": "12:37.25–12:38",
+            "playback_start_sec": 755.25,
+            "playback_end_sec": 760
           }
         ]
       }

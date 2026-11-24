@@ -3793,11 +3793,14 @@
       "locator": "word/document.xml",
       "clips": [
         {
-          "segment_id": 29,
-          "start_sec": 382.0,
-          "end_sec": 393.5,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-29.webm",
-          "label": "6:22–6:33.5"
+          "source_segment_ids": [
+            16,
+            17
+          ],
+          "start_sec": 185.5,
+          "end_sec": 188,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-185500-188000.webm",
+          "label": "3:05.5–3:08"
         }
       ],
       "sources": [
@@ -3863,18 +3866,14 @@
       "locator": "word/document.xml",
       "clips": [
         {
-          "segment_id": 13,
-          "start_sec": 101.75,
-          "end_sec": 102.5,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-13.webm",
-          "label": "1:41.75–1:42.5"
-        },
-        {
-          "segment_id": 33,
-          "start_sec": 421.0,
-          "end_sec": 427.0,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-33.webm",
-          "label": "7:01–7:07"
+          "source_segment_ids": [
+            18,
+            19
+          ],
+          "start_sec": 267,
+          "end_sec": 273,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-267000-273000.webm",
+          "label": "4:27–4:33"
         }
       ],
       "sources": [
@@ -3929,7 +3928,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The demonstrator enters “What is your age?” for Gender. The assignment requires a label that identifies Gender."
     },
     {
       "id": "outcome_6b48e3054c57294d084e",
@@ -4010,11 +4010,14 @@
       "locator": "word/document.xml",
       "clips": [
         {
-          "segment_id": 33,
-          "start_sec": 421.0,
-          "end_sec": 427.0,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-33.webm",
-          "label": "7:01–7:07"
+          "source_segment_ids": [
+            31,
+            32
+          ],
+          "start_sec": 411,
+          "end_sec": 419,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-411000-419000.webm",
+          "label": "6:51–6:59"
         }
       ],
       "sources": [
@@ -4216,7 +4219,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The questionnaire lists five countries. The demonstrator applies four and omits USA."
     },
     {
       "id": "outcome_b2e6be0d16a888b6ba8c",
@@ -4227,11 +4231,13 @@
       "locator": "document",
       "clips": [
         {
-          "segment_id": 51,
-          "start_sec": 512.75,
-          "end_sec": 513.25,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-51.webm",
-          "label": "8:32.75–8:33.25"
+          "source_segment_ids": [
+            50
+          ],
+          "start_sec": 507,
+          "end_sec": 510,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-507000-510000.webm",
+          "label": "8:27–8:30"
         }
       ],
       "sources": [
@@ -4356,11 +4362,14 @@
           "label": "9:31.5–9:32"
         },
         {
-          "segment_id": 59,
-          "start_sec": 616.0,
-          "end_sec": 627.0,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm",
-          "label": "10:16–10:27"
+          "source_segment_ids": [
+            57,
+            58
+          ],
+          "start_sec": 602,
+          "end_sec": 616,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-602000-616000.webm",
+          "label": "10:02–10:16"
         }
       ],
       "sources": [
@@ -4425,7 +4434,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The demonstrator creates EmoS1. Its descriptive Label cell is blank."
     },
     {
       "id": "outcome_71cfbecccbf035259a94",
@@ -4443,11 +4453,13 @@
           "label": "9:31.5–9:32"
         },
         {
-          "segment_id": 59,
-          "start_sec": 616.0,
-          "end_sec": 627.0,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm",
-          "label": "10:16–10:27"
+          "source_segment_ids": [
+            59
+          ],
+          "start_sec": 618,
+          "end_sec": 625,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-618000-625000.webm",
+          "label": "10:18–10:25"
         }
       ],
       "sources": [
@@ -4512,7 +4524,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The demonstrator creates EmoS2. Its descriptive Label cell is blank."
     },
     {
       "id": "outcome_0361cdd163e26eaab559",
@@ -4530,11 +4543,14 @@
           "label": "9:31.5–9:32"
         },
         {
-          "segment_id": 59,
-          "start_sec": 616.0,
-          "end_sec": 627.0,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm",
-          "label": "10:16–10:27"
+          "source_segment_ids": [
+            59,
+            60
+          ],
+          "start_sec": 625,
+          "end_sec": 630,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-625000-630000.webm",
+          "label": "10:25–10:30"
         }
       ],
       "sources": [
@@ -4599,7 +4615,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The demonstrator creates EmoS3. Its descriptive Label cell is blank."
     },
     {
       "id": "outcome_08b9402e8a0b5e39266e",
@@ -4693,7 +4710,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The demonstrator clears the initial rows. Later, two questionnaire section headings still appear as variables."
     },
     {
       "id": "outcome_0375f9f95947b3e2f72b",
@@ -5048,7 +5066,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The demonstrator applies value labels to Eng1. Its descriptive Label cell is blank."
     },
     {
       "id": "outcome_39e6ecb2ed85a293b21f",
@@ -5162,7 +5181,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The demonstrator applies value labels to Eng2. Its descriptive Label cell is blank."
     },
     {
       "id": "outcome_1a5da20f8dca28908eeb",
@@ -5187,11 +5207,13 @@
           "label": "12:50–12:50.5"
         },
         {
-          "segment_id": 97,
-          "start_sec": 828.25,
-          "end_sec": 828.75,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-97.webm",
-          "label": "13:48.25–13:48.75"
+          "source_segment_ids": [
+            98
+          ],
+          "start_sec": 828.75,
+          "end_sec": 829.5,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-828750-829500.webm",
+          "label": "13:48.75–13:49.5"
         }
       ],
       "sources": [
@@ -5276,7 +5298,8 @@
             }
           ]
         }
-      ]
+      ],
+      "clip_note": "The demonstrator applies value labels to Eng3. Its descriptive Label cell is blank."
     },
     {
       "id": "outcome_dfbdc555c354f6047151",
@@ -5294,11 +5317,11 @@
           "label": "9:31.5–9:32"
         },
         {
-          "segment_id": 109,
-          "start_sec": 898.0,
-          "end_sec": 898.5,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-          "label": "14:58–14:58.5"
+          "segment_id": 99,
+          "start_sec": 877.75,
+          "end_sec": 878.25,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-99.webm",
+          "label": "14:37.75–14:38.25"
         }
       ],
       "sources": [
@@ -5372,11 +5395,11 @@
           "label": "9:31.5–9:32"
         },
         {
-          "segment_id": 109,
-          "start_sec": 898.0,
-          "end_sec": 898.5,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-          "label": "14:58–14:58.5"
+          "segment_id": 101,
+          "start_sec": 879.75,
+          "end_sec": 880.25,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-101.webm",
+          "label": "14:39.75–14:40.25"
         }
       ],
       "sources": [
@@ -5450,11 +5473,11 @@
           "label": "9:31.5–9:32"
         },
         {
-          "segment_id": 109,
-          "start_sec": 898.0,
-          "end_sec": 898.5,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-          "label": "14:58–14:58.5"
+          "segment_id": 103,
+          "start_sec": 882.25,
+          "end_sec": 882.75,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-103.webm",
+          "label": "14:42.25–14:42.75"
         }
       ],
       "sources": [
@@ -5528,11 +5551,11 @@
           "label": "12:50–12:50.5"
         },
         {
-          "segment_id": 109,
-          "start_sec": 898.0,
-          "end_sec": 898.5,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-          "label": "14:58–14:58.5"
+          "segment_id": 105,
+          "start_sec": 895.25,
+          "end_sec": 895.75,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-105.webm",
+          "label": "14:55.25–14:55.75"
         }
       ],
       "sources": [
@@ -5606,11 +5629,11 @@
           "label": "12:50–12:50.5"
         },
         {
-          "segment_id": 109,
-          "start_sec": 898.0,
-          "end_sec": 898.5,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm",
-          "label": "14:58–14:58.5"
+          "segment_id": 107,
+          "start_sec": 897.0,
+          "end_sec": 897.5,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-107.webm",
+          "label": "14:57–14:57.5"
         }
       ],
       "sources": [
@@ -6643,11 +6666,13 @@
           "label": "12:22–12:23"
         },
         {
-          "segment_id": 78,
-          "start_sec": 756.75,
-          "end_sec": 757.25,
-          "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-78.webm",
-          "label": "12:36.75–12:37.25"
+          "source_segment_ids": [
+            79
+          ],
+          "start_sec": 757.25,
+          "end_sec": 758,
+          "file": "assets/rubric-clips/survey-data-frequency-analyses/range-757250-758000.webm",
+          "label": "12:37.25–12:38"
         }
       ],
       "sources": [

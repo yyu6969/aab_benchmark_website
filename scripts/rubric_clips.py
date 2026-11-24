@@ -11,6 +11,21 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTEXT_SECONDS = 2
 
 
+def clip_file(slug, clip):
+    if "segment_id" in clip:
+        name = f"segment-{clip['segment_id']}.webm"
+    else:
+        segments = clip["source_segment_ids"]
+        if not segments or segments != sorted(set(segments)) or any(type(i) is not int or i < 0 for i in segments):
+            raise ValueError(f"Invalid source segment IDs for {slug}: {segments}")
+        start_ms, end_ms = (round(clip[key] * 1000) for key in ("start_sec", "end_sec"))
+        name = f"range-{start_ms}-{end_ms}.webm"
+    expected = Path("assets/rubric-clips") / slug / name
+    if clip["file"] != expected.as_posix():
+        raise ValueError(f"Unexpected clip path: {clip['file']}")
+    return expected
+
+
 def playback_interval(clip, duration):
     start, end = clip["start_sec"], clip["end_sec"]
     if not 0 <= start < end <= duration:
@@ -53,10 +68,7 @@ def render_all(tutorial_dir):
             raise FileNotFoundError(source)
         for item in items:
             for clip in item["clips"]:
-                clip_path = Path("assets/rubric-clips") / slug / f"segment-{clip['segment_id']}.webm"
-                if clip["file"] != clip_path.as_posix():
-                    raise ValueError(f"Unexpected clip path: {clip['file']}")
-                target = ROOT / clip_path
+                target = ROOT / clip_file(slug, clip)
                 start, end = playback_interval(clip, tutorial["duration_seconds"])
                 job = (source, target, start, end)
                 if jobs.setdefault(target, job) != job:

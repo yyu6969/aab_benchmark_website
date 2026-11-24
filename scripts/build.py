@@ -12,7 +12,7 @@ import shutil
 from pathlib import Path
 
 from agent_runs import load_agent_runs, render_agent_runs
-from rubric_clips import CONTEXT_SECONDS, playback_interval
+from rubric_clips import CONTEXT_SECONDS, clip_file, playback_interval
 from guidance import render_guidance
 from materials import build_material_page, download_url, file_size, load_materials
 
@@ -164,12 +164,15 @@ def parse_tasks(source: str) -> list[dict]:
                             if not highlight.strip() or instruction.count(highlight) != 1 or not any(highlight in ref["passage"] for ref in refs):
                                 raise ValueError(f"Ambiguous or uncited highlight for {slug} criterion {cells[0]}")
                     clips = detail["clips"]
-                    ids = {c["segment_id"] for c in clips}
+                    files = {clip_file(slug, c) for c in clips}
                     intervals = {(c["start_sec"], c["end_sec"]) for c in clips}
-                    if len(ids) != len(clips) or len(intervals) != len(clips):
+                    if len(files) != len(clips) or len(intervals) != len(clips):
                         raise ValueError(f"Repeated clip for {slug} criterion {cells[0]}")
                     links = ", ".join(f"[{c['label']}](https://yyu6969.github.io/aab_benchmark_website/{c['file']})" for c in clips)
-                    if not links or cells[3] != links:
+                    note = detail.get("clip_note")
+                    if note:
+                        rubric["clip_note"] = note
+                    if not links or cells[3] != (f"{links} — {note}" if note else links):
                         raise ValueError(f"Incorrect clip references for {slug} criterion {cells[0]}")
                     rubric.update({k: detail[k] for k in ("id", "description", "source", "sources", "passage", "locator", "clips")})
                 rubrics.append(rubric)
@@ -407,6 +410,8 @@ def build_task(task: dict, tasks: list[dict]) -> str:
             links = [f'<a class="clip-link" href="{esc(prefix+c["file"])}?context={CONTEXT_SECONDS}" data-criterion="{number}" '
                      f'aria-label="Play criterion {number} clip, {esc(c["label"])}">{esc(c["label"])}</a>'
                      for c in rubric["clips"]]
+            if rubric.get("clip_note"):
+                links.append(f'<small class="clip-note">{esc(rubric["clip_note"])}</small>')
             clip_cell = '<td class="rubric-clips">' + ' '.join(links) + '</td>'
         rows.append(f'<tr id="rubric-{rubric["number"]}"><th scope="row"><a href="#rubric-{rubric["number"]}" aria-label="Criterion {rubric["number"]} permalink">{rubric["number"]:02d}</a></th><td>{inline(rubric["criterion"])}</td><td class="rubric-source">{source}</td>{clip_cell}</tr>')
     evidence_ui = "".join(popovers)
