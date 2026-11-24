@@ -34,12 +34,27 @@ class Page(HTMLParser):
         self.score_row_id = None
         self.instruction_depth = 0
         self.instruction = []
+        self.excerpts = {}
+        self.excerpt_id = None
+        self.excerpt_depth = 0
+        self.in_mark = False
         self.materials = []
         self.material = None
         self.feed(path.read_text(encoding="utf-8"))
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        classes = attrs.get("class", "").split()
+        if tag == "div" and "source-popover" in classes:
+            self.excerpt_id = attrs["id"]
+            self.excerpts[self.excerpt_id] = {"marked": [], "context": []}
+        if tag == "div" and (self.excerpt_depth or "excerpt-body" in classes):
+            self.excerpt_depth += 1
+        if self.excerpt_depth:
+            if tag == "mark":
+                self.in_mark = True
+            if tag in ("p", "li"):
+                self.excerpts[self.excerpt_id]["marked"].append(" ")
         if tag == "section" and attrs.get("id"):
             self.section_ids.append(attrs["id"])
         if tag == "article" and "agent-run" in attrs.get("class", "").split():
@@ -74,6 +89,11 @@ class Page(HTMLParser):
             self.cell = []
 
     def handle_endtag(self, tag):
+        if self.excerpt_depth:
+            if tag == "div":
+                self.excerpt_depth -= 1
+            elif tag == "mark":
+                self.in_mark = False
         if tag == "article":
             self.run_condition = None
         if self.instruction_depth and tag == "div":
@@ -93,6 +113,9 @@ class Page(HTMLParser):
             self.in_table = False
 
     def handle_data(self, text):
+        if self.excerpt_depth:
+            key = "marked" if self.in_mark else "context"
+            self.excerpts[self.excerpt_id][key].append(text)
         if self.instruction_depth:
             self.instruction.append(text)
         if self.material is not None:
@@ -133,6 +156,12 @@ def check():
         page = pages[path]
         expected = [[f"{r['number']:02d}", compact(plain_text(r["criterion"])), compact(plain_text(r["source"]))] for r in task["rubrics"]]
         for row, rubric in zip(expected, task["rubrics"]):
+            if rubric.get("passage") and rubric["source"] == "instruction.md":
+                excerpt = page.excerpts[f"source-{rubric['number']}"]
+                visible_quote = re.sub(r"(?m)^\s*- ", "", plain_text(rubric["passage"]))
+                assert compact("".join(excerpt["marked"])) == compact(visible_quote)
+                if rubric["passage"].strip() != task["instruction"].strip():
+                    assert compact("".join(excerpt["context"])).strip("… ")
             if "clips" in rubric:
                 row.append(" ".join(c["label"] for c in rubric["clips"]))
                 for clip in rubric["clips"]:

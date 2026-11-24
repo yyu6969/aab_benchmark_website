@@ -205,7 +205,17 @@
     clearTimeout(closeTimer);
     if (activeSource !== source) closeExcerpt();
     activeSource = source;
-    document.getElementById(source.dataset.excerpt).hidden = false;
+    const box = document.getElementById(source.dataset.excerpt);
+    if (box.hidden) {
+      box.hidden = false;
+      const body = box.querySelector('.excerpt-body');
+      body.scrollTop = 0;
+      const mark = body.querySelector('mark');
+      if (mark) {
+        const offset = mark.getBoundingClientRect().top - body.getBoundingClientRect().top;
+        if (offset > body.clientHeight / 2) body.scrollTop = offset - body.clientHeight / 3;
+      }
+    }
     positionExcerpt();
   }
 

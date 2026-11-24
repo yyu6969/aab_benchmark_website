@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+from bisect import bisect_left, bisect_right
 import hashlib
 import html
 import json
@@ -44,18 +45,36 @@ def normalize(text: str) -> str:
     return re.sub(r"\\([\\`*_{}\[\]()#+\-.!$|])", r"\1", text).strip()
 
 
-def inline(text: str) -> str:
-    # Tokenize code and links before escaping. Do not interpret filename underscores.
-    tokens = re.split(r"(`[^`]+`|\[[^\]]+\]\((?:mailto:|https?://)[^)]+\))", text)
-    parts = []
-    for token in tokens:
-        if token.startswith("`") and token.endswith("`"):
-            parts.append(f"<code>{esc(token[1:-1])}</code>")
-        elif re.fullmatch(r"\[[^\]]+\]\((?:mailto:|https?://)[^)]+\)", token):
-            label, url = re.fullmatch(r"\[([^\]]+)\]\(([^)]+)\)", token).groups()
-            parts.append(f'<a href="{esc(url)}">{esc(label)}</a>')
+INLINE_TOKEN = re.compile(
+    r"`(?P<code>[^`\n]+)`|\*\*(?P<strong>[^\n]+?)\*\*|"
+    r"\[(?P<label>[^\]\n]+)\]\((?P<url>(?:mailto:|https?://)[^)\n]+)\)"
+)
+
+
+def inline(text: str, highlight=None) -> str:
+    """Apply the citation to visible source characters inside each Markdown token."""
+    def visible(lo, hi):
+        if highlight is not None:
+            start, end = max(lo, highlight[0]), min(hi, highlight[1])
+            if start < end:
+                return esc(text[lo:start]) + "<mark>" + esc(text[start:end]) + "</mark>" + esc(text[end:hi])
+        return esc(text[lo:hi])
+
+    parts, pos = [], 0
+    for token in INLINE_TOKEN.finditer(text):
+        parts.append(visible(pos, token.start()))
+        if token["url"] is not None:
+            label = visible(*token.span("label"))
+            # A tooltip is a read-only excerpt. Keep the link label in its original style.
+            if highlight is None:
+                parts.append(f'<a href="{esc(token["url"])}">{label}</a>')
+            else:
+                parts.append(f'<span class="excerpt-link">{label}</span>')
         else:
-            parts.append(re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", esc(token)))
+            tag = token.lastgroup
+            parts.append(f"<{tag}>" + visible(*token.span(tag)) + f"</{tag}>")
+        pos = token.end()
+    parts.append(visible(pos, len(text)))
     return "".join(parts)
 
 
@@ -64,30 +83,40 @@ def plain_text(text: str) -> str:
     return text.replace("**", "").replace("`", "")
 
 
-def prose(text: str) -> str:
+def prose(text: str, highlight=None) -> str:
     blocks, paragraph, items = [], [], []
 
     def flush_paragraph():
         if paragraph:
-            blocks.append("<p>" + " ".join(inline(line) for line in paragraph) + "</p>")
+            blocks.append("<p>" + " ".join(paragraph) + "</p>")
             paragraph.clear()
 
     def flush_items():
         if items:
-            blocks.append("<ul>" + "".join(f"<li>{inline(item)}</li>" for item in items) + "</ul>")
+            blocks.append("<ul>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>")
             items.clear()
 
-    for line in text.splitlines():
-        line = line.strip()
+    offset = 0
+    for raw in text.splitlines(keepends=True):
+        line = raw.strip()
+        content_start = offset + len(raw) - len(raw.lstrip())
+        offset += len(raw)
         if not line:
             flush_paragraph()
             flush_items()
-        elif line.startswith("- "):
+            continue
+        bullet = line.startswith("- ")
+        if bullet:
+            content_start += 2
+            line = line[2:]
+        span = None if highlight is None else (highlight[0] - content_start, highlight[1] - content_start)
+        body = inline(line, span)
+        if bullet:
             flush_paragraph()
-            items.append(line[2:])
+            items.append(body)
         else:
             flush_items()
-            paragraph.append(line)
+            paragraph.append(body)
     flush_paragraph()
     flush_items()
     return "\n".join(blocks)
@@ -293,17 +322,36 @@ def instruction_excerpt(instruction: str, passage: str, number: int) -> str:
     first = instruction.count("\n", 0, start) + 1
     last = first + passage.count("\n")
     location = f"Line {first}" if first == last else f"Lines {first}–{last}"
-    # Include adjacent words from the cited line so short highlights have context.
-    left = instruction[instruction.rfind("\n", 0, start) + 1:start]
-    right = instruction[end:].partition("\n")[0]
-    if len(left) > 90:
-        left = "…" + left[-90:].partition(" ")[2]
-    if len(right) > 90:
-        right = right[:90].rpartition(" ")[0] + "…"
-    highlight = esc(plain_text(passage)).replace("\n", "&#10;")
+    # Keep one neighboring sentence or list item on each side of the cited units.
+    # Protected inline spans can contain punctuation, for example inside a filename.
+    starts = []
+    for line in re.finditer(r"(?m)^.+$", instruction):
+        if not line[0].strip():
+            continue
+        starts.append(line.start())
+        if line[0].lstrip().startswith("- "):
+            continue
+        tokens = list(INLINE_TOKEN.finditer(line[0]))
+        for gap in re.finditer(r"(?<=[.!?])[ \t]+(?=[A-Z])", line[0]):
+            if not any(t.start() < gap.start() < t.end() for t in tokens):
+                starts.append(line.start() + gap.end())
+    starts.append(len(instruction))
+    left = starts[max(0, bisect_right(starts, start) - 2)]
+    right = starts[min(len(starts) - 1, bisect_left(starts, end) + 1)]
+    excerpt = instruction[left:right].rstrip()
+    offset = start - left
+    if left:
+        # Put the omission sign inside a list item to preserve its Markdown marker.
+        prefix = re.match(r"^\s*- ", excerpt)
+        pos = prefix.end() if prefix else 0
+        excerpt = excerpt[:pos] + "… " + excerpt[pos:]
+        offset += 2
+    if right < len(instruction):
+        excerpt += " …"
+    body = prose(excerpt, (offset, offset + len(passage)))
     return (f'<div class="source-popover" id="source-{number}" role="tooltip" hidden>'
             f'<span class="excerpt-location">instruction.md · {location}</span>'
-            f'<p>{esc(plain_text(left))}<mark>{highlight}</mark>{esc(plain_text(right))}</p></div>')
+            f'<div class="excerpt-body">{body}</div></div>')
 
 
 def build_task(task: dict, tasks: list[dict]) -> str:
