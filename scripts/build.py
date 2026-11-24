@@ -159,6 +159,10 @@ def parse_tasks(source: str) -> list[dict]:
                             raise ValueError(f"Missing citation for {slug} criterion {cells[0]}")
                         if src["name"] == "instruction.md" and any(ref["passage"] not in instruction for ref in refs):
                             raise ValueError(f"Instruction quote missing for {slug} criterion {cells[0]}")
+                        if src["name"] == "instruction.md":
+                            highlight = src["highlight"]
+                            if not highlight.strip() or instruction.count(highlight) != 1 or not any(highlight in ref["passage"] for ref in refs):
+                                raise ValueError(f"Ambiguous or uncited highlight for {slug} criterion {cells[0]}")
                     links = ", ".join(f"[{c['label']}](https://yyu6969.github.io/aab_benchmark_website/{c['file']})" for c in detail["clips"])
                     if not links or cells[3] != links:
                         raise ValueError(f"Incorrect clip references for {slug} criterion {cells[0]}")
@@ -324,7 +328,7 @@ def tutorial_player(task: dict) -> str:
     </div>'''
 
 
-def instruction_excerpt(instruction: str, passage: str) -> str:
+def instruction_excerpt(instruction: str, passage: str, box: str) -> str:
     start = instruction.index(passage)
     end = start + len(passage)
     # Keep one neighboring sentence or list item on each side of the cited units.
@@ -353,39 +357,28 @@ def instruction_excerpt(instruction: str, passage: str) -> str:
         offset += 2
     if right < len(instruction):
         excerpt += " …"
-    return prose(excerpt, (offset, offset + len(passage)))
+    body = prose(excerpt, (offset, offset + len(passage)))
+    first_line = instruction.count("\n", 0, start) + 1
+    last_line = first_line + passage.count("\n")
+    location = f"Line {first_line}" if first_line == last_line else f"Lines {first_line}–{last_line}"
+    return (f'<div class="source-popover" id="{box}" role="tooltip" hidden>'
+            f'<span class="excerpt-location">instruction.md · {location}</span>'
+            f'<div class="excerpt-body" tabindex="0">{body}</div></div>')
 
 
 def rubric_sources(task, rubric, materials, prefix, popovers):
     links = []
-    for index, source in enumerate(rubric["sources"], 1):
+    for source in rubric["sources"]:
         name = source["name"]
-        instruction = name == "instruction.md"
-        number = rubric["number"]
-        box = f"source-{number}" if instruction else f"source-{number}-material-{index}"
-        trigger = f'data-excerpt="{box}" aria-describedby="{box}"'
-        if instruction:
-            control = f'<a class="instruction-source" href="#instruction" {trigger}>instruction.md</a>'
+        if name == "instruction.md":
+            box = f'source-{rubric["number"]}'
+            control = (f'<a class="instruction-source" href="#instruction" data-excerpt="{box}" '
+                       f'aria-describedby="{box}">instruction.md</a>')
+            popovers.append(instruction_excerpt(task["instruction"], source["highlight"], box))
         else:
             href = esc(prefix + materials[name]["page"])
-            control = (f'<a class="rubric-material-link" href="{href}">{esc(name)}</a> '
-                       f'<button type="button" class="source-detail" aria-label="Evidence from {esc(name)} for criterion {number}" {trigger}>Evidence</button>')
+            control = f'<a class="rubric-material-link" href="{href}">{esc(name)}</a>'
         links.append(f'<div class="cited-file">{control}</div>')
-        entries = []
-        for ref in source["references"]:
-            passage = ref["passage"]
-            if instruction:
-                content = instruction_excerpt(task["instruction"], passage)
-            elif name.endswith(".md"):
-                content = prose(passage)
-            else:
-                content = f'<p class="material-passage">{esc(passage)}</p>'
-            entries.append(f'<div class="citation-entry"><span class="excerpt-location">{esc(ref["locator"])}</span>{content}</div>')
-        count = len(entries)
-        label = "citation" if count == 1 else "citations"
-        popovers.append(f'<div class="source-popover" id="{box}" role="tooltip" hidden>'
-                        f'<span class="excerpt-heading">{esc(name)} · {count} {label}</span>'
-                        f'<div class="excerpt-body" tabindex="0">{"".join(entries)}</div></div>')
     return " ".join(links)
 
 

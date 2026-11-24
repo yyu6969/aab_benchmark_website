@@ -35,6 +35,7 @@ class Page(HTMLParser):
         self.instruction_depth = 0
         self.instruction = []
         self.excerpts = {}
+        self.excerpt_triggers = []
         self.excerpt_id = None
         self.excerpt_depth = 0
         self.in_mark = False
@@ -47,16 +48,17 @@ class Page(HTMLParser):
         classes = attrs.get("class", "").split()
         if tag == "div" and "source-popover" in classes:
             self.excerpt_id = attrs["id"]
-            self.excerpts[self.excerpt_id] = []
-        if "citation-entry" in classes:
-            self.excerpts[self.excerpt_id].append({"marked": [], "context": []})
+            self.excerpts[self.excerpt_id] = {"marked": [], "context": []}
+        if "data-excerpt" in attrs:
+            assert tag == "a" and "instruction-source" in classes and attrs["href"] == "#instruction"
+            self.excerpt_triggers.append(attrs["data-excerpt"])
         if tag == "div" and (self.excerpt_depth or "excerpt-body" in classes):
             self.excerpt_depth += 1
         if self.excerpt_depth:
             if tag == "mark":
                 self.in_mark = True
             if tag in ("p", "li"):
-                self.excerpts[self.excerpt_id][-1]["marked"].append(" ")
+                self.excerpts[self.excerpt_id]["marked"].append(" ")
         if tag == "section" and attrs.get("id"):
             self.section_ids.append(attrs["id"])
         if tag == "article" and "agent-run" in attrs.get("class", "").split():
@@ -117,7 +119,7 @@ class Page(HTMLParser):
     def handle_data(self, text):
         if self.excerpt_depth:
             key = "marked" if self.in_mark else "context"
-            self.excerpts[self.excerpt_id][-1][key].append(text)
+            self.excerpts[self.excerpt_id][key].append(text)
         if self.instruction_depth:
             self.instruction.append(text)
         if self.material is not None:
@@ -157,24 +159,18 @@ def check():
         path = (OUTPUT / "tasks" / task["slug"] / "index.html").resolve()
         page = pages[path]
         expected = [[f"{r['number']:02d}", compact(plain_text(r["criterion"])), compact(plain_text(r["source"]))] for r in task["rubrics"]]
+        boxes = [f"source-{r['number']}" for r in task["rubrics"] if any(s["name"] == "instruction.md" for s in r.get("sources", []))]
+        assert page.excerpt_triggers == boxes and set(page.excerpts) == set(boxes)
         for row, rubric in zip(expected, task["rubrics"]):
             if "sources" in rubric:
-                labels = []
-                for i, src in enumerate(rubric["sources"], 1):
-                    name = src["name"]
-                    instruction = name == "instruction.md"
-                    labels.append(name if instruction else name + " Evidence")
-                    key = f"source-{rubric['number']}" + ("" if instruction else f"-material-{i}")
-                    for ref, excerpt in zip(src["references"], page.excerpts[key], strict=True):
-                        context = compact("".join(excerpt["context"]))
-                        assert context.startswith(compact(ref["locator"])), (key, name)
-                        if instruction:
-                            quote = re.sub(r"(?m)^\s*- ", "", plain_text(ref["passage"]))
-                            assert compact("".join(excerpt["marked"])) == compact(quote), (task["slug"], key, quote)
-                        else:
-                            passage = plain_text(ref["passage"]) if name.endswith(".md") else ref["passage"]
-                            assert compact(passage) in context, (key, name, passage)
-                row[2] = " ".join(labels)
+                row[2] = " ".join(src["name"] for src in rubric["sources"])
+                for src in rubric["sources"]:
+                    if src["name"] == "instruction.md":
+                        excerpt = page.excerpts[f"source-{rubric['number']}"]
+                        quote = re.sub(r"(?m)^\s*- ", "", plain_text(src["highlight"]))
+                        assert compact("".join(excerpt["marked"])) == compact(quote)
+                        if src["highlight"] != task["instruction"]:
+                            assert compact("".join(excerpt["context"])).strip("… ")
             if "clips" in rubric:
                 row.append(" ".join(c["label"] for c in rubric["clips"]))
                 for clip in rubric["clips"]:
