@@ -136,8 +136,11 @@ def check():
             if "clips" in rubric:
                 row.append(" ".join(c["label"] for c in rubric["clips"]))
                 for clip in rubric["clips"]:
-                    assert 0 <= clip["start_sec"] < clip["end_sec"] <= task["tutorial"]["duration_seconds"]
-                    assert f"../../{clip['file']}" in page.links
+                    duration = task["tutorial"]["duration_seconds"]
+                    assert 0 <= clip["playback_start_sec"] <= clip["start_sec"] < clip["end_sec"] <= clip["playback_end_sec"] <= duration
+                    assert clip["playback_start_sec"] == max(0, clip["start_sec"] - 2)
+                    assert clip["playback_end_sec"] == min(duration, clip["end_sec"] + 2)
+                    assert f"../../{clip['file']}?context=2" in page.links
         assert page.rubrics == expected, f"Rubric content changed in task {task['id']}"
         instruction = re.sub(r"(?m)^\s*-\s+", "", plain_text(task["instruction"]))
         assert compact("".join(page.instruction)) == compact(instruction), f"Instruction changed in task {task['id']}"

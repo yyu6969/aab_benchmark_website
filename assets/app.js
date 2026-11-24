@@ -250,7 +250,7 @@
         if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
         closeExcerpt();
-        clipPlayer.querySelector('h3').textContent = 'Criterion ' + link.dataset.criterion + ' · ' + link.textContent;
+        clipPlayer.querySelector('h3').textContent = 'Criterion ' + link.dataset.criterion + ' · Evidence ' + link.textContent;
         video.src = link.href;
         clipPlayer.showModal();
         video.play().catch(() => {});

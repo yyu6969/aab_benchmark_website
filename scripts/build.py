@@ -11,6 +11,7 @@ import shutil
 from pathlib import Path
 
 from agent_runs import load_agent_runs, render_agent_runs
+from rubric_clips import CONTEXT_SECONDS, playback_interval
 from guidance import render_guidance
 from materials import build_material_page, download_url, file_size, load_materials
 
@@ -247,6 +248,10 @@ def load_tutorials(tasks: list[dict]) -> None:
     for task in tasks:
         task["tutorial"] = videos[task["slug"]]
         task["tutorial"]["guidance_path"] = f"assets/tutorial-guidance/{task['slug']}.md"
+        for rubric in task["rubrics"]:
+            for clip in rubric.get("clips", []):
+                clip["playback_start_sec"], clip["playback_end_sec"] = playback_interval(
+                    clip, task["tutorial"]["duration_seconds"])
 
 
 def tutorial_player(task: dict) -> str:
@@ -307,6 +312,8 @@ def build_task(task: dict, tasks: list[dict]) -> str:
     popovers = []
     reviewed = "clips" in task["rubrics"][0]
     clip_heading = '<th scope="col">Video clip</th>' if reviewed else ""
+    clip_note = (f" Clip timestamps mark the evidence. Playback includes up to {CONTEXT_SECONDS} seconds "
+                 "before and after it." if reviewed else "")
     sources = {material["name"]: material for material in task["material_files"]}
     for rubric in task["rubrics"]:
         source = inline(rubric["source"])
@@ -319,7 +326,7 @@ def build_task(task: dict, tasks: list[dict]) -> str:
                 source = (f'<a class="instruction-source" href="#instruction" aria-describedby="source-{number}" '
                           f'data-excerpt="source-{number}">instruction.md</a>')
                 popovers.append(instruction_excerpt(task["instruction"], rubric["passage"], number))
-            links = [f'<a class="clip-link" href="{esc(prefix+c["file"])}" data-criterion="{number}" '
+            links = [f'<a class="clip-link" href="{esc(prefix+c["file"])}?context={CONTEXT_SECONDS}" data-criterion="{number}" '
                      f'aria-label="Play criterion {number} clip, {esc(c["label"])}">{esc(c["label"])}</a>'
                      for c in rubric["clips"]]
             clip_cell = '<td class="rubric-clips">' + ' '.join(links) + '</td>'
@@ -367,7 +374,7 @@ def build_task(task: dict, tasks: list[dict]) -> str:
           </section>
           <section id="rubrics" class="task-section" aria-labelledby="rubrics-title">
             <div class="section-heading"><h2 id="rubrics-title">Outcome rubric</h2><span class="section-meta">{len(task['rubrics'])} criteria</span></div>
-            <p class="section-description">The expected outcomes for this task, with the source for each criterion.</p>
+            <p class="section-description">The expected outcomes for this task, with the source for each criterion.{clip_note}</p>
             <div class="rubric-table-wrapper" role="region" aria-label="Outcome rubric table" tabindex="0"><table class="rubric-table"><caption class="sr-only">Outcome rubric for {esc(task['title'])}</caption><thead><tr><th scope="col">#</th><th scope="col">Outcome criterion</th><th scope="col">Source</th>{clip_heading}</tr></thead><tbody>{''.join(rows)}</tbody></table></div>{evidence_ui}
           </section>
           <section id="support-materials" class="task-section" aria-labelledby="materials-title">
