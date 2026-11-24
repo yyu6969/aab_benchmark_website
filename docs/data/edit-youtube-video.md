@@ -22,34 +22,42 @@ Prepare the project for "YouTube 2160p 4K Ultra HD" export upon approval, and de
 
 ### **Outcome Rubric**
 
-| # | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | An editable video project is named "Justin Edit". | instruction.md |
-| 2 | The "Justin Edit" project contains the supplied "Camera-Recording.mp4" media. | instruction.md |
-| 3 | The "Justin Edit" project contains the supplied "Screen-Recording.mp4" media. | instruction.md |
-| 4 | The "Justin Edit" project contains the supplied "IMG_0133.MOV" media. | instruction.md |
-| 5 | The "Justin Edit" project contains the supplied "IMG_0261.MOV" media. | instruction.md |
-| 6 | The "Justin Edit" project contains the supplied "Test 1.mov" media. | provided_materials.md |
-| 7 | The main sequence matches the presenter source and contains its picture and synchronized dialogue. | instruction.md |
-| 8 | The main sequence is named "YouTube". | instruction.md |
-| 9 | The trimmed presenter picture and dialogue begin at the sequence opening without a preceding gap. | instruction.md |
-| 10 | The presenter picture and dialogue have trimmed source endpoints without an empty trailing picture interval. | instruction.md |
-| 11 | Interior joins in the edited presenter picture and dialogue have no unintended timeline gaps. | instruction.md |
-| 12 | An approximately five-second, video-only waterfall cutaway appears over the continuing presenter dialogue. | justin_edit_visual_reference.md |
-| 13 | A video-only ocean cutaway appears over the continuing presenter dialogue. | justin_edit_visual_reference.md |
-| 14 | An on-screen lower-third near the opening introduces the presenter as "JUSTIN BROWN". | instruction.md |
-| 15 | The "JUSTIN BROWN" lower-third uses white uppercase Oswald Bold lettering. | justin_edit_visual_reference.md |
-| 16 | A fully opaque bright blue rectangle closely surrounds the lower-third lettering with a small visible margin. | justin_edit_visual_reference.md |
-| 17 | The name graphic is horizontally centered in the lower third of the presenter image. | justin_edit_visual_reference.md |
-| 18 | The opening "JUSTIN BROWN" lower-third remains visible beyond the first five seconds. | justin_edit_visual_reference.md |
-| 19 | The waterfall cutaway opens with a brief dip to white. | justin_edit_visual_reference.md |
-| 20 | One presenter segment has a modest punch-in while the remaining presenter segments retain their standard framing. | justin_edit_visual_reference.md |
-| 21 | The "Justin Edit" project contains the supplied "ES_San Pedro - Sugoi.mp3" soundtrack. | instruction.md |
-| 22 | The supplied background music spans the edited picture from its opening to its end. | instruction.md |
-| 23 | All presenter audio elements are identified as "Dialogue". | justin_edit_visual_reference.md |
-| 24 | The background soundtrack is identified as "Music". | justin_edit_visual_reference.md |
-| 25 | The opening presenter shot has a warm, bright color treatment with enhanced contrast and vibrant saturation. | justin_edit_visual_reference.md |
-| 26 | The remaining presenter shots consistently share the required camera treatment while preserving their individual framing. | justin_edit_visual_reference.md |
-| 27 | The "YouTube" sequence is configured for "YouTube 2160p 4K Ultra HD" export. | instruction.md |
-| 28 | The completed editable "Justin Edit" project is saved at the required delivery location. | instruction.md |
-| 29 | Presenter dialogue and background music remain independently editable audio elements throughout the sequence. | justin_edit_visual_reference.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | Justin Edit retains an editable main sequence whose source edits, graphics, cutaways, framing, and color treatments remain adjustable. | instruction.md | [13:39.75–13:42.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-64.webm), [16:21.75–16:54](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-88.webm), [17:26.5–17:41.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-97.webm), [21:00.25–21:03](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-126.webm), [27:33.25–27:43.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-174.webm) |
+| 2 | The initialized project's assigned name is exactly "Justin Edit". | instruction.md | [0:48–0:49.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-4.webm) |
+| 3 | Justin Edit includes the complete Camera-Recording.mp4 as usable source media for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm), [3:17.5–3:20.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-11.webm) |
+| 4 | Justin Edit includes the complete Screen-Recording.mp4 as usable source media for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm) |
+| 5 | Justin Edit includes the complete IMG_0133.MOV as usable waterfall source footage for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm), [11:47.5–11:48.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-44.webm) |
+| 6 | Justin Edit includes the complete IMG_0261.MOV as usable ocean source footage for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm), [12:05.5–12:22.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-48.webm) |
+| 7 | Justin Edit includes the complete Test 1.mov as usable source footage for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm) |
+| 8 | Justin Edit includes the complete ES_San Pedro - Sugoi.mp3 as usable source audio for review and follow-on edits. | instruction.md | [20:13.25–20:13.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-120.webm) |
+| 9 | Justin Edit's supplied footage and soundtrack are identifiable and organized within the project's media collection. | instruction.md | [20:13.25–20:13.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-120.webm) |
+| 10 | The main presenter cut contains Camera-Recording.mp4 picture and corresponding source dialogue with synchronized source timing. | justin_edit_visual_reference.md | [3:17.5–3:20.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-11.webm), [11:00.5–11:47.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-43.webm) |
+| 11 | The main sequence matches the primary camera footage at 1920×1080 and 30 frames per second. | instruction.md | [3:17.5–3:20.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-11.webm) |
+| 12 | The completed Justin Edit project's main sequence is named exactly "YouTube", with that name saved in the delivered editable project. | instruction.md | [3:43.75–3:44.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-15.webm) |
+| 13 | The presenter cut has no unintended empty timeline intervals before or between its retained picture and dialogue segments. | instruction.md | [11:00.5–11:47.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-43.webm) |
+| 14 | The supplied waterfall footage appears as a visible cutaway over the presenter picture. | justin_edit_visual_reference.md | [15:42.5–15:57](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-83.webm) |
+| 15 | The supplied ocean footage appears as a visible cutaway over the presenter picture. | justin_edit_visual_reference.md | [18:50.75–19:42.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-109.webm) |
+| 16 | The waterfall cutaway in YouTube lasts approximately five seconds. | justin_edit_visual_reference.md | [11:56.5–12:00.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-46.webm), [12:05.5–12:22.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-48.webm) |
+| 17 | The waterfall cutaway in YouTube opens with a brief dip to white. | justin_edit_visual_reference.md | [16:21.75–16:54](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-88.webm) |
+| 18 | Neither IMG_0133.MOV nor IMG_0261.MOV contributes source audio to YouTube. | justin_edit_visual_reference.md | [12:30–12:52.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-51.webm) |
+| 19 | Presenter dialogue remains present as a continuous audio layer beneath both cutaways and across their boundaries. | justin_edit_visual_reference.md | [12:30–12:52.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-51.webm) |
+| 20 | The lower-third text reads exactly 'JUSTIN BROWN' | justin_edit_visual_reference.md | [13:46.75–14:14.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-67.webm) |
+| 21 | The Justin Brown name graphic appears over the picture near the opening of the YouTube sequence to introduce the speaker | instruction.md | [13:46.75–14:14.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-67.webm) |
+| 22 | All JUSTIN BROWN lettering in the opening lower-third uses Oswald Bold. | justin_edit_visual_reference.md | [13:35.25–13:39.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-62.webm) |
+| 23 | All JUSTIN BROWN lettering in the YouTube sequence's existing lower-third has a white text fill. | justin_edit_visual_reference.md | [13:39.75–13:42.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-64.webm) |
+| 24 | A solid, fully opaque bright blue rectangle closely surrounds the JUSTIN BROWN lettering with a small visible margin on every side. | justin_edit_visual_reference.md | [13:39.75–13:42.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-64.webm) |
+| 25 | The JUSTIN BROWN graphic is horizontally centered in the lower third of the presenter image. | justin_edit_visual_reference.md | [13:43.25–13:46.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-66.webm) |
+| 26 | The opening JUSTIN BROWN lower-third in the YouTube sequence remains visibly displayed beyond timeline 00:00:05:00. | justin_edit_visual_reference.md | [21:03.5–21:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-128.webm) |
+| 27 | A selected presenter segment has a modest punch-in that provides a tighter view. | justin_edit_visual_reference.md | [17:26.5–17:41.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-97.webm) |
+| 28 | All presenter segments other than the selected punch-in retain standard framing. | justin_edit_visual_reference.md | [27:33.25–27:43.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-174.webm), [28:21.75–28:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-188.webm) |
+| 29 | The YouTube sequence contains background music sourced from the supplied ES_San Pedro - Sugoi.mp3. | justin_edit_visual_reference.md | [20:47–20:48.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-124.webm) |
+| 30 | Background music in YouTube begins with the opening picture and has no unintended internal timeline gaps. | justin_edit_visual_reference.md | [20:47–20:48.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-124.webm) |
+| 31 | The background music in YouTube ends cleanly at the existing edited video's actual final boundary. | instruction.md | [21:00.25–21:03](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-126.webm) |
+| 32 | Background music and presenter dialogue in YouTube remain separate audio elements, with the music independently editable. | justin_edit_visual_reference.md | [21:00.25–21:03](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-126.webm) |
+| 33 | The background soundtrack in YouTube is identified as Music through an application-supported label or role designation. | justin_edit_visual_reference.md | [25:36–25:36.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-156.webm) |
+| 34 | Every presenter-dialogue clip in the editable sequence is identified as Dialogue. | justin_edit_visual_reference.md | [25:31.25–25:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-152.webm) |
+| 35 | Edited presenter shots consistently have a warm, bright color treatment with enhanced contrast and vibrant saturation. | justin_edit_visual_reference.md | [27:33.25–27:43.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-174.webm), [28:21.75–28:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-188.webm) |
+| 36 | The YouTube sequence in Justin Edit has “YouTube 2160p 4K Ultra HD” or an equivalent native configuration selected as its export target. | instruction.md | [29:03–29:03.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-193.webm) |
+| 37 | The prepared export remains on hold pending approval. | instruction.md | [29:11.75–29:13.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-195.webm) |

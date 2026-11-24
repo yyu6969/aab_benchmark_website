@@ -12,11 +12,11 @@ Review the document and accept all tracked revisions throughout so that every pr
 
 ### **Outcome Rubric**
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | All approved tracked revisions in 'SOW-Revision 1.docx' are incorporated as written into clean, finalized text with no pending revisions or revision markup. | instruction.md |
-| 2 | Change tracking is disabled in the finalized 'SOW-Revision 1.docx' document. | instruction.md |
-| 3 | The finalized 'SOW-Revision 1.docx' document is saved in place at its original location. | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | Every approved tracked revision in the Widgets, Inc. statement of work is incorporated as written into clean, finalized document text, with no pending revisions or revision markup remaining. | instruction.md | [4:47.5–4:48](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/finalize-document-tracked-changes/segment-44.webm) |
+| 2 | Change tracking is turned off in the finalized Widgets, Inc. statement of work. | instruction.md | [4:58–5:11.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/finalize-document-tracked-changes/segment-47.webm) |
+| 3 | The finalized Widgets, Inc. statement of work, including its current content and final tracking configuration, is saved in place at `/home/ga/Documents/SOW-Revision 1.docx`. | instruction.md | [4:58–5:11.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/finalize-document-tracked-changes/segment-47.webm) |
 
 &nbsp;
 
@@ -36,13 +36,20 @@ None
 
 ### **Outcome Rubric**&nbsp;
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | Calendar appointment is configured with subject 'SBS Study Session', location 'Library Meeting Room', date September 19, 2019, and time 11:30 AM to 12:30 PM | instruction.md |
-| 2 | The 'SBS Study Session' appointment is saved in the existing calendar. | instruction.md |
-| 3 | Event titled 'National Dessert Day' is scheduled on October 14, 2019, and configured as an all-day event | instruction.md |
-| 4 | Event recurrence is configured to repeat yearly every October 14, starting 10/14/2019 | instruction.md |
-| 5 | The recurring 'National Dessert Day' event is saved in the existing calendar. | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | The study-session event's title is 'SBS Study Session'. | instruction.md | [1:01.25–1:14](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-5.webm) |
+| 2 | The study-session event's location is 'Library Meeting Room'. | instruction.md | [1:01.25–1:14](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-5.webm) |
+| 3 | The study-session event starts and ends on September 19, 2019. | instruction.md | [1:25.75–1:26.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-9.webm) |
+| 4 | The study-session event starts at 11:30 AM. | instruction.md | [1:41.75–1:42.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-13.webm) |
+| 5 | The study-session event ends at 12:30 PM. | instruction.md | [2:06.5–2:08](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-17.webm) |
+| 6 | The SBS Study Session event is saved on the existing calendar. | instruction.md | [2:23.25–2:24.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-21.webm) |
+| 7 | The dessert-day event has the exact title 'National Dessert Day'. | instruction.md | [3:24–3:30](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-25.webm) |
+| 8 | The National Dessert Day event initially occurs on October 14, 2019, with the recurring series starting 10/14/2019. | instruction.md | [4:42.5–4:43.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-38.webm) |
+| 9 | Each National Dessert Day occurrence is a one-day all-day event. | instruction.md | [3:47.5–3:48.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-32.webm), [4:02.5–4:04](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-34.webm) |
+| 10 | The National Dessert Day event repeats every year on October 14. | instruction.md | [4:29.5–4:30.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-36.webm) |
+| 11 | The created National Dessert Day event is saved on the existing calendar. | instruction.md | [4:51.75–5:06](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-41.webm) |
+| 12 | The study-session event creates no additional occurrences beyond the requested September 19, 2019 session. | instruction.md | [2:06.5–2:08](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/schedule-calendar-events/segment-17.webm) |
 
 &nbsp;
 
@@ -62,16 +69,15 @@ Clear only the ledger transactions reflected on the statement, leaving any unmat
 
 ### **Outcome Rubric**
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | The reconciliation targets Chase Bank 8145 in the HECTOR 2024 LLC company ledger. | instruction.md |
-| 2 | The Chase Bank 8145 reconciliation uses a statement ending date of 01/31/2024 and a statement ending balance of \$24,904.11. | Chase\_8145\_January\_2024\_statement.pdf |
-| 3 | Payment transactions marked as cleared include 30 payments totaling \$26,944.40, with Check 1150 for \$1,000.00 cleared | Chase\_8145\_January\_2024\_statement.pdf |
-| 4 | Deposit transactions marked as cleared include 2 deposits totaling \$34,413.00, with the 01/01/2024 deposit for \$31,349.00 cleared | Chase\_8145\_January\_2024\_statement.pdf |
-| 5 | The Chase Bank 8145 reconciliation has a cleared balance of \$24,904.11 and a difference of \$0.00. | Chase\_8145\_January\_2024\_statement.pdf |
-| 6 | Reconciliation for the Chase Bank 8145 account for the statement period ending January 31, 2024 is completed | instruction.md |
-| 7 | Ledger transactions absent from the January 2024 Chase Bank 8145 statement remain uncleared. | instruction.md |
-| 8 | The updated Chase Bank 8145 reconciliation record and transaction clearance states for the period ending 01/31/2024 are saved in the HECTOR 2024 LLC company ledger. | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | HECTOR 2024 LLC's Chase Bank 8145 reconciliation uses a statement ending balance of $24,904.11 and an ending date of 01/31/2024. | Chase_8145_January_2024_statement.pdf | [1:26–1:32.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/reconcile-business-bank-account/segment-10.webm) |
+| 2 | All ledger payments corresponding to the 30 payments shown on the supplied January 2024 statement, totaling $26,944.40 and including the statement row for check 1150 dated 12/30/2022 for $1,000.00, are cleared in HECTOR 2024 LLC's Chase Bank 8145 reconciliation ending 01/31/2024. | Chase_8145_January_2024_statement.pdf | [2:58.25–3:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/reconcile-business-bank-account/segment-22.webm) |
+| 3 | The ledger transactions corresponding to the statement's 01/01/2024 deposit of $31,349.00 and 01/30/2024 deposit of $3,064.00 are cleared in the Chase Bank 8145 reconciliation ending 01/31/2024. These two statement deposits total $34,413.00. | Chase_8145_January_2024_statement.pdf | [2:58.25–3:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/reconcile-business-bank-account/segment-22.webm) |
+| 4 | All ledger transactions available for HECTOR 2024 LLC's Chase Bank 8145 reconciliation ending 01/31/2024 that are unmatched to the supplied statement remain uncleared and excluded from the reconciliation. | instruction.md | [2:58.25–3:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/reconcile-business-bank-account/segment-22.webm) |
+| 5 | The Chase Bank 8145 reconciliation has a cleared balance of $24,904.11, calculated as $17,435.51 minus $26,944.40 plus $34,413.00, matching the statement ending balance with a $0.00 difference. | Chase_8145_January_2024_statement.pdf | [2:58.25–3:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/reconcile-business-bank-account/segment-22.webm) |
+| 6 | HECTOR 2024 LLC's Chase Bank 8145 reconciliation for the period ending 01/31/2024 has reached a finalized completion state. | instruction.md | [5:00.75–5:01.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/reconcile-business-bank-account/segment-24.webm) |
+| 7 | The updated Chase Bank 8145 reconciliation for the period ending 01/31/2024 and its corresponding transaction reconciliation states are saved in the HECTOR 2024 LLC company ledger. | instruction.md | [5:03.75–5:06](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/reconcile-business-bank-account/segment-26.webm) |
 
 &nbsp;
 
@@ -93,14 +99,18 @@ None
 
 ### **Outcome Rubric**
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | The clinical note for Gandalf Greyhame Wiz documents abdominal pain in the gastrointestinal review of systems. | instruction.md |
-| 2 | The abdominal examination in Gandalf Greyhame Wiz's clinical note records right lower quadrant tenderness and a comment noting possible appendicitis. | instruction.md |
-| 3 | The clinical assessment for Gandalf Greyhame Wiz summarizes his presentation with abdominal pain and an impression of possible appendicitis. | instruction.md |
-| 4 | The encounter plan for Gandalf Greyhame Wiz includes an order for a CBC with differential. | instruction.md |
-| 5 | The clinical plan for Gandalf Greyhame Wiz documents possible appendicitis and a plan to consult Dr. Mayfield to determine whether an appendectomy is appropriate. | instruction.md |
-| 6 | The clinical note for Gandalf Greyhame Wiz is signed by the rendering provider and locked. | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | Gandalf Greyhame Wiz's encounter clinical note records gastrointestinal abdominal pain as present in the Review of Systems. | instruction.md | [3:24–3:24.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-15.webm) |
+| 2 | Gandalf Greyhame Wiz's encounter clinical note documents right lower quadrant (RLQ) abdominal tenderness on the physical exam. | instruction.md | [3:49.25–3:50.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-19.webm) |
+| 3 | Gandalf Greyhame Wiz's encounter clinical note includes an abdominal-exam comment noting possible appendicitis. | instruction.md | [3:50.25–3:56.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-20.webm) |
+| 4 | The assessment in Gandalf Greyhame Wiz's encounter clinical note summarizes his presentation with abdominal pain. | instruction.md | [4:20–4:43](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-23.webm) |
+| 5 | The assessment in Gandalf Greyhame Wiz's encounter clinical note documents possible appendicitis as the clinical impression. | instruction.md | [4:20–4:43](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-23.webm) |
+| 6 | A CBC with differential is ordered for Gandalf Greyhame Wiz's encounter | instruction.md | [4:49.25–4:50.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-27.webm), [5:47–6:36.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-31.webm) |
+| 7 | Gandalf Greyhame Wiz's clinical note plan documents possible appendicitis | instruction.md | [4:50.25–5:19.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-28.webm) |
+| 8 | Gandalf Greyhame Wiz's clinical note plan documents consultation with Dr. Mayfield to determine whether an appendectomy is appropriate | instruction.md | [4:50.25–5:19.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-28.webm) |
+| 9 | Gandalf Greyhame Wiz's encounter clinical note is signed as the rendering provider. | instruction.md | [6:36.5–6:39](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-32.webm), [6:39–7:26.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-33.webm) |
+| 10 | Gandalf Greyhame Wiz's encounter clinical note is locked as the rendering provider. | instruction.md | [6:36.5–6:39](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/complete-sign-clinical-note/segment-32.webm) |
 
 &nbsp;
 
@@ -130,16 +140,22 @@ None
 
 ### **Outcome Rubric**
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | Casey Boehm's 'Week 1: Writing' submission has rubric scores recorded totaling 7/8 (Sentence Writing 2/2, Organization 2/2, Punctuation 2/2, and Spelling 1/2) | instruction.md |
-| 2 | The private comment 'Awesome work sounding out your words and using sight words\!' is posted on Casey Boehm's turned-in 'Week 1: Writing' submission before the requested returns begin. | instruction.md |
-| 3 | Casey Boehm's originally turned-in 'Week 1: Writing' record is returned to the learner. | instruction.md |
-| 4 | Casey Boehm's originally unsubmitted 'Week 1: Writing' record is returned to the learner. | instruction.md |
-| 5 | Hannah Koenig's 'Week 1: Writing' record is returned to the learner. | instruction.md |
-| 6 | Both Casey Boehm entries and Hannah Koenig's entry for 'Week 1: Writing' include the private return comment 'Super sentence writing\!'. | instruction.md |
-| 7 | The complete 'Organize and Educate' class gradebook is saved as 'Grades Organize and Educate 08-06-2020.ods' at the required destination with updated grades after the 'Week 1: Writing' grading and returns are complete. | instruction.md |
-| 8 | Cell D7 in the saved 'Organize and Educate' gradebook contains the comment 'Needs to make corrections'. | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | The recorded assessment belongs to Casey Boehm's turned-in Week 1: Writing submission in Organize and Educate and uses its attached Writing Rubric. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 2 | Casey Boehm's turned-in Week 1: Writing rubric assessment records Sentence Writing as 2/2. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 3 | Casey Boehm's turned-in Week 1: Writing rubric assessment records Organization as 2/2. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 4 | Casey Boehm's turned-in Week 1: Writing rubric assessment records Punctuation as 2/2. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 5 | Casey Boehm's turned-in Week 1: Writing rubric assessment records Spelling as 1/2. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 6 | Casey Boehm's turned-in Week 1: Writing rubric assessment totals 7/8. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 7 | The private comment "Awesome work sounding out your words and using sight words!" is posted on Casey Boehm's turned-in Week 1: Writing submission in Organize and Educate before the requested returns. | instruction.md | [7:08.5–7:10.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-22.webm) |
+| 8 | Casey Boehm's originally turned-in Week 1: Writing record in Organize and Educate is returned with the exact private comment "Super sentence writing!". | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm) |
+| 9 | Casey Boehm's separate originally unsubmitted Week 1: Writing record in Organize and Educate is returned with the exact private comment "Super sentence writing!". | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm) |
+| 10 | Hannah Koenig's Week 1: Writing record in Organize and Educate is returned with the exact private comment "Super sentence writing!". | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm) |
+| 11 | Caitie Instone's Week 1: Writing record in Organize and Educate remains unreturned | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm) |
+| 12 | The complete Organize and Educate class gradebook contains all course grades exported after the specified Week 1: Writing grading and three requested returns are complete. | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm), [13:55–13:59](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-50.webm) |
+| 13 | The annotated Organize and Educate gradebook is saved as a readable OpenDocument spreadsheet named Grades Organize and Educate 08-06-2020.ods in the required Documents folder. | instruction.md | [14:45–14:45.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-57.webm) |
+| 14 | Cell D7 of the Organize and Educate gradebook has a spreadsheet comment containing exactly "Needs to make corrections". | instruction.md | [14:45–14:45.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-57.webm) |
 
 &nbsp;
 
@@ -165,35 +181,45 @@ Leave the prepared dataset and both sets of frequency results open in your works
 
 ### **Outcome Rubric**
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | The dataset contains an identifiable gender variable with a descriptive label that accurately reflects the questionnaire's gender item. | instruction.md |
-| 2 | The gender variable has distinct whole-number codes labeled Male and Female. | Document1.docx |
-| 3 | The dataset contains an identifiable country-of-participation variable with an accurate descriptive label. | instruction.md |
-| 4 | The country-of-participation variable has distinct whole-number codes labeled Nigeria, Ghana, UK, USA, and India. | Document1.docx |
-| 5 | The gender variable has a nominal measurement level. | instruction.md |
-| 6 | The country-of-participation variable has a nominal measurement level. | instruction.md |
-| 7 | The dataset contains separate identifiable variables for teacher care, encouragement during difficult tasks, and listening to students' opinions and ideas. | Document1.docx |
-| 8 | The teacher-care statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order. | instruction.md |
-| 9 | The teacher-listening statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order. | instruction.md |
-| 10 | The enjoyment-of-learning statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order. | instruction.md |
-| 11 | The interest-in-topics statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order. | instruction.md |
-| 12 | The motivation-to-learn statement has an identifiable variable with labeled whole-number codes for all five agreement responses in the common directional order. | instruction.md |
-| 13 | The teacher-care statement variable has an ordinal measurement level. | instruction.md |
-| 14 | The statement about teacher encouragement during difficult tasks has an ordinal measurement level. | instruction.md |
-| 15 | The teacher-listening statement variable has an ordinal measurement level. | instruction.md |
-| 16 | The enjoyment-of-learning statement variable has an ordinal measurement level. | instruction.md |
-| 17 | The interest-in-topics statement variable has an ordinal measurement level. | instruction.md |
-| 18 | The motivation-to-learn statement variable has an ordinal measurement level. | instruction.md |
-| 19 | The baseline dataset contains six sample respondent records with varied, valid whole-number responses across both demographic items and all six study statements. | instruction.md |
-| 20 | The complete-baseline results contain valid-and-missing summaries and labeled category frequency tables with counts and percentages for gender and country, each showing six valid cases and zero missing cases. | instruction.md |
-| 21 | The comparison dataset contains the same six respondents with exactly one gender response missing and every other demographic entry unchanged from the complete baseline. | instruction.md |
-| 22 | The missing-response results contain labeled category frequency tables with counts and percentages for gender and country, with summaries showing five valid and one missing gender response and six valid and zero missing country responses. | instruction.md |
-| 23 | The prepared dataset contains no stray placeholder variables or entries. | instruction.md |
-| 24 | All six study-statement variables have descriptive labels that accurately identify their corresponding questionnaire statements. | instruction.md |
-| 25 | The teacher-encouragement statement variable has labeled whole-number codes for all five agreement responses in the dataset's common directional order. | instruction.md |
-| 26 | The demographic category counts and percentages reconcile with the respondent records for their respective complete and missing-response conditions. | instruction.md |
-| 27 | The prepared dataset and both demographic frequency-analysis sets remain open and available for review in the final workspace. | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | The pilot survey dataset contains a clearly identifiable variable for the questionnaire's Gender item. | Document1.docx | [1:41.75–1:42.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-13.webm), [6:22–6:33.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-29.webm) |
+| 2 | The Gender variable has an accurate descriptive label identifying the Gender question. | Document1.docx | [1:41.75–1:42.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-13.webm), [7:01–7:07](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-33.webm) |
+| 3 | The Gender variable has applied response mappings assigning Male and Female distinct, consistent whole-number codes with the corresponding value labels Male and Female. | Document1.docx | [6:21.5–6:22](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-28.webm), [6:33.5–6:34.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-30.webm) |
+| 4 | The active survey dataset contains a clearly identifiable numeric variable representing Country of Participation. | Document1.docx | [7:01–7:07](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-33.webm), [8:32.75–8:33.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-51.webm) |
+| 5 | The Country of Participation variable has an accurate descriptive label identifying the questionnaire item. | Document1.docx | [7:01–7:07](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-33.webm), [8:32.75–8:33.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-51.webm) |
+| 6 | The Country of Participation variable has an applied codebook assigning distinct, consistent whole-number codes with corresponding value labels to Nigeria, Ghana, UK, USA, and India. | Document1.docx | [1:41.75–1:42.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-13.webm), [8:07.5–8:08](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-43.webm), [8:10.75–8:11.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-45.webm) |
+| 7 | The existing Gender variable in the prepared pilot survey dataset has a Nominal measurement level. | instruction.md | [8:32.75–8:33.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-51.webm) |
+| 8 | The existing Country of Participation variable in the prepared pilot survey dataset has a Nominal measurement level. | instruction.md | [8:32.75–8:33.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-51.webm) |
+| 9 | The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher shows care and concern for my learning'. | Document1.docx | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [10:16–10:27](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm) |
+| 10 | The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher encourages me when I find tasks difficult'. | Document1.docx | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [10:16–10:27](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm) |
+| 11 | The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher listens to my opinions and ideas'. | Document1.docx | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [10:16–10:27](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-59.webm) |
+| 12 | The prepared pilot survey dataset is free of stray placeholder entries and variables that treat questionnaire section titles as response items. | instruction.md | [1:28.5–1:30.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-11.webm), [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [15:29.75–15:30.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-115.webm) |
+| 13 | The response variable for “My teacher shows care and concern for my learning” uses five distinct whole-number codes ordered strictly increasingly or strictly decreasingly across Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree. | instruction.md | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [12:22–12:23](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm), [12:23–12:23.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-74.webm) |
+| 14 | The response variable for “My teacher shows care and concern for my learning” has applied value labels covering Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree. | instruction.md | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [12:22–12:23](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm), [12:23–12:23.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-74.webm) |
+| 15 | The response variable for “My teacher listens to my opinions and ideas” has an applied five-option agreement codebook with accurate value labels and the same ordered whole-number mapping used for the other main-study statements. | instruction.md | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [12:22–12:23](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm), [12:39.25–12:39.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-80.webm) |
+| 16 | The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I enjoy learning in this class”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements. | Document1.docx | [12:22–12:23](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm), [12:50–12:50.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-83.webm), [13:44.75–13:45.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-93.webm) |
+| 17 | The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I feel interested in the topics taught.”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements. | Document1.docx | [12:22–12:23](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm), [12:50–12:50.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-83.webm), [13:46.75–13:47.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-95.webm) |
+| 18 | The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I feel motivated to learn in this class”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements. | Document1.docx | [12:22–12:23](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm), [12:50–12:50.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-83.webm), [13:48.25–13:48.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-97.webm) |
+| 19 | The prepared pilot survey dataset variable representing “My teacher shows care and concern for my learning” has measurement level Ordinal. | instruction.md | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [14:58–14:58.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm) |
+| 20 | The prepared pilot survey dataset variable representing “My teacher encourages me when I find tasks difficult” has measurement level Ordinal. | instruction.md | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [14:58–14:58.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm) |
+| 21 | The prepared pilot survey dataset variable representing “My teacher listens to my opinions and ideas” has measurement level Ordinal. | instruction.md | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [14:58–14:58.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm) |
+| 22 | The prepared pilot survey dataset variable representing “I enjoy learning in this class” has measurement level Ordinal. | instruction.md | [12:50–12:50.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-83.webm), [14:58–14:58.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm) |
+| 23 | The prepared pilot survey dataset variable representing “I feel interested in the topics taught.” has measurement level Ordinal. | instruction.md | [12:50–12:50.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-83.webm), [14:58–14:58.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm) |
+| 24 | The prepared pilot survey dataset variable representing “I feel motivated to learn in this class” has measurement level Ordinal. | instruction.md | [12:50–12:50.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-83.webm), [14:58–14:58.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-109.webm) |
+| 25 | All sample respondent records contain nonmissing, valid whole-number responses for both demographic questions and all six main-study statements in the complete-response condition. | instruction.md | [1:41.75–1:42.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-13.webm), [20:27–20:27.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-122.webm), [21:16.5–21:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-126.webm) |
+| 26 | The prepared pilot survey dataset contains exactly six respondent records. | instruction.md | [21:16.5–21:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-126.webm) |
+| 27 | The complete-response sample contains varied valid responses for each of the eight questionnaire items. | instruction.md | [21:16.5–21:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-126.webm) |
+| 28 | Complete Baseline presents 6 valid cases and 0 missing cases for both Gender and Country of Participation. | instruction.md | [22:03–22:04.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-134.webm), [22:05.5–22:06](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-136.webm) |
+| 29 | Complete Baseline contains labeled category frequency tables for Gender and Country of Participation with counts and percentages matching the six complete sample respondent records. | instruction.md | [21:16.5–21:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-126.webm), [22:05.5–22:06](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-136.webm) |
+| 30 | Complete Baseline results remain open and available for review in the final statistical workspace. | instruction.md | [22:05.5–22:06](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-136.webm), [22:49–22:50.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm), [23:13.75–23:14.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-147.webm) |
+| 31 | The prepared pilot survey dataset remains open and available for review in the final statistical workspace. | instruction.md | [23:13.75–23:14.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-147.webm), [24:08.75–24:27.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-154.webm) |
+| 32 | The Missing-Response Comparison input contains exactly one missing Gender response among the six sample respondents. | instruction.md | [22:27.75–22:31.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-139.webm), [22:49–22:50.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm) |
+| 33 | The Missing-Response Comparison uses the same six respondents as Complete Baseline, with every demographic response unchanged except the single Gender response designated missing. | instruction.md | [21:16.5–21:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-126.webm), [22:27.75–22:31.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-139.webm), [22:49–22:50.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm) |
+| 34 | Missing-Response Comparison contains labeled Gender and Country of Participation category counts and percentages consistent with the six sample records under the single missing Gender response and unchanged remaining demographics. | instruction.md | [21:16.5–21:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-126.webm), [22:27.75–22:31.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-139.webm), [22:49–22:50.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm) |
+| 35 | Missing-Response Comparison presents case summaries showing Gender with 5 valid and 1 missing case and Country of Participation with 6 valid and 0 missing cases alongside their frequency tables | instruction.md | [22:49–22:50.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm) |
+| 36 | Missing-Response Comparison remains open, identifiable, and available for review in the final statistical workspace. | instruction.md | [22:49–22:50.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm), [23:13.75–23:14.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-147.webm) |
+| 37 | The response variable for “My teacher encourages me when I find tasks difficult” has an applied five-option agreement codebook with accurate value labels and the same ordered whole-number mapping used for the other main-study statements. | instruction.md | [9:31.5–9:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-54.webm), [12:22–12:23](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm), [12:36.75–12:37.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/survey-data-frequency-analyses/segment-78.webm) |
 
 &nbsp;
 
@@ -225,37 +251,45 @@ Prepare the project for "YouTube 2160p 4K Ultra HD" export upon approval, and de
 
 ### **Outcome Rubric**
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | An editable video project is named "Justin Edit". | instruction.md |
-| 2 | The "Justin Edit" project contains the supplied "Camera-Recording.mp4" media. | instruction.md |
-| 3 | The "Justin Edit" project contains the supplied "Screen-Recording.mp4" media. | instruction.md |
-| 4 | The "Justin Edit" project contains the supplied "IMG\_0133.MOV" media. | instruction.md |
-| 5 | The "Justin Edit" project contains the supplied "IMG\_0261.MOV" media. | instruction.md |
-| 6 | The "Justin Edit" project contains the supplied "Test 1.mov" media. | provided\_materials.md |
-| 7 | The main sequence matches the presenter source and contains its picture and synchronized dialogue. | instruction.md |
-| 8 | The main sequence is named "YouTube". | instruction.md |
-| 9 | The trimmed presenter picture and dialogue begin at the sequence opening without a preceding gap. | instruction.md |
-| 10 | The presenter picture and dialogue have trimmed source endpoints without an empty trailing picture interval. | instruction.md |
-| 11 | Interior joins in the edited presenter picture and dialogue have no unintended timeline gaps. | instruction.md |
-| 12 | An approximately five-second, video-only waterfall cutaway appears over the continuing presenter dialogue. | justin\_edit\_visual\_reference.md |
-| 13 | A video-only ocean cutaway appears over the continuing presenter dialogue. | justin\_edit\_visual\_reference.md |
-| 14 | An on-screen lower-third near the opening introduces the presenter as "JUSTIN BROWN". | instruction.md |
-| 15 | The "JUSTIN BROWN" lower-third uses white uppercase Oswald Bold lettering. | justin\_edit\_visual\_reference.md |
-| 16 | A fully opaque bright blue rectangle closely surrounds the lower-third lettering with a small visible margin. | justin\_edit\_visual\_reference.md |
-| 17 | The name graphic is horizontally centered in the lower third of the presenter image. | justin\_edit\_visual\_reference.md |
-| 18 | The opening "JUSTIN BROWN" lower-third remains visible beyond the first five seconds. | justin\_edit\_visual\_reference.md |
-| 19 | The waterfall cutaway opens with a brief dip to white. | justin\_edit\_visual\_reference.md |
-| 20 | One presenter segment has a modest punch-in while the remaining presenter segments retain their standard framing. | justin\_edit\_visual\_reference.md |
-| 21 | The "Justin Edit" project contains the supplied "ES\_San Pedro \- Sugoi.mp3" soundtrack. | instruction.md |
-| 22 | The supplied background music spans the edited picture from its opening to its end. | instruction.md |
-| 23 | All presenter audio elements are identified as "Dialogue". | justin\_edit\_visual\_reference.md |
-| 24 | The background soundtrack is identified as "Music". | justin\_edit\_visual\_reference.md |
-| 25 | The opening presenter shot has a warm, bright color treatment with enhanced contrast and vibrant saturation. | justin\_edit\_visual\_reference.md |
-| 26 | The remaining presenter shots consistently share the required camera treatment while preserving their individual framing. | justin\_edit\_visual\_reference.md |
-| 27 | The "YouTube" sequence is configured for "YouTube 2160p 4K Ultra HD" export. | instruction.md |
-| 28 | The completed editable "Justin Edit" project is saved at the required delivery location. | instruction.md |
-| 29 | Presenter dialogue and background music remain independently editable audio elements throughout the sequence. | justin\_edit\_visual\_reference.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | Justin Edit retains an editable main sequence whose source edits, graphics, cutaways, framing, and color treatments remain adjustable. | instruction.md | [13:39.75–13:42.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-64.webm), [16:21.75–16:54](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-88.webm), [17:26.5–17:41.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-97.webm), [21:00.25–21:03](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-126.webm), [27:33.25–27:43.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-174.webm) |
+| 2 | The initialized project's assigned name is exactly "Justin Edit". | instruction.md | [0:48–0:49.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-4.webm) |
+| 3 | Justin Edit includes the complete Camera-Recording.mp4 as usable source media for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm), [3:17.5–3:20.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-11.webm) |
+| 4 | Justin Edit includes the complete Screen-Recording.mp4 as usable source media for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm) |
+| 5 | Justin Edit includes the complete IMG_0133.MOV as usable waterfall source footage for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm), [11:47.5–11:48.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-44.webm) |
+| 6 | Justin Edit includes the complete IMG_0261.MOV as usable ocean source footage for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm), [12:05.5–12:22.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-48.webm) |
+| 7 | Justin Edit includes the complete Test 1.mov as usable source footage for review and follow-on edits. | instruction.md | [2:56.75–2:58.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-9.webm) |
+| 8 | Justin Edit includes the complete ES_San Pedro - Sugoi.mp3 as usable source audio for review and follow-on edits. | instruction.md | [20:13.25–20:13.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-120.webm) |
+| 9 | Justin Edit's supplied footage and soundtrack are identifiable and organized within the project's media collection. | instruction.md | [20:13.25–20:13.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-120.webm) |
+| 10 | The main presenter cut contains Camera-Recording.mp4 picture and corresponding source dialogue with synchronized source timing. | justin_edit_visual_reference.md | [3:17.5–3:20.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-11.webm), [11:00.5–11:47.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-43.webm) |
+| 11 | The main sequence matches the primary camera footage at 1920×1080 and 30 frames per second. | instruction.md | [3:17.5–3:20.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-11.webm) |
+| 12 | The completed Justin Edit project's main sequence is named exactly "YouTube", with that name saved in the delivered editable project. | instruction.md | [3:43.75–3:44.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-15.webm) |
+| 13 | The presenter cut has no unintended empty timeline intervals before or between its retained picture and dialogue segments. | instruction.md | [11:00.5–11:47.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-43.webm) |
+| 14 | The supplied waterfall footage appears as a visible cutaway over the presenter picture. | justin_edit_visual_reference.md | [15:42.5–15:57](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-83.webm) |
+| 15 | The supplied ocean footage appears as a visible cutaway over the presenter picture. | justin_edit_visual_reference.md | [18:50.75–19:42.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-109.webm) |
+| 16 | The waterfall cutaway in YouTube lasts approximately five seconds. | justin_edit_visual_reference.md | [11:56.5–12:00.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-46.webm), [12:05.5–12:22.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-48.webm) |
+| 17 | The waterfall cutaway in YouTube opens with a brief dip to white. | justin_edit_visual_reference.md | [16:21.75–16:54](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-88.webm) |
+| 18 | Neither IMG_0133.MOV nor IMG_0261.MOV contributes source audio to YouTube. | justin_edit_visual_reference.md | [12:30–12:52.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-51.webm) |
+| 19 | Presenter dialogue remains present as a continuous audio layer beneath both cutaways and across their boundaries. | justin_edit_visual_reference.md | [12:30–12:52.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-51.webm) |
+| 20 | The lower-third text reads exactly 'JUSTIN BROWN' | justin_edit_visual_reference.md | [13:46.75–14:14.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-67.webm) |
+| 21 | The Justin Brown name graphic appears over the picture near the opening of the YouTube sequence to introduce the speaker | instruction.md | [13:46.75–14:14.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-67.webm) |
+| 22 | All JUSTIN BROWN lettering in the opening lower-third uses Oswald Bold. | justin_edit_visual_reference.md | [13:35.25–13:39.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-62.webm) |
+| 23 | All JUSTIN BROWN lettering in the YouTube sequence's existing lower-third has a white text fill. | justin_edit_visual_reference.md | [13:39.75–13:42.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-64.webm) |
+| 24 | A solid, fully opaque bright blue rectangle closely surrounds the JUSTIN BROWN lettering with a small visible margin on every side. | justin_edit_visual_reference.md | [13:39.75–13:42.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-64.webm) |
+| 25 | The JUSTIN BROWN graphic is horizontally centered in the lower third of the presenter image. | justin_edit_visual_reference.md | [13:43.25–13:46.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-66.webm) |
+| 26 | The opening JUSTIN BROWN lower-third in the YouTube sequence remains visibly displayed beyond timeline 00:00:05:00. | justin_edit_visual_reference.md | [21:03.5–21:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-128.webm) |
+| 27 | A selected presenter segment has a modest punch-in that provides a tighter view. | justin_edit_visual_reference.md | [17:26.5–17:41.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-97.webm) |
+| 28 | All presenter segments other than the selected punch-in retain standard framing. | justin_edit_visual_reference.md | [27:33.25–27:43.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-174.webm), [28:21.75–28:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-188.webm) |
+| 29 | The YouTube sequence contains background music sourced from the supplied ES_San Pedro - Sugoi.mp3. | justin_edit_visual_reference.md | [20:47–20:48.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-124.webm) |
+| 30 | Background music in YouTube begins with the opening picture and has no unintended internal timeline gaps. | justin_edit_visual_reference.md | [20:47–20:48.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-124.webm) |
+| 31 | The background music in YouTube ends cleanly at the existing edited video's actual final boundary. | instruction.md | [21:00.25–21:03](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-126.webm) |
+| 32 | Background music and presenter dialogue in YouTube remain separate audio elements, with the music independently editable. | justin_edit_visual_reference.md | [21:00.25–21:03](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-126.webm) |
+| 33 | The background soundtrack in YouTube is identified as Music through an application-supported label or role designation. | justin_edit_visual_reference.md | [25:36–25:36.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-156.webm) |
+| 34 | Every presenter-dialogue clip in the editable sequence is identified as Dialogue. | justin_edit_visual_reference.md | [25:31.25–25:32](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-152.webm) |
+| 35 | Edited presenter shots consistently have a warm, bright color treatment with enhanced contrast and vibrant saturation. | justin_edit_visual_reference.md | [27:33.25–27:43.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-174.webm), [28:21.75–28:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-188.webm) |
+| 36 | The YouTube sequence in Justin Edit has “YouTube 2160p 4K Ultra HD” or an equivalent native configuration selected as its export target. | instruction.md | [29:03–29:03.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-193.webm) |
+| 37 | The prepared export remains on hold pending approval. | instruction.md | [29:11.75–29:13.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/edit-youtube-video/segment-195.webm) |
 
 &nbsp;
 
@@ -279,36 +313,44 @@ None
 
 ### **Outcome Rubric**
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | A new team named Marketing exists in MinorCo. | instruction.md |
-| 2 | Warwick Palm and Paul Minors are members of the Marketing team in MinorCo. | instruction.md |
-| 3 | A project named 'Apple \- Website Design' exists in the 'Asana Demo' workspace. | instruction.md |
-| 4 | The 'Apple \- Website Design' project is accessible to everyone in the 'Asana Demo' workspace. | instruction.md |
-| 5 | The 'Apple \- Website Design' plan includes identifiable client onboarding work. | instruction.md |
-| 6 | The 'Apple \- Website Design' plan includes identifiable design and planning work. | instruction.md |
-| 7 | The 'Apple \- Website Design' plan includes identifiable production work. | instruction.md |
-| 8 | The 'Apple \- Website Design' plan includes identifiable go-live and final delivery work. | instruction.md |
-| 9 | The 'Apple \- Website Design' project overview describes a new Apple website launching before Christmas to increase conversion rates and sell more iPhones during the holiday season. | instruction.md |
-| 10 | Warwick Palm has editing access to the 'Apple \- Website Design' project. | instruction.md |
-| 11 | Lindsay Amoroso has editing access to the 'Apple \- Website Design' project. | instruction.md |
-| 12 | A published status update for 'Apple \- Website Design' identifies the project as on track. | instruction.md |
-| 13 | The published project status update says work is progressing well and is expected to finish before Christmas. | instruction.md |
-| 14 | The published project status update summarizes remaining incomplete tasks by assignee. | instruction.md |
-| 15 | The production milestone for completed page designs contains a posted request for Warwick Palm to review the completed designs. | instruction.md |
-| 16 | The production milestone for completed page designs exists and remains incomplete. | instruction.md |
-| 17 | Paul Minors's newly assigned commitments from 'Apple \- Website Design' are in the Upcoming section of his personal task list in the 'Asana Demo' workspace. | instruction.md |
-| 18 | 'Planning session with client' is in the Upcoming section of Paul Minors's personal task list in the 'Asana Demo' workspace. | instruction.md |
-| 19 | Paul Minors's personal task list in the 'Asana Demo' workspace is organized by section. | instruction.md |
-| 20 | Warwick Palm's latest comment on 'Troubleshoot: Pipedrive Document sync settings' in MinorCo has a thumbs-up reaction from Paul Minors. | instruction.md |
-| 21 | The discussion of 'Session \#3 Team Follow Up' in MinorCo contains Paul Minors's appreciation for Kayla Campos completing the task. | instruction.md |
-| 22 | The 'Troubleshoot: Pipedrive Document sync settings' notification in MinorCo is archived. | instruction.md |
-| 23 | Every task in the 'Apple \- Website Design' plan has an identifiable responsible team member. | instruction.md |
-| 24 | The 'Apple \- Website Design' plan schedules its work and prerequisite handoffs to support going live before Christmas. | instruction.md |
-| 25 | The 'Apple \- Website Design' plan breaks multi-part deliverables into relevant subtasks. | instruction.md |
-| 26 | The 'Apple \- Website Design' plan identifies meaningful approval and readiness milestones for the website launch. | instruction.md |
-| 27 | The 'Apple \- Website Design' plan explicitly links dependent tasks or testing milestones to the earlier handoffs they require. | instruction.md |
-| 28 | The Recently assigned section of Paul Minors's personal task list in the 'Asana Demo' workspace is empty. | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | A newly created team named Marketing exists in the MinorCo workspace | instruction.md | [6:48.75–6:52.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-22.webm) |
+| 2 | The acting project manager is a member of the newly created Marketing team in MinorCo | instruction.md | [7:11.75–7:12.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-24.webm) |
+| 3 | Warwick Palm is a member of the newly created Marketing team in MinorCo | instruction.md | [7:11.75–7:12.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-24.webm) |
+| 4 | A saved project named Apple - Website Design is set up. | instruction.md | [12:19.25–12:22.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-75.webm) |
+| 5 | The 'Apple - Website Design' project belongs to the 'Asana Demo' workspace. | instruction.md | [10:11–10:12.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-60.webm), [12:19.25–12:22.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-75.webm) |
+| 6 | Members of the 'Asana Demo' workspace can access 'Apple - Website Design'. | instruction.md | [11:00–11:00.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-69.webm), [12:19.25–12:22.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-75.webm) |
+| 7 | The Apple - Website Design project plan includes substantive work for client onboarding. | instruction.md | [15:18.75–15:20.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-110.webm) |
+| 8 | The Apple - Website Design project plan includes substantive work for design and planning. | instruction.md | [15:18.75–15:20.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-110.webm) |
+| 9 | The Apple - Website Design project plan includes substantive production work. | instruction.md | [15:18.75–15:20.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-110.webm) |
+| 10 | The Apple - Website Design project plan includes substantive work for go-live and final delivery. | instruction.md | [19:15.5–19:31.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-140.webm) |
+| 11 | The Apple - Website Design project plan identifies the approval and readiness milestones that matter for the launch. | instruction.md | [14:18.25–14:49.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-102.webm), [22:38.25–22:39](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-168.webm) |
+| 12 | Multi-part deliverables in the Apple - Website Design project plan are clearly broken into meaningful subtasks. | instruction.md | [15:20.75–15:22.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-111.webm), [15:56–15:58.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-116.webm) |
+| 13 | Each task in the Apple - Website Design project plan has an identifiable owner across the team. | instruction.md | [22:31–22:31.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-166.webm) |
+| 14 | The Apple - Website Design project plan makes clear when its work is scheduled. | instruction.md | [22:31–22:31.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-166.webm) |
+| 15 | The Apple - Website Design project plan identifies which tasks or testing milestones depend on earlier handoffs. | instruction.md | [17:24.75–18:35.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-130.webm), [19:31.75–19:36.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-141.webm) |
+| 16 | The Apple - Website Design project overview states that the project's scope is designing a new website for Apple. | instruction.md | [20:07.75–20:13.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-147.webm) |
+| 17 | The Apple - Website Design project overview states that the website must be live before Christmas. | instruction.md | [20:07.75–20:13.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-147.webm) |
+| 18 | The Apple - Website Design project overview identifies increasing conversion rates as a business goal. | instruction.md | [20:07.75–20:13.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-147.webm) |
+| 19 | The Apple - Website Design project overview identifies helping sell more iPhones this holiday season as a business goal. | instruction.md | [20:07.75–20:13.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-147.webm) |
+| 20 | Warwick Palm has editing access to Apple - Website Design in the Asana Demo workspace. | instruction.md | [21:04.75–21:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-152.webm) |
+| 21 | Lindsay Amoroso has editing access to Apple - Website Design in the Asana Demo workspace. | instruction.md | [21:04.75–21:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-152.webm) |
+| 22 | A status update for Apple - Website Design is published to its team in the Asana Demo workspace. | instruction.md | [22:00.75–22:01.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-164.webm) |
+| 23 | The Apple - Website Design status update explicitly reports the project as on-track. | instruction.md | [22:00.75–22:01.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-164.webm) |
+| 24 | The Apple - Website Design status update communicates that the project is progressing well. | instruction.md | [22:00.75–22:01.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-164.webm) |
+| 25 | The Apple - Website Design status update communicates an expected finish before Christmas. | instruction.md | [22:00.75–22:01.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-164.webm) |
+| 26 | The Apple - Website Design status update summarizes all project-plan tasks still incomplete at publication. | instruction.md | [21:56.5–21:59.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-162.webm), [22:00.75–22:01.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-164.webm), [22:31–22:31.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-166.webm) |
+| 27 | The Apple - Website Design status update organizes its remaining-work summary by assignee. | instruction.md | [21:56.5–21:59.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-162.webm), [22:00.75–22:01.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-164.webm) |
+| 28 | A published comment by the acting project manager in the discussion of the Apple - Website Design production milestone for completed page designs asks Warwick Palm to review the designs completed by that manager. | instruction.md | [22:38.25–22:39](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-168.webm), [22:57–22:57.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-171.webm) |
+| 29 | The production milestone for completed page designs in Apple - Website Design is open. | instruction.md | [23:14.75–24:03.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-174.webm) |
+| 30 | All newly assigned Apple - Website Design commitments belonging to the acting project manager are in Upcoming in that manager's Asana Demo personal task list. | instruction.md | [22:31–22:31.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-166.webm), [24:39.25–25:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-184.webm) |
+| 31 | The acting project manager's Asana Demo personal task list places Planning session with client in Upcoming and contains no tasks in Recently assigned. | instruction.md | [24:39.25–25:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-184.webm) |
+| 32 | The acting project manager's Asana Demo personal task list is organized by section. | instruction.md | [25:34.5–25:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-198.webm) |
+| 33 | The acting project manager's thumbs-up (👍) reaction is attached to Warwick Palm's most recent comment on 'Troubleshoot: Pipedrive Document sync settings' in MinorCo. | instruction.md | [26:33–26:38.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-218.webm) |
+| 34 | The message expresses appreciation for Kayla Campos's completion of 'Session #3 Team Follow Up'. | instruction.md | [26:49–26:52.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-222.webm), [26:55–26:55.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-225.webm) |
+| 35 | The acting project manager's message is published in the discussion of 'Session #3 Team Follow Up' in MinorCo. | instruction.md | [26:55–26:55.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-225.webm) |
+| 36 | The MinorCo notification for Warwick Palm's latest comment on Troubleshoot: Pipedrive Document sync settings is archived after the acting project manager's thumbs-up reaction is present on that comment. | instruction.md | [26:33–26:38.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-218.webm), [27:15.25–27:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-229.webm), [27:21.75–27:22.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/plan-website-launch/segment-231.webm) |
 
 &nbsp;
 
@@ -340,39 +382,46 @@ None
 
 ### **Outcome Rubric**
 
-| \# | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | The registered workspace account has name 'Emily Call', role 'Developer', company 'Call Solutions LLC', email '[sfemilycall@gmail.com](mailto:sfemilycall@gmail.com)', username '[EEC@callcompany.com](mailto:EEC@callcompany.com)', and location Utah, United States, '98002'. | instruction.md |
-| 2 | The registered workspace account is activated through email verification and permits authenticated access. | instruction.md |
-| 3 | Jane Doe's saved lead for ABC records Web as its source and Education as its industry. | instruction.md |
-| 4 | Jane Doe's lead for ABC is marked as converted. | instruction.md |
-| 5 | A saved ABC account is linked to Jane Doe's lead conversion. | instruction.md |
-| 6 | Jane Doe's saved contact record is associated with the ABC account. | instruction.md |
-| 7 | The saved 'ABC- Initial Contract' opportunity is associated with the ABC account. | instruction.md |
-| 8 | John Doe is recorded as an additional saved contact associated with the ABC account. | instruction.md |
-| 9 | The saved 'ABC- Initial Contract' opportunity has a value of \$100,000. | instruction.md |
-| 10 | The 'ABC- Initial Contract' Opportunity record stage is updated to 'Closed Won' and saved | instruction.md |
-| 11 | Jane Doe's contact record is linked to the 'ABC- Initial Contract' opportunity. | instruction.md |
-| 12 | The 'ABC- Initial Contract' opportunity is attributed to Web in the closed-won revenue breakdown. | instruction.md |
-| 13 | A private lead view named 'My Open Leads' is saved. | instruction.md |
-| 14 | The 'My Open Leads' view excludes converted leads. | instruction.md |
-| 15 | The 'My Open Leads' view excludes closed leads, including leads closed without conversion. | instruction.md |
-| 16 | The 'My Open Leads' view includes only leads owned by the current user. | instruction.md |
-| 17 | The 'Closed Won Opportunities' report omits owner role, age, and next step from its detail columns. | instruction.md |
-| 18 | The 'Closed Won Opportunities' report covers all close dates. | instruction.md |
-| 19 | The 'Closed Won Opportunities' report includes only closed-won opportunities. | instruction.md |
-| 20 | The 'Closed Won Opportunities' report includes last modified date among its detail columns. | instruction.md |
-| 21 | The 'Closed Won Opportunities' report groups opportunities by lead source. | instruction.md |
-| 22 | The 'Closed Won Opportunities' report summarizes opportunity revenue using summed amounts and an overall revenue total. | instruction.md |
-| 23 | A public report named 'Closed Won Opportunities' is saved. | instruction.md |
-| 24 | The saved 'Closed Won Opportunities' report displays current revenue results including the closed \$100,000 'ABC- Initial Contract' opportunity. | instruction.md |
-| 25 | The 'Closed Won Opportunities' report covers all accessible closed-won opportunities regardless of owner. | instruction.md |
-| 26 | Embedded Donut chart visualization on the 'Closed Won Opportunities' report displays Sum of Amount sliced by Lead Source | instruction.md |
-| 27 | A private dashboard named 'Closed Won Dashboard' is saved. | instruction.md |
-| 28 | The 'Closed Won Dashboard' contains an overall closed-won revenue metric sourced from 'Closed Won Opportunities'. | instruction.md |
-| 29 | The 'Closed Won Dashboard' contains a donut chart of closed-won revenue by lead source sourced from 'Closed Won Opportunities'. | instruction.md |
-| 30 | The saved 'Closed Won Dashboard' displays current figures in its overall closed-won revenue metric and donut chart breakdown by lead source, including the closed \$100,000 ABC contract. | instruction.md |
-| 31 | Email subscription for the 'Closed Won Dashboard' is saved with a Weekly frequency on Monday at 7:00 AM | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | The workspace account registration is successfully submitted and accepted, establishing an account for subsequent email verification. | instruction.md | [3:31.5–3:52.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-16.webm) |
+| 2 | The account-holder name in the final registration or account data is Emily Call. | instruction.md | [0:01–2:00.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-0.webm) |
+| 3 | The profile role in the final registration or account data is Developer. | instruction.md | [2:04.75–2:05.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-3.webm) |
+| 4 | The company affiliation in the final registration or account data is Call Solutions LLC. | instruction.md | [2:05.5–2:22.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-4.webm) |
+| 5 | The registered email field in the final registration or account data contains sfemilycall@gmail.com. | instruction.md | [0:01–2:00.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-0.webm) |
+| 6 | The username in the final registration or account data is EEC@callcompany.com. | instruction.md | [2:34.25–3:13.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-12.webm) |
+| 7 | The location in the final registration or account data is Utah, United States, postal code 98002. | instruction.md | [2:34.25–3:13.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-12.webm) |
+| 8 | Emily Call's workspace account, username EEC@callcompany.com, is activated through verification of sfemilycall@gmail.com. | instruction.md | [4:02.25–4:19](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-18.webm), [4:45–4:49.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-21.webm) |
+| 9 | Jane Doe's lead for ABC has lead source Web and industry Education. | instruction.md | [10:50.5–11:17.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-61.webm) |
+| 10 | Jane Doe's lead is converted, and the resulting or reused ABC account and Jane Doe contact are linked to the ABC- Initial Contract opportunity. | instruction.md | [15:40.25–15:44](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-80.webm), [18:04.5–18:06.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-82.webm) |
+| 11 | John Doe is saved as an additional contact associated with the ABC account used for the deal. | instruction.md | [22:28–22:31](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-102.webm) |
+| 12 | The ABC- Initial Contract opportunity used for Jane Doe's conversion has a persisted Amount of $100,000. | instruction.md | [25:12.25–25:13.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-116.webm) |
+| 13 | The ABC- Initial Contract opportunity associated with ABC has its Stage saved as Closed Won. | instruction.md | [31:37–31:44.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-142.webm) |
+| 14 | A saved private lead view named My Open Leads is available to Emily Call's workspace account. | instruction.md | [33:34–33:35](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-151.webm) |
+| 15 | My Open Leads includes only leads owned by Emily Call's workspace account. | instruction.md | [33:53.75–33:54.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-153.webm) |
+| 16 | My Open Leads has a saved restriction that excludes converted leads while allowing unconverted leads to qualify. | instruction.md | [35:04.25–35:06](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-163.webm) |
+| 17 | My Open Leads has saved restrictions that show only active leads and exclude closed records. | instruction.md | [35:40.25–35:41.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-183.webm) |
+| 18 | The Closed Won Opportunities report is saved and retrievable with populated opportunity results. | instruction.md | [44:07–44:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-250.webm) |
+| 19 | The Closed Won Opportunities report omits owner role from its detail columns. | instruction.md | [38:17–38:23.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-200.webm) |
+| 20 | The Closed Won Opportunities report omits age from its detail columns. | instruction.md | [38:23.75–38:25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-201.webm) |
+| 21 | The Closed Won Opportunities report omits next step from its detail columns. | instruction.md | [38:29.25–38:30.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-203.webm) |
+| 22 | The Closed Won Opportunities report covers all close dates. | instruction.md | [39:08.5–39:10.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-213.webm) |
+| 23 | The Closed Won Opportunities report includes only opportunities at the Closed Won stage. | instruction.md | [39:51.75–39:53](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-221.webm) |
+| 24 | The Closed Won Opportunities report's revenue collection includes all workspace opportunities satisfying its Closed Won and all-close-dates scope. | instruction.md | [40:21–40:21.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-223.webm) |
+| 25 | The Closed Won Opportunities report includes last modified date among its detail columns. | instruction.md | [40:45.75–40:48](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-227.webm) |
+| 26 | The Closed Won Opportunities report groups revenue by lead source. | instruction.md | [41:37.5–41:38.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-232.webm) |
+| 27 | The Closed Won Opportunities report displays total revenue equal to the sum of its eligible opportunity amounts. | instruction.md | [42:41–42:42.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-236.webm) |
+| 28 | The Closed Won Opportunities report displays correct revenue subtotals for every lead-source group. | instruction.md | [42:41–42:42.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-236.webm) |
+| 29 | The intended report is named 'Closed Won Opportunities'. | instruction.md | [43:21–43:27.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-240.webm) |
+| 30 | The Closed Won Opportunities report has public visibility permitting team-wide access. | instruction.md | [48:03.5–48:07.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-283.webm) |
+| 31 | The Closed Won Opportunities report includes a donut chart showing summed opportunity revenue by lead source. | instruction.md | [44:48.5–44:50](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-255.webm) |
+| 32 | A saved dashboard named Closed Won Dashboard retains its overall revenue metric and lead-source donut chart sourced from Closed Won Opportunities. | instruction.md | [48:24.25–48:25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-294.webm) |
+| 33 | The Closed Won Dashboard has private visibility. | instruction.md | [46:04–46:06](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-264.webm) |
+| 34 | The Closed Won Dashboard displays a current overall closed-won revenue metric from Closed Won Opportunities that includes the $100,000 ABC- Initial Contract opportunity. | instruction.md | [44:07–44:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-250.webm), [47:09.25–47:10](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-274.webm), [48:50–50:00](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-297.webm) |
+| 35 | The Closed Won Dashboard displays a current donut chart from Closed Won Opportunities showing summed closed-won revenue by lead source, including the $100,000 ABC- Initial Contract contribution. | instruction.md | [44:07–44:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-250.webm), [48:11.25–48:12](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-288.webm), [48:50–50:00](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-297.webm) |
+| 36 | A saved, enabled email subscription is bound to Closed Won Dashboard | instruction.md | [51:20–51:21.75](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-308.webm) |
+| 37 | The Closed Won Dashboard email subscription includes recurring delivery every Monday | instruction.md | [51:17.5–51:20](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-307.webm) |
+| 38 | The Closed Won Dashboard email subscription has a 7:00 AM delivery time | instruction.md | [51:16.5–51:17.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/sales-leads-revenue-dashboards/segment-306.webm) |
 
 &nbsp;
 

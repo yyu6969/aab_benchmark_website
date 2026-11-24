@@ -24,8 +24,9 @@ def load_agent_runs(tasks, root, plain_text):
         task["agent_runs"] = {}
         grading = scores[slug]
         criteria = grading["criteria"]
-        if ([r["criterion"] for r in criteria] != [plain_text(r["criterion"]) for r in task["rubrics"]]
-                or len({r["id"] for r in criteria}) != len(criteria)):
+        reviewed = "clips" in task["rubrics"][0]
+        if len({r["id"] for r in criteria}) != len(criteria) or (
+                not reviewed and [r["criterion"] for r in criteria] != [plain_text(r["criterion"]) for r in task["rubrics"]]):
             raise ValueError(f"Scores do not match the published criteria for {slug}")
         for condition in CONDITIONS:
             run = manifest[slug][condition]
@@ -46,6 +47,8 @@ def load_agent_runs(tasks, root, plain_text):
                 raise ValueError(f"Incomplete agent recording: {folder}")
             task["agent_runs"][condition] = dict(run, asset_path=path.as_posix(), frames=frames,
                                                  rubric_scores=rubric_scores, harbor_source=source["harbor_source"])
+            if reviewed:
+                task["agent_runs"][condition]["score_basis"] = "earlier_rubric"
 
 
 def render_scores(task, condition, title):
@@ -54,17 +57,20 @@ def render_scores(task, condition, title):
     harbor_full = sum(s["harbor_score"] for s in scores)
     codex_full = sum(s["codex_score"] for s in scores)
     rows = []
-    for rubric, score in zip(task["rubrics"], scores):
-        number = rubric["number"]
+    historical = "clips" in task["rubrics"][0]
+    heading = "Rubric scores · earlier rubric" if historical else "Rubric scores"
+    for number, score in enumerate(scores, 1):
         cells = []
         for value in (score["harbor_score"], score["codex_score"]):
             mark = '<span class="score-check" aria-hidden="true">✓</span> ' if value else ""
             cells.append(f'<td>{mark}<strong>{value}</strong></td>')
+        reference = (f'{number:02d}' if historical else
+                     f'<a href="#rubric-{number}" aria-label="View outcome criterion {number}">{number:02d}</a>')
         rows.append(f'<tr data-rubric-id="{escape(score["id"])}"><th scope="row">'
-                    f'<a href="#rubric-{number}" aria-label="View outcome criterion {number}">{number:02d}</a> '
+                    f'{reference} '
                     f'{escape(score["criterion"])}</th>{"".join(cells)}</tr>')
     return f'''<div class="run-scores" id="scores-{condition}">
-              <h4>Rubric scores</h4>
+              <h4>{heading}</h4>
               <dl class="score-totals">
                 <div><dt>Harbor RewardKit + gemini-4-carbon</dt><dd>{harbor_full} / {count}</dd></div>
                 <div><dt>Codex + GPT-6.2 Astra</dt><dd>{codex_full} / {count}</dd></div>

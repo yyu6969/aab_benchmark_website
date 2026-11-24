@@ -22,13 +22,19 @@ None
 
 ### **Outcome Rubric**
 
-| # | Outcome Rubric | Source |
-| :---- | :---- | :---- |
-| 1 | Casey Boehm's 'Week 1: Writing' submission has rubric scores recorded totaling 7/8 (Sentence Writing 2/2, Organization 2/2, Punctuation 2/2, and Spelling 1/2) | instruction.md |
-| 2 | The private comment 'Awesome work sounding out your words and using sight words!' is posted on Casey Boehm's turned-in 'Week 1: Writing' submission before the requested returns begin. | instruction.md |
-| 3 | Casey Boehm's originally turned-in 'Week 1: Writing' record is returned to the learner. | instruction.md |
-| 4 | Casey Boehm's originally unsubmitted 'Week 1: Writing' record is returned to the learner. | instruction.md |
-| 5 | Hannah Koenig's 'Week 1: Writing' record is returned to the learner. | instruction.md |
-| 6 | Both Casey Boehm entries and Hannah Koenig's entry for 'Week 1: Writing' include the private return comment 'Super sentence writing!'. | instruction.md |
-| 7 | The complete 'Organize and Educate' class gradebook is saved as 'Grades Organize and Educate 08-06-2020.ods' at the required destination with updated grades after the 'Week 1: Writing' grading and returns are complete. | instruction.md |
-| 8 | Cell D7 in the saved 'Organize and Educate' gradebook contains the comment 'Needs to make corrections'. | instruction.md |
+| # | Outcome Rubric | Source | Video clip |
+| --- | --- | --- | --- |
+| 1 | The recorded assessment belongs to Casey Boehm's turned-in Week 1: Writing submission in Organize and Educate and uses its attached Writing Rubric. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 2 | Casey Boehm's turned-in Week 1: Writing rubric assessment records Sentence Writing as 2/2. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 3 | Casey Boehm's turned-in Week 1: Writing rubric assessment records Organization as 2/2. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 4 | Casey Boehm's turned-in Week 1: Writing rubric assessment records Punctuation as 2/2. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 5 | Casey Boehm's turned-in Week 1: Writing rubric assessment records Spelling as 1/2. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 6 | Casey Boehm's turned-in Week 1: Writing rubric assessment totals 7/8. | instruction.md | [5:31–6:08.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-18.webm) |
+| 7 | The private comment "Awesome work sounding out your words and using sight words!" is posted on Casey Boehm's turned-in Week 1: Writing submission in Organize and Educate before the requested returns. | instruction.md | [7:08.5–7:10.25](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-22.webm) |
+| 8 | Casey Boehm's originally turned-in Week 1: Writing record in Organize and Educate is returned with the exact private comment "Super sentence writing!". | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm) |
+| 9 | Casey Boehm's separate originally unsubmitted Week 1: Writing record in Organize and Educate is returned with the exact private comment "Super sentence writing!". | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm) |
+| 10 | Hannah Koenig's Week 1: Writing record in Organize and Educate is returned with the exact private comment "Super sentence writing!". | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm) |
+| 11 | Caitie Instone's Week 1: Writing record in Organize and Educate remains unreturned | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm) |
+| 12 | The complete Organize and Educate class gradebook contains all course grades exported after the specified Week 1: Writing grading and three requested returns are complete. | instruction.md | [9:06.75–9:11.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-33.webm), [13:55–13:59](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-50.webm) |
+| 13 | The annotated Organize and Educate gradebook is saved as a readable OpenDocument spreadsheet named Grades Organize and Educate 08-06-2020.ods in the required Documents folder. | instruction.md | [14:45–14:45.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-57.webm) |
+| 14 | Cell D7 of the Organize and Educate gradebook has a spreadsheet comment containing exactly "Needs to make corrections". | instruction.md | [14:45–14:45.5](https://yyu6969.github.io/aab_benchmark_website/assets/rubric-clips/update-class-gradebook/segment-57.webm) |

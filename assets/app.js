@@ -177,6 +177,98 @@
     });
   }
 
+  const citations = document.querySelectorAll('[data-excerpt]');
+  let activeSource;
+  let pinned = false;
+  let closeTimer;
+
+  function closeExcerpt() {
+    clearTimeout(closeTimer);
+    if (activeSource) document.getElementById(activeSource.dataset.excerpt).hidden = true;
+    activeSource = null;
+    pinned = false;
+  }
+
+  function positionExcerpt() {
+    if (!activeSource) return;
+    const box = document.getElementById(activeSource.dataset.excerpt);
+    const rect = activeSource.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) return closeExcerpt();
+    const left = Math.max(12, Math.min(rect.left, window.innerWidth - box.offsetWidth - 12));
+    const below = rect.bottom + 6;
+    box.style.left = left + 'px';
+    box.style.top = Math.max(8, below + box.offsetHeight <= window.innerHeight - 8
+      ? below : rect.top - box.offsetHeight - 6) + 'px';
+  }
+
+  function openExcerpt(source) {
+    clearTimeout(closeTimer);
+    if (activeSource !== source) closeExcerpt();
+    activeSource = source;
+    document.getElementById(source.dataset.excerpt).hidden = false;
+    positionExcerpt();
+  }
+
+  function scheduleClose() {
+    clearTimeout(closeTimer);
+    if (!pinned) closeTimer = setTimeout(closeExcerpt, 180);
+  }
+
+  citations.forEach(source => {
+    const box = document.getElementById(source.dataset.excerpt);
+    source.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'touch') openExcerpt(source);
+    });
+    source.addEventListener('pointerleave', scheduleClose);
+    source.addEventListener('focus', () => openExcerpt(source));
+    source.addEventListener('blur', closeExcerpt);
+    source.addEventListener('click', event => {
+      event.preventDefault();
+      if (pinned && activeSource === source) return closeExcerpt();
+      openExcerpt(source);
+      pinned = true;
+    });
+    box.addEventListener('pointerenter', () => clearTimeout(closeTimer));
+    box.addEventListener('pointerleave', scheduleClose);
+  });
+  if (citations.length) {
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeExcerpt();
+    });
+    document.addEventListener('pointerdown', event => {
+      if (!event.target.closest('[data-excerpt], .source-popover')) closeExcerpt();
+    });
+    window.addEventListener('scroll', positionExcerpt, {capture: true, passive: true});
+    window.addEventListener('resize', positionExcerpt);
+  }
+
+  const clipPlayer = document.querySelector('dialog.clip-player');
+  if (clipPlayer && typeof clipPlayer.showModal === 'function') {
+    const video = clipPlayer.querySelector('video');
+    document.querySelectorAll('a.clip-link').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        closeExcerpt();
+        clipPlayer.querySelector('h3').textContent = 'Criterion ' + link.dataset.criterion + ' · ' + link.textContent;
+        video.src = link.href;
+        clipPlayer.showModal();
+        video.play().catch(() => {});
+      });
+    });
+    clipPlayer.addEventListener('close', () => {
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+    });
+    clipPlayer.addEventListener('click', event => {
+      if (event.target === clipPlayer) {
+        const rect = clipPlayer.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) clipPlayer.close();
+      }
+    });
+  }
+
   // Track the section at the reading position, including long rubric tables.
   const navLinks = [...document.querySelectorAll('.section-nav a')];
   if (navLinks.length) {

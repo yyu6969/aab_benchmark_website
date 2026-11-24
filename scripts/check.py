@@ -132,6 +132,12 @@ def check():
         path = (OUTPUT / "tasks" / task["slug"] / "index.html").resolve()
         page = pages[path]
         expected = [[f"{r['number']:02d}", compact(plain_text(r["criterion"])), compact(plain_text(r["source"]))] for r in task["rubrics"]]
+        for row, rubric in zip(expected, task["rubrics"]):
+            if "clips" in rubric:
+                row.append(" ".join(c["label"] for c in rubric["clips"]))
+                for clip in rubric["clips"]:
+                    assert 0 <= clip["start_sec"] < clip["end_sec"] <= task["tutorial"]["duration_seconds"]
+                    assert f"../../{clip['file']}" in page.links
         assert page.rubrics == expected, f"Rubric content changed in task {task['id']}"
         instruction = re.sub(r"(?m)^\s*-\s+", "", plain_text(task["instruction"]))
         assert compact("".join(page.instruction)) == compact(instruction), f"Instruction changed in task {task['id']}"
@@ -146,11 +152,11 @@ def check():
         for condition, run in task["agent_runs"].items():
             assert f"run-{condition}" in page.ids
             expected_scores = []
-            for rubric, score in zip(task["rubrics"], run["rubric_scores"]):
+            for number, score in enumerate(run["rubric_scores"], 1):
                 cells = []
                 for value in (HARBOR_SCORES[score["harbor_verdict"]], CODEX_SCORES[score["codex_finding"]]):
                     cells.append({1: "✓ 1", 0: "0"}[value])
-                expected_scores.append([score["id"], f"{rubric['number']:02d} {plain_text(rubric['criterion'])}", *cells])
+                expected_scores.append([score["id"], f"{number:02d} {score['criterion']}", *cells])
             assert page.scores[condition] == expected_scores, f"Score checklist mismatch: {task['slug']}/{condition}"
             folder = Path(run["asset_path"])
             outputs = run["output_files"]

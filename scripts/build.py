@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import re
@@ -95,8 +96,11 @@ def parse_tasks(source: str) -> list[dict]:
     starts = list(re.finditer(r"^## \*\*(\d+)\\\. (.*?)\*\*\s*$", source, re.MULTILINE))
     if len(starts) != 10:
         raise ValueError(f"Expected 10 tasks; found {len(starts)}")
+    evidence = json.loads((ROOT / "rubric-evidence.json").read_text(encoding="utf-8"))
     tasks = []
     for i, start in enumerate(starts):
+        category, summary, slug = METADATA[i]
+        reviewed = evidence.get(slug, [])
         raw = source[start.start():starts[i + 1].start() if i + 1 < len(starts) else len(source)]
         text = normalize(raw)
         sections = re.split(r"^### \*\*(.*?)\*\*[^\n]*\n", text, flags=re.MULTILINE)
@@ -108,14 +112,26 @@ def parse_tasks(source: str) -> list[dict]:
         for line in section_map["outcome rubric"].splitlines():
             if re.match(r"^\|\s*\d+\s*\|", line):
                 cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
-                if len(cells) != 3:
+                if len(cells) != (4 if reviewed else 3):
                     raise ValueError(f"Invalid rubric row: {line}")
-                rubrics.append({"number": int(cells[0]), "criterion": cells[1], "source": cells[2]})
+                rubric = {"number": int(cells[0]), "criterion": cells[1], "source": cells[2]}
+                if reviewed:
+                    detail = reviewed[len(rubrics)]
+                    if hashlib.sha256(cells[1].encode()).hexdigest() != detail["criterion_sha256"] or cells[2] != detail["source"]:
+                        raise ValueError(f"Evidence does not match {slug} criterion {cells[0]}")
+                    if cells[2] == "instruction.md" and detail["passage"] not in instruction:
+                        raise ValueError(f"Instruction quote missing for {slug} criterion {cells[0]}")
+                    links = ", ".join(f"[{c['label']}](https://yyu6969.github.io/aab_benchmark_website/{c['file']})" for c in detail["clips"])
+                    if not links or cells[3] != links:
+                        raise ValueError(f"Incorrect clip references for {slug} criterion {cells[0]}")
+                    rubric.update({k: detail[k] for k in ("id", "description", "passage", "locator", "clips")})
+                rubrics.append(rubric)
         if not instruction or not rubrics:
             raise ValueError(f"Missing content for task {i + 1}")
         if [r["number"] for r in rubrics] != list(range(1, len(rubrics) + 1)):
             raise ValueError(f"Rubric numbering is not sequential for task {i + 1}")
-        category, summary, slug = METADATA[i]
+        if reviewed and len(reviewed) != len(rubrics):
+            raise ValueError(f"Incorrect evidence count for {slug}")
         tasks.append({"id": int(start.group(1)), "title": normalize(start.group(2)),
                       "category": category, "summary": summary, "slug": slug,
                       "instruction": instruction, "materials": materials, "rubrics": rubrics,
@@ -221,7 +237,7 @@ def build_catalog(tasks: list[dict]) -> str:
         <div class="about-grid"><p>Each task presents a professional scenario with a concrete goal. Its outcome rubric records the individual criteria used to assess the completed work.</p><div><h3>What's included</h3><p>The complete task instructions, all original rubric criteria and their sources, and the support materials listed in the source document. Open files from each task page to preview documents, play media, or download the originals.</p><a class="text-link" href="./data/tasks.json" download>{icon('download')} Download structured task data</a></div></div>
       </section>
     </main>'''
-    return page("Tasks | AAB Benchmark", "Explore 10 professional tasks with complete instructions, 183 outcome criteria, and support-material references.", content, home=True)
+    return page("Tasks | AAB Benchmark", "Explore 10 professional tasks with complete instructions, reviewed outcome criteria and support-material references.", content, home=True)
 
 
 def load_tutorials(tasks: list[dict]) -> None:
@@ -266,15 +282,53 @@ def tutorial_player(task: dict) -> str:
     </div>'''
 
 
+def instruction_excerpt(instruction: str, passage: str, number: int) -> str:
+    start = instruction.index(passage)
+    end = start + len(passage)
+    first = instruction.count("\n", 0, start) + 1
+    last = first + passage.count("\n")
+    location = f"Line {first}" if first == last else f"Lines {first}–{last}"
+    # Include adjacent words from the cited line so short highlights have context.
+    left = instruction[instruction.rfind("\n", 0, start) + 1:start]
+    right = instruction[end:].partition("\n")[0]
+    if len(left) > 90:
+        left = "…" + left[-90:].partition(" ")[2]
+    if len(right) > 90:
+        right = right[:90].rpartition(" ")[0] + "…"
+    highlight = esc(plain_text(passage)).replace("\n", "&#10;")
+    return (f'<div class="source-popover" id="source-{number}" role="tooltip" hidden>'
+            f'<span class="excerpt-location">instruction.md · {location}</span>'
+            f'<p>{esc(plain_text(left))}<mark>{highlight}</mark>{esc(plain_text(right))}</p></div>')
+
+
 def build_task(task: dict, tasks: list[dict]) -> str:
     prefix = "../../"
     rows = []
+    popovers = []
+    reviewed = "clips" in task["rubrics"][0]
+    clip_heading = '<th scope="col">Video clip</th>' if reviewed else ""
     sources = {material["name"]: material for material in task["material_files"]}
     for rubric in task["rubrics"]:
         source = inline(rubric["source"])
         if rubric["source"] in sources:
             source = f'<a class="rubric-material-link" href="{esc(prefix + sources[rubric["source"]]["page"])}">{source}</a>'
-        rows.append(f'<tr id="rubric-{rubric["number"]}"><th scope="row"><a href="#rubric-{rubric["number"]}" aria-label="Criterion {rubric["number"]} permalink">{rubric["number"]:02d}</a></th><td>{inline(rubric["criterion"])}</td><td class="rubric-source">{source}</td></tr>')
+        clip_cell = ""
+        if reviewed:
+            number = rubric["number"]
+            if rubric["source"] == "instruction.md":
+                source = (f'<a class="instruction-source" href="#instruction" aria-describedby="source-{number}" '
+                          f'data-excerpt="source-{number}">instruction.md</a>')
+                popovers.append(instruction_excerpt(task["instruction"], rubric["passage"], number))
+            links = [f'<a class="clip-link" href="{esc(prefix+c["file"])}" data-criterion="{number}" '
+                     f'aria-label="Play criterion {number} clip, {esc(c["label"])}">{esc(c["label"])}</a>'
+                     for c in rubric["clips"]]
+            clip_cell = '<td class="rubric-clips">' + ' '.join(links) + '</td>'
+        rows.append(f'<tr id="rubric-{rubric["number"]}"><th scope="row"><a href="#rubric-{rubric["number"]}" aria-label="Criterion {rubric["number"]} permalink">{rubric["number"]:02d}</a></th><td>{inline(rubric["criterion"])}</td><td class="rubric-source">{source}</td>{clip_cell}</tr>')
+    evidence_ui = "".join(popovers)
+    if reviewed:
+        evidence_ui += ('<dialog class="clip-player" aria-labelledby="clip-heading"><div class="clip-toolbar">'
+                        '<h3 id="clip-heading">Video clip</h3><form method="dialog"><button class="button" autofocus>Close</button></form></div>'
+                        '<video controls playsinline preload="metadata"></video></dialog>')
     materials = []
     for material in task["material_files"]:
         path = material["path"]
@@ -314,7 +368,7 @@ def build_task(task: dict, tasks: list[dict]) -> str:
           <section id="rubrics" class="task-section" aria-labelledby="rubrics-title">
             <div class="section-heading"><h2 id="rubrics-title">Outcome rubric</h2><span class="section-meta">{len(task['rubrics'])} criteria</span></div>
             <p class="section-description">The expected outcomes for this task, with the source for each criterion.</p>
-            <div class="rubric-table-wrapper" role="region" aria-label="Outcome rubric table" tabindex="0"><table class="rubric-table"><caption class="sr-only">Outcome rubric for {esc(task['title'])}</caption><thead><tr><th scope="col">#</th><th scope="col">Outcome criterion</th><th scope="col">Source</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
+            <div class="rubric-table-wrapper" role="region" aria-label="Outcome rubric table" tabindex="0"><table class="rubric-table"><caption class="sr-only">Outcome rubric for {esc(task['title'])}</caption><thead><tr><th scope="col">#</th><th scope="col">Outcome criterion</th><th scope="col">Source</th>{clip_heading}</tr></thead><tbody>{''.join(rows)}</tbody></table></div>{evidence_ui}
           </section>
           <section id="support-materials" class="task-section" aria-labelledby="materials-title">
             <div class="section-heading"><h2 id="materials-title">Support materials</h2><span class="section-meta">{len(task['materials'])} {'file' if len(task['materials']) == 1 else 'files'}</span></div>{materials_html}

@@ -2,7 +2,7 @@
 
 A static website for the 10 tasks in `new_10_tasks.md`, inspired by the typography and task-page structure of [TimelineBench](https://timelinebench.tensortest.com/tasks/klug-brand-story).
 
-The site includes a searchable task catalog, 10 permanent task pages, complete instructions, all 183 outcome criteria with sources, and 15 openable support materials. It also includes light and dark themes, copy controls, Markdown and JSON downloads, responsive layouts, and print styles.
+The site includes a searchable task catalog, 10 permanent task pages, complete instructions, all 232 outcome criteria with sources, and 15 openable support materials. It also includes light and dark themes, copy controls, Markdown and JSON downloads, responsive layouts, and print styles.
 
 Support materials have dedicated preview pages and original-file downloads. PDFs open in the browser, Word documents have text previews that show tracked insertions and deletions, the style guide is rendered as Markdown, and audio and video have native playback controls. DWG files download for opening in a compatible CAD application.
 
@@ -37,6 +37,8 @@ python3 -m http.server 8000 --directory docs
 
 Open `http://localhost:8000`. Individual pages can also be opened directly from `docs/`; search and theme controls work without a server.
 
+The nine reviewed tasks pair each outcome with playable excerpts from the demonstration. Hover, focus or tap an instruction source to read the highlighted passage. The CAD task retains its earlier rubric. `rubric-evidence.json` records the reviewed criterion IDs, scoring descriptions, citations, and original video times. Short WebM excerpts in `assets/rubric-clips/` are shared by criteria that cite the same interval.
+
 ## Agent runs
 
 Each task page compares the selected guided and unguided Harbor trials. The screenshot control opens every numbered Gym episode frame in chronological order. The JSONL download keeps the recorded event sequence. It omits private session connection details and redacts authentication-related payloads across linked tool events. The benchmark archive retains the originals.
@@ -48,7 +50,7 @@ The selected trials are pinned in `agent-runs.json`. Their files live in `assets
 An **Output files** subsection links the deliverables Harbor collected for that specific trial. The importer selects the approved guest paths from its artifact manifest and records a SHA-256 hash for each download. Runs without collected deliverables omit the subsection.
 The Google Classroom gradebook is excluded from the public downloads.
 
-Each run includes a criterion-by-criterion comparison of Harbor RewardKit with `gemini-4-carbon` and the independent Codex review with GPT-6.2 Astra. Harbor full credit maps to 1. Partial, no-credit and unresolved verdicts each map to 0. Codex reports binary scores and distinguishes incomplete work from insufficient evidence. The totals count criteria with full credit in each recorded run.
+Each run includes a criterion-by-criterion comparison of Harbor RewardKit with `gemini-4-carbon` and the independent Codex review with GPT-6.2 Astra. Harbor full credit maps to 1. Partial, no-credit and unresolved verdicts each map to 0. Codex reports binary scores and distinguishes incomplete work from insufficient evidence. The totals count criteria with full credit in each recorded run. Scores on reviewed task pages retain their original criterion wording and are labeled as earlier-rubric results.
 
 The checked-in `run-scores.json` binds the scores to the selected trials and rubric IDs. To refresh it, run `python3 scripts/import_rubric_scores.py /path/to/aab_benchmark_archive /path/to/manual_review` before the normal build. The importer uses the latest matching production Carbon replay when available, checks trajectory and checklist hashes, and publishes only the verdicts and criterion text.
 
