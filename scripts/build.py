@@ -147,14 +147,22 @@ def parse_tasks(source: str) -> list[dict]:
                 rubric = {"number": int(cells[0]), "criterion": cells[1], "source": cells[2]}
                 if reviewed:
                     detail = reviewed[len(rubrics)]
-                    if hashlib.sha256(cells[1].encode()).hexdigest() != detail["criterion_sha256"] or cells[2] != detail["source"]:
+                    names = [s["name"] for s in detail["sources"]]
+                    if hashlib.sha256(cells[1].encode()).hexdigest() != detail["criterion_sha256"] or cells[2] != ", ".join(names):
                         raise ValueError(f"Evidence does not match {slug} criterion {cells[0]}")
-                    if cells[2] == "instruction.md" and detail["passage"] not in instruction:
-                        raise ValueError(f"Instruction quote missing for {slug} criterion {cells[0]}")
+                    allowed = {"instruction.md", *(Path(path).name for path in materials)}
+                    if len(names) != len(set(names)) or detail["source"] not in names or set(names) - allowed:
+                        raise ValueError(f"Unknown or repeated source for {slug} criterion {cells[0]}")
+                    for src in detail["sources"]:
+                        refs = src["references"]
+                        if not refs or any(not ref["passage"].strip() or not ref["locator"].strip() for ref in refs):
+                            raise ValueError(f"Missing citation for {slug} criterion {cells[0]}")
+                        if src["name"] == "instruction.md" and any(ref["passage"] not in instruction for ref in refs):
+                            raise ValueError(f"Instruction quote missing for {slug} criterion {cells[0]}")
                     links = ", ".join(f"[{c['label']}](https://yyu6969.github.io/aab_benchmark_website/{c['file']})" for c in detail["clips"])
                     if not links or cells[3] != links:
                         raise ValueError(f"Incorrect clip references for {slug} criterion {cells[0]}")
-                    rubric.update({k: detail[k] for k in ("id", "description", "passage", "locator", "clips")})
+                    rubric.update({k: detail[k] for k in ("id", "description", "source", "sources", "passage", "locator", "clips")})
                 rubrics.append(rubric)
         if not instruction or not rubrics:
             raise ValueError(f"Missing content for task {i + 1}")
@@ -239,7 +247,7 @@ def build_catalog(tasks: list[dict]) -> str:
     rows = []
     for task in tasks:
         search = plain_text(" ".join([task["title"], task["category"], task["instruction"], *task["materials"],
-                                      *[r["criterion"] + " " + r["source"] for r in task["rubrics"]]]))
+                                      *[r["criterion"] + " " + ", ".join(s["name"] for s in r.get("sources", [{"name": r["source"]}])) for r in task["rubrics"]]]))
         rows.append(f'''<li class="task-row" data-category="{esc(task['category'])}" data-search="{esc(search.lower())}">
           <a class="task-card" href="./tasks/{task['slug']}/index.html">
             <span class="task-id">TASK {task['id']:02d}</span>
@@ -316,12 +324,9 @@ def tutorial_player(task: dict) -> str:
     </div>'''
 
 
-def instruction_excerpt(instruction: str, passage: str, number: int) -> str:
+def instruction_excerpt(instruction: str, passage: str) -> str:
     start = instruction.index(passage)
     end = start + len(passage)
-    first = instruction.count("\n", 0, start) + 1
-    last = first + passage.count("\n")
-    location = f"Line {first}" if first == last else f"Lines {first}–{last}"
     # Keep one neighboring sentence or list item on each side of the cited units.
     # Protected inline spans can contain punctuation, for example inside a filename.
     starts = []
@@ -348,10 +353,40 @@ def instruction_excerpt(instruction: str, passage: str, number: int) -> str:
         offset += 2
     if right < len(instruction):
         excerpt += " …"
-    body = prose(excerpt, (offset, offset + len(passage)))
-    return (f'<div class="source-popover" id="source-{number}" role="tooltip" hidden>'
-            f'<span class="excerpt-location">instruction.md · {location}</span>'
-            f'<div class="excerpt-body">{body}</div></div>')
+    return prose(excerpt, (offset, offset + len(passage)))
+
+
+def rubric_sources(task, rubric, materials, prefix, popovers):
+    links = []
+    for index, source in enumerate(rubric["sources"], 1):
+        name = source["name"]
+        instruction = name == "instruction.md"
+        number = rubric["number"]
+        box = f"source-{number}" if instruction else f"source-{number}-material-{index}"
+        trigger = f'data-excerpt="{box}" aria-describedby="{box}"'
+        if instruction:
+            control = f'<a class="instruction-source" href="#instruction" {trigger}>instruction.md</a>'
+        else:
+            href = esc(prefix + materials[name]["page"])
+            control = (f'<a class="rubric-material-link" href="{href}">{esc(name)}</a> '
+                       f'<button type="button" class="source-detail" aria-label="Evidence from {esc(name)} for criterion {number}" {trigger}>Evidence</button>')
+        links.append(f'<div class="cited-file">{control}</div>')
+        entries = []
+        for ref in source["references"]:
+            passage = ref["passage"]
+            if instruction:
+                content = instruction_excerpt(task["instruction"], passage)
+            elif name.endswith(".md"):
+                content = prose(passage)
+            else:
+                content = f'<p class="material-passage">{esc(passage)}</p>'
+            entries.append(f'<div class="citation-entry"><span class="excerpt-location">{esc(ref["locator"])}</span>{content}</div>')
+        count = len(entries)
+        label = "citation" if count == 1 else "citations"
+        popovers.append(f'<div class="source-popover" id="{box}" role="tooltip" hidden>'
+                        f'<span class="excerpt-heading">{esc(name)} · {count} {label}</span>'
+                        f'<div class="excerpt-body" tabindex="0">{"".join(entries)}</div></div>')
+    return " ".join(links)
 
 
 def build_task(task: dict, tasks: list[dict]) -> str:
@@ -370,10 +405,7 @@ def build_task(task: dict, tasks: list[dict]) -> str:
         clip_cell = ""
         if reviewed:
             number = rubric["number"]
-            if rubric["source"] == "instruction.md":
-                source = (f'<a class="instruction-source" href="#instruction" aria-describedby="source-{number}" '
-                          f'data-excerpt="source-{number}">instruction.md</a>')
-                popovers.append(instruction_excerpt(task["instruction"], rubric["passage"], number))
+            source = rubric_sources(task, rubric, sources, prefix, popovers)
             links = [f'<a class="clip-link" href="{esc(prefix+c["file"])}?context={CONTEXT_SECONDS}" data-criterion="{number}" '
                      f'aria-label="Play criterion {number} clip, {esc(c["label"])}">{esc(c["label"])}</a>'
                      for c in rubric["clips"]]

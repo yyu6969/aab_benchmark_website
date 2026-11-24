@@ -231,7 +231,19 @@
     });
     source.addEventListener('pointerleave', scheduleClose);
     source.addEventListener('focus', () => openExcerpt(source));
-    source.addEventListener('blur', closeExcerpt);
+    source.addEventListener('blur', event => {
+      if (!box.contains(event.relatedTarget)) closeExcerpt();
+    });
+    source.addEventListener('keydown', event => {
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        openExcerpt(source);
+        box.querySelector('.excerpt-body').focus({preventScroll: true});
+      }
+    });
+    box.addEventListener('focusout', event => {
+      if (event.relatedTarget !== source && !box.contains(event.relatedTarget)) closeExcerpt();
+    });
     source.addEventListener('click', event => {
       event.preventDefault();
       if (pinned && activeSource === source) return closeExcerpt();
@@ -243,7 +255,11 @@
   });
   if (citations.length) {
     document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') closeExcerpt();
+      if (event.key === 'Escape' && activeSource) {
+        const box = document.getElementById(activeSource.dataset.excerpt);
+        if (box.contains(document.activeElement)) activeSource.focus({preventScroll: true});
+        closeExcerpt();
+      }
     });
     document.addEventListener('pointerdown', event => {
       if (!event.target.closest('[data-excerpt], .source-popover')) closeExcerpt();
