@@ -330,7 +330,6 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .instruction-source{text-decoration-style:dotted}
 .cited-file + .cited-file{margin-top:.45rem}
 .rubric-clips{font: .75rem/1.75 var(--mono);width:10rem}
-.clip-note{display:block;margin-top:.3rem;color:var(--muted);font:normal .78rem/1.4 var(--sans, sans-serif)}
 .clip-link{display:block;white-space:nowrap;width:fit-content;padding-block:2px;font-variant-numeric:tabular-nums}
 .clip-link::before{content:"";display:inline-block;margin-right:.4em;border-block:.32em solid transparent;border-left:.5em solid currentColor}
 .source-popover{position:fixed;z-index:100;width:min(31rem,calc(100vw - 24px));padding:14px 16px;border:1px solid var(--border);border-radius:5px;background:var(--bg);color:var(--fg);box-shadow:0 5px 24px #0002}

@@ -172,10 +172,7 @@ def check():
                         if src["highlight"] != task["instruction"]:
                             assert compact("".join(excerpt["context"])).strip("… ")
             if "clips" in rubric:
-                parts = [c["label"] for c in rubric["clips"]]
-                if rubric.get("clip_note"):
-                    parts.append(rubric["clip_note"])
-                row.append(" ".join(parts))
+                row.append(" ".join(c["label"] for c in rubric["clips"]))
                 for clip in rubric["clips"]:
                     duration = task["tutorial"]["duration_seconds"]
                     assert 0 <= clip["playback_start_sec"] <= clip["start_sec"] < clip["end_sec"] <= clip["playback_end_sec"] <= duration

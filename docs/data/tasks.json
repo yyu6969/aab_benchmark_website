@@ -5200,7 +5200,6 @@
         "number": 2,
         "criterion": "The Gender variable has an accurate descriptive label identifying the Gender question.",
         "source": "Document1.docx",
-        "clip_note": "The demonstrator enters “What is your age?” for Gender. The assignment requires a label that identifies Gender.",
         "id": "outcome_7ab45f3b81373f1d39e5",
         "description": "Full credit if the variable's applied descriptive label accurately identifies Gender, such as 'Gender' or 'Respondent gender'. Partial credit if an applied label is relevant but vague or incomplete. No credit if the descriptive label is missing, merely proposed, or describes a different item, such as age. If an evidenced permission or workspace limitation prevents applying the label, record the uncontrollable blocker in reality_notes or the scoring justification and credit only the verifiable applied state. A blocker report alone does not satisfy this outcome; an incorrect or missing label when modification is available remains an agent-controllable shortfall.",
         "sources": [
@@ -5499,7 +5498,6 @@
         "number": 6,
         "criterion": "The Country of Participation variable has an applied codebook assigning distinct, consistent whole-number codes with corresponding value labels to Nigeria, Ghana, UK, USA, and India.",
         "source": "Document1.docx",
-        "clip_note": "The questionnaire lists five countries. The demonstrator applies four and omits USA.",
         "id": "outcome_d85870a880012c1e2336",
         "description": "Full credit if all five countries have distinct whole-number codes and accurate corresponding value labels applied to this variable. Any consistent whole-number assignments are acceptable. Partial credit for a materially useful but incomplete or partly incorrect mapping, or an evidenced defined mapping that remains unapplied. No credit if no supported country mapping exists or it is applied only to another variable. If an evidenced environment blocker prevents defining or applying the mapping, record it in reality_notes or the scoring justification and distinguish it from controllable coding or application errors. A blocker report alone does not satisfy this outcome; partial credit must reflect supported mapping work.",
         "sources": [
@@ -5712,7 +5710,6 @@
         "number": 9,
         "criterion": "The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher shows care and concern for my learning'.",
         "source": "Document1.docx",
-        "clip_note": "The demonstrator creates EmoS1. Its descriptive Label cell is blank.",
         "id": "outcome_f123d18d5278575917d3",
         "description": "Full credit if the resulting workspace dataset contains the corresponding variable with a descriptive label faithfully preserving the statement's meaning. Any clear identifier and accurate paraphrase are acceptable. Partial credit if the variable is identifiable but its label is missing, vague, or incomplete. No credit if the variable is absent, represents a different statement, or lacks supporting evidence. If a verified environment limitation beyond the agent's control prevents dataset access or editing, record the affected outcome and blocker in reality_notes or the scoring justification, distinguishing it from agent-controllable failure. Credit remains based on the evidenced resulting state; blocker reporting alone earns no outcome credit.",
         "sources": [
@@ -5808,7 +5805,6 @@
         "number": 10,
         "criterion": "The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher encourages me when I find tasks difficult'.",
         "source": "Document1.docx",
-        "clip_note": "The demonstrator creates EmoS2. Its descriptive Label cell is blank.",
         "id": "outcome_71cfbecccbf035259a94",
         "description": "Full credit if the resulting workspace dataset contains the corresponding variable with a descriptive label preserving both teacher encouragement and difficulty with tasks. Any clear identifier and accurate paraphrase are acceptable. Partial credit if the variable is identifiable but its label is missing, vague, or incomplete. No credit if the variable is absent, represents a different statement, or lacks supporting evidence. If a verified environment limitation beyond the agent's control prevents dataset access or editing, record the affected outcome and blocker in reality_notes or the scoring justification, distinguishing it from agent-controllable failure. Credit remains based on the evidenced resulting state; blocker reporting alone earns no outcome credit.",
         "sources": [
@@ -5903,7 +5899,6 @@
         "number": 11,
         "criterion": "The prepared pilot survey dataset contains a distinct, clearly identifiable variable descriptively labeled for 'My teacher listens to my opinions and ideas'.",
         "source": "Document1.docx",
-        "clip_note": "The demonstrator creates EmoS3. Its descriptive Label cell is blank.",
         "id": "outcome_0361cdd163e26eaab559",
         "description": "Full credit if the resulting workspace dataset contains the corresponding variable with a descriptive label preserving teacher listening to the student's opinions and ideas. Any clear identifier and accurate paraphrase are acceptable. Partial credit if the variable is identifiable but its label is missing, vague, or incomplete. No credit if the variable is absent, represents a different statement, or lacks supporting evidence. If a verified environment limitation beyond the agent's control prevents dataset access or editing, record the affected outcome and blocker in reality_notes or the scoring justification, distinguishing it from agent-controllable failure. Credit remains based on the evidenced resulting state; blocker reporting alone earns no outcome credit.",
         "sources": [
@@ -5999,7 +5994,6 @@
         "number": 12,
         "criterion": "The prepared pilot survey dataset is free of stray placeholder entries and variables that treat questionnaire section titles as response items.",
         "source": "instruction.md",
-        "clip_note": "The demonstrator clears the initial rows. Later, two questionnaire section headings still appear as variables.",
         "id": "outcome_08b9402e8a0b5e39266e",
         "description": "Full credit if the entire prepared dataset contains neither stray placeholder entries nor section-title-only response variables. Partial credit if exactly one of these defect classes remains. No credit if both remain or the resulting cleanliness is unsupported. Count a section-title-only response variable only in that defect class, without also treating it as a separate placeholder defect. Missing required items are evaluated by their item criteria. Ordinary empty insertion rows and meaningful identifiers or derived variables are not defects. Pre-existing stray placeholders elsewhere in the dataset are included. Environmental limitations may be recorded, but an inaccessible dataset or blocker report does not establish cleanliness.",
         "sources": [
@@ -6359,7 +6353,6 @@
         "number": 16,
         "criterion": "The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I enjoy learning in this class”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements.",
         "source": "Document1.docx",
-        "clip_note": "The demonstrator applies value labels to Eng1. Its descriptive Label cell is blank.",
         "id": "outcome_52b9b7f6f804d040d437",
         "description": "Full credit requires an individually identifiable enjoyment variable, an accurate descriptive label, and the complete applied agreement codebook consistent with the other main-study items. Equivalent variable names, meaning-preserving labels, and configuration methods are acceptable. Partial credit reflects evidenced completion of these components when others remain incomplete or incorrect. No credit if no distinct enjoyment variable is established, a section-title variable substitutes for it, or completion is unsupported. Do not require a named source variable or an inherited codebook. Record verified environmental limitations, but award credit only for achieved components rather than effort or a blocker report.",
         "sources": [
@@ -6481,7 +6474,6 @@
         "number": 17,
         "criterion": "The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I feel interested in the topics taught.”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements.",
         "source": "Document1.docx",
-        "clip_note": "The demonstrator applies value labels to Eng2. Its descriptive Label cell is blank.",
         "id": "outcome_39e6ecb2ed85a293b21f",
         "description": "Full credit requires an individually identifiable interest variable, an accurate descriptive label, and the complete applied agreement codebook consistent with the other main-study items. Equivalent variable names, meaning-preserving labels, and configuration methods are acceptable. Partial credit reflects evidenced completion of these components when others remain incomplete or incorrect. No credit if no distinct interest variable is established, a section-title variable substitutes for it, or completion is unsupported. Do not require a named source variable or an inherited codebook. Record verified environmental limitations, but award credit only for achieved components rather than effort or a blocker report.",
         "sources": [
@@ -6603,7 +6595,6 @@
         "number": 18,
         "criterion": "The prepared pilot survey dataset contains a distinct response variable labeled to reflect “I feel motivated to learn in this class”, with applied value labels for Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree using the common ordered whole-number mapping for the main-study statements.",
         "source": "Document1.docx",
-        "clip_note": "The demonstrator applies value labels to Eng3. Its descriptive Label cell is blank.",
         "id": "outcome_1a5da20f8dca28908eeb",
         "description": "Full credit requires an individually identifiable motivation variable, an accurate descriptive label, and the complete applied agreement codebook consistent with the other main-study items. Equivalent variable names, meaning-preserving labels, and configuration methods are acceptable. Partial credit reflects evidenced completion of these components when others remain incomplete or incorrect. No credit if no distinct motivation variable is established, a section-title variable substitutes for it, or completion is unsupported. Do not require a named source variable or an inherited codebook. Record verified environmental limitations, but award credit only for achieved components rather than effort or a blocker report.",
         "sources": [
