@@ -163,7 +163,12 @@ def parse_tasks(source: str) -> list[dict]:
                             highlight = src["highlight"]
                             if not highlight.strip() or instruction.count(highlight) != 1 or not any(highlight in ref["passage"] for ref in refs):
                                 raise ValueError(f"Ambiguous or uncited highlight for {slug} criterion {cells[0]}")
-                    links = ", ".join(f"[{c['label']}](https://yyu6969.github.io/aab_benchmark_website/{c['file']})" for c in detail["clips"])
+                    clips = detail["clips"]
+                    ids = {c["segment_id"] for c in clips}
+                    intervals = {(c["start_sec"], c["end_sec"]) for c in clips}
+                    if len(ids) != len(clips) or len(intervals) != len(clips):
+                        raise ValueError(f"Repeated clip for {slug} criterion {cells[0]}")
+                    links = ", ".join(f"[{c['label']}](https://yyu6969.github.io/aab_benchmark_website/{c['file']})" for c in clips)
                     if not links or cells[3] != links:
                         raise ValueError(f"Incorrect clip references for {slug} criterion {cells[0]}")
                     rubric.update({k: detail[k] for k in ("id", "description", "source", "sources", "passage", "locator", "clips")})

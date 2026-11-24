@@ -1322,15 +1322,6 @@
         "locator": "document",
         "clips": [
           {
-            "segment_id": 32,
-            "start_sec": 227.5,
-            "end_sec": 228.5,
-            "file": "assets/rubric-clips/schedule-calendar-events/segment-32.webm",
-            "label": "3:47.5–3:48.5",
-            "playback_start_sec": 225.5,
-            "playback_end_sec": 230.5
-          },
-          {
             "segment_id": 34,
             "start_sec": 242.5,
             "end_sec": 244.0,
@@ -3450,15 +3441,6 @@
         "locator": "document",
         "clips": [
           {
-            "segment_id": 27,
-            "start_sec": 289.25,
-            "end_sec": 290.25,
-            "file": "assets/rubric-clips/complete-sign-clinical-note/segment-27.webm",
-            "label": "4:49.25–4:50.25",
-            "playback_start_sec": 287.25,
-            "playback_end_sec": 292.25
-          },
-          {
             "segment_id": 31,
             "start_sec": 347.0,
             "end_sec": 396.5,
@@ -3655,15 +3637,6 @@
             "label": "6:36.5–6:39",
             "playback_start_sec": 394.5,
             "playback_end_sec": 401.0
-          },
-          {
-            "segment_id": 33,
-            "start_sec": 399.0,
-            "end_sec": 446.5,
-            "file": "assets/rubric-clips/complete-sign-clinical-note/segment-33.webm",
-            "label": "6:39–7:26.5",
-            "playback_start_sec": 397.0,
-            "playback_end_sec": 448.5
           }
         ]
       },
@@ -5210,15 +5183,6 @@
         "locator": "word/document.xml",
         "clips": [
           {
-            "segment_id": 13,
-            "start_sec": 101.75,
-            "end_sec": 102.5,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-13.webm",
-            "label": "1:41.75–1:42.5",
-            "playback_start_sec": 99.75,
-            "playback_end_sec": 104.5
-          },
-          {
             "segment_id": 29,
             "start_sec": 382.0,
             "end_sec": 393.5,
@@ -5374,15 +5338,6 @@
         "locator": "word/document.xml",
         "clips": [
           {
-            "segment_id": 28,
-            "start_sec": 381.5,
-            "end_sec": 382.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-28.webm",
-            "label": "6:21.5–6:22",
-            "playback_start_sec": 379.5,
-            "playback_end_sec": 384.0
-          },
-          {
             "segment_id": 30,
             "start_sec": 393.5,
             "end_sec": 394.25,
@@ -5463,15 +5418,6 @@
             "label": "7:01–7:07",
             "playback_start_sec": 419.0,
             "playback_end_sec": 429.0
-          },
-          {
-            "segment_id": 51,
-            "start_sec": 512.75,
-            "end_sec": 513.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-51.webm",
-            "label": "8:32.75–8:33.25",
-            "playback_start_sec": 510.75,
-            "playback_end_sec": 515.25
           }
         ]
       },
@@ -5545,15 +5491,6 @@
             "label": "7:01–7:07",
             "playback_start_sec": 419.0,
             "playback_end_sec": 429.0
-          },
-          {
-            "segment_id": 51,
-            "start_sec": 512.75,
-            "end_sec": 513.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-51.webm",
-            "label": "8:32.75–8:33.25",
-            "playback_start_sec": 510.75,
-            "playback_end_sec": 515.25
           }
         ]
       },
@@ -5627,15 +5564,6 @@
             "label": "1:41.75–1:42.5",
             "playback_start_sec": 99.75,
             "playback_end_sec": 104.5
-          },
-          {
-            "segment_id": 43,
-            "start_sec": 487.5,
-            "end_sec": 488.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-43.webm",
-            "label": "8:07.5–8:08",
-            "playback_start_sec": 485.5,
-            "playback_end_sec": 490.0
           },
           {
             "segment_id": 45,
@@ -6226,15 +6154,6 @@
             "playback_end_sec": 574.0
           },
           {
-            "segment_id": 73,
-            "start_sec": 742.0,
-            "end_sec": 743.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm",
-            "label": "12:22–12:23",
-            "playback_start_sec": 740.0,
-            "playback_end_sec": 745.0
-          },
-          {
             "segment_id": 74,
             "start_sec": 743.0,
             "end_sec": 743.5,
@@ -6316,15 +6235,6 @@
             "label": "9:31.5–9:32",
             "playback_start_sec": 569.5,
             "playback_end_sec": 574.0
-          },
-          {
-            "segment_id": 73,
-            "start_sec": 742.0,
-            "end_sec": 743.0,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-73.webm",
-            "label": "12:22–12:23",
-            "playback_start_sec": 740.0,
-            "playback_end_sec": 745.0
           },
           {
             "segment_id": 74,
@@ -7697,15 +7607,6 @@
         "locator": "document",
         "clips": [
           {
-            "segment_id": 134,
-            "start_sec": 1323.0,
-            "end_sec": 1324.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-134.webm",
-            "label": "22:03–22:04.25",
-            "playback_start_sec": 1321.0,
-            "playback_end_sec": 1326.25
-          },
-          {
             "segment_id": 136,
             "start_sec": 1325.5,
             "end_sec": 1326.0,
@@ -7835,15 +7736,6 @@
             "playback_end_sec": 1328.0
           },
           {
-            "segment_id": 145,
-            "start_sec": 1369.0,
-            "end_sec": 1370.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm",
-            "label": "22:49–22:50.25",
-            "playback_start_sec": 1367.0,
-            "playback_end_sec": 1372.25
-          },
-          {
             "segment_id": 147,
             "start_sec": 1393.75,
             "end_sec": 1394.25,
@@ -7881,15 +7773,6 @@
         "passage": "Leave the prepared dataset and both sets of frequency results open in your workspace for review, ensuring the reported distributions are consistent with the respondent records.",
         "locator": "document",
         "clips": [
-          {
-            "segment_id": 147,
-            "start_sec": 1393.75,
-            "end_sec": 1394.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-147.webm",
-            "label": "23:13.75–23:14.25",
-            "playback_start_sec": 1391.75,
-            "playback_end_sec": 1396.25
-          },
           {
             "segment_id": 154,
             "start_sec": 1448.75,
@@ -7961,15 +7844,6 @@
             "label": "22:27.75–22:31.5",
             "playback_start_sec": 1345.75,
             "playback_end_sec": 1353.5
-          },
-          {
-            "segment_id": 145,
-            "start_sec": 1369.0,
-            "end_sec": 1370.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm",
-            "label": "22:49–22:50.25",
-            "playback_start_sec": 1367.0,
-            "playback_end_sec": 1372.25
           }
         ]
       },
@@ -8052,15 +7926,6 @@
             "label": "22:27.75–22:31.5",
             "playback_start_sec": 1345.75,
             "playback_end_sec": 1353.5
-          },
-          {
-            "segment_id": 145,
-            "start_sec": 1369.0,
-            "end_sec": 1370.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm",
-            "label": "22:49–22:50.25",
-            "playback_start_sec": 1367.0,
-            "playback_end_sec": 1372.25
           }
         ]
       },
@@ -8126,15 +7991,6 @@
         "passage": "Deliver two sets of frequency analyses covering all demographic variables from the questionnaire so the research team can compare how a missing entry affects reported counts and percentages. Each analysis should report valid and missing case summaries alongside labeled category frequency tables:",
         "locator": "document",
         "clips": [
-          {
-            "segment_id": 126,
-            "start_sec": 1276.5,
-            "end_sec": 1277.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-126.webm",
-            "label": "21:16.5–21:17.25",
-            "playback_start_sec": 1274.5,
-            "playback_end_sec": 1279.25
-          },
           {
             "segment_id": 139,
             "start_sec": 1347.75,
@@ -8255,15 +8111,6 @@
         "passage": "Leave the prepared dataset and both sets of frequency results open in your workspace for review, ensuring the reported distributions are consistent with the respondent records.",
         "locator": "document",
         "clips": [
-          {
-            "segment_id": 145,
-            "start_sec": 1369.0,
-            "end_sec": 1370.25,
-            "file": "assets/rubric-clips/survey-data-frequency-analyses/segment-145.webm",
-            "label": "22:49–22:50.25",
-            "playback_start_sec": 1367.0,
-            "playback_end_sec": 1372.25
-          },
           {
             "segment_id": 147,
             "start_sec": 1393.75,
@@ -9054,15 +8901,6 @@
             "playback_end_sec": 1063.5
           },
           {
-            "segment_id": 126,
-            "start_sec": 1260.25,
-            "end_sec": 1263.0,
-            "file": "assets/rubric-clips/edit-youtube-video/segment-126.webm",
-            "label": "21:00.25–21:03",
-            "playback_start_sec": 1258.25,
-            "playback_end_sec": 1265.0
-          },
-          {
             "segment_id": 174,
             "start_sec": 1653.25,
             "end_sec": 1663.5,
@@ -9231,15 +9069,6 @@
         "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
         "locator": "document",
         "clips": [
-          {
-            "segment_id": 9,
-            "start_sec": 176.75,
-            "end_sec": 178.25,
-            "file": "assets/rubric-clips/edit-youtube-video/segment-9.webm",
-            "label": "2:56.75–2:58.25",
-            "playback_start_sec": 174.75,
-            "playback_end_sec": 180.25
-          },
           {
             "segment_id": 11,
             "start_sec": 197.5,
@@ -9435,15 +9264,6 @@
         "locator": "document",
         "clips": [
           {
-            "segment_id": 9,
-            "start_sec": 176.75,
-            "end_sec": 178.25,
-            "file": "assets/rubric-clips/edit-youtube-video/segment-9.webm",
-            "label": "2:56.75–2:58.25",
-            "playback_start_sec": 174.75,
-            "playback_end_sec": 180.25
-          },
-          {
             "segment_id": 44,
             "start_sec": 707.5,
             "end_sec": 708.5,
@@ -9572,15 +9392,6 @@
         "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
         "locator": "document",
         "clips": [
-          {
-            "segment_id": 9,
-            "start_sec": 176.75,
-            "end_sec": 178.25,
-            "file": "assets/rubric-clips/edit-youtube-video/segment-9.webm",
-            "label": "2:56.75–2:58.25",
-            "playback_start_sec": 174.75,
-            "playback_end_sec": 180.25
-          },
           {
             "segment_id": 48,
             "start_sec": 725.5,
@@ -13837,15 +13648,6 @@
             "label": "15:20.75–15:22.25",
             "playback_start_sec": 918.75,
             "playback_end_sec": 924.25
-          },
-          {
-            "segment_id": 116,
-            "start_sec": 956.0,
-            "end_sec": 958.75,
-            "file": "assets/rubric-clips/plan-website-launch/segment-116.webm",
-            "label": "15:56–15:58.75",
-            "playback_start_sec": 954.0,
-            "playback_end_sec": 960.75
           }
         ]
       },
@@ -14711,15 +14513,6 @@
             "label": "21:56.5–21:59.5",
             "playback_start_sec": 1314.5,
             "playback_end_sec": 1321.5
-          },
-          {
-            "segment_id": 164,
-            "start_sec": 1320.75,
-            "end_sec": 1321.5,
-            "file": "assets/rubric-clips/plan-website-launch/segment-164.webm",
-            "label": "22:00.75–22:01.5",
-            "playback_start_sec": 1318.75,
-            "playback_end_sec": 1323.5
           }
         ]
       },
@@ -15187,15 +14980,6 @@
         "locator": "document",
         "clips": [
           {
-            "segment_id": 222,
-            "start_sec": 1609.0,
-            "end_sec": 1612.75,
-            "file": "assets/rubric-clips/plan-website-launch/segment-222.webm",
-            "label": "26:49–26:52.75",
-            "playback_start_sec": 1607.0,
-            "playback_end_sec": 1614.75
-          },
-          {
             "segment_id": 225,
             "start_sec": 1615.0,
             "end_sec": 1615.25,
@@ -15326,15 +15110,6 @@
         "passage": "In MinorCo, follow up on two team updates: add a thumbs-up reaction to Warwick Palm's latest comment on \"Troubleshoot: Pipedrive Document sync settings\" and archive that notification once addressed, and express appreciation for Kayla Campos's completion of \"Session #3 Team Follow Up\" in its task discussion.",
         "locator": "document",
         "clips": [
-          {
-            "segment_id": 218,
-            "start_sec": 1593.0,
-            "end_sec": 1598.75,
-            "file": "assets/rubric-clips/plan-website-launch/segment-218.webm",
-            "label": "26:33–26:38.75",
-            "playback_start_sec": 1591.0,
-            "playback_end_sec": 1600.75
-          },
           {
             "segment_id": 229,
             "start_sec": 1635.25,
@@ -16646,15 +16421,6 @@
         "passage": "Within the sales workspace, client ABC's deal records should reflect the conversion of Jane Doe's Web lead in the Education industry, linking the ABC account and Jane Doe's contact record to the $100,000 \"ABC- Initial Contract\" opportunity at the Closed Won stage.",
         "locator": "document",
         "clips": [
-          {
-            "segment_id": 80,
-            "start_sec": 940.25,
-            "end_sec": 944.0,
-            "file": "assets/rubric-clips/sales-leads-revenue-dashboards/segment-80.webm",
-            "label": "15:40.25–15:44",
-            "playback_start_sec": 938.25,
-            "playback_end_sec": 946.0
-          },
           {
             "segment_id": 82,
             "start_sec": 1084.5,
@@ -18471,15 +18237,6 @@
             "playback_end_sec": 2653.5
           },
           {
-            "segment_id": 274,
-            "start_sec": 2829.25,
-            "end_sec": 2830.0,
-            "file": "assets/rubric-clips/sales-leads-revenue-dashboards/segment-274.webm",
-            "label": "47:09.25–47:10",
-            "playback_start_sec": 2827.25,
-            "playback_end_sec": 2832.0
-          },
-          {
             "segment_id": 297,
             "start_sec": 2930.0,
             "end_sec": 3000.0,
@@ -18683,15 +18440,6 @@
             "label": "44:07–44:11.5",
             "playback_start_sec": 2645.0,
             "playback_end_sec": 2653.5
-          },
-          {
-            "segment_id": 288,
-            "start_sec": 2891.25,
-            "end_sec": 2892.0,
-            "file": "assets/rubric-clips/sales-leads-revenue-dashboards/segment-288.webm",
-            "label": "48:11.25–48:12",
-            "playback_start_sec": 2889.25,
-            "playback_end_sec": 2894.0
           },
           {
             "segment_id": 297,
