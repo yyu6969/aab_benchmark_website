@@ -95,6 +95,11 @@ def import_trial(trial, task, previous=None):
             for k, item in fresh.items():
                 if "explanation" in old[k]:
                     item["explanation"] = old[k]["explanation"]
+    # Each download is a snapshot of one specific published result.
+    if previous and previous.get("archive") and all(
+            previous.get(k) == run.get(k) for k in
+            ("job", "trial", "instruction_sha256", "status", "rows", "action_count", "runtime_seconds")):
+        run["archive"] = previous["archive"]
     return run
 
 

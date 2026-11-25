@@ -1065,7 +1065,12 @@
           "sha256": "b34117d5b186c3a4f0e5f6e8114cdd473900cb1660b2d2b00aae5f7478351dc0"
         }
       ],
-      "action_count": 76
+      "action_count": 76,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/word_pi_20261124_065906_11264167.encrypted.zip",
+        "bytes": 4006943,
+        "sha256": "7b482735b641aaa13607eca69a7e81bc3f02e5349ccac74e9810c8d701867d52"
+      }
     },
     "agent_runs": {
       "guided": {
@@ -2170,7 +2175,12 @@
           "sha256": "d91ce28e6c48893ef6b9515c8cb4d8f055e8d813d7b3a350cff88bed4ff035ab"
         }
       ],
-      "action_count": 210
+      "action_count": 210,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/outlook_pi_20261124_121840_11267497.encrypted.zip",
+        "bytes": 12922394,
+        "sha256": "3a36e41c8a11878692ce1575865316f27af5656456d016186d8db705a5d0d5f6"
+      }
     },
     "agent_runs": {
       "guided": {
@@ -3566,7 +3576,12 @@
           "sha256": "56f0248f09fbdbd6e0fe4eec8a9697d58aee1ac97e178585e36cc0e1464227fc"
         }
       ],
-      "action_count": 230
+      "action_count": 230,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/quickbooks_pi_20261124_124704_11267497.encrypted.zip",
+        "bytes": 34674657,
+        "sha256": "e5e5d7650059583aa9b2da917d908097faf537553fbbd848f1631dc39dcd79a1"
+      }
     },
     "agent_runs": {
       "guided": {
@@ -4685,7 +4700,12 @@
       "runtime_seconds": 2674,
       "total_tokens": 26573763,
       "output_files": [],
-      "action_count": 231
+      "action_count": 231,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/drchrono_pi_20261124_203057_11269929.encrypted.zip",
+        "bytes": 26611317,
+        "sha256": "32ab92a2f1635e55e78897aabb0300a661fb0730318c898c826d9ccc25a3b69a"
+      }
     },
     "agent_runs": {
       "guided": {
@@ -6272,7 +6292,12 @@
       "runtime_seconds": 3311,
       "total_tokens": 62498554,
       "output_files": [],
-      "action_count": 366
+      "action_count": 366,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/google-classroom_pi_20261124_203830_11269930.encrypted.zip",
+        "bytes": 29528682,
+        "sha256": "ed54800e0e12df96c11b0999185b2a0870a61e4fce4f4a50ccd7715089ec728a"
+      }
     },
     "agent_runs": {
       "guided": {
@@ -10201,7 +10226,12 @@
       "runtime_seconds": 1454,
       "total_tokens": 14889435,
       "output_files": [],
-      "action_count": 139
+      "action_count": 139,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/spss_pi_20261124_214031_11269933.encrypted.zip",
+        "bytes": 14685536,
+        "sha256": "709ffa59a2c91f36c3741f7f0ca588106c115b967c814452fda03b5c18505780"
+      }
     },
     "agent_runs": {
       "guided": {
@@ -14341,7 +14371,13 @@
       "judge_effort": null,
       "status": "No final verdict",
       "rows": {},
-      "evidence": {}
+      "evidence": {},
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/premiere-pro_pi_20261124_220941_11271540.encrypted.zip",
+        "bytes": 75669309,
+        "sha256": "57d6270682e95654a276185a369b72ec350a9b296b0be3d86b9a85299838b4fa",
+        "snapshot_at": "2026-11-25 05:51 UTC"
+      }
     },
     "agent_runs": {
       "guided": {
@@ -18043,7 +18079,12 @@
       "runtime_seconds": 3943,
       "total_tokens": 67454404,
       "output_files": [],
-      "action_count": 383
+      "action_count": 383,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/asana_pi_20261124_191013_11269928.encrypted.zip",
+        "bytes": 28238602,
+        "sha256": "109430d9fac8527943b27e6eb6383ef2fc495152a32a6fa6993dd0f781920432"
+      }
     },
     "agent_runs": {
       "guided": {
@@ -22494,7 +22535,12 @@
       "runtime_seconds": 6691,
       "total_tokens": 112006589,
       "output_files": [],
-      "action_count": 401
+      "action_count": 401,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/salesforce_pi_20261124_212231_11269932.encrypted.zip",
+        "bytes": 77550400,
+        "sha256": "6363032eaad80cfe27f54fd4d7307645059790477a4b7936f6fbd327afa9b985"
+      }
     },
     "agent_runs": {
       "guided": {

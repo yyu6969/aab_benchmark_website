@@ -202,6 +202,10 @@ def check():
         assert "#agent-run" in page.links
         if "instruction_run" in task:
             run = task["instruction_run"]
+            if archive := run.get("archive"):
+                assert archive["url"].endswith("/" + run["job"] + ".encrypted.zip")
+                assert archive["bytes"] > 0 and re.fullmatch(r"[0-9a-f]{64}", archive["sha256"])
+                assert page.links.count(archive["url"]) == 1
             actual = page.scores["instruction-only"]
             assert len(actual) == len(task["rubrics"])
             for rubric, cells in zip(task["rubrics"], actual):
