@@ -6726,45 +6726,35 @@
   "edit-youtube-video": [
     {
       "id": "outcome_8cb43c90cb2c4e5e86f8",
-      "criterion_sha256": "23cf470c7dc27b595327898335b80131f55b07ffc646e3d9ebe760a14929b340",
-      "description": "Full credit if a native project compatible with the required .kdenlive delivery contains a usable editable main sequence, with revisable presenter source boundaries and adjustable included graphics, cutaways, framing, and color treatments; equivalent shared adjustments and project representations qualify. Partial credit if a useful project exists but relevant structure or components are only partly editable, flattened, limited, or unestablished. No credit if no usable editable sequence exists, only a flattened output exists, or editability is merely claimed. Assess structure and adjustability here rather than separately penalizing missing or incorrect content, naming, or saved delivery. Verified external limitations explain unmet portions but do not earn outcome credit.",
+      "criterion_sha256": "ac9677994ab26414c03ef7a5b8a066544a0bb5fcd28f411eff5473156f635388",
+      "description": "Full credit if usable timeline structure preserves practical revision of the opening, closing and interior presenter edits, cutaway placement and timing, and lower-third placement and timing, with the supplied sources available for follow-on edits. Accept equivalent nested or shared structures, linked assets, precomposed graphics and source-derived intermediate media when practical project editability is preserved. Independently editable lettering, background geometry and original framing, color or cutaway-treatment parameters are not required. Partial credit if useful editing structure remains but required main-cut components or source access need repair sufficiently to obstruct follow-on edits. Unused source media outside the main sequence does not reduce credit. No credit if no usable editable main cut remains or the result consists only of flattened final output without usable editing structure. Saving and delivery are assessed separately.",
       "source": "instruction.md",
-      "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
+      "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 64,
-          "start_sec": 819.75,
-          "end_sec": 822.75,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-64.webm",
-          "label": "13:39.75–13:42.75"
-        },
-        {
-          "segment_id": 88,
-          "start_sec": 981.75,
-          "end_sec": 1014.0,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-88.webm",
-          "label": "16:21.75–16:54"
-        },
-        {
-          "segment_id": 97,
-          "start_sec": 1046.5,
-          "end_sec": 1061.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-97.webm",
-          "label": "17:26.5–17:41.5"
-        },
-        {
-          "segment_id": 174,
-          "start_sec": 1653.25,
-          "end_sec": 1663.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-174.webm",
-          "label": "27:33.25–27:43.5"
+          "segment_id": 187,
+          "start_sec": 1700.75,
+          "end_sec": 1701.75,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-187.webm",
+          "label": "28:20.75–28:21.75"
         }
       ],
       "sources": [
         {
           "name": "instruction.md",
           "references": [
+            {
+              "locator": "Line 7",
+              "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
             {
               "locator": "Line 1",
               "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
@@ -6800,7 +6790,7 @@
             },
             {
               "locator": "Line 5",
-              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\"",
+              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
               "scope": [
                 "criterion",
                 "description"
@@ -6810,10 +6800,9 @@
               ]
             },
             {
-              "locator": "Line 5",
-              "passage": "layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
               "scope": [
-                "criterion",
                 "description"
               ],
               "provenance": [
@@ -6821,19 +6810,8 @@
               ]
             },
             {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits. Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
               "scope": [
                 "description"
               ],
@@ -6842,51 +6820,24 @@
               ]
             }
           ],
-          "highlight": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive`"
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 9",
-              "passage": "A selected talking-head segment uses a modest punch-in for a tighter view of the presenter. Keep the remaining presenter segments at their standard framing.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 17",
-              "passage": "Use a warm, bright camera treatment with enhanced contrast and vibrant saturation. Keep this appearance consistent across the edited presenter shots while retaining each segment’s individual framing.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
+          "highlight": "an editable YouTube video project, \"Justin Edit,\""
         }
       ]
     },
     {
       "id": "outcome_7ab45f3b81373f1d39e5",
-      "criterion_sha256": "35037283091ba549b90b12cf00decd5f6a0011242e93b9ec2a27ba62d40a9529",
-      "description": "Full credit if the project name or project filename stem is exactly Justin Edit; a saved file is not required. Assess naming independently of project compatibility and workspace access. Partial credit if the assigned name is a recognizable near-match with a minor discrepancy. No credit if no project exists, the project remains unnamed or has an unrelated name, or Justin Edit appears only in an unsupported claim or auxiliary text. If an evidenced uncontrollable blocker prevents assigning the name, record it in reality_notes or the scoring justification rather than attributing the missing name to agent-controllable failure. The required name remains unmet, and a blocker report alone earns no naming credit.",
+      "criterion_sha256": "2738d006633077bdba06cebf21374a552fc4a9dc463006a3dd3e86118efdda92",
+      "description": "Full credit if the assigned project name or project filename stem is exactly Justin Edit. Partial credit for a recognizable near-match with a minor discrepancy. No credit if the project is absent, unnamed, or assigned an unrelated name. A saved file is not necessary for this naming item.",
       "source": "instruction.md",
       "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 4,
-          "start_sec": 48.0,
-          "end_sec": 49.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-4.webm",
-          "label": "0:48–0:49.5"
+          "segment_id": 2,
+          "start_sec": 27.5,
+          "end_sec": 31.5,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-2.webm",
+          "label": "0:27.5–0:31.5"
         }
       ],
       "sources": [
@@ -6908,7 +6859,6 @@
               "locator": "Line 7",
               "passage": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive`",
               "scope": [
-                "criterion",
                 "description"
               ],
               "provenance": [
@@ -6922,18 +6872,18 @@
     },
     {
       "id": "outcome_97884da3da28b028da7e",
-      "criterion_sha256": "2f90993c0e70f8949f99b882568e5dbe08a1f911eba5ddf584e5ead4bda7ae32",
-      "description": "Full credit if the complete supplied presenter recording remains in the project's media collection with usable video and supplied audio streams. A content-equivalent relocated copy qualifies, and source marks or timeline trims do not themselves make the imported source incomplete. Partial credit if the correct entry is offline, incomplete, or partly usable. No credit if it is absent, references different footage, or inclusion is merely claimed. Verified external dependency failures must be distinguished from controllable omissions, but earn no credit beyond the achieved source-media state.",
+      "criterion_sha256": "e3b11a3bfa1dd588882e2f8cb3830cdde8938925747f888d6ea07f8f088cc480",
+      "description": "Full credit if the media collection contains the complete supplied presenter recording with usable video and source audio. A content-equivalent relocated copy is acceptable. Partial credit if the correct entry is present but offline, incomplete, or partly usable. No credit if it is absent or references different footage.",
       "source": "instruction.md",
       "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 11,
-          "start_sec": 197.5,
-          "end_sec": 200.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-11.webm",
-          "label": "3:17.5–3:20.5"
+          "segment_id": 9,
+          "start_sec": 176.75,
+          "end_sec": 178.25,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-9.webm",
+          "label": "2:56.75–2:58.25"
         }
       ],
       "sources": [
@@ -6953,7 +6903,28 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
+              "passage": "all supplied media remains organized and available for review and follow-on edits.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/`",
               "scope": [
                 "description"
               ],
@@ -6969,29 +6940,9 @@
           "references": [
             {
               "locator": "media streams",
-              "passage": "{\"programs\": [], \"streams\": [{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}, {\"index\": 1, \"codec_name\": \"aac\", \"codec_type\": \"audio\", \"sample_rate\": \"44100\", \"channels\": 2, \"avg_frame_rate\": \"0/0\"}], \"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"316.534422\"}}",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "frame at 31.6534 seconds",
-              "passage": "A presenter wearing a black T-shirt sits facing the camera, with clasped hands, a white desk in the foreground, and shelving behind him.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "media streams",
               "passage": "\"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"316.534422\"}",
               "scope": [
-                "description"
+                "criterion"
               ],
               "provenance": [
                 "completion"
@@ -7026,9 +6977,11 @@
               "locator": "Line 5",
               "passage": "The presenter’s picture and dialogue from `Camera-Recording.mp4` lead the video.",
               "scope": [
+                "description",
                 "criterion"
               ],
               "provenance": [
+                "completion",
                 "source inspection"
               ]
             }
@@ -7038,8 +6991,8 @@
     },
     {
       "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
-      "criterion_sha256": "b4cc05eabb3ee0d24f56f0004e184da622dedd402950a82ac612171863121500",
-      "description": "Full credit if the complete supplied screen recording remains in the media collection with usable video and audio. A content-equivalent relocated copy qualifies. Partial credit if the correct entry is offline, incomplete, or partly usable. No credit if absent, associated with different media, or merely claimed. Timeline placement is unnecessary. Distinguish verified external access failures from controllable omissions, and award credit only for the source-media state established.",
+      "criterion_sha256": "3180f2eed94dc922305afba6d56eb953600a905aea81922bd75208a2d9d1fa4c",
+      "description": "Full credit if the media collection contains the complete supplied screen recording with usable video and audio. A content-equivalent relocated copy is acceptable. Partial credit if the correct entry is present but offline, incomplete, or partly usable. No credit if it is absent or references different media. Timeline use is not required.",
       "source": "instruction.md",
       "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
       "locator": "document",
@@ -7066,6 +7019,27 @@
               "provenance": [
                 "completion"
               ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "all supplied media remains organized and available for review and follow-on edits.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/`",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
             }
           ],
           "highlight": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/`"
@@ -7075,7 +7049,7 @@
           "references": [
             {
               "locator": "media streams",
-              "passage": "{\"programs\": [], \"streams\": [{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 3840, \"height\": 2160, \"avg_frame_rate\": \"100440/3349\"}, {\"index\": 1, \"codec_name\": \"aac\", \"codec_type\": \"audio\", \"sample_rate\": \"48000\", \"channels\": 2, \"avg_frame_rate\": \"0/0\"}], \"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"111.666667\"}}",
+              "passage": "\"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"111.666667\"}",
               "scope": [
                 "criterion"
               ],
@@ -7085,17 +7059,7 @@
             },
             {
               "locator": "frame at 55.8333 seconds",
-              "passage": "A YouTube search-results page displays the query “video editing mac” and video-editing tutorial thumbnails.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "media streams",
-              "passage": "\"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"111.666667\"}",
+              "passage": "The visible frame is a desktop screen recording of YouTube search results, with “video editing mac” in the search field.",
               "scope": [
                 "description"
               ],
@@ -7129,115 +7093,18 @@
     },
     {
       "id": "outcome_d85870a880012c1e2336",
-      "criterion_sha256": "f34f1bbf93a413a09f36534b9c2cfeb2acfa2f3e2d3afbae22e19137d688f9b1",
-      "description": "Full credit if the complete supplied waterfall file remains in the media collection with usable video; its lack of an audio stream requires no repair. A content-equivalent relocated copy qualifies. Partial credit if the correct entry is offline, incomplete, or partly usable. No credit if absent, associated with different footage, or merely claimed. Source marks do not remove availability of the underlying full source. Verified external failures explain unmet portions but do not replace the required resulting state.",
+      "criterion_sha256": "9a60d01e387a9a23fdef168ec2cebfcdbd9fc7441b0da94bd04b80ac78c43677",
+      "description": "Full credit if the media collection contains the complete supplied waterfall clip with usable video. A content-equivalent relocated copy is acceptable. Partial credit if the correct entry is present but offline, incomplete, or partly usable. No credit if it is absent or references different footage. Source audio is not required because the supplied file has no audio stream.",
       "source": "instruction.md",
       "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 44,
-          "start_sec": 707.5,
-          "end_sec": 708.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-44.webm",
-          "label": "11:47.5–11:48.5"
-        }
-      ],
-      "sources": [
-        {
-          "name": "instruction.md",
-          "references": [
-            {
-              "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ],
-          "highlight": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/`"
-        },
-        {
-          "name": "IMG_0133.MOV",
-          "references": [
-            {
-              "locator": "media streams",
-              "passage": "{\"programs\": [], \"streams\": [{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}], \"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"129.767000\"}}",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "frame at 12.9767 seconds",
-              "passage": "A person swings on a rope over a pool beside a broad, low waterfall surrounded by trees.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "media streams",
-              "passage": "\"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"129.767000\"}",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "media streams",
-              "passage": "{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "source inspection"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "outcome_96c65b3434d993e6ce4b",
-      "criterion_sha256": "55f905234e73079c8ca23dc58e6f297dfb33d082d024b41821656881e95b861e",
-      "description": "Full credit if the complete supplied ocean file remains in the media collection with usable video; its lack of an audio stream requires no repair. A content-equivalent relocated copy qualifies. Partial credit if the correct entry is offline, incomplete, or partly usable. No credit if absent, associated with different footage, or merely claimed. Assess source availability independently of the separate uncertainty about moving imagery and stabilization. Verified external failures do not themselves earn outcome credit.",
-      "source": "instruction.md",
-      "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
-      "locator": "document",
-      "clips": [
-        {
-          "segment_id": 48,
-          "start_sec": 725.5,
-          "end_sec": 742.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-48.webm",
-          "label": "12:05.5–12:22.5"
+          "segment_id": 9,
+          "start_sec": 176.75,
+          "end_sec": 178.25,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-9.webm",
+          "label": "2:56.75–2:58.25"
         }
       ],
       "sources": [
@@ -7267,7 +7134,135 @@
             },
             {
               "locator": "Line 3",
-              "passage": "so all supplied media remains organized and available for review and follow-on edits.",
+              "passage": "all supplied media remains organized and available for review and follow-on edits.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/`",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/`"
+        },
+        {
+          "name": "IMG_0133.MOV",
+          "references": [
+            {
+              "locator": "media streams",
+              "passage": "\"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"129.767000\"}",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "frame at 12.9767 seconds",
+              "passage": "A person swings from a rope over a pool beside a broad waterfall in a wooded setting.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "media streams",
+              "passage": "{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "media streams",
+              "passage": "{\"programs\": [], \"streams\": [{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}], \"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"129.767000\"}}",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
+              "scope": [
+                "description",
+                "criterion"
+              ],
+              "provenance": [
+                "completion",
+                "source inspection"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outcome_96c65b3434d993e6ce4b",
+      "criterion_sha256": "2d5ce0987017c8b564de17b4e0a85a42550c6f55a1593da081e4d610b487f7d0",
+      "description": "Full credit if the media collection contains the complete supplied ocean clip with usable video. A content-equivalent relocated copy is acceptable. Partial credit if the correct entry is present but offline, incomplete, or partly usable. No credit if it is absent or references different footage. Source audio is not required because the supplied file has no audio stream.",
+      "source": "instruction.md",
+      "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 9,
+          "start_sec": 176.75,
+          "end_sec": 178.25,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-9.webm",
+          "label": "2:56.75–2:58.25"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 1",
+              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "all supplied media remains organized and available for review and follow-on edits.",
               "scope": [
                 "description"
               ],
@@ -7303,9 +7298,10 @@
             },
             {
               "locator": "frame at 8.9367 seconds",
-              "passage": "Image #7 shows boats and people in breaking ocean waves beneath a cloudy sky.",
+              "passage": "Visible feature: small rowing boats among breaking ocean waves.",
               "scope": [
-                "criterion"
+                "criterion",
+                "description"
               ],
               "provenance": [
                 "completion"
@@ -7322,38 +7318,13 @@
               ]
             }
           ]
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "The ocean footage has smooth, stabilized motion.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
         }
       ]
     },
     {
       "id": "outcome_aad9033bfd31446528cf",
-      "criterion_sha256": "db773c78887bd55148bee0c2bef93c346fb27236b3fc4f26812dd807af442d53",
-      "description": "Full credit if the complete supplied outdoor-presenter clip remains in the media collection with usable video. It has no supplied audio, so audio is unnecessary; a content-equivalent relocated copy qualifies. Partial credit if the correct entry is offline, incomplete, or partly usable. No credit if absent, associated with different footage, or merely claimed. Timeline placement is unnecessary. Distinguish verified external failures from controllable omissions without awarding credit for blocker reports alone.",
+      "criterion_sha256": "4817653d437972c92b535de5083830dc2f8d53ca4db5be0fe8497c090e68e8e2",
+      "description": "Full credit if the media collection contains the complete supplied outdoor presenter clip with usable video. No audio is required because the supplied clip has no audio stream. A content-equivalent relocated copy is acceptable. Partial credit if the correct entry is present but offline, incomplete, or partly usable. No credit if it is absent or references different footage. Timeline use is not required.",
       "source": "instruction.md",
       "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
       "locator": "document",
@@ -7382,8 +7353,18 @@
               ]
             },
             {
+              "locator": "Line 1",
+              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
               "locator": "Line 3",
-              "passage": "so all supplied media remains organized and available for review and follow-on edits.",
+              "passage": "all supplied media remains organized and available for review and follow-on edits.",
               "scope": [
                 "description"
               ],
@@ -7419,7 +7400,17 @@
             },
             {
               "locator": "frame at 1.0767 seconds",
-              "passage": "Image #13 shows an outdoor talking-head view with the sea and cloudy sky behind the presenter.",
+              "passage": "Visible feature: a soft, low-detail image of a man outdoors with a beach and ocean behind him.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "frame at 1.0767 seconds",
+              "passage": "Visible feature: a man outdoors with a beach and ocean behind him.",
               "scope": [
                 "description"
               ],
@@ -7443,8 +7434,8 @@
     },
     {
       "id": "outcome_70ee0e0a4dbf5f2aa9e7",
-      "criterion_sha256": "9ee66a5fc1f08199f05b9ffb55488bb976f027df5a6a9917e9d7cf39f59ca1dd",
-      "description": "Full credit if the complete supplied soundtrack remains in the media collection as resolved usable audio; a content-equivalent relocated copy qualifies. Partial credit if the correct entry is offline, incomplete, or partly usable. No credit if absent, associated with different audio, or merely claimed. Assess source availability separately from placement and perceived mix quality. Verified external failures explain unmet portions but do not themselves earn credit.",
+      "criterion_sha256": "df1f7bad0a2d7c9d91a7391195dfa930c79696b887467721bd42ad11d3f0b8ec",
+      "description": "Full credit if the media collection contains the complete supplied soundtrack with usable audio. A content-equivalent relocated copy is acceptable. Partial credit if the correct entry is present but offline, incomplete, or partly usable. No credit if it is absent or references different audio. Timeline placement and mixing are assessed separately.",
       "source": "instruction.md",
       "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
       "locator": "document",
@@ -7473,8 +7464,29 @@
               ]
             },
             {
+              "locator": "Line 1",
+              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
               "locator": "Line 3",
-              "passage": "so all supplied media remains organized and available for review and follow-on edits.",
+              "passage": "all supplied media remains organized and available for review and follow-on edits.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
               "scope": [
                 "description"
               ],
@@ -7484,7 +7496,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project",
+              "passage": "the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project",
               "scope": [
                 "description"
               ],
@@ -7517,6 +7529,16 @@
               "provenance": [
                 "completion"
               ]
+            },
+            {
+              "locator": "media streams",
+              "passage": "\"format\": {\"format_name\": \"mp3\", \"duration\": \"230.808000\"}",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
             }
           ]
         },
@@ -7540,7 +7562,7 @@
     {
       "id": "outcome_057743dde5cbe9d3fafd",
       "criterion_sha256": "1788234dd1dc55d944d7fa93c254f0f856f2d44e577d41434676f31d3d4cd4b9",
-      "description": "Full credit if represented supplied-media entries are easy to distinguish and locate through retained source filenames or equivalent clear labels in a coherent media collection. A clearly labeled flat collection is sufficient; no particular bins or folder hierarchy are required. Partial credit if labeling or arrangement makes some represented entries difficult to distinguish or locate. No credit if represented entries lack identifiable organization. Assess only organization here: do not reduce credit solely for missing assets or unusable source links, which are assessed under their individual criteria. If no supplied entries are represented, record organization as unassessable rather than adding another penalty for their absence; this does not establish that organization was achieved. Record any evidence-supported environmental blocker preventing organization in reality_notes or the scoring justification, separately from agent-controllable labeling or arrangement failures. A blocker report alone earns no outcome credit.",
+      "description": "Full credit if represented supplied-media entries are easy to distinguish and locate through retained filenames or equivalent clear labels in a coherent collection. A clearly labeled flat collection is sufficient. Partial credit if some represented entries are difficult to identify or locate. No credit if represented entries lack identifiable organization. Assess missing assets and unusable links under their source items. If no supplied entries exist, organization is unassessable rather than an additional absence penalty.",
       "source": "instruction.md",
       "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
       "locator": "document",
@@ -7569,8 +7591,18 @@
               ]
             },
             {
+              "locator": "Line 1",
+              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
               "locator": "Line 3",
-              "passage": "so all supplied media remains organized and available for review and follow-on edits.",
+              "passage": "all supplied media remains organized and available for review and follow-on edits.",
               "scope": [
                 "criterion",
                 "description"
@@ -7825,159 +7857,14 @@
       ]
     },
     {
-      "id": "outcome_71cfbecccbf035259a94",
-      "criterion_sha256": "f3392f2bc3a98fe1460e75e9291634c921e3d980135332a18658e3420b1dd2ec",
-      "description": "Full credit if the supplied camera picture and corresponding dialogue populate the editable cut with visibly aligned source ranges and playback timing across its opening, interior edits, and ending. Equivalent demonstrated synchronization qualifies; a particular stereo playback layout is unnecessary. Partial credit if a required component is missing or a localized source-timing defect remains. No credit if neither required component is present, wrong-source material substitutes for them, substantial misalignment remains, or synchronization is merely claimed. Source inclusion is assessed separately; semantic dialogue removal and audible join quality remain outside this structural check. Verified external limitations do not establish synchronization or earn credit by themselves.",
-      "source": "justin_edit_visual_reference.md",
-      "passage": "The presenter’s picture and dialogue from `Camera-Recording.mp4` lead the video.",
-      "locator": "document",
-      "clips": [
-        {
-          "segment_id": 11,
-          "start_sec": 197.5,
-          "end_sec": 200.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-11.webm",
-          "label": "3:17.5–3:20.5"
-        },
-        {
-          "segment_id": 43,
-          "start_sec": 660.5,
-          "end_sec": 707.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-43.webm",
-          "label": "11:00.5–11:47.5"
-        }
-      ],
-      "sources": [
-        {
-          "name": "instruction.md",
-          "references": [
-            {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Run the background music track across the full edited sequence, aligned cleanly to the end of the cut, while keeping spoken dialogue and music separated and balanced for clear speech.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits. Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ],
-          "highlight": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage."
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "The presenter’s picture and dialogue from `Camera-Recording.mp4` lead the video.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "The presenter’s picture and dialogue from `Camera-Recording.mp4` lead the video. Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Camera-Recording.mp4",
-          "references": [
-            {
-              "locator": "media streams",
-              "passage": "{\"index\": 1, \"codec_name\": \"aac\", \"codec_type\": \"audio\", \"sample_rate\": \"44100\", \"channels\": 2, \"avg_frame_rate\": \"0/0\"}",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "outcome_0361cdd163e26eaab559",
-      "criterion_sha256": "78f5adfed775c80e8f37465d81d88b7a3d5bba357b3458506bcc7ac042bba012",
-      "description": "Full credit if the sequence matches both the supplied camera dimensions and 30/1 frame rate. Partial credit if only some matching characteristics are established or a supported characteristic is incorrect. No credit if no matching sequence characteristics are established. Do not require progressive scanning, BT.709, source codecs, source duration, or source audio sample rate from the supplied evidence. Verified application limitations explain unachieved configuration but earn no credit themselves.",
+      "criterion_sha256": "1473145b22b6a6ec50b66cf1001e879a01320d1a7e1184c760924b43bd5d7ac7",
+      "description": "Full credit if both sequence picture dimensions and frame rate match the supplied camera source. Partial credit if one matches and the other is incorrect. No credit if neither matches or no usable sequence exists. Source codecs, duration, frame count and audio sample rate are not additional requirements for this item.",
       "source": "instruction.md",
       "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 195,
-          "start_sec": 1751.75,
-          "end_sec": 1753.25,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-195.webm",
-          "label": "29:11.75–29:13.25"
-        },
-        {
           "segment_id": 11,
           "start_sec": 197.5,
           "end_sec": 200.5,
@@ -8024,17 +7911,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Run the background music track across the full edited sequence, aligned cleanly to the end of the cut, while keeping spoken dialogue and music separated and balanced for clear speech.",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage. Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
               "scope": [
                 "description"
               ],
@@ -8085,6 +7962,16 @@
               "provenance": [
                 "completion"
               ]
+            },
+            {
+              "locator": "media streams",
+              "passage": "\"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
             }
           ]
         }
@@ -8092,8 +7979,8 @@
     },
     {
       "id": "outcome_0375f9f95947b3e2f72b",
-      "criterion_sha256": "1e92e03fe28a26a20e1da74a7f949f86f0fb9822f756d4fbaa1bc985bbc30243",
-      "description": "Full credit if the delivered editable project's main sequence is named exactly \"YouTube\", whether named at creation or renamed later. Partial credit if the correct name is applied to the main sequence but has not been saved. No credit if the intended main sequence lacks the required name or the naming outcome is supported only by an assertion. Assess the final main sequence rather than which sequence was renamed. Record verified external blockers separately; a blocker or blocker report does not itself earn outcome credit.",
+      "criterion_sha256": "5f1ed34fbde7fa89591a00f949ce9c891d09d888d157be13b6f47c30456a9f4e",
+      "description": "Full credit if the delivered project's main sequence is named exactly YouTube. No credit if the main sequence is absent or has another name. Other sequence names, provisional text-entry states, previous names and naming methods do not affect this item.",
       "source": "instruction.md",
       "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
       "locator": "document",
@@ -8122,11 +8009,10 @@
               ]
             },
             {
-              "locator": "Line 7",
-              "passage": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive`",
+              "locator": "Line 1",
+              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
               "scope": [
-                "criterion",
-                "description"
+                "criterion"
               ],
               "provenance": [
                 "completion"
@@ -8138,19 +8024,217 @@
       ]
     },
     {
-      "id": "outcome_0620272a831951f07eb2",
-      "criterion_sha256": "d16a076909beb083bf79f55199d2514b5cdb3fcc6d7280f7a01ffe7dbec61c71",
-      "description": "Full credit if retained presenter content begins without an empty leading interval and its edited picture and corresponding dialogue meet without unintended timeline gaps. Removed intervals must be omitted rather than left as empty space; no fixed total duration is required. Partial credit if limited residual gaps remain. No credit if substantial gaps remain, no meaningful presenter cut exists, or the state is unsupported. Natural pauses within retained source clips are not empty timeline gaps. Assess structural gaps independently of source synchronization and audible speech quality; verified external blockers do not themselves establish gap closure.",
+      "id": "outcome_dfdc7179a1e99af5cb8f",
+      "criterion_sha256": "ab1621babc1325ba3460e04412a2811985a20e98221ed9a929d7463106ad9f46",
+      "description": "Full credit if opening setup is removed from presenter picture and dialogue, and the cut retains the intended opening utterance intact. Accept any content-appropriate source in-point or equivalent edit; no exact timecode or trimming method is required. Partial credit if setup is reduced but some remains, or the opening utterance is slightly clipped. No credit if setup remains untrimmed or substantial intended opening speech is lost.",
       "source": "instruction.md",
       "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 43,
-          "start_sec": 660.5,
-          "end_sec": 707.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-43.webm",
-          "label": "11:00.5–11:47.5"
+          "segment_id": 26,
+          "start_sec": 524.5,
+          "end_sec": 536.5,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-26.webm",
+          "label": "8:44.5–8:56.5"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 3",
+              "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits. Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage. Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "Trim the unedited setup at the head and tail"
+        },
+        {
+          "name": "Camera-Recording.mp4",
+          "references": [
+            {
+              "locator": "speech transcript 0.00–60.00s (automatic)",
+              "passage": "[2.26–4.14s] All right, we are recording.\n[4.94–6.24s] Let's check the microphone.\n[6.64–7.88s] One, two, one, two.\n[8.08–9.58s] Testing, testing, one, two.\n[10.16–11.90s] Looks like microphone is all good.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "speech transcript 0.00–60.00s (automatic)",
+              "passage": "[31.80–33.46s] You could have the world's best video,\n[33.46–36.50s] but if no one clicks on it, no one's going to see it.\n[36.70–38.42s] So you need to get your content clicked.\n[38.90–41.58s] And that's where your thumbnail image is super important.\n[42.06–45.60s] Better do that again.\n[59.62–60.00s] You could have...",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "The presenter’s picture and dialogue from `Camera-Recording.mp4` lead the video.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outcome_d048632667e0604f2e0b",
+      "criterion_sha256": "4f3f7c0470df2f866740766724fff68d3210014e4a2cdce681a2580a945ca1f4",
+      "description": "Full credit if the final cut preserves the intended concluding delivery and removes subsequent closing setup from both picture and dialogue. Judge the boundary from content and accept any equivalent edit; no exact out-point or trimming method is required. Partial credit if some closing setup remains or the conclusion is slightly truncated. No credit if the unedited tail remains or the intended conclusion is substantially lost.",
+      "source": "instruction.md",
+      "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 28,
+          "start_sec": 565.0,
+          "end_sec": 570.0,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-28.webm",
+          "label": "9:25–9:30"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 3",
+              "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits. Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage. Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "Trim the unedited setup at the head and tail"
+        },
+        {
+          "name": "Camera-Recording.mp4",
+          "references": [
+            {
+              "locator": "speech transcript 256.53–316.53s (automatic)",
+              "passage": "[289.99–295.95s] If there's too much going on in your thumbnail image, too much text or too much happening,\n[296.29–298.21s] your viewers are going to click on something else.\n[301.26–302.68s] Okay, I think that's pretty good.\n[311.15–312.45s] Let's stop recording.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "speech transcript 256.53–316.53s (automatic)",
+              "passage": "[301.26–302.68s] Okay, I think that's pretty good.\n[311.15–312.45s] Let's stop recording.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "The presenter’s picture and dialogue from `Camera-Recording.mp4` lead the video.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outcome_8a779ec83812ad61270f",
+      "criterion_sha256": "854c959c392b226167fa481f23f30da433090e398decc39112afc9e89aa11a93",
+      "description": "Full credit if the finished presenter cut is cleaned throughout, with unwanted takes, false starts and dead-air passages absent from the audible and visible edit and the intended surrounding delivery preserved. Any editorial implementation that achieves this result qualifies; retaining source picture fully covered by a cutaway does not itself reduce credit. Silence alone does not identify unwanted content. Partial credit if cleanup is incomplete or some intended surrounding delivery is unnecessarily cut. No credit if qualifying interior problems remain substantially unedited in the audible or visible sequence or intended delivery is substantially lost. Two local removals alone do not establish whole-cut cleanup.",
+      "source": "instruction.md",
+      "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 42,
+          "start_sec": 658.5,
+          "end_sec": 660.5,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-42.webm",
+          "label": "10:58.5–11:00.5"
         }
       ],
       "sources": [
@@ -8172,17 +8256,7 @@
               "locator": "Line 3",
               "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage. Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
               "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
-              "scope": [
-                "description"
+                "criterion"
               ],
               "provenance": [
                 "completion"
@@ -8190,7 +8264,7 @@
             },
             {
               "locator": "Line 5",
-              "passage": "while keeping spoken dialogue and music separated and balanced for clear speech.",
+              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
               "scope": [
                 "description"
               ],
@@ -8205,245 +8279,12 @@
     },
     {
       "id": "outcome_a4a65c38d61ff689062b",
-      "criterion_sha256": "e73ad8440e9e99adbbf3d945a871bb18b61426f0993a0b743ddb3c2e6858378d",
-      "description": "Full credit if the supplied waterfall imagery visibly replaces the presenter picture as a layered cutaway in the main sequence. Partial credit if the correct footage appears but visibility or layering is incomplete. No credit if absent, invisible, from the wrong source, or unsupported. No track number or exact source or sequence position is mandatory. Semantic relevance to the remarks is withheld under a separate flag. Verified external access failures do not establish the visual result.",
+      "criterion_sha256": "bf573d726839ebaac5040e3651a54187f640b058065352b214f85d889e72240d",
+      "description": "Full credit if the supplied waterfall footage visibly overlays the presenter during editorially relevant remarks. Partial credit if the correct footage appears but its relevance or layering is incomplete. No credit if the cutaway is absent, invisible, from the wrong source, or unrelated to the remarks. No particular track number, source in-point or sequence timestamp is required.",
       "source": "justin_edit_visual_reference.md",
       "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
       "locator": "document",
       "clips": [
-        {
-          "segment_id": 83,
-          "start_sec": 942.5,
-          "end_sec": 957.0,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-83.webm",
-          "label": "15:42.5–15:57"
-        }
-      ],
-      "sources": [
-        {
-          "name": "instruction.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ],
-          "highlight": "layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue."
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IMG_0133.MOV",
-          "references": [
-            {
-              "locator": "frame at 12.9767 seconds",
-              "passage": "Image #4 visibly shows a person suspended from a rope above a pool in front of a broad waterfall.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "outcome_39af0f27c2677e637b6c",
-      "criterion_sha256": "7fff2f429315d5872b7bb5bc22191d1fe7c5601adf0dcd8a5dc38304f911f574",
-      "description": "Full credit if the supplied ocean imagery visibly replaces the presenter picture as a layered cutaway in the main sequence. Partial credit if the correct footage appears but visibility or layering is incomplete. No credit if absent, invisible, from the wrong source, or unsupported. No track number or exact source or sequence position is mandatory. Assess semantic relevance and motion quality under their separate flags. Verified external failures do not establish the visual result.",
-      "source": "justin_edit_visual_reference.md",
-      "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-      "locator": "document",
-      "clips": [
-        {
-          "segment_id": 109,
-          "start_sec": 1130.75,
-          "end_sec": 1182.75,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-109.webm",
-          "label": "18:50.75–19:42.75"
-        }
-      ],
-      "sources": [
-        {
-          "name": "instruction.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ],
-          "highlight": "layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue."
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "The ocean footage has smooth, stabilized motion.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IMG_0261.MOV",
-          "references": [
-            {
-              "locator": "frame at 8.9367 seconds",
-              "passage": "Image #7 visibly shows two rowing boats in breaking ocean surf beneath a cloudy sky.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "outcome_d146d1057b4367cea557",
-      "criterion_sha256": "8354214e86451072d5b8cb6d28aa5dcade9c5a267e9172d48e2beb580e0ff9a1",
-      "description": "Full credit if the cutaway occupies approximately five seconds of sequence time, without requiring an exact frame count. Partial credit if it remains a short cutaway but noticeably deviates from the requested duration. No credit if its duration is substantially incompatible, absent, or unsupported. If a verified source or project limitation prevents the required duration, record that blocker in reality_notes or the scoring justification without attributing it to an agent-controlled trim error or granting full credit for the missing result.",
-      "source": "justin_edit_visual_reference.md",
-      "passage": "The waterfall cutaway lasts approximately five seconds and opens with a brief dip to white.",
-      "locator": "document",
-      "clips": [
-        {
-          "segment_id": 46,
-          "start_sec": 716.5,
-          "end_sec": 720.75,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-46.webm",
-          "label": "11:56.5–12:00.75"
-        },
         {
           "segment_id": 48,
           "start_sec": 725.5,
@@ -8478,281 +8319,10 @@
               ]
             },
             {
-              "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ],
-          "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "The waterfall cutaway lasts approximately five seconds and opens with a brief dip to white.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IMG_0133.MOV",
-          "references": [
-            {
-              "locator": "media streams",
-              "passage": "\"duration\": \"129.767000\"",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "outcome_85af92db3bc5cd05bc9b",
-      "criterion_sha256": "20917f31c47457bc9c056f6ec21ec4f97eabf158f247f8a26c2186bfdbbdcfa6",
-      "description": "Full credit if the resulting entrance transitions briefly through white into the waterfall footage. Partial credit if a white entrance treatment is present but incomplete, prolonged, or mistimed. No credit if absent, replaced solely by another transition, or unsupported. Any equivalent implementation qualifies; no comparative shortening operation, original duration, exact duration, or named-effect control is required. Verified platform limitations do not establish the treatment or earn credit themselves.",
-      "source": "justin_edit_visual_reference.md",
-      "passage": "The waterfall cutaway lasts approximately five seconds and opens with a brief dip to white.",
-      "locator": "document",
-      "clips": [
-        {
-          "segment_id": 88,
-          "start_sec": 981.75,
-          "end_sec": 1014.0,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-88.webm",
-          "label": "16:21.75–16:54"
-        }
-      ],
-      "sources": [
-        {
-          "name": "instruction.md",
-          "references": [
-            {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ],
-          "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "The waterfall cutaway lasts approximately five seconds and opens with a brief dip to white.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "outcome_9b50e22ca64f65ba5aa3",
-      "criterion_sha256": "642b44f023d411ba8755290f3acfc20e8beefce0c54c25e5367cee86339ac90f",
-      "description": "Full credit if both cutaways contribute no source audio; the supplied files' inherent lack of audio streams satisfies this constraint without an audio-removal operation. Partial credit if audio omission is established for only one cutaway. No credit if both contribute source audio or omission is unsupported. Judge audio contribution rather than whether a particular removal procedure was performed. This criterion does not establish that either required visual cutaway is present.",
-      "source": "justin_edit_visual_reference.md",
-      "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-      "locator": "document",
-      "clips": [
-        {
-          "segment_id": 51,
-          "start_sec": 750.0,
-          "end_sec": 772.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-51.webm",
-          "label": "12:30–12:52.5"
-        }
-      ],
-      "sources": [
-        {
-          "name": "instruction.md",
-          "references": [
-            {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ],
-          "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
-        },
-        {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IMG_0133.MOV",
-          "references": [
-            {
-              "locator": "media streams",
-              "passage": "{\"programs\": [], \"streams\": [{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}], \"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"129.767000\"}}",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IMG_0261.MOV",
-          "references": [
-            {
-              "locator": "media streams",
-              "passage": "{\"programs\": [], \"streams\": [{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}], \"format\": {\"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\", \"duration\": \"89.367000\"}}",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "outcome_a302bc8b32469b133876",
-      "criterion_sha256": "9fe8adbc1f571cf413038ac46c523b03e2d38fed348f69b98978f2e6593b75f3",
-      "description": "Full credit if visible native sequence evidence establishes retained, unmuted presenter audio across both cutaway spans and their boundaries without gaps or truncation introduced by the additions. Partial credit if this is established for only one cutaway or a localized interruption remains. No credit if dialogue is substantially missing or interrupted beneath both, or the structural continuity is unsupported. Do not rescore unrelated incoming speech defects or infer audible quality from a waveform. Verified upstream failures explain unmet continuity but do not establish it.",
-      "source": "justin_edit_visual_reference.md",
-      "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
-      "locator": "document",
-      "clips": [
-        {
-          "segment_id": 51,
-          "start_sec": 750.0,
-          "end_sec": 772.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-51.webm",
-          "label": "12:30–12:52.5"
-        }
-      ],
-      "sources": [
-        {
-          "name": "instruction.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
               "locator": "Line 5",
               "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
               "scope": [
                 "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Trim the unedited setup at the head and tail and cut out interior mistakes, false starts, or dead air so the spoken delivery flows smoothly without gaps.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Run the background music track across the full edited sequence, aligned cleanly to the end of the cut, while keeping spoken dialogue and music separated and balanced for clear speech.",
-              "scope": [
                 "description"
               ],
               "provenance": [
@@ -8781,19 +8351,19 @@
       ]
     },
     {
-      "id": "outcome_525771b0e899cc2c2390",
-      "criterion_sha256": "b0d7269d7f9ceed55846334c30c99e851e966d7d983cb9d38b8b2bb1b56ff3fd",
-      "description": "Full credit if the graphic contains exactly JUSTIN BROWN, preserving capitalization and spacing. Partial credit if the intended name is recognizable but has a spelling, capitalization, spacing, or extra-text error. No credit if the text is absent, identifies someone else, or is only claimed without supporting evidence. Assess text accuracy independently of editability and timeline placement. If an evidenced environment blocker prevents the required text state, record that attribution in reality_notes or the scoring justification; the required text remains unmet, and reporting the blocker does not substitute for producing it.",
+      "id": "outcome_39af0f27c2677e637b6c",
+      "criterion_sha256": "b10ea9e0efaaf06df4df4fa0bf509903c747d99b614f9f243eb563fb280236dc",
+      "description": "Full credit if the supplied ocean footage visibly overlays the presenter during editorially relevant remarks. Partial credit if the correct footage appears but its relevance or layering is incomplete. No credit if the cutaway is absent, invisible, from the wrong source, or unrelated to the remarks. No particular track number, source in-point or sequence timestamp is required. Motion quality is assessed separately.",
       "source": "justin_edit_visual_reference.md",
-      "passage": "The opening name graphic reads **JUSTIN BROWN** in white uppercase **Oswald Bold**.",
+      "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 67,
-          "start_sec": 826.75,
-          "end_sec": 854.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-67.webm",
-          "label": "13:46.75–14:14.5"
+          "segment_id": 51,
+          "start_sec": 750.0,
+          "end_sec": 772.5,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-51.webm",
+          "label": "12:30–12:52.5"
         }
       ],
       "sources": [
@@ -8801,11 +8371,10 @@
           "name": "instruction.md",
           "references": [
             {
-              "locator": "Line 5",
-              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\"",
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
               "scope": [
-                "criterion",
-                "description"
+                "criterion"
               ],
               "provenance": [
                 "completion"
@@ -8823,9 +8392,381 @@
               ]
             },
             {
-              "locator": "Line 7",
-              "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
+              "locator": "Line 5",
+              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
               "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue."
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "The ocean footage has smooth, stabilized motion.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outcome_d146d1057b4367cea557",
+      "criterion_sha256": "8354214e86451072d5b8cb6d28aa5dcade9c5a267e9172d48e2beb580e0ff9a1",
+      "description": "Full credit if the cutaway occupies approximately five seconds of sequence time without requiring an exact frame count. Partial credit if it remains a short cutaway but noticeably deviates from the requested duration. No credit if the duration is substantially incompatible or the cutaway is absent.",
+      "source": "justin_edit_visual_reference.md",
+      "passage": "The waterfall cutaway lasts approximately five seconds and opens with a brief dip to white.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 48,
+          "start_sec": 725.5,
+          "end_sec": 742.5,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-48.webm",
+          "label": "12:05.5–12:22.5"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "The waterfall cutaway lasts approximately five seconds and opens with a brief dip to white.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outcome_85af92db3bc5cd05bc9b",
+      "criterion_sha256": "20917f31c47457bc9c056f6ec21ec4f97eabf158f247f8a26c2186bfdbbdcfa6",
+      "description": "Full credit if the entrance visibly transitions briefly through white into the waterfall footage. Partial credit if the white entrance is incomplete, prolonged or mistimed. No credit if it is absent, replaced solely by a different treatment, or attached to the wrong entrance. Any equivalent implementation is acceptable, and no comparative shortening or exact transition duration is required.",
+      "source": "justin_edit_visual_reference.md",
+      "passage": "The waterfall cutaway lasts approximately five seconds and opens with a brief dip to white.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 86,
+          "start_sec": 976.75,
+          "end_sec": 979.25,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-86.webm",
+          "label": "16:16.75–16:19.25"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "The waterfall cutaway lasts approximately five seconds and opens with a brief dip to white.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outcome_d1cd5d511bb77077c8f3",
+      "criterion_sha256": "07cd537356c8c836d12864f8e49b487387310e65e3d8d3fd991a046169edd782",
+      "description": "Full credit if the used ocean footage has stable framing and smooth source motion where motion exists, without distracting shake or edit-introduced frame jumps. An already stable source range or any equivalent stabilization method is acceptable. Source-inherent holds do not require artificial camera movement. Partial credit if distracting instability or editing discontinuities remain locally. No credit if such defects remain substantially disruptive. An effect assignment or unfinished analysis alone does not establish the required appearance.",
+      "source": "justin_edit_visual_reference.md",
+      "passage": "The ocean footage has smooth, stabilized motion.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 111,
+          "start_sec": 1190.75,
+          "end_sec": 1192.25,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-111.webm",
+          "label": "19:50.75–19:52.25"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "The ocean footage has smooth, stabilized motion.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outcome_9b50e22ca64f65ba5aa3",
+      "criterion_sha256": "642b44f023d411ba8755290f3acfc20e8beefce0c54c25e5367cee86339ac90f",
+      "description": "Full credit if both cutaways contribute no source audio; the supplied files' inherent lack of audio streams satisfies the constraint without an audio-removal operation. Partial credit if source audio is omitted for only one cutaway. No credit if both contribute source audio. This condition does not establish that either visual cutaway is present.",
+      "source": "justin_edit_visual_reference.md",
+      "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 51,
+          "start_sec": 750.0,
+          "end_sec": 772.5,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-51.webm",
+          "label": "12:30–12:52.5"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "Waterfall footage from `IMG_0133.MOV` and ocean footage from `IMG_0261.MOV` provide video-only cutaways over the continuing presenter dialogue; omit both clips’ source audio.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IMG_0133.MOV",
+          "references": [
+            {
+              "locator": "media streams",
+              "passage": "\"streams\": [{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}]",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IMG_0261.MOV",
+          "references": [
+            {
+              "locator": "media streams",
+              "passage": "\"streams\": [{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}]",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outcome_525771b0e899cc2c2390",
+      "criterion_sha256": "7ae6612d070983b2e45ad37386a9b79784e7f504805a741eab6881bf2b12f0ba",
+      "description": "Full credit if the displayed name reads JUSTIN BROWN in uppercase. Accept readable typographic spacing, line breaks, and nonmisleading supplemental text that does not alter or obscure the name. Partial credit if the name remains recognizable but contains a spelling, capitalization, or word-separation error. No credit if the name is absent or identifies someone else. Assess placement and overall project editability separately.",
+      "source": "justin_edit_visual_reference.md",
+      "passage": "The opening name graphic reads **JUSTIN BROWN** in white uppercase **Oswald Bold**.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 55,
+          "start_sec": 778.5,
+          "end_sec": 791.5,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-55.webm",
+          "label": "12:58.5–13:11.5"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
@@ -8865,18 +8806,18 @@
     },
     {
       "id": "outcome_765279d2be2d0bfdaf69",
-      "criterion_sha256": "d04fee1168a52fcda912a57be2accaf70393ae6fb2c039e2bc75c10bcf0cfe4c",
-      "description": "Full credit if the opening sequence composition visibly includes the lower-third graphic as the speaker introduction. Partial credit if the graphic is placed near the opening but its visibility over the picture is incomplete. No credit if it never appears over the picture, appears only substantially later, or opening placement is unsupported. Assess opening placement and visibility independently of exact-text and editability errors scored elsewhere. Do not require a specific timestamp, duration, track, style, or screen position. If an evidenced environment blocker prevents the opening composition, record the affected outcome as environment-blocked in reality_notes or the scoring justification. Blocker reporting does not satisfy the missing composition; when dependencies are available and usable, failure to produce it is agent-controllable.",
+      "criterion_sha256": "0d1f3e863992137cbbf659f4f4da3118c60de6dbb15d9d44bcc6b24f20bf99f3",
+      "description": "Full credit if the name graphic is visibly composited over the opening picture as the speaker introduction. Partial credit if it is near the opening but its visibility is incomplete. No credit if it never appears over the picture, is absent, or appears only substantially later. No exact opening timestamp is required; styling, spatial placement and duration have separate conditions.",
       "source": "instruction.md",
       "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 67,
-          "start_sec": 826.75,
-          "end_sec": 854.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-67.webm",
-          "label": "13:46.75–14:14.5"
+          "segment_id": 55,
+          "start_sec": 778.5,
+          "end_sec": 791.5,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-55.webm",
+          "label": "12:58.5–13:11.5"
         }
       ],
       "sources": [
@@ -8886,6 +8827,16 @@
             {
               "locator": "Line 5",
               "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
               "scope": [
                 "criterion"
               ],
@@ -8906,49 +8857,9 @@
             },
             {
               "locator": "Line 5",
-              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 1",
-              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
               "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
               "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
@@ -8963,8 +8874,9 @@
           "references": [
             {
               "locator": "Line 13",
-              "passage": "Keep the name visible beyond the first five seconds.",
+              "passage": "Place it horizontally centered in the lower third of the presenter image.",
               "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
@@ -8973,7 +8885,7 @@
             },
             {
               "locator": "Line 13",
-              "passage": "Place it horizontally centered in the lower third of the presenter image.",
+              "passage": "The opening name graphic reads **JUSTIN BROWN** in white uppercase **Oswald Bold**. Place it horizontally centered in the lower third of the presenter image. A solid, fully opaque bright blue rectangle closely surrounds the lettering, with a small visible margin around the letters. Keep the name visible beyond the first five seconds.",
               "scope": [
                 "description"
               ],
@@ -8987,8 +8899,8 @@
     },
     {
       "id": "outcome_11a2c54d1b86a9b60971",
-      "criterion_sha256": "ecf0fd48eea96dfa5593b21a38987287ee158a057a6fd286e760fbd5a0168d9b",
-      "description": "Full credit if all lettering in the opening lower-third uses the Oswald font family in Bold style. Partial credit if only some lettering uses Oswald Bold, or if only the Oswald family or Bold style is applied. No credit if neither required font property is applied to any lettering, or if the typography cannot be reliably verified. Applied text properties or equivalent reliable graphic evidence qualify. A font selection without application does not establish the typography. Font unavailability may explain an incomplete outcome; credit the typography actually achieved.",
+      "criterion_sha256": "285e4b134ff91a8be98ad88e8c8b18ead696e129ec9dcfeef391d7a5152daa8c",
+      "description": "Full credit if all lettering uses the Oswald font family with its Bold style. Partial credit if only some lettering complies, or the required family or style is applied without the other. No credit if neither required family nor style is applied. A visually similar substitute does not receive full credit because the guide specifies the typeface.",
       "source": "justin_edit_visual_reference.md",
       "passage": "The opening name graphic reads **JUSTIN BROWN** in white uppercase **Oswald Bold**.",
       "locator": "document",
@@ -9039,18 +8951,18 @@
     },
     {
       "id": "outcome_6eb5e6879987718cf23b",
-      "criterion_sha256": "374cb38c01447804a70778c36087ed681dc1d06c540b32f4515124dbd49694cf",
-      "description": "Full credit if the applied text fill is white across all lettering. Partial credit if only part of the lettering has white fill. No credit if white fill is absent, selected without being applied, or only claimed. If blocked, credit only the color change actually achieved.",
+      "criterion_sha256": "194a18327956f673cd9462bb74c518c5e1748dc5d300452dfcd113aff8b65995",
+      "description": "Full credit if the applied text fill is white across all lettering. Partial credit if only some lettering has white fill. No credit if white fill is absent from all lettering. Selecting a color without applying it does not establish the resulting fill.",
       "source": "justin_edit_visual_reference.md",
       "passage": "The opening name graphic reads **JUSTIN BROWN** in white uppercase **Oswald Bold**.",
       "locator": "document",
       "clips": [
         {
-          "segment_id": 64,
-          "start_sec": 819.75,
-          "end_sec": 822.75,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-64.webm",
-          "label": "13:39.75–13:42.75"
+          "segment_id": 62,
+          "start_sec": 815.25,
+          "end_sec": 819.25,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-62.webm",
+          "label": "13:35.25–13:39.25"
         }
       ],
       "sources": [
@@ -9063,16 +8975,6 @@
               "scope": [
                 "criterion",
                 "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "criterion"
               ],
               "provenance": [
                 "completion"
@@ -9101,8 +9003,8 @@
     },
     {
       "id": "outcome_6f33d2ef259850c7ae96",
-      "criterion_sha256": "dd34e734b77e84351ebdbf8c326da4e6b4253719dc68e9df79cd8c72889b4bff",
-      "description": "Full credit if the graphic has a uniformly filled bright blue rectangle behind its lettering, with full effective opacity and small visible margins above, below, and at both ends. No exact color code, dimensions, equal margins, or particular background control is required. Partial credit if an actual background satisfies only some fill, color, opacity, or fit requirements. No credit if absent, unrelated, or merely claimed. Background adjustability is assessed under overall project editability. Verified external limitations explain missing properties but do not earn credit by themselves.",
+      "criterion_sha256": "230fa27bda00de9f21119406445ebc86e37beaeccc7bbb8561d6f42d40c08a56",
+      "description": "Full credit if a uniformly filled bright blue rectangle sits behind the lettering with full effective opacity and small visible margins above, below and at both ends. No exact color code, dimensions, identical margins or control value is required. Partial credit if the actual rectangle is deficient in fill, color, opacity or fit. No credit if it is absent or unrelated to the lower-third.",
       "source": "justin_edit_visual_reference.md",
       "passage": "A solid, fully opaque bright blue rectangle closely surrounds the lettering, with a small visible margin around the letters.",
       "locator": "document",
@@ -9129,16 +9031,6 @@
               "provenance": [
                 "completion"
               ]
-            },
-            {
-              "locator": "Line 1",
-              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
             }
           ],
           "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
@@ -9156,6 +9048,16 @@
               "provenance": [
                 "completion"
               ]
+            },
+            {
+              "locator": "Line 13",
+              "passage": "The opening name graphic reads **JUSTIN BROWN** in white uppercase **Oswald Bold**. Place it horizontally centered in the lower third of the presenter image. A solid, fully opaque bright blue rectangle closely surrounds the lettering, with a small visible margin around the letters.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
             }
           ]
         }
@@ -9163,8 +9065,8 @@
     },
     {
       "id": "outcome_fe439d796aed537a758d",
-      "criterion_sha256": "88f5c9719ae34fc3a3fdbe9b0b9c1b48b0f1bc6a130451a8aa56e5112869796f",
-      "description": "Full credit if the graphic's horizontal center aligns with the image midpoint and the graphic sits in the lower third. Partial credit if one placement requirement is correct or the placement is close but visibly offset, too high, or too low. No credit if absent, substantially misplaced on both axes, or unsupported. No exact coordinate or application-specific alignment control is required. Verified external blockers explain an unmet placement but do not establish it.",
+      "criterion_sha256": "83edd2585220d40cf431f3a96e63fc87ad1e44663d99cfe3655c53ef3b750971",
+      "description": "Full credit if the graphic's horizontal center aligns with the image midpoint and the graphic sits within the bottom third of the presenter image. Partial credit if only one placement condition is satisfied or a small visible offset remains. No credit if the graphic is absent or substantially misplaced in both dimensions. No exact coordinates are required.",
       "source": "justin_edit_visual_reference.md",
       "passage": "Place it horizontally centered in the lower third of the presenter image.",
       "locator": "document",
@@ -9194,7 +9096,7 @@
             },
             {
               "locator": "Line 5",
-              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\"",
+              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
               "scope": [
                 "description"
               ],
@@ -9225,8 +9127,8 @@
     },
     {
       "id": "outcome_f256185d2b99b56f4a2a",
-      "criterion_sha256": "d7e164769a31df8c2933d00cb1910e9e6960aa3750edd69823501d61e4e55c74",
-      "description": "Full credit if the final sequence state establishes that the opening name display continues visibly past 00:00:05:00 and ends after that boundary. Accept playback, preview, or equivalent evidence of the visible interval. Partial credit if the opening display visibly reaches the five-second boundary but continuation beyond it is not established. No credit if it ends before five seconds, appears only in a separate later interval, is absent, or is merely claimed without support. If a supported environmental blocker prevents producing or establishing the required visible interval, record it in reality_notes or the scoring justification and distinguish the blocked shortfall from agent-controllable failure. Evaluate the supported final state; blocker reporting alone earns no outcome credit because this node does not accept it as an alternative final outcome.",
+      "criterion_sha256": "d61e140548590770f11d179a40b7966b45a76fa630aa8024a723b7316669232d",
+      "description": "Full credit if the opening name display continues visibly past five seconds. Partial credit if it reaches the five-second boundary but ends there. No credit if it ends earlier, is absent, or appears only in a separate later interval. No exact start time, extension operation or maximum duration is prescribed.",
       "source": "justin_edit_visual_reference.md",
       "passage": "Keep the name visible beyond the first five seconds.",
       "locator": "document",
@@ -9244,27 +9146,6 @@
           "name": "instruction.md",
           "references": [
             {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\"",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
               "locator": "Line 5",
               "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
               "scope": [
@@ -9276,8 +9157,18 @@
               ]
             },
             {
-              "locator": "Line 7",
-              "passage": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Introduce the speaker near the opening with an on-screen lower-third graphic reading \"JUSTIN BROWN,\" and layer the supplied ocean and waterfall footage as visual cutaways where they support the presenter's remarks without interrupting the spoken dialogue.",
               "scope": [
                 "description"
               ],
@@ -9301,6 +9192,17 @@
               "provenance": [
                 "completion"
               ]
+            },
+            {
+              "locator": "Line 13",
+              "passage": "The opening name graphic reads **JUSTIN BROWN** in white uppercase **Oswald Bold**. Place it horizontally centered in the lower third of the presenter image. A solid, fully opaque bright blue rectangle closely surrounds the lettering, with a small visible margin around the letters. Keep the name visible beyond the first five seconds.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
             }
           ]
         }
@@ -9308,10 +9210,10 @@
     },
     {
       "id": "outcome_fdb8d2dfa9c3c8f95d3b",
-      "criterion_sha256": "a3579b1c4aed4571e1ff9773376da9f7530017c329cdf90e1096c534d6edc521",
-      "description": "Full credit if a selected presenter segment has a visibly modest tighter framing than its standard source view. Partial credit if a tighter view exists but the enlargement is excessive or only partly establishes the requested treatment. No credit if there is no punch-in or the result is unsupported. No exact scale, position, segment boundary, or track is mandatory. Adjustability is assessed under project editability; verified external limitations do not themselves earn framing credit.",
+      "criterion_sha256": "cf32d8208c5d56b0f6e8804bf3d82d80218c38a931d0506eb921073453ea607a",
+      "description": "Full credit if a selected talking-head segment presents a modestly tighter view and all other presenter segments retain standard framing in the finished edit, including after color treatment. Partial credit if the punch-in is excessive or incomplete, or standard framing is preserved on only some remaining segments. No credit if the selected tighter view is absent and the required framing pattern is broadly lost. Exact scale, position and segment boundaries are not prescribed.",
       "source": "justin_edit_visual_reference.md",
-      "passage": "A selected talking-head segment uses a modest punch-in for a tighter view of the presenter.",
+      "passage": "A selected talking-head segment uses a modest punch-in for a tighter view of the presenter. Keep the remaining presenter segments at their standard framing.",
       "locator": "document",
       "clips": [
         {
@@ -9320,75 +9222,13 @@
           "end_sec": 1061.5,
           "file": "assets/rubric-clips/edit-youtube-video/segment-97.webm",
           "label": "17:26.5–17:41.5"
-        }
-      ],
-      "sources": [
-        {
-          "name": "instruction.md",
-          "references": [
-            {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 1",
-              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ],
-          "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
         },
         {
-          "name": "justin_edit_visual_reference.md",
-          "references": [
-            {
-              "locator": "Line 9",
-              "passage": "A selected talking-head segment uses a modest punch-in for a tighter view of the presenter.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "outcome_3317a67a00550c98ca7b",
-      "criterion_sha256": "4daa82fc132aae02a0ed8b47654d2ab2946cbe95defe9c65d8f33a19df0098ab",
-      "description": "Full credit if all remaining presenter segments retain standard framing in the resulting edit, including after color treatment. Partial credit if preservation is established for only some segments or minor unintended framing differences remain. No credit if standard framing is broadly lost, none of the remaining segments retains it, or preservation is unsupported. The selected punch-in is assessed separately. No particular segment must be the selected exception, and no before-versus-after editing operation is independently scored. Verified missing comparison evidence must not be mistaken for an observed framing change.",
-      "source": "justin_edit_visual_reference.md",
-      "passage": "A selected talking-head segment uses a modest punch-in for a tighter view of the presenter. Keep the remaining presenter segments at their standard framing.",
-      "locator": "document",
-      "clips": [
-        {
-          "segment_id": 174,
-          "start_sec": 1653.25,
-          "end_sec": 1663.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-174.webm",
-          "label": "27:33.25–27:43.5"
-        },
-        {
-          "segment_id": 188,
-          "start_sec": 1701.75,
-          "end_sec": 1715.0,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-188.webm",
-          "label": "28:21.75–28:35"
+          "segment_id": 187,
+          "start_sec": 1700.75,
+          "end_sec": 1701.75,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-187.webm",
+          "label": "28:20.75–28:21.75"
         }
       ],
       "sources": [
@@ -9425,18 +9265,9 @@
             },
             {
               "locator": "Line 9",
-              "passage": "Keep the remaining presenter segments at their standard framing.",
+              "passage": "A selected talking-head segment uses a modest punch-in for a tighter view of the presenter.",
               "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 17",
-              "passage": "Keep this appearance consistent across the edited presenter shots while retaining each segment’s individual framing.",
-              "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
@@ -9445,7 +9276,18 @@
             },
             {
               "locator": "Line 9",
-              "passage": "A selected talking-head segment uses a modest punch-in for a tighter view of the presenter.",
+              "passage": "Keep the remaining presenter segments at their standard framing.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 17",
+              "passage": "Use a warm, bright camera treatment with enhanced contrast and vibrant saturation. Keep this appearance consistent across the edited presenter shots while retaining each segment’s individual framing.",
               "scope": [
                 "description"
               ],
@@ -9466,11 +9308,11 @@
       "locator": "document",
       "clips": [
         {
-          "segment_id": 124,
-          "start_sec": 1247.0,
-          "end_sec": 1248.5,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-124.webm",
-          "label": "20:47–20:48.5"
+          "segment_id": 122,
+          "start_sec": 1231.5,
+          "end_sec": 1233.0,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-122.webm",
+          "label": "20:31.5–20:33"
         }
       ],
       "sources": [
@@ -9488,16 +9330,6 @@
               ]
             },
             {
-              "locator": "Line 3",
-              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
               "locator": "Line 5",
               "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
               "scope": [
@@ -9507,19 +9339,9 @@
               "provenance": [
                 "completion"
               ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Run the background music track across the full edited sequence, aligned cleanly to the end of the cut, while keeping spoken dialogue and music separated and balanced for clear speech.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
-              ]
             }
           ],
-          "highlight": "the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project"
+          "highlight": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage."
         },
         {
           "name": "justin_edit_visual_reference.md",
@@ -9722,8 +9544,7 @@
               "locator": "Line 5",
               "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
               "scope": [
-                "criterion",
-                "description"
+                "criterion"
               ],
               "provenance": [
                 "completion"
@@ -9744,6 +9565,7 @@
               "locator": "Line 5",
               "passage": "Run the background music track across the full edited sequence, aligned cleanly to the end of the cut, while keeping spoken dialogue and music separated and balanced for clear speech.",
               "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
@@ -9760,8 +9582,7 @@
               "locator": "Line 21",
               "passage": "Maintain dialogue and music as separate audio elements, with the presenter clips identified as **Dialogue** and the background track as **Music**.",
               "scope": [
-                "criterion",
-                "description"
+                "criterion"
               ],
               "provenance": [
                 "completion"
@@ -9773,8 +9594,8 @@
     },
     {
       "id": "outcome_222202a1fe6c8b576f34",
-      "criterion_sha256": "b82b05b5ab00e68de22ab34053b700931d5c97ade53d5224ce534e2f425fc262",
-      "description": "Full credit if a clip label, track label, audio role, or equivalent designation clearly identifies the background soundtrack as Music. Partial credit if the designation applies to only some soundtrack elements or its association is ambiguous. No credit if the designation is absent, incorrect, or applies only to unrelated audio.",
+      "criterion_sha256": "e9cdf088352b720a33d232443b103c85ee33140d9a2519f6c7d6dc56ad1a8095",
+      "description": "Full credit if a clip label, track label, audio role or equivalent in-project designation clearly identifies the soundtrack as Music. Partial credit if only some soundtrack elements are identified or the association is ambiguous. No credit if the designation is absent, incorrect, or applies only to unrelated audio.",
       "source": "justin_edit_visual_reference.md",
       "passage": "Maintain dialogue and music as separate audio elements, with the presenter clips identified as **Dialogue** and the background track as **Music**.",
       "locator": "document",
@@ -9792,21 +9613,21 @@
           "name": "instruction.md",
           "references": [
             {
-              "locator": "Line 3",
-              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
               "scope": [
-                "criterion"
+                "criterion",
+                "description"
               ],
               "provenance": [
                 "completion"
               ]
             },
             {
-              "locator": "Line 5",
-              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
               "scope": [
-                "criterion",
-                "description"
+                "criterion"
               ],
               "provenance": [
                 "completion"
@@ -9834,9 +9655,103 @@
       ]
     },
     {
+      "id": "outcome_304c213bc912adbf713c",
+      "criterion_sha256": "f314d4f19871216a27183e1e762625e97ca25c19e79dab80af465a46285d52dc",
+      "description": "Full credit if the finished mix keeps the music audibly subdued and the presenter easy to understand and clearly prominent throughout dialogue. Partial credit if this balance holds for only part of the dialogue or music occasionally competes with speech. No credit if music consistently masks speech or is entirely muted or inaudible. No exact gain or loudness target is required; an unmuted track or a numeric setting alone does not establish a successful mix.",
+      "source": "justin_edit_visual_reference.md",
+      "passage": "Keep the presenter’s speech clear and prominent. `ES_San Pedro - Sugoi.mp3` provides quiet background music from the opening picture to the end of the video.",
+      "locator": "document",
+      "clips": [
+        {
+          "segment_id": 144,
+          "start_sec": 1488.25,
+          "end_sec": 1494.25,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-144.webm",
+          "label": "24:48.25–24:54.25"
+        }
+      ],
+      "sources": [
+        {
+          "name": "instruction.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Run the background music track across the full edited sequence, aligned cleanly to the end of the cut, while keeping spoken dialogue and music separated and balanced for clear speech.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ],
+          "highlight": "balanced for clear speech"
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 21",
+              "passage": "Keep the presenter’s speech clear and prominent. `ES_San Pedro - Sugoi.mp3` provides quiet background music from the opening picture to the end of the video.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 21",
+              "passage": "`ES_San Pedro - Sugoi.mp3` provides quiet background music from the opening picture to the end of the video.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 21",
+              "passage": "Keep the presenter’s speech clear and prominent.",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "outcome_efc71eb3b20561fbe68c",
-      "criterion_sha256": "fa3036101210fa1eaa838cb7f31ec462c7383fe41899f995660cd34e1007a6c0",
-      "description": "Full credit if every presenter-dialogue element is clearly identified as Dialogue through a clip label, a track label unambiguously covering the elements, an audio role, or an equivalent native designation. Partial credit if only a verifiable subset is identified or the association is partly ambiguous. No credit if none is correctly identified or identification is merely claimed. No simultaneous selection, particular track number, or proprietary role implementation is required. Credit depends on the identification actually established, even when an external blocker explains a shortfall.",
+      "criterion_sha256": "29c3a34c0fb7273a1f41779c76ade45843bf5e2fe6157edae1fd20f569e2f07a",
+      "description": "Full credit if all presenter-dialogue clips are clearly identified as Dialogue through equivalent clip, track or audio-role designation. Partial credit if only a subset is identified correctly. No credit if none is identified or the designation applies only to unrelated audio. Simultaneous selection and a particular tagging system are not required.",
       "source": "justin_edit_visual_reference.md",
       "passage": "Maintain dialogue and music as separate audio elements, with the presenter clips identified as **Dialogue** and the background track as **Music**.",
       "locator": "document",
@@ -9863,6 +9778,16 @@
               "provenance": [
                 "completion"
               ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
+              "scope": [
+                "criterion"
+              ],
+              "provenance": [
+                "completion"
+              ]
             }
           ],
           "highlight": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit."
@@ -9886,9 +9811,9 @@
       ]
     },
     {
-      "id": "outcome_9650e4b6704824d4886a",
-      "criterion_sha256": "f28af7c4479b4e80f13180575dde11712d7fd2fc7c333c10c44857ba57854605",
-      "description": "Full credit if the required warm, bright appearance, enhanced contrast relative to untreated footage, and vibrant saturation are established consistently across the opening and remaining edited presenter shots. Partial credit if only some shots or some required qualities are established, or treatment is weak, incomplete, or inconsistent. No credit if the required treatment is absent across the presenter cut or merely claimed. No exact slider values or particular correction implementation is required. Framing and treatment adjustability are assessed separately. Verified source, project, or comparison limitations must be distinguished from observed defects and do not themselves establish achievement.",
+      "id": "outcome_9d0f1f3de53915f077e9",
+      "criterion_sha256": "243267d141698385f50ed56756ec90a471ff107dbaba416b03b2fe385fa0179d",
+      "description": "Full credit if the opening and all remaining presenter shots share the requested warmth, brightness, enhanced contrast and vibrant saturation, with contrast enhanced relative to the untreated source. Partial credit if only some shots comply, individual visual qualities are incomplete, or the appearance varies noticeably across shots. No credit if the required treatment is absent throughout. Exact correction values are not required. Framing and adjustment editability are assessed under their consolidated outcomes.",
       "source": "justin_edit_visual_reference.md",
       "passage": "Use a warm, bright camera treatment with enhanced contrast and vibrant saturation. Keep this appearance consistent across the edited presenter shots while retaining each segment’s individual framing.",
       "locator": "document",
@@ -9901,11 +9826,11 @@
           "label": "27:33.25–27:43.5"
         },
         {
-          "segment_id": 188,
-          "start_sec": 1701.75,
-          "end_sec": 1715.0,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-188.webm",
-          "label": "28:21.75–28:35"
+          "segment_id": 187,
+          "start_sec": 1700.75,
+          "end_sec": 1701.75,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-187.webm",
+          "label": "28:20.75–28:21.75"
         }
       ],
       "sources": [
@@ -9917,6 +9842,16 @@
               "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
               "scope": [
                 "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            },
+            {
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits.",
+              "scope": [
                 "description"
               ],
               "provenance": [
@@ -9952,7 +9887,7 @@
             },
             {
               "locator": "Line 17",
-              "passage": "Keep this appearance consistent across the edited presenter shots while retaining each segment’s individual framing.",
+              "passage": "Use a warm, bright camera treatment with enhanced contrast and vibrant saturation.",
               "scope": [
                 "criterion",
                 "description"
@@ -9963,9 +9898,23 @@
             },
             {
               "locator": "Line 17",
-              "passage": "Use a warm, bright camera treatment with enhanced contrast and vibrant saturation.",
+              "passage": "Keep this appearance consistent across the edited presenter shots while retaining each segment’s individual framing.",
               "scope": [
-                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Camera-Recording.mp4",
+          "references": [
+            {
+              "locator": "frame at 31.6534 seconds",
+              "passage": "Image #1 visibly shows the source presenter in a black shirt against a light gray wall, providing an accessible source-image baseline.",
+              "scope": [
                 "description"
               ],
               "provenance": [
@@ -9978,8 +9927,8 @@
     },
     {
       "id": "outcome_64e0ebedd477cf89cf39",
-      "criterion_sha256": "4d438bb3686adaf5d3a03a9ce478ec2df80d081d0355528abc6647ebf95d22a6",
-      "description": "Full credit if the requested target or its functional equivalent is established in the application for the correct sequence. Partial credit if relevant settings are configured but the requested target is incomplete or uncertain. No credit if the target is incorrect, absent, assigned to another sequence, or merely claimed without supporting evidence. If an evidenced environmental limitation prevents configuration, record it in reality_notes or the scoring justification and evaluate the configuration actually achieved; blocker reporting alone does not establish the target. An absent preset label is not itself a blocker when equivalent native settings are available. Neither a saved project file nor a rendered video is required to establish this configuration.",
+      "criterion_sha256": "3c8587eb58482bae9d914637fa4055f4694180b4bbfd2453cf9a5efed88c876f",
+      "description": "Full credit if the correct sequence has the requested export target or equivalent native settings for 3840×2160 UHD, an appropriate frame cadence for the 30 fps sequence, and YouTube-compatible media encoding. Partial credit if relevant settings are prepared but the equivalent target is incomplete or partly incorrect. No credit if the target is absent, incorrect, or assigned to another sequence. A literal preset label, visible export view, saved project or rendered video is not necessary to establish this configuration.",
       "source": "instruction.md",
       "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
       "locator": "document",
@@ -10019,20 +9968,9 @@
               ]
             },
             {
-              "locator": "Line 1",
-              "passage": "You are a video editor preparing an editable YouTube video project, \"Justin Edit,\" for presenter Justin Brown.",
+              "locator": "Line 3",
+              "passage": "Include the complete source footage package from `/home/ga/Desktop/Video Assets/` and the soundtrack `/home/ga/Downloads/ES_San Pedro - Sugoi.mp3` in the project so all supplied media remains organized and available for review and follow-on edits. Assemble the main cut in a sequence named \"YouTube\" matched to the primary presenter camera footage.",
               "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval",
-              "scope": [
-                "criterion",
                 "description"
               ],
               "provenance": [
@@ -10040,8 +9978,8 @@
               ]
             },
             {
-              "locator": "Line 7",
-              "passage": "no rendered video file is required at this stage",
+              "locator": "Line 5",
+              "passage": "Follow `/workspace/assets/justin_edit_visual_reference.md` for the detailed visual and audio treatments across the edit.",
               "scope": [
                 "description"
               ],
@@ -10051,13 +9989,43 @@
             }
           ],
           "highlight": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval"
+        },
+        {
+          "name": "Camera-Recording.mp4",
+          "references": [
+            {
+              "locator": "media streams",
+              "passage": "{\"index\": 0, \"codec_name\": \"h264\", \"codec_type\": \"video\", \"width\": 1920, \"height\": 1080, \"avg_frame_rate\": \"30/1\"}",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "justin_edit_visual_reference.md",
+          "references": [
+            {
+              "locator": "Line 5",
+              "passage": "The presenter’s picture and dialogue from `Camera-Recording.mp4` lead the video.",
+              "scope": [
+                "description"
+              ],
+              "provenance": [
+                "completion"
+              ]
+            }
+          ]
         }
       ]
     },
     {
       "id": "outcome_71f856f0eba57261fc83",
-      "criterion_sha256": "ecd1146e7b0116442573bb168b18d06e5260aaa78bc5ee0ea20bf63ce375b4ee",
-      "description": "Full credit if the resulting export is staged for review without rendering or a commitment to start rendering before approval. Partial credit if rendering has not begun but the approval hold is unclear. No credit if rendering is initiated or committed to start without approval. No rendered file or separate approval dialog is required. Assess the visible prepared state and chronological rendering evidence independently of configuration success; a blocker preventing preparation does not itself establish an approval hold.",
+      "criterion_sha256": "5ad79177ec9e465e5bf69169778f1fd73ad4d6f2a468230dc482b3f21923157b",
+      "description": "Full credit if rendering has neither started nor been committed to run before approval; a pending configuration or explicitly held job is acceptable. No credit if rendering starts or an export job is committed to run without approval. No rendered video, separate approval dialog or approval request is required. Assess this boundary independently of export-configuration success.",
       "source": "instruction.md",
       "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
       "locator": "document",
@@ -10097,7 +10065,7 @@
             },
             {
               "locator": "Line 7",
-              "passage": "no rendered video file is required at this stage",
+              "passage": "(no rendered video file is required at this stage)",
               "scope": [
                 "description"
               ],
@@ -10106,7 +10074,7 @@
               ]
             }
           ],
-          "highlight": "no rendered video file is required at this stage"
+          "highlight": "upon approval"
         }
       ]
     }
