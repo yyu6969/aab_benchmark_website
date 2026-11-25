@@ -83,7 +83,7 @@ class Page(HTMLParser):
             self.instruction.append(" ")
         if tag == "code" and "material-path" in attrs.get("class", "").split():
             self.material = []
-        if tag == "table" and "rubric-table" in attrs.get("class", "").split():
+        if tag == "table" and "rubric-table" in classes and "run-results" not in classes:
             self.in_table = True
         if self.run_condition and tag == "tr":
             self.score_row_id = attrs.get("data-rubric-id")
@@ -190,6 +190,24 @@ def check():
         ordered = page.section_ids
         assert ordered.index("agent-run") == ordered.index("support-materials") + 1
         assert "#agent-run" in page.links
+        if "instruction_run" in task:
+            run = task["instruction_run"]
+            actual = page.scores["instruction-only"]
+            assert len(actual) == len(task["rubrics"])
+            for rubric, cells in zip(task["rubrics"], actual):
+                item = run["rows"].get(rubric["id"], {})
+                rating = item.get("score")
+                assert rating is None or type(rating) is int and rating in (0, 1)
+                assert len(cells) == 6 and cells[:4] == [rubric["id"], f"{rubric['number']:02}",
+                    compact(plain_text(rubric["criterion"])), "null" if rating is None else str(rating)]
+                assert cells[4] and cells[5]
+                for ref in item.get("observations", []):
+                    evidence = run["evidence"][ref]
+                    assert evidence["label"] in cells[5]
+                    if evidence.get("note"):
+                        assert compact(evidence["note"]) in cells[5]
+                    if evidence.get("file"):
+                        assert f"../../assets/agent-runs/{task['slug']}/{run['trial']}/{evidence['file']}" in page.links
         for condition, run in task["agent_runs"].items():
             assert f"run-{condition}" in page.ids
             expected_scores = []

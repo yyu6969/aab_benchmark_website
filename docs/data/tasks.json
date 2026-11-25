@@ -639,6 +639,127 @@
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/finalize-document-tracked-changes.mp4",
       "guidance_path": "assets/tutorial-guidance/finalize-document-tracked-changes.md"
     },
+    "instruction_run": {
+      "job": "word_pi_20261124_065906_11264167",
+      "trial": "microsoft_word_env__finalize_sow__PpiRNSX",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "1c277890b766bfa322b4f72bd338ac1f417568a4b4f83f663bd78c70518dd895",
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_9830af1ead7fad8f473c": {
+          "score": 1,
+          "reason": "All 84 body paragraphs in the saved DOCX exactly match the starter document’s text with its 14 insertions accepted and 13 deletions removed. The saved file contains zero revision elements (obs_starter_document, obs_document). The review screenshots also show the marked-up company name resolving to a single clean “Widgets, Inc.” (obs_frame_pi_109_1, obs_frame_pi_113_1).",
+          "observations": [
+            "obs_document",
+            "obs_frame_pi_109_1",
+            "obs_frame_pi_113_1",
+            "obs_starter_document"
+          ]
+        },
+        "outcome_a2ecfb7eaa1695ada96e": {
+          "score": 1,
+          "reason": "The editor showed “OFF for me and everyone” selected (obs_step_117_p1). The saved DOCX explicitly set w:trackRevisions to false (obs_step_141_p1), and live inspection confirmed tracking was off (obs_document).",
+          "observations": [
+            "obs_document",
+            "obs_step_117_p1",
+            "obs_step_141_p1"
+          ]
+        },
+        "outcome_a46b5a43609bcfc5dac1": {
+          "score": 1,
+          "reason": "Direct inspection of /home/ga/Documents/SOW-Revision 1.docx found the finalized SOW text, zero revision elements, and tracking set to false (obs_document). The file at that exact path increased from 54,609 to 58,623 bytes after saving (obs_step_131_p1, obs_step_135_p1).",
+          "observations": [
+            "obs_document",
+            "obs_step_131_p1",
+            "obs_step_135_p1"
+          ]
+        }
+      },
+      "evidence": {
+        "obs_starter_document": {
+          "label": "Starter document",
+          "source": "live_environment",
+          "record_sha256": "a3817529c8226ca6f6decbdbe292f7c8e14802a3374495d7d5ec1638baff26ff",
+          "note": "The starter DOCX contains 14 insertions and 13 deletions. Its accepted-text representation provides a comparison for the saved document."
+        },
+        "obs_document": {
+          "label": "Document",
+          "source": "live_environment",
+          "record_sha256": "f6a51e212e8798c6f09d982e663815bf038f148ad9a2a30eebc0ea8a6d5fb423",
+          "note": "The saved SOW-Revision 1.docx has tracking disabled and no revision elements. Its accepted body text can be compared with the starter."
+        },
+        "obs_step_131_p1": {
+          "label": "Step 131 · bash",
+          "action": {
+            "step": 131,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "e42e96a155feb90af38ebf024df82e20153eb94ad2a3c2120351168a1efcea62",
+          "note": "Checked the in-place SOW document. Its recorded size was 54,609 bytes."
+        },
+        "obs_step_135_p1": {
+          "label": "Step 135 · bash",
+          "action": {
+            "step": 135,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "990f7900eb27696dc795797aa66b54180b232f93d2373a658108113b1e4a6086",
+          "note": "Checked the same filename later. Its recorded size was 58,623 bytes."
+        },
+        "obs_step_141_p1": {
+          "label": "Step 141 · bash",
+          "action": {
+            "step": 141,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "521da5bf30e78d371a79f8b0f0d0702bdf281abaef598b52e52797a936b6a177",
+          "note": "Inspected the saved DOCX XML. The trackRevisions setting had an explicit false value."
+        },
+        "obs_step_117_p1": {
+          "label": "Step 117 · bash",
+          "action": {
+            "step": 117,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "e4a321502adbbac7510ad2022516282560667473be82cb0a1f37e2ce25593cde",
+          "note": "Inspected the tracking menu. “OFF for me and everyone” was checked."
+        },
+        "obs_frame_pi_109_1": {
+          "label": "Screenshot · step 109",
+          "file": "pi_109_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "c02cd2da5ae634ee8feeb674cf3b50bd0b2410a2a39897b7940970fe4a26b57f"
+        },
+        "obs_frame_pi_113_1": {
+          "label": "Screenshot · step 113",
+          "file": "pi_113_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "fe57cf55e6189b6aa03f924c70874b6fad01849052aa5642e2956fb1ea646ada"
+        }
+      },
+      "runtime_seconds": 489,
+      "total_tokens": 2846060,
+      "output_files": [
+        {
+          "name": "SOW-Revision 1.docx",
+          "guest_path": "/home/ga/Documents/SOW-Revision 1.docx",
+          "bytes": 58623,
+          "sha256": "b34117d5b186c3a4f0e5f6e8114cdd473900cb1660b2d2b00aae5f7478351dc0"
+        }
+      ],
+      "action_count": 76
+    },
     "agent_runs": {
       "guided": {
         "job": "word_pi_guidance_rubrics_20261119_054533_11207612",
@@ -1549,6 +1670,172 @@
       "open_source_software": "Mozilla Thunderbird",
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/schedule-calendar-events.mp4",
       "guidance_path": "assets/tutorial-guidance/schedule-calendar-events.md"
+    },
+    "instruction_run": {
+      "job": "outlook_pi_20261124_121840_11267497",
+      "trial": "microsoft_outlook_env__add_calen__DPzvMQJ",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "43bf6300001d8fa12129630d9f7df23cc4af87157b9c6292e3c320d626ae0c8b",
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_8cb43c90cb2c4e5e86f8": {
+          "score": 1,
+          "reason": "The saved title in obs_calendar is exactly “SBS Study Session,” matching the live calendar entry in obs_screen.",
+          "observations": [
+            "obs_calendar",
+            "obs_screen"
+          ]
+        },
+        "outcome_7ab45f3b81373f1d39e5": {
+          "score": 1,
+          "reason": "The saved location in obs_calendar is “Library Meeting Room,” matching the location field in obs_frame_pi_179_1.",
+          "observations": [
+            "obs_calendar",
+            "obs_frame_pi_179_1"
+          ]
+        },
+        "outcome_6b48e3054c57294d084e": {
+          "score": 1,
+          "reason": "Both the start and end dates in obs_calendar are 20190919. The editor also shows 9/19/2019 in both fields in obs_frame_pi_179_1.",
+          "observations": [
+            "obs_calendar",
+            "obs_frame_pi_179_1"
+          ]
+        },
+        "outcome_7b8553d3b3b103f0f292": {
+          "score": 1,
+          "reason": "The saved start in obs_calendar is 20190919T113000 in America/New_York. The live calendar displays 11:30 AM in obs_screen.",
+          "observations": [
+            "obs_calendar",
+            "obs_screen"
+          ]
+        },
+        "outcome_97e53d4408d9adc10ac2": {
+          "score": 1,
+          "reason": "The saved end in obs_calendar is 20190919T123000 in America/New_York, matching the 12:30 PM end shown in obs_frame_pi_179_1.",
+          "observations": [
+            "obs_calendar",
+            "obs_frame_pi_179_1"
+          ]
+        },
+        "outcome_262e6b6e99a56a816fb7": {
+          "score": 1,
+          "reason": "obs_frame_pi_15_1 shows the existing calendar named “Calendar.” obs_calendar_config identifies its backing file as Calendar.ics, obs_calendar contains the saved study session, and obs_screen shows it on September 19.",
+          "observations": [
+            "obs_calendar",
+            "obs_calendar_config",
+            "obs_frame_pi_15_1",
+            "obs_screen"
+          ]
+        },
+        "outcome_f123d18d5278575917d3": {
+          "score": 1,
+          "reason": "The saved title in obs_calendar is exactly “National Dessert Day,” also visible in the October month view in obs_frame_pi_409_1.",
+          "observations": [
+            "obs_calendar",
+            "obs_frame_pi_409_1"
+          ]
+        },
+        "outcome_71cfbecccbf035259a94": {
+          "score": 1,
+          "reason": "The recurring event in obs_calendar has a date-only DTSTART of 20191014, establishing October 14, 2019 as both the first occurrence and the series start. obs_frame_pi_409_1 shows that occurrence on October 14.",
+          "observations": [
+            "obs_calendar",
+            "obs_frame_pi_409_1"
+          ]
+        },
+        "outcome_0361cdd163e26eaab559": {
+          "score": 1,
+          "reason": "obs_calendar stores date-only values from October 14 to an exclusive end of October 15, giving each occurrence exactly one full calendar day. obs_frame_pi_283_1 also shows “All day Event” checked.",
+          "observations": [
+            "obs_calendar",
+            "obs_frame_pi_283_1"
+          ]
+        },
+        "outcome_08b9402e8a0b5e39266e": {
+          "score": 1,
+          "reason": "In obs_calendar, FREQ=YEARLY uses the October 14 start date and the default interval of one year, so the event repeats every October 14. obs_frame_pi_283_1 shows “Yearly” and “Forever.”",
+          "observations": [
+            "obs_calendar",
+            "obs_frame_pi_283_1"
+          ]
+        },
+        "outcome_434df6b71bf66ece1f8d": {
+          "score": 1,
+          "reason": "obs_calendar contains the saved National Dessert Day event on “Calendar,” whose backing file is identified in obs_calendar_config. obs_frame_pi_409_1 shows the entry on that calendar after saving.",
+          "observations": [
+            "obs_calendar",
+            "obs_calendar_config",
+            "obs_frame_pi_409_1"
+          ]
+        },
+        "outcome_382226b2b0cd97f4dc43": {
+          "score": 1,
+          "reason": "obs_calendar contains one SBS Study Session entry on September 19, 2019 with no recurrence rule or additional occurrence dates. obs_frame_pi_179_1 confirms the repeat setting was “Does not repeat.”",
+          "observations": [
+            "obs_calendar",
+            "obs_frame_pi_179_1"
+          ]
+        }
+      },
+      "evidence": {
+        "obs_calendar": {
+          "label": "Calendar",
+          "source": "live_environment",
+          "record_sha256": "8c64ad5014abd76255ddf4c6311585cae9ef72a5a1191675c3c832dfe5684198",
+          "note": "The saved calendar contains the study session and the recurring National Dessert Day event, with their dates and recurrence settings."
+        },
+        "obs_calendar_config": {
+          "label": "Calendar config",
+          "source": "live_environment",
+          "record_sha256": "88e4c0d12e04a610f9b19dbb2eaa25ec0a990082e685d98bfd5efebcc4b87821",
+          "note": "The application's calendar registry identifies the calendar used for the saved events."
+        },
+        "obs_screen": {
+          "label": "Final screenshot",
+          "file": "final-screen.jpg",
+          "source": "live_environment",
+          "record_sha256": "1b37f272bcab062c7b6124a8cfebf1f2b258bbfaa546741edf379a07075d8945"
+        },
+        "obs_frame_pi_283_1": {
+          "label": "Screenshot · step 283",
+          "file": "pi_283_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "b5adfabacb8bd83f51b5138cb7867b39ef0105fcce096022506c32edf554df0f"
+        },
+        "obs_frame_pi_409_1": {
+          "label": "Screenshot · step 409",
+          "file": "pi_409_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "8b4e1f725f77bee5bba973849d2a89446f18d6fb86e2b21791bfcddf4aa4ec58"
+        },
+        "obs_frame_pi_179_1": {
+          "label": "Screenshot · step 179",
+          "file": "pi_179_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "42acaad665f28f8d9e676bdbcaf16c1beef0d2fcbd1c80551f44fe381890a846"
+        },
+        "obs_frame_pi_15_1": {
+          "label": "Screenshot · step 15",
+          "file": "pi_15_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "84c65b34f988af841c8270f7b03bd0d56c60a74a55f177aeebd696afabe02675"
+        }
+      },
+      "runtime_seconds": 1454,
+      "total_tokens": 14993907,
+      "output_files": [
+        {
+          "name": "Calendar.ics",
+          "guest_path": "/home/ga/.local/share/outlook-calendar/Calendar.ics",
+          "bytes": 3763,
+          "sha256": "d91ce28e6c48893ef6b9515c8cb4d8f055e8d813d7b3a350cff88bed4ff035ab"
+        }
+      ],
+      "action_count": 210
     },
     "agent_runs": {
       "guided": {
@@ -2787,6 +3074,134 @@
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/reconcile-business-bank-account.mp4",
       "guidance_path": "assets/tutorial-guidance/reconcile-business-bank-account.md"
     },
+    "instruction_run": {
+      "job": "quickbooks_pi_20261124_124704_11267497",
+      "trial": "quickbooks_online_env__reconcile__ENuSD8x",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "26d4ee8e5e9acf24ed099bed1702fff111a16f0ee2fcbb1f5d9ee9d5f01c1bdb",
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_7ab45f3b81373f1d39e5": {
+          "score": 1,
+          "reason": "The reconciliation wizard for HECTOR 2024 LLC’s Chase Bank 8145 shows a statement date of 01/31/2024 and an ending balance of $24,904.11. The saved account history records the same date and balance (obs_frame_pi_439_1, obs_ledger).",
+          "observations": [
+            "obs_frame_pi_439_1",
+            "obs_ledger"
+          ]
+        },
+        "outcome_97884da3da28b028da7e": {
+          "score": 1,
+          "reason": "All 30 statement payments totaling $26,944.40 match individual ledger entries by date, amount, and check number or payee. These include check 1150 dated 12/30/2022 for $1,000.00 and the separate $1,000.00 Aria Hotel Las Vegas withdrawal dated 01/19/2024. Every matched entry has reconciliation flag 2 and reconciliation date 01/31/2024 (obs_statement, obs_ledger, obs_ledger_p2).",
+          "observations": [
+            "obs_ledger",
+            "obs_ledger_p2",
+            "obs_statement"
+          ]
+        },
+        "outcome_b8ac6ff3fd2f7f7f6ac1": {
+          "score": 1,
+          "reason": "The saved ledger contains the 01/01/2024 deposit of $31,349.00 and the 01/30/2024 deposit of $3,064.00. Both match the statement and have reconciliation flag 2 dated 01/31/2024. The reconciliation screen confirms two deposits totaling $34,413.00 (obs_statement, obs_ledger, obs_frame_pi_441_1).",
+          "observations": [
+            "obs_frame_pi_441_1",
+            "obs_ledger",
+            "obs_statement"
+          ]
+        },
+        "outcome_70ee0e0a4dbf5f2aa9e7": {
+          "score": 1,
+          "reason": "The only unmatched entries were checks 5023 for $223.15, 5024 for $200.00, and 5028 for $350.00. The reconciliation report lists all three as outstanding, and the saved ledger shows flag 0 and a blank reconciliation date for each (obs_statement, obs_frame_pi_451_1, obs_ledger, obs_ledger_p2).",
+          "observations": [
+            "obs_frame_pi_451_1",
+            "obs_ledger",
+            "obs_ledger_p2",
+            "obs_statement"
+          ]
+        },
+        "outcome_057743dde5cbe9d3fafd": {
+          "score": 1,
+          "reason": "The wizard shows a $17,435.51 starting balance (obs_frame_pi_439_1). Immediately before finalization, the reconciliation screen shows $26,944.40 in payments and $34,413.00 in deposits, giving a cleared balance of $24,904.11 against a $24,904.11 statement balance and a displayed difference of $0.00 (obs_frame_pi_441_1).",
+          "observations": [
+            "obs_frame_pi_439_1",
+            "obs_frame_pi_441_1"
+          ]
+        },
+        "outcome_0f3f8e90115655d5eb96": {
+          "score": 1,
+          "reason": "KMyMoney displayed the reconciliation report after Finish. The live Chase Bank 8145 ledger shows “Last reconciled: 1/31/24,” and the saved account history contains the completed 01/31/2024 entry for $24,904.11 (obs_frame_pi_451_1, obs_screen, obs_ledger).",
+          "observations": [
+            "obs_frame_pi_451_1",
+            "obs_ledger",
+            "obs_screen"
+          ]
+        },
+        "outcome_50b5884cf0fd9cbfb991": {
+          "score": 1,
+          "reason": "The saved company file `/home/ga/Documents/HECTOR 2024 LLC.kmy` contains the January reconciliation history entry and its transaction states. All 32 statement transactions have reconciliation flag 2 dated 01/31/2024, and the three outstanding checks retain flag 0 with blank reconciliation dates (obs_ledger, obs_ledger_p2).",
+          "observations": [
+            "obs_ledger",
+            "obs_ledger_p2"
+          ]
+        }
+      },
+      "evidence": {
+        "obs_ledger": {
+          "label": "Ledger · page 1",
+          "source": "live_environment",
+          "record_sha256": "b9339f8f3f371cac0d40d47d0ed705b5c60e8849614bb8937aad8d2aa7846405",
+          "note": "The saved KMyMoney file contains the Chase account, its reconciliation history, and flags on the ledger entries."
+        },
+        "obs_statement": {
+          "label": "Statement",
+          "source": "live_environment",
+          "record_sha256": "8fc93cf658dc423e05aac2a5d5a550a44f5ca35fa5e4166b3304812fd2438d6b",
+          "note": "The January Chase statement identifies account 8145 and the payments and deposits used for the reconciliation."
+        },
+        "obs_screen": {
+          "label": "Final screenshot",
+          "file": "final-screen.jpg",
+          "source": "live_environment",
+          "record_sha256": "1b37f272bcab062c7b6124a8cfebf1f2b258bbfaa546741edf379a07075d8945"
+        },
+        "obs_ledger_p2": {
+          "label": "Ledger · page 2",
+          "source": "live_environment",
+          "record_sha256": "08d2d0bfae05b7e48b18ebbe59b265dd74c2f15ae2bd962f8196aad43465a73b",
+          "note": "The ledger excerpt includes outstanding Check 5024 with reconciliation flag 0 and an empty reconciliation date."
+        },
+        "obs_frame_pi_439_1": {
+          "label": "Screenshot · step 439",
+          "file": "pi_439_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "b179edea5746fe41344df3a092110752433bef63c965d803e7435ba3f192d47f"
+        },
+        "obs_frame_pi_441_1": {
+          "label": "Screenshot · step 441",
+          "file": "pi_441_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "8ec7fa251925673091dc69440568f9e0cf4e67f00cf15d3a7410bf202a236e6d"
+        },
+        "obs_frame_pi_451_1": {
+          "label": "Screenshot · step 451",
+          "file": "pi_451_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "e3e0eaa6e58df83ffc66a41081c9a16f94224b44bad13231781051e27621457a"
+        }
+      },
+      "runtime_seconds": 2412,
+      "total_tokens": 22720326,
+      "output_files": [
+        {
+          "name": "HECTOR 2024 LLC.kmy",
+          "guest_path": "/home/ga/Documents/HECTOR 2024 LLC.kmy",
+          "bytes": 3931,
+          "sha256": "56f0248f09fbdbd6e0fe4eec8a9697d58aee1ac97e178585e36cc0e1464227fc"
+        }
+      ],
+      "action_count": 230
+    },
     "agent_runs": {
       "guided": {
         "job": "quickbooks_pi_guidance_rubrics_20261119_054533_11207605",
@@ -3699,6 +4114,157 @@
       "open_source_software": "OpenEMR",
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/complete-sign-clinical-note.mp4",
       "guidance_path": "assets/tutorial-guidance/complete-sign-clinical-note.md"
+    },
+    "instruction_run": {
+      "job": "drchrono_pi_20261124_203057_11269929",
+      "trial": "drchrono_env__complete_lock_clin__pQYdGr6",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "aa092eeaaa96fdd7db60aa96722090331a793e465c96bd181d4f7de5565497ef",
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_f123d18d5278575917d3": {
+          "score": 1,
+          "reason": "obs_encounter identifies abdominal-pain encounter 2013041022 under the chart spelling Gandalf Greyhame Wz. obs_frame_pi_293_1 shows “abdominal pain” checked in the GI Review of Systems, and obs_note_fields confirms the saved ros_gi value is “abdominal pain.”",
+          "observations": [
+            "obs_encounter",
+            "obs_frame_pi_293_1",
+            "obs_note_fields"
+          ]
+        },
+        "outcome_0375f9f95947b3e2f72b": {
+          "score": 1,
+          "reason": "obs_note_fields records “tenderness RLQ” in the abdominal exam field. obs_screen shows the same finding under Physical Exam in the locked H&P.",
+          "observations": [
+            "obs_note_fields",
+            "obs_screen"
+          ]
+        },
+        "outcome_049d7b76276babc466c0": {
+          "score": 1,
+          "reason": "obs_frame_pi_357_1 shows “possible appendicitis” in Abdomen Comments following the RLQ tenderness finding. obs_note_fields confirms that comment persisted.",
+          "observations": [
+            "obs_frame_pi_357_1",
+            "obs_note_fields"
+          ]
+        },
+        "outcome_4b5778c19a6daae9b844": {
+          "score": 1,
+          "reason": "The saved assessment in obs_note_fields begins “Patient presentation of acute abdominal pain with tenderness in the right lower quadrant,” explicitly identifying abdominal pain as the presenting complaint.",
+          "observations": [
+            "obs_note_fields"
+          ]
+        },
+        "outcome_641eab3d048bb37d1324": {
+          "score": 1,
+          "reason": "The saved assessment in obs_note_fields describes a “clinical impression of possible appendicitis,” preserving diagnostic uncertainty.",
+          "observations": [
+            "obs_note_fields"
+          ]
+        },
+        "outcome_9830af1ead7fad8f473c": {
+          "score": 1,
+          "reason": "obs_frame_pi_339_1 shows “CBC with diff” checked under Plan → Labs for encounter 2013041022. obs_note_fields confirms the selection persisted in the structured plan_labs field.",
+          "observations": [
+            "obs_frame_pi_339_1",
+            "obs_note_fields"
+          ]
+        },
+        "outcome_017ca97ec323077cf044": {
+          "score": 1,
+          "reason": "obs_note_fields confirms the saved plan explicitly states “Note possible appendicitis.” obs_frame_pi_357_1 shows that sentence in the Plan Notes field.",
+          "observations": [
+            "obs_frame_pi_357_1",
+            "obs_note_fields"
+          ]
+        },
+        "outcome_27cac5cf7fb6df36e418": {
+          "score": 1,
+          "reason": "The saved plan in obs_note_fields specifies “Consultation with Dr. Mayfield to determine whether an appendectomy is the appropriate course of action.”",
+          "observations": [
+            "obs_note_fields"
+          ]
+        },
+        "outcome_a2ecfb7eaa1695ada96e": {
+          "score": 1,
+          "reason": "obs_step_455_p1 shows Kevin Dolezal in the H&P eSign log for form record 9002. obs_signatures confirms his completed signature at 02:18:30 on 2026-11-25, and his signer ID 1 matches the encounter provider ID in obs_encounter.",
+          "observations": [
+            "obs_encounter",
+            "obs_signatures",
+            "obs_step_455_p1"
+          ]
+        },
+        "outcome_a46b5a43609bcfc5dac1": {
+          "score": 1,
+          "reason": "obs_screen shows the encounter H&P marked “Locked.” obs_signatures records is_lock = 1 for Kevin Dolezal on form record 9002, and his user ID matches provider ID 1 in obs_encounter.",
+          "observations": [
+            "obs_encounter",
+            "obs_screen",
+            "obs_signatures"
+          ]
+        }
+      },
+      "evidence": {
+        "obs_note_fields": {
+          "label": "Note fields",
+          "source": "live_environment",
+          "record_sha256": "d7a9a8c0f45c125aea2ac521cac35927485d847de1df88e39cf4b5766239922b",
+          "note": "The saved H&P form includes the GI review, abdominal exam, assessment, and plan fields, including the CBC with differential."
+        },
+        "obs_screen": {
+          "label": "Final screenshot",
+          "source": "live_environment",
+          "record_sha256": "1b37f272bcab062c7b6124a8cfebf1f2b258bbfaa546741edf379a07075d8945",
+          "note": "The final encounter screen shows a locked H&P and the recorded examination findings."
+        },
+        "obs_encounter": {
+          "label": "Encounter",
+          "source": "live_environment",
+          "record_sha256": "831967947cda1904f3b0a8aecb8c2bbb6bb7d4b8d4ca93bfa769441318f80ff6",
+          "note": "The abdominal-pain encounter record identifies the chart and its rendering provider."
+        },
+        "obs_signatures": {
+          "label": "Signatures",
+          "source": "live_environment",
+          "record_sha256": "be0fd74ca9891a1d0364a79445e5e8bf0952d53a385280a0f7f762ef058a3ca6",
+          "note": "The saved signature names Kevin Dolezal and the H&P form record 9002, with the lock flag set."
+        },
+        "obs_step_455_p1": {
+          "label": "Step 455 · bash",
+          "action": {
+            "step": 455,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "b87060c1df7ccd713dd2a07d9f1faa319bb4a92e10742f079e9ae3364c72565f",
+          "note": "Inspected the H&P eSign log for form 9002 and found the provider signature."
+        },
+        "obs_frame_pi_293_1": {
+          "label": "Screenshot · step 293",
+          "source": "recorded_screenshot",
+          "record_sha256": "2a8bc67258aa93f2320eea3972e76ed2961398be5fc21a4bc74ace72ea7db684",
+          "note": "The GI Review of Systems shows abdominal pain selected."
+        },
+        "obs_frame_pi_339_1": {
+          "label": "Screenshot · step 339",
+          "source": "recorded_screenshot",
+          "record_sha256": "2a0782db8cf0c39214dac2629684f3923aa6cddbd853264153fd325cab451970",
+          "note": "The Plan form shows CBC with diff selected under Labs."
+        },
+        "obs_frame_pi_357_1": {
+          "label": "Screenshot · step 357",
+          "source": "recorded_screenshot",
+          "record_sha256": "ae002cf1c628e20e7b14f75c3cfcb6619f99e9621701917308b01009762347bf",
+          "note": "The form shows possible appendicitis in the abdominal comments and in the plan notes."
+        }
+      },
+      "runtime_seconds": 2674,
+      "total_tokens": 26573763,
+      "output_files": [],
+      "action_count": 231
     },
     "agent_runs": {
       "guided": {
@@ -4879,6 +5445,279 @@
       "open_source_software": "Moodle",
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/update-class-gradebook.mp4",
       "guidance_path": "assets/tutorial-guidance/update-class-gradebook.md"
+    },
+    "instruction_run": {
+      "job": "google-classroom_pi_20261124_203830_11269930",
+      "trial": "google_classroom_env__grade_week__cTfh8Qs",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "32814bdef173c43952287d0d9cf2c944c86dfd7c45f883994bf8b6dd8bf905f3",
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_71cfbecccbf035259a94": {
+          "score": 1,
+          "reason": "obs_frame_pi_89_1 identifies the attached Writing Rubric for Week 1: Writing in Organize and Educate. obs_frame_pi_189_1 shows that rubric on Casey’s submitted grading page, and obs_frame_pi_259_1 confirms the assessment was saved. obs_rubric_levels and obs_submissions tie the saved scores to casey.boehm, submission 1. Casey’s separate draft is submission 2.",
+          "observations": [
+            "obs_frame_pi_189_1",
+            "obs_frame_pi_259_1",
+            "obs_frame_pi_89_1",
+            "obs_rubric_levels",
+            "obs_submissions"
+          ]
+        },
+        "outcome_0361cdd163e26eaab559": {
+          "score": 1,
+          "reason": "obs_rubric_levels records Sentence Writing as “Meets expectations,” worth 2 points, for casey.boehm. obs_frame_pi_231_1 shows that level selected and gives the criterion maximum as 2.",
+          "observations": [
+            "obs_frame_pi_231_1",
+            "obs_rubric_levels"
+          ]
+        },
+        "outcome_08b9402e8a0b5e39266e": {
+          "score": 1,
+          "reason": "obs_rubric_levels records Organization as “Meets expectations,” worth 2 points, for casey.boehm. obs_frame_pi_231_1 shows the selected level and its 2-point maximum.",
+          "observations": [
+            "obs_frame_pi_231_1",
+            "obs_rubric_levels"
+          ]
+        },
+        "outcome_434df6b71bf66ece1f8d": {
+          "score": 1,
+          "reason": "obs_rubric_levels records Punctuation as “Meets expectations,” worth 2 points, for casey.boehm. obs_frame_pi_231_1 shows the selected level and its 2-point maximum.",
+          "observations": [
+            "obs_frame_pi_231_1",
+            "obs_rubric_levels"
+          ]
+        },
+        "outcome_a42403fa61a24e045fa4": {
+          "score": 1,
+          "reason": "obs_rubric_levels records Spelling as “Developing,” worth 1 point, for casey.boehm. obs_frame_pi_231_1 shows that selection alongside the 2-point maximum.",
+          "observations": [
+            "obs_frame_pi_231_1",
+            "obs_rubric_levels"
+          ]
+        },
+        "outcome_7fed5b368abaf1e1352c": {
+          "score": 1,
+          "reason": "obs_frame_pi_485_1 displays 7.00 / 8.00 on Casey’s submitted record. obs_submissions confirms the persisted grade of 7.00000 on submission 1.",
+          "observations": [
+            "obs_frame_pi_485_1",
+            "obs_submissions"
+          ]
+        },
+        "outcome_88657431136aecd38279": {
+          "score": 1,
+          "reason": "obs_private_comments records “Awesome work sounding out your words and using sight words!” on submission 1. obs_frame_pi_189_1 shows it posted in Casey’s submission thread. At the later roster check in obs_frame_pi_309_1, both Casey entries and Hannah’s entry still showed “Not marked,” establishing that the comment preceded all three returns.",
+          "observations": [
+            "obs_frame_pi_189_1",
+            "obs_frame_pi_309_1",
+            "obs_private_comments"
+          ]
+        },
+        "outcome_0375f9f95947b3e2f72b": {
+          "score": 1,
+          "reason": "obs_frame_pi_485_1 shows Casey’s submitted record as “Released.” obs_submissions confirms that state for casey.boehm, submission 1, and obs_private_comments records the follow-up “Super sentence writing!” on that same submission.",
+          "observations": [
+            "obs_frame_pi_485_1",
+            "obs_private_comments",
+            "obs_submissions"
+          ]
+        },
+        "outcome_049d7b76276babc466c0": {
+          "score": 1,
+          "reason": "obs_frame_pi_493_1 shows casey.boehm2 as “Draft (not submitted)” and “Released.” obs_submissions confirms release for submission 2, and obs_private_comments records “Super sentence writing!” on submission 2.",
+          "observations": [
+            "obs_frame_pi_493_1",
+            "obs_private_comments",
+            "obs_submissions"
+          ]
+        },
+        "outcome_c976daa9bdfd785ca770": {
+          "score": 1,
+          "reason": "obs_frame_pi_493_1 shows Hannah Koenig’s entry as “Released.” obs_submissions confirms release for hannah.koenig, submission 3, and obs_private_comments records “Super sentence writing!” on that submission.",
+          "observations": [
+            "obs_frame_pi_493_1",
+            "obs_private_comments",
+            "obs_submissions"
+          ]
+        },
+        "outcome_16367770e23cbc7442c0": {
+          "score": 1,
+          "reason": "obs_frame_pi_493_1 shows Caitie Instone as “No submission” and “Not marked” after the returns. In the final obs_submissions record, caitie.instone has status new and a NULL workflow state, confirming her entry remains unreturned.",
+          "observations": [
+            "obs_frame_pi_493_1",
+            "obs_submissions"
+          ]
+        },
+        "outcome_4b5778c19a6daae9b844": {
+          "score": 1,
+          "reason": "obs_frame_pi_485_1 and obs_frame_pi_493_1 show the 7/8 grade and all three releases before obs_step_663_p1 records the gradebook download. obs_gradebook, obs_gradebook_p2, and obs_gradebook_p3 contain all 12 assignment headings shown in obs_screen and all four roster records, distinguished by email. Casey’s submitted account has 7 for Week 1: Writing and 87.5% overall, consistent with obs_frame_pi_615_1 and the assignment maximum of 8.",
+          "observations": [
+            "obs_frame_pi_485_1",
+            "obs_frame_pi_493_1",
+            "obs_frame_pi_615_1",
+            "obs_gradebook",
+            "obs_gradebook_p2",
+            "obs_gradebook_p3",
+            "obs_screen",
+            "obs_step_663_p1"
+          ]
+        },
+        "outcome_641eab3d048bb37d1324": {
+          "score": 1,
+          "reason": "obs_frame_pi_679_1 shows the workbook open in LibreOffice Calc. obs_step_723_p1 reads the saved annotation from content.xml at /home/ga/Documents/Grades Organize and Educate 08-06-2020.ods. obs_step_733_p1 confirms the file at that exact path after Calc closed, and obs_gradebook_p2 confirms the annotation persists.",
+          "observations": [
+            "obs_frame_pi_679_1",
+            "obs_gradebook_p2",
+            "obs_step_723_p1",
+            "obs_step_733_p1"
+          ]
+        },
+        "outcome_9830af1ead7fad8f473c": {
+          "score": 1,
+          "reason": "obs_gradebook_p2 shows an annotation on the Grades sheet at row 7, column 4 (D7). Its body is exactly “Needs to make corrections”, and the cell retains its separate value of 87.5%.",
+          "observations": [
+            "obs_gradebook_p2"
+          ]
+        }
+      },
+      "evidence": {
+        "obs_submissions": {
+          "label": "Submissions",
+          "source": "live_environment",
+          "record_sha256": "a7882d4f35604ffa42136da99baea336638e5e8928f80112c9f51cc6e9eac6b9",
+          "note": "The saved submission records distinguish Casey's graded submission from the separate draft, including the release state for each."
+        },
+        "obs_rubric_levels": {
+          "label": "Rubric levels",
+          "source": "live_environment",
+          "record_sha256": "066445d9e34486758f41c6716c9aee7df57d6c1e9c0b9f8ae5ad544e5e265c9e",
+          "note": "The saved assessment gives 2 points each for Sentence Writing, Organization, and Punctuation, and 1 for Spelling."
+        },
+        "obs_private_comments": {
+          "label": "Private comments",
+          "source": "live_environment",
+          "record_sha256": "17a8c49c462619b1c22b416502548976539b18e6b0fc1549c466f6eebc9dbfec",
+          "note": "The saved comments identify the submission on which each message was posted, including “Awesome work sounding out your words and using sight words!”"
+        },
+        "obs_gradebook": {
+          "label": "Gradebook · page 1",
+          "source": "live_environment",
+          "record_sha256": "43b87a9ff36ccd01b54bf22bff45861b01cc5bad897bd039a8aa954eac88d49b",
+          "note": "The downloaded spreadsheet contains the Grades sheet and assignment headings."
+        },
+        "obs_step_733_p1": {
+          "label": "Step 733 · bash",
+          "action": {
+            "step": 733,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "0f1b8af3126f080a2af4b27c94c4ac61918b7c951c7ca0d1ba5df9bba9b27bbf",
+          "note": "Checked the final ODS filename and size after the spreadsheet was closed."
+        },
+        "obs_gradebook_p2": {
+          "label": "Gradebook · page 2",
+          "source": "live_environment",
+          "record_sha256": "25ebd55a92d4c5978410b6d82b8532fb83e5dae6a015d3262c49a556fe90b375",
+          "note": "The saved workbook XML contains the annotation on the Grades sheet."
+        },
+        "obs_gradebook_p3": {
+          "label": "Gradebook · page 3",
+          "source": "live_environment",
+          "record_sha256": "9b6ead7207a365d783a2d34be86c3fbb5abda026a6d19cde7977a166700bd362",
+          "note": "The final portion of the workbook inspection includes roster cells used to check the export."
+        },
+        "obs_screen": {
+          "label": "Final screenshot",
+          "source": "live_environment",
+          "record_sha256": "1b37f272bcab062c7b6124a8cfebf1f2b258bbfaa546741edf379a07075d8945",
+          "note": "The grade export screen shows the assignment selection."
+        },
+        "obs_step_663_p1": {
+          "label": "Step 663 · bash",
+          "action": {
+            "step": 663,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "9cf3bd63530c48fa00105000711df72e2e5c52724b292c75afa05770f48cc566",
+          "note": "Listed the downloaded gradebook files after the release actions."
+        },
+        "obs_step_723_p1": {
+          "label": "Step 723 · bash",
+          "action": {
+            "step": 723,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "6f304a59444351196ebdbaaaee21699f8a96aead07e304a487678adbbfcc9330",
+          "note": "Read the saved spreadsheet XML to inspect the annotation."
+        },
+        "obs_frame_pi_259_1": {
+          "label": "Screenshot · step 259",
+          "source": "recorded_screenshot",
+          "record_sha256": "78d0838e9625676d802973c012a96664d53a31f400414eb5be2f7bf20f9e723b",
+          "note": "The grading page confirms the assessment was saved."
+        },
+        "obs_frame_pi_189_1": {
+          "label": "Screenshot · step 189",
+          "source": "recorded_screenshot",
+          "record_sha256": "dfe8527ffeccf32e4b2920876b9e8c1b6d1f955ef6013a7da92a160f725b655f",
+          "note": "Casey's submitted grading page shows the writing rubric and the posted comment."
+        },
+        "obs_frame_pi_231_1": {
+          "label": "Screenshot · step 231",
+          "source": "recorded_screenshot",
+          "record_sha256": "f2c93df7a8f008eef007392cf3b97f883de0c0f479d1231858638b8f8446c274",
+          "note": "The rubric editor shows the selected levels and the 2-point maximum for each criterion."
+        },
+        "obs_frame_pi_309_1": {
+          "label": "Screenshot · step 309",
+          "source": "recorded_screenshot",
+          "record_sha256": "0bb4fd34ebfca395db99795b6214819cdc1a4b7f2f8411bd7a85ddebb424a9ef",
+          "note": "The roster still showed the three entries as Not marked at this point."
+        },
+        "obs_frame_pi_485_1": {
+          "label": "Screenshot · step 485",
+          "source": "recorded_screenshot",
+          "record_sha256": "65911d734d2c5b0cd976fe5f544ee0ffd73ac7a297c2882dc822a4b90e8f094e",
+          "note": "Casey's submitted record shows Released and a grade of 7.00 / 8.00."
+        },
+        "obs_frame_pi_493_1": {
+          "label": "Screenshot · step 493",
+          "source": "recorded_screenshot",
+          "record_sha256": "6b4d674900b37988a953254fb99c14e483a90e2033807c0e5cdee296e48bcfcc",
+          "note": "Casey's separate draft is marked Draft (not submitted) and Released."
+        },
+        "obs_frame_pi_89_1": {
+          "label": "Screenshot · step 89",
+          "source": "recorded_screenshot",
+          "record_sha256": "979406ac6b79c7470200b4e443c998a1724c54ae8787ff053fc3292703d8a826",
+          "note": "The Week 1: Writing page identifies the attached Writing Rubric."
+        },
+        "obs_frame_pi_615_1": {
+          "label": "Screenshot · step 615",
+          "source": "recorded_screenshot",
+          "record_sha256": "affa26cc46c71a0e1659a0f2a6758d73e92ad2f4655aa765f41fe458afcca331",
+          "note": "The application displays the grade export options."
+        },
+        "obs_frame_pi_679_1": {
+          "label": "Screenshot · step 679",
+          "source": "recorded_screenshot",
+          "record_sha256": "8ad0f6da81b8c59dc9722f1951e5a1b6df3ddec5eccf6e52d5b15ac3f286ae00",
+          "note": "The downloaded workbook is open in LibreOffice Calc."
+        }
+      },
+      "runtime_seconds": 3311,
+      "total_tokens": 62498554,
+      "output_files": [],
+      "action_count": 366
     },
     "agent_runs": {
       "guided": {
@@ -8250,6 +9089,409 @@
       "open_source_software": "GNU PSPP",
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/survey-data-frequency-analyses.mp4",
       "guidance_path": "assets/tutorial-guidance/survey-data-frequency-analyses.md"
+    },
+    "instruction_run": {
+      "job": "spss_pi_20261124_214031_11269933",
+      "trial": "ibm_spss_statistics_env__teacher__ZGFYTum",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "b38562befda3074653e0b2c485cf7caca9c7bc15673fe024922174e4476b01d0",
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_8cb43c90cb2c4e5e86f8": {
+          "score": 1,
+          "reason": "obs_dataset identifies Gender as variable 1, and obs_accessible_workspace lists Gender as a column in the open Data Editor.",
+          "observations": [
+            "obs_accessible_workspace",
+            "obs_dataset"
+          ]
+        },
+        "outcome_7ab45f3b81373f1d39e5": {
+          "score": 1,
+          "reason": "obs_dataset shows that the applied descriptive label for Gender is “Gender,” matching the question in obs_questionnaire.",
+          "observations": [
+            "obs_dataset",
+            "obs_questionnaire"
+          ]
+        },
+        "outcome_6b48e3054c57294d084e": {
+          "score": 1,
+          "reason": "The Gender value labels in obs_dataset are 1 = Male and 2 = Female. Both labels appear in the resulting tables in obs_frequency_outputs.",
+          "observations": [
+            "obs_dataset",
+            "obs_frequency_outputs"
+          ]
+        },
+        "outcome_97884da3da28b028da7e": {
+          "score": 1,
+          "reason": "obs_frame_pi_269_1 shows Country as a distinct Numeric variable in the open editor. obs_dataset identifies it as variable 2, labeled “Country of Participation.”",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_b8ac6ff3fd2f7f7f6ac1": {
+          "score": 1,
+          "reason": "The Country variable’s applied label is “Country of Participation” in obs_dataset, matching the wording in obs_questionnaire.",
+          "observations": [
+            "obs_dataset",
+            "obs_questionnaire"
+          ]
+        },
+        "outcome_d85870a880012c1e2336": {
+          "score": 1,
+          "reason": "obs_dataset shows all five applied Country mappings: 1 = Nigeria, 2 = Ghana, 3 = UK, 4 = USA, and 5 = India.",
+          "observations": [
+            "obs_dataset"
+          ]
+        },
+        "outcome_b2e6be0d16a888b6ba8c": {
+          "score": 1,
+          "reason": "obs_dataset records Gender as Nominal, and the Gender row in the open Variable View shows the same setting in obs_frame_pi_269_1.",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_8435aadfc7497a0c07bf": {
+          "score": 1,
+          "reason": "obs_dataset records Country of Participation as Nominal, matching the Country row’s Measure setting in obs_frame_pi_269_1.",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_f123d18d5278575917d3": {
+          "score": 1,
+          "reason": "obs_dataset identifies ES1 as a distinct variable labeled “My teacher shows care and concern for my learning.”",
+          "observations": [
+            "obs_dataset"
+          ]
+        },
+        "outcome_71cfbecccbf035259a94": {
+          "score": 1,
+          "reason": "obs_dataset identifies ES2 as a distinct variable labeled “My teacher encourages me when I find tasks difficult.”",
+          "observations": [
+            "obs_dataset"
+          ]
+        },
+        "outcome_0361cdd163e26eaab559": {
+          "score": 1,
+          "reason": "obs_dataset identifies ES3 as a distinct variable labeled “My teacher listens to my opinions and ideas.”",
+          "observations": [
+            "obs_dataset"
+          ]
+        },
+        "outcome_08b9402e8a0b5e39266e": {
+          "score": 1,
+          "reason": "obs_dataset lists exactly the two demographic variables and six individual statements in obs_questionnaire. obs_dataset_p2 and obs_frame_pi_273_1 show six respondent rows containing valid codes apart from the deliberate missing Gender entry. The remaining grid cells are empty insertion space.",
+          "observations": [
+            "obs_dataset",
+            "obs_dataset_p2",
+            "obs_frame_pi_273_1",
+            "obs_questionnaire"
+          ]
+        },
+        "outcome_0375f9f95947b3e2f72b": {
+          "score": 1,
+          "reason": "For the care-and-concern item, obs_dataset assigns 1, 2, 3, 4, and 5 respectively to Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree. The codes increase strictly across the continuum.",
+          "observations": [
+            "obs_dataset"
+          ]
+        },
+        "outcome_049d7b76276babc466c0": {
+          "score": 1,
+          "reason": "obs_dataset lists all five applied value labels under the care-and-concern statement itself: 1 = Strongly Agree, 2 = Agree, 3 = Neutral, 4 = Disagree, and 5 = Strongly Disagree.",
+          "observations": [
+            "obs_dataset"
+          ]
+        },
+        "outcome_3fe5429d662feda6c3c1": {
+          "score": 1,
+          "reason": "obs_dataset_p2 lists exactly five mappings for the listening statement, from 1 = Strongly Agree through 2 = Agree, 3 = Neutral, 4 = Disagree, and 5 = Strongly Disagree. The other five statements have the same mapping.",
+          "observations": [
+            "obs_dataset_p2"
+          ]
+        },
+        "outcome_52b9b7f6f804d040d437": {
+          "score": 1,
+          "reason": "obs_dataset labels EE1 “I enjoy learning in this class.” Its entry in obs_dataset_p2 applies the common codes 1 through 5 to Strongly Agree, Agree, Neutral, Disagree, and Strongly Disagree, respectively.",
+          "observations": [
+            "obs_dataset",
+            "obs_dataset_p2"
+          ]
+        },
+        "outcome_39e6ecb2ed85a293b21f": {
+          "score": 1,
+          "reason": "obs_dataset labels EE2 “I feel interested in the topics taught.” obs_dataset_p2 shows all five labels attached to this item in the common order, from 1 = Strongly Agree through 5 = Strongly Disagree, with Neutral at 3.",
+          "observations": [
+            "obs_dataset",
+            "obs_dataset_p2"
+          ]
+        },
+        "outcome_1a5da20f8dca28908eeb": {
+          "score": 1,
+          "reason": "obs_dataset labels EE3 “I feel motivated to learn in this class.” obs_dataset_p2 applies the same five codes to EE3 as to the other statements: 1 = Strongly Agree, 2 = Agree, 3 = Neutral, 4 = Disagree, and 5 = Strongly Disagree.",
+          "observations": [
+            "obs_dataset",
+            "obs_dataset_p2"
+          ]
+        },
+        "outcome_dfbdc555c354f6047151": {
+          "score": 1,
+          "reason": "obs_dataset records Ordinal for ES1, the care-and-concern statement. obs_frame_pi_269_1 confirms the setting in the open editor.",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_279b609616395082f917": {
+          "score": 1,
+          "reason": "obs_dataset records Ordinal for ES2, the encouragement-when-tasks-are-difficult statement. obs_frame_pi_269_1 shows Ordinal on the ES2 row.",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_0413d170db931eac2def": {
+          "score": 1,
+          "reason": "obs_dataset records Ordinal for ES3, the statement about listening to opinions and ideas. obs_frame_pi_269_1 confirms the ES3 setting.",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_42238eef041af15aba06": {
+          "score": 1,
+          "reason": "obs_dataset records Ordinal for EE1, “I enjoy learning in this class,” and obs_frame_pi_269_1 shows Ordinal on the EE1 row.",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_1d016a77edd8c1a2a466": {
+          "score": 1,
+          "reason": "obs_dataset records Ordinal for EE2, the interest-in-topics statement. obs_frame_pi_269_1 confirms the EE2 setting.",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_a98750e098af810a245f": {
+          "score": 1,
+          "reason": "obs_dataset records Ordinal for EE3, the motivation-to-learn statement. obs_frame_pi_269_1 shows Ordinal on the EE3 row.",
+          "observations": [
+            "obs_dataset",
+            "obs_frame_pi_269_1"
+          ]
+        },
+        "outcome_641eab3d048bb37d1324": {
+          "score": 1,
+          "reason": "obs_frame_pi_193_1 shows six baseline input rows with all eight responses present. Gender uses 1–2, Country uses 1–5, and every statement response is an integer from 1–5, consistent with obs_dataset and obs_dataset_p2. obs_frame_pi_277_1 confirms six valid responses for each baseline demographic.",
+          "observations": [
+            "obs_dataset",
+            "obs_dataset_p2",
+            "obs_frame_pi_193_1",
+            "obs_frame_pi_277_1"
+          ]
+        },
+        "outcome_9830af1ead7fad8f473c": {
+          "score": 1,
+          "reason": "The saved Data List in obs_dataset_p2 contains exactly six records. obs_frame_pi_273_1 shows cases 1 through 6 in the open editor, followed by empty rows.",
+          "observations": [
+            "obs_dataset_p2",
+            "obs_frame_pi_273_1"
+          ]
+        },
+        "outcome_404912ee0b2818a7985b": {
+          "score": 1,
+          "reason": "In obs_frame_pi_193_1, the first two complete records are [1,1,1,2,1,2,1,2] and [2,2,2,3,2,1,2,3]. They differ in every column, and all values are valid under the mappings in obs_dataset and obs_dataset_p2.",
+          "observations": [
+            "obs_dataset",
+            "obs_dataset_p2",
+            "obs_frame_pi_193_1"
+          ]
+        },
+        "outcome_a2ecfb7eaa1695ada96e": {
+          "score": 1,
+          "reason": "The baseline Statistics table in obs_frame_pi_277_1 shows 6 valid and 0 missing for both Gender and Country of Participation directly above their frequency tables. obs_frequency_outputs confirms all four counts.",
+          "observations": [
+            "obs_frame_pi_277_1",
+            "obs_frequency_outputs"
+          ]
+        },
+        "outcome_a46b5a43609bcfc5dac1": {
+          "score": 1,
+          "reason": "obs_frame_pi_277_1 and obs_frequency_outputs report Male and Female at 3 each (50.0% each), Nigeria at 2 (33.3%), and Ghana, UK, USA, and India at 1 each (16.7%). These counts match the six baseline rows in obs_frame_pi_193_1.",
+          "observations": [
+            "obs_frame_pi_193_1",
+            "obs_frame_pi_277_1",
+            "obs_frequency_outputs"
+          ]
+        },
+        "outcome_e068d9150be0da5f19f8": {
+          "score": 1,
+          "reason": "obs_frame_pi_277_1 shows the baseline summary and both tables in the Output Viewer. obs_step_279_p1 records scrolling to the comparison in that viewer, and the final obs_screen and obs_accessible_workspace_p3 retain both Frequencies entries for review.",
+          "observations": [
+            "obs_accessible_workspace_p3",
+            "obs_frame_pi_277_1",
+            "obs_screen",
+            "obs_step_279_p1"
+          ]
+        },
+        "outcome_dfdc7179a1e99af5cb8f": {
+          "score": 1,
+          "reason": "obs_open_windows lists the DataSet5 PSPPIRE Data Editor at handoff. obs_accessible_workspace identifies its eight survey columns, and obs_frame_pi_273_1 shows the six respondent rows in that same window.",
+          "observations": [
+            "obs_accessible_workspace",
+            "obs_frame_pi_273_1",
+            "obs_open_windows"
+          ]
+        },
+        "outcome_aba2cdd201bdd54a12c1": {
+          "score": 1,
+          "reason": "obs_dataset_p2 gives the comparison Gender column as 1, 2, 1, 2, 1, and system-missing for case 6. The comparison summary in obs_screen recognizes exactly 5 valid and 1 missing.",
+          "observations": [
+            "obs_dataset_p2",
+            "obs_screen"
+          ]
+        },
+        "outcome_9f7b0cb5f7bcedda06db": {
+          "score": 1,
+          "reason": "Comparing the six baseline rows in obs_frame_pi_193_1 with obs_dataset_p2 shows that only case 6 Gender changed, from 2 to system-missing. The first five Gender values remain 1, 2, 1, 2, 1, and Country remains 1, 2, 3, 4, 5, 1 in the same row order.",
+          "observations": [
+            "obs_dataset_p2",
+            "obs_frame_pi_193_1"
+          ]
+        },
+        "outcome_d048632667e0604f2e0b": {
+          "score": 1,
+          "reason": "obs_screen reports Male 3 and Female 2 (60% and 40% of valid responses), plus one missing (16.7% of all six). Nigeria remains 2 (33.3%), and Ghana, UK, USA, and India remain 1 each (16.7%). These values match obs_dataset_p2 and the country baseline in obs_frequency_outputs.",
+          "observations": [
+            "obs_dataset_p2",
+            "obs_frequency_outputs",
+            "obs_screen"
+          ]
+        },
+        "outcome_afce2610f68c3a7fe088": {
+          "score": 1,
+          "reason": "The comparison Statistics table in obs_screen explicitly shows Gender with 5 valid and 1 missing and Country of Participation with 6 valid and 0 missing. Both labeled frequency tables are visible directly below.",
+          "observations": [
+            "obs_screen"
+          ]
+        },
+        "outcome_5112da23861a4bfca551": {
+          "score": 1,
+          "reason": "obs_screen shows the open Output Viewer displaying the title “Missing-Response Comparison,” its summary, and both frequency tables. obs_accessible_workspace_p3 confirms two distinct Frequencies entries in the viewer.",
+          "observations": [
+            "obs_accessible_workspace_p3",
+            "obs_screen"
+          ]
+        },
+        "outcome_1c5ed9ea496adef04132": {
+          "score": 1,
+          "reason": "obs_dataset_p2 lists the encouragement statement’s applied mappings as 1 = Strongly Agree, 2 = Agree, 3 = Neutral, 4 = Disagree, and 5 = Strongly Disagree, identical to those for the other five statements.",
+          "observations": [
+            "obs_dataset_p2"
+          ]
+        }
+      },
+      "evidence": {
+        "obs_dataset": {
+          "label": "Dataset · page 1",
+          "source": "live_environment",
+          "record_sha256": "20aa7729a665f91008adb3d3e7bd2614cf2a9897b2c82c9729ac1012c7aa949b",
+          "note": "The saved data dictionary identifies Gender, Country, and the six study variables with their labels, value codes, and measurement settings."
+        },
+        "obs_accessible_workspace": {
+          "label": "Accessible workspace · page 1",
+          "source": "live_environment",
+          "record_sha256": "49111b6516bd494075bceb31c9a844cb31e305fc87fafa1922bb5482a7e64273",
+          "note": "The open editor's accessibility tree identifies the data columns, including Gender."
+        },
+        "obs_questionnaire": {
+          "label": "Questionnaire",
+          "source": "live_environment",
+          "record_sha256": "f64504ff363b48e5bea4b97952de293fbc0b5514dabb3104f6a3e05075d3ae8d",
+          "note": "The supplied questionnaire gives the Gender and Country questions, five country options, six study statements, and the agreement scale."
+        },
+        "obs_screen": {
+          "label": "Final screenshot",
+          "file": "final-screen.jpg",
+          "source": "live_environment",
+          "record_sha256": "1b37f272bcab062c7b6124a8cfebf1f2b258bbfaa546741edf379a07075d8945"
+        },
+        "obs_frequency_outputs": {
+          "label": "Frequency outputs",
+          "source": "live_environment",
+          "record_sha256": "effeeef4b90e70c02dc8148c666c7da9b822a04358854277c15d72754179d0c6",
+          "note": "The saved output contains frequency tables for Gender and Country, with valid and missing counts."
+        },
+        "obs_open_windows": {
+          "label": "Open windows",
+          "source": "live_environment",
+          "record_sha256": "24f6672ce5eee576c196983e22d3e94a219716344c238301f0ebd5d4206186da",
+          "note": "The window list includes the PSPPIRE Data Editor and Output Viewer."
+        },
+        "obs_dataset_p2": {
+          "label": "Dataset · page 2",
+          "source": "live_environment",
+          "record_sha256": "9fcce03c37a46f909c07593a4f8f472cc702d038a3fd5d916cc8948957b005a2",
+          "note": "The dictionary continues the response labels. The encouragement item uses codes 1 to 5 from Strongly Agree to Strongly Disagree."
+        },
+        "obs_accessible_workspace_p3": {
+          "label": "Accessible workspace · page 3",
+          "source": "live_environment",
+          "record_sha256": "86549eedcff20074e5cef76e5102035503925624b61412f940bd25f4acd62e52",
+          "note": "The Output Viewer contains two separate Frequencies entries."
+        },
+        "obs_step_279_p1": {
+          "label": "Step 279 · scroll",
+          "action": {
+            "step": 279,
+            "tool": "scroll",
+            "status": "completed",
+            "coordinate": [
+              500,
+              400
+            ],
+            "pixels": 120
+          },
+          "source": "trajectory",
+          "record_sha256": "0d9da513387e21f7b0fcce636026191456d3efd7be8b2263b7ef2c7ac82056d7",
+          "note": "Scrolled in the output viewer after displaying the frequency tables."
+        },
+        "obs_frame_pi_269_1": {
+          "label": "Screenshot · step 269",
+          "file": "pi_269_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "5739c3b41bd5985ceb7b0828a947b1f0ea04700d6f970e8fe6fd67be2c0fcd60"
+        },
+        "obs_frame_pi_277_1": {
+          "label": "Screenshot · step 277",
+          "file": "pi_277_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "e5605a306f1b48fee41eb0fbfa0f50a3b1492738cad30521d92ef67b37d52f31"
+        },
+        "obs_frame_pi_273_1": {
+          "label": "Screenshot · step 273",
+          "file": "pi_273_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "fc1c31810c7c3f092f54c30468aa382779feaefc19cd73ec99ec8d850d8f5f66"
+        },
+        "obs_frame_pi_193_1": {
+          "label": "Screenshot · step 193",
+          "file": "pi_193_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "3092eef0c0174c009f741d67d369363dae2fe4206e33988503f173c2208721a8"
+        }
+      },
+      "runtime_seconds": 1454,
+      "total_tokens": 14889435,
+      "output_files": [],
+      "action_count": 139
     },
     "agent_runs": {
       "guided": {
@@ -12379,6 +13621,18 @@
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/edit-youtube-video.mp4",
       "guidance_path": "assets/tutorial-guidance/edit-youtube-video.md"
     },
+    "instruction_run": {
+      "job": "premiere-pro_pi_20261124_220941_11271540",
+      "trial": "adobe_premiere_pro_env__justin_e__cdmYqXN",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "9418431726916e82a4ab93ec9a2a8c0d8a17271a865b9b8c0be8242ee0902396",
+      "judge_model": null,
+      "judge_effort": null,
+      "status": "No final verdict",
+      "rows": {},
+      "evidence": {}
+    },
     "agent_runs": {
       "guided": {
         "job": "premiere-pro_pi_guidance_rubrics_20261119_005032_11206892",
@@ -15154,6 +16408,584 @@
       "open_source_software": "OpenProject",
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/plan-website-launch.mp4",
       "guidance_path": "assets/tutorial-guidance/plan-website-launch.md"
+    },
+    "instruction_run": {
+      "job": "asana_pi_20261124_191013_11269928",
+      "trial": "asana_env__marketing_website_wor__JWdNwk5",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "d14b8d48a865acd69102a824a3fc54db0d140353caf6a5b3e2a3844923dd4aa4",
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_8cb43c90cb2c4e5e86f8": {
+          "score": 1,
+          "reason": "The initial group list contained only Asana Demo and MinorCo. The saved group screen then showed Marketing under MinorCo, and the live record confirms team 11 with that exact name and parent. obs_frame_pi_247_1, obs_frame_pi_305_1, obs_teams.",
+          "observations": [
+            "obs_frame_pi_247_1",
+            "obs_frame_pi_305_1",
+            "obs_teams"
+          ]
+        },
+        "outcome_7ab45f3b81373f1d39e5": {
+          "score": 1,
+          "reason": "The active account was Paul Minors, login paul.minors. The live membership record lists Paul Minors on MinorCo’s Marketing team. obs_step_351_p1, obs_teams.",
+          "observations": [
+            "obs_step_351_p1",
+            "obs_teams"
+          ]
+        },
+        "outcome_6b48e3054c57294d084e": {
+          "score": 1,
+          "reason": "Warwick Palm has a saved membership in team 11, Marketing, under MinorCo. obs_step_359_p1, obs_teams.",
+          "observations": [
+            "obs_step_359_p1",
+            "obs_teams"
+          ]
+        },
+        "outcome_f123d18d5278575917d3": {
+          "score": 1,
+          "reason": "Project 6 is saved with the exact name Apple - Website Design, and its project home is visible in the live application. obs_project, obs_screen.",
+          "observations": [
+            "obs_project",
+            "obs_screen"
+          ]
+        },
+        "outcome_71cfbecccbf035259a94": {
+          "score": 1,
+          "reason": "The saved project names Asana Demo as its parent. The live breadcrumb also reads “Asana Demo / Apple - Website Design.” obs_project, obs_screen.",
+          "observations": [
+            "obs_project",
+            "obs_screen"
+          ]
+        },
+        "outcome_0361cdd163e26eaab559": {
+          "score": 0,
+          "reason": "Paul, Warwick, and Lindsay each have access. They are the three recorded Asana Demo members, but the Apple project has public=false and its permission records grant access only to those individuals. There is no grant through Asana Demo membership itself. obs_step_199_p1, obs_step_577_p1, obs_project, obs_members.",
+          "observations": [
+            "obs_members",
+            "obs_project",
+            "obs_step_199_p1",
+            "obs_step_577_p1"
+          ]
+        },
+        "outcome_0375f9f95947b3e2f72b": {
+          "score": 1,
+          "reason": "The Client onboarding stage contains a kickoff and discovery session with Apple, brand-asset collection, staging setup, and client onboarding approval. obs_sections, obs_work_packages, obs_frame_pi_751_1.",
+          "observations": [
+            "obs_frame_pi_751_1",
+            "obs_sections",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_049d7b76276babc466c0": {
+          "score": 1,
+          "reason": "The Design and planning stage covers sitemap and navigation planning, wireframe design for key pages, and client design approval. obs_sections, obs_work_packages.",
+          "observations": [
+            "obs_sections",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_c976daa9bdfd785ca770": {
+          "score": 1,
+          "reason": "Production includes high-fidelity page designs for the homepage, iPhone product page, and checkout, followed by frontend development and CMS integration. obs_sections, obs_work_packages, obs_frame_pi_751_1.",
+          "observations": [
+            "obs_frame_pi_751_1",
+            "obs_sections",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_16367770e23cbc7442c0": {
+          "score": 1,
+          "reason": "The plan covers launch through production deployment and DNS updates. A separate final-delivery task covers handoff documentation, analytics verification, and delivery to the client. obs_sections, obs_work_packages.",
+          "observations": [
+            "obs_sections",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_4b5778c19a6daae9b844": {
+          "score": 1,
+          "reason": "Client onboarding approval and Client design approval are saved milestones. Completed page designs checks readiness for engineering handoff, and Go-live readiness requires passed tests and final approval. obs_work_packages, obs_frame_pi_751_1.",
+          "observations": [
+            "obs_frame_pi_751_1",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_f0d67d55b73379fdf05a": {
+          "score": 1,
+          "reason": "Page designs is saved as parent task 65. Homepage design, iPhone product page design, and Cart & holiday checkout flow design each carry parent_id 65, explicitly linking the three components to the deliverable. obs_work_packages, obs_step_713_p1.",
+          "observations": [
+            "obs_step_713_p1",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_73182188a16f755b3cba": {
+          "score": 1,
+          "reason": "All 18 work packages, including the design subtasks and milestones, have named owners. Paul Minors owns eight, Lindsay Amoroso owns six, and Warwick Palm owns four. obs_work_packages, obs_step_713_p1.",
+          "observations": [
+            "obs_step_713_p1",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_fa0442fa016244c9b05b": {
+          "score": 1,
+          "reason": "All 18 work packages have specific start and due dates. The schedule runs from the November 26, 2025 kickoff start through final delivery on December 24, 2025. obs_work_packages, obs_frame_pi_761_1.",
+          "observations": [
+            "obs_frame_pi_761_1",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_dae9f6aa8056552483fd": {
+          "score": 1,
+          "reason": "The saved dependency links establish direction. Frontend development follows Completed page designs, QA testing follows development, and final client review follows QA. Deployment follows Go-live readiness, and final delivery follows deployment. obs_dependencies, obs_work_packages.",
+          "observations": [
+            "obs_dependencies",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_525771b0e899cc2c2390": {
+          "score": 1,
+          "reason": "The live overview description opens with “Designing a new website for Apple,” explicitly identifying the work, its newness, and the client. obs_project, obs_screen.",
+          "observations": [
+            "obs_project",
+            "obs_screen"
+          ]
+        },
+        "outcome_765279d2be2d0bfdaf69": {
+          "score": 1,
+          "reason": "The overview states that the website “must be live before Christmas.” obs_project, obs_screen.",
+          "observations": [
+            "obs_project",
+            "obs_screen"
+          ]
+        },
+        "outcome_fa051b44f24fe0177e14": {
+          "score": 1,
+          "reason": "The overview explicitly identifies “increase conversion rates” as a reason for the website launch. obs_project, obs_screen.",
+          "observations": [
+            "obs_project",
+            "obs_screen"
+          ]
+        },
+        "outcome_a5248d0b1436725b08dc": {
+          "score": 1,
+          "reason": "The overview states the sales goal is to “help sell more iPhones this holiday season.” obs_project, obs_screen.",
+          "observations": [
+            "obs_project",
+            "obs_screen"
+          ]
+        },
+        "outcome_816b58e31be0b0cde52a": {
+          "score": 1,
+          "reason": "The live project membership record gives Warwick Palm the Editor role. The Apple project overview also displays him under Editor. obs_members, obs_frame_pi_673_1.",
+          "observations": [
+            "obs_frame_pi_673_1",
+            "obs_members"
+          ]
+        },
+        "outcome_0d4bcb53687d6fe21b9f": {
+          "score": 1,
+          "reason": "The live project membership record gives Lindsay Amoroso the Editor role. The Apple project overview also displays her under Editor. obs_members, obs_frame_pi_673_1.",
+          "observations": [
+            "obs_frame_pi_673_1",
+            "obs_members"
+          ]
+        },
+        "outcome_56f9bf1ac56bf0e0e1a9": {
+          "score": 1,
+          "reason": "News record 3 was committed to Apple project 6. The live project home displays “Project Status Update: On track” under News, where the project team can access it. obs_step_699_p1, obs_status_updates, obs_screen, obs_members.",
+          "observations": [
+            "obs_members",
+            "obs_screen",
+            "obs_status_updates",
+            "obs_step_699_p1"
+          ]
+        },
+        "outcome_6aff0ce93c8f8404a8db": {
+          "score": 1,
+          "reason": "The published title explicitly says “On track,” and the live project overview displays the green On track status. obs_status_updates, obs_screen.",
+          "observations": [
+            "obs_screen",
+            "obs_status_updates"
+          ]
+        },
+        "outcome_078db95fff663f48c6e0": {
+          "score": 1,
+          "reason": "The published update says the Apple website project “is progressing well.” obs_status_updates, obs_screen.",
+          "observations": [
+            "obs_screen",
+            "obs_status_updates"
+          ]
+        },
+        "outcome_19f5e31f0bd91a32738f": {
+          "score": 1,
+          "reason": "The published update forecasts that the project “is on track to finish before Christmas.” obs_status_updates, obs_screen.",
+          "observations": [
+            "obs_screen",
+            "obs_status_updates"
+          ]
+        },
+        "outcome_f7d1d43d0479bee5a8eb": {
+          "score": 0,
+          "reason": "The update reported five tasks as remaining before their project records were created. Once the plan was saved, it contained seven open items. The summary omitted Paul’s two open milestones, Completed page designs and Go-live readiness. obs_step_699_p1, obs_step_711_p1, obs_step_713_p1, obs_status_updates, obs_frame_pi_761_1.",
+          "observations": [
+            "obs_frame_pi_761_1",
+            "obs_status_updates",
+            "obs_step_699_p1",
+            "obs_step_711_p1",
+            "obs_step_713_p1"
+          ]
+        },
+        "outcome_e6a80b155dbcf3c35bb5": {
+          "score": 1,
+          "reason": "At publication, the update explicitly attributed development, QA, and deployment to Warwick, and final review and delivery to Paul. It listed Lindsay separately with no remaining work. The first saved assignments for all five named tasks match those groupings. obs_step_699_p1, obs_step_713_p1, obs_status_updates.",
+          "observations": [
+            "obs_status_updates",
+            "obs_step_699_p1",
+            "obs_step_713_p1"
+          ]
+        },
+        "outcome_3317a67a00550c98ca7b": {
+          "score": 1,
+          "reason": "Journal 99 is Paul Minors’s published comment on production milestone 69, Completed page designs. It addresses Warwick Palm, says “I have completed the page designs for the Apple website,” and asks him to review them. obs_discussion, obs_work_packages, obs_sections.",
+          "observations": [
+            "obs_discussion",
+            "obs_sections",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_5d3e1e0c5aa7abe1e7fa": {
+          "score": 1,
+          "reason": "After Paul published the review request, the production board displayed Completed page designs as New. Its live milestone record still has that open status. obs_step_719_p1, obs_frame_pi_751_1, obs_work_packages.",
+          "observations": [
+            "obs_frame_pi_751_1",
+            "obs_step_719_p1",
+            "obs_work_packages"
+          ]
+        },
+        "outcome_4aeb00efdf5255e6ff07": {
+          "score": 1,
+          "reason": "Paul’s eight Apple commitments are IDs 58, 61, 62, 64, 69, 72, 73, and 75. Each moved from Recently assigned to Upcoming, and all eight retain Upcoming in the live section records. obs_step_731_p1, obs_personal_tasks, obs_sections.",
+          "observations": [
+            "obs_personal_tasks",
+            "obs_sections",
+            "obs_step_731_p1"
+          ]
+        },
+        "outcome_d2b14acd0cbd73af7ff7": {
+          "score": 1,
+          "reason": "Planning session with client, ID 42, is in Upcoming. Across all 16 of Paul’s personal tasks, five are in Today and eleven are in Upcoming, leaving zero in Recently assigned. obs_personal_tasks, obs_sections, obs_step_763_p1.",
+          "observations": [
+            "obs_personal_tasks",
+            "obs_sections",
+            "obs_step_763_p1"
+          ]
+        },
+        "outcome_76d522e2d38e87ed462f": {
+          "score": 1,
+          "reason": "Paul’s private My tasks screen visibly groups rows under Today and Upcoming. The saved My tasks query groups by the My tasks section field. obs_frame_pi_743_1, obs_step_739_p1, obs_sections.",
+          "observations": [
+            "obs_frame_pi_743_1",
+            "obs_sections",
+            "obs_step_739_p1"
+          ]
+        },
+        "outcome_59d23199f8cc333a9943": {
+          "score": 1,
+          "reason": "Warwick’s latest comment on MinorCo task 43 is journal 76, about the updated Pipedrive configuration. The live reaction is thumbs_up on that journal, and the recorded reaction row identifies Paul’s user ID 5 as its author. obs_discussion, obs_reactions, obs_step_439_p1, obs_step_359_p1, obs_frame_pi_487_1.",
+          "observations": [
+            "obs_discussion",
+            "obs_frame_pi_487_1",
+            "obs_reactions",
+            "obs_step_359_p1",
+            "obs_step_439_p1"
+          ]
+        },
+        "outcome_95d759b2697367ca3d2a": {
+          "score": 1,
+          "reason": "Paul addressed Kayla Campos directly and wrote “Thank you so much for completing the session follow up!” He also expressed appreciation for her effort. obs_discussion.",
+          "observations": [
+            "obs_discussion"
+          ]
+        },
+        "outcome_f0a4501fd96e2bc57e55": {
+          "score": 1,
+          "reason": "The live discussion contains Paul Minors’s message as journal 80 on Session #3 Team Follow Up, task 44. The recorded inbox identifies that same task as belonging to MinorCo. obs_discussion, obs_frame_pi_487_1.",
+          "observations": [
+            "obs_discussion",
+            "obs_frame_pi_487_1"
+          ]
+        },
+        "outcome_f935116ccd634186b9db": {
+          "score": 1,
+          "reason": "Paul’s thumbs-up was saved on journal 76 while the notification was still active. The later Unread inbox shows the other three notifications and omits this one. Notification 1 is retained with journal_id 76 and read_ian=true, establishing the native equivalent of archival after the reaction. obs_step_439_p1, obs_frame_pi_487_1, obs_frame_pi_535_1, obs_notifications.",
+          "observations": [
+            "obs_frame_pi_487_1",
+            "obs_frame_pi_535_1",
+            "obs_notifications",
+            "obs_step_439_p1"
+          ]
+        }
+      },
+      "evidence": {
+        "obs_teams": {
+          "label": "Teams",
+          "source": "live_environment",
+          "record_sha256": "e7daa7d6e6d13009329535a715bc2665ba4c9ff59ebd3e1b4f343c41108d9b1f",
+          "note": "The saved Marketing team is under MinorCo. Its two membership rows name Paul Minors and Warwick Palm."
+        },
+        "obs_members": {
+          "label": "Members",
+          "source": "live_environment",
+          "record_sha256": "0981aac307531b48affcf57208903e41d87171fffb2934d129fb9970267dae35",
+          "note": "The Apple project lists Paul as project admin and Warwick and Lindsay as editors. All three grants name individual users."
+        },
+        "obs_project": {
+          "label": "Project",
+          "source": "live_environment",
+          "record_sha256": "5586dac69432dcd617ffba02dbbc7ea85c996b6ec29389e8dffbcaef2a3919d1",
+          "note": "Apple - Website Design is under Asana Demo. Its public flag is false. The saved description sets a Christmas deadline and names conversion and iPhone sales as goals."
+        },
+        "obs_work_packages": {
+          "label": "Work packages",
+          "source": "live_environment",
+          "record_sha256": "b2e85ff2597b0c2157ee1066ee45957b0a313b2f89af1380d8ca6696c92e7057",
+          "note": "The saved plan contains seven open items, including the two milestones Completed page designs and Go-live readiness, both assigned to Paul."
+        },
+        "obs_status_updates": {
+          "label": "Status updates",
+          "source": "live_environment",
+          "record_sha256": "8f146bd97ce73159a9eafe7109c2a7c3926dad102ca114ee7a74f865dcc42469",
+          "note": "The posted update lists three remaining tasks for Warwick, two for Paul, and none for Lindsay."
+        },
+        "obs_personal_tasks": {
+          "label": "Personal tasks",
+          "source": "live_environment",
+          "record_sha256": "054ae601e7544ed1cc6aaeef07d15ead381c58af017f8ef2f37f800748be1a3f",
+          "note": "The task list associates Planning session with client and the new launch commitments with Paul."
+        },
+        "obs_sections": {
+          "label": "Sections",
+          "source": "live_environment",
+          "record_sha256": "62d4493ed641f3620ef08004427177ffe8969a50d37773a93c8077a3f429c000",
+          "note": "Section values are recorded per task, including the section for Planning session with client."
+        },
+        "obs_reactions": {
+          "label": "Reactions",
+          "source": "live_environment",
+          "record_sha256": "fed8cb8faca3035e907855616e5925c2213656deb45acca6e3617850e8c5c945",
+          "note": "The reaction record identifies a thumbs-up on journal entry 76."
+        },
+        "obs_notifications": {
+          "label": "Notifications",
+          "source": "live_environment",
+          "record_sha256": "7f9d3bf02d5f2c7fa42cb2b2ffbfbe4490c7b7519794ba7aee739fef7031c262",
+          "note": "The Pipedrive notification references Warwick's journal entry 76 and has its read flag set."
+        },
+        "obs_screen": {
+          "label": "Final screenshot",
+          "file": "final-screen.jpg",
+          "source": "live_environment",
+          "record_sha256": "1b37f272bcab062c7b6124a8cfebf1f2b258bbfaa546741edf379a07075d8945"
+        },
+        "obs_discussion": {
+          "label": "Discussion",
+          "source": "live_environment",
+          "record_sha256": "4cd368183d6fb03d22e210ea7975bd359732cd9f9ce30577c22e6db945b1a024",
+          "note": "Saved discussion records include the design review request mentioning Warwick and the follow-up on Kayla's completed task."
+        },
+        "obs_dependencies": {
+          "label": "Dependencies",
+          "source": "live_environment",
+          "record_sha256": "235e381d2e34098df1307b4f78570f2eccb43ef2d3c8c37d83ef555f5e4e4b92",
+          "note": "The saved plan contains follows relations between work items, including links through testing, sign-off, readiness, launch, and final delivery."
+        },
+        "obs_step_199_p1": {
+          "label": "Step 199 · bash",
+          "action": {
+            "step": 199,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "62ae02c361495bd68cddbec87a4594257da98e34b53c4fd751ceb771f957d906",
+          "note": "Queried workspace groups and project members. The group list contained MinorCo and Asana Demo."
+        },
+        "obs_step_359_p1": {
+          "label": "Step 359 · bash",
+          "action": {
+            "step": 359,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "1a266c76c1e29b3c52a2d55cfe20dedb8be90e629b4794e71aa9515bfe600a26",
+          "note": "Checked the Marketing membership records. The result listed Warwick and Paul in group 11."
+        },
+        "obs_step_351_p1": {
+          "label": "Step 351 · bash",
+          "action": {
+            "step": 351,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "0cb304f3df66d81e2701c7bdb5d50dd1a2bcb0f0c799588eb39af5d1e0f0118c",
+          "note": "Checked the current account. The response identified Paul Minors."
+        },
+        "obs_step_439_p1": {
+          "label": "Step 439 · bash",
+          "action": {
+            "step": 439,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "0089ef4536bbb3e57945792fbb20712464ae41d570b1cea1d34e6b8d20620ca3",
+          "note": "Submitted the reaction and read back a thumbs-up on journal entry 76."
+        },
+        "obs_step_577_p1": {
+          "label": "Step 577 · bash",
+          "action": {
+            "step": 577,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "efaf51330d8026952f06bb20c2f30f593d93a4c8772e97c55bb005cc25ab3ff3",
+          "note": "Added project members, then queried their roles. The result listed Paul as admin, Warwick and Lindsay as editors."
+        },
+        "obs_step_699_p1": {
+          "label": "Step 699 · bash",
+          "action": {
+            "step": 699,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "7d45bc168093acdc090f4971ea463ac6132f7f5dbabc2bbe0845f40840a50313",
+          "note": "Published the project update. The application returned news record 3."
+        },
+        "obs_step_713_p1": {
+          "label": "Step 713 · bash",
+          "action": {
+            "step": 713,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "1cd9770b91ef03ab98041158283edbc2beffde5b74ca262b41166d6d916eff49",
+          "note": "Read back the saved project items with their status and assignee, including both open milestones assigned to Paul."
+        },
+        "obs_step_711_p1": {
+          "label": "Step 711 · bash",
+          "action": {
+            "step": 711,
+            "tool": "bash",
+            "status": "failed"
+          },
+          "source": "trajectory",
+          "record_sha256": "d8b5b5abf78d2d191cf15c3cc9455cae422d4bfb0413d312d3eaad75eead49df",
+          "note": "Attempted to populate the project plan. The command timed out; step 713 records the subsequent readback."
+        },
+        "obs_step_739_p1": {
+          "label": "Step 739 · bash",
+          "action": {
+            "step": 739,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "c89c61a8a98439c0dcd188bb9756aa2c55bafe9522add5133ec7934e9098c827",
+          "note": "Inspected the saved My tasks views and their grouping fields."
+        },
+        "obs_step_731_p1": {
+          "label": "Step 731 · bash",
+          "action": {
+            "step": 731,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "bd0d03295a7c70901c812b0d0eae87e90d39725aa69eace0ce9c591298834257",
+          "note": "Inspected section assignments. At this point Planning session with client was still in Recently assigned."
+        },
+        "obs_step_719_p1": {
+          "label": "Step 719 · bash",
+          "action": {
+            "step": 719,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "907997568391610d93013012bd6873f4b43f6fd71f1eba173c7413f7f58b7822",
+          "note": "Posted a review request and read back the saved discussion entry mentioning Warwick Palm."
+        },
+        "obs_step_763_p1": {
+          "label": "Step 763 · bash",
+          "action": {
+            "step": 763,
+            "tool": "bash",
+            "status": "completed"
+          },
+          "source": "trajectory",
+          "record_sha256": "7d203a2b5c794d3d9cf1657e581cd9b925c3b5311aaff64c8abc58ad78958515",
+          "note": "Queried the final setup, including Marketing's parent group and its members."
+        },
+        "obs_frame_pi_305_1": {
+          "label": "Screenshot · step 305",
+          "file": "pi_305_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "d923f8b133289ad37f45a9ac2cbbb23795cb3cca7c79178567609ad837995706"
+        },
+        "obs_frame_pi_247_1": {
+          "label": "Screenshot · step 247",
+          "file": "pi_247_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "d503278cf356c3a8ad127eb80046dd8c5fecf38aa3bfcd72cfdf80c54412565f"
+        },
+        "obs_frame_pi_743_1": {
+          "label": "Screenshot · step 743",
+          "file": "pi_743_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "60f1b0ec60252883b01a8e33908ee54fc201ce05e61a0b391aa6c4abac7bb1bc"
+        },
+        "obs_frame_pi_535_1": {
+          "label": "Screenshot · step 535",
+          "file": "pi_535_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "9fe7ebaf8951b8e47cf0a21a9cd21e2e240140cd6ca1b9147566d33424649ed4"
+        },
+        "obs_frame_pi_487_1": {
+          "label": "Screenshot · step 487",
+          "file": "pi_487_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "5c58baa4d8d2bd36c3e44a1db3e3075e17535f2263082efed28aeb003da17a80"
+        },
+        "obs_frame_pi_673_1": {
+          "label": "Screenshot · step 673",
+          "file": "pi_673_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "5ab757de5c4a7cb3daf1cc55662132de0db7118501c9bc43f5e59dc6ed886c6c"
+        },
+        "obs_frame_pi_751_1": {
+          "label": "Screenshot · step 751",
+          "file": "pi_751_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "a06cd12717e93345fa5304fd048dc6fa80003d3a07ce4f7437bda93247fc8710"
+        },
+        "obs_frame_pi_761_1": {
+          "label": "Screenshot · step 761",
+          "file": "pi_761_1.jpg",
+          "source": "recorded_screenshot",
+          "record_sha256": "fc5bcfb035f5eb370f0b56867aae1eb0fe386820e177d100f68fe2c74ce46a00"
+        }
+      },
+      "runtime_seconds": 3943,
+      "total_tokens": 67454404,
+      "output_files": [],
+      "action_count": 383
     },
     "agent_runs": {
       "guided": {
@@ -18632,6 +20464,18 @@
       "open_source_software": "SuiteCRM",
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/sales-leads-revenue-dashboards.mp4",
       "guidance_path": "assets/tutorial-guidance/sales-leads-revenue-dashboards.md"
+    },
+    "instruction_run": {
+      "job": "salesforce_pi_20261124_212231_11269932",
+      "trial": "salesforce_env__configure_sales__dj6gs3n",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "fc3ff420df42913566e0f130d21965c8807cde79cd7d390e19b06795aa6a7a66",
+      "judge_model": null,
+      "judge_effort": null,
+      "status": "No final verdict",
+      "rows": {},
+      "evidence": {}
     },
     "agent_runs": {
       "guided": {

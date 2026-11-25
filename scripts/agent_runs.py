@@ -1,4 +1,4 @@
-"""Render the two recorded Pi trials on each static task page."""
+"""Render instruction-only trials and the earlier two-condition comparison."""
 import json
 import re
 from html import escape
@@ -17,8 +17,17 @@ def load_agent_runs(tasks, root, plain_text):
     scores = json.loads((root / "run-scores.json").read_text(encoding="utf-8"))
     if manifest.keys() != {task["slug"] for task in tasks} or scores.keys() != manifest.keys():
         raise ValueError("Agent runs must cover every task")
+    instruction_runs = json.loads((root / "instruction-runs.json").read_text(encoding="utf-8"))
+    if set(instruction_runs) != {t["slug"] for t in tasks if "id" in t["rubrics"][0]}:
+        raise ValueError("Expected one instruction-only run per reviewed task")
     for task in tasks:
         slug = task["slug"]
+        if slug in instruction_runs:
+            run = instruction_runs[slug]
+            ids = {r["id"] for r in task["rubrics"]}
+            if run["rows"].keys() - ids or (run["status"] == "Graded" and run["rows"].keys() != ids):
+                raise ValueError(f"Instruction-only verdicts differ from the rubric for {slug}")
+            task["instruction_run"] = run
         if manifest[slug].keys() != CONDITIONS.keys():
             raise ValueError(f"Expected both conditions for {slug}")
         task["agent_runs"] = {}
@@ -99,7 +108,7 @@ def render_outputs(files, directory, condition):
             f'<h4 id="outputs-title-{condition}">Output files</h4><ul>{"".join(items)}</ul></section>')
 
 
-def render_agent_runs(task, prefix):
+def render_agent_runs(task, prefix, inline):
     articles = []
     for condition, title in CONDITIONS.items():
         run = task["agent_runs"][condition]
@@ -147,8 +156,80 @@ def render_agent_runs(task, prefix):
               <pre class="event-record" tabindex="0" hidden></pre>
             </details>
           </article>''')
+    history = "".join(articles)
+    intro = '<p class="section-description">Runtime covers Pi’s execution. Total tokens are input plus output, including cached input once. Trajectory downloads omit session credentials and redact authentication-related payloads.</p>'
+    if "instruction_run" in task:
+        content = render_instruction_run(task, prefix, inline)
+        content += f'<details class="earlier-runs"><summary>Earlier guided and unguided runs</summary>{intro}{history}</details>'
+    else:
+        content = intro + "\n            " + history
     return f'''<section id="agent-run" class="task-section" aria-labelledby="agent-run-title">
             <div class="section-heading"><h2 id="agent-run-title">Agent run</h2></div>
-            <p class="section-description">Runtime covers Pi’s execution. Total tokens are input plus output, including cached input once. Trajectory downloads omit session credentials and redact authentication-related payloads.</p>
-            {"".join(articles)}
+            {content}
           </section>'''
+
+
+def evidence_entry(item, directory):
+    label = escape(item["label"])
+    if item.get("file"):
+        label = f'<a href="{directory}{file_url(item["file"])}">{label}</a>'
+    note = item.get("note")
+    return f'<li>{label}' + (f'<p>{escape(note)}</p>' if note else '') + '</li>'
+
+
+def render_instruction_run(task, prefix, inline):
+    run = task["instruction_run"]
+    directory = prefix + f'assets/agent-runs/{task["slug"]}/{run["trial"]}/'
+    summary = [("Solver", "Pi · " + run["model"] + " · " + run["thinking"])]
+    job_id = run["job"].rsplit("_", 1)[-1]
+    if job_id.isdecimal():
+        summary.append(("Slurm job", job_id))
+    if run.get("judge_model"):
+        summary.append(("Verifier", "RewardKit + Codex · " + run["judge_model"] + " · " + run["judge_effort"]))
+    if "runtime_seconds" in run:
+        mins, sec = divmod(run["runtime_seconds"], 60)
+        hours, mins = divmod(mins, 60)
+        summary.append(("Runtime", f"{hours}:{mins:02}:{sec:02}"))
+    if "total_tokens" in run:
+        summary.append(("Total tokens", f"{run['total_tokens']:,}"))
+    metrics = "".join(f"<div><dt>{key}</dt><dd>{escape(value)}</dd></div>" for key, value in summary)
+    rows = []
+    for rubric in task["rubrics"]:
+        key, number = rubric["id"], rubric["number"]
+        record = run["rows"].get(key, {})
+        score = record.get("score")
+        ids = record.get("observations", [])
+        reason = record.get("reason", "")
+        evidence = run["evidence"]
+        # Keep the original verdict text in the JSON download. Render named references for readers.
+        reason = re.sub(r'(?<=\.)\s+obs_\w+(?:,\s*obs_\w+)*\.$', '', reason)
+        reason = re.sub(r'\bobs_\w+\b', lambda m: evidence.get(m[0], {}).get("label", m[0]), reason)
+        if not reason:
+            reason = "Awaiting a verifier verdict." if not record else "No reason recorded."
+        entries = [evidence_entry(evidence[i], directory) for i in ids]
+        if entries:
+            refs = f'<ul class="run-citations">{entries[0]}</ul>'
+            if len(entries) > 1:
+                n = len(entries) - 1
+                refs += (f'<details><summary>{n} more source{"s" if n != 1 else ""}</summary>'
+                         f'<ul class="run-citations">{"".join(entries[1:])}</ul></details>')
+        else:
+            refs = "No evidence cited yet." if not record else "No evidence cited."
+        value = "null" if score is None else str(score)
+        rows.append(f'<tr data-rubric-id="{escape(key)}"><th scope="row"><a href="#rubric-{number}">{number:02}</a></th>'
+                    f'<td>{inline(rubric["criterion"])}</td><td data-label="Score"><strong>{value}</strong></td>'
+                    f'<td data-label="Reason">{escape(reason)}</td><td data-label="Evidence">{refs}</td></tr>')
+    scored = [r["score"] for r in run["rows"].values() if r["score"] is not None]
+    total = len(rows)
+    status = (f'{sum(scored)} / {total} criteria met' if len(scored) == total else
+              f'{len(scored)} / {total} criteria scored · null = no score recorded')
+    actions = (f'<p><a class="text-link" href="{directory}actions.jsonl" download>'
+               f'Download recorded actions ({run["action_count"]:,})</a></p>') if "action_count" in run else ""
+    return (f'<article class="agent-run instruction-run" id="run-instruction-only"><h3>Task instruction only</h3>'
+            f'<dl class="run-metrics">{metrics}</dl><h4>{status}</h4>'
+            '<div class="rubric-table-wrapper" role="region" aria-label="Agent run scores" tabindex="0">'
+            '<table class="rubric-table run-results"><caption class="sr-only">Instruction-only run results</caption>'
+            '<thead><tr><th scope="col">#</th><th scope="col">Outcome criterion</th><th scope="col">Score</th>'
+            '<th scope="col">Reason</th><th scope="col">Evidence</th></tr></thead>'
+            f'<tbody>{"".join(rows)}</tbody></table></div>{actions}'
+            f'{render_outputs(run.get("output_files", []), directory, "instruction-only")}</article>')

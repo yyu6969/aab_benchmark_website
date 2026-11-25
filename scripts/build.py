@@ -458,7 +458,7 @@ def build_task(task: dict, tasks: list[dict]) -> str:
           <section id="support-materials" class="task-section" aria-labelledby="materials-title">
             <div class="section-heading"><h2 id="materials-title">Support materials</h2><span class="section-meta">{len(task['materials'])} {'file' if len(task['materials']) == 1 else 'files'}</span></div>{materials_html}
           </section>
-          {render_agent_runs(task, prefix)}
+          {render_agent_runs(task, prefix, inline)}
           <nav class="task-pagination" aria-label="Task navigation">{''.join(pagination)}</nav>
         </div>
         <aside class="task-sidebar" aria-label="Task page navigation"><div class="sidebar-sticky"><nav class="section-nav" aria-label="On this page"><h2>On this page</h2><a href="#instruction" class="current" aria-current="location">Task instruction</a><a href="#rubrics">Outcome rubric <span>{len(task['rubrics'])}</span></a><a href="#support-materials">Support materials <span>{len(task['materials'])}</span></a><a href="#agent-run">Agent run</a></nav><a class="button download-task" href="../../data/{task['slug']}.md" download>{icon('download')} Download task</a><details class="browse-tasks" open><summary>In this collection</summary><ol>{''.join(task_links)}</ol></details></div></aside>

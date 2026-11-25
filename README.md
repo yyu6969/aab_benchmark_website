@@ -41,7 +41,11 @@ The nine reviewed tasks pair each outcome with playable excerpts from the demons
 
 ## Agent runs
 
-Each task page compares the selected guided and unguided Harbor trials. The screenshot control opens every numbered Gym episode frame in chronological order. The JSONL download keeps the recorded event sequence. It omits private session connection details and redacts authentication-related payloads across linked tool events. The benchmark archive retains the originals.
+The nine reviewed task pages show the latest instruction-only trial first. Each table follows the published outcome order and uses the criterion ID to join the RewardKit + Codex verdict, reason, and cited observations. A score of 1 means full credit, 0 means no credit, and null means no individual score was recorded. Evidence can include a recorded action, a screenshot, or a readback of the saved environment. Clinical chart and classroom roster screenshots use task-relevant transcriptions. The action download contains step numbers, tool names, execution status and pointer coordinates when recorded. Earlier trials are available below the table.
+
+Refresh the instruction-only results from the Harbor jobs directory with `python3 scripts/import_instruction_runs.py /path/to/agent_run_v1/task_instructions`, then run the build and check commands. Review newly cited evidence before deployment. The import preserves human-readable observation notes when the trial and source record still match.
+
+The earlier comparison shows the selected guided and unguided Harbor trials. The screenshot control opens every numbered Gym episode frame in chronological order. The JSONL download keeps the recorded event sequence. It omits private session connection details and redacts authentication-related payloads across linked tool events. The benchmark archive retains the originals.
 
 Runtime covers the Pi agent execution interval. Total tokens sum reported input and output across calls and include cached input once. The selection includes the newer unguided AutoCAD run and the graded unguided Asana run. A communication error is indicated for the three affected guided trials.
 
