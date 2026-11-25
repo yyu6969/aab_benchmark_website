@@ -22,6 +22,18 @@ SCREENSHOT_CROPS = {
     "f378e8d0312fa4cbb40af032acff5e568c4c153529b20f2a1c9334e59237d1e9": (386, 166, 944, 435),
     "da2b05aeca17dabb22143479ab3f36d518bba12beb1a4679f8d6ead3f7d70654": (510, 0, 1748, 216),
     "ee1dd52ae5f30d96e4c7c3014657c45ed999b25214c8e0d544b3e5ea538e6c43": (473, 106, 1238, 247),
+    # Salesforce registration fields and application views, excluding browser session URLs.
+    "91d34b24342179fdf714247ef4b08d74bc71eb54c1b7497b9580762f926e1cd1": (0, 105, 1400, 788),
+    "b2add234515cb5e1b7a7a34b50880e68b4a4daad6548d3f00498a2a96f424a0b": (495, 286, 799, 355),
+    "20657120f72e0929180d7aad77664920fa5fa31b1c15506de0ca984110b2e245": (492, 145, 814, 489),
+    "4e63bcba80e4ab3318459d75347860921691dcb82e628b927fa5b4a1021b9a08": (385, 350, 905, 550),
+    "d6d4bbf0277575644bc870b9c655718eae64703d3bc99e253de6873543cddaec": (348, 138, 1000, 249),
+    "9f82915c9163a233c14e9f131a1d4a988cd6f24c9f547fde868c61b578eeeb9d": (0, 96, 1280, 720),
+    "7d9a6eb7e4cf879cc76c8401e0511a6d72a5770d8e76d0be4aef199f3e0cbe9f": (0, 96, 1280, 720),
+    "f2d875b5da63f47360b73c9568315f54279a3ab3c9f7462c5bdd3493cf92a4ee": (0, 96, 1280, 720),
+    "2e18a9b6229901905ef25e760a12a525fee3d0716ddabb7753d4367f483563aa": (0, 96, 1280, 720),
+    "2598360b35a16de41dcf483aecd786a71904750195ecb69245ce28338e4be948": (0, 96, 1280, 720),
+    "b5332d41b4dddc75b38f4e1a5fcf778fa8dd41eeb01db254724b075a70a14608": (0, 96, 1280, 720),
 }
 
 
@@ -30,7 +42,7 @@ def screenshot(record, verifier, folder):
     if not re.fullmatch(r"(?:final-screen|recorded-screenshots/pi_\d+_\d+)\.jpg", path):
         raise ValueError(f"Invalid screenshot path for {record['id']}")
     source = verifier / path
-    if folder.parent.name in {"complete-sign-clinical-note", "update-class-gradebook"}:
+    if folder.parent.name in {"complete-sign-clinical-note", "update-class-gradebook", "sales-leads-revenue-dashboards"}:
         crop = SCREENSHOT_CROPS.get(hashlib.sha256(source.read_bytes()).hexdigest())
         if crop is None:
             return {"availability": "This frame needs a public crop."}
@@ -53,6 +65,9 @@ def public_text(text, slug, tool=False):
     # Preserve the operation around connection credentials; never export their values.
     text = PRIVATE_VALUE.sub(lambda m: (m[1] + REDACTED + m[2]) if m[1] else m[3] + REDACTED, text)
     if tool:
+        # The MySQL CLI accepts a password attached directly to its short option.
+        text = re.sub(r"(\b(?:mysql|mariadb)\b[^\n;|&]*?\s-p)(?:'[^']*'|\"[^\"]*\"|[^\s;|&]+)",
+                      lambda m: m[1] + REDACTED, text)
         lines = text.splitlines(keepends=True)
         for i, line in enumerate(lines):
             # A URI password above was already removed; still check the rest of the line.

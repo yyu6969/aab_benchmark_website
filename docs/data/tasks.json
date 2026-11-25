@@ -21529,11 +21529,972 @@
       "model": "gemini-3.8-flash",
       "thinking": "high",
       "instruction_sha256": "fc3ff420df42913566e0f130d21965c8807cde79cd7d390e19b06795aa6a7a66",
-      "judge_model": null,
-      "judge_effort": null,
-      "status": "No final verdict",
-      "rows": {},
-      "evidence": {}
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_8cb43c90cb2c4e5e86f8": {
+          "score": 1,
+          "reason": "The registration reached the email-verification screen for sfemilycall@gmail.com in obs_frame_pi_191_1. obs_registration confirms that the service created the account.",
+          "observations": [
+            "obs_frame_pi_191_1",
+            "obs_registration"
+          ]
+        },
+        "outcome_7ab45f3b81373f1d39e5": {
+          "score": 1,
+          "reason": "obs_registration records firstName Emily and lastName Call. obs_crm_users shows Emily Call on the active workspace account.",
+          "observations": [
+            "obs_crm_users",
+            "obs_registration"
+          ]
+        },
+        "outcome_6b48e3054c57294d084e": {
+          "score": 1,
+          "reason": "obs_registration records Developer as the saved account role, matching the selected value in obs_frame_pi_179_1.",
+          "observations": [
+            "obs_frame_pi_179_1",
+            "obs_registration"
+          ]
+        },
+        "outcome_7b8553d3b3b103f0f292": {
+          "score": 1,
+          "reason": "obs_registration records the full company name Call Solutions LLC, matching the completed company field in obs_frame_pi_179_1.",
+          "observations": [
+            "obs_frame_pi_179_1",
+            "obs_registration"
+          ]
+        },
+        "outcome_97e53d4408d9adc10ac2": {
+          "score": 1,
+          "reason": "obs_registration records sfemilycall@gmail.com in the email field. obs_frame_pi_201_1 shows the verification message addressed to that mailbox.",
+          "observations": [
+            "obs_frame_pi_201_1",
+            "obs_registration"
+          ]
+        },
+        "outcome_262e6b6e99a56a816fb7": {
+          "score": 0,
+          "reason": "The recorded username differs from the requested literal value in capitalization. obs_frame_pi_133_1 shows eec@callcompany.com entered in the username field, and obs_registration and obs_crm_users both retain that lowercase spelling. The recorded entry provides no evidence that the service rejected EEC@callcompany.com.",
+          "observations": [
+            "obs_crm_users",
+            "obs_frame_pi_133_1",
+            "obs_registration"
+          ]
+        },
+        "outcome_7f3a8c56165202128bb7": {
+          "score": 1,
+          "reason": "obs_registration records Utah, United States, and postal code 98002 in their respective fields. All three values are also visible in obs_frame_pi_179_1.",
+          "observations": [
+            "obs_frame_pi_179_1",
+            "obs_registration"
+          ]
+        },
+        "outcome_97884da3da28b028da7e": {
+          "score": 1,
+          "reason": "obs_frame_pi_201_1 shows the verification email sent to sfemilycall@gmail.com. obs_registration confirms emailVerified=true and enabled=true for Emily Call at that address, and obs_crm_users shows her workspace account as Active.",
+          "observations": [
+            "obs_crm_users",
+            "obs_frame_pi_201_1",
+            "obs_registration"
+          ]
+        },
+        "outcome_641eab3d048bb37d1324": {
+          "score": 1,
+          "reason": "obs_leads identifies Jane Doe's ABC lead with source Web Site and account ID 8ff54a58-4ab6-460d-a803-8122ee9c76a0. obs_accounts identifies that same account as ABC in the Education industry.",
+          "observations": [
+            "obs_accounts",
+            "obs_leads"
+          ]
+        },
+        "outcome_9830af1ead7fad8f473c": {
+          "score": 1,
+          "reason": "obs_frame_pi_505_1 confirms that conversion created Jane Doe, ABC, and ABC- Initial Contract. obs_leads retains Converted and all three destination IDs. obs_step_507_p1 shows explicit account and contact links to the opportunity, and obs_contacts confirms Jane belongs to ABC.",
+          "observations": [
+            "obs_contacts",
+            "obs_frame_pi_505_1",
+            "obs_leads",
+            "obs_step_507_p1"
+          ]
+        },
+        "outcome_a2ecfb7eaa1695ada96e": {
+          "score": 1,
+          "reason": "obs_contacts lists John Doe and Jane Doe separately under ABC. obs_step_523_p1 confirms distinct contact IDs, and obs_opportunities identifies ABC as the contract's account.",
+          "observations": [
+            "obs_contacts",
+            "obs_opportunities",
+            "obs_step_523_p1"
+          ]
+        },
+        "outcome_dfdc7179a1e99af5cb8f": {
+          "score": 1,
+          "reason": "obs_opportunities records amount 100000 on ABC- Initial Contract with ABC and Jane Doe. obs_step_517_p1 confirms the currency is USD.",
+          "observations": [
+            "obs_opportunities",
+            "obs_step_517_p1"
+          ]
+        },
+        "outcome_d048632667e0604f2e0b": {
+          "score": 1,
+          "reason": "obs_opportunities records Closed Won as the saved stage for ABC- Initial Contract. obs_step_517_p1 independently shows the same stage on the report-source row for that opportunity.",
+          "observations": [
+            "obs_opportunities",
+            "obs_step_517_p1"
+          ]
+        },
+        "outcome_39af0f27c2677e637b6c": {
+          "score": 1,
+          "reason": "obs_views stores My Open Leads as Emily's personal Leads search. obs_step_609_p1 shows that the application lists saved searches for the current user's ID, and obs_frame_pi_627_1 shows My Open Leads in Emily's My Filters menu.",
+          "observations": [
+            "obs_frame_pi_627_1",
+            "obs_step_609_p1",
+            "obs_views"
+          ]
+        },
+        "outcome_1ee6080c3d940a20b313": {
+          "score": 1,
+          "reason": "The saved filter in obs_views restricts assigned_user_id_advanced to 0304a4a0-ed00-40d2-a5f4-ef35c03074f5. obs_crm_users identifies that ID as Emily Call.",
+          "observations": [
+            "obs_crm_users",
+            "obs_views"
+          ]
+        },
+        "outcome_b482a63c342b2adbc4e0": {
+          "score": 1,
+          "reason": "obs_views retains converted_advanced=0 and limits eligible statuses to New, Assigned, and In Process. obs_leads confirms that Jane's converted record has converted=1 and status Converted, while active unconverted records have converted=0.",
+          "observations": [
+            "obs_leads",
+            "obs_views"
+          ]
+        },
+        "outcome_4cb79d40d8d4e81e1778": {
+          "score": 1,
+          "reason": "obs_views retains the active-status list New, Assigned, and In Process with open_only enabled. obs_step_267_p1 identifies Dead, Recycled, and Converted as closed statuses, and obs_frame_pi_629_1 shows the saved view returning active leads.",
+          "observations": [
+            "obs_frame_pi_629_1",
+            "obs_step_267_p1",
+            "obs_views"
+          ]
+        },
+        "outcome_9419ff6bb00f154b945f": {
+          "score": 1,
+          "reason": "obs_frame_pi_787_1 shows the saved Closed Won Opportunities report reopened by record ID. obs_frame_pi_789_1 shows its populated results, including all nine rows and the $100,000 ABC contract.",
+          "observations": [
+            "obs_frame_pi_787_1",
+            "obs_frame_pi_789_1"
+          ]
+        },
+        "outcome_c10071cea112bb627ab8": {
+          "score": 1,
+          "reason": "obs_step_783_p1 records the complete five-column selection. obs_frame_pi_789_1 confirms the delivered headers are Lead Source, Opportunity Amount, Opportunity Name, Date Closed, and Date Modified. Owner Role is omitted.",
+          "observations": [
+            "obs_frame_pi_789_1",
+            "obs_step_783_p1"
+          ]
+        },
+        "outcome_11a2c54d1b86a9b60971": {
+          "score": 1,
+          "reason": "Age is absent from the complete report field selection in obs_step_783_p1 and from the retrieved five-column result in obs_frame_pi_789_1.",
+          "observations": [
+            "obs_frame_pi_789_1",
+            "obs_step_783_p1"
+          ]
+        },
+        "outcome_30aecd33ec8b5bdb2e0c": {
+          "score": 1,
+          "reason": "Next Step is absent from the complete report field selection in obs_step_783_p1. obs_frame_pi_789_1 confirms the saved report renders those five selected columns.",
+          "observations": [
+            "obs_frame_pi_789_1",
+            "obs_step_783_p1"
+          ]
+        },
+        "outcome_6f33d2ef259850c7ae96": {
+          "score": 1,
+          "reason": "obs_reports records the close-date time range as No filter. The saved CRM report in obs_step_783_p1 likewise has only a stage condition, leaving all close dates eligible.",
+          "observations": [
+            "obs_reports",
+            "obs_step_783_p1"
+          ]
+        },
+        "outcome_fe439d796aed537a758d": {
+          "score": 1,
+          "reason": "obs_reports records an equality filter on stage with the sole value Closed Won. obs_step_783_p1 confirms the same sales-stage equality condition on the detailed report.",
+          "observations": [
+            "obs_reports",
+            "obs_step_783_p1"
+          ]
+        },
+        "outcome_a41f75c7294fe554bedb": {
+          "score": 1,
+          "reason": "obs_reports shows no owner or other subset filter beyond Closed Won. obs_pipeline contains nine qualifying opportunities across seven sources, and obs_frame_pi_789_1 shows all nine in the report.",
+          "observations": [
+            "obs_frame_pi_789_1",
+            "obs_pipeline",
+            "obs_reports"
+          ]
+        },
+        "outcome_f256185d2b99b56f4a2a": {
+          "score": 1,
+          "reason": "obs_frame_pi_789_1 shows a populated Date Modified column for the opportunity rows, including ABC. obs_step_783_p1 identifies its underlying field as date_modified.",
+          "observations": [
+            "obs_frame_pi_789_1",
+            "obs_step_783_p1"
+          ]
+        },
+        "outcome_3c632b6fbcd092b470e5": {
+          "score": 1,
+          "reason": "obs_reports groups the revenue metric by lead_source. obs_step_723_p1 returns seven source-level revenue groups, which also appear in the rendered legend in obs_screen.",
+          "observations": [
+            "obs_reports",
+            "obs_screen",
+            "obs_step_723_p1"
+          ]
+        },
+        "outcome_1a989062784a336bb809": {
+          "score": 1,
+          "reason": "obs_frame_pi_789_1 displays a $325,000.00 grand total. The nine Closed Won opportunities in obs_pipeline sum to exactly $325,000 across all seven sources.",
+          "observations": [
+            "obs_frame_pi_789_1",
+            "obs_pipeline"
+          ]
+        },
+        "outcome_b9ac8107837c3ecb3a4f": {
+          "score": 1,
+          "reason": "obs_step_723_p1 returns Web Site $110,000, Existing Customer $75,000, Partner $75,000, Public Relations $25,000, Conference $20,000, Self Generated $10,000, and Cold Call $10,000. Every subtotal matches obs_pipeline. obs_reports and obs_screen connect that grouped revenue calculation to the rendered seven-source chart.",
+          "observations": [
+            "obs_pipeline",
+            "obs_reports",
+            "obs_screen",
+            "obs_step_723_p1"
+          ]
+        },
+        "outcome_776bf6383148b8f6e415": {
+          "score": 1,
+          "reason": "obs_frame_pi_787_1 shows the saved Name field as Closed Won Opportunities. obs_reports records the same exact name for the analytics report.",
+          "observations": [
+            "obs_frame_pi_787_1",
+            "obs_reports"
+          ]
+        },
+        "outcome_9716d889ac714e144e62": {
+          "score": 1,
+          "reason": "obs_step_783_p1 records the report's committed association with the Public Reports security group, identified in obs_step_679_p1 as the shared Sales reporting collection. obs_tags also places the analytics report and its details in Public Reports.",
+          "observations": [
+            "obs_step_679_p1",
+            "obs_step_783_p1",
+            "obs_tags"
+          ]
+        },
+        "outcome_816b58e31be0b0cde52a": {
+          "score": 1,
+          "reason": "obs_reports identifies Closed Won Opportunities itself as a saved donut visualization grouped by lead_source. obs_step_687_p1 defines its revenue metric as SUM(amount), and obs_screen shows that report chart rendered with seven sources and a $325,000 center total.",
+          "observations": [
+            "obs_reports",
+            "obs_screen",
+            "obs_step_687_p1"
+          ]
+        },
+        "outcome_56f9bf1ac56bf0e0e1a9": {
+          "score": 1,
+          "reason": "obs_dashboards retains the exact name Closed Won Dashboard and a layout containing chart IDs 1 and 2. obs_dashboard_charts confirms both associations, obs_reports identifies the lead-source donut and overall revenue metric, and obs_screen shows both loaded on the retrieved dashboard.",
+          "observations": [
+            "obs_dashboard_charts",
+            "obs_dashboards",
+            "obs_reports",
+            "obs_screen"
+          ]
+        },
+        "outcome_6aff0ce93c8f8404a8db": {
+          "score": 1,
+          "reason": "obs_dashboard_roles assigns Closed Won Dashboard the role Private Dashboards (owners only). obs_dashboards confirms published=0, and obs_screen identifies Emily Call as the owner.",
+          "observations": [
+            "obs_dashboard_roles",
+            "obs_dashboards",
+            "obs_screen"
+          ]
+        },
+        "outcome_1cb8b2a92fb8ba9678cd": {
+          "score": 1,
+          "reason": "obs_dashboard_charts links the dashboard to metric 2. obs_reports shows that it uses the report's opportunity dataset, revenue sum, Closed Won filter, and unrestricted dates. obs_screen displays $325,000.00, matching obs_pipeline and the report total that includes ABC's $100,000 row in obs_frame_pi_789_1.",
+          "observations": [
+            "obs_dashboard_charts",
+            "obs_frame_pi_789_1",
+            "obs_pipeline",
+            "obs_reports",
+            "obs_screen"
+          ]
+        },
+        "outcome_af9f11ddf53956f017bb": {
+          "score": 1,
+          "reason": "obs_dashboard_charts links the dashboard directly to Closed Won Opportunities chart 1. obs_reports confirms its all-date revenue grouping by lead source. obs_screen displays the donut with Web Site at $110,000 and total revenue at $325,000, matching obs_pipeline and including the $100,000 Web Site contract in obs_opportunities.",
+          "observations": [
+            "obs_dashboard_charts",
+            "obs_opportunities",
+            "obs_pipeline",
+            "obs_reports",
+            "obs_screen"
+          ]
+        },
+        "outcome_a49a15e766796623a68f": {
+          "score": 1,
+          "reason": "obs_subscriptions records active=1 for the subscription bound to dashboard ID 1. obs_step_741_p2 confirms committed email recipients including sfemilycall@gmail.com, and obs_frame_pi_759_1 shows the enabled Closed Won Dashboard schedule with email notification icons.",
+          "observations": [
+            "obs_frame_pi_759_1",
+            "obs_step_741_p2",
+            "obs_subscriptions"
+          ]
+        },
+        "outcome_fdb8d2dfa9c3c8f95d3b": {
+          "score": 1,
+          "reason": "obs_subscriptions stores the recurring cron expression 0 7 * * 1. obs_frame_pi_759_1 confirms the application interprets it as delivery every Monday.",
+          "observations": [
+            "obs_frame_pi_759_1",
+            "obs_subscriptions"
+          ]
+        },
+        "outcome_3317a67a00550c98ca7b": {
+          "score": 1,
+          "reason": "obs_frame_pi_759_1 explicitly displays 07:00 AM in America/New_York. obs_subscriptions confirms hour 7 and minute 0 in the same time zone.",
+          "observations": [
+            "obs_frame_pi_759_1",
+            "obs_subscriptions"
+          ]
+        }
+      },
+      "evidence": {
+        "obs_registration": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Registration",
+          "record_sha256": "c7e327ec512ff9321b543ae94e85b6f1ca395815abc52ecd2bf285464b52a02e",
+          "inspection": {
+            "view": "registration",
+            "page": 1
+          },
+          "record": {
+            "saved_matching_accounts": [
+              {
+                "username": "eec@callcompany.com",
+                "email": "sfemilycall@gmail.com",
+                "emailVerified": true,
+                "enabled": true,
+                "firstName": "Emily",
+                "lastName": "Call",
+                "attributes": {
+                  "country": [
+                    "United States"
+                  ],
+                  "role": [
+                    "Developer"
+                  ],
+                  "postalCode": [
+                    "98002"
+                  ],
+                  "company": [
+                    "Call Solutions LLC"
+                  ],
+                  "state": [
+                    "Utah"
+                  ]
+                }
+              }
+            ],
+            "signup_form_help_text": {
+              "username": "Account details: eec@callcompany.com",
+              "email": "Account details: sfemilycall@gmail.com",
+              "firstName": "Account details: Emily",
+              "lastName": "Account details: Call",
+              "company": "Account details: Call Solutions LLC",
+              "role": "Account details: Developer",
+              "country": "Account details: United States",
+              "state": "Account details: Utah",
+              "postalCode": "Account details: 98002"
+            },
+            "help_source": "Keycloak user-profile annotations displayed alongside the empty registration fields."
+          },
+          "explanation": {
+            "purpose": "Read the identity service’s saved registration and the guidance displayed on its signup form.",
+            "result": "The enabled, email-verified account belongs to Emily Call at sfemilycall@gmail.com. Its saved attributes include Developer, Call Solutions LLC, Utah, United States, and 98002. The username is lowercase eec@callcompany.com, which differs from the requested EEC@callcompany.com."
+          }
+        },
+        "obs_crm_users": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Crm users",
+          "record_sha256": "5a9dcf5c0513c3c298a46b4651ada24b22c2e02f31be620eecd6a1b33058c741",
+          "inspection": {
+            "view": "crm_users",
+            "page": 1
+          },
+          "record": "id\tuser_name\tfirst_name\tlast_name\tstatus\n0304a4a0-ed00-40d2-a5f4-ef35c03074f5\teec@callcompany.com\tEmily\tCall\tActive\n1\tadmin\tNULL\tAdministrator\tActive\nseed_chris_id\tchris\tChris\tOlliver\tActive\nseed_jim_id\tjim\tJim\tBrennan\tActive\nseed_max_id\tmax\tMax\tJensen\tActive\nseed_sally_id\tsally\tSally\tBronsen\tActive\nseed_sarah_id\tsarah\tSarah\tSmith\tActive\nseed_will_id\twill\tWill\tWestin\tActive\n",
+          "explanation": {
+            "purpose": "Check which CRM user and status correspond to Emily’s registration and which user ID owns her saved filter.",
+            "result": "The active Emily Call row has username eec@callcompany.com and user ID 0304a4a0-ed00-40d2-a5f4-ef35c03074f5. That ID also appears on My Open Leads."
+          }
+        },
+        "obs_contacts": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Contacts",
+          "record_sha256": "deaddb83faff9bcfd8a2f5fae42a5efce8c251772cb6cffc064ff555760aee46",
+          "inspection": {
+            "view": "contacts",
+            "page": 1
+          },
+          "record": "first_name\tlast_name\taccount\nShayne\tFogle\tTracker Com LP\nChris\tGladney\tSouthern Realty\nKareem\tBustillos\tDavenport Investing\nNeal\tBaeza\tSuper Star Holdings Inc\nLouise\tHymes\t24/7 Couriers\nIva\tBuzzard\tPowell Funding\nLinwood\tKitterman\tNelson Inc\nHayden\tCantin\tPowell Funding\nGreg\tPerrine\tSmith & Sons\nJane\tDoe\tABC\nMiriam\tRaglin\tTrait Institute Inc\nFrancine\tHaygood\tSunyvale Reporting Ltd\nRodrigo\tMozingo\tSea Region Inc\nThaddeus\tSheard\tSea Region Inc\nAron\tTuthill\tSpindle Broadcast Corp.\nJesus\tAsay\tNelson Inc\nDayna\tIm\tMMM Mortuary Corp\nAngie\tFauver\tCumberland Trails Inc\nRussel\tCloutier\tSea Region Inc\nKurt\tChupp\tAvery Software Co\nMildred\tHandy\tKings Royalty Trust\nKimberlee\tAdair\tStart Over Trust\nMicheal\tDesalvo\tFirst National S/B\nTameka\tWightman\tCumberland Trails Inc\nJerald\tLeighty\tJJ Resources Inc\nBrandi\tStemple\tX-Sell Holdings\nJames\tKagan\tPowell Funding\nLeta\tFurlong\tAvery Software Co\nTaylor\tDevereaux\t24/7 Couriers\nBuck\tJohansson\tT-Squared Techs\nOren\tTalamantez\tTracker Com LP\nLevi\tLiska\tOverhead & Underfoot Ltd.\nPatricia\tCorn\tDD Furniture Inc\nHilton\tBurroughs\tSmith & Sons\nBryant\tShumate\tSea Region Inc\nWally\tCrocker\tT-Squared Techs\nMoises\tBrice\tJJ Resources Inc\nCherie\tHickox\tAvery Software Co\nYolanda\tWhitlock\tRhyme & Reason Inc\nLamar\tReeser\tRhyme & Reason Inc\nWard\tEngram\tSuper Star Holdings Inc\nLeah\tMaitland\tRhyme & Reason Inc\nOliver\tArtiaga\tMMM Mortuary Corp\nChet\tHuneycutt\tTJ O'Rourke Inc\nAlexandra\tAbernethy\tOverhead & Underfoot Ltd.\nModesto\tOjeda\tSpend Thrift Inc\nSofia\tNader\tQ.R.&E. Corp\nCharlotte\tCorpus\tRhyme & Reason Inc\nForrest\tManzella\tMTM Investment Bank F S B\nBrain\tNadler\tTJ O'Rourke Inc\nFern\tKincade\tQ3 ARVRO III PR\nJavier\tMaloney\tOTC Holdings\nCasey\tPak\t24/7 Couriers\nKeven\tGlowacki\tKings Royalty Trust\nGilbert\tTuohy\tRiviera Hotels\nChristie\tBrowne\tT-Squared Techs\nBette\tIkard\tSea Region Inc\nBenita\tHolahan\tSea Region Inc\nCherie\tStraka\tSmith & Sons\nBryant\tEspinoza\tRR. Talker Co\nGiovanni\tVereen\tTracker Com LP\nSharron\tBashir\tSpend Thrift Inc\nTomas\tGoodrum\tCumberland Trails Inc\nAurelio\tLunsford\t5D Investments\nRoger\tFoshee\tNelson Inc\nLatanya\tRubino\tTJ O'Rourke Inc\nOra\tBrzezinski\tCumberland Trails Inc\nTim\tStutz\tJ.K.M. Corp (HA)\nSummer\tPaquette\tMTM Investment Bank F S B\nMelvin\tOleson\tStart Over Trust\nDoreen\tParedes\tRhyme & Reason Inc\nAugustine\tLamberth\tS Cane Sweeteners Ltd\nJudi\tHorner\t24/7 Couriers\nGarfield\tNasser\tMTM Investment Bank F S B\nYvette\tJarmon\tNelson Inc\nGustavo\tLamanna\tDavenport Investing\nBillie\tShivers\tMTM Investment Bank F S B\nWilber\tTavarez\tLexington Shores Corp\nDavid\tReaves\tNelson Inc\nBrain\tReedy\tCumberland Trails Inc\nChristie\tMancilla\tTJ O'Rourke Inc\nYong\tProwell\tMMM Mortuary Corp\nBradford\tBorland\tSea Region Inc\nGladys\tDuff\tSpend Thrift Inc\nDaron\tSandifer\tSuper Star Holdings Inc\nErick\tSlattery\tKings Royalty Trust\nWilly\tSoo\tAir Safety Inc\nKurtis\tForehand\tDavenport Investing\nJenna\tRoughton\tAir Safety Inc\nForrest\tFlynn\tAir Safety Inc\nDaryl\tMariscal\tAir Safety Inc\nMaryanne\tConnery\tTJ O'Rourke Inc\nJefferey\tBarba\tTracker Com LP\nPolly\tAsaro\tTJ O'Rourke Inc\nHarley\tJude\tJAB Funds Ltd.\nValentin\tStaley\tSea Region Inc\nSherri\tMelchior\tSea Region Inc\nAngeline\tCrown\tX-Sell Holdings\nClaire\tVuong\tPowell Funding\nMarcia\tApodaca\tOTC Holdings\nOren\tMeeks\tSunyvale Reporting Ltd\nSydney\tOwenby\tAir Safety Inc\nMyrtle\tLongacre\tMMM Mortuary Corp\nLeonardo\tDecastro\tSpindle Broadcast Corp.\nWilburn\tRosso\tSpend Thrift Inc\nAbe\tShirk\tX-Sell Holdings\nReyna\tFranco\tSunyvale Reporting Ltd\nMiguel\tCopper\tMTM Investment Bank F S B\nRudolf\tGermann\tX-Sell Holdings\nFaith\tAbron\tSunyvale Reporting Ltd\nJoann\tSabo\tLexington Shores Corp\nHeather\tAngel\tSuper Star Holdings Inc\nFrankie\tHolladay\tTrait Institute Inc\nKaitlin\tVernon\tLexington Shores Corp\nDarwin\tSaxton\tGrow-Fast Inc\nVito\tPascua\tJJ Resources Inc\nEliseo\tWeisinger\tCumberland Trails Inc\nMerle\tBoldt\tSpindle Broadcast Corp.\nEdgardo\tCarol\tJAB Funds Ltd.\nBenedict\tMaus\tStart Over Trust\nDebora\tShetler\tNelson Inc\nCandice\tCates\tMMM Mortuary Corp\nMarcel\tHutchins\t24/7 Couriers\nJohn\tDoe\tABC\nKip\tHammontree\t5D Investments\nIsabelle\tBlasingame\tDavenport Investing\nVance\tDuplessis\t5D Investments\nJuliet\tHeslin\tRhyme & Reason Inc\nRodrick\tSoles\tOverhead & Underfoot Ltd.\nSimone\tKauffman\tSunyvale Reporting Ltd\nJami\tShearer\tSpindle Broadcast Corp.\nIris\tSuper\tDD Furniture Inc\nValerie\tTremper\tMTM Investment Bank F S B\nRod\tStollings\t24/7 Couriers\nIsiah\tBeason\tJ.K.M. Corp (HA)\nDwayne\tWalther\tTrait Institute Inc\nKareem\tFigueroa\tCumberland Trails Inc\nChi\tShepard\tAir Safety Inc\nRocky\tCaudill\tMMM Mortuary Corp\nGerald\tRustin\tAvery Software Co\nElvis\tHaskell\tX-Sell Holdings\nDiana\tZeiger\tDD Furniture Inc\nStan\tTovar\tStart Over Trust\nBrooks\tDysart\tAvery Software Co\nLazaro\tBriley\tMTM Investment Bank F S B\nEarl\tNystrom\tQ.R.&E. Corp\nJordan\tSedlak\tSouthern Realty\nCandace\tEsposito\tMTM Investment Bank F S B\nNoelle\tCannon\tOTC Holdings\nJanet\tLetson\tFirst National S/B\nJohn\tSessions\tTracker Com LP\nGabrielle\tKapoor\tFirst National S/B\nRoberto\tLinville\t24/7 Couriers\nJulian\tBoardman\tQ3 ARVRO III PR\nJosefina\tFansler\tPowell Funding\nAlejandra\tMarvin\tRiviera Hotels\nAugusta\tWesley\tRiviera Hotels\nAlison\tMarcotte\tSuper Star Holdings Inc\nFrances\tHalstead\tNelson Inc\nDonna\tMays\tTJ O'Rourke Inc\nSelma\tCogburn\tOverhead & Underfoot Ltd.\nNorris\tFrias\tRiviera Hotels\nIrwin\tPillsbury\tTrait Institute Inc\nCamilla\tWhitworth\tOTC Holdings\nCourtney\tSalaam\tTrait Institute Inc\nDebra\tTreat\tKings Royalty Trust\nMayra\tPons\tFirst National S/B\nGayla\tLuse\tNelson Inc\nMac\tFeely\tOverhead & Underfoot Ltd.\nFrank\tTemplin\tRR. Talker Co\nDorothea\tChmura\tAvery Software Co\nOphelia\tNicastro\tOTC Holdings\nRoberto\tGiordano\tS Cane Sweeteners Ltd\nShanna\tRaper\tCumberland Trails Inc\nCharmaine\tSigmon\tQ3 ARVRO III PR\nEmanuel\tCourtemanche\tP Piper & Sons\nSantiago\tSchorr\tSouthern Realty\nChristy\tEhmann\tTJ O'Rourke Inc\nDino\tSeese\tMMM Mortuary Corp\nRosie\tScates\tDD Furniture Inc\nSonya\tCampisi\tStart Over Trust\nMyron\tOldenburg\tSuper Star Holdings Inc\nGarry\tGerald\tT-Squared Techs\nMaximo\tAstle\tSuper Star Holdings Inc\nArden\tLile\tRR. Talker Co\nXavier\tVoegele\tP Piper & Sons\nDeidra\tSchroth\tCumberland Trails Inc\nJacob\tMcgee\tGrow-Fast Inc\nMichelle\tShope\t5D Investments\nIgnacio\tGardenhire\tRhyme & Reason Inc\nGail\tCarstarphen\tRiviera Hotels\nGavin\tHaggerty\tP Piper & Sons\nGavin\tThornton\tP Piper & Sons\nAmanda\tMoynihan\tNelson Inc\nMarc\tOutland\tMTM Investment Bank F S B\nNan\tArthurs\tJ.K.M. Corp (HA)\nClaud\tMorissette\tOverhead & Underfoot Ltd.\nKurtis\tHornbuckle\tSuper Star Holdings Inc\nLilian\tLamontagne\tAvery Software Co\nJames\tMastrangelo\tGrow-Fast Inc\nPhilip\tBatiste\tAirline Maintenance Co\nJune\tFlood\tAirline Maintenance Co\n",
+          "explanation": {
+            "purpose": "Look up the CRM contacts attached to the ABC account after lead conversion.",
+            "result": "There are separate rows for Jane Doe and John Doe, both linked to ABC."
+          }
+        },
+        "obs_opportunities": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Opportunities",
+          "record_sha256": "6d48457445b9ad3d7912d3b7780b2c9fb9349c2f85511db5c91310857daf63b4",
+          "inspection": {
+            "view": "opportunities",
+            "page": 1
+          },
+          "record": "id\tname\tamount\tsales_stage\tlead_source\tdate_closed\tdate_modified\taccount\tcontact_first\tcontact_last\tlead_first\tlead_last\tconverted\n67e2f259-9ea3-4cd0-9469-a04f9977af41\tABC- Initial Contract\t100000\tClosed Won\tWeb Site\t2026-11-25\t2026-11-25 03:29:21\tABC\tJane\tDoe\tJane\tDoe\t1\n",
+          "explanation": {
+            "purpose": "Read the saved deal and its account, contact, lead source, amount, and stage.",
+            "result": "ABC- Initial Contract is a 100,000 Closed Won opportunity from Web Site. Its row links ABC to Jane Doe as both contact and converted lead."
+          }
+        },
+        "obs_pipeline": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Pipeline",
+          "record_sha256": "3516fb9218d06089aecf733c7849b5be7e9cba5e6a010ba27adeceae5c31cd02",
+          "inspection": {
+            "view": "pipeline",
+            "page": 1
+          },
+          "record": "lead_source\tsales_stage\topportunities\ttotal_amount\n\tId. Decision Makers\t1\t10000\n\tPerception Analysis\t1\t25000\n\tProspecting\t2\t75000\nCampaign\tValue Proposition\t1\t10000\nCold Call\tClosed Won\t1\t10000\nCold Call\tNeeds Analysis\t1\t10000\nCold Call\tValue Proposition\t1\t50000\nConference\tClosed Won\t2\t20000\nConference\tId. Decision Makers\t1\t50000\nConference\tNeeds Analysis\t1\t25000\nConference\tNegotiation/Review\t1\t50000\nDirect Mail\tNegotiation/Review\t1\t50000\nDirect Mail\tPerception Analysis\t1\t25000\nDirect Mail\tProposal/Price Quote\t1\t75000\nEmail\tNeeds Analysis\t1\t10000\nEmail\tProspecting\t2\t100000\nEmployee\tPerception Analysis\t1\t10000\nExisting Customer\tClosed Won\t1\t75000\nExisting Customer\tProspecting\t1\t10000\nOther\tNegotiation/Review\t1\t25000\nOther\tPerception Analysis\t1\t10000\nOther\tProspecting\t1\t10000\nOther\tQualification\t1\t50000\nOther\tValue Proposition\t1\t25000\nPartner\tClosed Lost\t1\t10000\nPartner\tClosed Won\t1\t75000\nPartner\tValue Proposition\t1\t75000\nPublic Relations\tClosed Won\t1\t25000\nPublic Relations\tNeeds Analysis\t2\t35000\nSelf Generated\tClosed Won\t1\t10000\nSelf Generated\tNeeds Analysis\t1\t50000\nSelf Generated\tProposal/Price Quote\t1\t25000\nSelf Generated\tValue Proposition\t2\t100000\nTrade Show\tClosed Lost\t1\t50000\nTrade Show\tNegotiation/Review\t1\t25000\nTrade Show\tPerception Analysis\t1\t10000\nWeb Site\tClosed Lost\t2\t125000\nWeb Site\tClosed Won\t2\t110000\nWeb Site\tNegotiation/Review\t1\t75000\nWeb Site\tPerception Analysis\t1\t10000\nWeb Site\tProspecting\t1\t25000\nWeb Site\tQualification\t1\t50000\nWord of mouth\tId. Decision Makers\t1\t50000\nWord of mouth\tProposal/Price Quote\t1\t50000\n",
+          "explanation": {
+            "purpose": "Count opportunities and sum their amounts by stage and lead source to cross-check the report and dashboard.",
+            "result": "The Closed Won rows total nine opportunities and $325,000 across seven sources. Web Site contributes $110,000. These figures can be compared with both the report and dashboard."
+          }
+        },
+        "obs_accounts": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Accounts",
+          "record_sha256": "7e07db09d1700924a860b1ebe32ac5020a3c0a709948c65b0a07a58874403f25",
+          "inspection": {
+            "view": "accounts",
+            "page": 1
+          },
+          "record": "id\tname\tindustry\n8ff54a58-4ab6-460d-a803-8122ee9c76a0\tABC\tEducation\n",
+          "explanation": {
+            "purpose": "Check the name and industry of the account referenced by the converted lead.",
+            "result": "The account with the ID recorded on Jane Doe’s lead is named ABC and has industry Education."
+          }
+        },
+        "obs_reports": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Reports",
+          "record_sha256": "89a9d25bb1ed92daaaedfdf8d57e40071717a1a9e898a3dc936a4119d08a29c0",
+          "inspection": {
+            "view": "reports",
+            "page": 1
+          },
+          "record": "id\tslice_name\tviz_type\tdatasource_id\tparams\tquery_context\n1\tClosed Won Opportunities\tpie\t1\t{\"datasource\": \"1__table\", \"viz_type\": \"pie\", \"granularity_sqla\": \"close_date\", \"time_range\": \"No filter\", \"groupby\": [\"lead_source\"], \"metric\": \"revenue\", \"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": \"Closed Won\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_stage\", \"isExtra\": false, \"operator\": \"==\", \"subject\": \"stage\"}], \"row_limit\": 100, \"sort_by_metric\": true, \"color_scheme\": \"supersetColors\", \"show_labels_threshold\": 5, \"show_legend\": true, \"legendType\": \"scroll\", \"legendOrientation\": \"top\", \"label_type\": \"key_value\", \"number_format\": \"$,.2f\", \"date_format\": \"smart_date\", \"donut\": true, \"show_total\": true, \"labels_outside\": true}\tNULL\n2\tClosed Won Revenue\tbig_number_total\t1\t{\"datasource\": \"1__table\", \"viz_type\": \"big_number_total\", \"granularity_sqla\": \"close_date\", \"time_range\": \"No filter\", \"metric\": \"revenue\", \"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": \"Closed Won\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_stage\", \"isExtra\": false, \"operator\": \"==\", \"subject\": \"stage\"}], \"subheader\": \"Total Closed-Won Revenue\", \"y_axis_format\": \"$,.2f\"}\t{\"datasource\":{\"id\":1,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"close_date\",\"filters\":[{\"col\":\"stage\",\"op\":\"==\",\"val\":\"Closed Won\"}],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[\"revenue\"],\"annotation_layers\":[],\"series_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"form_data\":{\"adhoc_filters\":[{\"clause\":\"WHERE\",\"comparator\":\"Closed Won\",\"expressionType\":\"SIMPLE\",\"filterOptionName\":\"filter_stage\",\"isExtra\":false,\"operator\":\"==\",\"subject\":\"stage\"}],\"datasource\":\"1__table\",\"granularity_sqla\":\"close_date\",\"metric\":\"revenue\",\"slice_id\":2,\"subheader\":\"Total Closed-Won Revenue\",\"time_range\":\"No filter\",\"viz_type\":\"big_number_total\",\"y_axis_format\":\"$,.2f\",\"force\":false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\":\"json\",\"result_type\":\"full\"}\n3\tClosed Won Opportunities Details\ttable\t1\t{\"datasource\": \"1__table\", \"viz_type\": \"table\", \"query_mode\": \"aggregate\", \"groupby\": [\"lead_source\"], \"metrics\": [\"revenue\"], \"all_columns\": [\"opportunity_name\", \"account_name\", \"amount\", \"lead_source\", \"close_date\", \"last_modified_date\", \"stage\"], \"percent_metrics\": [], \"row_limit\": 1000, \"server_page_length\": 10, \"include_search\": true, \"show_cell_bars\": true, \"table_timestamp_format\": \"smart_date\", \"time_range\": \"No filter\", \"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": \"Closed Won\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_stage\", \"isExtra\": false, \"operator\": \"==\", \"subject\": \"stage\"}]}\tNULL\n",
+          "explanation": {
+            "purpose": "Read the saved analytics definitions to check the report name, date range, stage filter, grouping, and dashboard metrics.",
+            "result": "Closed Won Opportunities uses a donut chart grouped by lead source and the revenue metric. It filters for Closed Won with an unrestricted date range. The revenue card uses the same dataset and stage filter."
+          }
+        },
+        "obs_leads": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Leads",
+          "record_sha256": "1dca79cbee8c0c9fac0a51e79cc8f147f9e9e043f2568d6ca1807d0ea65e39e0",
+          "inspection": {
+            "view": "leads",
+            "page": 1
+          },
+          "record": "first_name\tlast_name\taccount_name\tlead_source\tstatus\tconverted\tassigned_user_id\taccount_id\tcontact_id\topportunity_id\nBernard\tDell\tSuper Star Holdings Inc\tTrade Show\tDead\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nBenedict\tKrok\tNW Bridge Construction\tDirect Mail\tDead\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAida\tAstudillo\tSmith & Sons\tDirect Mail\tNew\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAlberta\tLackey\t360 Vacations\tConference\tNew\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nBernardo\tIshee\tGifted Holdings AG\tEmployee\tDead\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAlejandra\tBrobst\tLexington Shores Corp\tDirect Mail\tNew\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nJane\tDoe\tABC\tWeb Site\tConverted\t1\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\t8ff54a58-4ab6-460d-a803-8122ee9c76a0\t0b13c6b8-e2da-4a0c-ae5d-07607cabb20f\t67e2f259-9ea3-4cd0-9469-a04f9977af41\nAnthony\tSommerville\tPowder Suppliers\tWeb Site\tIn Process\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nBasil\tLadue\tMississippi Bank Group\tDirect Mail\tDead\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAugusta\tLacefield\tSpindle Broadcast Corp.\tEmployee\tDead\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAnnmarie\tOkamoto\tTrait Institute Inc\t\tIn Process\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nArlie\tRabago\tDirt Mining Ltd\tTrade Show\tIn Process\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAndrea\tMcnabb\tInsight Marketing Inc\tPublic Relations\tIn Process\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAntonio\tPresson\tTortoise Corp\tExisting Customer\tIn Process\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAlma\tBothwell\tSmallville Resources Inc\tConference\tNew\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAnnabelle\tCoke\tKings Royalty Trust\tTrade Show\tIn Process\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAlissa\tBasinger\tComplete Holding\tWord of mouth\tNew\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAddie\tHeady\tAirline Maintenance Co\tCold Call\tNew\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAida\tShaw\tMMM Mortuary Corp\tPartner\tNew\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAlba\tCollazo\t360 Vacations\tConference\tNew\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nBernard\tStam\tA.G. Parr PLC\tEmployee\tDead\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nBernadette\tMarson\tEEE Endowments LTD\tEmployee\tDead\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\nAnibal\tHolley\tNW Capital Corp\tConference\tIn Process\t0\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tNULL\tNULL\tNULL\n",
+          "explanation": {
+            "purpose": "Inspect lead ownership, status, source, and the account, contact, and opportunity links saved during conversion.",
+            "result": "Jane Doe’s Web Site lead is marked Converted and has all three destination IDs. The other lead rows provide examples of records with the conversion flag unset."
+          }
+        },
+        "obs_dashboards": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Dashboards",
+          "record_sha256": "2bf474e88921e515cbcf3637af56d63846e4a5bd3c324099f1546d2c0eb1b37f",
+          "inspection": {
+            "view": "dashboards",
+            "page": 1
+          },
+          "record": "id\tdashboard_title\tpublished\tposition_json\tjson_metadata\n1\tClosed Won Dashboard\t0\t{\"DASHBOARD_VERSION_KEY\": \"v2\", \"ROOT_ID\": {\"children\": [\"GRID_ID\"], \"id\": \"ROOT_ID\", \"type\": \"ROOT\"}, \"GRID_ID\": {\"children\": [\"ROW-N-3LM4FNX6\"], \"id\": \"GRID_ID\", \"parents\": [\"ROOT_ID\"], \"type\": \"GRID\"}, \"HEADER_ID\": {\"id\": \"HEADER_ID\", \"meta\": {\"text\": \"Closed Won Dashboard\"}, \"type\": \"HEADER\"}, \"ROW-N-3LM4FNX6\": {\"children\": [\"CHART-V870YFVF\", \"CHART-TN6DBYOY\"], \"id\": \"ROW-N-3LM4FNX6\", \"meta\": {\"0\": \"ROOT_ID\", \"background\": \"BACKGROUND_TRANSPARENT\"}, \"type\": \"ROW\", \"parents\": [\"ROOT_ID\", \"GRID_ID\"]}, \"CHART-V870YFVF\": {\"children\": [], \"id\": \"CHART-V870YFVF\", \"meta\": {\"chartId\": 1, \"height\": 50, \"sliceName\": \"Closed Won Opportunities\", \"uuid\": \"bd9930de-3e22-4faf-85b4-cb575e8b9e36\", \"width\": 8}, \"type\": \"CHART\", \"parents\": [\"ROOT_ID\", \"GRID_ID\", \"ROW-N-3LM4FNX6\"]}, \"CHART-TN6DBYOY\": {\"children\": [], \"id\": \"CHART-TN6DBYOY\", \"meta\": {\"chartId\": 2, \"height\": 50, \"sliceName\": \"Closed Won Revenue\", \"uuid\": \"0aeb3464-36d5-4fd7-9dbf-8dc0260c68c8\", \"width\": 4}, \"type\": \"CHART\", \"parents\": [\"ROOT_ID\", \"GRID_ID\", \"ROW-N-3LM4FNX6\"]}}\t{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": \"supersetColors\", \"chart_configuration\": {\"1\": {\"id\": 1, \"crossFilters\": {\"scope\": \"global\", \"chartsInScope\": [2]}}}, \"global_chart_configuration\": {\"scope\": {\"rootPath\": [\"ROOT_ID\"], \"excluded\": []}, \"chartsInScope\": [1, 2]}, \"color_scheme_domain\": [\"#1FA8C9\", \"#454E7C\", \"#5AC189\", \"#FF7F44\", \"#666666\", \"#E04355\", \"#FCC700\", \"#A868B7\", \"#3CCCCB\", \"#A38F79\", \"#8FD3E4\", \"#A1A6BD\", \"#ACE1C4\", \"#FEC0A1\", \"#B2B2B2\", \"#EFA1AA\", \"#FDE380\", \"#D3B3DA\", \"#9EE5E5\", \"#D1C6BC\"], \"map_label_colors\": {\"Web Site\": \"#1FA8C9\", \"Existing Customer\": \"#454E7C\", \"Partner\": \"#5AC189\", \"Public Relations\": \"#FF7F44\", \"Conference\": \"#666666\", \"Self Generated\": \"#E04355\", \"Cold Call\": \"#FCC700\"}, \"label_colors\": {}, \"shared_label_colors\": [], \"cross_filters_enabled\": true}\n",
+          "explanation": {
+            "purpose": "Read the dashboard record to identify the saved title, publication flag, and chart layout.",
+            "result": "Closed Won Dashboard has its publication flag set to 0 and its layout contains charts 1 and 2. Its assigned role is recorded in the separate dashboard roles check."
+          }
+        },
+        "obs_views": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Views",
+          "record_sha256": "41edb14abb2455bc4dceaddf6d1e919841c2122298939ad75ff3e902b24be35d",
+          "inspection": {
+            "view": "views",
+            "page": 1
+          },
+          "record": "name\tassigned_user_id\tsearch_module\tcontents\nMy Leads\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tLeads\tYTo3OntzOjEzOiJzZWFyY2hfbW9kdWxlIjtzOjU6IkxlYWRzIjtzOjEzOiJzZWFyY2hGb3JtVGFiIjtzOjE1OiJhZHZhbmNlZF9zZWFyY2giO3M6MjU6ImFzc2lnbmVkX3VzZXJfaWRfYWR2YW5jZWQiO2E6MTp7aTowO3M6MzY6IjAzMDRhNGEwLWVkMDAtNDBkMi1hNWY0LWVmMzVjMDMwNzRmNSI7fXM6Nzoib3JkZXJCeSI7czo0OiJuYW1lIjtzOjk6InNvcnRPcmRlciI7czozOiJBU0MiO3M6NToicXVlcnkiO2I6MTtzOjg6ImFkdmFuY2VkIjtiOjE7fQ==\nMy Open Leads\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tLeads\tYToxMjp7czoxMzoic2VhcmNoX21vZHVsZSI7czo1OiJMZWFkcyI7czoxMzoic2VhcmNoRm9ybVRhYiI7czoxNToiYWR2YW5jZWRfc2VhcmNoIjtzOjI1OiJhc3NpZ25lZF91c2VyX2lkX2FkdmFuY2VkIjthOjE6e2k6MDtzOjM2OiIwMzA0YTRhMC1lZDAwLTQwZDItYTVmNC1lZjM1YzAzMDc0ZjUiO31zOjE1OiJzdGF0dXNfYWR2YW5jZWQiO2E6Mzp7aTowO3M6MzoiTmV3IjtpOjE7czo4OiJBc3NpZ25lZCI7aToyO3M6MTA6IkluIFByb2Nlc3MiO31zOjk6Im9wZW5fb25seSI7czoxOiIxIjtzOjE1OiJvcGVuX29ubHlfYmFzaWMiO3M6MToiMSI7czoyMzoiY3VycmVudF91c2VyX29ubHlfYmFzaWMiO3M6MToiMSI7czoxODoiY29udmVydGVkX2FkdmFuY2VkIjtzOjE6IjAiO3M6Nzoib3JkZXJCeSI7czo0OiJuYW1lIjtzOjk6InNvcnRPcmRlciI7czozOiJBU0MiO3M6NToicXVlcnkiO2I6MTtzOjg6ImFkdmFuY2VkIjtiOjE7fQ==\n",
+          "explanation": {
+            "purpose": "Inspect the saved My Open Leads search, its owner, and the filter values encoded in its contents field.",
+            "result": "The search belongs to Emily’s user ID. Its saved settings restrict the view to her leads, exclude converted records, and include New, Assigned, and In Process statuses with open_only enabled."
+          }
+        },
+        "obs_dashboard_charts": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Dashboard charts",
+          "record_sha256": "f6f59834cb8f42ac3f1afed30e3fc8e7b76f279e6487384d68bba7a678090ebc",
+          "inspection": {
+            "view": "dashboard_charts",
+            "page": 1
+          },
+          "record": "dashboard_id\tslice_id\n1\t1\n1\t2\n",
+          "explanation": {
+            "purpose": "Look up the chart IDs attached to the saved dashboard.",
+            "result": "Dashboard 1 is linked to chart 1 and chart 2. The report definitions identify them as the lead-source donut and the overall revenue card."
+          }
+        },
+        "obs_tags": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Tags",
+          "record_sha256": "923adaef830a31311555b25303e6346d7b635be5da28db0bc91dfe8e80a8f4f9",
+          "inspection": {
+            "view": "tags",
+            "page": 1
+          },
+          "record": "name\tobject_id\tobject_type\nowner:1001\t1\tdashboard\nowner:1001\t1\tchart\nowner:1001\t2\tchart\nowner:1001\t3\tchart\nPrivate Dashboards\t1\tdashboard\nPublic Reports\t1\tchart\nPublic Reports\t3\tchart\ntype:chart\t1\tchart\ntype:chart\t2\tchart\ntype:chart\t3\tchart\ntype:dashboard\t1\tdashboard\ntype:dataset\t1\tdataset\n",
+          "explanation": {
+            "purpose": "Check which saved analytics objects belong to the Public Reports collection.",
+            "result": "Chart IDs 1 and 3 have the Public Reports tag. The same records list the dashboard separately under Private Dashboards."
+          }
+        },
+        "obs_subscriptions": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Subscriptions",
+          "record_sha256": "587363fe5d1527c797e886656e42efe311e17f4981ec5c1df4cf19aa463be174",
+          "inspection": {
+            "view": "subscriptions",
+            "page": 1
+          },
+          "record": "id\tname\tactive\tcrontab\ttimezone\tdashboard_id\n1\tClosed Won Dashboard\t1\t0 7 * * 1\tAmerica/New_York\t1\n",
+          "explanation": {
+            "purpose": "Read the dashboard subscription’s enabled flag, recurring schedule, time zone, and destination dashboard ID.",
+            "result": "The schedule for dashboard 1 is active. Its cron expression is 0 7 * * 1 with time zone America/New_York, scheduling it for Mondays at 7:00 AM."
+          }
+        },
+        "obs_dashboard_roles": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Dashboard roles",
+          "record_sha256": "156bb9dd2ab242e571eb350a16ddb7a316285f7f8622695402c9c7c42b1715df",
+          "inspection": {
+            "view": "dashboard_roles",
+            "page": 1
+          },
+          "record": "dashboard_id\tname\n1\tPrivate Dashboards (owners only)\n",
+          "explanation": {
+            "purpose": "Check the access role assigned to the saved dashboard.",
+            "result": "Dashboard 1 is assigned Private Dashboards (owners only)."
+          }
+        },
+        "obs_screen": {
+          "kind": "screenshots",
+          "source": "live_environment",
+          "label": "Final screenshot",
+          "record_sha256": "1b37f272bcab062c7b6124a8cfebf1f2b258bbfaa546741edf379a07075d8945",
+          "file": "final-screen-crop.png",
+          "cropped": true
+        },
+        "obs_step_267_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 267 · bash",
+          "record_sha256": "eaf3d485983b6634176a67ac82bba96f3fb22323c8af5ee97cebe06da326df8b",
+          "record": {
+            "step": 267,
+            "timestamp": "2026-11-25T02:55:15.365273+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_10905432707723688512",
+                "function_name": "bash",
+                "arguments": {
+                  "timeout": 10,
+                  "command": "sed -n '130,145p' /var/www/suitecrm/modules/Leads/metadata/SearchFields.php"
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_10905432707723688512",
+                "text": "            'options' => 'lead_status_dom',\n            'template_var' => 'STATUS_OPTIONS'\n        ),\n        'open_only' => array(\n            'query_type' => 'default',\n            'db_field' => array('status'),\n            'operator' => 'not in',\n            'closed_values' => array('Dead', 'Recycled', 'Converted'),\n            'type' => 'bool',\n        ),\n        //Range Search Support\n        'range_date_entered' => array(\n            'query_type' => 'default',\n            'enable_range_search' => true,\n            'is_date_field' => true\n        ),\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Read the CRM’s lead-search definition to determine which statuses the open-only filter excludes.",
+            "result": "The definition applies a status exclusion list containing Dead, Recycled, and Converted. The saved view record shows which filter Emily used."
+          }
+        },
+        "obs_step_507_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 507 · bash",
+          "record_sha256": "0cfd5b48eb27b0bfcfeaaf2d0dcc4e1919f3539c62c6fdf246b61e935ec379d6",
+          "record": {
+            "step": 507,
+            "timestamp": "2026-11-25T03:28:04.468316+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_5848606069162321628",
+                "function_name": "bash",
+                "arguments": {
+                  "command": "mysql -h 127.0.0.1 -u suitecrm -p[redacted] suitecrm -e \"\nSELECT id, name, industry, assigned_user_id FROM accounts WHERE name='ABC';\nSELECT id, first_name, last_name, assigned_user_id FROM contacts WHERE last_name='Doe';\nSELECT id, name, sales_stage, amount, amount_usdollar, lead_source, date_closed, assigned_user_id FROM opportunities WHERE name LIKE '%ABC%';\nSELECT * FROM accounts_opportunities WHERE opportunity_id IN (SELECT id FROM opportunities WHERE name LIKE '%ABC%');\nSELECT * FROM opportunities_contacts WHERE opportunity_id IN (SELECT id FROM opportunities WHERE name LIKE '%ABC%');\n\"",
+                  "timeout": 10
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_5848606069162321628",
+                "text": "id\tname\tindustry\tassigned_user_id\n8ff54a58-4ab6-460d-a803-8122ee9c76a0\tABC\tNULL\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\nid\tfirst_name\tlast_name\tassigned_user_id\n0b13c6b8-e2da-4a0c-ae5d-07607cabb20f\tJane\tDoe\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\nid\tname\tsales_stage\tamount\tamount_usdollar\tlead_source\tdate_closed\tassigned_user_id\n67e2f259-9ea3-4cd0-9469-a04f9977af41\tABC- Initial Contract\tProspecting\t100000\t100000\tWeb Site\t2026-11-25\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\nid\topportunity_id\taccount_id\tdate_modified\tdeleted\n9f491fa0-817a-40bc-961c-95b478df1945\t67e2f259-9ea3-4cd0-9469-a04f9977af41\t8ff54a58-4ab6-460d-a803-8122ee9c76a0\t2026-11-25 03:27:43\t0\nid\tcontact_id\topportunity_id\tcontact_role\tdate_modified\tdeleted\n6844fdc1-e4e7-4009-bb26-6f37e92b87f4\t0b13c6b8-e2da-4a0c-ae5d-07607cabb20f\t67e2f259-9ea3-4cd0-9469-a04f9977af41\tNULL\t2026-11-25 03:27:43\t0\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Query the CRM tables after conversion to check whether the new opportunity was linked to Jane and ABC.",
+            "result": "The output includes account and contact links to ABC- Initial Contract. At this point the stage was Prospecting. Step 517 and the final opportunity record show the later change to Closed Won."
+          }
+        },
+        "obs_step_517_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 517 · bash",
+          "record_sha256": "c1b5a9b790179c830a82723fdffa082d4774ba46b5c33f52cc62d6d20a75338e",
+          "record": {
+            "step": 517,
+            "timestamp": "2026-11-25T03:29:42.371329+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_3962431396557959303",
+                "function_name": "bash",
+                "arguments": {
+                  "timeout": 10,
+                  "command": "mysql -h 127.0.0.1 -u suitecrm -p[redacted] suitecrm -e \"SELECT * FROM report_opportunities WHERE opportunity_name='ABC- Initial Contract';\""
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_3962431396557959303",
+                "text": "id\topportunity_name\taccount_name\tstage\tamount\tlead_source\tclose_date\tcreated_date\tassigned_user_id\tcurrency\n67e2f259-9ea3-4cd0-9469-a04f9977af41\tABC- Initial Contract\tABC\tClosed Won\t100000\tWeb Site\t2026-11-25\t2026-11-25 03:27:43\t0304a4a0-ed00-40d2-a5f4-ef35c03074f5\tUSD\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Query the reporting dataset for the ABC contract’s amount, currency, source, and stage.",
+            "result": "The returned row lists ABC- Initial Contract under ABC for USD 100,000, with source Web Site and stage Closed Won."
+          }
+        },
+        "obs_step_523_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 523 · bash",
+          "record_sha256": "d3eb283b43ae9cf4ac7acb33e0b2a78e47437607e4ff2268d72086adc8a69f1d",
+          "record": {
+            "step": 523,
+            "timestamp": "2026-11-25T03:30:35.277600+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_11330262895346912399",
+                "function_name": "bash",
+                "arguments": {
+                  "command": "mysql -h 127.0.0.1 -u suitecrm -p[redacted] suitecrm -e \"\nSELECT c.id, c.first_name, c.last_name, a.name AS account_name\nFROM contacts c\nJOIN accounts_contacts ac ON ac.contact_id = c.id\nJOIN accounts a ON a.id = ac.account_id\nWHERE a.name = 'ABC';\n\"",
+                  "timeout": 10
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_11330262895346912399",
+                "text": "id\tfirst_name\tlast_name\taccount_name\n0b13c6b8-e2da-4a0c-ae5d-07607cabb20f\tJane\tDoe\tABC\n88d14767-e880-11f1-bf67-020000000015\tJohn\tDoe\tABC\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Query CRM contacts to check that Jane and John remained distinct contacts under ABC.",
+            "result": "The result lists two distinct contact IDs, one for Jane Doe and one for John Doe, each associated with ABC."
+          }
+        },
+        "obs_step_609_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 609 · bash",
+          "record_sha256": "ee40604679dbbba58d189cff4fceb8fe5dfc6ce35d38e9bda1b7544f97c50633",
+          "record": {
+            "step": 609,
+            "timestamp": "2026-11-25T03:44:41.189866+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_11593714168877341024",
+                "function_name": "bash",
+                "arguments": {
+                  "timeout": 10,
+                  "command": "sed -n '80,180p' /var/www/suitecrm/modules/SavedSearch/SavedSearch.php"
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_11593714168877341024",
+                "text": "        $this->sortOrder = $sortOrder;\n        $this->setupCustomFields('SavedSearch');\n        foreach ($this->field_defs as $field) {\n            $this->field_name_map[$field['name']] = $field;\n        }\n    }\n\n    // Saved Search Form\n    public function getForm($module, $inline = true, $orderBySelectOnly = false)\n    {\n        global $current_user, $currentModule, $current_language, $app_strings;\n        $db = DBManagerFactory::getInstance();\n\n        $json = getJSONobj();\n\n        $saved_search_mod_strings = return_module_language($current_language, 'SavedSearch');\n\n        $query = 'SELECT id, name FROM saved_search\n\t\t\t\t  WHERE\n\t\t\t\t\tdeleted = \\'0\\' AND\n\t\t\t\t  \tassigned_user_id = \\'' . $current_user->id . '\\' AND\n\t\t\t\t\tsearch_module =  \\'' . $module . '\\'\n\t\t\t\t  ORDER BY name';\n        $result = $db->query($query, true, \"Error filling in saved search list: \");\n\n        $savedSearchArray = [];\n        $savedSearchArray['_none'] = $app_strings['LBL_NONE'];\n        while ($row = $db->fetchByAssoc($result, -1, false)) {\n            $savedSearchArray[$row['id']] = htmlspecialchars((string) $row['name'], ENT_QUOTES);\n        }\n        $sugarSmarty = new Sugar_Smarty();\n        $sugarSmarty->assign('SEARCH_MODULE', $module);\n        $sugarSmarty->assign('MOD', $saved_search_mod_strings);\n        $sugarSmarty->assign('DELETE', $app_strings['LBL_DELETE_BUTTON_LABEL']);\n        $sugarSmarty->assign('UPDATE', $app_strings['LBL_UPDATE']);\n        $sugarSmarty->assign('SAVE', $app_strings['LBL_SAVE_BUTTON_LABEL']);\n\n        $chooser = $this->getTemplateGroupChooser($module);\n\n        $sugarSmarty->assign('columnChooser', $chooser->display());\n\n        $sugarSmarty->assign('selectedOrderBy', $this->orderBy);\n        if (empty($this->sortOrder)) {\n            $this->sortOrder = 'ASC';\n        }\n        $sugarSmarty->assign('selectedSortOrder', $this->sortOrder);\n\n        $lastSavedView = (empty($_SESSION['LastSavedView'][$module]) ? '' : $_SESSION['LastSavedView'][$module]);\n        $sugarSmarty->assign('columnsMeta', $json->encode($this->columns));\n        $sugarSmarty->assign('lastSavedView', $lastSavedView);\n        $sugarSmarty->assign('SAVED_SEARCHES_OPTIONS', get_select_options_with_id($savedSearchArray, $lastSavedView));\n\n        $json = getJSONobj();\n\n        $sugarSmarty->assign('orderBySelectOnly', $orderBySelectOnly);\n\n        return $sugarSmarty->fetch('modules/SavedSearch/SavedSearchForm.tpl');\n    }\n\n    public function getTemplateGroupChooser($module)\n    {\n        global $app_strings;\n\n        // Column Chooser\n        $chooser = new TemplateGroupChooser();\n\n        $chooser->args['id'] = 'edit_tabs';\n        $chooser->args['left_size'] = 7;\n        $chooser->args['right_size'] = 7;\n        $chooser->args['values_array'][0] = array();\n        $chooser->args['values_array'][1] = array();\n\n        if (isset($_REQUEST['saved_search_select']) && $_REQUEST['saved_search_select'] != '_none') {\n            $this->retrieveSavedSearch($_REQUEST['saved_search_select']);\n        }\n\n        if ((!empty($_REQUEST['displayColumns']) && $_REQUEST['displayColumns'] != 'undefined') || (isset($this->contents['displayColumns']) && $this->contents['displayColumns'] != 'undefined')) {\n            // columns to display\n            if (!empty($_REQUEST['displayColumns']) && $_REQUEST['displayColumns'] != 'undefined') {\n                $temp_displayColumns = $_REQUEST['displayColumns'];\n            } else {\n                $temp_displayColumns = $this->contents['displayColumns'];\n            }\n            foreach (explode('|', $temp_displayColumns) as $num => $name) {\n                if (!isset($this->columns[$name])) {\n                    // Ignore any column that is not on the list.\n                    continue;\n                }\n                $chooser->args['values_array'][0][$name] = trim(translate($this->columns[$name]['label'], $module), ':');\n            }\n            // columns not displayed\n            foreach (array_diff(array_keys($this->columns), array_values(explode('|', $temp_displayColumns))) as $num => $name) {\n                $chooser->args['values_array'][1][$name] = trim(translate($this->columns[$name]['label'], $module), ':');\n            }\n        } else {\n            foreach ($this->columns as $name => $val) {\n                if (!isset($val['label'])) {\n                    LoggerManager::getLogger()->warn(\"SavedSearch getTemplateGroupChooser: Illegal string offset 'label'\");\n                    $valLabel = null;\n                } else {\n                    $valLabel = $val['label'];\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Inspect how the CRM looks up saved searches for the signed-in user.",
+            "result": "The implementation scopes the lookup to the current user. The saved view record and Emily’s filter-menu screenshot identify the particular My Open Leads search."
+          }
+        },
+        "obs_step_679_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 679 · bash",
+          "record_sha256": "60662d75b0a9a08e0a854e553010f5bed7fa8d82d93fb83d3941e95a7730c89b",
+          "record": {
+            "step": 679,
+            "timestamp": "2026-11-25T03:57:38.407513+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_7413848622280649513",
+                "function_name": "bash",
+                "arguments": {
+                  "command": "mysql -h 127.0.0.1 -u suitecrm -p[redacted] suitecrm -e \"SELECT * FROM securitygroups;\"",
+                  "timeout": 10
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_7413848622280649513",
+                "text": "id\tname\tdate_entered\tdate_modified\tmodified_user_id\tcreated_by\tdescription\tdeleted\tassigned_user_id\tnoninheritable\n00293b63-3c3f-470f-bd44-2abff7be112d\tPublic Reports\t2026-11-25 02:29:27\t2026-11-25 02:29:27\t1\t1\tShared Sales reporting collection\t0\t1\tNULL\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Look up the security group intended for shared reports.",
+            "result": "The query returns Public Reports with the description “Shared Sales reporting collection.” Step 783 uses that group’s ID when saving the report."
+          }
+        },
+        "obs_step_687_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 687 · bash",
+          "record_sha256": "dc3c9d56c6f1ea94e45fc7c5e2e263851de4329d679dc2c95b7c01e967f16353",
+          "record": {
+            "step": 687,
+            "timestamp": "2026-11-25T03:59:19.738279+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_9706034870918363771",
+                "function_name": "bash",
+                "arguments": {
+                  "command": "SUPERSET_CONFIG_PATH=/opt/sales-stack/superset_config.py /opt/superset/bin/python3 -c \"\nfrom superset.app import create_app\napp = create_app()\nwith app.app_context():\n    from superset import db\n    from superset.connectors.sqla.models import SqlaTable, SqlMetric\n    table = db.session.query(SqlaTable).filter_by(table_name='report_opportunities').first()\n    if not any(m.metric_name == 'revenue' for m in table.metrics):\n        m = SqlMetric(\n            metric_name='revenue',\n            verbose_name='Total Revenue',\n            metric_type='sum',\n            table_id=table.id,\n            expression='SUM(amount)',\n            d3format='$,.2f',\n        )\n        db.session.add(m)\n        db.session.commit()\n        print('Added revenue metric!')\n    else:\n        print('Metric already exists')\n\"",
+                  "timeout": 10
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_9706034870918363771",
+                "text": "Loaded your LOCAL configuration at [/opt/sales-stack/superset_config.py]\nAdded revenue metric!\n/opt/superset/lib/python3.10/site-packages/superset/config.py:42: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\n  import pkg_resources\n2026-11-24 22:59:17,419:WARNING:superset.initialization:We haven't found any Content Security Policy (CSP) defined in the configurations. Please make sure to configure CSP using the TALISMAN_ENABLED and TALISMAN_CONFIG keys or any other external software. Failing to configure CSP have serious security implications. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP for more information. You can disable this warning using the CONTENT_SECURITY_POLICY_WARNING key.\n2026-11-24 22:59:17,423:INFO:superset.initialization:Setting database isolation level to READ COMMITTED\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Define the revenue calculation on the opportunity dataset used by the charts.",
+            "result": "The command defines revenue as SUM(amount) and reports that it added the metric. The saved chart definitions reference that metric."
+          }
+        },
+        "obs_step_723_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 723 · bash",
+          "record_sha256": "f1e6c0cc819ad27f01808502bfc71e59115aa7d71b8620f092425a4ad242de9a",
+          "record": {
+            "step": 723,
+            "timestamp": "2026-11-25T04:07:14.110706+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_16371519024069425433",
+                "function_name": "bash",
+                "arguments": {
+                  "timeout": 10,
+                  "command": "SUPERSET_CONFIG_PATH=/opt/sales-stack/superset_config.py /opt/superset/bin/python3 -c \"\nfrom superset.app import create_app\napp = create_app()\nwith app.app_context():\n    from superset import db\n    from superset.connectors.sqla.models import SqlaTable\n    table = db.session.query(SqlaTable).filter_by(table_name='report_opportunities').one()\n    query_obj = {\n        'metrics': ['revenue'],\n        'groupby': ['lead_source'],\n        'filter': [{'col': 'stage', 'op': '==', 'val': 'Closed Won'}],\n        'from_dttm': None,\n        'to_dttm': None,\n        'row_limit': 100,\n        'is_timeseries': False,\n    }\n    res = table.query(query_obj)\n    print(res.df)\n\""
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_16371519024069425433",
+                "text": "/opt/superset/lib/python3.10/site-packages/superset/config.py:42: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\n  import pkg_resources\n2026-11-24 23:07:11,402:WARNING:superset.initialization:We haven't found any Content Security Policy (CSP) defined in the configurations. Please make sure to configure CSP using the TALISMAN_ENABLED and TALISMAN_CONFIG keys or any other external software. Failing to configure CSP have serious security implications. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP for more information. You can disable this warning using the CONTENT_SECURITY_POLICY_WARNING key.\n2026-11-24 23:07:11,406:INFO:superset.initialization:Setting database isolation level to READ COMMITTED\n2026-11-24 23:07:13,188:WARNING:root:user\nLoaded your LOCAL configuration at [/opt/sales-stack/superset_config.py]\n         lead_source   revenue\n0          Cold Call   10000.0\n1         Conference   20000.0\n2  Existing Customer   75000.0\n3            Partner   75000.0\n4   Public Relations   25000.0\n5     Self Generated   10000.0\n6           Web Site  110000.0\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Run the Closed Won revenue query grouped by lead source and inspect the returned subtotals.",
+            "result": "The result lists Web Site $110,000, Existing Customer and Partner $75,000 each, Public Relations $25,000, Conference $20,000, and Cold Call and Self Generated $10,000 each. They sum to $325,000."
+          }
+        },
+        "obs_step_783_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 783 · bash",
+          "record_sha256": "9c7130c8fd3978169e5c552821ce93f082286dda89ef8b60833520cfa6346c70",
+          "record": {
+            "step": 783,
+            "timestamp": "2026-11-25T04:19:40.081458+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_10541119507698738490",
+                "function_name": "bash",
+                "arguments": {
+                  "timeout": 10,
+                  "command": "/opt/superset/bin/python3 - << 'EOF'\nimport pymysql\nimport uuid\nimport base64\n\n[redacted]\ncur = conn.cursor()\n\nuser_id = '0304a4a0-ed00-40d2-a5f4-ef35c03074f5'\nsec_group_id = '00293b63-3c3f-470f-bd44-2abff7be112d'\n\nreport_id = str(uuid.uuid4())\ncur.execute(\"\"\"\nINSERT INTO aor_reports (id, name, date_entered, date_modified, modified_user_id, created_by, deleted, assigned_user_id, report_module, graphs_per_row)\nVALUES (%s, 'Closed Won Opportunities', NOW(), NOW(), %s, %s, 0, %s, 'Opportunities', 2)\n\"\"\", (report_id, user_id, user_id, user_id))\n\nfields = [\n    ('lead_source', 'Lead Source', 0, 1, '', 1, 0),\n    ('amount', 'Opportunity Amount', 1, 0, 'SUM', 1, 0),\n    ('name', 'Opportunity Name', 2, 0, '', 1, 1),\n    ('date_closed', 'Date Closed', 3, 0, '', 1, 0),\n    ('date_modified', 'Date Modified', 4, 0, '', 1, 0),\n]\n\nempty_path = base64.b64encode(b'a:0:{}').decode()\n\nfor f_name, f_label, order, gb, total, display, link in fields:\n    cur.execute(\"\"\"\n    INSERT INTO aor_fields (id, name, date_entered, date_modified, modified_user_id, created_by, deleted,\n                            aor_report_id, field_order, module_path, field, display, link, label,\n                            field_function, sort_by, total, sort_order, group_by)\n    VALUES (%s, %s, NOW(), NOW(), %s, %s, 0, %s, %s, %s, %s, %s, %s, %s, '', '', %s, 'ASC', %s)\n    \"\"\", (str(uuid.uuid4()), f_name, user_id, user_id, report_id, order, empty_path, f_name, display, link, f_label, total, gb))\n\ncur.execute(\"\"\"\nINSERT INTO aor_conditions (id, name, date_entered, date_modified, modified_user_id, created_by, deleted,\n                            aor_report_id, condition_order, logic_op, module_path, field, operator, value_type, value)\nVALUES (%s, 'sales_stage', NOW(), NOW(), %s, %s, 0, %s, 0, 'AND', %s, 'sales_stage', 'Equal_To', 'Value', 'Closed Won')\n\"\"\", (str(uuid.uuid4()), user_id, user_id, report_id, empty_path))\n\ncur.execute(\"\"\"\nINSERT INTO aor_charts (id, name, date_entered, date_modified, modified_user_id, created_by, deleted,\n                        aor_report_id, type, x_field, y_field)\nVALUES (%s, 'Closed Won Opportunities by Lead Source', NOW(), NOW(), %s, %s, 0, %s, 'pie', 0, 1)\n\"\"\", (str(uuid.uuid4()), user_id, user_id, report_id))\n\ncur.execute(\"\"\"\nINSERT INTO securitygroups_records (id, securitygroup_id, record_id, module, date_modified, deleted)\nVALUES (%s, %s, %s, 'AOR_Reports', NOW(), 0)\n\"\"\", (str(uuid.uuid4()), sec_group_id, report_id))\n\nconn.commit()\nprint('SuiteCRM AOR_Report created successfully! ID:', report_id)\nEOF\n"
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_10541119507698738490",
+                "text": "SuiteCRM AOR_Report created successfully! ID: 7a62e4d9-f517-419b-8e5e-6b5d386ba697\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Create the detailed CRM report with its selected fields, Closed Won condition, and Public Reports group association.",
+            "result": "The command selects lead source, amount, opportunity name, close date, and date modified, and commits the report. It prints the new report ID. The reopened report screenshot shows the resulting columns."
+          }
+        },
+        "obs_frame_pi_201_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 201",
+          "record_sha256": "713e874b3bc6b316a8acaf404cfcc4aa55931b2f62feec824e4da08137c0f2b5",
+          "file": "pi_201_1-crop.png",
+          "cropped": true
+        },
+        "obs_frame_pi_629_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 629",
+          "record_sha256": "61dcd420bbe72783298d6aeef70ad0fd132c7677c1f531433626a187510a827c",
+          "file": "pi_629_1-crop.png",
+          "cropped": true
+        },
+        "obs_frame_pi_505_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 505",
+          "record_sha256": "040dbfc9f1dbfb1abcca47df0bce5a4fed342f8ec61b37a5e177b168572bafd0",
+          "file": "pi_505_1-crop.png",
+          "cropped": true
+        },
+        "obs_frame_pi_191_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 191",
+          "record_sha256": "81295e53543bd7e1dd2438eff218c79d0e9bc7f03ef5b98acf9489366bc9ab72",
+          "file": "pi_191_1-crop.png",
+          "cropped": true
+        },
+        "obs_frame_pi_789_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 789",
+          "record_sha256": "bf46687096ca11077b3a4a2d40a67b5c9af55cfc8b489012cc300cea01962c68",
+          "file": "pi_789_1-crop.png",
+          "cropped": true
+        },
+        "obs_frame_pi_759_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 759",
+          "record_sha256": "ab45db0a36c8bd955101a713f6f3d865262b5e8bb760cd63b6750d3835d5d0cf",
+          "file": "pi_759_1-crop.png",
+          "cropped": true
+        },
+        "obs_frame_pi_787_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 787",
+          "record_sha256": "d94e262e5ec491d6b2a490ce38cd368a7a934255d9c76d5adc223000c3416df0",
+          "file": "pi_787_1-crop.png",
+          "cropped": true
+        },
+        "obs_step_741_p2": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 741 · page 2 of 2",
+          "record_sha256": "2188423c9e2d2adcdaa7d2bfcaf1c39c187251837f899dcd7a5b6727b30710fb",
+          "record": "ASHBOARDS.value,\\n            dashboard_id=dashboard.id,\\n            active=True,\\n            created_by_fk=user.id,\\n            changed_by_fk=user.id,\\n            owners=[user],\\n            working_timeout=3600,\\n        )\\n        db.session.add(schedule)\\n        db.session.flush()\\n\\n        recip1 = ReportRecipients(\\n            type=ReportRecipientType.EMAIL.value,\\n            recipient_config_json=json.dumps({\\\"target\\\": \\\"sfemilycall@gmail.com\\\"}),\\n            report_schedule_id=schedule.id,\\n            created_by_fk=user.id,\\n            changed_by_fk=user.id,\\n        )\\n        recip2 = ReportRecipients(\\n            type=ReportRecipientType.EMAIL.value,\\n            recipient_config_json=json.dumps({\\\"target\\\": \\\"eec@callcompany.com\\\"}),\\n            report_schedule_id=schedule.id,\\n            created_by_fk=user.id,\\n            changed_by_fk=user.id,\\n        )\\n        db.session.add(recip1)\\n        db.session.add(recip2)\\n        db.session.commit()\\n        print('Report schedule and recipients created:', schedule.id)\\n    else:\\n        schedule.crontab = '0 7 * * 1'\\n        schedule.active = True\\n        schedule.timezone = 'America/New_York'\\n        schedule.owners = [user]\\n        db.session.commit()\\n        print('Report schedule updated:', schedule.id)\\n\\nprint('All Superset setup finished successfully!')\\nEOF\\n\"}}],\"status\":\"completed\",\"results\":[{\"call_id\":\"call_13692145239870336379\",\"text\":\"Loaded your LOCAL configuration at [/opt/sales-stack/superset_config.py]\\nSlices created and committed:\\nDonut chart id: 1\\nMetric chart id: 2\\nTable chart id: 3\\nDashboard created: 1 Closed Won Dashboard\\nReport schedule and recipients created: 1\\nAll Superset setup finished successfully!\\n/opt/superset/lib/python3.10/site-packages/superset/config.py:42: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\\n  import pkg_resources\\n2026-11-24 23:11:04,791:WARNING:superset.initialization:We haven't found any Content Security Policy (CSP) defined in the configurations. Please make sure to configure CSP using the TALISMAN_ENABLED and TALISMAN_CONFIG keys or any other external software. Failing to configure CSP have serious security implications. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP for more information. You can disable this warning using the CONTENT_SECURITY_POLICY_WARNING key.\\n2026-11-24 23:11:04,796:INFO:superset.initialization:Setting database isolation level to READ COMMITTED\\n\"}],\"frames\":[]}",
+          "explanation": {
+            "purpose": "Inspect the cited part of the command that saved the dashboard and configured its email subscription.",
+            "result": "The command adds email recipients including sfemilycall@gmail.com. Its output confirms creation of dashboard 1 and schedule 1 with recipients. The live subscription record gives the final enabled state and recurring time."
+          }
+        },
+        "obs_frame_pi_627_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 627",
+          "record_sha256": "c0c64ae897dd139e61c883c4de94ecbab720542de3607992177e3d0ed6a9730d",
+          "file": "pi_627_1-crop.png",
+          "cropped": true
+        },
+        "obs_frame_pi_179_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 179",
+          "record_sha256": "c561024bd321d387e3c817c6d15be4f0d86ea2ff4e3a69bd71fe7c4891a128db",
+          "file": "pi_179_1-crop.png",
+          "cropped": true
+        },
+        "obs_frame_pi_133_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 133",
+          "record_sha256": "5a354f2f4326ee0538a172997db7c0657e0c7fe7475a12053b0cd63f77cf9bd2",
+          "file": "pi_133_1-crop.png",
+          "cropped": true
+        }
+      },
+      "runtime_seconds": 6691,
+      "total_tokens": 112006589,
+      "output_files": [],
+      "action_count": 401
     },
     "agent_runs": {
       "guided": {
