@@ -285,22 +285,19 @@ def render_instruction_run(task, prefix, inline):
     total = len(rows)
     status = (f'{sum(scored)} / {total}' if len(scored) == total else
               f'{len(scored)} / {total} criteria scored · null = no score recorded')
-    actions = (f'<p><a class="text-link" href="{directory}actions.jsonl" download>'
-               f'Download recorded actions ({run["action_count"]:,})</a></p>') if "action_count" in run else ""
     archive_link = ""
     if archive := run.get("archive"):
         captured = archive.get("snapshot_at")
         label = "Download public run snapshot" if captured else "Download public run results"
         note = f"<br>Snapshot taken {escape(captured)}." if captured else ""
         archive_link = (f'<p><a class="text-link" href="{escape(archive["url"], quote=True)}">'
-                        f'{label} (ZIP · {file_size(archive["bytes"])})</a>'
-                        f'{note}<br>Includes step history and reviewed evidence. See README.txt for redactions.</p>')
+                        f'{label} (ZIP · {file_size(archive["bytes"])})</a>{note}</p>')
     return (f'<article class="agent-run instruction-run" id="run-instruction-only"><details><summary>Task instruction</summary>'
             f'<dl class="run-metrics">{metrics}</dl>{archive_link}<h4>{status}</h4>'
             '<div class="rubric-table-wrapper" role="region" aria-label="Agent run scores" tabindex="0">'
             '<table class="rubric-table run-results"><caption class="sr-only">Task instruction run results</caption>'
             '<thead><tr><th scope="col">#</th><th scope="col">Outcome criterion</th><th scope="col">Score</th>'
             '<th scope="col">Reason</th><th scope="col">Evidence</th></tr></thead>'
-            f'<tbody>{"".join(rows)}</tbody></table></div>{actions}'
+            f'<tbody>{"".join(rows)}</tbody></table></div>'
             f'{render_outputs(run.get("output_files", []), directory, "instruction-only")}</details></article>'
             + evidence_viewer(run["evidence"], directory))
