@@ -1067,9 +1067,9 @@
       ],
       "action_count": 76,
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/word_pi_20261124_065906_11264167.encrypted.zip",
-        "bytes": 4006943,
-        "sha256": "7b482735b641aaa13607eca69a7e81bc3f02e5349ccac74e9810c8d701867d52"
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/word_pi_20261124_065906_11264167.zip",
+        "bytes": 296505,
+        "sha256": "da8b0fa8a77492314dbc7fb5af140123acc1f6c08b484162ff6f5167be545af4"
       }
     },
     "agent_runs": {
@@ -2177,9 +2177,9 @@
       ],
       "action_count": 210,
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/outlook_pi_20261124_121840_11267497.encrypted.zip",
-        "bytes": 12922394,
-        "sha256": "3a36e41c8a11878692ce1575865316f27af5656456d016186d8db705a5d0d5f6"
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/outlook_pi_20261124_121840_11267497.zip",
+        "bytes": 377202,
+        "sha256": "4645bc2430b49181f57a868007ab472e8477e541e4585168c004ff1e7200c21d"
       }
     },
     "agent_runs": {
@@ -3578,9 +3578,9 @@
       ],
       "action_count": 230,
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/quickbooks_pi_20261124_124704_11267497.encrypted.zip",
-        "bytes": 34674657,
-        "sha256": "e5e5d7650059583aa9b2da917d908097faf537553fbbd848f1631dc39dcd79a1"
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/quickbooks_pi_20261124_124704_11267497.zip",
+        "bytes": 492123,
+        "sha256": "08db03192e24582c8625e3a65342489b8a782bbebd58e6ac70a70d67b03e689d"
       }
     },
     "agent_runs": {
@@ -4702,9 +4702,9 @@
       "output_files": [],
       "action_count": 231,
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/drchrono_pi_20261124_203057_11269929.encrypted.zip",
-        "bytes": 26611317,
-        "sha256": "32ab92a2f1635e55e78897aabb0300a661fb0730318c898c826d9ccc25a3b69a"
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/drchrono_pi_20261124_203057_11269929.zip",
+        "bytes": 451789,
+        "sha256": "43de14916d28ad36e8eb4a36a16ae17de17425c3ff41dfe72566fd4685fe50ed"
       }
     },
     "agent_runs": {
@@ -6294,9 +6294,9 @@
       "output_files": [],
       "action_count": 366,
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/google-classroom_pi_20261124_203830_11269930.encrypted.zip",
-        "bytes": 29528682,
-        "sha256": "ed54800e0e12df96c11b0999185b2a0870a61e4fce4f4a50ccd7715089ec728a"
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/google-classroom_pi_20261124_203830_11269930.zip",
+        "bytes": 689563,
+        "sha256": "4a05d1c210a26d9800f2dc07a42b8307adffe8bd7b8613790ee7258883ea8de5"
       }
     },
     "agent_runs": {
@@ -10228,9 +10228,9 @@
       "output_files": [],
       "action_count": 139,
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/spss_pi_20261124_214031_11269933.encrypted.zip",
-        "bytes": 14685536,
-        "sha256": "709ffa59a2c91f36c3741f7f0ca588106c115b967c814452fda03b5c18505780"
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/spss_pi_20261124_214031_11269933.zip",
+        "bytes": 565506,
+        "sha256": "814d3cd03265ae6753f17bb6a66327fbb5d308c249a452a512591e4544d546b9"
       }
     },
     "agent_runs": {
@@ -14373,9 +14373,9 @@
       "rows": {},
       "evidence": {},
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/premiere-pro_pi_20261124_220941_11271540.encrypted.zip",
-        "bytes": 75669309,
-        "sha256": "57d6270682e95654a276185a369b72ec350a9b296b0be3d86b9a85299838b4fa",
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/premiere-pro_pi_20261124_220941_11271540.zip",
+        "bytes": 123699,
+        "sha256": "13c1c5d267b80e70415ded2125084c84bf334f8d80f017b0300437c3a20df863",
         "snapshot_at": "2026-11-25 05:51 UTC"
       }
     },
@@ -18081,9 +18081,9 @@
       "output_files": [],
       "action_count": 383,
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/asana_pi_20261124_191013_11269928.encrypted.zip",
-        "bytes": 28238602,
-        "sha256": "109430d9fac8527943b27e6eb6383ef2fc495152a32a6fa6993dd0f781920432"
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/asana_pi_20261124_191013_11269928.zip",
+        "bytes": 759453,
+        "sha256": "79504a6228beb751d2379476dc3fb307bfccbfcdd4bc63c4f56350d9015ad4e4"
       }
     },
     "agent_runs": {
@@ -22537,9 +22537,9 @@
       "output_files": [],
       "action_count": 401,
       "archive": {
-        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/salesforce_pi_20261124_212231_11269932.encrypted.zip",
-        "bytes": 77550400,
-        "sha256": "6363032eaad80cfe27f54fd4d7307645059790477a4b7936f6fbd327afa9b985"
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/salesforce_pi_20261124_212231_11269932.zip",
+        "bytes": 2042814,
+        "sha256": "80ae784e6b9b4b2bd38ffe747920732b7ba6ff0391be1f67ffad37e41c303004"
       }
     },
     "agent_runs": {
