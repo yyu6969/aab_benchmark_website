@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from agent_runs import CODEX_SCORES, HARBOR_SCORES, load_agent_runs
+from agent_runs import CODEX_SCORES, EVIDENCE_TYPES, HARBOR_SCORES, load_agent_runs
 from build import OUTPUT, ROOT, SOURCE, load_tutorials, parse_tasks, plain_text
 from materials import file_url, load_materials, sha256
 
@@ -24,6 +24,7 @@ class Page(HTMLParser):
         self.ids = set()
         self.section_ids = []
         self.run_frames = {}
+        self.evidence_groups = {}
         self.run_condition = None
         self.h1_count = 0
         self.in_table = False
@@ -46,6 +47,12 @@ class Page(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         classes = attrs.get("class", "").split()
+        if "data-evidence-ids" in attrs:
+            assert tag == "button" and self.score_row_id and attrs["aria-haspopup"] == "dialog"
+            group = self.evidence_groups.setdefault(self.score_row_id, {})
+            kind = attrs["data-kind"]
+            assert kind in EVIDENCE_TYPES and kind not in group
+            group[kind] = attrs["data-evidence-ids"].split()
         if tag == "div" and "source-popover" in classes:
             self.excerpt_id = attrs["id"]
             self.excerpts[self.excerpt_id] = {"marked": [], "context": []}
@@ -201,13 +208,19 @@ def check():
                 assert len(cells) == 6 and cells[:4] == [rubric["id"], f"{rubric['number']:02}",
                     compact(plain_text(rubric["criterion"])), "null" if rating is None else str(rating)]
                 assert cells[4] and cells[5]
+                expected_groups = {}
                 for ref in item.get("observations", []):
                     evidence = run["evidence"][ref]
-                    assert evidence["label"] in cells[5]
-                    if evidence.get("note"):
-                        assert compact(evidence["note"]) in cells[5]
+                    kind = evidence["kind"]
+                    expected_groups.setdefault(kind, []).append(ref)
+                    assert "evidence-" + ref in page.ids
                     if evidence.get("file"):
                         assert f"../../assets/agent-runs/{task['slug']}/{run['trial']}/{evidence['file']}" in page.links
+                    else:
+                        assert "record" in evidence or evidence.get("availability")
+                assert page.evidence_groups.get(rubric["id"], {}) == expected_groups
+                for kind, refs in expected_groups.items():
+                    assert f"{EVIDENCE_TYPES[kind]} ({len(refs)})" in cells[5]
         for condition, run in task["agent_runs"].items():
             assert f"run-{condition}" in page.ids
             expected_scores = []

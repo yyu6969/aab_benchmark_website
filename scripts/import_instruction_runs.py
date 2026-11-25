@@ -2,13 +2,12 @@
 import argparse
 import hashlib
 import json
-import re
-import shutil
 from datetime import datetime
 from pathlib import Path
 
 from build import ROOT, SOURCE, parse_tasks
 from import_agent_runs import TASKS, import_outputs
+from run_evidence import observation
 
 
 def read(path):
@@ -27,43 +26,7 @@ def action_records(trajectory):
             yield action
 
 
-def observation(record, verifier, folder, actions, previous):
-    key = record["id"]
-    if not record["ok"]:
-        return {"label": "Inspection unavailable"}
-    source = record["source"]
-    if source == "recorded_screenshot" or record.get("view") == "screen":
-        label = f'Screenshot · step {record["pi_step"]}' if "pi_step" in record else "Final screenshot"
-        item = {"label": label}
-        path = record["data"]
-        if not re.fullmatch(r"(?:final-screen|recorded-screenshots/pi_\d+_\d+)\.jpg", path):
-            raise ValueError(f"Unexpected screenshot path for {key}")
-        # Selected clinical and classroom frames can include unrelated chart or roster details.
-        if folder.parent.name not in {"complete-sign-clinical-note", "update-class-gradebook"}:
-            shutil.copyfile(verifier / path, folder / Path(path).name)
-            item["file"] = Path(path).name
-    elif source == "trajectory":
-        step = json.loads(record["data"])["step"]
-        action = actions.get(step)
-        item = {"label": f"Step {step} · " + (action["tool"] if action else "trajectory")}
-        if action:
-            item["action"] = action
-    elif source == "live_environment":
-        name = record["view"].replace("_", " ").capitalize()
-        page = f' · page {record["page"]}' if record.get("pages", 1) > 1 else ""
-        item = {"label": name + page}
-    else:
-        raise ValueError(f"Unknown evidence source {source}")
-    item["source"] = source
-    # Retain editorial transcriptions only for the exact same observation.
-    digest = hashlib.sha256(json.dumps(record, sort_keys=True).encode()).hexdigest()
-    item["record_sha256"] = digest
-    if previous.get("record_sha256") == digest and previous.get("note"):
-        item["note"] = previous["note"]
-    return item
-
-
-def import_trial(trial, task, previous):
+def import_trial(trial, task):
     config = read(trial / "config.json")
     if config.get("extra_instruction_paths") or config.get("agent", {}).get("kwargs", {}).get("extra_instruction_paths"):
         raise ValueError(f"Expected instruction-only trial: {trial.name}")
@@ -97,8 +60,6 @@ def import_trial(trial, task, previous):
                                    "observations": list(dict.fromkeys(item.get("observations", [])))}
     folder = ROOT / "assets/agent-runs" / task["slug"] / trial.name
     folder.mkdir(parents=True, exist_ok=True)
-    if previous.get("trial") != trial.name:
-        previous = {}
     if result:
         runtime = result["agent_execution"]
         if runtime.get("finished_at") and runtime.get("started_at"):
@@ -123,7 +84,7 @@ def import_trial(trial, task, previous):
                 record = json.loads(line)
                 key = record["id"]
                 if key in needed:
-                    run["evidence"][key] = observation(record, verifier, folder, actions, previous.get("evidence", {}).get(key, {}))
+                    run["evidence"][key] = observation(record, verifier, folder)
         if run["evidence"].keys() != needed:
             raise ValueError(f"Missing cited observations for {trial.name}: {needed - run['evidence'].keys()}")
     return run
@@ -134,7 +95,6 @@ def main():
     parser.add_argument("jobs_dir", type=Path)
     args = parser.parse_args()
     source = ROOT / "instruction-runs.json"
-    previous = read(source) if source.exists() else {}
     runs = {}
     tasks = {t["slug"]: t for t in parse_tasks(SOURCE.read_text())}
     for name, slug in TASKS.items():
@@ -144,7 +104,7 @@ def main():
         if not jobs:
             raise ValueError(f"No trial found for {slug}")
         config, = jobs[-1].glob("*/config.json")
-        runs[slug] = import_trial(config.parent, tasks[slug], previous.get(slug, {}))
+        runs[slug] = import_trial(config.parent, tasks[slug])
     source.write_text(json.dumps(runs, ensure_ascii=False, indent=2) + "\n")
 
 

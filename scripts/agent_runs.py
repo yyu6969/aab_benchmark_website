@@ -169,12 +169,69 @@ def render_agent_runs(task, prefix, inline):
           </section>'''
 
 
-def evidence_entry(item, directory):
+EVIDENCE_TYPES = {"screenshots": "Screenshots", "tools": "Tool calls and results",
+                  "environment": "Live environment records"}
+
+
+def evidence_links(ids, evidence, number):
+    links = []
+    for kind, title in EVIDENCE_TYPES.items():
+        refs = [ref for ref in ids if evidence[ref]["kind"] == kind]
+        if refs:
+            links.append(f'<li><button type="button" class="evidence-link" aria-haspopup="dialog" '
+                         f'data-evidence-ids="{escape(" ".join(refs))}" data-criterion="{number}" '
+                         f'data-kind="{kind}">{title} ({len(refs)})</button></li>')
+    return '<ul class="run-citations">' + "".join(links) + '</ul>'
+
+
+def evidence_code(value):
+    text = value if isinstance(value, str) else json.dumps(value, indent=2, ensure_ascii=False)
+    # Character references preserve the recorded line endings in HTML as well as in the popup.
+    encoded = escape(text).replace("\r", "&#13;").replace("\n", "&#10;")
+    return '<pre tabindex="0"><code>' + encoded + '</code></pre>'
+
+
+def evidence_template(ref, item, directory):
     label = escape(item["label"])
-    if item.get("file"):
-        label = f'<a href="{directory}{file_url(item["file"])}">{label}</a>'
-    note = item.get("note")
-    return f'<li>{label}' + (f'<p>{escape(note)}</p>' if note else '') + '</li>'
+    blocks = []
+    if item.get("availability"):
+        blocks.append('<p>' + escape(item["availability"]) + '</p>')
+    elif item["kind"] == "screenshots":
+        src = directory + file_url(item["file"])
+        if item.get("cropped"):
+            label += " · cropped"
+        blocks.append(f'<a href="{src}" aria-label="Open {label} at full size"><img src="{src}" alt="{label}"></a>')
+    elif item["kind"] == "tools" and isinstance(item["record"], dict) and "tool_calls" in item["record"]:
+        step = item["record"]
+        blocks.append('<p class="evidence-meta">' + escape(" · ".join(filter(None, [step.get("timestamp"), step.get("status")]))) + '</p>')
+        for call in step["tool_calls"]:
+            blocks.append('<h5>Tool call · ' + escape(call["function_name"]) + '</h5>')
+            args = call["arguments"]
+            if isinstance(args, dict) and isinstance(args.get("command"), str):
+                blocks.append(evidence_code(args["command"]))
+                options = {k: v for k, v in args.items() if k != "command"}
+                if options:
+                    blocks.append(evidence_code(options))
+            else:
+                blocks.append(evidence_code(args))
+            blocks.append('<p class="evidence-meta">' + escape(call["tool_call_id"]) + '</p>')
+        for result in step["results"]:
+            blocks.append('<h5>Tool result</h5>' + evidence_code(result.get("text", result)))
+            if "call_id" in result:
+                blocks.append('<p class="evidence-meta">' + escape(result["call_id"]) + '</p>')
+    else:
+        blocks.append(evidence_code(item["record"]))
+    return (f'<template id="evidence-{escape(ref)}"><section class="evidence-record"><h4>{label}</h4>'
+            f'<p class="evidence-meta">{escape(ref)}</p>{"".join(blocks)}</section></template>')
+
+
+def evidence_viewer(evidence, directory):
+    if not evidence:
+        return ""
+    templates = "".join(evidence_template(ref, item, directory) for ref, item in evidence.items())
+    return (templates + '<dialog class="run-evidence" aria-labelledby="evidence-heading">'
+            '<div class="clip-toolbar"><h3 id="evidence-heading">Evidence</h3><form method="dialog">'
+            '<button class="button" autofocus>Close</button></form></div><div class="evidence-body"></div></dialog>')
 
 
 def render_instruction_run(task, prefix, inline):
@@ -203,15 +260,8 @@ def render_instruction_run(task, prefix, inline):
         reason = re.sub(r'\bobs_\w+\b', lambda m: evidence.get(m[0], {}).get("label", m[0]), reason)
         if not reason:
             reason = "Awaiting a verifier verdict." if not record else "No reason recorded."
-        entries = [evidence_entry(evidence[i], directory) for i in ids]
-        if entries:
-            refs = f'<ul class="run-citations">{entries[0]}</ul>'
-            if len(entries) > 1:
-                n = len(entries) - 1
-                refs += (f'<details><summary>{n} more source{"s" if n != 1 else ""}</summary>'
-                         f'<ul class="run-citations">{"".join(entries[1:])}</ul></details>')
-        else:
-            refs = "No evidence cited yet." if not record else "No evidence cited."
+        refs = evidence_links(ids, evidence, number) if ids else (
+            "No evidence cited yet." if not record else "No evidence cited.")
         value = "null" if score is None else str(score)
         rows.append(f'<tr data-rubric-id="{escape(key)}"><th scope="row"><a href="#rubric-{number}">{number:02}</a></th>'
                     f'<td>{inline(rubric["criterion"])}</td><td data-label="Score"><strong>{value}</strong></td>'
@@ -229,4 +279,5 @@ def render_instruction_run(task, prefix, inline):
             '<thead><tr><th scope="col">#</th><th scope="col">Outcome criterion</th><th scope="col">Score</th>'
             '<th scope="col">Reason</th><th scope="col">Evidence</th></tr></thead>'
             f'<tbody>{"".join(rows)}</tbody></table></div>{actions}'
-            f'{render_outputs(run.get("output_files", []), directory, "instruction-only")}</details></article>')
+            f'{render_outputs(run.get("output_files", []), directory, "instruction-only")}</details></article>'
+            + evidence_viewer(run["evidence"], directory))

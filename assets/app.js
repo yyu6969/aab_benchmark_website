@@ -268,6 +268,32 @@
     window.addEventListener('resize', positionExcerpt);
   }
 
+  const evidenceDialog = document.querySelector('dialog.run-evidence');
+  if (evidenceDialog) {
+    const body = evidenceDialog.querySelector('.evidence-body');
+    document.querySelector('.run-results').addEventListener('click', event => {
+      const trigger = event.target.closest('button[data-evidence-ids]');
+      if (!trigger) return;
+      const records = trigger.dataset.evidenceIds.split(' ').map(id =>
+        document.getElementById('evidence-' + id).content.cloneNode(true));
+      body.replaceChildren(...records);
+      evidenceDialog.querySelector('h3').textContent =
+        'Criterion ' + trigger.dataset.criterion + ' · ' + trigger.textContent;
+      evidenceDialog.showModal();
+      body.scrollTop = 0;
+    });
+    evidenceDialog.addEventListener('close', () => {
+      if (!evidenceDialog.open) body.replaceChildren();
+    });
+    evidenceDialog.addEventListener('click', event => {
+      if (event.target === evidenceDialog) {
+        const rect = evidenceDialog.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right ||
+            event.clientY < rect.top || event.clientY > rect.bottom) evidenceDialog.close();
+      }
+    });
+  }
+
   const clipPlayer = document.querySelector('dialog.clip-player');
   if (clipPlayer && typeof clipPlayer.showModal === 'function') {
     const video = clipPlayer.querySelector('video');
