@@ -181,11 +181,8 @@ def render_instruction_run(task, prefix, inline):
     run = task["instruction_run"]
     directory = prefix + f'assets/agent-runs/{task["slug"]}/{run["trial"]}/'
     summary = [("Solver", "Pi · " + run["model"] + " · " + run["thinking"])]
-    job_id = run["job"].rsplit("_", 1)[-1]
-    if job_id.isdecimal():
-        summary.append(("Slurm job", job_id))
     if run.get("judge_model"):
-        summary.append(("Verifier", "RewardKit + Codex · " + run["judge_model"] + " · " + run["judge_effort"]))
+        summary.append(("Verifier", "Codex · " + run["judge_model"] + " · " + run["judge_effort"]))
     if "runtime_seconds" in run:
         mins, sec = divmod(run["runtime_seconds"], 60)
         hours, mins = divmod(mins, 60)
@@ -225,11 +222,11 @@ def render_instruction_run(task, prefix, inline):
               f'{len(scored)} / {total} criteria scored · null = no score recorded')
     actions = (f'<p><a class="text-link" href="{directory}actions.jsonl" download>'
                f'Download recorded actions ({run["action_count"]:,})</a></p>') if "action_count" in run else ""
-    return (f'<article class="agent-run instruction-run" id="run-instruction-only"><h3>Task instruction only</h3>'
+    return (f'<article class="agent-run instruction-run" id="run-instruction-only"><details><summary><h3>Task instruction</h3></summary>'
             f'<dl class="run-metrics">{metrics}</dl><h4>{status}</h4>'
             '<div class="rubric-table-wrapper" role="region" aria-label="Agent run scores" tabindex="0">'
-            '<table class="rubric-table run-results"><caption class="sr-only">Instruction-only run results</caption>'
+            '<table class="rubric-table run-results"><caption class="sr-only">Task instruction run results</caption>'
             '<thead><tr><th scope="col">#</th><th scope="col">Outcome criterion</th><th scope="col">Score</th>'
             '<th scope="col">Reason</th><th scope="col">Evidence</th></tr></thead>'
             f'<tbody>{"".join(rows)}</tbody></table></div>{actions}'
-            f'{render_outputs(run.get("output_files", []), directory, "instruction-only")}</article>')
+            f'{render_outputs(run.get("output_files", []), directory, "instruction-only")}</details></article>')

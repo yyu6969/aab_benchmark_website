@@ -359,6 +359,8 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 }
 @media print{.source-popover,.clip-player{display:none!important}}
 
+.instruction-run > details > summary { cursor: pointer; }
+.instruction-run > details > summary h3 { display: inline; }
 .instruction-run h4 { margin: 1rem 0 .6rem; }
 .run-results { table-layout: fixed; }
 .run-results thead th:nth-child(1) { width: 4%; }
