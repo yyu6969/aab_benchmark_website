@@ -14,7 +14,7 @@ from pathlib import Path
 from agent_runs import load_agent_runs, render_agent_runs
 from rubric_clips import CONTEXT_SECONDS, clip_file, playback_interval
 from guidance import render_guidance
-from materials import build_material_page, download_url, file_size, load_materials
+from materials import build_material_page, download_url, file_size, load_materials, sha256
 
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "docs"
@@ -203,6 +203,7 @@ def icon(name: str, cls: str = "") -> str:
 
 
 def page(title: str, description: str, content: str, prefix: str = "./", home: bool = False) -> str:
+    app_version = sha256(ROOT / "assets/app.js")[:16]
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -218,7 +219,7 @@ def page(title: str, description: str, content: str, prefix: str = "./", home: b
   <link rel="preload" href="{prefix}assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{prefix}assets/styles.css">
   <script src="{prefix}assets/theme.js"></script>
-  <script src="{prefix}assets/app.js" defer></script>
+  <script src="{prefix}assets/app.js?v={app_version}" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>

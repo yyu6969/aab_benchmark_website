@@ -146,8 +146,11 @@ def check():
     pages = {path.resolve(): Page(path) for path in OUTPUT.rglob("*.html")}
     expected_pages = 11 + len(manifest["files"])
     assert len(pages) == expected_pages, f"Expected {expected_pages} HTML pages, found {len(pages)}"
+    app_version = sha256(OUTPUT / "assets/app.js")[:16]
     checked_links = 0
     for path, page in pages.items():
+        script_links = [urlsplit(link) for link in page.links if urlsplit(link).path.endswith("/assets/app.js")]
+        assert len(script_links) == 1 and script_links[0].query == f"v={app_version}", f"Stale app script URL in {path}"
         assert page.h1_count == 1, f"Expected one H1 in {path}"
         for link in page.links:
             url = urlsplit(link)
