@@ -18052,7 +18052,10 @@
           "source": "recorded_screenshot",
           "label": "Screenshot · step 487",
           "record_sha256": "5c58baa4d8d2bd36c3e44a1db3e3075e17535f2263082efed28aeb003da17a80",
-          "file": "pi_487_1.jpg"
+          "file": "pi_487_1.jpg",
+          "hidden_for_criteria": [
+            "outcome_59d23199f8cc333a9943"
+          ]
         },
         "obs_frame_pi_673_1": {
           "kind": "screenshots",

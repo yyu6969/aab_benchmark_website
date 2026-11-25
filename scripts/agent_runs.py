@@ -267,9 +267,10 @@ def render_instruction_run(task, prefix, inline):
         key, number = rubric["id"], rubric["number"]
         record = run["rows"].get(key, {})
         score = record.get("score")
-        ids = record.get("observations", [])
-        reason = record.get("reason", "")
         evidence = run["evidence"]
+        ids = [ref for ref in record.get("observations", [])
+               if key not in evidence[ref].get("hidden_for_criteria", [])]
+        reason = record.get("reason", "")
         # Keep the original verdict text in the JSON download. Render named references for readers.
         reason = re.sub(r'(?<=\.)\s+obs_\w+(?:,\s*obs_\w+)*\.$', '', reason)
         reason = re.sub(r'\bobs_\w+\b', lambda m: evidence.get(m[0], {}).get("label", m[0]), reason)

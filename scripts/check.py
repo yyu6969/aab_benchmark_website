@@ -218,6 +218,8 @@ def check():
                 expected_groups = {}
                 for ref in item.get("observations", []):
                     evidence = run["evidence"][ref]
+                    if rubric["id"] in evidence.get("hidden_for_criteria", []):
+                        continue
                     kind = evidence["kind"]
                     expected_groups.setdefault(kind, []).append(ref)
                     assert "evidence-" + ref in page.ids

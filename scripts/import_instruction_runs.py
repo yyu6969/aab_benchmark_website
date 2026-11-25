@@ -93,8 +93,9 @@ def import_trial(trial, task, previous=None):
         fresh = run["evidence"]
         if old.keys() == fresh.keys() and all(old[k]["record_sha256"] == item["record_sha256"] for k, item in fresh.items()):
             for k, item in fresh.items():
-                if "explanation" in old[k]:
-                    item["explanation"] = old[k]["explanation"]
+                for field in ("explanation", "hidden_for_criteria"):
+                    if field in old[k]:
+                        item[field] = old[k][field]
     # Each download is a snapshot of one specific published result.
     if previous and previous.get("archive") and all(
             previous.get(k) == run.get(k) for k in
