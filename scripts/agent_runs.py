@@ -222,7 +222,7 @@ def render_instruction_run(task, prefix, inline):
               f'{len(scored)} / {total} criteria scored · null = no score recorded')
     actions = (f'<p><a class="text-link" href="{directory}actions.jsonl" download>'
                f'Download recorded actions ({run["action_count"]:,})</a></p>') if "action_count" in run else ""
-    return (f'<article class="agent-run instruction-run" id="run-instruction-only"><details><summary><h3>Task instruction</h3></summary>'
+    return (f'<article class="agent-run instruction-run" id="run-instruction-only"><details><summary>Task instruction</summary>'
             f'<dl class="run-metrics">{metrics}</dl><h4>{status}</h4>'
             '<div class="rubric-table-wrapper" role="region" aria-label="Agent run scores" tabindex="0">'
             '<table class="rubric-table run-results"><caption class="sr-only">Task instruction run results</caption>'

@@ -269,7 +269,7 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 }
 
 .agent-run { margin: 28px 0 40px; min-width: 0; scroll-margin-top: 1rem; }
-.agent-run h3 { font: 500 1.25rem/1.4 var(--sans); }
+.agent-run h3, .instruction-run > details > summary { font: 500 1.25rem/1.4 var(--sans); }
 .run-metrics { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin: 1rem 0; }
 .run-metrics dt { color: var(--muted); font-size: .8125rem; }
 .run-metrics dd { margin: .25rem 0 0; font-variant-numeric: tabular-nums; }
@@ -360,7 +360,6 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 @media print{.source-popover,.clip-player{display:none!important}}
 
 .instruction-run > details > summary { cursor: pointer; }
-.instruction-run > details > summary h3 { display: inline; }
 .instruction-run h4 { margin: 1rem 0 .6rem; }
 .run-results { table-layout: fixed; }
 .run-results thead th:nth-child(1) { width: 4%; }
