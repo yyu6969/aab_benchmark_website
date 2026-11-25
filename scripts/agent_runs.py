@@ -244,10 +244,7 @@ def evidence_viewer(evidence, directory):
     if not evidence:
         return ""
     templates = "".join(evidence_template(ref, item, directory) for ref, item in evidence.items())
-    return (templates + '<template id="evidence-explanation"><section class="score-explanation">'
-            '<h4>Explanation</h4><p class="explained-criterion"></p>'
-            '<h5 class="explained-score"></h5><p class="explained-reason"></p><p class="evidence-origin"></p></section></template>'
-            '<dialog class="run-evidence" aria-labelledby="evidence-heading">'
+    return (templates + '<dialog class="run-evidence" aria-labelledby="evidence-heading">'
             '<div class="clip-toolbar"><h3 id="evidence-heading">Evidence</h3><form method="dialog">'
             '<button class="button" autofocus>Close</button></form></div><div class="evidence-body"></div></dialog>')
 

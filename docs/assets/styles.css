@@ -380,11 +380,10 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .run-evidence::backdrop { background: #101018b8; }
 .run-evidence .clip-toolbar { border-bottom: 1px solid var(--border); }
 .evidence-body { overflow: auto; overscroll-behavior: contain; padding: 1rem; }
-.score-explanation + .evidence-record, .evidence-record + .evidence-record { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
-.score-explanation h4, .evidence-record h4, .evidence-record h5 { margin: 0 0 .35rem; }
-.score-explanation h5, .evidence-record h5 { font: 600 .85rem var(--sans); margin-top: 1rem; }
-.score-explanation p, .record-explanation dd { margin: .2rem 0 .65rem; }
-.score-explanation .evidence-origin { color: var(--muted); font-size: .85rem; }
+.evidence-record + .evidence-record { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.evidence-record h4, .evidence-record h5 { margin: 0 0 .35rem; }
+.evidence-record h5 { font: 600 .85rem var(--sans); margin-top: 1rem; }
+.record-explanation dd { margin: .2rem 0 .65rem; }
 .inspection-example { margin: .8rem 0; }
 .inspection-example summary { color: var(--accent); cursor: pointer; }
 .inspection-example p { margin: .5rem 0; }

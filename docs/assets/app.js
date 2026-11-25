@@ -276,20 +276,6 @@
       if (!trigger) return;
       const records = trigger.dataset.evidenceIds.split(' ').map(id =>
         document.getElementById('evidence-' + id).content.cloneNode(true));
-      if (trigger.dataset.kind !== 'screenshots') {
-        const row = trigger.closest('tr');
-        const explanation = document.getElementById('evidence-explanation').content.cloneNode(true);
-        const score = row.querySelector('[data-label="Score"]').textContent.trim();
-        explanation.querySelector('.explained-criterion').textContent = row.cells[1].textContent;
-        explanation.querySelector('.explained-score').textContent =
-          score === '1' ? 'Why the verifier awarded 1 / 1' :
-          score === '0' ? 'Why the verifier awarded 0 / 1' : 'Why the score is unresolved';
-        explanation.querySelector('.explained-reason').textContent = row.querySelector('[data-label="Reason"]').textContent;
-        explanation.querySelector('.evidence-origin').textContent = trigger.dataset.kind === 'environment'
-          ? 'Codex requested the named checks below. Each ran a read-only inspection packaged with the task.'
-          : 'Pi ran the tools below during the task. Codex cited their recorded results when grading.';
-        records.unshift(explanation);
-      }
       body.replaceChildren(...records);
       evidenceDialog.querySelector('h3').textContent =
         'Criterion ' + trigger.dataset.criterion + ' · ' + trigger.textContent;
