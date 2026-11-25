@@ -1004,7 +1004,59 @@
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/drchrono_pi_20261124_203057_11269929.zip",
       "bytes": 451789,
       "sha256": "43de14916d28ad36e8eb4a36a16ae17de17425c3ff41dfe72566fd4685fe50ed"
-    }
+    },
+    "graded_rubrics": [
+      {
+        "number": 1,
+        "id": "outcome_f123d18d5278575917d3",
+        "criterion": "Gandalf Greyhame Wiz's encounter clinical note records gastrointestinal abdominal pain as present in the Review of Systems."
+      },
+      {
+        "number": 2,
+        "id": "outcome_0375f9f95947b3e2f72b",
+        "criterion": "Gandalf Greyhame Wiz's encounter clinical note documents right lower quadrant (RLQ) abdominal tenderness on the physical exam."
+      },
+      {
+        "number": 3,
+        "id": "outcome_049d7b76276babc466c0",
+        "criterion": "Gandalf Greyhame Wiz's encounter clinical note includes an abdominal-exam comment noting possible appendicitis."
+      },
+      {
+        "number": 4,
+        "id": "outcome_4b5778c19a6daae9b844",
+        "criterion": "The assessment in Gandalf Greyhame Wiz's encounter clinical note summarizes his presentation with abdominal pain."
+      },
+      {
+        "number": 5,
+        "id": "outcome_641eab3d048bb37d1324",
+        "criterion": "The assessment in Gandalf Greyhame Wiz's encounter clinical note documents possible appendicitis as the clinical impression."
+      },
+      {
+        "number": 6,
+        "id": "outcome_9830af1ead7fad8f473c",
+        "criterion": "A CBC with differential is ordered for Gandalf Greyhame Wiz's encounter"
+      },
+      {
+        "number": 7,
+        "id": "outcome_017ca97ec323077cf044",
+        "criterion": "Gandalf Greyhame Wiz's clinical note plan documents possible appendicitis"
+      },
+      {
+        "number": 8,
+        "id": "outcome_27cac5cf7fb6df36e418",
+        "criterion": "Gandalf Greyhame Wiz's clinical note plan documents consultation with Dr. Mayfield to determine whether an appendectomy is appropriate"
+      },
+      {
+        "number": 9,
+        "id": "outcome_a2ecfb7eaa1695ada96e",
+        "criterion": "Gandalf Greyhame Wiz's encounter clinical note is signed as the rendering provider."
+      },
+      {
+        "number": 10,
+        "id": "outcome_a46b5a43609bcfc5dac1",
+        "criterion": "Gandalf Greyhame Wiz's encounter clinical note is locked as the rendering provider."
+      }
+    ]
   },
   "update-class-gradebook": {
     "job": "google-classroom_pi_20261124_203830_11269930",
@@ -1416,7 +1468,79 @@
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/google-classroom_pi_20261124_203830_11269930.zip",
       "bytes": 689563,
       "sha256": "4a05d1c210a26d9800f2dc07a42b8307adffe8bd7b8613790ee7258883ea8de5"
-    }
+    },
+    "graded_rubrics": [
+      {
+        "number": 1,
+        "id": "outcome_71cfbecccbf035259a94",
+        "criterion": "The recorded assessment belongs to Casey Boehm's turned-in Week 1: Writing submission in Organize and Educate and uses its attached Writing Rubric."
+      },
+      {
+        "number": 2,
+        "id": "outcome_0361cdd163e26eaab559",
+        "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment records Sentence Writing as 2/2."
+      },
+      {
+        "number": 3,
+        "id": "outcome_08b9402e8a0b5e39266e",
+        "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment records Organization as 2/2."
+      },
+      {
+        "number": 4,
+        "id": "outcome_434df6b71bf66ece1f8d",
+        "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment records Punctuation as 2/2."
+      },
+      {
+        "number": 5,
+        "id": "outcome_a42403fa61a24e045fa4",
+        "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment records Spelling as 1/2."
+      },
+      {
+        "number": 6,
+        "id": "outcome_7fed5b368abaf1e1352c",
+        "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment totals 7/8."
+      },
+      {
+        "number": 7,
+        "id": "outcome_88657431136aecd38279",
+        "criterion": "The private comment \"Awesome work sounding out your words and using sight words!\" is posted on Casey Boehm's turned-in Week 1: Writing submission in Organize and Educate before the requested returns."
+      },
+      {
+        "number": 8,
+        "id": "outcome_0375f9f95947b3e2f72b",
+        "criterion": "Casey Boehm's originally turned-in Week 1: Writing record in Organize and Educate is returned with the exact private comment \"Super sentence writing!\"."
+      },
+      {
+        "number": 9,
+        "id": "outcome_049d7b76276babc466c0",
+        "criterion": "Casey Boehm's separate originally unsubmitted Week 1: Writing record in Organize and Educate is returned with the exact private comment \"Super sentence writing!\"."
+      },
+      {
+        "number": 10,
+        "id": "outcome_c976daa9bdfd785ca770",
+        "criterion": "Hannah Koenig's Week 1: Writing record in Organize and Educate is returned with the exact private comment \"Super sentence writing!\"."
+      },
+      {
+        "number": 11,
+        "id": "outcome_16367770e23cbc7442c0",
+        "criterion": "Caitie Instone's Week 1: Writing record in Organize and Educate remains unreturned"
+      },
+      {
+        "number": 12,
+        "id": "outcome_4b5778c19a6daae9b844",
+        "criterion": "The complete Organize and Educate class gradebook contains all course grades exported after the specified Week 1: Writing grading and three requested returns are complete."
+      },
+      {
+        "number": 13,
+        "id": "outcome_641eab3d048bb37d1324",
+        "criterion": "The annotated Organize and Educate gradebook is saved as a readable OpenDocument spreadsheet named Grades Organize and Educate 08-06-2020.ods in the required Documents folder."
+      },
+      {
+        "number": 14,
+        "id": "outcome_9830af1ead7fad8f473c",
+        "criterion": "Cell D7 of the Organize and Educate gradebook has a spreadsheet comment containing exactly \"Needs to make corrections\"."
+      }
+    ]
   },
   "survey-data-frequency-analyses": {
     "job": "spss_pi_20261124_214031_11269933",
@@ -1997,7 +2121,194 @@
       "bytes": 123699,
       "sha256": "13c1c5d267b80e70415ded2125084c84bf334f8d80f017b0300437c3a20df863",
       "snapshot_at": "2026-11-25 05:51 UTC"
-    }
+    },
+    "graded_rubrics": [
+      {
+        "number": 1,
+        "id": "outcome_8cb43c90cb2c4e5e86f8",
+        "criterion": "Justin Edit retains an editable main sequence whose source edits, graphics, cutaways, framing, and color treatments remain adjustable."
+      },
+      {
+        "number": 2,
+        "id": "outcome_7ab45f3b81373f1d39e5",
+        "criterion": "The initialized project's assigned name is exactly \"Justin Edit\"."
+      },
+      {
+        "number": 3,
+        "id": "outcome_97884da3da28b028da7e",
+        "criterion": "Justin Edit includes the complete Camera-Recording.mp4 as usable source media for review and follow-on edits."
+      },
+      {
+        "number": 4,
+        "id": "outcome_b8ac6ff3fd2f7f7f6ac1",
+        "criterion": "Justin Edit includes the complete Screen-Recording.mp4 as usable source media for review and follow-on edits."
+      },
+      {
+        "number": 5,
+        "id": "outcome_d85870a880012c1e2336",
+        "criterion": "Justin Edit includes the complete IMG_0133.MOV as usable waterfall source footage for review and follow-on edits."
+      },
+      {
+        "number": 6,
+        "id": "outcome_96c65b3434d993e6ce4b",
+        "criterion": "Justin Edit includes the complete IMG_0261.MOV as usable ocean source footage for review and follow-on edits."
+      },
+      {
+        "number": 7,
+        "id": "outcome_aad9033bfd31446528cf",
+        "criterion": "Justin Edit includes the complete Test 1.mov as usable source footage for review and follow-on edits."
+      },
+      {
+        "number": 8,
+        "id": "outcome_70ee0e0a4dbf5f2aa9e7",
+        "criterion": "Justin Edit includes the complete ES_San Pedro - Sugoi.mp3 as usable source audio for review and follow-on edits."
+      },
+      {
+        "number": 9,
+        "id": "outcome_057743dde5cbe9d3fafd",
+        "criterion": "Justin Edit's supplied footage and soundtrack are identifiable and organized within the project's media collection."
+      },
+      {
+        "number": 10,
+        "id": "outcome_71cfbecccbf035259a94",
+        "criterion": "The main presenter cut contains Camera-Recording.mp4 picture and corresponding source dialogue with synchronized source timing."
+      },
+      {
+        "number": 11,
+        "id": "outcome_0361cdd163e26eaab559",
+        "criterion": "The main sequence matches the primary camera footage at 1920×1080 and 30 frames per second."
+      },
+      {
+        "number": 12,
+        "id": "outcome_0375f9f95947b3e2f72b",
+        "criterion": "The completed Justin Edit project's main sequence is named exactly \"YouTube\", with that name saved in the delivered editable project."
+      },
+      {
+        "number": 13,
+        "id": "outcome_0620272a831951f07eb2",
+        "criterion": "The presenter cut has no unintended empty timeline intervals before or between its retained picture and dialogue segments."
+      },
+      {
+        "number": 14,
+        "id": "outcome_a4a65c38d61ff689062b",
+        "criterion": "The supplied waterfall footage appears as a visible cutaway over the presenter picture."
+      },
+      {
+        "number": 15,
+        "id": "outcome_39af0f27c2677e637b6c",
+        "criterion": "The supplied ocean footage appears as a visible cutaway over the presenter picture."
+      },
+      {
+        "number": 16,
+        "id": "outcome_d146d1057b4367cea557",
+        "criterion": "The waterfall cutaway in YouTube lasts approximately five seconds."
+      },
+      {
+        "number": 17,
+        "id": "outcome_85af92db3bc5cd05bc9b",
+        "criterion": "The waterfall cutaway in YouTube opens with a brief dip to white."
+      },
+      {
+        "number": 18,
+        "id": "outcome_9b50e22ca64f65ba5aa3",
+        "criterion": "Neither IMG_0133.MOV nor IMG_0261.MOV contributes source audio to YouTube."
+      },
+      {
+        "number": 19,
+        "id": "outcome_a302bc8b32469b133876",
+        "criterion": "Presenter dialogue remains present as a continuous audio layer beneath both cutaways and across their boundaries."
+      },
+      {
+        "number": 20,
+        "id": "outcome_525771b0e899cc2c2390",
+        "criterion": "The lower-third text reads exactly 'JUSTIN BROWN'"
+      },
+      {
+        "number": 21,
+        "id": "outcome_765279d2be2d0bfdaf69",
+        "criterion": "The Justin Brown name graphic appears over the picture near the opening of the YouTube sequence to introduce the speaker"
+      },
+      {
+        "number": 22,
+        "id": "outcome_11a2c54d1b86a9b60971",
+        "criterion": "All JUSTIN BROWN lettering in the opening lower-third uses Oswald Bold."
+      },
+      {
+        "number": 23,
+        "id": "outcome_6eb5e6879987718cf23b",
+        "criterion": "All JUSTIN BROWN lettering in the YouTube sequence's existing lower-third has a white text fill."
+      },
+      {
+        "number": 24,
+        "id": "outcome_6f33d2ef259850c7ae96",
+        "criterion": "A solid, fully opaque bright blue rectangle closely surrounds the JUSTIN BROWN lettering with a small visible margin on every side."
+      },
+      {
+        "number": 25,
+        "id": "outcome_fe439d796aed537a758d",
+        "criterion": "The JUSTIN BROWN graphic is horizontally centered in the lower third of the presenter image."
+      },
+      {
+        "number": 26,
+        "id": "outcome_f256185d2b99b56f4a2a",
+        "criterion": "The opening JUSTIN BROWN lower-third in the YouTube sequence remains visibly displayed beyond timeline 00:00:05:00."
+      },
+      {
+        "number": 27,
+        "id": "outcome_fdb8d2dfa9c3c8f95d3b",
+        "criterion": "A selected presenter segment has a modest punch-in that provides a tighter view."
+      },
+      {
+        "number": 28,
+        "id": "outcome_3317a67a00550c98ca7b",
+        "criterion": "All presenter segments other than the selected punch-in retain standard framing."
+      },
+      {
+        "number": 29,
+        "id": "outcome_90de750ca0e620b8eb32",
+        "criterion": "The YouTube sequence contains background music sourced from the supplied ES_San Pedro - Sugoi.mp3."
+      },
+      {
+        "number": 30,
+        "id": "outcome_5d53d5464c01836525c6",
+        "criterion": "Background music in YouTube begins with the opening picture and has no unintended internal timeline gaps."
+      },
+      {
+        "number": 31,
+        "id": "outcome_0642b17f2a1e476729e6",
+        "criterion": "The background music in YouTube ends cleanly at the existing edited video's actual final boundary."
+      },
+      {
+        "number": 32,
+        "id": "outcome_29c522ad58e98d7d898c",
+        "criterion": "Background music and presenter dialogue in YouTube remain separate audio elements, with the music independently editable."
+      },
+      {
+        "number": 33,
+        "id": "outcome_222202a1fe6c8b576f34",
+        "criterion": "The background soundtrack in YouTube is identified as Music through an application-supported label or role designation."
+      },
+      {
+        "number": 34,
+        "id": "outcome_efc71eb3b20561fbe68c",
+        "criterion": "Every presenter-dialogue clip in the editable sequence is identified as Dialogue."
+      },
+      {
+        "number": 35,
+        "id": "outcome_9650e4b6704824d4886a",
+        "criterion": "Edited presenter shots consistently have a warm, bright color treatment with enhanced contrast and vibrant saturation."
+      },
+      {
+        "number": 36,
+        "id": "outcome_64e0ebedd477cf89cf39",
+        "criterion": "The YouTube sequence in Justin Edit has “YouTube 2160p 4K Ultra HD” or an equivalent native configuration selected as its export target."
+      },
+      {
+        "number": 37,
+        "id": "outcome_71f856f0eba57261fc83",
+        "criterion": "The prepared export remains on hold pending approval."
+      }
+    ]
   },
   "plan-website-launch": {
     "job": "asana_pi_20261124_191013_11269928",
@@ -2931,7 +3242,189 @@
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/asana_pi_20261124_191013_11269928.zip",
       "bytes": 759453,
       "sha256": "79504a6228beb751d2379476dc3fb307bfccbfcdd4bc63c4f56350d9015ad4e4"
-    }
+    },
+    "graded_rubrics": [
+      {
+        "number": 1,
+        "id": "outcome_8cb43c90cb2c4e5e86f8",
+        "criterion": "A newly created team named Marketing exists in the MinorCo workspace"
+      },
+      {
+        "number": 2,
+        "id": "outcome_7ab45f3b81373f1d39e5",
+        "criterion": "The acting project manager is a member of the newly created Marketing team in MinorCo"
+      },
+      {
+        "number": 3,
+        "id": "outcome_6b48e3054c57294d084e",
+        "criterion": "Warwick Palm is a member of the newly created Marketing team in MinorCo"
+      },
+      {
+        "number": 4,
+        "id": "outcome_f123d18d5278575917d3",
+        "criterion": "A saved project named Apple - Website Design is set up."
+      },
+      {
+        "number": 5,
+        "id": "outcome_71cfbecccbf035259a94",
+        "criterion": "The 'Apple - Website Design' project belongs to the 'Asana Demo' workspace."
+      },
+      {
+        "number": 6,
+        "id": "outcome_0361cdd163e26eaab559",
+        "criterion": "Members of the 'Asana Demo' workspace can access 'Apple - Website Design'."
+      },
+      {
+        "number": 7,
+        "id": "outcome_0375f9f95947b3e2f72b",
+        "criterion": "The Apple - Website Design project plan includes substantive work for client onboarding."
+      },
+      {
+        "number": 8,
+        "id": "outcome_049d7b76276babc466c0",
+        "criterion": "The Apple - Website Design project plan includes substantive work for design and planning."
+      },
+      {
+        "number": 9,
+        "id": "outcome_c976daa9bdfd785ca770",
+        "criterion": "The Apple - Website Design project plan includes substantive production work."
+      },
+      {
+        "number": 10,
+        "id": "outcome_16367770e23cbc7442c0",
+        "criterion": "The Apple - Website Design project plan includes substantive work for go-live and final delivery."
+      },
+      {
+        "number": 11,
+        "id": "outcome_4b5778c19a6daae9b844",
+        "criterion": "The Apple - Website Design project plan identifies the approval and readiness milestones that matter for the launch."
+      },
+      {
+        "number": 12,
+        "id": "outcome_f0d67d55b73379fdf05a",
+        "criterion": "Multi-part deliverables in the Apple - Website Design project plan are clearly broken into meaningful subtasks."
+      },
+      {
+        "number": 13,
+        "id": "outcome_73182188a16f755b3cba",
+        "criterion": "Each task in the Apple - Website Design project plan has an identifiable owner across the team."
+      },
+      {
+        "number": 14,
+        "id": "outcome_fa0442fa016244c9b05b",
+        "criterion": "The Apple - Website Design project plan makes clear when its work is scheduled."
+      },
+      {
+        "number": 15,
+        "id": "outcome_dae9f6aa8056552483fd",
+        "criterion": "The Apple - Website Design project plan identifies which tasks or testing milestones depend on earlier handoffs."
+      },
+      {
+        "number": 16,
+        "id": "outcome_525771b0e899cc2c2390",
+        "criterion": "The Apple - Website Design project overview states that the project's scope is designing a new website for Apple."
+      },
+      {
+        "number": 17,
+        "id": "outcome_765279d2be2d0bfdaf69",
+        "criterion": "The Apple - Website Design project overview states that the website must be live before Christmas."
+      },
+      {
+        "number": 18,
+        "id": "outcome_fa051b44f24fe0177e14",
+        "criterion": "The Apple - Website Design project overview identifies increasing conversion rates as a business goal."
+      },
+      {
+        "number": 19,
+        "id": "outcome_a5248d0b1436725b08dc",
+        "criterion": "The Apple - Website Design project overview identifies helping sell more iPhones this holiday season as a business goal."
+      },
+      {
+        "number": 20,
+        "id": "outcome_816b58e31be0b0cde52a",
+        "criterion": "Warwick Palm has editing access to Apple - Website Design in the Asana Demo workspace."
+      },
+      {
+        "number": 21,
+        "id": "outcome_0d4bcb53687d6fe21b9f",
+        "criterion": "Lindsay Amoroso has editing access to Apple - Website Design in the Asana Demo workspace."
+      },
+      {
+        "number": 22,
+        "id": "outcome_56f9bf1ac56bf0e0e1a9",
+        "criterion": "A status update for Apple - Website Design is published to its team in the Asana Demo workspace."
+      },
+      {
+        "number": 23,
+        "id": "outcome_6aff0ce93c8f8404a8db",
+        "criterion": "The Apple - Website Design status update explicitly reports the project as on-track."
+      },
+      {
+        "number": 24,
+        "id": "outcome_078db95fff663f48c6e0",
+        "criterion": "The Apple - Website Design status update communicates that the project is progressing well."
+      },
+      {
+        "number": 25,
+        "id": "outcome_19f5e31f0bd91a32738f",
+        "criterion": "The Apple - Website Design status update communicates an expected finish before Christmas."
+      },
+      {
+        "number": 26,
+        "id": "outcome_f7d1d43d0479bee5a8eb",
+        "criterion": "The Apple - Website Design status update summarizes all project-plan tasks still incomplete at publication."
+      },
+      {
+        "number": 27,
+        "id": "outcome_e6a80b155dbcf3c35bb5",
+        "criterion": "The Apple - Website Design status update organizes its remaining-work summary by assignee."
+      },
+      {
+        "number": 28,
+        "id": "outcome_3317a67a00550c98ca7b",
+        "criterion": "A published comment by the acting project manager in the discussion of the Apple - Website Design production milestone for completed page designs asks Warwick Palm to review the designs completed by that manager."
+      },
+      {
+        "number": 29,
+        "id": "outcome_5d3e1e0c5aa7abe1e7fa",
+        "criterion": "The production milestone for completed page designs in Apple - Website Design is open."
+      },
+      {
+        "number": 30,
+        "id": "outcome_4aeb00efdf5255e6ff07",
+        "criterion": "All newly assigned Apple - Website Design commitments belonging to the acting project manager are in Upcoming in that manager's Asana Demo personal task list."
+      },
+      {
+        "number": 31,
+        "id": "outcome_d2b14acd0cbd73af7ff7",
+        "criterion": "The acting project manager's Asana Demo personal task list places Planning session with client in Upcoming and contains no tasks in Recently assigned."
+      },
+      {
+        "number": 32,
+        "id": "outcome_76d522e2d38e87ed462f",
+        "criterion": "The acting project manager's Asana Demo personal task list is organized by section."
+      },
+      {
+        "number": 33,
+        "id": "outcome_59d23199f8cc333a9943",
+        "criterion": "The acting project manager's thumbs-up (👍) reaction is attached to Warwick Palm's most recent comment on 'Troubleshoot: Pipedrive Document sync settings' in MinorCo."
+      },
+      {
+        "number": 34,
+        "id": "outcome_95d759b2697367ca3d2a",
+        "criterion": "The message expresses appreciation for Kayla Campos's completion of 'Session #3 Team Follow Up'."
+      },
+      {
+        "number": 35,
+        "id": "outcome_f0a4501fd96e2bc57e55",
+        "criterion": "The acting project manager's message is published in the discussion of 'Session #3 Team Follow Up' in MinorCo."
+      },
+      {
+        "number": 36,
+        "id": "outcome_f935116ccd634186b9db",
+        "criterion": "The MinorCo notification for Warwick Palm's latest comment on Troubleshoot: Pipedrive Document sync settings is archived after the acting project manager's thumbs-up reaction is present on that comment."
+      }
+    ]
   },
   "sales-leads-revenue-dashboards": {
     "job": "salesforce_pi_20261124_212231_11269932",

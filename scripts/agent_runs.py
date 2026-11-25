@@ -24,7 +24,10 @@ def load_agent_runs(tasks, root, plain_text):
         slug = task["slug"]
         if slug in instruction_runs:
             run = instruction_runs[slug]
-            ids = {r["id"] for r in task["rubrics"]}
+            graded = run.get("graded_rubrics", task["rubrics"])
+            ids = {r["id"] for r in graded}
+            if len(ids) != len(graded) or [r["number"] for r in graded] != list(range(1, len(graded) + 1)):
+                raise ValueError(f"Invalid criterion order or repeated criterion in trial for {slug}")
             if run["rows"].keys() - ids or (run["status"] == "Graded" and run["rows"].keys() != ids):
                 raise ValueError(f"Instruction-only verdicts differ from the rubric for {slug}")
             task["instruction_run"] = run
@@ -263,7 +266,8 @@ def render_instruction_run(task, prefix, inline):
         summary.append(("Total tokens", f"{run['total_tokens']:,}"))
     metrics = "".join(f"<div><dt>{key}</dt><dd>{escape(value)}</dd></div>" for key, value in summary)
     rows = []
-    for rubric in task["rubrics"]:
+    historical = "graded_rubrics" in run
+    for rubric in run.get("graded_rubrics", task["rubrics"]):
         key, number = rubric["id"], rubric["number"]
         record = run["rows"].get(key, {})
         score = record.get("score")
@@ -279,7 +283,8 @@ def render_instruction_run(task, prefix, inline):
         refs = evidence_links(ids, evidence, number) if ids else (
             "No evidence cited yet." if not record else "No evidence cited.")
         value = "null" if score is None else str(score)
-        rows.append(f'<tr data-rubric-id="{escape(key)}"><th scope="row"><a href="#rubric-{number}">{number:02}</a></th>'
+        reference = f'{number:02}' if historical else f'<a href="#rubric-{number}">{number:02}</a>'
+        rows.append(f'<tr data-rubric-id="{escape(key)}"><th scope="row">{reference}</th>'
                     f'<td>{inline(rubric["criterion"])}</td><td data-label="Score"><strong>{value}</strong></td>'
                     f'<td data-label="Reason">{escape(reason)}</td><td data-label="Evidence">{refs}</td></tr>')
     scored = [r["score"] for r in run["rows"].values() if r["score"] is not None]
@@ -293,7 +298,8 @@ def render_instruction_run(task, prefix, inline):
         note = f"<br>Snapshot taken {escape(captured)}." if captured else ""
         archive_link = (f'<p><a class="text-link" href="{escape(archive["url"], quote=True)}">'
                         f'{label} (ZIP · {file_size(archive["bytes"])})</a>{note}</p>')
-    return (f'<article class="agent-run instruction-run" id="run-instruction-only"><details><summary>Task instruction</summary>'
+    heading = "Task instruction · earlier rubric" if historical else "Task instruction"
+    return (f'<article class="agent-run instruction-run" id="run-instruction-only"><details><summary>{heading}</summary>'
             f'<dl class="run-metrics">{metrics}</dl>{archive_link}<h4>{status}</h4>'
             '<div class="rubric-table-wrapper" role="region" aria-label="Agent run scores" tabindex="0">'
             '<table class="rubric-table run-results"><caption class="sr-only">Task instruction run results</caption>'
