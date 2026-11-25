@@ -100,6 +100,8 @@ def observation(record, verifier, folder):
         label += f' · page {record["page"]} of {record["pages"]}'
     item = {"kind": kind, "source": source, "label": label,
             "record_sha256": hashlib.sha256(json.dumps(record, sort_keys=True).encode()).hexdigest()}
+    if kind == "environment":
+        item["inspection"] = {"view": record["view"], "page": record["page"]}
     if not record["ok"]:
         item["availability"] = "The inspection was unsuccessful."
     elif kind == "screenshots":

@@ -26,7 +26,7 @@ def action_records(trajectory):
             yield action
 
 
-def import_trial(trial, task):
+def import_trial(trial, task, previous=None):
     config = read(trial / "config.json")
     if config.get("extra_instruction_paths") or config.get("agent", {}).get("kwargs", {}).get("extra_instruction_paths"):
         raise ValueError(f"Expected instruction-only trial: {trial.name}")
@@ -87,6 +87,14 @@ def import_trial(trial, task):
                     run["evidence"][key] = observation(record, verifier, folder)
         if run["evidence"].keys() != needed:
             raise ValueError(f"Missing cited observations for {trial.name}: {needed - run['evidence'].keys()}")
+    # Some explanations compare several observations. Keep them only for the same graded evidence.
+    if previous and all(previous.get(k) == run[k] for k in ("trial", "instruction_sha256", "rows")):
+        old = previous["evidence"]
+        fresh = run["evidence"]
+        if old.keys() == fresh.keys() and all(old[k]["record_sha256"] == item["record_sha256"] for k, item in fresh.items()):
+            for k, item in fresh.items():
+                if "explanation" in old[k]:
+                    item["explanation"] = old[k]["explanation"]
     return run
 
 
@@ -95,6 +103,7 @@ def main():
     parser.add_argument("jobs_dir", type=Path)
     args = parser.parse_args()
     source = ROOT / "instruction-runs.json"
+    previous = read(source) if source.exists() else {}
     runs = {}
     tasks = {t["slug"]: t for t in parse_tasks(SOURCE.read_text())}
     for name, slug in TASKS.items():
@@ -104,7 +113,7 @@ def main():
         if not jobs:
             raise ValueError(f"No trial found for {slug}")
         config, = jobs[-1].glob("*/config.json")
-        runs[slug] = import_trial(config.parent, tasks[slug])
+        runs[slug] = import_trial(config.parent, tasks[slug], previous.get(slug))
     source.write_text(json.dumps(runs, ensure_ascii=False, indent=2) + "\n")
 
 

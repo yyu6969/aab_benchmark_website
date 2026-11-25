@@ -194,6 +194,20 @@ def evidence_code(value):
 def evidence_template(ref, item, directory):
     label = escape(item["label"])
     blocks = []
+    if item.get("inspection"):
+        check = item["inspection"]
+        args = json.dumps(check["view"])
+        if check["page"] != 1:
+            args += f', page={check["page"]}'
+        blocks.append('<p class="inspection-call">Verifier check <code>inspect_view(' + escape(args) + ')</code></p>')
+    if item.get("explanation"):
+        explanation = item["explanation"]
+        blocks.append('<dl class="record-explanation"><dt>Purpose</dt><dd>' + escape(explanation["purpose"])
+                      + '</dd><dt>Observed result</dt><dd>' + escape(explanation["result"]) + '</dd></dl>')
+        if example := explanation.get("example"):
+            blocks.append('<details class="inspection-example"><summary>' + escape(example["title"])
+                          + '</summary><p>' + escape(example["instruction"]) + '</p>' + evidence_code(example["code"])
+                          + '<h5>Example output</h5>' + evidence_code(example["output"]) + '</details>')
     if item.get("availability"):
         blocks.append('<p>' + escape(item["availability"]) + '</p>')
     elif item["kind"] == "screenshots":
@@ -220,6 +234,7 @@ def evidence_template(ref, item, directory):
             if "call_id" in result:
                 blocks.append('<p class="evidence-meta">' + escape(result["call_id"]) + '</p>')
     else:
+        blocks.append('<h5>Original inspection result</h5>' if item["kind"] == "environment" else '<h5>Original tool record</h5>')
         blocks.append(evidence_code(item["record"]))
     return (f'<template id="evidence-{escape(ref)}"><section class="evidence-record"><h4>{label}</h4>'
             f'<p class="evidence-meta">{escape(ref)}</p>{"".join(blocks)}</section></template>')
@@ -229,7 +244,10 @@ def evidence_viewer(evidence, directory):
     if not evidence:
         return ""
     templates = "".join(evidence_template(ref, item, directory) for ref, item in evidence.items())
-    return (templates + '<dialog class="run-evidence" aria-labelledby="evidence-heading">'
+    return (templates + '<template id="evidence-explanation"><section class="score-explanation">'
+            '<h4>Explanation</h4><p class="explained-criterion"></p>'
+            '<h5 class="explained-score"></h5><p class="explained-reason"></p><p class="evidence-origin"></p></section></template>'
+            '<dialog class="run-evidence" aria-labelledby="evidence-heading">'
             '<div class="clip-toolbar"><h3 id="evidence-heading">Evidence</h3><form method="dialog">'
             '<button class="button" autofocus>Close</button></form></div><div class="evidence-body"></div></dialog>')
 

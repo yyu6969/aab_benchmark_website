@@ -380,12 +380,21 @@ code{font-family:var(--mono);font-size:.85em;border:1px solid var(--border);padd
 .run-evidence::backdrop { background: #101018b8; }
 .run-evidence .clip-toolbar { border-bottom: 1px solid var(--border); }
 .evidence-body { overflow: auto; overscroll-behavior: contain; padding: 1rem; }
-.evidence-record + .evidence-record { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
-.evidence-record h4, .evidence-record h5 { margin: 0 0 .35rem; }
-.evidence-record h5 { font: 600 .85rem var(--sans); margin-top: 1rem; }
+.score-explanation + .evidence-record, .evidence-record + .evidence-record { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.score-explanation h4, .evidence-record h4, .evidence-record h5 { margin: 0 0 .35rem; }
+.score-explanation h5, .evidence-record h5 { font: 600 .85rem var(--sans); margin-top: 1rem; }
+.score-explanation p, .record-explanation dd { margin: .2rem 0 .65rem; }
+.score-explanation .evidence-origin { color: var(--muted); font-size: .85rem; }
+.inspection-example { margin: .8rem 0; }
+.inspection-example summary { color: var(--accent); cursor: pointer; }
+.inspection-example p { margin: .5rem 0; }
+.record-explanation dt { font-weight: 600; }
+.record-explanation { margin: .8rem 0; }
+.inspection-call { margin: .45rem 0; color: var(--muted); font-size: .85rem; }
+.inspection-call code { color: var(--fg); font: .82rem var(--mono); overflow-wrap: anywhere; }
 .evidence-meta { color: var(--muted); font: .75rem/1.55 var(--mono); overflow-wrap: anywhere; }
 .evidence-record img { display: block; max-width: 100%; height: auto; margin: .6rem auto 0; }
-.evidence-record pre { margin: .55rem 0; padding: .75rem; border: 1px solid var(--border); background: var(--subtle); font: .82rem/1.55 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.evidence-record pre { max-height: 28rem; overflow: auto; margin: .55rem 0; padding: .75rem; border: 1px solid var(--border); background: var(--subtle); font: .82rem/1.55 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
 .evidence-record code { font: inherit; }
 .earlier-runs { margin-top: 1.5rem; }
 @media(max-width:700px) {
