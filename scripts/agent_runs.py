@@ -218,7 +218,7 @@ def render_instruction_run(task, prefix, inline):
                     f'<td data-label="Reason">{escape(reason)}</td><td data-label="Evidence">{refs}</td></tr>')
     scored = [r["score"] for r in run["rows"].values() if r["score"] is not None]
     total = len(rows)
-    status = (f'{sum(scored)} / {total} criteria met' if len(scored) == total else
+    status = (f'{sum(scored)} / {total}' if len(scored) == total else
               f'{len(scored)} / {total} criteria scored · null = no score recorded')
     actions = (f'<p><a class="text-link" href="{directory}actions.jsonl" download>'
                f'Download recorded actions ({run["action_count"]:,})</a></p>') if "action_count" in run else ""
