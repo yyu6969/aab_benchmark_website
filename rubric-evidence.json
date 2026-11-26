@@ -23934,8 +23934,8 @@
     },
     {
       "id": "outcome_0f43c4f2812dc0a83271",
-      "criterion_sha256": "c577a9b5a1acb35a812282add3094c9a5352509ff71e763d98ba4fcc66ead70e",
-      "description": "Full credit requires a genuine editable dimension referencing the leaf span and actually measuring 0.90 m, organized on a dedicated dimensions layer, with entity-level annotative behavior and a legible 1:16 representation on details. Partial credit applies when a genuine dimension references the correct span but meter reporting, layer organization, annotative behavior, or its 1:16 representation is incomplete. No credit if the dimension is absent, references an unrelated span, or consists only of a substituted numeric label. Equivalent orientation, formatting, layer names, annotation mechanisms, and unambiguous placement are acceptable. Credit completed parts when another required part is blocked; reporting a blocker does not establish missing properties.",
+      "criterion_sha256": "a159c154a6154f1fe821b3bcdb5a114b16f0bedb33ce200ec0b7b1221a117b5e",
+      "description": "Full credit requires a genuine editable dimension referencing the leaf span and actually measuring 0.90 m, with entity-level annotative behavior and a legible 1:16 representation on details. Partial credit applies when a genuine dimension references the correct span but meter reporting, annotative behavior, or its 1:16 representation is incomplete. No credit if the dimension is absent, references an unrelated span, or consists only of a substituted numeric label. Equivalent orientation, formatting, annotation mechanisms, and unambiguous placement are acceptable. Credit completed parts when another required part is blocked; reporting a blocker does not establish missing properties.",
       "source": "floor plan exercise reference.pdf",
       "passage": "The lower-center single-door graphic shows a green vertical dimension marked 0,9 alongside the open leaf and its quarter-circle swing.",
       "locator": "page 2",
@@ -23978,17 +23978,6 @@
             {
               "locator": "Line 1",
               "passage": "Continue `/home/ga/Documents/CAD/floor plan exercise.dwg` in meters, following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
               "scope": [
                 "criterion",
                 "description"
@@ -24091,8 +24080,8 @@
     },
     {
       "id": "outcome_65e016949b0f2c67e8ce",
-      "criterion_sha256": "dcb247bbd43dee28d1070853ffe0c37d012dd003c38f0ae20ead10bdc3f35b21",
-      "description": "Full credit requires a genuine editable dimension referencing the clear opening and actually measuring 0.90 m, organized on a dedicated dimensions layer, with entity-level annotative behavior and a legible 1:16 representation on details. Partial credit applies when a genuine dimension references the correct opening but meter reporting, layer organization, annotative behavior, or its 1:16 representation is incomplete. No credit if the dimension is absent, references an unrelated span, or consists only of a substituted numeric label. Equivalent orientation, formatting, layer names, annotation mechanisms, and unambiguous placement are acceptable. Credit completed parts when another required part is blocked; reporting a blocker does not establish missing properties.",
+      "criterion_sha256": "d039e0c2b5310729bc63fd786d477dd0b478d2049d4f60583c8b66bdb593fad3",
+      "description": "Full credit requires a genuine editable dimension referencing the clear opening and actually measuring 0.90 m, with entity-level annotative behavior and a legible 1:16 representation on details. Partial credit applies when a genuine dimension references the correct opening but meter reporting, annotative behavior, or its 1:16 representation is incomplete. No credit if the dimension is absent, references an unrelated span, or consists only of a substituted numeric label. Equivalent orientation, formatting, annotation mechanisms, and unambiguous placement are acceptable. Credit completed parts when another required part is blocked; reporting a blocker does not establish missing properties.",
       "source": "floor plan exercise reference.pdf",
       "passage": "The lower-center single-door graphic shows a green horizontal dimension marked 0,9 across the opening between the jambs.",
       "locator": "page 2",
@@ -24135,17 +24124,6 @@
             {
               "locator": "Line 1",
               "passage": "Continue `/home/ga/Documents/CAD/floor plan exercise.dwg` in meters, following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
               "scope": [
                 "criterion",
                 "description"
@@ -24248,8 +24226,8 @@
     },
     {
       "id": "outcome_982c5ce419777ea96d76",
-      "criterion_sha256": "832aeb4af943aea9b961f6d866c1b042051a98d78b3ddced71073fb8b86f76a0",
-      "description": "Full credit requires a genuine dimension referencing the jamb depth, an actual measurement of 0.10 m rather than substituted numeric text, meter reporting, dedicated dimensions-layer membership, entity-level annotative behavior and a legible 1:16 representation on details. Either jamb and equivalent dimension types, formatting and unambiguous placement are acceptable. Partial credit applies when a genuine dimension references the correct depth but required reporting, layer, annotation or view-representation properties are incomplete. No credit applies if the dimension is absent, unrelated or only a numeric label. Record established geometry or environment blockers separately and retain credit for completed parts; blocker reporting alone does not complete a dimension.",
+      "criterion_sha256": "22b1f6e83f088bde20ae3058175f3f9a24e314a6f71d953d226f7e0b72395b52",
+      "description": "Full credit requires a genuine dimension referencing the jamb depth, an actual measurement of 0.10 m rather than substituted numeric text, meter reporting, entity-level annotative behavior and a legible 1:16 representation on details. Either jamb and equivalent dimension types, formatting and unambiguous placement are acceptable. Partial credit applies when a genuine dimension references the correct depth but required reporting, annotation or view-representation properties are incomplete. No credit applies if the dimension is absent, unrelated or only a numeric label. Record established geometry or environment blockers separately and retain credit for completed parts; blocker reporting alone does not complete a dimension.",
       "source": "floor plan exercise reference.pdf",
       "passage": "The lower-center single-door graphic shows a vertical 0.1 dimension marking jamb depth alongside the jamb.",
       "locator": "page 2",
@@ -24302,17 +24280,6 @@
             {
               "locator": "Line 3",
               "passage": "dimension the exterior plan and the sheeted details in meters",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
               "scope": [
                 "criterion",
                 "description"
@@ -24414,8 +24381,8 @@
     },
     {
       "id": "outcome_1f6374a87a1d49920616",
-      "criterion_sha256": "744ba257f5bfb97d85bfd5d1e1923970b54c8679f7a756e43aefcea14509efc4",
-      "description": "Full credit requires a genuine dimension referencing the jamb width, an actual measurement of 0.05 m rather than substituted numeric text, meter reporting, dedicated dimensions-layer membership, entity-level annotative behavior and a legible 1:16 representation on details. Either jamb and equivalent dimension types, formatting and unambiguous placement are acceptable. Partial credit applies when a genuine dimension references the correct width but required reporting, layer, annotation or view-representation properties are incomplete. No credit applies if the dimension is absent, unrelated or only a numeric label. Record established geometry or environment blockers separately and retain credit for completed parts; blocker reporting alone does not complete a dimension.",
+      "criterion_sha256": "766db488cfcb74c205162c6a41c9677120c6407b365873ffbade75c1370eaa05",
+      "description": "Full credit requires a genuine dimension referencing the jamb width, an actual measurement of 0.05 m rather than substituted numeric text, meter reporting, entity-level annotative behavior and a legible 1:16 representation on details. Either jamb and equivalent dimension types, formatting and unambiguous placement are acceptable. Partial credit applies when a genuine dimension references the correct width but required reporting, annotation or view-representation properties are incomplete. No credit applies if the dimension is absent, unrelated or only a numeric label. Record established geometry or environment blockers separately and retain credit for completed parts; blocker reporting alone does not complete a dimension.",
       "source": "floor plan exercise reference.pdf",
       "passage": "The lower-center single-door graphic shows a horizontal 0.05 dimension beneath the jamb marking its width.",
       "locator": "page 2",
@@ -24468,17 +24435,6 @@
             {
               "locator": "Line 3",
               "passage": "dimension the exterior plan and the sheeted details in meters",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
               "scope": [
                 "criterion",
                 "description"
@@ -25417,7 +25373,7 @@
     {
       "id": "outcome_f7beb69b5b82475b14be",
       "criterion_sha256": "84fb0ab9808e746b4f7980e9a9d94950899120e1a3fcda725f60170ef6453004",
-      "description": "Full credit requires genuine dimensions on a dedicated dimensions layer that completely and unambiguously document exterior openings, offsets and overall extents in the stated regions, report meters correctly, and exhibit annotative behavior appropriate to the 1:200 view. Equivalent complete chain, baseline, ordinate or other dimensioning schemes, formatting and clear placement qualify. Partial credit applies to a correctly dimensioned subset or incomplete layer, unit, annotation or presentation properties. No credit applies when relevant dimensions are absent, unrelated or replaced solely by numeric labels. Completed portions retain credit; blocker reports do not substitute for missing dimensions.",
+      "description": "Full credit requires genuine dimensions that completely and unambiguously document exterior openings, offsets and overall extents in the stated regions, report meters correctly, and exhibit annotative behavior appropriate to the 1:200 view. Equivalent complete chain, baseline, ordinate or other dimensioning schemes, formatting and clear placement qualify. Partial credit applies to a correctly dimensioned subset or incomplete unit, annotation or presentation properties. No credit applies when relevant dimensions are absent, unrelated or replaced solely by numeric labels. Completed portions retain credit; blocker reports do not substitute for missing dimensions.",
       "source": "floor plan exercise reference.pdf",
       "passage": "Green exterior dimension chains extend above the dining projection, kitchen and unit 1, along the sloping west and vertical east façades, below the southern wings and around the stepped central entrance, with overall spans outside the shorter opening and offset chains.",
       "locator": "page 1",
@@ -25484,16 +25440,6 @@
               "passage": "using annotative dimensions scaled for their respective views.",
               "scope": [
                 "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
-              "scope": [
                 "description"
               ],
               "provenance": [
@@ -25632,7 +25578,7 @@
     {
       "id": "outcome_76a41fda3326f60971b6",
       "criterion_sha256": "a26e10d848bc2ae255c1abafd231919571597725b2e832967b7a75297b95ea3d",
-      "description": "Full credit requires genuine dimensions on a dedicated dimensions layer, correct meter reporting, effective annotative behavior and legible 1:10 representations. The dimensioning scheme must establish the reference geometry: 0.90 m span, 0.08 m profile depth, 0.04 m half-depth, 0.05 m end-frame width, 0.05 m upper offset and 0.30 m wall depth. Equivalent complete schemes may establish these sizes directly or unambiguously through related dimensions. Equivalent formatting, dimension types and clear placement qualify. Partial credit applies to incomplete geometric documentation or incomplete required unit, layer, annotation or presentation properties. No credit applies when relevant dimensions are absent, unrelated or replaced solely by numeric labels. A current annotation-scale setting, a style name or a blocker report alone does not establish completed detail dimensions.",
+      "description": "Full credit requires genuine dimensions, correct meter reporting, effective annotative behavior and legible 1:10 representations. The dimensioning scheme must establish the reference geometry: 0.90 m span, 0.08 m profile depth, 0.04 m half-depth, 0.05 m end-frame width, 0.05 m upper offset and 0.30 m wall depth. Equivalent complete schemes may establish these sizes directly or unambiguously through related dimensions. Equivalent formatting, dimension types and clear placement qualify. Partial credit applies to incomplete geometric documentation or incomplete required unit, annotation or presentation properties. No credit applies when relevant dimensions are absent, unrelated or replaced solely by numeric labels. A current annotation-scale setting, a style name or a blocker report alone does not establish completed detail dimensions.",
       "source": "floor plan exercise reference.pdf",
       "passage": "The lower-left window/profile graphic marks the 0.9 span, 0.08 profile depth, 0.04 half-depth, 0.05 end-frame width, 0.05 upper offset and 0.3 wall depth with green dimensions.",
       "locator": "page 2",
@@ -25688,16 +25634,6 @@
               "passage": "Continue `/home/ga/Documents/CAD/floor plan exercise.dwg` in meters, following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
               "scope": [
                 "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
-              "scope": [
                 "description"
               ],
               "provenance": [
