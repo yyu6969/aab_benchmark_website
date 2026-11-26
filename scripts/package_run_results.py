@@ -93,8 +93,8 @@ def write_public_zip(snapshot, target, run, slug):
         ag = trial + "/agent/"
         vr = trial + "/verifier/"
         runtime = read(ag + "pi_runtime.json")
-        save(ag + "pi_runtime.json", js(fields(runtime, "pi_version node_version image provider model "
-                                               "requested_thinking_level tools image_sha256 extension_sha256")))
+        save(ag + "pi_runtime.json", js(public_metadata(fields(runtime, "pi_version node_version image provider model "
+                                                               "requested_thinking_level tools image_sha256 extension_sha256"))))
         reviewed = {}
         observations = []
         for obs_id, original in run["evidence"].items():

@@ -6,6 +6,7 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from zipfile import ZipFile
 
 from agent_runs import CODEX_SCORES, EVIDENCE_TYPES, HARBOR_SCORES, load_agent_runs
 from build import OUTPUT, ROOT, SOURCE, load_tutorials, parse_tasks, plain_text
@@ -202,6 +203,22 @@ def check():
         assert "#agent-run" in page.links
         if "instruction_run" in task:
             run = task["instruction_run"]
+            if review := run.get("reverification"):
+                folder = Path("assets/agent-runs") / task["slug"] / run["trial"]
+                with ZipFile(OUTPUT / folder / review["results"]) as bundle:
+                    verification = json.loads(bundle.read("verification.json"))
+                    assert verification["original_trial"] == run["trial"]
+                    assert verification["checklist_sha256"] == review["checklist_sha256"]
+                    assert verification["observations"] == run["evidence"]
+                    assert review["changed"] + review["carried"] == len(task["rubrics"])
+                    assert review["carried"] == sum(r["origin"] == "carried_forward" for r in run["rows"].values())
+                    assert len(verification["criteria"]) == len(task["rubrics"])
+                    for item, rubric in zip(verification["criteria"], task["rubrics"]):
+                        assert item["criterion"] == plain_text(rubric["criterion"])
+                        assert (item["id"], item["number"]) == (rubric["id"], rubric["number"])
+                        assert all(item[key] == val for key, val in run["rows"][item["id"]].items())
+                    for img in {e["file"] for e in run["evidence"].values() if "file" in e}:
+                        assert bundle.read(img) == (OUTPUT / folder / img).read_bytes()
             if archive := run.get("archive"):
                 assert archive["url"].endswith("/" + run["job"] + ".zip")
                 assert archive["bytes"] > 0 and re.fullmatch(r"[0-9a-f]{64}", archive["sha256"])

@@ -8,6 +8,8 @@ from import_agent_runs import CREDENTIAL, REDACTED
 
 # Reviewed pixel bounds on the exact frames, excluding unrelated chart or roster details.
 SCREENSHOT_CROPS = {
+    "11bc114417a59e7ffd965135c28c5a147e89a189effe358993e20ca280c54ff6": (291, 448, 1035, 490),
+    "0624922cf1d7276a30ba4d8bb38c18dabf54959f49c53a69a3fb17f1298191dd": (282, 198, 426, 435),
     "dea4cc1f53d0c2844428fd6b06c4aeedef37cfddf16f793dfcfa9cf19b99b0d8": (309, 489, 1148, 785),
     "ede474c1883b97bdf6300cc0c77b25b6912069827162ee46ec3c4991d7bbd4e6": (284, 545, 1020, 642),
     "cadf6a1eddbd1f9a17afd2f7372f80a977ff1241b777fdade406cbea91eca00f": (284, 328, 1020, 625),

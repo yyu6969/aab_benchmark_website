@@ -173,7 +173,7 @@ def render_agent_runs(task, prefix, inline):
 
 
 EVIDENCE_TYPES = {"screenshots": "Screenshots", "tools": "Tool calls and results",
-                  "environment": "Live environment records"}
+                  "environment": "Live environment records", "analysis": "Verification evidence"}
 
 
 def evidence_links(ids, evidence, number):
@@ -213,7 +213,7 @@ def evidence_template(ref, item, directory):
                           + '<h5>Example output</h5>' + evidence_code(example["output"]) + '</details>')
     if item.get("availability"):
         blocks.append('<p>' + escape(item["availability"]) + '</p>')
-    elif item["kind"] == "screenshots":
+    elif item.get("file"):
         src = directory + file_url(item["file"])
         if item.get("cropped"):
             label += " · cropped"
@@ -237,7 +237,8 @@ def evidence_template(ref, item, directory):
             if "call_id" in result:
                 blocks.append('<p class="evidence-meta">' + escape(result["call_id"]) + '</p>')
     else:
-        blocks.append('<h5>Original inspection result</h5>' if item["kind"] == "environment" else '<h5>Original tool record</h5>')
+        title = {"environment": "Original inspection result", "analysis": "Analysis result", "tools": "Original tool record"}[item["kind"]]
+        blocks.append(f'<h5>{title}</h5>')
         blocks.append(evidence_code(item["record"]))
     return (f'<template id="evidence-{escape(ref)}"><section class="evidence-record"><h4>{label}</h4>'
             f'<p class="evidence-meta">{escape(ref)}</p>{"".join(blocks)}</section></template>')
@@ -283,24 +284,41 @@ def render_instruction_run(task, prefix, inline):
         refs = evidence_links(ids, evidence, number) if ids else (
             "No evidence cited yet." if not record else "No evidence cited.")
         value = "null" if score is None else str(score)
+        carried = ' <small>(Original verdict retained.)</small>' if record.get("origin") == "carried_forward" else ""
         reference = f'{number:02}' if historical else f'<a href="#rubric-{number}">{number:02}</a>'
         rows.append(f'<tr data-rubric-id="{escape(key)}"><th scope="row">{reference}</th>'
                     f'<td>{inline(rubric["criterion"])}</td><td data-label="Score"><strong>{value}</strong></td>'
-                    f'<td data-label="Reason">{escape(reason)}</td><td data-label="Evidence">{refs}</td></tr>')
+                    f'<td data-label="Reason">{escape(reason)}{carried}</td><td data-label="Evidence">{refs}</td></tr>')
     scored = [r["score"] for r in run["rows"].values() if r["score"] is not None]
     total = len(rows)
     status = (f'{sum(scored)} / {total}' if len(scored) == total else
               f'{len(scored)} / {total} criteria scored · null = no score recorded')
     archive_link = ""
+    review_info = ""
+    review = run.get("reverification")
+    if review:
+        status = f"{sum(scored)} / {total}"
+        if len(scored) < total:
+            status += f" · {total - len(scored)} unresolved"
+        reviewed = f"Codex regraded {review['changed']} criteria using evidence saved from this run."
+        if review["carried"]:
+            reviewed += f" {review['carried']} unchanged criteria retain their original verdicts."
+        review_info = (f'<p>{reviewed} Live environment records were captured before the original guest shut down.</p>'
+                       f'<p><a class="text-link" href="{directory}{file_url(review["results"])}" download>Download revised verification (ZIP)</a></p>')
+        if review.get("preview"):
+            review_info += (f'<p><a class="text-link" href="{directory}{file_url(review["preview"])}">'
+                            'Watch the review render of the saved project</a></p>')
     if archive := run.get("archive"):
         captured = archive.get("snapshot_at")
         label = "Download public run snapshot" if captured else "Download public run results"
+        if review:
+            label = "Download original run snapshot" if captured else "Download original run results"
         note = f"<br>Snapshot taken {escape(captured)}." if captured else ""
         archive_link = (f'<p><a class="text-link" href="{escape(archive["url"], quote=True)}">'
                         f'{label} (ZIP · {file_size(archive["bytes"])})</a>{note}</p>')
     heading = "Task instruction · earlier rubric" if historical else "Task instruction"
     return (f'<article class="agent-run instruction-run" id="run-instruction-only"><details><summary>{heading}</summary>'
-            f'<dl class="run-metrics">{metrics}</dl>{archive_link}<h4>{status}</h4>'
+            f'<dl class="run-metrics">{metrics}</dl>{archive_link}{review_info}<h4>{status}</h4>'
             '<div class="rubric-table-wrapper" role="region" aria-label="Agent run scores" tabindex="0">'
             '<table class="rubric-table run-results"><caption class="sr-only">Task instruction run results</caption>'
             '<thead><tr><th scope="col">#</th><th scope="col">Outcome criterion</th><th scope="col">Score</th>'
