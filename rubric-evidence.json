@@ -15258,18 +15258,18 @@
     },
     {
       "id": "outcome_3fe5429d662feda6c3c1",
-      "criterion_sha256": "ab5c0afd19f326bb1e447acd2e6a9fb6da64e10f89cab9cb6190403155f6f9af",
-      "description": "Full credit requires the intended central vertical internal-wall segment at the reference-supported location and extent, correctly connected at its corridor junction, with parallel boundaries consistently 0.10 m apart. Partial credit applies when recognizable intended wall geometry exists but its placement, extent, connection or thickness is incomplete or incorrect. No credit applies when meaningful intended wall geometry is absent or unrelated. Equivalent construction methods qualify without a mandatory 2.80 m drafting length or designated offset side. Layer membership is covered by the consolidated wall-layer criterion; claims and blocker reports are not alternative deliverables, and inconclusive observation alone does not establish failure.",
+      "criterion_sha256": "764313f894ffeb285639693160a5d44d9e4608528eec36dc334bfb4758a4a27a",
+      "description": "Full credit when the short vertical return is in the reference position, joins the upper office diagonal and meets the step to the thicker exterior wall, with 0.10 m separation along the internal return. Partial credit for a recognizable editable return with incomplete connection, placement or thickness. No credit when the return is absent or unrelated. Equivalent editable constructions qualify.",
       "source": "floor plan exercise reference.pdf",
-      "passage": "The central corridor arrangement includes the adjoining vertical internal-wall geometry, and the upper-right wall-thickness note specifies 0.1 m for internal walls.",
-      "locator": "page 1",
+      "passage": "The thin vertical return below the upper office diagonal ends where the passage-side wall steps to exterior thickness.",
+      "locator": "Page 1 · northeast office corner to the step beside the entrance recess",
       "clips": [
         {
-          "segment_id": 66,
-          "start_sec": 772.5,
-          "end_sec": 775.5,
-          "file": "assets/rubric-clips/floor-plan-architectural-details/segment-66.webm",
-          "label": "12:52.5–12:55.5"
+          "segment_id": 274,
+          "start_sec": 2655.5,
+          "end_sec": 2657.0,
+          "file": "assets/rubric-clips/floor-plan-architectural-details/segment-274.webm",
+          "label": "44:15.5–44:17"
         }
       ],
       "sources": [
@@ -15279,43 +15279,13 @@
           "references": [
             {
               "locator": "Line 1",
-              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
+              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details",
               "scope": [
                 "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 1",
-              "passage": "Continue `/home/ga/Documents/CAD/floor plan exercise.dwg` in meters, following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 9",
-              "passage": "Save the completed editable drawing in place at `/home/ga/Documents/CAD/floor plan exercise.dwg`",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -15324,113 +15294,14 @@
           "name": "floor plan exercise reference.pdf",
           "references": [
             {
-              "locator": "page 1",
-              "passage": "The central corridor arrangement includes the adjoining vertical internal-wall geometry, and the upper-right wall-thickness note specifies 0.1 m for internal walls.",
+              "locator": "Page 1 · northeast office corner to the step beside the entrance recess",
+              "passage": "The thin vertical return below the upper office diagonal ends where the passage-side wall steps to exterior thickness.",
               "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Paired black vertical wall faces beside the office bound the central passage between its angled transitions.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The straight internal wall beside the central passage has two parallel black faces.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The upper-right Wall thickness note specifies internal walls as 0.1 m.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The office-side vertical wall bounds the central passage at the position shown between the adjacent angled wall transitions.",
-              "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The vertical passage-side wall terminates at its adjoining angled wall transitions.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The passage-side wall faces connect to the angled transition adjoining the horizontal corridor.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The straight central internal-wall segment is depicted with parallel paired faces.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The Wall thickness note specifies 0.1 m internal walls; the central straight wall has parallel faces.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The central passage wall has defined placement, endpoints and adjoining junctions; the Wall thickness note specifies 0.1 m internal walls.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The central passage includes the intended vertical internal-wall segment beside the office.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -15688,18 +15559,18 @@
     },
     {
       "id": "outcome_dfbdc555c354f6047151",
-      "criterion_sha256": "a9593f6c07ea124fde85f03b472cbb92b8d61546a05300ab83763359d30f2c8d",
-      "description": "Full credit when the complete opposing vertical-and-angled wall arrangement matches the reference placement, shape, and local junctions, with paired internal-wall faces separated by 0.10 m perpendicular distance throughout the present vertical and diagonal portions. Partial credit when a useful editable counterpart is present but has incomplete geometry, placement or connection defects, or incorrect thickness in some portions. No credit when the counterpart is absent, unrelated, or only a noneditable depiction. Missing segments count toward incompleteness and must not also incur separate thickness penalties; assess thickness on geometry that exists. Accept equivalent editable representations without requiring mirroring, a persisted axis, or a particular entity count. General layer organization and units are assessed elsewhere, and reporting a blocker alone does not establish completion.",
+      "criterion_sha256": "038ea1db6bb4361435e815a29b30b1823e67bc6cedb2759cf235ddd2253e8e95",
+      "description": "Full credit when the editable laundry boundary follows the reference, including its square upper return at the corridor and the lower bevel into the exterior entrance recess. Apply the plan’s 0.10 m internal-wall thickness to the upper internal return and its 0.30 m exterior-wall thickness to the lower exterior bevel. Partial credit when a recognizable boundary preserves only part of the shape, placement, connections or appropriate thickness. No credit when the boundary is absent, unrelated or represented only by a flattened depiction. Accept equivalent editable geometry.",
       "source": "floor plan exercise reference.pdf",
-      "passage": "The laundry-side wall of the central passage forms the opposing vertical-and-angled arrangement, with paired wall faces meeting adjoining boundaries; the wall-thickness note specifies internal walls of 0.1 m.",
-      "locator": "page 1",
+      "passage": "The upper laundry corner is square. The lower diagonal follows the exterior entrance outline. The wall note specifies 0.10 m for internal walls and 0.30 m for exterior walls.",
+      "locator": "Page 1 · west side of laundry at the corridor and the exterior entrance recess",
       "clips": [
         {
-          "segment_id": 90,
-          "start_sec": 917.5,
-          "end_sec": 927.5,
-          "file": "assets/rubric-clips/floor-plan-architectural-details/segment-90.webm",
-          "label": "15:17.5–15:27.5"
+          "segment_id": 720,
+          "start_sec": 5878.0,
+          "end_sec": 5885.75,
+          "file": "assets/rubric-clips/floor-plan-architectural-details/segment-720.webm",
+          "label": "97:58–98:05.75"
         }
       ],
       "sources": [
@@ -15709,54 +15580,13 @@
           "references": [
             {
               "locator": "Line 1",
-              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
+              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details",
               "scope": [
                 "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 9",
-              "passage": "Save the completed editable drawing in place at `/home/ga/Documents/CAD/floor plan exercise.dwg`",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 1",
-              "passage": "Continue `/home/ga/Documents/CAD/floor plan exercise.dwg` in meters, following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 1",
-              "passage": "Continue `/home/ga/Documents/CAD/floor plan exercise.dwg` in meters",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -15765,123 +15595,14 @@
           "name": "floor plan exercise reference.pdf",
           "references": [
             {
-              "locator": "page 1",
-              "passage": "The laundry-side wall of the central passage forms the opposing vertical-and-angled arrangement, with paired wall faces meeting adjoining boundaries; the wall-thickness note specifies internal walls of 0.1 m.",
+              "locator": "Page 1 · west side of laundry at the corridor and the exterior entrance recess",
+              "passage": "The upper laundry corner is square. The lower diagonal follows the exterior entrance outline. The wall note specifies 0.10 m for internal walls and 0.30 m for exterior walls.",
               "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Opposite the office, the laundry-side boundary of the central passage has a vertical portion with angled transitions.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The laundry-side vertical and diagonal wall portions are depicted with paired parallel faces.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The upper-right Wall thickness note specifies internal walls as 0.1 m.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The laundry-side passage wall connects its angled portions to the adjoining vertical and horizontal wall faces.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The laundry-side central-passage boundary consists of a straight vertical wall portion and angled transitions at the adjoining wall junctions.",
-              "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Paired black faces define the laundry-side internal wall beside the central passage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The laundry-side wall has paired vertical and diagonal faces; the Wall thickness note specifies 0.1 m internal walls.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The laundry-side counterpart has defined placement, vertical and angled portions, connected junctions and the stated 0.1 m internal-wall thickness.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "A laundry-side internal wall forms the opposing boundary of the central passage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The laundry-side passage boundary includes connected vertical and angled wall portions.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The Wall thickness note specifies 0.1 m internal walls.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -17065,11 +16786,11 @@
     },
     {
       "id": "outcome_b482a63c342b2adbc4e0",
-      "criterion_sha256": "fcbf500e3d005148f1ae9d90e73357eff70534f731830e95e09a9d86564fc86e",
-      "description": "Full credit if the drawing contains a usable editable reusable single-door definition and at least one corresponding editable instance linked to it, using a native block or equivalent reusable CAD representation. Partial credit if a usable definition exists without an instance, or the component’s reusable definition-instance relationship or editability remains incomplete. No credit if neither a usable reusable definition nor a corresponding reusable instance exists; loose geometry, raster imagery or a completion claim alone does not establish reusability. Geometric fidelity and layer membership are evaluated only under their respective criteria. Do not require a particular component name, entity count, insertion anchor, exact number of instances, or replacement of every loose drafting copy. Record verified external restrictions and verification limitations separately from actual component defects.",
+      "criterion_sha256": "c40cebc5d7faf5252c2bcf07da222e2314e60f660d62eba3b54204a6ea76e65d",
+      "description": "Full credit when the saved single-door assembly stays editable and can be placed again as a complete unit, whether it uses a block definition or an independently reusable parametric assembly. Partial credit when assembly editability or reuse is incomplete. No credit when only unrelated linework, noneditable imagery or a claim of reuse remains. Fitted placements and flip behavior are scored separately.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
-      "locator": "document",
+      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+      "locator": "Line 3",
       "clips": [
         {
           "segment_id": 179,
@@ -17082,18 +16803,8 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "flippable single-door and private-restroom assemblies for opposing orientations",
+          "highlight": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
           "references": [
-            {
-              "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
             {
               "locator": "Line 3",
               "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
@@ -17102,63 +16813,7 @@
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 9",
-              "passage": "Save the completed editable drawing in place at `/home/ga/Documents/CAD/floor plan exercise.dwg`",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts:",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 1",
-              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "floor plan exercise reference.pdf",
-          "references": [
-            {
-              "locator": "page 2",
-              "passage": "The lower-center single-door graphic depicts the door leaf, quarter-circle swing and rectangular jamb geometry.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -17167,11 +16822,11 @@
     },
     {
       "id": "outcome_6f33d2ef259850c7ae96",
-      "criterion_sha256": "2f27d099d828780596468d2fffa0cbf5514ded54e29e271392b7229f206c8f7c",
-      "description": "Full credit requires committed editable instances of the reusable single-door component at every corresponding reference opening along the corridor and its central approach, with aligned jambs and leaf and swing orientations matching the reference. Equivalent native component representations and workflows qualify. Partial credit applies when a useful subset is correctly placed or committed instances have incomplete opening fit, orientation or reusable linkage. No credit applies when no usable required placement is committed, only previews or claims exist, or all placements contradict the reference. Assess missing instances once within this combined outcome; detached staging examples do not satisfy required doorways. Precise component geometry, meter units and dedicated layer organization remain assessed by earlier outcomes. Saving and export are separate package requirements. Record verified external limitations and their effects without assuming agent-caused loss; a blocker report alone does not satisfy the outcome, and absence of a particular runtime observation is not itself a drawing defect.",
+      "criterion_sha256": "1606ef31cb924077037a9c05045c56870e1cf3dd49b6bdf476ee5e42e4c21dcf",
+      "description": "Full credit when the required corridor and approach doorways contain fitted, editable reusable assemblies with aligned jambs and correctly oriented leaves and swings. Shared definitions and independently reusable assemblies both qualify. Partial credit for a useful subset of fitted doors or for errors in fit, orientation or reusability. No credit when no required doorway contains a usable placement. Score detailed dimensions, layers and the operation of the flip control separately.",
       "source": "floor plan exercise reference.pdf",
-      "passage": "Blue single-door leaf lines and quarter-circle swing arcs occupy openings along both sides of the horizontal corridor and around its central approach, with different hinge sides and swing directions at different openings.",
-      "locator": "page 1",
+      "passage": "Each depicted doorway shows the fitted jambs and the hinge and swing orientation. The brief calls for reusable single-door assemblies.",
+      "locator": "Page 1 · corridor and central approach doorways",
       "clips": [
         {
           "segment_id": 243,
@@ -17191,19 +16846,8 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details",
+          "highlight": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
           "references": [
-            {
-              "locator": "Line 1",
-              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
             {
               "locator": "Line 3",
               "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
@@ -17212,58 +16856,18 @@
                 "description"
               ],
               "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             },
             {
-              "locator": "Line 9",
-              "passage": "Save the completed editable drawing in place at `/home/ga/Documents/CAD/floor plan exercise.dwg`",
+              "locator": "Line 1",
+              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details",
               "scope": [
                 "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts:",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 1",
-              "passage": "Continue `/home/ga/Documents/CAD/floor plan exercise.dwg` in meters",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 9",
-              "passage": "publish the `Layout1` ground-floor sheet as a PDF at `/home/ga/Documents/CAD/example 2.pdf`.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -17272,143 +16876,14 @@
           "name": "floor plan exercise reference.pdf",
           "references": [
             {
-              "locator": "page 1",
-              "passage": "Blue single-door leaf lines and quarter-circle swing arcs occupy openings along both sides of the horizontal corridor and around its central approach, with different hinge sides and swing directions at different openings.",
+              "locator": "Page 1 · corridor and central approach doorways",
+              "passage": "Each depicted doorway shows the fitted jambs and the hinge and swing orientation. The brief calls for reusable single-door assemblies.",
               "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Blue single-door leaf-and-swing symbols occupy wall openings along the horizontal corridor and the central passage beside the office, laundry and stair areas.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The blue single-door symbols terminate at the sides of their wall openings along the corridor and central passage.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Blue door leaves and quarter-circle swing arcs show differing hinge sides and opening directions along the corridor and central passage.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The plan shows repeated blue single-door symbols at wall openings along the corridor and central passage beside the service and stair areas.",
-              "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The single-door symbols meet the sides of the corridor and central-passage wall openings.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The blue leaf lines and quarter-circle arcs specify the opening directions of the single doors along the corridor and central passage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Multiple single-door openings are shown along the corridor and central passage, allowing a completed subset to be distinguished from complete coverage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The door symbols are fitted between the wall ends defining each corresponding corridor and central-passage opening.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Blue door leaves and swing arcs identify the hinge sides and opening directions at the reference doorways.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The reference contains single doors in the corridor and central-passage wall openings.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The wall openings, blue door leaves and swing arcs establish the required positions and orientations along the corridor and central passage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Single-door symbols are located in specific wall openings in the floor plan rather than in a separate staging area.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The lower-center single-door detail separately depicts and dimensions the single-door geometry.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -17417,11 +16892,11 @@
     },
     {
       "id": "outcome_56f9bf1ac56bf0e0e1a9",
-      "criterion_sha256": "e324dcef603cdb4e865852b27a3163db8a1ff38ecf7efe4baf2b13e22edd625f",
-      "description": "Full credit requires a retained editable reusable definition whose interactive control is available on linked instances and coherently reverses leaf and swing handedness while preserving dimensions and jamb, leaf, and swing connections; accept equivalent interactive implementations and any component name. Partial credit applies when a useful control exists but reversal, geometric preservation, instance availability, or retention is incomplete. No credit applies when an operational orientation control is absent or discarded, or only separate static mirrored doors are supplied. No pre-existing definition, particular parameter label, adjacent staging pair, fixed final handedness of a demonstration instance, or prescribed editor-exit sequence is required. Correct initial dimensions, placement, and layer organization remain under the earlier outcomes; assess here only whether changing orientation preserves the assembly. Claims or blocker reports alone do not establish functionality, and unavailable verification leaves the affected property unassessable rather than proving failure.",
+      "criterion_sha256": "454e0cf988afe41b4ff9a550107457b4a90c969a5e682781d5bfa6dba255e08e",
+      "description": "Full credit when operating the retained control on a usable door coherently reverses handedness and preserves the assembly’s dimensions and connections. Shared definitions and independently reusable parametric doors both qualify. Partial credit when a control is present but reversal, persistence or geometry preservation is incomplete. No credit for an ineffective or absent control or a pair of static mirrored drawings. Score placement and initial geometry separately.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
-      "locator": "document",
+      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+      "locator": "Line 3",
       "clips": [
         {
           "segment_id": 264,
@@ -17434,18 +16909,8 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "flippable single-door and private-restroom assemblies for opposing orientations",
+          "highlight": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
           "references": [
-            {
-              "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
             {
               "locator": "Line 3",
               "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
@@ -17454,59 +16919,18 @@
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 9",
-              "passage": "Save the completed editable drawing in place at `/home/ga/Documents/CAD/floor plan exercise.dwg`",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "flippable single-door and private-restroom assemblies for opposing orientations",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts:",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             },
             {
               "locator": "Line 1",
-              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
+              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details",
               "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 3",
-              "passage": "Organize the drawing cleanly across dedicated layers for building elements, fixtures, room labels, dimensions, and non-plotting viewports.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -17515,33 +16939,13 @@
           "name": "floor plan exercise reference.pdf",
           "references": [
             {
-              "locator": "page 2",
-              "passage": "The lower-center single-door detail shows the leaf and quarter-circle swing meeting at the jamb-side hinge location.",
+              "locator": "Page 2 · single-door detail",
+              "passage": "The hinged leaf, jambs and swing form one connected door assembly.",
               "scope": [
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The lower-center single-door diagram provides dimensioned door and jamb geometry.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The floor plan shows blue door symbols at their required wall openings.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -20246,11 +19650,11 @@
     },
     {
       "id": "outcome_7b633f7c6e19bf6d0174",
-      "criterion_sha256": "9666949aecb362c53c77814910f9bff00ccebd595ac03b5f54a7487a172d96e2",
-      "description": "Full credit when both staircases contain the completed reference break profile, including its diagonal and short zigzag segments, localized interruptions in both affected inner vertical boundary lines, and retained editable boundary segments and adjoining treads. Partial credit when useful break geometry exists but one staircase is unfinished, only one boundary has a suitable gap, the profile or local connections are incomplete, or limited unintended loss or alteration remains. Assess the profile, gaps and surviving linework independently so that an unfinished gap does not erase credit for correct surrounding geometry. No credit when neither staircase has usable editable break geometry or the affected areas are largely erased, materially damaged or represented only by a noneditable depiction or temporary preview. Exact gap lengths, coordinates and editing commands are not required. Staircase placement and overall flight handedness are assessed under the assembly outcome.",
+      "criterion_sha256": "27f3151ffd992fd4ca117dd5e8bc11783bccd5996b59c5648d360026de47c617",
+      "description": "Full credit when both stairs display the depicted break profile and the interruptions in the two affected inner boundaries, with surrounding treads and linework intact. Editable trimmed lines, a break object, or an editable mask over editable stair geometry can all achieve this presentation. Partial credit for identifiable but incomplete break geometry or localized damage. No credit when neither stair has a usable editable break indication. Exact gap lengths and construction commands are unrestricted.",
       "source": "floor plan exercise reference.pdf",
-      "passage": "The upper-left stair graphic contains a sloping break indication with a short zigzag and localized interruptions in the two parallel inner flight boundaries, with the remaining boundaries and adjacent treads retained.",
-      "locator": "page 2",
+      "passage": "The enlarged stair shows the profile and localized interruptions. The source depicts the visible result and leaves the CAD construction open.",
+      "locator": "Page 2 · enlarged stair, diagonal and zigzag break at center",
       "clips": [
         {
           "segment_id": 488,
@@ -20274,24 +19678,13 @@
           "references": [
             {
               "locator": "Line 1",
-              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details.",
+              "passage": "following `/home/ga/Documents/CAD/floor plan exercise reference.pdf` as the design reference for the floor plan geometry, circulation, fixtures, room identities, and architectural details",
               "scope": [
                 "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 9",
-              "passage": "Save the completed editable drawing in place at `/home/ga/Documents/CAD/floor plan exercise.dwg`",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -20300,193 +19693,14 @@
           "name": "floor plan exercise reference.pdf",
           "references": [
             {
-              "locator": "page 2",
-              "passage": "The upper-left stair graphic contains a sloping break indication with a short zigzag and localized interruptions in the two parallel inner flight boundaries, with the remaining boundaries and adjacent treads retained.",
+              "locator": "Page 2 · enlarged stair, diagonal and zigzag break at center",
+              "passage": "The enlarged stair shows the profile and localized interruptions. The source depicts the visible result and leaves the CAD construction open.",
               "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Two separate areas labeled “stairs”: one beside the office and one between the laundry and unit 7.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair graphic has an oblique break indication containing a short zigzag.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "In the upper-left stair graphic, the oblique break intersects the closely spaced inner flight boundaries, which are interrupted locally.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair graphic retains the adjoining tread lines and flight boundary linework around the break.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The plan contains two stair areas, each labeled “stairs”.",
-              "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left architectural detail depicts the stair break profile.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair break consists of an oblique line with a short central zigzag.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The paired inner flight boundary lines meet the local interruption at the oblique stair break.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair detail retains flight boundary segments and adjoining horizontal tread lines.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Two separate stair areas are shown and labeled “stairs”.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair break affects the paired inner flight boundaries.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair graphic shows the completed diagonal and zigzag profile and its relationship to the adjoining boundaries.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The stair detail includes retained surrounding treads and boundaries as well as the break.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left detail separately depicts the break profile, interrupted boundaries and surrounding stair linework.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair detail contains a completed break indication.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair graphic includes a complete break and retained surrounding flight geometry.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 2",
-              "passage": "The upper-left stair detail shows coherent break, boundary and tread geometry.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The two stair assemblies occupy separate locations beside the office and beside the laundry, with their flight arrangements shown in plan.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -23980,11 +23194,11 @@
     },
     {
       "id": "outcome_36c068e83fa987f08fe9",
-      "criterion_sha256": "ec8b6d8b8f2a78998758395c9ee87947a39c989174c382b6f89c6273fd588777",
-      "description": "Full credit for a complete editable rectangular sheet border belonging to details and distinct from its viewport frames and title-block table. Partial credit for a recognizable incomplete border or a visible border that is not editable. No credit if the sheet border is absent or only a title-block table outline is present. Exact coordinates and construction or copying methods are not required. Evaluate the border in the completed drawing; missing runtime footage alone does not establish an absent border, and a completion claim or blocker report does not supply the required geometry.",
+      "criterion_sha256": "1637a4023881a8e0a0042d6db5b135ae837a979c65a7f9fd6cb20b7f30996b75",
+      "description": "Full credit for an editable rectangular sheet boundary, either separate or integrated into the title block. A combined assembly qualifies when its perimeter borders the drawing area. Partial credit for a recognizable incomplete or noneditable border. No credit when the sheet has no boundary, or only an interior title-table outline or viewport frame. Accept equivalent editable constructions.",
       "source": "instruction.md",
-      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
-      "locator": "document",
+      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames",
+      "locator": "Line 5",
       "clips": [
         {
           "segment_id": 808,
@@ -23997,50 +23211,17 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "rectangular sheet borders",
+          "highlight": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames",
           "references": [
             {
               "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames",
               "scope": [
                 "criterion",
                 "description"
               ],
               "provenance": [
-                "completion",
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 9",
-              "passage": "Save the completed editable drawing in place at `/home/ga/Documents/CAD/floor plan exercise.dwg`",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -26199,11 +25380,11 @@
     },
     {
       "id": "outcome_b8791b3b8eb50041f377",
-      "criterion_sha256": "c13941835ba3fa6be59353309a221ca787df19f54fb91f71f5198bdb188458cd",
-      "description": "Full credit requires legible, editable project and drawing-name values of Example 1 and Ground floor, plus a substantive completed location entry. No particular location value is prescribed by the packet. Partial credit applies when only some of these entries are complete and correct. No credit applies when the fields contain only identifiers, unresolved placeholders or unrelated values. Drawn, Date and Scale are assessed through their existing outcome.",
+      "criterion_sha256": "0fcf257a87abee46ff2b637bd2134d1b8a5ccb36ce85d16588db6d096a354747",
+      "description": "Full credit when editable, legible fields show Example 1 and Ground floor and include a meaningful Location entry. Because the assignment supplies no project site, an explicit entry such as “Site not supplied” earns full location credit. Accept a reasonable location entry without requiring a particular address. Partial credit when only some fields are complete and correct. No credit when none is complete. A blank location or an unfilled template label earns no location credit. Drawn, Date and Scale are assessed separately.",
       "source": "instruction.md",
-      "passage": "Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.",
-      "locator": "document",
+      "passage": "Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`",
+      "locator": "Line 6",
       "clips": [
         {
           "segment_id": 692,
@@ -26216,70 +25397,17 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields",
+          "highlight": "Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`",
           "references": [
             {
               "locator": "Line 6",
-              "passage": "Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.",
+              "passage": "Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`",
               "scope": [
                 "criterion",
                 "description"
               ],
               "provenance": [
-                "completion",
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 6",
-              "passage": "- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 6",
-              "passage": "recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 6",
-              "passage": "Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields",
-              "scope": [
-                "criterion",
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "Line 9",
-              "passage": "Save the completed editable drawing",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
