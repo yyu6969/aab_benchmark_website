@@ -1,4 +1,4 @@
-"""Import one instruction-only Harbor trial per reviewed task; latest retry wins."""
+"""Import available instruction-only Harbor trials for reviewed tasks; latest retry wins."""
 import argparse
 import hashlib
 import json
@@ -117,6 +117,8 @@ def main():
             continue
         jobs = sorted(args.jobs_dir.glob(f"{name}_pi_*"))
         if not jobs:
+            if slug not in previous:
+                continue
             raise ValueError(f"No trial found for {slug}")
         config, = jobs[-1].glob("*/config.json")
         runs[slug] = import_trial(config.parent, tasks[slug], previous.get(slug))

@@ -18,8 +18,8 @@ def load_agent_runs(tasks, root, plain_text):
     if manifest.keys() != {task["slug"] for task in tasks} or scores.keys() != manifest.keys():
         raise ValueError("Agent runs must cover every task")
     instruction_runs = json.loads((root / "instruction-runs.json").read_text(encoding="utf-8"))
-    if set(instruction_runs) != {t["slug"] for t in tasks if "id" in t["rubrics"][0]}:
-        raise ValueError("Expected one instruction-only run per reviewed task")
+    if set(instruction_runs) - {t["slug"] for t in tasks if "id" in t["rubrics"][0]}:
+        raise ValueError("An instruction-only run must refer to a task with a reviewed rubric")
     for task in tasks:
         slug = task["slug"]
         if slug in instruction_runs:
