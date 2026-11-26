@@ -15311,10 +15311,10 @@
     {
       "id": "outcome_d7f6e5cc62a5f1d5ea2f",
       "criterion_sha256": "9f34b0a150d0c0bff13765a5b077e9e34c113bb7dff8da10466e84aa3b8478ac",
-      "description": "Full credit when the junction occupies its reference position, the first diagonal connects the horizontal wall to the inner vertical face, and a distinct parallel companion lies on the correct side at 0.10 m perpendicular separation with its upper endpoint meeting the outer vertical face without a gap or overrun. Both intended diagonal boundaries and the adjoining local wall connections must be intact, with the obsolete horizontal and vertical crossing portions absent. Partial credit when a recognizable editable junction achieves some of these conditions but has a missing face, placement or spacing error, incomplete connection, residual fragment, or localized damage. An absent component or unchanged obsolete portion receives no achievement for that part; correct remaining properties can support partial credit within this single outcome. No credit when the intended junction is absent, unrelated, or represented only by a noneditable depiction. Accept equivalent editable representations and assess spacing and connections independently when determining partial credit. Units, general layer organization, and saving are assessed elsewhere; a blocker report alone does not demonstrate completion.",
+      "description": "Full credit when both editable diagonal faces occupy the reference position, are 0.10 m apart perpendicularly, and each joins its corresponding horizontal wall face at the upper end and vertical wall face at the lower end without a gap or overrun. Both intended diagonal boundaries and the adjoining local wall connections must be intact, with the obsolete horizontal and vertical crossing portions absent. Partial credit when a recognizable editable junction achieves some of these conditions but has a missing face, placement or spacing error, incomplete connection, residual fragment, or localized damage. An absent component or unchanged obsolete portion receives no achievement for that part; correct remaining properties can support partial credit within this single outcome. No credit when the intended junction is absent, unrelated, or represented only by a noneditable depiction. Accept equivalent editable representations and assess spacing and connections independently when determining partial credit. Units, general layer organization, and saving are assessed elsewhere; a blocker report alone does not demonstrate completion.",
       "source": "floor plan exercise reference.pdf",
-      "passage": "The office-side wall of the central passage includes angled returns connecting horizontal and vertical wall faces, drawn with paired boundaries and clean junctions; the wall-thickness note specifies internal walls of 0.1 m.",
-      "locator": "page 1",
+      "passage": "At the office-side passage junction on page 1, both diagonal faces meet horizontal faces at their upper ends and vertical faces at their lower ends. The wall-thickness note gives 0.1 m for internal walls.",
+      "locator": "page 1, office-side passage junction and wall-thickness note",
       "clips": [
         {
           "segment_id": 76,
@@ -15384,173 +15384,14 @@
           "name": "floor plan exercise reference.pdf",
           "references": [
             {
-              "locator": "page 1",
-              "passage": "The office-side wall of the central passage includes angled returns connecting horizontal and vertical wall faces, drawn with paired boundaries and clean junctions; the wall-thickness note specifies internal walls of 0.1 m.",
+              "locator": "page 1, office-side passage junction and wall-thickness note",
+              "passage": "At the office-side passage junction on page 1, both diagonal faces meet horizontal faces at their upper ends and vertical faces at their lower ends. The wall-thickness note gives 0.1 m for internal walls.",
               "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The office boundary beside the central passage includes paired parallel diagonal faces connecting horizontal and vertical wall portions.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The upper-right Wall thickness note specifies internal walls as 0.1 m.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "At the office-side bevel, the diagonal faces terminate on the corresponding horizontal and vertical wall faces.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The diagonal office-side wall transition is shown without horizontal or vertical wall lines continuing across its intended junction.",
-              "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The angled wall transition lies on the office side of the central passage.",
-              "scope": [
+                "criterion",
                 "description"
               ],
               "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "At the lower office-side bevel, one diagonal face joins the horizontal office wall face to the inner vertical face beside the passage.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The office-side bevel is drawn as two parallel diagonal wall faces enclosing the wall thickness.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The Wall thickness note assigns 0.1 m to internal walls, including the paired diagonal internal-wall faces.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "At the lower office-side bevel, the companion diagonal rises to meet the outer vertical passage-side wall face.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "Both diagonal faces of the office-side wall transition connect to adjoining horizontal and vertical wall portions.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The angled office-side transition contains no horizontal or vertical wall extensions crossing the intended bevel.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The office-side junction has paired diagonal faces, adjoining connections and the internal-wall thickness specified as 0.1 m.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The reference shows the complete paired diagonal junction without obsolete crossing wall portions.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The office-side junction comprises paired diagonal boundaries and their adjoining wall connections.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The office-side angled wall junction is part of the central-passage geometry.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
-              ]
-            },
-            {
-              "locator": "page 1",
-              "passage": "The reference separately depicts connected wall faces and specifies 0.1 m internal-wall thickness.",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "assignment review"
+                "source inspection"
               ]
             }
           ]
@@ -16513,7 +16354,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "description"
               ],
@@ -16772,7 +16613,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "description"
               ],
@@ -16789,7 +16630,7 @@
       "criterion_sha256": "c40cebc5d7faf5252c2bcf07da222e2314e60f660d62eba3b54204a6ea76e65d",
       "description": "Full credit when the saved single-door assembly stays editable and can be placed again as a complete unit, whether it uses a block definition or an independently reusable parametric assembly. Partial credit when assembly editability or reuse is incomplete. No credit when only unrelated linework, noneditable imagery or a claim of reuse remains. Fitted placements and flip behavior are scored separately.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+      "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
       "locator": "Line 3",
       "clips": [
         {
@@ -16803,11 +16644,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+          "highlight": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "criterion",
                 "description"
@@ -16846,11 +16687,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+          "highlight": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "criterion",
                 "description"
@@ -16895,7 +16736,7 @@
       "criterion_sha256": "454e0cf988afe41b4ff9a550107457b4a90c969a5e682781d5bfa6dba255e08e",
       "description": "Full credit when operating the retained control on a usable door coherently reverses handedness and preserves the assembly’s dimensions and connections. Shared definitions and independently reusable parametric doors both qualify. Partial credit when a control is present but reversal, persistence or geometry preservation is incomplete. No credit for an ineffective or absent control or a pair of static mirrored drawings. Score placement and initial geometry separately.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+      "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
       "locator": "Line 3",
       "clips": [
         {
@@ -16909,11 +16750,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+          "highlight": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "criterion",
                 "description"
@@ -17017,7 +16858,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts:",
+              "passage": "Build reusable components for the plan:",
               "scope": [
                 "description"
               ],
@@ -17167,7 +17008,7 @@
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "criterion",
                 "description"
@@ -17362,7 +17203,7 @@
       "criterion_sha256": "3de0bf04b990b81c819ab7c3b69c48b7f23acbaf479413b283c0919d84ce0e57",
       "description": "Full credit if the target drawing contains an editable native definition representing the double-door assembly and available for repeated instantiation. Assess definition existence, editability and availability here; assess exact geometry and interactive functionality separately. Partial credit applies when a definition exists but editability or additional-instance availability is limited. No credit applies when only loose geometry remains, the definition exists solely outside the target drawing, or no usable double-door definition exists. No particular component name, insertion base point or primitive count is required. A verified external restriction can explain noncompletion but does not establish a completed definition; unavailable inspection alone does not establish absence.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+      "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
       "locator": "document",
       "clips": [
         {
@@ -17380,7 +17221,7 @@
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "criterion",
                 "description"
@@ -17450,7 +17291,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "description"
               ],
@@ -17713,7 +17554,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "description"
               ],
@@ -17931,7 +17772,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "description"
               ],
@@ -17951,7 +17792,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts",
+              "passage": "Build reusable components for the plan",
               "scope": [
                 "description"
               ],
@@ -18293,7 +18134,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "description"
               ],
@@ -18484,7 +18325,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "description"
               ],
@@ -18666,7 +18507,7 @@
       "criterion_sha256": "1a27b661a8f547c0531d7ee0fcba26381bd943da8989123c5cbaa9f61017149d",
       "description": "Full credit requires a retained reusable definition or equivalent native reusable structure containing the complete private-restroom assembly, coherent internal arrangement and a usable positioning reference. A usable retained component can qualify without a currently placed linked instance. Partial credit applies when useful assembly content exists but membership, editability, completeness or positioning-reference usability is deficient. No credit applies when no reusable assembly is retained, only loose content or an uncommitted preview exists, or the content is substantially unrelated to the required assembly. Count absence of the reusable assembly once here. Equivalent component names, entity decompositions and valid positioning-reference locations are acceptable. Reference dimensions, final placements, role-based layers and functional flipping remain binding under their dedicated outcomes. Evaluate the finished component rather than requiring an inherited definition or a particular creation history; missing runtime evidence alone is not a failed outcome.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+      "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
       "locator": "document",
       "clips": [
         {
@@ -18684,7 +18525,7 @@
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "criterion"
               ],
@@ -18704,7 +18545,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "criterion",
                 "description"
@@ -18726,7 +18567,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts",
+              "passage": "Build reusable components for the plan",
               "scope": [
                 "criterion",
                 "description"
@@ -18869,7 +18710,7 @@
       "criterion_sha256": "cae1e0cbd9de36459d0b5458b6f25bae170932831a1f43e15c4aeae52ba38fc8",
       "description": "Full credit requires retained interactive behavior that reverses the enclosure, entrance door, toilet and basin together while preserving their dimensions, internal relationships and editability. Equivalent reusable implementations qualify, including independently reusable copies retaining their controls. Partial credit applies when useful flipping remains but availability, transformation or preservation is incomplete. No functional credit applies when controls are absent or ineffective, or only static mirrored geometry remains. No particular parameter name, axis count or authoring sequence is required. Assess initial geometry, component completeness, static placement and layers under their existing conditions.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+      "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
       "locator": "document",
       "clips": [
         {
@@ -18887,7 +18728,7 @@
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "criterion"
               ],
@@ -18897,7 +18738,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations",
               "scope": [
                 "criterion",
                 "description"
@@ -19792,7 +19633,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts:",
+              "passage": "Build reusable components for the plan:",
               "scope": [
                 "description"
               ],
@@ -19954,7 +19795,7 @@
       "criterion_sha256": "a1075f613c092720ccb0701468f20b9a68c2a4edb61711f33d1c94f1c4abf243",
       "description": "Full credit when the retained component groups all existing intended window geometry and remains editable and available for repeated use. A native component definition, parametric grouped assembly or equivalent implementation qualifies; shared definitions and linked instances are not required. Partial credit when a useful component remains but some existing constituents are outside it, retention is incomplete or editability is limited. No credit when no usable reusable component remains in the target drawing, including loose geometry alone, a flattened image or discarded work. Assess missing or inaccurate profile content under geometry and width-control operation under the interactive-control outcome. No particular name, insertion origin, entity count or separate export is required. Missing verifier access leaves completion unresolved; reports alone do not establish a retained component.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+      "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
       "locator": "document",
       "clips": [
         {
@@ -19972,7 +19813,7 @@
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "criterion"
               ],
@@ -19993,7 +19834,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts",
+              "passage": "Build reusable components for the plan",
               "scope": [
                 "criterion",
                 "description"
@@ -20015,7 +19856,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls",
+              "passage": "Build reusable components for the plan",
               "scope": [
                 "criterion",
                 "description"
@@ -20105,7 +19946,7 @@
       "criterion_sha256": "ea5da31f922f4d4e01b18e27a06800cf148b4688386a587a1f096fc7de117ecc",
       "description": "Full credit when the retained control produces local window widths of 0.90 m and 1.36 m with coherent width-dependent geometry and preserved non-width profile and end dimensions. Measure width along the opening, including for rotated instances. Any exposed absolute width value must agree with the resulting width. Equivalent interactive implementations qualify without requiring shared definitions or linked instances. Partial credit when adjustment is partly functional, supports only one of the two reference widths, exposes inaccurate values or limits, or causes limited distortion or disconnection. No credit when interactive adjustment is absent or nonfunctional, or fitting relies solely on static geometry edits. Assess absolute profile correctness and reusable component organization separately, avoiding repeated deductions for unchanged geometric defects. No distinct new test instance, 1.20 m setting, selected state or editor-return checkpoint is required. Missing verifier access leaves functionality unresolved; claimed tests and blocker reports alone do not establish functionality.",
       "source": "instruction.md",
-      "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+      "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
       "locator": "document",
       "clips": [
         {
@@ -20123,7 +19964,7 @@
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "criterion"
               ],
@@ -20133,7 +19974,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls",
+              "passage": "Build reusable components for the plan",
               "scope": [
                 "criterion",
                 "description"
@@ -20166,7 +20007,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts",
+              "passage": "Build reusable components for the plan",
               "scope": [
                 "description"
               ],
@@ -20323,11 +20164,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -20446,11 +20287,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -20589,11 +20430,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -20722,11 +20563,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -20855,11 +20696,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -20998,11 +20839,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -21151,11 +20992,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -21284,11 +21125,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -21407,11 +21248,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -21530,11 +21371,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -21653,11 +21494,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units,",
+              "passage": "Label every room and residential unit named on the reference plan,",
               "scope": [
                 "criterion",
                 "description"
@@ -21766,11 +21607,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units,",
+              "passage": "Label every room and residential unit named on the reference plan,",
               "scope": [
                 "criterion",
                 "description"
@@ -21879,11 +21720,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units,",
+              "passage": "Label every room and residential unit named on the reference plan,",
               "scope": [
                 "criterion",
                 "description"
@@ -22008,7 +21849,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -22040,7 +21881,7 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 1",
@@ -22055,7 +21896,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -22287,7 +22128,7 @@
             },
             {
               "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.",
               "scope": [
                 "criterion",
                 "description"
@@ -22305,7 +22146,7 @@
       "criterion_sha256": "57b8b539ac92966cf93a14c782eab775c20a9873376a8ec3a23a6405ed783b8e",
       "description": "Full credit requires an editable viewport belonging to Layout1, identifiable ground-floor plan content through it, assignment of its frame to the dedicated viewport layer, and suppression of that frame in plotted output. Partial credit applies when a proper Layout1 viewport exists but plan visibility, frame assignment, or suppression is incomplete. No credit applies when that viewport is absent, belongs to another layout, or is only an outline or static image. Do not require a particular viewport shape, size, or position; physical scale and layer configuration are assessed separately. Judge the completed state without requiring a particular inspection tool or export as proof.",
       "source": "instruction.md",
-      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:  \n- `Layout1`: Present the ground-floor plan at `1:200`.",
+      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.  \n- `Layout1`: Present the ground-floor plan at `1:200`.",
       "locator": "document",
       "clips": [
         {
@@ -22323,7 +22164,7 @@
           "references": [
             {
               "locator": "Lines 5–6",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:  \n- `Layout1`: Present the ground-floor plan at `1:200`.",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.  \n- `Layout1`: Present the ground-floor plan at `1:200`.",
               "scope": [
                 "criterion"
               ],
@@ -22355,7 +22196,7 @@
             },
             {
               "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.",
               "scope": [
                 "criterion",
                 "description"
@@ -22420,7 +22261,7 @@
       "criterion_sha256": "c36f84c22213529f6417b9ca82b15808ac229ecf33019864d4ec090e08ff4be9",
       "description": "Full credit requires a complete editable rectangular border presented on Layout1, accepting equivalent CAD constructions. The border may be created in paper space, displayed from model space, or supplied through a resolved editable reference. It may share geometry with an integrated title block; a title-block table qualifies only if it also provides the required rectangular boundary around the sheet drawing area. The sheet border must appear in plotted output while viewport frames remain non-plotting. Partial credit applies to recognizable but incomplete border geometry or a visible border that is not editable. No credit applies when Layout1 lacks the required sheet border, including when only a non-plotting viewport frame or a title-block table without a sheet boundary is provided. No exact coordinates, inset, dimensions, layer, color, lineweight, entity representation, or construction space are prescribed. Saving is assessed separately, and missing runtime evidence alone does not establish failure.",
       "source": "instruction.md",
-      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.",
       "locator": "document",
       "clips": [
         {
@@ -22438,7 +22279,7 @@
           "references": [
             {
               "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.",
               "scope": [
                 "criterion",
                 "description"
@@ -22715,7 +22556,7 @@
             },
             {
               "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.",
               "scope": [
                 "criterion",
                 "description"
@@ -23119,7 +22960,7 @@
       "criterion_sha256": "c6b3a6f067505e3638ad8f5bbaa3d1a0c8abb3ababdd12536022a9f3ac5458e7",
       "description": "Full credit if two separate editable presentation sheets named exactly Layout1 and details exist in the completed drawing. Partial credit if an identifiable separate detail sheet exists under another name, or details exists but Layout1 is missing. No credit if neither details nor an identifiable substitute detail sheet exists in the intended drawing. Accept any correct creation method and tab order; duplication provenance is unnecessary. Layout1's content and scale remain assessed by the earlier surviving outcomes. Judge the finished drawing rather than the presence of a recorded creation checkpoint, and do not treat a completion claim or blocker report as the sheet itself.",
       "source": "instruction.md",
-      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:  \n- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.  \n- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
+      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.  \n- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.  \n- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
       "locator": "document",
       "clips": [
         {
@@ -23137,7 +22978,7 @@
           "references": [
             {
               "locator": "Lines 5–7",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:  \n- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.  \n- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.  \n- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.  \n- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
               "scope": [
                 "criterion"
               ],
@@ -23194,10 +23035,10 @@
     },
     {
       "id": "outcome_36c068e83fa987f08fe9",
-      "criterion_sha256": "1637a4023881a8e0a0042d6db5b135ae837a979c65a7f9fd6cb20b7f30996b75",
-      "description": "Full credit for an editable rectangular sheet boundary, either separate or integrated into the title block. A combined assembly qualifies when its perimeter borders the drawing area. Partial credit for a recognizable incomplete or noneditable border. No credit when the sheet has no boundary, or only an interior title-table outline or viewport frame. Accept equivalent editable constructions.",
+      "criterion_sha256": "11379dd6a8965edaf98558712f6a7279d7109cf6951953a1d0233926e577a553",
+      "description": "Full credit for a complete, editable rectangular boundary around the drawing area that is visible in the details sheet’s plot preview. A separate border or the perimeter of a combined title block qualifies. Partial credit for a recognizable border that is incomplete, noneditable, or missing from plot preview. No credit when the sheet has no border or only an interior title-table outline or viewport frame. Accept equivalent editable constructions.",
       "source": "instruction.md",
-      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames",
+      "passage": "Both the border and the title block must be visible in each sheet’s plot preview.",
       "locator": "Line 5",
       "clips": [
         {
@@ -23211,11 +23052,22 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames",
+          "highlight": "Both the border and the title block must be visible in each sheet’s plot preview.",
           "references": [
             {
               "locator": "Line 5",
               "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames",
+              "scope": [
+                "criterion",
+                "description"
+              ],
+              "provenance": [
+                "source inspection"
+              ]
+            },
+            {
+              "locator": "Line 5",
+              "passage": "Both the border and the title block must be visible in each sheet’s plot preview.",
               "scope": [
                 "criterion",
                 "description"
@@ -23230,11 +23082,11 @@
     },
     {
       "id": "outcome_d910d9d2c062b6a8784f",
-      "criterion_sha256": "2b41fd81bfa545d77cfa2451acb8fbe99800a3dc919779222a819205d6f6e6b9",
-      "description": "Full credit for an identifiable editable title block associated with details. A shared block definition is acceptable when details has its own sheet-associated instance. Partial credit for recognizable but incomplete or noneditable title-block content on details. No credit if the title block is absent, exists only on another sheet, or is merely claimed. Layout1-specific field values are not required, and its inherited title block is not re-scored. If a verified external limitation prevents establishing the details title block, record that blocker in reality_notes or the scoring justification; distinguish it from an omission when an equivalent creation route is available. If details itself is unavailable, use the established cause of that dependency failure. Blocker reporting does not substitute for the required title-block outcome.",
+      "criterion_sha256": "76b4fdeeb04796624cbd361bd40e72e7cb85cb6fb4997a021b85487a6d9c59fd",
+      "description": "Full credit for an identifiable editable title block associated with details and visible in its plot preview. A shared block definition is acceptable when details has its own sheet-associated instance. Partial credit for a recognizable title block on details that is incomplete, noneditable, or missing from plot preview. No credit if the title block is absent, exists only on another sheet, or is merely claimed. Layout1-specific field values are not required, and its inherited title block is not re-scored. If a verified external limitation prevents establishing the details title block, record that blocker in reality_notes or the scoring justification; distinguish it from an omission when an equivalent creation route is available. If details itself is unavailable, use the established cause of that dependency failure. Blocker reporting does not substitute for the required title-block outcome.",
       "source": "instruction.md",
-      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
-      "locator": "document",
+      "passage": "Both the border and the title block must be visible in each sheet’s plot preview.",
+      "locator": "Line 5",
       "clips": [
         {
           "segment_id": 808,
@@ -23247,11 +23099,11 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "rectangular sheet borders, title blocks",
+          "highlight": "Both the border and the title block must be visible in each sheet’s plot preview.",
           "references": [
             {
               "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.",
               "scope": [
                 "criterion",
                 "description"
@@ -23557,7 +23409,7 @@
             },
             {
               "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.",
               "scope": [
                 "criterion",
                 "description"
@@ -23605,7 +23457,7 @@
       "criterion_sha256": "ae2687c9df0b1ad809cccd6a36c4318a0c4a96f5e01330b38096c597597d901c",
       "description": "Full credit for two useful detail views arranged side by side, with any window/profile viewport frame on a dedicated viewport layer and excluded from plotted output. Either side is acceptable. Accept separate viewports or another correct arrangement within the editable drawing; model-space placement and independent per-detail viewport controls are not required. Partial credit when one required detail is missing, lateral arrangement is incomplete, or an actual window/profile viewport frame lacks dedicated membership or effective suppression. No credit when neither requested detail is usefully presented. Reserved empty space alone does not establish a detail view. Assess specific geometry, framing, exact physical scales, and annotation requirements separately. No particular viewport shape, width, gap, or creation route is required.",
       "source": "instruction.md",
-      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:  \n- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.  \n- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
+      "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.  \n- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.  \n- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
       "locator": "document",
       "clips": [
         {
@@ -23623,7 +23475,7 @@
           "references": [
             {
               "locator": "Lines 5–7",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:  \n- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.  \n- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.  \n- `Layout1`: Present the ground-floor plan at `1:200`. Complete the title block with `Project`, `Location`, `Drawing name`, `Drawn`, `Scale`, and `Date` fields, recording Project `Example 1`, Drawing name `Ground floor`, and Scale `1:200`.  \n- `details`: Present two dimensioned detail views side by side—the single-door detail at `1:16` and the window/profile detail at `1:10`.",
               "scope": [
                 "criterion"
               ],
@@ -23655,7 +23507,7 @@
             },
             {
               "locator": "Line 5",
-              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames:",
+              "passage": "Prepare two presentation sheets with rectangular sheet borders, title blocks, and hidden (non-plotting) viewport frames. Both the border and the title block must be visible in each sheet’s plot preview.",
               "scope": [
                 "criterion",
                 "description"
@@ -24578,7 +24430,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units, and dimension the exterior plan and the sheeted details in meters using annotative dimensions scaled for their respective views.",
+              "passage": "Label every room and residential unit named on the reference plan, and dimension the exterior plan and the sheeted details in meters using annotative dimensions scaled for their respective views.",
               "scope": [
                 "description"
               ],
@@ -24588,7 +24440,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "description"
               ],
@@ -24778,7 +24630,7 @@
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "criterion",
                 "description"
@@ -24990,7 +24842,7 @@
           "references": [
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "criterion",
                 "description"
@@ -25199,7 +25051,7 @@
       "sources": [
         {
           "name": "instruction.md",
-          "highlight": "Label all rooms and residential units",
+          "highlight": "Label every room and residential unit named on the reference plan",
           "references": [
             {
               "locator": "Line 1",
@@ -25225,7 +25077,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units",
+              "passage": "Label every room and residential unit named on the reference plan",
               "scope": [
                 "criterion",
                 "description"
@@ -25620,7 +25472,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Label all rooms and residential units, and dimension the exterior plan and the sheeted details in meters using annotative dimensions scaled for their respective views.",
+              "passage": "Label every room and residential unit named on the reference plan, and dimension the exterior plan and the sheeted details in meters using annotative dimensions scaled for their respective views.",
               "scope": [
                 "criterion",
                 "description"
@@ -26026,7 +25878,7 @@
             },
             {
               "locator": "Line 3",
-              "passage": "Build reusable components with interactive controls where elements repeat across varied layouts: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
+              "passage": "Build reusable components for the plan: flippable single-door and private-restroom assemblies for opposing orientations, a symmetrical double-door component, and an adjustable-width window component that fits the varying opening widths.",
               "scope": [
                 "description"
               ],
