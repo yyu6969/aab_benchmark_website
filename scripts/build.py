@@ -169,7 +169,7 @@ def parse_tasks(source: str) -> list[dict]:
                     if len(files) != len(clips) or len(intervals) != len(clips):
                         raise ValueError(f"Repeated clip for {slug} criterion {cells[0]}")
                     links = ", ".join(f"[{c['label']}](https://yyu6969.github.io/aab_benchmark_website/{c['file']})" for c in clips)
-                    if not links or cells[3] != links:
+                    if cells[3] != (links or "No direct clip"):
                         raise ValueError(f"Incorrect clip references for {slug} criterion {cells[0]}")
                     rubric.update({k: detail[k] for k in ("id", "description", "source", "sources", "passage", "locator", "clips")})
                 rubrics.append(rubric)
@@ -408,7 +408,7 @@ def build_task(task: dict, tasks: list[dict]) -> str:
             links = [f'<a class="clip-link" href="{esc(prefix+c["file"])}?context={CONTEXT_SECONDS}" data-criterion="{number}" '
                      f'aria-label="Play criterion {number} clip, {esc(c["label"])}">{esc(c["label"])}</a>'
                      for c in rubric["clips"]]
-            clip_cell = '<td class="rubric-clips">' + ' '.join(links) + '</td>'
+            clip_cell = '<td class="rubric-clips">' + (' '.join(links) or 'No direct clip') + '</td>'
         rows.append(f'<tr id="rubric-{rubric["number"]}"><th scope="row"><a href="#rubric-{rubric["number"]}" aria-label="Criterion {rubric["number"]} permalink">{rubric["number"]:02d}</a></th><td>{inline(rubric["criterion"])}</td><td class="rubric-source">{source}</td>{clip_cell}</tr>')
     evidence_ui = "".join(popovers)
     if reviewed:

@@ -9863,8 +9863,8 @@
     },
     {
       "id": "outcome_64e0ebedd477cf89cf39",
-      "criterion_sha256": "3c8587eb58482bae9d914637fa4055f4694180b4bbfd2453cf9a5efed88c876f",
-      "description": "Full credit if the correct sequence has the requested export target or equivalent native settings for 3840×2160 UHD, an appropriate frame cadence for the 30 fps sequence, and YouTube-compatible media encoding. Partial credit if relevant settings are prepared but the equivalent target is incomplete or partly incorrect. No credit if the target is absent, incorrect, or assigned to another sequence. A literal preset label, visible export view, saved project or rendered video is not necessary to establish this configuration.",
+      "criterion_sha256": "53d358d40fa6907b512bfe6767d7e9c6e43077e57b6614ab7a84084e85bdd1a1",
+      "description": "Full credit if the YouTube sequence is ready for the requested 4K UHD export or equivalent settings and the full export has neither started nor been committed to run before approval. A pending configuration or explicitly held job qualifies. Partial credit if the settings are incomplete or incorrect while rendering remains on hold, or if the sequence is correctly configured but the full export is started prematurely. No credit if neither condition is met.",
       "source": "instruction.md",
       "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
       "locator": "document",
@@ -9875,6 +9875,13 @@
           "end_sec": 1743.75,
           "file": "assets/rubric-clips/edit-youtube-video/segment-193.webm",
           "label": "29:03–29:03.75"
+        },
+        {
+          "segment_id": 195,
+          "start_sec": 1751.75,
+          "end_sec": 1753.25,
+          "file": "assets/rubric-clips/edit-youtube-video/segment-195.webm",
+          "label": "29:11.75–29:13.25"
         }
       ],
       "sources": [
@@ -9959,58 +9966,30 @@
       ]
     },
     {
-      "id": "outcome_71f856f0eba57261fc83",
-      "criterion_sha256": "5ad79177ec9e465e5bf69169778f1fd73ad4d6f2a468230dc482b3f21923157b",
-      "description": "Full credit if rendering has neither started nor been committed to run before approval; a pending configuration or explicitly held job is acceptable. No credit if rendering starts or an export job is committed to run without approval. No rendered video, separate approval dialog or approval request is required. Assess this boundary independently of export-configuration success.",
+      "id": "outcome_eb83767e37087b62e9e1",
+      "criterion_sha256": "dc65c043d4f00bcd8c892ffb91180f01b6496dcb2d802a15c074101d18cad013",
+      "description": "Full credit if the native project file is present at the exact assigned path and opens with the completed, editable YouTube sequence. Partial credit if the editable project is available at another path or the assigned file reopens with only part of the sequence. No credit if there is no usable editable project. A rendered video alone cannot satisfy delivery.",
       "source": "instruction.md",
       "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
       "locator": "document",
-      "clips": [
-        {
-          "segment_id": 195,
-          "start_sec": 1751.75,
-          "end_sec": 1753.25,
-          "file": "assets/rubric-clips/edit-youtube-video/segment-195.webm",
-          "label": "29:11.75–29:13.25"
-        }
-      ],
+      "clips": [],
       "sources": [
         {
           "name": "instruction.md",
+          "highlight": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive`",
           "references": [
             {
               "locator": "Line 7",
               "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
               "scope": [
-                "criterion"
-              ],
-              "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval",
-              "scope": [
                 "criterion",
                 "description"
               ],
               "provenance": [
-                "completion"
-              ]
-            },
-            {
-              "locator": "Line 7",
-              "passage": "(no rendered video file is required at this stage)",
-              "scope": [
-                "description"
-              ],
-              "provenance": [
-                "completion"
+                "assignment review"
               ]
             }
-          ],
-          "highlight": "upon approval"
+          ]
         }
       ]
     }

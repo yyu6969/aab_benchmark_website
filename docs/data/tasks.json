@@ -14034,10 +14034,10 @@
       },
       {
         "number": 37,
-        "criterion": "The YouTube sequence is prepared for YouTube 2160p 4K Ultra HD export or a functionally equivalent 3840×2160 UHD output.",
+        "criterion": "The YouTube sequence is configured for YouTube 2160p 4K Ultra HD export or an equivalent 3840×2160 UHD output, with rendering held until approval.",
         "source": "instruction.md",
         "id": "outcome_64e0ebedd477cf89cf39",
-        "description": "Full credit if the correct sequence has the requested export target or equivalent native settings for 3840×2160 UHD, an appropriate frame cadence for the 30 fps sequence, and YouTube-compatible media encoding. Partial credit if relevant settings are prepared but the equivalent target is incomplete or partly incorrect. No credit if the target is absent, incorrect, or assigned to another sequence. A literal preset label, visible export view, saved project or rendered video is not necessary to establish this configuration.",
+        "description": "Full credit if the YouTube sequence is ready for the requested 4K UHD export or equivalent settings and the full export has neither started nor been committed to run before approval. A pending configuration or explicitly held job qualifies. Partial credit if the settings are incomplete or incorrect while rendering remains on hold, or if the sequence is correctly configured but the full export is started prematurely. No credit if neither condition is met.",
         "sources": [
           {
             "name": "instruction.md",
@@ -14129,57 +14129,7 @@
             "label": "29:03–29:03.75",
             "playback_start_sec": 1741.0,
             "playback_end_sec": 1745.75
-          }
-        ]
-      },
-      {
-        "number": 38,
-        "criterion": "Rendering of the prepared YouTube export remains on hold until approval.",
-        "source": "instruction.md",
-        "id": "outcome_71f856f0eba57261fc83",
-        "description": "Full credit if rendering has neither started nor been committed to run before approval; a pending configuration or explicitly held job is acceptable. No credit if rendering starts or an export job is committed to run without approval. No rendered video, separate approval dialog or approval request is required. Assess this boundary independently of export-configuration success.",
-        "sources": [
-          {
-            "name": "instruction.md",
-            "references": [
-              {
-                "locator": "Line 7",
-                "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
-                "scope": [
-                  "criterion"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Line 7",
-                "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval",
-                "scope": [
-                  "criterion",
-                  "description"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Line 7",
-                "passage": "(no rendered video file is required at this stage)",
-                "scope": [
-                  "description"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              }
-            ],
-            "highlight": "upon approval"
-          }
-        ],
-        "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
-        "locator": "document",
-        "clips": [
+          },
           {
             "segment_id": 195,
             "start_sec": 1751.75,
@@ -14190,6 +14140,35 @@
             "playback_end_sec": 1755.25
           }
         ]
+      },
+      {
+        "number": 38,
+        "criterion": "The completed project is saved at /home/ga/Documents/Justin Edit/Justin Edit.kdenlive and reopens with the editable YouTube sequence.",
+        "source": "instruction.md",
+        "id": "outcome_eb83767e37087b62e9e1",
+        "description": "Full credit if the native project file is present at the exact assigned path and opens with the completed, editable YouTube sequence. Partial credit if the editable project is available at another path or the assigned file reopens with only part of the sequence. No credit if there is no usable editable project. A rendered video alone cannot satisfy delivery.",
+        "sources": [
+          {
+            "name": "instruction.md",
+            "highlight": "deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive`",
+            "references": [
+              {
+                "locator": "Line 7",
+                "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
+                "scope": [
+                  "criterion",
+                  "description"
+                ],
+                "provenance": [
+                  "assignment review"
+                ]
+              }
+            ]
+          }
+        ],
+        "passage": "Prepare the project for \"YouTube 2160p 4K Ultra HD\" export upon approval, and deliver the completed editable project at `/home/ga/Documents/Justin Edit/Justin Edit.kdenlive` (no rendered video file is required at this stage).",
+        "locator": "document",
+        "clips": []
       }
     ],
     "material_files": [
@@ -14670,25 +14649,28 @@
         },
         "outcome_64e0ebedd477cf89cf39": {
           "score": 1,
-          "reason": "The saved project identifies YouTube as the active sequence and assigns it the YouTube 2160p 4K Ultra HD render profile (obs_sequence, obs_sequence_p2). That preset specifies 3840×2160 progressive at 30 fps with H.264 video and AAC audio in MP4 (obs_step_47_p1). The recorded render dialog also shows the preset selected (obs_frame_pi_291_1).",
+          "reason": "The saved YouTube sequence retained the “YouTube 2160p 4K Ultra HD” export preset (obs_sequence, obs_step_1397_p1). Its settings specify 3840×2160 at 30 fps (obs_step_47_p1). The render dialog showed “Full project” selected (obs_frame_pi_291_1). The recorded actions dismissed the dialog and left Kdenlive in the editor, with no full export started or queued before approval (obs_step_293_p1, obs_step_349_p1, obs_screen).",
           "observations": [
             "obs_frame_pi_291_1",
+            "obs_screen",
             "obs_sequence",
-            "obs_sequence_p2",
+            "obs_step_1397_p1",
+            "obs_step_293_p1",
+            "obs_step_349_p1",
             "obs_step_47_p1"
           ],
           "origin": "fresh_archived_verification"
         },
-        "outcome_71f856f0eba57261fc83": {
+        "outcome_eb83767e37087b62e9e1": {
           "score": 1,
-          "reason": "The recorded workflow left the UHD export pending. The render dialog showed the selected preset and Render to File button, followed by Escape and a return to the editor (obs_frame_pi_291_1, obs_step_293_p1, obs_step_349_p1). Later checks produced a temporary JPEG and a short WAV excerpt (obs_step_1359_p1, obs_step_1381_p1). The final screen shows the editable timeline, with no observed launch or commitment of the full YouTube export (obs_screen).",
+          "reason": "The archive confirms the 19,216-byte native project at /home/ga/Documents/Justin Edit/Justin Edit.kdenlive (obs_archive_delivered_project). Kdenlive reopened that exact path (obs_step_1387_p1, obs_step_1389_p1). The saved YouTube sequence contains seven presenter cuts with matching dialogue, a title, two cutaways, and a separate music track (obs_sequence). The reopened workspace shows those clips on four editable tracks, with “JUSTIN BROWN” visible in the project monitor (obs_frame_pi_1391_1, obs_screen).",
           "observations": [
-            "obs_frame_pi_291_1",
+            "obs_archive_delivered_project",
+            "obs_frame_pi_1391_1",
             "obs_screen",
-            "obs_step_1359_p1",
-            "obs_step_1381_p1",
-            "obs_step_293_p1",
-            "obs_step_349_p1"
+            "obs_sequence",
+            "obs_step_1387_p1",
+            "obs_step_1389_p1"
           ],
           "origin": "fresh_archived_verification"
         }
@@ -16213,37 +16195,6 @@
             "result": "The preset specifies 3840×2160 progressive video at 30 fps."
           }
         },
-        "obs_step_1359_p1": {
-          "kind": "tools",
-          "source": "trajectory",
-          "label": "Step 1359 · bash",
-          "record_sha256": "ae88fba942e29f128cea4947c6be6bc4378f5ba084cde137a8c9bc4d6c546cc1",
-          "record": {
-            "step": 1359,
-            "timestamp": "2026-11-25T06:20:38.250132+00:00",
-            "status": "completed",
-            "tool_calls": [
-              {
-                "tool_call_id": "call_15764032622698439044",
-                "function_name": "bash",
-                "arguments": {
-                  "command": "PULSE_SERVER=none melt \"/home/ga/test_step6.kdenlive\" in=723 out=724 -consumer avformat:/tmp/render_f723.jpg 2>&1\nls -la /tmp/render_f723.jpg\n",
-                  "timeout": 30
-                }
-              }
-            ],
-            "results": [
-              {
-                "call_id": "call_15764032622698439044",
-                "text": "Current Frame:          1, percentage:         50\r[swscaler @ 0x7ebdd8085380] deprecated pixel format used, make sure you did set range correctly\n[swscaler @ 0x7ebdd83692c0] deprecated pixel format used, make sure you did set range correctly\n[image2 @ 0x7ebdd8000f40] Could not get frame filename number 2 from pattern '/tmp/render_f723.jpg'. Use '-frames:v 1' for a single image, or '-update' option, or use a pattern such as %03d within the filename.\n[consumer avformat] error writing video frame: -22\n\n-rw-r--r-- 1 ga ga 96979 Nov 25 06:20 /tmp/render_f723.jpg\n"
-              }
-            ]
-          },
-          "explanation": {
-            "purpose": "Render a still for inspection.",
-            "result": "The command produced a JPEG and reported an error writing another image."
-          }
-        },
         "obs_step_293_p1": {
           "kind": "tools",
           "source": "trajectory",
@@ -16305,6 +16256,107 @@
             "purpose": "Inspect the render dialog’s script action.",
             "result": "The command listed the open windows after interacting with the dialog."
           }
+        },
+        "obs_archive_delivered_project": {
+          "kind": "analysis",
+          "source": "archive_analysis",
+          "label": "Delivered project file",
+          "record_sha256": "dce141fbeee9e9325954c27c19ea9aa353129d652acf2b30ed016f0864874334",
+          "record": {
+            "artifact_manifest": {
+              "source": "/home/ga/Documents/Justin Edit/Justin Edit.kdenlive",
+              "destination": "artifacts/home/ga/Documents/Justin Edit/Justin Edit.kdenlive",
+              "type": "file",
+              "status": "ok",
+              "service": null,
+              "exclude": []
+            },
+            "project_sha256": "af907d38a02313a5908cc44b7a0070f09042ec48e202f777da3607987e12d91d",
+            "file_bytes": 19216,
+            "sequence_names": [
+              "YouTube"
+            ],
+            "playlist_entries": {
+              "playlist0": 1,
+              "playlist2": 7,
+              "playlist4": 7,
+              "playlist6": 3,
+              "main_bin": 8
+            }
+          },
+          "explanation": {
+            "purpose": "Check the captured guest path and read the editable project structure.",
+            "result": "The archived file contains the YouTube sequence and populated timeline playlists. The checksum matches the file captured from the required guest path."
+          }
+        },
+        "obs_frame_pi_1391_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 1391",
+          "record_sha256": "b654d7cc9e14f034a1e9f74d11797182bbf0b05463cd7d82b6bde271dc7c64c3",
+          "file": "pi_1391_1.jpg"
+        },
+        "obs_step_1387_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 1387 · bash",
+          "record_sha256": "284fd9c616d82aa3fcfc4b48c9664997f525499eb750b3d5bac389c3a99f9797",
+          "record": {
+            "step": 1387,
+            "timestamp": "2026-11-25T06:27:22.781419+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_17311772357269102170",
+                "function_name": "bash",
+                "arguments": {
+                  "timeout": 30,
+                  "command": "DISPLAY=:1 setsid /usr/local/bin/kdenlive \"/home/ga/Documents/Justin Edit/Justin Edit.kdenlive\" >/tmp/kdenlive_final.log 2>&1 &\nsleep 5\nwmctrl -l\n"
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_17311772357269102170",
+                "text": "0x02400003 -1 general-vm @!0,0;BDHF\n0x01e0000a  0 general-vm Kdenlive\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Reopen the delivered project in Kdenlive.",
+            "result": "The launch command specifies the required guest path."
+          }
+        },
+        "obs_step_1389_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 1389 · bash",
+          "record_sha256": "79bb0d6cd1f2725f5e7708032c335ecdb48b6736081249c6ff08790043a8ed59",
+          "record": {
+            "step": 1389,
+            "timestamp": "2026-11-25T06:27:44.497544+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_16118370831902398609",
+                "function_name": "bash",
+                "arguments": {
+                  "timeout": 30,
+                  "command": "sleep 2\nwmctrl -l\n"
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_16118370831902398609",
+                "text": "0x02400003 -1 general-vm @!0,0;BDHF\n0x01e00011  0 general-vm Justin Edit / HD 1080p 30 fps — Kdenlive\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Check the application after reopening the project.",
+            "result": "The window title identifies Justin Edit in Kdenlive."
+          }
         }
       },
       "archive": {
@@ -16323,7 +16375,7 @@
         }
       ],
       "reverification": {
-        "checklist_sha256": "3db23341212b855b1895fe15f8288453c3905ceb30f014c48eb03d3dbaa49a4f",
+        "checklist_sha256": "10bc26398673c1d673b59eb04680cec0bb6ceb836ea88bc7f84bb29ee3356efc",
         "changed": 34,
         "carried": 4,
         "results": "reverification.zip",

@@ -2400,25 +2400,28 @@
       },
       "outcome_64e0ebedd477cf89cf39": {
         "score": 1,
-        "reason": "The saved project identifies YouTube as the active sequence and assigns it the YouTube 2160p 4K Ultra HD render profile (obs_sequence, obs_sequence_p2). That preset specifies 3840×2160 progressive at 30 fps with H.264 video and AAC audio in MP4 (obs_step_47_p1). The recorded render dialog also shows the preset selected (obs_frame_pi_291_1).",
+        "reason": "The saved YouTube sequence retained the “YouTube 2160p 4K Ultra HD” export preset (obs_sequence, obs_step_1397_p1). Its settings specify 3840×2160 at 30 fps (obs_step_47_p1). The render dialog showed “Full project” selected (obs_frame_pi_291_1). The recorded actions dismissed the dialog and left Kdenlive in the editor, with no full export started or queued before approval (obs_step_293_p1, obs_step_349_p1, obs_screen).",
         "observations": [
           "obs_frame_pi_291_1",
+          "obs_screen",
           "obs_sequence",
-          "obs_sequence_p2",
+          "obs_step_1397_p1",
+          "obs_step_293_p1",
+          "obs_step_349_p1",
           "obs_step_47_p1"
         ],
         "origin": "fresh_archived_verification"
       },
-      "outcome_71f856f0eba57261fc83": {
+      "outcome_eb83767e37087b62e9e1": {
         "score": 1,
-        "reason": "The recorded workflow left the UHD export pending. The render dialog showed the selected preset and Render to File button, followed by Escape and a return to the editor (obs_frame_pi_291_1, obs_step_293_p1, obs_step_349_p1). Later checks produced a temporary JPEG and a short WAV excerpt (obs_step_1359_p1, obs_step_1381_p1). The final screen shows the editable timeline, with no observed launch or commitment of the full YouTube export (obs_screen).",
+        "reason": "The archive confirms the 19,216-byte native project at /home/ga/Documents/Justin Edit/Justin Edit.kdenlive (obs_archive_delivered_project). Kdenlive reopened that exact path (obs_step_1387_p1, obs_step_1389_p1). The saved YouTube sequence contains seven presenter cuts with matching dialogue, a title, two cutaways, and a separate music track (obs_sequence). The reopened workspace shows those clips on four editable tracks, with “JUSTIN BROWN” visible in the project monitor (obs_frame_pi_1391_1, obs_screen).",
         "observations": [
-          "obs_frame_pi_291_1",
+          "obs_archive_delivered_project",
+          "obs_frame_pi_1391_1",
           "obs_screen",
-          "obs_step_1359_p1",
-          "obs_step_1381_p1",
-          "obs_step_293_p1",
-          "obs_step_349_p1"
+          "obs_sequence",
+          "obs_step_1387_p1",
+          "obs_step_1389_p1"
         ],
         "origin": "fresh_archived_verification"
       }
@@ -3943,37 +3946,6 @@
           "result": "The preset specifies 3840×2160 progressive video at 30 fps."
         }
       },
-      "obs_step_1359_p1": {
-        "kind": "tools",
-        "source": "trajectory",
-        "label": "Step 1359 · bash",
-        "record_sha256": "ae88fba942e29f128cea4947c6be6bc4378f5ba084cde137a8c9bc4d6c546cc1",
-        "record": {
-          "step": 1359,
-          "timestamp": "2026-11-25T06:20:38.250132+00:00",
-          "status": "completed",
-          "tool_calls": [
-            {
-              "tool_call_id": "call_15764032622698439044",
-              "function_name": "bash",
-              "arguments": {
-                "command": "PULSE_SERVER=none melt \"/home/ga/test_step6.kdenlive\" in=723 out=724 -consumer avformat:/tmp/render_f723.jpg 2>&1\nls -la /tmp/render_f723.jpg\n",
-                "timeout": 30
-              }
-            }
-          ],
-          "results": [
-            {
-              "call_id": "call_15764032622698439044",
-              "text": "Current Frame:          1, percentage:         50\r[swscaler @ 0x7ebdd8085380] deprecated pixel format used, make sure you did set range correctly\n[swscaler @ 0x7ebdd83692c0] deprecated pixel format used, make sure you did set range correctly\n[image2 @ 0x7ebdd8000f40] Could not get frame filename number 2 from pattern '/tmp/render_f723.jpg'. Use '-frames:v 1' for a single image, or '-update' option, or use a pattern such as %03d within the filename.\n[consumer avformat] error writing video frame: -22\n\n-rw-r--r-- 1 ga ga 96979 Nov 25 06:20 /tmp/render_f723.jpg\n"
-            }
-          ]
-        },
-        "explanation": {
-          "purpose": "Render a still for inspection.",
-          "result": "The command produced a JPEG and reported an error writing another image."
-        }
-      },
       "obs_step_293_p1": {
         "kind": "tools",
         "source": "trajectory",
@@ -4035,6 +4007,107 @@
           "purpose": "Inspect the render dialog’s script action.",
           "result": "The command listed the open windows after interacting with the dialog."
         }
+      },
+      "obs_archive_delivered_project": {
+        "kind": "analysis",
+        "source": "archive_analysis",
+        "label": "Delivered project file",
+        "record_sha256": "dce141fbeee9e9325954c27c19ea9aa353129d652acf2b30ed016f0864874334",
+        "record": {
+          "artifact_manifest": {
+            "source": "/home/ga/Documents/Justin Edit/Justin Edit.kdenlive",
+            "destination": "artifacts/home/ga/Documents/Justin Edit/Justin Edit.kdenlive",
+            "type": "file",
+            "status": "ok",
+            "service": null,
+            "exclude": []
+          },
+          "project_sha256": "af907d38a02313a5908cc44b7a0070f09042ec48e202f777da3607987e12d91d",
+          "file_bytes": 19216,
+          "sequence_names": [
+            "YouTube"
+          ],
+          "playlist_entries": {
+            "playlist0": 1,
+            "playlist2": 7,
+            "playlist4": 7,
+            "playlist6": 3,
+            "main_bin": 8
+          }
+        },
+        "explanation": {
+          "purpose": "Check the captured guest path and read the editable project structure.",
+          "result": "The archived file contains the YouTube sequence and populated timeline playlists. The checksum matches the file captured from the required guest path."
+        }
+      },
+      "obs_frame_pi_1391_1": {
+        "kind": "screenshots",
+        "source": "recorded_screenshot",
+        "label": "Screenshot · step 1391",
+        "record_sha256": "b654d7cc9e14f034a1e9f74d11797182bbf0b05463cd7d82b6bde271dc7c64c3",
+        "file": "pi_1391_1.jpg"
+      },
+      "obs_step_1387_p1": {
+        "kind": "tools",
+        "source": "trajectory",
+        "label": "Step 1387 · bash",
+        "record_sha256": "284fd9c616d82aa3fcfc4b48c9664997f525499eb750b3d5bac389c3a99f9797",
+        "record": {
+          "step": 1387,
+          "timestamp": "2026-11-25T06:27:22.781419+00:00",
+          "status": "completed",
+          "tool_calls": [
+            {
+              "tool_call_id": "call_17311772357269102170",
+              "function_name": "bash",
+              "arguments": {
+                "timeout": 30,
+                "command": "DISPLAY=:1 setsid /usr/local/bin/kdenlive \"/home/ga/Documents/Justin Edit/Justin Edit.kdenlive\" >/tmp/kdenlive_final.log 2>&1 &\nsleep 5\nwmctrl -l\n"
+              }
+            }
+          ],
+          "results": [
+            {
+              "call_id": "call_17311772357269102170",
+              "text": "0x02400003 -1 general-vm @!0,0;BDHF\n0x01e0000a  0 general-vm Kdenlive\n"
+            }
+          ]
+        },
+        "explanation": {
+          "purpose": "Reopen the delivered project in Kdenlive.",
+          "result": "The launch command specifies the required guest path."
+        }
+      },
+      "obs_step_1389_p1": {
+        "kind": "tools",
+        "source": "trajectory",
+        "label": "Step 1389 · bash",
+        "record_sha256": "79bb0d6cd1f2725f5e7708032c335ecdb48b6736081249c6ff08790043a8ed59",
+        "record": {
+          "step": 1389,
+          "timestamp": "2026-11-25T06:27:44.497544+00:00",
+          "status": "completed",
+          "tool_calls": [
+            {
+              "tool_call_id": "call_16118370831902398609",
+              "function_name": "bash",
+              "arguments": {
+                "timeout": 30,
+                "command": "sleep 2\nwmctrl -l\n"
+              }
+            }
+          ],
+          "results": [
+            {
+              "call_id": "call_16118370831902398609",
+              "text": "0x02400003 -1 general-vm @!0,0;BDHF\n0x01e00011  0 general-vm Justin Edit / HD 1080p 30 fps — Kdenlive\n"
+            }
+          ]
+        },
+        "explanation": {
+          "purpose": "Check the application after reopening the project.",
+          "result": "The window title identifies Justin Edit in Kdenlive."
+        }
       }
     },
     "archive": {
@@ -4053,7 +4126,7 @@
       }
     ],
     "reverification": {
-      "checklist_sha256": "3db23341212b855b1895fe15f8288453c3905ceb30f014c48eb03d3dbaa49a4f",
+      "checklist_sha256": "10bc26398673c1d673b59eb04680cec0bb6ceb836ea88bc7f84bb29ee3356efc",
       "changed": 34,
       "carried": 4,
       "results": "reverification.zip",
