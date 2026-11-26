@@ -300,7 +300,11 @@ def render_instruction_run(task, prefix, inline):
         status = f"{sum(scored)} / {total}"
         if len(scored) < total:
             status += f" · {total - len(scored)} unresolved"
-        reviewed = f"Codex regraded {review['changed']} criteria using evidence saved from this run."
+        if review.get("original_review_checklist_sha256"):
+            reviewed = (f"The solver ran with an earlier task instruction. This table shows its recorded verdicts "
+                        f"for the {total} criteria retained in the published task.")
+        else:
+            reviewed = f"Codex regraded {review['changed']} criteria using evidence saved from this run."
         if review["carried"]:
             reviewed += f" {review['carried']} unchanged criteria retain their original verdicts."
         review_info = (f'<p>{reviewed} Live environment records were captured before the original guest shut down.</p>'

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check source fidelity and links in the generated static website."""
 
+import hashlib
 import json
 import re
 from html.parser import HTMLParser
@@ -209,6 +210,16 @@ def check():
                     verification = json.loads(bundle.read("verification.json"))
                     assert verification["original_trial"] == run["trial"]
                     assert verification["checklist_sha256"] == review["checklist_sha256"]
+                    if original := review.get("original_review_checklist_sha256"):
+                        assert verification["original_review_checklist_sha256"] == original
+                        assert verification["original_trial_instruction_sha256"] == run["instruction_sha256"]
+                        instruction = bundle.read("instruction.md")
+                        assert instruction.decode().strip() == task["instruction"]
+                        assert hashlib.sha256(instruction).hexdigest() == review["published_instruction_sha256"] == verification["published_instruction_sha256"]
+                        checklist = bundle.read("checklist.json")
+                        assert hashlib.sha256(checklist).hexdigest() == review["checklist_sha256"]
+                        for item, rubric in zip(json.loads(checklist)["items"], task["rubrics"], strict=True):
+                            assert all(item[k] == rubric[k] for k in ("id", "criterion", "description"))
                     assert verification["observations"] == run["evidence"]
                     assert review["changed"] + review["carried"] == len(task["rubrics"])
                     assert review["carried"] == sum(r["origin"] == "carried_forward" for r in run["rows"].values())

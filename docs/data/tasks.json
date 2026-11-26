@@ -5058,80 +5058,11 @@
     "category": "Education",
     "summary": "Grade student work, return submissions, and update the class gradebook.",
     "slug": "update-class-gradebook",
-    "instruction": "You are an instructor managing the \"Organize and Educate\" course, wrapping up classwork review, student feedback and returns for \"Week 1: Writing\", and an updated class gradebook.\n\nIn the course, mark \"How do you feel about online learning?\" as reviewed so it moves out of your pending review list into reviewed work (note that this classwork item and review-queue tracking may not be supported in the local course environment).\n\nFor \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:  \n- Sentence Writing: 2/2  \n- Organization: 2/2  \n- Punctuation: 2/2  \n- Spelling: 1/2\n\nPost the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work. Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.\n\nOnce the \"Week 1: Writing\" grading and returns are complete, export all course grades for \"Organize and Educate\" into a complete class gradebook. Because this environment produces a local spreadsheet workbook rather than generating a live online spreadsheet, save the updated gradebook at `/home/ga/Documents/Grades Organize and Educate 08-06-2020.ods` and add the comment \"Needs to make corrections\" to cell D7 in that workbook.",
+    "instruction": "Grade and return the requested \"Week 1: Writing\" work in the \"Organize and Educate\" course, then export and annotate the updated class gradebook.\n\nFor \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:  \n- Sentence Writing: 2/2  \n- Organization: 2/2  \n- Punctuation: 2/2  \n- Spelling: 1/2\n\nPost the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work. Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.\n\nOnce the \"Week 1: Writing\" grading and returns are complete, export all course grades for \"Organize and Educate\" into a complete class gradebook. Because this environment produces a local spreadsheet workbook rather than generating a live online spreadsheet, save the updated gradebook at `/home/ga/Documents/Grades Organize and Educate 08-06-2020.ods` and add the comment \"Needs to make corrections\" to cell D7 in that workbook.",
     "materials": [],
     "rubrics": [
       {
         "number": 1,
-        "criterion": "The \"How do you feel about online learning?\" classwork item in Organize and Educate is marked reviewed, removed from pending review, and included in reviewed work.",
-        "source": "instruction.md",
-        "id": "outcome_8cb43c90cb2c4e5e86f8",
-        "description": "Full credit when the named item completes the requested review-state transition through any equivalent supported workflow. No particular view must remain open. No credit when the item remains pending or completion is merely reported. Verified item unavailability or unsupported review tracking requires feasibility review; a blocker report does not establish completion.",
-        "sources": [
-          {
-            "name": "instruction.md",
-            "highlight": "mark \"How do you feel about online learning?\" as reviewed so it moves out of your pending review list into reviewed work",
-            "references": [
-              {
-                "locator": "Line 3",
-                "passage": "In the course, mark \"How do you feel about online learning?\" as reviewed so it moves out of your pending review list into reviewed work (note that this classwork item and review-queue tracking may not be supported in the local course environment).",
-                "scope": [
-                  "criterion",
-                  "description"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Lines 1–3",
-                "passage": "You are an instructor managing the \"Organize and Educate\" course, wrapping up classwork review, student feedback and returns for \"Week 1: Writing\", and an updated class gradebook.\n\nIn the course, mark \"How do you feel about online learning?\" as reviewed so it moves out of your pending review list into reviewed work (note that this classwork item and review-queue tracking may not be supported in the local course environment).",
-                "scope": [
-                  "criterion"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Line 3",
-                "passage": "mark \"How do you feel about online learning?\" as reviewed so it moves out of your pending review list into reviewed work",
-                "scope": [
-                  "criterion"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Line 3",
-                "passage": "In the course, mark \"How do you feel about online learning?\" as reviewed so it moves out of your pending review list into reviewed work",
-                "scope": [
-                  "description"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              }
-            ]
-          }
-        ],
-        "passage": "In the course, mark \"How do you feel about online learning?\" as reviewed so it moves out of your pending review list into reviewed work (note that this classwork item and review-queue tracking may not be supported in the local course environment).",
-        "locator": "document",
-        "clips": [
-          {
-            "segment_id": 7,
-            "start_sec": 100.5,
-            "end_sec": 101.75,
-            "file": "assets/rubric-clips/update-class-gradebook/segment-7.webm",
-            "label": "1:40.5–1:41.75",
-            "playback_start_sec": 98.5,
-            "playback_end_sec": 103.75
-          }
-        ]
-      },
-      {
-        "number": 2,
         "criterion": "The recorded assessment belongs to Casey Boehm's turned-in Week 1: Writing submission in Organize and Educate and uses its attached Writing Rubric.",
         "source": "instruction.md",
         "id": "outcome_71cfbecccbf035259a94",
@@ -5142,7 +5073,7 @@
             "highlight": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
             "references": [
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "criterion",
@@ -5154,7 +5085,7 @@
               },
               {
                 "locator": "Line 1",
-                "passage": "You are an instructor managing the \"Organize and Educate\" course, wrapping up classwork review, student feedback and returns for \"Week 1: Writing\", and an updated class gradebook.",
+                "passage": "Grade and return the requested \"Week 1: Writing\" work in the \"Organize and Educate\" course, then export and annotate the updated class gradebook.",
                 "scope": [
                   "criterion"
                 ],
@@ -5163,7 +5094,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
                 "scope": [
                   "description"
@@ -5190,7 +5121,7 @@
         ]
       },
       {
-        "number": 3,
+        "number": 2,
         "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment records Sentence Writing as 2/2.",
         "source": "instruction.md",
         "id": "outcome_0361cdd163e26eaab559",
@@ -5201,7 +5132,7 @@
             "highlight": "- Sentence Writing: 2/2",
             "references": [
               {
-                "locator": "Line 6",
+                "locator": "Line 4",
                 "passage": "- Sentence Writing: 2/2",
                 "scope": [
                   "criterion",
@@ -5212,7 +5143,7 @@
                 ]
               },
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "criterion",
@@ -5240,7 +5171,7 @@
         ]
       },
       {
-        "number": 4,
+        "number": 3,
         "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment records Organization as 2/2.",
         "source": "instruction.md",
         "id": "outcome_08b9402e8a0b5e39266e",
@@ -5251,7 +5182,7 @@
             "highlight": "- Organization: 2/2",
             "references": [
               {
-                "locator": "Line 7",
+                "locator": "Line 5",
                 "passage": "- Organization: 2/2",
                 "scope": [
                   "criterion",
@@ -5262,7 +5193,7 @@
                 ]
               },
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "criterion",
@@ -5290,7 +5221,7 @@
         ]
       },
       {
-        "number": 5,
+        "number": 4,
         "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment records Punctuation as 2/2.",
         "source": "instruction.md",
         "id": "outcome_434df6b71bf66ece1f8d",
@@ -5301,7 +5232,7 @@
             "highlight": "- Punctuation: 2/2",
             "references": [
               {
-                "locator": "Line 8",
+                "locator": "Line 6",
                 "passage": "- Punctuation: 2/2",
                 "scope": [
                   "criterion",
@@ -5312,7 +5243,7 @@
                 ]
               },
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "criterion",
@@ -5340,7 +5271,7 @@
         ]
       },
       {
-        "number": 6,
+        "number": 5,
         "criterion": "Casey Boehm's turned-in Week 1: Writing rubric assessment records Spelling as 1/2.",
         "source": "instruction.md",
         "id": "outcome_a42403fa61a24e045fa4",
@@ -5351,7 +5282,7 @@
             "highlight": "- Spelling: 1/2",
             "references": [
               {
-                "locator": "Line 9",
+                "locator": "Line 7",
                 "passage": "- Spelling: 1/2",
                 "scope": [
                   "criterion",
@@ -5362,7 +5293,7 @@
                 ]
               },
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "criterion",
@@ -5390,7 +5321,7 @@
         ]
       },
       {
-        "number": 7,
+        "number": 6,
         "criterion": "Casey Boehm's turned-in Week 1: Writing assessment has a total score of 7/8.",
         "source": "instruction.md",
         "id": "outcome_7fed5b368abaf1e1352c",
@@ -5401,7 +5332,7 @@
             "highlight": "a total score of 7/8",
             "references": [
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "criterion",
@@ -5412,7 +5343,7 @@
                 ]
               },
               {
-                "locator": "Lines 5–9",
+                "locator": "Lines 3–7",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:  \n- Sentence Writing: 2/2  \n- Organization: 2/2  \n- Punctuation: 2/2  \n- Spelling: 1/2",
                 "scope": [
                   "description"
@@ -5422,7 +5353,7 @@
                 ]
               },
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "for a total score of 7/8:",
                 "scope": [
                   "description"
@@ -5449,7 +5380,7 @@
         ]
       },
       {
-        "number": 8,
+        "number": 7,
         "criterion": "The private comment \"Awesome work sounding out your words and using sight words!\" is posted on Casey Boehm's turned-in Week 1: Writing submission in Organize and Educate before the requested returns.",
         "source": "instruction.md",
         "id": "outcome_88657431136aecd38279",
@@ -5460,7 +5391,7 @@
             "highlight": "Post the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work.",
             "references": [
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "Post the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work.",
                 "scope": [
                   "criterion",
@@ -5472,7 +5403,7 @@
               },
               {
                 "locator": "Line 1",
-                "passage": "You are an instructor managing the \"Organize and Educate\" course, wrapping up classwork review, student feedback and returns for \"Week 1: Writing\", and an updated class gradebook.",
+                "passage": "Grade and return the requested \"Week 1: Writing\" work in the \"Organize and Educate\" course, then export and annotate the updated class gradebook.",
                 "scope": [
                   "criterion"
                 ],
@@ -5481,7 +5412,7 @@
                 ]
               },
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "criterion",
@@ -5492,7 +5423,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "Post the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work. Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
                 "scope": [
                   "criterion"
@@ -5502,7 +5433,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "before returning work. Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
                 "scope": [
                   "description"
@@ -5529,7 +5460,7 @@
         ]
       },
       {
-        "number": 9,
+        "number": 8,
         "criterion": "Casey Boehm's originally turned-in Week 1: Writing record in Organize and Educate is returned with the exact private comment \"Super sentence writing!\".",
         "source": "instruction.md",
         "id": "outcome_0375f9f95947b3e2f72b",
@@ -5540,7 +5471,7 @@
             "highlight": "both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\"",
             "references": [
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
                 "scope": [
                   "criterion",
@@ -5552,7 +5483,7 @@
               },
               {
                 "locator": "Line 1",
-                "passage": "You are an instructor managing the \"Organize and Educate\" course, wrapping up classwork review, student feedback and returns for \"Week 1: Writing\", and an updated class gradebook.",
+                "passage": "Grade and return the requested \"Week 1: Writing\" work in the \"Organize and Educate\" course, then export and annotate the updated class gradebook.",
                 "scope": [
                   "criterion"
                 ],
@@ -5561,7 +5492,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "with the shared private comment \"Super sentence writing!\"",
                 "scope": [
                   "description"
@@ -5571,7 +5502,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "both Casey Boehm entries (the turned-in submission and the unsubmitted entry)",
                 "scope": [
                   "description"
@@ -5581,7 +5512,7 @@
                 ]
               },
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "description"
@@ -5591,7 +5522,87 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
+                "passage": "Post the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work.",
+                "scope": [
+                  "description"
+                ],
+                "provenance": [
+                  "completion"
+                ]
+              }
+            ]
+          }
+        ],
+        "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
+        "locator": "document",
+        "clips": [
+          {
+            "segment_id": 33,
+            "start_sec": 546.75,
+            "end_sec": 551.5,
+            "file": "assets/rubric-clips/update-class-gradebook/segment-33.webm",
+            "label": "9:06.75–9:11.5",
+            "playback_start_sec": 544.75,
+            "playback_end_sec": 553.5
+          }
+        ]
+      },
+      {
+        "number": 9,
+        "criterion": "Casey Boehm's separate originally unsubmitted Week 1: Writing record in Organize and Educate is returned with the exact private comment \"Super sentence writing!\".",
+        "source": "instruction.md",
+        "id": "outcome_049d7b76276babc466c0",
+        "description": "Full credit when this distinct unsubmitted record is returned and the exact private message accompanies its return. Partial credit when the return is completed but feedback is missing, incorrect, public or unassociated, or when the correct private message is posted without a completed return. No credit when neither component exists for this record or only Casey's originally turned-in record satisfies them. Individual-feedback timing is evaluated separately. Verified limitations on returning unsubmitted work or posting private feedback require a feasibility flag.",
+        "sources": [
+          {
+            "name": "instruction.md",
+            "highlight": "both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\"",
+            "references": [
+              {
+                "locator": "Line 9",
+                "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
+                "scope": [
+                  "criterion",
+                  "description"
+                ],
+                "provenance": [
+                  "completion"
+                ]
+              },
+              {
+                "locator": "Line 1",
+                "passage": "Grade and return the requested \"Week 1: Writing\" work in the \"Organize and Educate\" course, then export and annotate the updated class gradebook.",
+                "scope": [
+                  "criterion"
+                ],
+                "provenance": [
+                  "completion"
+                ]
+              },
+              {
+                "locator": "Line 9",
+                "passage": "with the shared private comment \"Super sentence writing!\"",
+                "scope": [
+                  "criterion",
+                  "description"
+                ],
+                "provenance": [
+                  "completion"
+                ]
+              },
+              {
+                "locator": "Line 9",
+                "passage": "both Casey Boehm entries (the turned-in submission and the unsubmitted entry)",
+                "scope": [
+                  "description"
+                ],
+                "provenance": [
+                  "completion"
+                ]
+              },
+              {
+                "locator": "Line 9",
                 "passage": "Post the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work.",
                 "scope": [
                   "description"
@@ -5619,17 +5630,17 @@
       },
       {
         "number": 10,
-        "criterion": "Casey Boehm's separate originally unsubmitted Week 1: Writing record in Organize and Educate is returned with the exact private comment \"Super sentence writing!\".",
+        "criterion": "Hannah Koenig's Week 1: Writing record in Organize and Educate is returned with the exact private comment \"Super sentence writing!\".",
         "source": "instruction.md",
-        "id": "outcome_049d7b76276babc466c0",
-        "description": "Full credit when this distinct unsubmitted record is returned and the exact private message accompanies its return. Partial credit when the return is completed but feedback is missing, incorrect, public or unassociated, or when the correct private message is posted without a completed return. No credit when neither component exists for this record or only Casey's originally turned-in record satisfies them. Individual-feedback timing is evaluated separately. Verified limitations on returning unsubmitted work or posting private feedback require a feasibility flag.",
+        "id": "outcome_c976daa9bdfd785ca770",
+        "description": "Full credit when Hannah's record is returned and the exact private message accompanies its return. Partial credit when the return is completed but feedback is missing, incorrect, public or unassociated, or when the correct private message is posted without a completed return. No credit when neither component exists for Hannah's record or only another record satisfies them. Individual-feedback timing is evaluated separately. Verified return or private-comment limitations require a feasibility flag.",
         "sources": [
           {
             "name": "instruction.md",
-            "highlight": "both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\"",
+            "highlight": "Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\"",
             "references": [
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
                 "scope": [
                   "criterion",
@@ -5641,7 +5652,7 @@
               },
               {
                 "locator": "Line 1",
-                "passage": "You are an instructor managing the \"Organize and Educate\" course, wrapping up classwork review, student feedback and returns for \"Week 1: Writing\", and an updated class gradebook.",
+                "passage": "Grade and return the requested \"Week 1: Writing\" work in the \"Organize and Educate\" course, then export and annotate the updated class gradebook.",
                 "scope": [
                   "criterion"
                 ],
@@ -5650,7 +5661,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "with the shared private comment \"Super sentence writing!\"",
                 "scope": [
                   "criterion",
@@ -5661,17 +5672,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
-                "passage": "both Casey Boehm entries (the turned-in submission and the unsubmitted entry)",
-                "scope": [
-                  "description"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "Post the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work.",
                 "scope": [
                   "description"
@@ -5699,76 +5700,6 @@
       },
       {
         "number": 11,
-        "criterion": "Hannah Koenig's Week 1: Writing record in Organize and Educate is returned with the exact private comment \"Super sentence writing!\".",
-        "source": "instruction.md",
-        "id": "outcome_c976daa9bdfd785ca770",
-        "description": "Full credit when Hannah's record is returned and the exact private message accompanies its return. Partial credit when the return is completed but feedback is missing, incorrect, public or unassociated, or when the correct private message is posted without a completed return. No credit when neither component exists for Hannah's record or only another record satisfies them. Individual-feedback timing is evaluated separately. Verified return or private-comment limitations require a feasibility flag.",
-        "sources": [
-          {
-            "name": "instruction.md",
-            "highlight": "Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\"",
-            "references": [
-              {
-                "locator": "Line 11",
-                "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
-                "scope": [
-                  "criterion",
-                  "description"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Line 1",
-                "passage": "You are an instructor managing the \"Organize and Educate\" course, wrapping up classwork review, student feedback and returns for \"Week 1: Writing\", and an updated class gradebook.",
-                "scope": [
-                  "criterion"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Line 11",
-                "passage": "with the shared private comment \"Super sentence writing!\"",
-                "scope": [
-                  "criterion",
-                  "description"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              },
-              {
-                "locator": "Line 11",
-                "passage": "Post the individual private comment \"Awesome work sounding out your words and using sight words!\" on that turned-in submission before returning work.",
-                "scope": [
-                  "description"
-                ],
-                "provenance": [
-                  "completion"
-                ]
-              }
-            ]
-          }
-        ],
-        "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
-        "locator": "document",
-        "clips": [
-          {
-            "segment_id": 33,
-            "start_sec": 546.75,
-            "end_sec": 551.5,
-            "file": "assets/rubric-clips/update-class-gradebook/segment-33.webm",
-            "label": "9:06.75–9:11.5",
-            "playback_start_sec": 544.75,
-            "playback_end_sec": 553.5
-          }
-        ]
-      },
-      {
-        "number": 12,
         "criterion": "Caitie Instone's Week 1: Writing record in Organize and Educate remains unreturned.",
         "source": "instruction.md",
         "id": "outcome_16367770e23cbc7442c0",
@@ -5779,7 +5710,7 @@
             "highlight": "leaving Caitie Instone's entry unreturned.",
             "references": [
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
                 "scope": [
                   "criterion",
@@ -5791,7 +5722,7 @@
               },
               {
                 "locator": "Line 1",
-                "passage": "You are an instructor managing the \"Organize and Educate\" course, wrapping up classwork review, student feedback and returns for \"Week 1: Writing\", and an updated class gradebook.",
+                "passage": "Grade and return the requested \"Week 1: Writing\" work in the \"Organize and Educate\" course, then export and annotate the updated class gradebook.",
                 "scope": [
                   "criterion"
                 ],
@@ -5800,7 +5731,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "while leaving Caitie Instone's entry unreturned.",
                 "scope": [
                   "description"
@@ -5827,7 +5758,7 @@
         ]
       },
       {
-        "number": 13,
+        "number": 12,
         "criterion": "The complete Organize and Educate gradebook contains all current course grades exported after the Week 1: Writing assessment and three requested returns.",
         "source": "instruction.md",
         "id": "outcome_4b5778c19a6daae9b844",
@@ -5838,7 +5769,7 @@
             "highlight": "export all course grades for \"Organize and Educate\" into a complete class gradebook.",
             "references": [
               {
-                "locator": "Line 13",
+                "locator": "Line 11",
                 "passage": "Once the \"Week 1: Writing\" grading and returns are complete, export all course grades for \"Organize and Educate\" into a complete class gradebook.",
                 "scope": [
                   "criterion",
@@ -5849,7 +5780,7 @@
                 ]
               },
               {
-                "locator": "Line 11",
+                "locator": "Line 9",
                 "passage": "Return three of the four \"Week 1: Writing\" roster records—both Casey Boehm entries (the turned-in submission and the unsubmitted entry) and Hannah Koenig's entry—with the shared private comment \"Super sentence writing!\" while leaving Caitie Instone's entry unreturned.",
                 "scope": [
                   "criterion"
@@ -5859,7 +5790,7 @@
                 ]
               },
               {
-                "locator": "Line 13",
+                "locator": "Line 11",
                 "passage": "export all course grades for \"Organize and Educate\" into a complete class gradebook.",
                 "scope": [
                   "description"
@@ -5869,7 +5800,7 @@
                 ]
               },
               {
-                "locator": "Line 5",
+                "locator": "Line 3",
                 "passage": "For \"Week 1: Writing\", assess Casey Boehm's turned-in submission using the attached Writing Rubric for a total score of 7/8:",
                 "scope": [
                   "description"
@@ -5879,7 +5810,7 @@
                 ]
               },
               {
-                "locator": "Line 13",
+                "locator": "Line 11",
                 "passage": "Because this environment produces a local spreadsheet workbook rather than generating a live online spreadsheet, save the updated gradebook at `/home/ga/Documents/Grades Organize and Educate 08-06-2020.ods`",
                 "scope": [
                   "description"
@@ -5906,7 +5837,7 @@
         ]
       },
       {
-        "number": 14,
+        "number": 13,
         "criterion": "Cell D7 of the Organize and Educate gradebook has a spreadsheet comment containing exactly \"Needs to make corrections\".",
         "source": "instruction.md",
         "id": "outcome_9830af1ead7fad8f473c",
@@ -5917,7 +5848,7 @@
             "highlight": "add the comment \"Needs to make corrections\" to cell D7 in that workbook.",
             "references": [
               {
-                "locator": "Line 13",
+                "locator": "Line 11",
                 "passage": "Because this environment produces a local spreadsheet workbook rather than generating a live online spreadsheet, save the updated gradebook at `/home/ga/Documents/Grades Organize and Educate 08-06-2020.ods` and add the comment \"Needs to make corrections\" to cell D7 in that workbook.",
                 "scope": [
                   "criterion"
@@ -5927,7 +5858,7 @@
                 ]
               },
               {
-                "locator": "Line 13",
+                "locator": "Line 11",
                 "passage": "Once the \"Week 1: Writing\" grading and returns are complete, export all course grades for \"Organize and Educate\" into a complete class gradebook.",
                 "scope": [
                   "criterion"
@@ -5937,7 +5868,7 @@
                 ]
               },
               {
-                "locator": "Line 13",
+                "locator": "Line 11",
                 "passage": "add the comment \"Needs to make corrections\" to cell D7 in that workbook.",
                 "scope": [
                   "criterion",
@@ -5948,7 +5879,7 @@
                 ]
               },
               {
-                "locator": "Line 13",
+                "locator": "Line 11",
                 "passage": "save the updated gradebook at `/home/ga/Documents/Grades Organize and Educate 08-06-2020.ods` and add the comment \"Needs to make corrections\" to cell D7 in that workbook.",
                 "scope": [
                   "description"
@@ -5994,16 +5925,6 @@
       "judge_effort": "xhigh",
       "status": "Graded",
       "rows": {
-        "outcome_8cb43c90cb2c4e5e86f8": {
-          "score": null,
-          "reason": "obs_gradebook shows “How do you feel about online learning?” as a grade column. obs_assignments lists only “Week 1: Writing” as a course assignment. The separate feasibility probe, obs_archive_review_feasibility, found one manual grade item and zero matching assignments for the question. The missing reviewable record blocked verification of a move from pending to reviewed.",
-          "observations": [
-            "obs_archive_review_feasibility",
-            "obs_assignments",
-            "obs_gradebook"
-          ],
-          "origin": "fresh_archived_verification"
-        },
         "outcome_71cfbecccbf035259a94": {
           "score": 1,
           "reason": "obs_frame_pi_89_1 identifies the Writing Rubric attached to “Week 1: Writing” in Organize and Educate. obs_frame_pi_189_1 shows that rubric on Casey Boehm’s submitted file. obs_rubric_levels records all four selections for casey.boehm, and obs_submissions identifies that account as submitted record 1 and casey.boehm2 as draft record 2.",
@@ -6135,60 +6056,6 @@
         }
       },
       "evidence": {
-        "obs_archive_review_feasibility": {
-          "kind": "analysis",
-          "source": "archive_analysis",
-          "label": "Gradebook feasibility check",
-          "record_sha256": "e9d67f104692c164531c8452eed06d001eb42dc86657318a7ad57dabb576c0f8",
-          "explanation": {
-            "purpose": "Check whether this assignment could be marked as reviewed in the supplied environment.",
-            "result": "A separate check of the benchmark setup found a manual grade item and no associated assignment."
-          },
-          "record": {
-            "source": "evidence.json",
-            "scope": "separate historical benchmark feasibility probe; not solver evidence",
-            "finding": {
-              "task": "google-classroom",
-              "status": "blocked",
-              "task_requirement": "Mark “How do you feel about online learning?” as reviewed.",
-              "required_resource": "A reviewable classwork record for that item.",
-              "material_validation": "stopped at nonempty Creator blockers",
-              "step5": "not invoked",
-              "runtime_observation": {
-                "course_page": {
-                  "matched": false
-                },
-                "gradebook_page": {
-                  "matched": false
-                },
-                "assignment_count": 0,
-                "manual_grade_item_count": 1,
-                "itemtype": "manual",
-                "snapshot": "snap-b472b02b820343b2843715ff9c257153",
-                "task_sha256": "022e24c6520029332d20eacfaf43adca2331f7a967a67aead8762d70547c55a5",
-                "seed_sha256": "00ea89656fea73478fc65a93385fceac82f739b49074d6994ac6c9eaf157428d",
-                "method": "Packaged initialization and reset. Native course, grade item and assignment queries in disposable guest; desktop teacher browser checks. No grades or activity records modified."
-              },
-              "seed_evidence": "scripts/seed_world.php:101-113 initializes a manual grade column, with no associated assignment. The benchmark-user browser probe did not independently confirm the item text.",
-              "scope": "The existing Week 1: Writing assignment and gradebook are present. Reclassifying a grade column as a reviewable assignment or removing an outcome from the selected Guidance would change this experiment."
-            }
-          }
-        },
-        "obs_assignments": {
-          "kind": "environment",
-          "source": "live_environment",
-          "label": "Assignments",
-          "record_sha256": "eac3a5968f7c79391414b47ef23ffc146a85474abc1d0939b4abcd94637a1cf4",
-          "inspection": {
-            "view": "assignments",
-            "page": 1
-          },
-          "record": "id\tname\tfullname\n1\tWeek 1: Writing\tOrganize and Educate\n",
-          "explanation": {
-            "purpose": "Look up the available course assignments.",
-            "result": "The assignment table lists Week 1: Writing in Organize and Educate."
-          }
-        },
         "obs_gradebook": {
           "kind": "environment",
           "source": "live_environment",
@@ -6393,10 +6260,12 @@
         "sha256": "4a05d1c210a26d9800f2dc07a42b8307adffe8bd7b8613790ee7258883ea8de5"
       },
       "reverification": {
-        "checklist_sha256": "f6867ea582c98af1724cc48d272709d3c6c4f73b0ddf10cd85870c3ce806ee5d",
-        "changed": 14,
+        "checklist_sha256": "d5fcc2cabd9a7c7e5826ba619db2e8437b583ff9ec1755704be775154bab5858",
+        "changed": 13,
         "carried": 0,
-        "results": "reverification.zip"
+        "results": "reverification.zip",
+        "original_review_checklist_sha256": "f6867ea582c98af1724cc48d272709d3c6c4f73b0ddf10cd85870c3ce806ee5d",
+        "published_instruction_sha256": "3a81884d27ca95d781396d74cf21378061491d2b7f6503f1a5ed27b3876f0e87"
       }
     },
     "agent_runs": {

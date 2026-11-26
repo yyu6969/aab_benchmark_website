@@ -1113,16 +1113,6 @@
     "judge_effort": "xhigh",
     "status": "Graded",
     "rows": {
-      "outcome_8cb43c90cb2c4e5e86f8": {
-        "score": null,
-        "reason": "obs_gradebook shows “How do you feel about online learning?” as a grade column. obs_assignments lists only “Week 1: Writing” as a course assignment. The separate feasibility probe, obs_archive_review_feasibility, found one manual grade item and zero matching assignments for the question. The missing reviewable record blocked verification of a move from pending to reviewed.",
-        "observations": [
-          "obs_archive_review_feasibility",
-          "obs_assignments",
-          "obs_gradebook"
-        ],
-        "origin": "fresh_archived_verification"
-      },
       "outcome_71cfbecccbf035259a94": {
         "score": 1,
         "reason": "obs_frame_pi_89_1 identifies the Writing Rubric attached to “Week 1: Writing” in Organize and Educate. obs_frame_pi_189_1 shows that rubric on Casey Boehm’s submitted file. obs_rubric_levels records all four selections for casey.boehm, and obs_submissions identifies that account as submitted record 1 and casey.boehm2 as draft record 2.",
@@ -1254,60 +1244,6 @@
       }
     },
     "evidence": {
-      "obs_archive_review_feasibility": {
-        "kind": "analysis",
-        "source": "archive_analysis",
-        "label": "Gradebook feasibility check",
-        "record_sha256": "e9d67f104692c164531c8452eed06d001eb42dc86657318a7ad57dabb576c0f8",
-        "explanation": {
-          "purpose": "Check whether this assignment could be marked as reviewed in the supplied environment.",
-          "result": "A separate check of the benchmark setup found a manual grade item and no associated assignment."
-        },
-        "record": {
-          "source": "evidence.json",
-          "scope": "separate historical benchmark feasibility probe; not solver evidence",
-          "finding": {
-            "task": "google-classroom",
-            "status": "blocked",
-            "task_requirement": "Mark “How do you feel about online learning?” as reviewed.",
-            "required_resource": "A reviewable classwork record for that item.",
-            "material_validation": "stopped at nonempty Creator blockers",
-            "step5": "not invoked",
-            "runtime_observation": {
-              "course_page": {
-                "matched": false
-              },
-              "gradebook_page": {
-                "matched": false
-              },
-              "assignment_count": 0,
-              "manual_grade_item_count": 1,
-              "itemtype": "manual",
-              "snapshot": "snap-b472b02b820343b2843715ff9c257153",
-              "task_sha256": "022e24c6520029332d20eacfaf43adca2331f7a967a67aead8762d70547c55a5",
-              "seed_sha256": "00ea89656fea73478fc65a93385fceac82f739b49074d6994ac6c9eaf157428d",
-              "method": "Packaged initialization and reset. Native course, grade item and assignment queries in disposable guest; desktop teacher browser checks. No grades or activity records modified."
-            },
-            "seed_evidence": "scripts/seed_world.php:101-113 initializes a manual grade column, with no associated assignment. The benchmark-user browser probe did not independently confirm the item text.",
-            "scope": "The existing Week 1: Writing assignment and gradebook are present. Reclassifying a grade column as a reviewable assignment or removing an outcome from the selected Guidance would change this experiment."
-          }
-        }
-      },
-      "obs_assignments": {
-        "kind": "environment",
-        "source": "live_environment",
-        "label": "Assignments",
-        "record_sha256": "eac3a5968f7c79391414b47ef23ffc146a85474abc1d0939b4abcd94637a1cf4",
-        "inspection": {
-          "view": "assignments",
-          "page": 1
-        },
-        "record": "id\tname\tfullname\n1\tWeek 1: Writing\tOrganize and Educate\n",
-        "explanation": {
-          "purpose": "Look up the available course assignments.",
-          "result": "The assignment table lists Week 1: Writing in Organize and Educate."
-        }
-      },
       "obs_gradebook": {
         "kind": "environment",
         "source": "live_environment",
@@ -1512,10 +1448,12 @@
       "sha256": "4a05d1c210a26d9800f2dc07a42b8307adffe8bd7b8613790ee7258883ea8de5"
     },
     "reverification": {
-      "checklist_sha256": "f6867ea582c98af1724cc48d272709d3c6c4f73b0ddf10cd85870c3ce806ee5d",
-      "changed": 14,
+      "checklist_sha256": "d5fcc2cabd9a7c7e5826ba619db2e8437b583ff9ec1755704be775154bab5858",
+      "changed": 13,
       "carried": 0,
-      "results": "reverification.zip"
+      "results": "reverification.zip",
+      "original_review_checklist_sha256": "f6867ea582c98af1724cc48d272709d3c6c4f73b0ddf10cd85870c3ce806ee5d",
+      "published_instruction_sha256": "3a81884d27ca95d781396d74cf21378061491d2b7f6503f1a5ed27b3876f0e87"
     }
   },
   "survey-data-frequency-analyses": {
