@@ -37036,6 +37036,1441 @@
       "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/tutorial-videos-v1/floor-plan-architectural-details.mp4",
       "guidance_path": "assets/tutorial-guidance/floor-plan-architectural-details.md"
     },
+    "instruction_run": {
+      "job": "autocad_pi_20261126_161147_11288530",
+      "trial": "autodesk_autocad_env__architectu__dXXoKzk",
+      "model": "gemini-3.8-flash",
+      "thinking": "high",
+      "instruction_sha256": "e8829a8ee0123bd0eda3809121e6d4d5820ff67c2c57d8c25cc3abfda9b4386e",
+      "judge_model": "gpt-6.2-astra",
+      "judge_effort": "xhigh",
+      "status": "Graded",
+      "rows": {
+        "outcome_8cb43c90cb2c4e5e86f8": {
+          "score": 1,
+          "reason": "The saved DWG has insertion-unit code 6 for meters. The single-door leaf measures 0.90 model units, and the unit-scale fixture inserts preserve the supplied toilet and basin sizes of approximately 0.46 × 0.68 m and 0.56 × 0.41 m. See obs_code_0025, obs_code_0017, obs_code_0014 and obs_code_0020.",
+          "observations": [
+            "obs_code_0014",
+            "obs_code_0017",
+            "obs_code_0020",
+            "obs_code_0025"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_97884da3da28b028da7e": {
+          "score": 0,
+          "reason": "The editable footprint follows the stepped and sloping outline, but both south wall faces continue across the common-area entrance at x=9.50. The double door is displaced from that opening. The two south wing spans measure 3.3001 and 13.2075 m against the reference’s 3.30 and 13.20 m. See obs_code_0019, obs_code_0022, obs_code_0030 and obs_frame_pi_9_1.",
+          "observations": [
+            "obs_code_0019",
+            "obs_code_0022",
+            "obs_code_0030",
+            "obs_frame_pi_9_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_d85870a880012c1e2336": {
+          "score": 1,
+          "reason": "All 295 saved model-space lines, including the exterior walls and internal partitions, belong to dedicated building-element layers. There are 71 on A-WALL-EXTR and 224 on A-WALL-INTR. See obs_code_0005 and obs_code_0025.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0025"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_f123d18d5278575917d3": {
+          "score": 0,
+          "reason": "The northern boundary reaches the inner east wall at a depth of 3.4476 m and stops before the open common area. Both horizontal faces nevertheless cross the reference unit 2 doorway at x=25.60, and the installed door does not resolve that opening. See obs_code_0009, obs_code_0019, obs_code_0030 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0009",
+            "obs_code_0019",
+            "obs_code_0030",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_0375f9f95947b3e2f72b": {
+          "score": 1,
+          "reason": "The east face is 3.7521 m west of the inner northeast corner. Its vertical companion lies 0.1004 m farther west. Both run from y=6.6014 to 10.0490 and meet the corresponding corridor and north-wall faces at the reference precision. See obs_code_0005, obs_code_0009 and obs_code_0022.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0009",
+            "obs_code_0022"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_3fe5429d662feda6c3c1": {
+          "score": 1,
+          "reason": "Vertical faces 1C0 and 218 are 0.1004 m apart. Their upper ends meet the office diagonals, and their lower ends reach the thickness transition at y=3.2469. Measured endpoint discrepancies are at most 0.000002 m. See obs_code_0005 and obs_code_0022.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0022"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_d7f6e5cc62a5f1d5ea2f": {
+          "score": 0,
+          "reason": "Both office diagonals join the adjoining faces, but they diverge by 0.171°. Their perpendicular separation varies from approximately 0.096 to 0.102 m along the junction. See obs_code_0009 and obs_code_0022.",
+          "observations": [
+            "obs_code_0009",
+            "obs_code_0022"
+          ],
+          "origin": "fresh_archived_verification",
+          "review_note": "The saved diagonals follow the reference PDF linework. The verifier scored their measured separation against the nominal 0.10 m thickness."
+        },
+        "outcome_dfbdc555c354f6047151": {
+          "score": 1,
+          "reason": "The laundry side has the square upper return, a 0.1004 m internal pair, and a lower exterior bevel measuring 0.2992 m perpendicularly. The horizontal, vertical and beveled ends meet to within 0.000003 m. See obs_code_0005, obs_code_0022 and obs_frame_pi_9_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0022",
+            "obs_frame_pi_9_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_6901ce79258c98342393": {
+          "score": 1,
+          "reason": "Both southern corridor faces stop on either side of the central approach. The upper face ends at x=19.8845 and resumes at 22.6465, with no horizontal fragment crossing the passage. The flanking wall portions and their nominal 0.10 m returns remain connected. See obs_code_0026, obs_code_0028 and obs_code_0022.",
+          "observations": [
+            "obs_code_0022",
+            "obs_code_0026",
+            "obs_code_0028"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_4b5778c19a6daae9b844": {
+          "score": 0,
+          "reason": "The eastern lower bay partitions meet the inner south face at y=0.3010. The upper partition between units 2 and 3, however, has parallel faces only 0.093263 m apart, which misses the required 0.10 m thickness. See obs_code_0005, obs_code_0022 and obs_code_0026.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0022",
+            "obs_code_0026"
+          ],
+          "origin": "fresh_archived_verification",
+          "review_note": "The measured unit 2–3 partition follows the corresponding reference PDF lines. The verifier used the nominal 0.10 m spacing."
+        },
+        "outcome_e253792ed46091771d0f": {
+          "score": 1,
+          "reason": "The accessible bathroom’s inner west and south runs measure 2.5015 and 2.5468 m, matching the reference’s 2.50 and 2.55 m. The perpendicular corner closes, its companion faces are 0.1004 and 0.1003 m away, and the west face has the intended corridor junction. See obs_code_0010, obs_code_0005 and obs_code_0022.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0010",
+            "obs_code_0022"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_dfdc7179a1e99af5cb8f": {
+          "score": 0,
+          "reason": "The lift has editable enclosure lines and two crossing diagonals. A comparison with the reference identified all four missing edges of the inner rectangle at the diagonal endpoints, so the required closed inner outline is absent. See obs_code_0009, obs_code_0015 and obs_frame_pi_11_1.",
+          "observations": [
+            "obs_code_0009",
+            "obs_code_0015",
+            "obs_frame_pi_11_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_0620272a831951f07eb2": {
+          "score": 1,
+          "reason": "All eight identified lift lines, including both diagonals, are assigned to the dedicated A-WALL-INTR building-element layer. See obs_code_0005 and obs_code_0025.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0025"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_a4a65c38d61ff689062b": {
+          "score": 1,
+          "reason": "The saved single door has closed 0.05 × 0.10 m jambs at x=−0.05…0 and 0.90…0.95. The leaf extends from the hinge at (0,0) to (0,0.90), and its hinge-centered 0.90 m arc runs from 0° to 90°, connecting the opposite jamb and leaf tip. See obs_code_0017 and obs_code_0029.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0029"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_d1cd5d511bb77077c8f3": {
+          "score": 1,
+          "reason": "All three single-door polylines and the swing arc are on layer 0 inside the block. All 22 saved single-door references are on A-DOOR, giving the complete assembly effective door-layer membership. See obs_code_0017 and obs_code_0025.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0025"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_b482a63c342b2adbc4e0": {
+          "score": 1,
+          "reason": "The target DWG retains DOOR_SINGLE as native definition 147 with three editable polylines and an arc. The drawing contains 22 references to that definition. See obs_code_0029 and obs_code_0025.",
+          "observations": [
+            "obs_code_0025",
+            "obs_code_0029"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_6f33d2ef259850c7ae96": {
+          "score": 0,
+          "reason": "The repeated corridor doors use the same unrotated orientation. At unit 2 the reference jambs bound an opening near x=25.19…26.10, while the installed door starts at x=26.0901 and extends farther east. The published plan also shows displaced approach doors. See obs_code_0019, obs_code_0007 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0019",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_56f9bf1ac56bf0e0e1a9": {
+          "score": 0,
+          "reason": "DOOR_SINGLE contains static jamb, leaf and arc entities. The saved definition and references have no flip action, parameter dictionary or equivalent retained control. See obs_code_0017, obs_code_0025 and obs_code_0029.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0025",
+            "obs_code_0029"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_3317a67a00550c98ca7b": {
+          "score": 1,
+          "reason": "The double-door jambs are closed rectangles spanning x=−0.05…0 and 1.40…1.45, both at y=0…0.10. Their opening-side corners are 1.40 m apart. See obs_code_0017.",
+          "observations": [
+            "obs_code_0017"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_5d3e1e0c5aa7abe1e7fa": {
+          "score": 1,
+          "reason": "The 0.70 m leaves hinge at x=0 and x=1.40. Their 0.70 m arcs sweep 0°–90° and 90°–180°, meet at (0.70,0), and reflect across x=0.70 with the leaves and jambs. See obs_code_0017 and obs_code_0007.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0017"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_21d8a1637944ee730330": {
+          "score": 1,
+          "reason": "The saved DOOR_DOUBLE definition contains four editable polylines and two arcs. Four model-space inserts reference it, establishing reuse in the target drawing. See obs_code_0029 and obs_code_0025.",
+          "observations": [
+            "obs_code_0025",
+            "obs_code_0029"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_a895363c2c6aa5a5e39b": {
+          "score": 0,
+          "reason": "The seven editable profiles have connected straight runs and chamfers. Every diagonal pair measures approximately 0.10141 m apart, a systematic 1.41 mm offset error against the specified 0.10000 m perpendicular spacing. See obs_code_0026, obs_code_0030 and obs_code_0022.",
+          "observations": [
+            "obs_code_0022",
+            "obs_code_0026",
+            "obs_code_0030"
+          ],
+          "origin": "fresh_archived_verification",
+          "review_note": "The saved chamfers follow the corresponding reference PDF lines. The verifier treated the 1.41 mm difference from nominal thickness as a failure."
+        },
+        "outcome_76d522e2d38e87ed462f": {
+          "score": 1,
+          "reason": "The placed toilet retains the supplied editable form of 46 splines and 20 lines at approximately 0.460 × 0.680 m. Its geometry is on Furnitures, and its plan uses preserve that size. See obs_code_0007, obs_code_0014 and obs_code_0020.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0014",
+            "obs_code_0020"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_6679a860bcd2023b4cb0": {
+          "score": 1,
+          "reason": "The saved plan uses the supplied sink geometry of 17 splines and two lines, approximately 0.558 × 0.406 m. All its primitives are on Furnitures. Six nested uses and one direct insert give seven placed basins. See obs_code_0007, obs_code_0014 and obs_code_0020.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0014",
+            "obs_code_0020"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_3e5a6c1934adcd1be965": {
+          "score": 0,
+          "reason": "In unit 1 the reference basin occupies approximately x=21.72…22.29, y=6.71…7.10. The saved basin is turned and displaced to x=21.94…22.35, y=6.80…7.36, with the toilet crossing the opposite enclosure wall. The published close-up confirms the settled arrangement. See obs_code_0020, obs_code_0014 and obs_code_0012.",
+          "observations": [
+            "obs_code_0012",
+            "obs_code_0014",
+            "obs_code_0020"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_d05b5ebf8fe18d4b7f1d": {
+          "score": 0,
+          "reason": "The lower unit 6 and 7 toilets both occupy y=5.45…6.13, in the corridor above their compartments. The two basins nearly coincide around x=31 and the unit 5 basin is above its private enclosure. The seven compartments therefore do not each contain the reference pair. See obs_code_0014, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0014",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_167a3bb443fd17857a20": {
+          "score": 0,
+          "reason": "At the unit 1 private entrance, the reference jambs lie near x=21.00 and 21.94. The saved door starts at x=21.9435 and opens farther east. Its second jamb misses the enclosure opening, and the published close-up shows the displaced swing. See obs_code_0030, obs_code_0007 and obs_code_0012.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0012",
+            "obs_code_0030"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_9e2a41eb70b01f2cad2d": {
+          "score": 0,
+          "reason": "The saved RESTROOM definition contains exactly two inserts, toilet 3 and sink 8. The enclosure lines and entrance door are outside the definition, so placing it again produces only the fixture pair. See obs_code_0029 and obs_code_0017.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0029"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_5d53d5464c01836525c6": {
+          "score": 0,
+          "reason": "Some RESTROOM instances have a negative x scale, but the saved block contains only fixtures and has no retained interactive flip action. The enclosure and entrance door cannot reverse with that block. See obs_code_0007, obs_code_0017 and obs_code_0025.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0017",
+            "obs_code_0025"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_efc71eb3b20561fbe68c": {
+          "score": 1,
+          "reason": "All seven enclosure contours occupy their reference positions. Endpoint checks found connected internal segments and adjoining plan-wall contacts throughout. The apparent exception at unit 5 resolves to a 0.00000182 m endpoint difference. See obs_code_0015, obs_code_0026 and obs_code_0028.",
+          "observations": [
+            "obs_code_0015",
+            "obs_code_0026",
+            "obs_code_0028"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_9d0f1f3de53915f077e9": {
+          "score": 1,
+          "reason": "All 50 identified stair lines, including treads, dividers and breaks, are on the dedicated A-WALL-INTR building-element layer. See obs_code_0015 and obs_code_0025.",
+          "observations": [
+            "obs_code_0015",
+            "obs_code_0025"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_0a374429ec3cf811af50": {
+          "score": 0,
+          "reason": "Both editable staircases occupy the intended bays and have the full flights on opposing sides. Each flight includes a 0.24370 m tread interval, and the western divider end measures 0.04305 m against the reference’s 0.05 m. The specified spacing and offsets are incomplete. See obs_code_0028, obs_code_0022 and obs_frame_pi_11_1.",
+          "observations": [
+            "obs_code_0022",
+            "obs_code_0028",
+            "obs_frame_pi_11_1"
+          ],
+          "origin": "fresh_archived_verification",
+          "review_note": "A separate check matched all 50 reference stair segments to the drawing. The verifier scored the tread spacing and divider against their nominal dimensions."
+        },
+        "outcome_7b633f7c6e19bf6d0174": {
+          "score": 1,
+          "reason": "Both stairs retain editable diagonal and zigzag segments. The affected divider lines terminate at the breaks while the adjoining treads continue. All 50 reference stair segments matched saved lines, and both breaks are visible on the published plan. See obs_code_0005, obs_code_0015 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0015",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_a0e9b8a2f5b7c075cbe1": {
+          "score": 0,
+          "reason": "The editable profile has 0.08 m-deep end frames, but its definition spans 1.00 m. In the 0.90 m detail the end frames shrink to 0.045 m, and the center is a separate narrow rectangle. The nominal detail therefore misses the specified 0.05 m end width and reference profile. See obs_code_0017, obs_code_0030 and obs_frame_pi_11_1.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0030",
+            "obs_frame_pi_11_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_605f5b1e4fa9229703ce": {
+          "score": 1,
+          "reason": "The saved WINDOW definition groups the two window lines and three editable frame and glazing polylines. It is reused 28 times. The adjoining detail wall returns are separately identified on the exterior-wall layer. See obs_code_0029, obs_code_0017 and obs_code_0025.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0025",
+            "obs_code_0029"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_ebe870b4b86d738dfba0": {
+          "score": 1,
+          "reason": "The window constituents inherit A-GLAZ from all 28 window references. The adjoining profile-detail wall lines are on A-WALL-EXTR. Both are dedicated building-element layers. See obs_code_0017, obs_code_0025 and obs_code_0029.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0025",
+            "obs_code_0029"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_595fcff8c957b3563abb": {
+          "score": 0,
+          "reason": "The saved windows vary through ordinary insert scaling. A 0.90 m window has 0.045 m end frames, while a 1.36 m window has 0.068 m end frames. The saved component has no width action that preserves those details. See obs_code_0030, obs_code_0017 and obs_code_0025.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0025",
+            "obs_code_0030"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_fed2206afb0497035b2f": {
+          "score": 1,
+          "reason": "Editable TEXT 2FC reads “common area” at (8.5,3.5), clearly inside the large western space below dining. See obs_code_0013 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_d0669253dc7d2e229bff": {
+          "score": 1,
+          "reason": "Editable TEXT 2FB reads “dinning area” at (4.8,10.0). The published sheet places it inside the upper-left room, using the reference spelling. See obs_code_0013, obs_frame_pi_697_1 and obs_frame_pi_9_1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_frame_pi_697_1",
+            "obs_frame_pi_9_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_7486fb2049efb1fcb8e1": {
+          "score": 0,
+          "reason": "The kitchen label starts at x=13.8, west of the kitchen’s inner boundary at x=15.2931. The plotted word straddles that partition, with most of it outside the kitchen. See obs_code_0013, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_a0e3177e622620a3036d": {
+          "score": 1,
+          "reason": "Editable TEXT 308 reads “office” at (18.5,2.5). It is visible inside the lower room between the western stair and central entrance. See obs_code_0013 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_257497ef795a42eb6a8f": {
+          "score": 1,
+          "reason": "The western stair has its own editable “stairs” text at (14.2,2.5), within the stair bay immediately left of the office. See obs_code_0013, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_8c3ac236138b1bfd299a": {
+          "score": 0,
+          "reason": "The second “stairs” text begins at x=23.5. Its extracted plotted extent reaches x=24.83, while the eastern stair bay begins at x=25.1001. It labels the laundry side of the partition and has no callout into the stair. See obs_code_0013, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_1d4b00a03bb2aa99574b": {
+          "score": 0,
+          "reason": "The “unit 1” text begins at x=19.5 on the kitchen side of the partition at x=20.8961…20.9965. The visible label runs into that partition, leaving the intended first residential bay ambiguously identified. See obs_code_0013, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_c64a21ab07d5b5c25bb7": {
+          "score": 0,
+          "reason": "The “unit 2” text begins at x=24.0 in unit 1. It straddles the partition at x=24.9996…25.1001, with the word and number on opposing sides. See obs_code_0013, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_6cd001880804bb616d4d": {
+          "score": 1,
+          "reason": "Editable TEXT 300 reads “unit 3” at (32.0,8.5), inside the third upper bay between the partitions near x=30.29 and 34.05. See obs_code_0013, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_8b7434cb27fc079f1bb2": {
+          "score": 1,
+          "reason": "Editable TEXT 301 reads “unit 4” at (35.8,8.5), clearly identifying the upper-right residential bay. See obs_code_0013 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_ca308db02af4284c99b5": {
+          "score": 1,
+          "reason": "Editable TEXT 303 reads “unit 5” at (35.8,1.8), inside the rightmost lower residential unit. See obs_code_0013 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_af35e6b21617f65ecd87": {
+          "score": 1,
+          "reason": "Editable TEXT 304 reads “unit 6” at (32.0,1.8), inside the middle lower bay between units 7 and 5. See obs_code_0013 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_de30fe66c906fd65b069": {
+          "score": 1,
+          "reason": "Editable TEXT 305 reads “unit 7” at (28.5,1.8), inside the lower unit immediately east of the stairwell. See obs_code_0013 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_c437df67277ca306b264": {
+          "score": 1,
+          "reason": "All 15 room and residential-unit TEXT entities belong to the dedicated “text labels” layer. The verified save reports the same 15 assignments. See obs_code_0013 and obs_step_669_p1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_step_669_p1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_83bccfea7bb053fa52a6": {
+          "score": 0,
+          "reason": "The editable text reads “Disabled bathroom,” but it starts in the corridor at x=33.8 and extends past the east wall. The bathroom interior spans approximately x=35.35…37.90. Door, wall and exterior-dimension linework interfere with the plotted label. See obs_code_0013, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_f5e3184d2a1c6679700a": {
+          "score": 0,
+          "reason": "The saved viewport maps 25 m to 130 mm. Independent PDF measurement of the 8.20 m facade confirms 5.20 mm per meter, giving a physical scale of 1:192.31. The required 1:200 would give 5.00 mm per meter. See obs_code_0021 and obs_code_0013.",
+          "observations": [
+            "obs_code_0013",
+            "obs_code_0021"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_74abd4ad2f641147be3e": {
+          "score": 1,
+          "reason": "The DWG retains Defpoints with plotting disabled. The three presentation viewports all reference that layer. See obs_code_0025, obs_code_0007 and obs_step_669_p1.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0025",
+            "obs_step_669_p1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_79c800812d81c953bc96": {
+          "score": 1,
+          "reason": "Layout1 owns editable viewport 566 on non-plotting Defpoints. Its saved view includes the ground-floor plan, and the final PDF shows the plan inside the sheet border with the editor’s viewport frame suppressed. See obs_code_0007, obs_code_0021, obs_screen and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0021",
+            "obs_frame_pi_697_1",
+            "obs_screen"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_b68c2d480a6ecb182bda": {
+          "score": 1,
+          "reason": "Layout1 contains closed editable border 544 from (10,10) to (287,200). All four border edges appear in the PDF vectors, and the separate viewport rectangle is suppressed. See obs_code_0007, obs_code_0013 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_94f1470686a27838517a": {
+          "score": 1,
+          "reason": "Layout1 owns editable TEXT entities 54C, 54D and 54E. They visibly identify Project, Location and Drawing name in the title table. See obs_code_0029 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0029",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_cbe3d60d7c94bb72c2f4": {
+          "score": 1,
+          "reason": "Layout1 MTEXT 54F stores “Drawn: ga,” “Scale: 1:200” and “Date: 2026-11-26.” All three field-value pairs are legible in the published title block. See obs_code_0029, obs_submitted_sheet_pdf_text and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0029",
+            "obs_frame_pi_697_1",
+            "obs_submitted_sheet_pdf_text"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_2f7107aff387dcdf3e67": {
+          "score": 0,
+          "reason": "The exact destination contains a readable, one-page A4 Layout1 PDF with the border and title block visible and the viewport frame suppressed. Its measured scale is 1:192.31, so it fails the publication’s 1:200 condition. See obs_delivered_files, obs_submitted_sheet_pdf_info, obs_code_0013 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0013",
+            "obs_delivered_files",
+            "obs_frame_pi_697_1",
+            "obs_submitted_sheet_pdf_info"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_0ee3c4df399b0122a40a": {
+          "score": 1,
+          "reason": "The saved drawing has a dedicated Dimensions layer, and all 36 native dimension entities have that layer assignment. See obs_code_0025 and obs_step_669_p1.",
+          "observations": [
+            "obs_code_0025",
+            "obs_step_669_p1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_654c1f27d94ae17fdb31": {
+          "score": 0,
+          "reason": "The saved north dimensions include overall 4.70 and 8.20 m spans, but the opening-and-separation chain is confined to the dining facade. The unit 2 and units 3–4 window segments shown in the reference have no corresponding complete dimension coverage. See obs_code_0007, obs_frame_pi_9_1 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0007",
+            "obs_frame_pi_697_1",
+            "obs_frame_pi_9_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_aefc2261edd305cfdbcb": {
+          "score": 0,
+          "reason": "Native dimensions report both intended totals. The units 3–4 span measures 8.20 m, but the unit 2 dimension starts at x=25.3000 and measures 4.7000 m while its saved wall starts at x=25.29379 and spans 4.70621 m. The dimensions have an annotative flag but no stored 1:200 entity context. See obs_code_0027, obs_code_0017 and obs_code_0025.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0025",
+            "obs_code_0027"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_314061ed6be507023f3f": {
+          "score": 1,
+          "reason": "The saved DWG layout records contain two distinct presentation sheets named exactly Layout1 and details. Both tabs are also visible in the editor. See obs_code_0029 and obs_screen.",
+          "observations": [
+            "obs_code_0029",
+            "obs_screen"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_36c068e83fa987f08fe9": {
+          "score": 0,
+          "reason": "The details border is an editable closed rectangle, but its top is at y=200 while the printable area ends at y=170 and the physical page ends at y=190. Its right edge also exceeds the printable width by 5 mm. The recorded sheet shows the top edge above the paper. See obs_code_0021, obs_code_0029, obs_code_0023 and obs_frame_pi_675_1.",
+          "observations": [
+            "obs_code_0021",
+            "obs_code_0023",
+            "obs_code_0029",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_d910d9d2c062b6a8784f": {
+          "score": 0,
+          "reason": "The details sheet owns an editable title table and sheet-specific fields. Its right edge is at x=287, 5 mm beyond the saved printable limit of x=282. The plotter clips to the printable bounds, leaving the plotted table incomplete. See obs_code_0016, obs_code_0029, obs_code_0023 and obs_frame_pi_675_1.",
+          "observations": [
+            "obs_code_0016",
+            "obs_code_0023",
+            "obs_code_0029",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification",
+          "review_note": "The 5 mm clipping estimate comes from the saved layout and printable bounds. The screenshot shows the editor. Only Layout1 was exported as a PDF, so the details-sheet plot preview was not directly captured."
+        },
+        "outcome_60e09942787050b012b7": {
+          "score": 1,
+          "reason": "The left detail view presents the complete enlarged single door. Both jambs, the leaf tip and the full quarter-circle swing are inside viewport 568’s saved bounds and visible on details. See obs_code_0021 and obs_frame_pi_675_1.",
+          "observations": [
+            "obs_code_0021",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_1cd5c023f36b21465b78": {
+          "score": 0,
+          "reason": "The door viewport presents 1.92 m in 125 mm on a sheet calibrated at 1:1 in millimeters. That gives 1:15.36, short of the stated 1:16. See obs_code_0021 and obs_frame_pi_675_1.",
+          "observations": [
+            "obs_code_0021",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_29e020ccedfe003c2584": {
+          "score": 1,
+          "reason": "Door-detail viewport 568 belongs to the details paper-space record and references layer 28, Defpoints. That layer’s saved plotting flag is off. See obs_code_0007 and obs_code_0025.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0025"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_a47c96d52abe339ccf2d": {
+          "score": 1,
+          "reason": "The recorded details sheet shows the door on the left and the window/profile on the right. The saved viewport centers are at paper x=75 and x=210, and window viewport 569 uses non-plotting Defpoints. See obs_frame_pi_675_1, obs_code_0021, obs_code_0007 and obs_code_0025.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0021",
+            "obs_code_0025",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_3bcb97368e16daed2733": {
+          "score": 1,
+          "reason": "The right-hand viewport focuses on the enlarged window/profile and shows its full span, both end frames and the wall depth. Its model x range of 69.826…71.074 contains the profile from x=70.0 to 70.9. See obs_code_0021, obs_code_0029 and obs_frame_pi_675_1.",
+          "observations": [
+            "obs_code_0021",
+            "obs_code_0029",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_d224466ee9953a96c685": {
+          "score": 0,
+          "reason": "Window viewport 569 maps 1.20 m to 125 mm at the saved 1:1 sheet calibration. Its physical presentation is 1:9.60 instead of the required 1:10. See obs_code_0021.",
+          "observations": [
+            "obs_code_0021"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_0f43c4f2812dc0a83271": {
+          "score": 0,
+          "reason": "Dimension 4B8 genuinely measures the 0.90 m leaf and carries the annotative flag. Its text midpoint is at model x=59.285, outside the door viewport’s left limit of 59.57448, so the leaf value lacks a legible sheet representation. See obs_code_0017, obs_code_0021 and obs_code_0027.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0021",
+            "obs_code_0027"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_65e016949b0f2c67e8ce": {
+          "score": 0,
+          "reason": "Dimension 498 measures the actual 0.90 m clear opening and carries the annotative flag. Its number appears inside the swing about 42 mm from the opening dimension line, without a clear association to that line or a saved 1:16 context. See obs_code_0017, obs_code_0027 and obs_frame_pi_675_1.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0027",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_982c5ce419777ea96d76": {
+          "score": 0,
+          "reason": "Dimension 4A7 references the jamb endpoints and measures 0.10 m. Its text midpoint projects to paper x=−5.4, outside both the detail viewport and printable area, leaving the depth value unreadable on the sheet. See obs_code_0017 and obs_code_0027.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0027"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_1f6374a87a1d49920616": {
+          "score": 0,
+          "reason": "Dimension 487 measures the 0.05 m jamb width and has entity-level annotative metadata. Its number projects about 43.29 mm from its dimension line, beside the leaf, so the width is not unambiguously labeled in the detail. See obs_code_0017, obs_code_0027 and obs_frame_pi_675_1.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0027",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_2152ea9f491e3745aa8a": {
+          "score": 0,
+          "reason": "The common and dining areas remain open to one another, and most room outlines follow the reference. The upper unit 2–3 partition is only 0.09326 m thick, and continuous corridor wall faces cross required access openings, including unit 2’s entrance. See obs_code_0015, obs_code_0019, obs_code_0022 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0015",
+            "obs_code_0019",
+            "obs_code_0022",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_e7598ead42dbdc668c4d": {
+          "score": 0,
+          "reason": "Four reusable double-door inserts exist. At the common-area south entrance, the installed hinge is at (9.4403,−1.2454) while the reference jambs lie near y=−1.65. The published door visibly floats above the entrance wall. See obs_code_0025, obs_code_0030, obs_code_0019 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0019",
+            "obs_code_0025",
+            "obs_code_0030",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_565e15476fa62805b165": {
+          "score": 0,
+          "reason": "The four west-facade windows are rotated 90° against a facade heading of 81.17°. On the unit 2 north facade, one 2.30 m insert spans the location of two separate reference openings and their intervening wall. See obs_code_0030, obs_code_0007, obs_frame_pi_9_1 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0007",
+            "obs_code_0030",
+            "obs_frame_pi_697_1",
+            "obs_frame_pi_9_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_6a820acd318ddc360b95": {
+          "score": 0,
+          "reason": "Editable TEXT 307 reads “laundry,” but it begins at x=21.2 in the central passage. The plotted word spans approximately x=21.20…23.02 and crosses the laundry’s west wall and entrance symbols, leaving its room association ambiguous. See obs_code_0013, obs_code_0005 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0013",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_b8791b3b8eb50041f377": {
+          "score": 1,
+          "reason": "Layout1’s editable title fields give Project as “Example 1,” Location as “Athens,” and Drawing name as “Ground floor.” All three are legible in the published sheet. See obs_code_0029, obs_submitted_sheet_pdf_text and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0029",
+            "obs_frame_pi_697_1",
+            "obs_submitted_sheet_pdf_text"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_f7beb69b5b82475b14be": {
+          "score": 0,
+          "reason": "The drawing has genuine exterior dimensions, but several facade opening chains are incomplete. On the sloping west facade, dimensions 445 and 454 measure vertical projections of 1.79 and 2.42 m while the sheet displays 1.15 and 1.36. The plotted numbers do not measure those reference spans. See obs_code_0007, obs_submitted_sheet_pdf_text, obs_frame_pi_9_1 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0007",
+            "obs_frame_pi_697_1",
+            "obs_frame_pi_9_1",
+            "obs_submitted_sheet_pdf_text"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_76a41fda3326f60971b6": {
+          "score": 0,
+          "reason": "The window detail has genuine dimensions with annotative flags, but several values fall outside the viewport or printable area. Dimension 500 measures 0.05 m while the actual scaled end frame is 0.045 m. The sheet therefore cannot establish all six required relationships accurately and legibly. See obs_code_0017, obs_code_0027, obs_code_0030 and obs_frame_pi_675_1.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0027",
+            "obs_code_0030",
+            "obs_frame_pi_675_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_89c50fc615525e461b5a": {
+          "score": 0,
+          "reason": "The southern corridor faces are nominally 0.10 m apart and establish about 1.50 m corridor clearance. Across the unit 5 doorway, both faces at y=4.9026 and 5.0030 continue through x=34.9 between the reference jambs. The southern run lacks the required usable interruption. See obs_code_0009, obs_code_0019 and obs_frame_pi_697_1.",
+          "observations": [
+            "obs_code_0009",
+            "obs_code_0019",
+            "obs_frame_pi_697_1"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_469092297d80d791f27b": {
+          "score": 1,
+          "reason": "The double door’s four polylines and two arcs are on layer 0 inside DOOR_DOUBLE. All four installed references are on A-DOOR, giving the full assembly effective building-element classification. See obs_code_0017, obs_code_0029 and obs_code_0025.",
+          "observations": [
+            "obs_code_0017",
+            "obs_code_0025",
+            "obs_code_0029"
+          ],
+          "origin": "fresh_archived_verification"
+        },
+        "outcome_f1006fe78496491981ca": {
+          "score": 1,
+          "reason": "The verified save wrote 60,998 bytes to /home/ga/Documents/CAD/floor plan exercise.dwg and reported zero entities dropped. Independent readback matched the verified SHA-256, decoded 1,178 native objects, and recovered the editable model, component definitions, Layout1 and details. See obs_step_669_p1, obs_code_0005 and obs_code_0029.",
+          "observations": [
+            "obs_code_0005",
+            "obs_code_0029",
+            "obs_step_669_p1"
+          ],
+          "origin": "fresh_archived_verification"
+        }
+      },
+      "evidence": {
+        "obs_code_0014": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Placed fixture extents",
+          "record_sha256": "e2ae193c6948b6feb4c926f74760bb37148b823c64a946ad5fb19a1e74d6a6ad",
+          "explanation": {
+            "purpose": "Measure the archived fixture definitions, their seven plan locations, handedness and comparison to the reference fixture extents.",
+            "result": "The check returned coordinates for fixture bounds in the reference and the saved plan."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\np=json.loads((P/'reference-pdf.json').read_text())[0];print('color counts',collections.Counter(str(e['stroking_color']) for k in ['lines','rects','curves'] for e in p[k]).most_common(25))\nfor o in [0xec,0x131]:\n pts=[]\n for h,t,own,l in ef:\n  if own!=o:continue\n  e=E[h]\n  pts+= list([e['start'],e['end']] if t==19 else e['control_points'])\n print('fixture',hex(o),'bounds',[(round(min(v),3),round(max(v),3)) for v in list(zip(*pts))[:2]],'layer',E[h]['layer'] if h in E else {E[h]['layer'] for h,t,own,l in ef if own==o})\n for h,t,own,l in ef:\n  if t!=7 or own!=0x17:continue\n  bh,xyz,s,rot=insert(h)\n  if bh==0x15f:\n   innerref=insert(0x162 if o==0xec else 0x164)\n   ox,oy=innerref[1][:2];r=math.radians(innerref[3]);p2=[(xyz[0]+s[0]*(ox+a*math.cos(r)-b*math.sin(r)),xyz[1]+s[1]*(oy+a*math.sin(r)+b*math.cos(r))) for a,b,*z in pts]\n  elif bh==o:\n   r=math.radians(rot);p2=[(xyz[0]+a*math.cos(r)-b*math.sin(r),xyz[1]+a*math.sin(r)+b*math.cos(r)) for a,b,*z in pts]\n  else:continue\n  print(hex(h),[(round(min(v),2),round(max(v),2)) for v in zip(*p2)])\nprint('block units source DXFs');print(list(Path('/workspace/assets/Blocks').glob('*')))",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "color counts [('[0.145, 0.584, 0.0]', 673), ('[0.0, 0.145, 0.584]', 670), ('[0.584, 0.0, 0.0]', 180), ('0.0', 93), ('0', 70), ('[0.463, 0.463, 0.463]', 36)]\nfixture 0xec bounds [(0.0, 0.46), (0.0, 0.68)] layer {'Furnitures'}\n0x2eb [(21.6, 22.06), (7.95, 8.63)]\n0x2ed [(28.94, 29.4), (7.95, 8.63)]\n0x2ef [(30.6, 31.06), (7.95, 8.63)]\n0x2f1 [(36.64, 37.1), (7.95, 8.63)]\n0x2f3 [(30.6, 31.06), (5.45, 6.13)]\n0x2f5 [(31.24, 31.7), (5.45, 6.13)]\n0x2f7 [(37.0, 37.46), (3.8, 4.48)]\nfixture 0x131 bounds [(-0.0, 0.558), (0.0, 0.407)] layer {'Furnitures'}\n0x2eb [(21.94, 22.35), (6.8, 7.36)]\n0x2ed [(28.65, 29.06), (6.8, 7.36)]\n0x2ef [(30.94, 31.35), (6.8, 7.36)]\n0x2f1 [(36.35, 36.76), (6.8, 7.36)]\n0x2f3 [(30.94, 31.35), (4.3, 4.86)]\n0x2f5 [(30.95, 31.36), (4.3, 4.86)]\n0x2f9 [(37.2, 37.61), (4.24, 4.8)]\nblock units source DXFs\n[PosixPath('/workspace/assets/Blocks/sink 8.dwg'), PosixPath('/workspace/assets/Blocks/toilet 3.dwg')]\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0017": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Native blocks and dimensions",
+          "record_sha256": "0ec69eb8793a96aa5e6eef0dba3c7a69ef456a738c2c28bb1e75d66e2f8d608b",
+          "explanation": {
+            "purpose": "Read the live CAD entity page metadata and dimension attachment behavior, and compare the saved component geometry and context flags.",
+            "result": "The saved component records expose jamb, leaf and arc geometry, and the dimension records include measured values and text positions."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nprint('live dim',next(e for e in ee if 'Dimension' in e['type']))\nprint('class instances codes and names',[(t,n) for t,n in sorted(collections.Counter(T.values()).items()) if t>=500])\nfor h,t,o,l in ef:\n if o in [0x147,0x14e,0x157,0x15f]:\n  print(hex(o),hex(h),t,hex(l),poly(h) if t==77 else (line(h) if t==19 else (insert(h) if t==7 else E[h])))\nprint('block reference controls',[((hex(h),hex(own)),nonentity(obj(h)[1]) if h in [0x147,0x14e,0x157,0x15f] else ent(h)[6]) for h,own in [(0x147,0),(0x157,0),(0x15f,0),(0x283,0x17),(0x2ed,0x17),(0x2d5,0x17)]])\nfor h,t,o,l in ef:\n if t==21 and (h>=0x487 or h in [0x337,0x346]):\n  print(hex(h),dim(h)[:4],shiftedstrings(obj(h)[1]),'text midpoint',dim(h)[4])",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "live dim {'constraints': [], 'display_type': 'Dimension', 'handle': '30A', 'layer': 'Dimensions', 'owner': '17', 'space': '*Model_Space', 'type': 'Dimension'}\nclass instances codes and names [(500, 1), (501, 9), (732, 1), (733, 3), (734, 25), (735, 1)]\n0x147 0x14a 77 0x27 (512, [(-0.05, 0.0), (-0.05, 0.1), (0.0, 0.1), (0.0, 0.0)])\n0x147 0x14b 77 0x27 (512, [(0.9, 0.0), (0.9, 0.1), (0.95, 0.1), (0.95, 0.0)])\n0x147 0x14c 77 0x27 (512, [(0.0, 0.0), (0.0, 0.9), (0.05, 0.9), (0.05, 0.0)])\n0x147 0x14d 17 0x27 {'center': [0.0, 0.0, 0.0], 'constraints': [], 'display_type': 'Arc', 'end_angle': 1.5707963267948966, 'handle': '14D', 'layer': '0', 'owner': '147', 'radius': 0.9, 'space': 'DOOR_SINGLE', 'start_angle': 0.0, 'type': 'Arc'}\n0x14e 0x151 77 0x27 (512, [(-0.05, 0.0), (-0.05, 0.1), (0.0, 0.1), (0.0, 0.0)])\n0x14e 0x152 77 0x27 (512, [(1.4, 0.0), (1.4, 0.1), (1.45, 0.1), (1.45, 0.0)])\n0x14e 0x153 77 0x27 (512, [(0.0, 0.0), (0.0, 0.7), (0.05, 0.7), (0.05, 0.0)])\n0x14e 0x154 77 0x27 (512, [(1.35, 0.0), (1.35, 0.7), (1.4, 0.7), (1.4, 0.0)])\n0x14e 0x155 17 0x27 {'center': [0.0, 0.0, 0.0], 'constraints': [], 'display_type': 'Arc', 'end_angle': 1.5707963267948966, 'handle': '155', 'layer': '0', 'owner': '14E', 'radius': 0.7, 'space': 'DOOR_DOUBLE', 'start_angle': 0.0, 'type': 'Arc'}\n0x14e 0x156 17 0x27 {'center': [1.4, 0.0, 0.0], 'constraints': [], 'display_type': 'Arc', 'end_angle': 3.141592653589793, 'handle': '156', 'layer': '0', 'owner': '14E', 'radius': 0.7, 'space': 'DOOR_DOUBLE', 'start_angle': 1.5707963267948966, 'type': 'Arc'}\n0x157 0x15a 19 0x27 ((0.0, 0.0), (1.0, 0.0))\n0x157 0x15b 19 0x27 ((0.0, 0.3), (1.0, 0.3))\n0x157 0x15c 77 0x27 (512, [(0.0, 0.05), (0.05, 0.05), (0.05, 0.13), (0.0, 0.13)])\n0x157 0x15d 77 0x27 (512, [(0.95, 0.05), (1.0, 0.05), (1.0, 0.13), (0.95, 0.13)])\n0x157 0x15e 77 0x27 (512, [(0.05, 0.07), (0.95, 0.07), (0.95, 0.11), (0.05, 0.11)])\n0x15f 0x162 7 0x27 (236, [0.1, 1.45, 0], (1, 1, 1), 0.0)\n0x15f 0x164 7 0x27 (305, [0.85, 0.3, 0], (1, 1, 1), 90.0)\nblock reference controls [(('0x147', '0x0'), (0, 1, 0)), (('0x157', '0x0'), (0, 1, 0)), (('0x15f', '0x0'), (0, 1, 0)), (('0x283', '0x17'), 1), (('0x2ed', '0x17'), 1), (('0x2d5', '0x17'), 1)]\n0x337 ([(25.3, 10.5), (30.0, 10.5), (25.3, 12.5)], 4.7, 1, [((5, 197), '460100')]) ['4.70J'] text midpoint (27.65, 12.6755, 0)\n0x346 ([(30.0, 10.5), (38.2, 10.5), (30.0, 12.5)], 8.2, 1, [((5, 197), '460100')]) ['8.20J'] text midpoint (34.1, 12.6755, 0)\n0x487 ([(59.95, 6.0), (60.0, 6.0), (59.95, 5.92)], 0.05, 1, [((5, 197), '460100')]) ['0,05J'] text midpoint (59.975, 6.585, 0)\n0x498 ([(60.0, 6.0), (60.9, 6.0), (60.0, 5.85)], 0.9, 1, [((5, 197), '460100')]) ['`Xr'] text midpoint (60.45, 6.494999999999999, 0)\n0x4a7 ([(59.95, 6.0), (59.95, 6.1), (59.88, 6.0)], 0.1, 1, [((5, 197), '460100')]) ['`Xb'] text midpoint (59.215, 6.05, 0)\n0x4b8 ([(60.0, 6.0), (60.0, 6.9), (59.93, 6.0)], 0.9, 1, [((5, 197), '460100')]) ['`Xr'] text midpoint (59.285, 6.45, 0)\n0x4cf ([(70.0, 6.0), (70.9, 6.0), (70.0, 5.92)], 0.9, 1, [((5, 197), '460100')]) ['`Xr'] text midpoint (70.45, 6.5575, 0)\n0x4de ([(70.0, 6.0), (70.0, 6.05), (69.94, 6.0)], 0.05, 1, [((5, 197), '460100')]) ['0,05J'] text midpoint (69.2897, 6.025, 0)\n0x4ef ([(70.0, 6.05), (70.0, 6.13), (69.94, 6.05)], 0.08, 1, [((5, 197), '460100')]) ['0,08J'] text midpoint (69.2897, 6.09, 0)\n0x500 ([(70.0, 6.13), (70.05, 6.13), (70.0, 6.18)], 0.05, 1, [((5, 197), '460100')]) ['0,05J'] text midpoint (70.025, 6.830299999999999, 0)\n0x511 ([(70.9, 6.07), (70.9, 6.11), (70.96, 6.07)], 0.04, 1, [((5, 197), '460100')]) ['0,04J'] text midpoint (70.30969999999999, 6.09, 0)\n0x522 ([(70.9, 6.0), (70.9, 6.05), (70.96, 6.0)], 0.05, 1, [((5, 197), '460100')]) ['0,05J'] text midpoint (70.30969999999999, 6.025, 0)\n0x533 ([(70.9, 6.0), (70.9, 6.3), (71.04, 6.0)], 0.3, 1, [((5, 197), '460100')]) ['`Xf'] text midpoint (70.4025, 6.15, 0)\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0020": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Fixture sizes",
+          "record_sha256": "3ad27bff72f8eea91d8c8253d5c86602df0da00cba145f5b0430b28523074e66",
+          "explanation": {
+            "purpose": "Verify complete component geometry against the supplied fixture DXF and measure the design reference's unit 1 toilet and basin locations.",
+            "result": "The check compared supplied fixture geometry and the reference unit 1 fixture extents."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nimport collections\npairs=iter(Path('/workspace/assets/bath furnitures.dxf').read_text('latin-1').splitlines());groups=[];cur=None\nfor a,v in zip(pairs,pairs):\n if a.strip()=='0':\n  if cur:groups.append(cur)\n  cur=[(0,v)]\n elif cur:cur.append((int(a),v))\nname=None\nfor j,g in enumerate(groups):\n d=dict(g)\n if d[0]=='BLOCK':\n  name=d.get(2)\n  if name and name.lower() in ('sink 8','toilet 3'): print('supplied fixture',name,d.get(10),d.get(20))\n if d[0]=='ENDBLK':name=None\n if name and name.lower() in ('sink 8','toilet 3') and d[0]=='BLOCK':\n  ct=collections.Counter();verts=[]\n  for l in groups[j+1:]:\n   dat=dict(l)\n   if dat[0]=='ENDBLK':break\n   ct[dat[0]]+=1\n   for k,(code,val) in enumerate(l):\n    if code in (10,11) and k+1<len(l) and l[k+1][0]==code+10:verts.append((float(val),float(l[k+1][1])))\n  print(ct,'relative size',[(round(max(v)-min(v),5)) for v in zip(*verts)])\np=json.loads((P/'reference-pdf.json').read_text())[0]\ndef xy(x,y):return (round((x-717.92)*8.2/137.16+38.2,3), round((328.52-y)*10.35/173.28,3))\nfor group,box in [('toilet',(21.05,6.62,21.78,7.59)),('basin',(21.7,6.62,22.39,7.59))]:\n found=[]\n for k in ['lines','rects','curves']:\n  for q in p[k]:\n   if q['stroking_color']!=[0.0,0.145,0.584]:continue\n   a,bb=xy(q['x0'],q['bottom']),xy(q['x1'],q['top']);x,y=(a[0]+bb[0])/2,(a[1]+bb[1])/2\n   if box[0]<x<box[2] and box[1]<y<box[3]:found+= [a,bb]\n print(group,'reference path extents',[(min(s),max(s)) for s in zip(*found)])\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "supplied fixture toilet 3 0.0 0.0\nCounter({'SPLINE': 46, 'LINE': 20}) relative size [0.46004, 0.68012]\nsupplied fixture sink 8 0.0 0.0\nCounter({'SPLINE': 17, 'LINE': 2}) relative size [0.55821, 0.40623]\ntoilet reference path extents [(21.183, 21.832), (6.719, 7.375)]\nbasin reference path extents [(21.721, 22.288), (6.709, 7.103)]\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0025": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Drawing units and layers",
+          "record_sha256": "6e3813cee043393d4531e477ee03abf63f0560bb767c67228fdc688354bc8831",
+          "explanation": {
+            "purpose": "Verify the DWG meter header, effective layer assignments, reusable references and saved annotation scale records from the submitted bytes.",
+            "result": "The DWG stores meters and a non-plotting Defpoints layer. The output lists entity counts and layer assignments."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nr=R(secs['AcDb:Header']);r.i=3488;print('unit code, plotstyle code, adjacent header bytes',r.bs(),r.bs(),list(r.raw(6)))\nln={0x27:'0'}\nfor h,t in T.items():\n if t!=51:continue\n r=obj(h)[1];nonentity(r);xr=r.bs();flags=r.bs()\n e=next((e for e in ee if E.get(int(e['handle'],16)) and ent(int(e['handle'],16))[4]==h),None)\n ss=shiftedstrings(r);ln[h]=e['layer'] if e else (ss or [ln.get(h,'?')])[0]\n print('layer',hex(h),ln[h],'plot',bool(flags&16))\nprint('model lines',collections.Counter(ln[ent(h)[4]] for h in w))\nprint('stairs/lift',collections.Counter(ln[ent(h)[4]] for h in w if 0x251<=h<=0x282),collections.Counter(ln[ent(h)[4]] for h in w if 0x245<=h<=0x24c))\nprint('ref counts by block and effective layer',collections.Counter((hex(insert(h)[0]),ln[l]) for h,t,o,l in ef if o==0x17 and t==7))\nprint('door/window/restroom records with extension dictionary or xdata',[(hex(h),obj(h)[2],ent(h)[6]) for h,t,o,l in ef if t==7 and o in [0x17,0x15f] and (ent(h)[6]==0 or obj(h)[2])]);print('dictionary sets', [(hex(h),shiftedstrings(obj(h)[1])) for h,t in T.items() if t==42 and any('context' in s.lower() or 'eval' in s.lower() for s in shiftedstrings(obj(h)[1]))]);print('all numeric dimensions',collections.Counter((ln[l],dim(h)[2],str(dim(h)[3])) for h,t,o,l in ef if t==21))\nprint('scale-list strings',[(hex(h),shiftedstrings(obj(h)[1])) for h,t in T.items() if t==734])\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "unit code, plotstyle code, adjacent header bytes 6 0 [127, 0, 1, 1, 2, 0]\nlayer 0x27 0 plot True\nlayer 0x28 Defpoints plot False\nlayer 0x8a Furnitures plot True\nlayer 0x8b windowsz plot True\nlayer 0x8c text labels plot True\nlayer 0xe5 A-WALL-EXTR plot True\nlayer 0xe6 A-WALL-INTR plot True\nlayer 0xe7 A-DOOR plot True\nlayer 0xe8 A-GLAZ plot True\nlayer 0xe9 Dimensions plot True\nmodel lines Counter({'A-WALL-INTR': 224, 'A-WALL-EXTR': 71})\nstairs/lift Counter({'A-WALL-INTR': 50}) Counter({'A-WALL-INTR': 8})\nref counts by block and effective layer Counter({('0x157', 'A-GLAZ'): 28, ('0x147', 'A-DOOR'): 22, ('0x15f', 'Furnitures'): 6, ('0x14e', 'A-DOOR'): 4, ('0xec', 'Furnitures'): 1, ('0x131', 'Furnitures'): 1})\ndoor/window/restroom records with extension dictionary or xdata []\ndictionary sets []\nall numeric dimensions Counter({('Dimensions', 1, \"[((5, 197), '460100')]\"): 36})\nscale-list strings [('0x5a', ['2dWireframe', 'strokes_ogs.tif']), ('0x5b', ['Basic', 'strokes_ogs.tif']), ('0x5c', ['Brighten', 'strokes_ogs.tif']), ('0x5d', ['ColorChange', 'strokes_ogs.tif']), ('0x5e', ['Conceptual', 'strokes_ogs.tif']), ('0x5f', ['Dim', 'strokes_ogs.tif']), ('0x60', ['EdgeColorOff', 'strokes_ogs.tif']), ('0x61', ['Facepattern', 'strokes_ogs.tif']), ('0x62', ['Flat', 'strokes_ogs.tif']), ('0x63', ['FlatWithEdges', 'strokes_ogs.tif']), ('0x64', ['Gouraud', 'strokes_ogs.tif']), ('0x65', ['GouraudWithEdges', 'strokes_ogs.tif']), ('0x66', ['Hidden', 'strokes_ogs.tif']), ('0x67', ['JitterOff', 'strokes_ogs.tif']), ('0x68', ['Linepattern', 'strokes_ogs.tif']), ('0x69', ['Modeling', 'strokes_ogs.tif']), ('0x6a', ['OverhangOff', 'strokes_ogs.tif']), ('0x6b', ['Realistic', 'strokes_ogs.tif']), ('0x6c', ['Shaded', 'strokes_ogs.tif']), ('0x6d', ['Shaded with edges', 'strokes_ogs.tif']), ('0x6e', ['Shades of Gray', 'strokes_ogs.tif']), ('0x6f', ['Sketchy', 'strokes_ogs.tif']), ('0x70', ['Thicken', 'strokes_ogs.tif']), ('0x71', ['Wireframe', 'strokes_ogs.tif']), ('0x72', ['X-Ray', 'strokes_ogs.tif'])]\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0019": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Wall openings and door axes",
+          "record_sha256": "daab4c7701206c4df7323bbdd33fa0533fe84469037e3f11e6bb685ae65b15bc",
+          "explanation": {
+            "purpose": "Locate PDF wall ends and door axes in the upper corridor and bathroom so opening treatment can be compared with the reference itself.",
+            "result": "Reference jamb locations can be compared with horizontal wall segments crossing those locations in the saved model."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\np=json.loads((P/'reference-pdf.json').read_text())[0];scx=137.16/8.2;scy=173.28/10.35\ndef pt(p):return (round((p[0]-717.92)/scx+38.2,3),round((328.52-p[1])/scy,3))\nfor k in ['rects','curves']:\n for q in p[k]:\n  a,b=pt((q['x0'],q['bottom'])),pt((q['x1'],q['top']))\n  if q['stroking_color']==[0.0,0.145,0.584] and (k=='rects' or (q['width']>9 and q['height']>9)):\n   if (a[0]>24.1 and a[0]<28 and a[1]>6.2) or (a[0]>34 and 3.8<a[1]<5.2) or (a[0]<11 and a[1]<0):\n    print(k,'bounds',a,b,'path',str(q['path'])[:180])\nfor x in [25.6,26,26.3,34.9,9.5]:\n hh=[]\n for h,(a,b) in w.items():\n  if abs(a[1]-b[1])<.001 and min(a[0],b[0])<x<max(a[0],b[0]):hh.append((hex(h),round(a[1],3)))\n print('model continuous horizontal faces at x',x,hh)\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "rects bounds (24.899, 6.501) (24.949, 6.601) path [['m', [496.28000000000003, 219.68]], ['l', [495.44000000000005, 219.68]], ['l', [495.44000000000005, 218.0]], ['l', [496.28000000000003, 218.0]], ['l', [496.28000000000003, 219.68\nrects bounds (25.143, 6.501) (25.193, 6.601) path [['m', [499.52000000000004, 219.68]], ['l', [500.36, 219.68]], ['l', [500.36, 218.0]], ['l', [499.52000000000004, 218.0]], ['l', [499.52000000000004, 219.68]]]\nrects bounds (26.097, 6.501) (26.148, 6.601) path [['m', [515.48, 219.68]], ['l', [516.32, 219.68]], ['l', [516.32, 218.0]], ['l', [515.48, 218.0]], ['l', [515.48, 219.68]]]\nrects bounds (34.197, 4.903) (34.247, 5.003) path [['m', [650.96, 244.76]], ['l', [651.8000000000001, 244.76]], ['l', [651.8000000000001, 246.44]], ['l', [650.96, 246.44]], ['l', [650.96, 244.76]]]\nrects bounds (35.151, 4.903) (35.201, 5.003) path [['m', [666.92, 244.76]], ['l', [667.76, 244.76]], ['l', [667.76, 246.44]], ['l', [666.92, 246.44]], ['l', [666.92, 244.76]]]\nrects bounds (10.494, -1.699) (10.544, -1.598) path [['m', [255.32000000000005, 356.96000000000004]], ['l', [254.48000000000005, 356.96000000000004]], ['l', [254.48000000000005, 355.28]], ['l', [255.32000000000005, 355.28]], ['l', [\nrects bounds (9.044, -1.699) (9.095, -1.598) path [['m', [230.24, 356.96000000000004]], ['l', [231.08, 356.96000000000004]], ['l', [231.08, 355.28]], ['l', [230.24, 355.28]], ['l', [230.24, 356.96000000000004]]]\ncurves bounds (25.19, 6.605) (26.09, 7.504) path [['m', [515.36, 217.94]], ['c', [515.36, 209.62256000000002], [508.61744, 202.88], [500.3, 202.88]]]\ncurves bounds (27.79, 6.655) (28.691, 7.555) path [['m', [558.86, 202.04000000000002]], ['c', [550.54256, 202.04000000000002], [543.8000000000001, 208.78256000000005], [543.8000000000001, 217.10000000000002]]]\ncurves bounds (34.243, 4.007) (35.144, 4.906) path [['m', [651.74, 261.44]], ['c', [660.05744, 261.44], [666.8, 254.69743999999997], [666.8, 246.38]]]\ncurves bounds (9.791, -1.595) (10.49, -0.896) path [['m', [254.42000000000007, 343.52]], ['c', [247.95824000000007, 343.52], [242.72000000000008, 348.75824], [242.72000000000008, 355.22]]]\ncurves bounds (9.091, -1.595) (9.791, -0.896) path [['m', [242.71999999999997, 355.22]], ['c', [242.71999999999997, 348.75824], [237.48175999999998, 343.52], [231.01999999999998, 343.52]]]\nmodel continuous horizontal faces at x 25.6 [('0x167', 0.452), ('0x16d', 9.597), ('0x17d', 0.753), ('0x189', 9.296), ('0x1a7', 4.903), ('0x1ac', 5.003), ('0x1b2', 6.601), ('0x1b8', 6.501), ('0x272', 1.849), ('0x273', 2.1), ('0x274', 2.351), ('0x275', 2.602)]\nmodel continuous horizontal faces at x 26 [('0x167', 0.452), ('0x16d', 9.597), ('0x17d', 0.753), ('0x189', 9.296), ('0x1a7', 4.903), ('0x1ac', 5.003), ('0x1b2', 6.601), ('0x1b8', 6.501), ('0x272', 1.849), ('0x273', 2.1), ('0x274', 2.351), ('0x275', 2.602)]\nmodel continuous horizontal faces at x 26.3 [('0x167', 0.452), ('0x16d', 9.597), ('0x17d', 0.753), ('0x189', 9.296), ('0x1a7', 4.903), ('0x1ac', 5.003), ('0x1b2', 6.601), ('0x1b8', 6.501), ('0x278', 1.649), ('0x27c', 1.699)]\nmodel continuous horizontal faces at x 34.9 [('0x169', 0.0), ('0x16b', 10.35), ('0x182', 0.301), ('0x186', 10.049), ('0x1a3', 4.903), ('0x1ac', 5.003), ('0x1af', 6.601), ('0x1b7', 6.501)]\nmodel continuous horizontal faces at x 9.5 [('0x173', 11.497), ('0x179', -1.799), ('0x191', 11.196), ('0x197', -1.498)]\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0022": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Wall thickness and junctions",
+          "record_sha256": "9aec243cef8733eb8413cd391debcdc1f17559c0eed5224f4fe819b31f6d9162",
+          "explanation": {
+            "purpose": "Read the dimensional precision of paired wall profiles and the actual staircase tread and divider spacing to distinguish traced geometry from exact offsets.",
+            "result": "The measured separations and endpoint gaps show where wall faces meet and how much they depart from nominal thickness."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\ndef distpair(i,j):\n p,q=w[i];a,b=w[j];l=math.dist(a,b);return tuple(round(abs((b[0]-a[0])*(s[1]-a[1])-(b[1]-a[1])*(s[0]-a[0]))/l,6) for s in [p,q])\nfor tag,i,j in [('unit3-4 bay',0x19e,0x1a0),('unit2-3 bay',0x1c9,0x1ca),('office vertical',0x1c0,0x218),('office diagonal',0x216,0x217),('laundry vertical',0x219,0x1be),('laundry bevel',0x213,0x214),('wc vertical',0x21b,0x21e),('wc diagonal',0x21c,0x21f),('wc horizontal',0x21d,0x220),('bathroom vertical',0x1e7,0x1eb),('bathroom horizontal',0x1e9,0x1ec)]:print(tag,distpair(i,j))\nfor h in [0x166,0x167,0x177,0x179,0x1be,0x219,0x1eb,0x1ec,0x261,0x27a]:print(hex(h),'length',round(math.dist(*w[h]),6))\nprint('junction gaps for office, laundry, passage and bathroom')\nfor i,j in [(0x1a9,0x216),(0x216,0x1c0),(0x1c0,0x215),(0x1ad,0x217),(0x217,0x218),(0x218,0x1bf),(0x1ac,0x1be),(0x1a8,0x219),(0x219,0x21a),(0x21a,0x1bd),(0x1bd,0x213),(0x1be,0x214),(0x1e8,0x1e9),(0x1eb,0x1ec),(0x1ec,0x184)]:\n print(hex(i),hex(j),round(min(math.dist(p,q) for p in w[i] for q in w[j]),6))\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "unit3-4 bay (0.100437, 0.100437)\nunit2-3 bay (0.093263, 0.093263)\noffice vertical (0.100437, 0.100437)\noffice diagonal (0.096339, 0.10141)\nlaundry vertical (0.100437, 0.100437)\nlaundry bevel (0.299162, 0.299161)\nwc vertical (0.100437, 0.100437)\nwc diagonal (0.101411, 0.101412)\nwc horizontal (0.100346, 0.100346)\nbathroom vertical (0.100441, 0.100441)\nbathroom horizontal (0.100344, 0.100344)\n0x166 length 0.021521\n0x167 length 6.456695\n0x177 length 3.300088\n0x179 length 13.207523\n0x1be length 3.676974\n0x219 length 1.655713\n0x1eb length 2.501489\n0x1ec length 2.546805\n0x261 length 0.043045\n0x27a length 0.05022\njunction gaps for office, laundry, passage and bathroom\n0x1a9 0x216 0.0\n0x216 0x1c0 2e-06\n0x1c0 0x215 0.0\n0x1ad 0x217 0.0\n0x217 0x218 0.0\n0x218 0x1bf 2e-06\n0x1ac 0x1be 2e-06\n0x1a8 0x219 0.0\n0x219 0x21a 0.0\n0x21a 0x1bd 2e-06\n0x1bd 0x213 3e-06\n0x1be 0x214 0.0\n0x1e8 0x1e9 0.0\n0x1eb 0x1ec 0.0\n0x1ec 0x184 2e-06\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0030": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Chamfers, door positions and window widths",
+          "record_sha256": "600263d4a7920b34c3d7363a655e97128dce7c9934173343a2501a8678b25996",
+          "explanation": {
+            "purpose": "Measure all seven restroom chamfers, verify fitted-door discrepancies against reference jambs, and test non-width dimensions of the scaled window.",
+            "result": "The seven chamfers measure about 0.10141 m. Door hinge comparisons and window frame widths are also reported."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\ndef distances(i,j):\n a,b=w[j];u,v=b[0]-a[0],b[1]-a[1]\n return [round(abs(u*(p[1]-a[1])-v*(p[0]-a[0]))/math.hypot(u,v),6) for p in w[i]]\nprint('chamfer end distances m',[(hex(h),distances(h,h+3)) for h in [0x21c,0x222,0x228,0x22e,0x234,0x23a,0x240]])\nref=json.loads((P/'reference-pdf.json').read_text())[0]\ndef xy(x,y):return ((x-717.92)*8.2/137.16+38.2,(328.52-y)*10.35/173.28)\njr=[(xy(e['x0'],e['bottom']),xy(e['x1'],e['top'])) for e in ref['rects'] if e['stroking_color']==[0,.145,.584]]\nfor h in [0x289,0x293,0x2b3]:\n bh,p,s,r=insert(h);width=1.4 if bh==0x14e else .9\n print('door',hex(h),'hinge',fr(p[:2]),'nearest reference door jamb to hinge', sorted([(round(math.dist(p[:2],((a[0]+b[0])/2,(a[1]+b[1])/2)),3),fr(a),fr(b)) for a,b in jr])[:2])\nprint('reference west heading deg',math.degrees(math.atan2(w[0x176][0][1]-w[0x176][1][1],w[0x176][0][0]-w[0x176][1][0])))\nfor h in [0x2e1,0x2e3,0x2e5,0x2e7,0x4cd,0x2d5]:\n _,p,s,rot=insert(h);print('window',hex(h), 'width/rotation/end frame',s[0],rot,round((poly(0x15c)[1][1][0]-poly(0x15c)[1][0][0])*s[0],5))\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "chamfer end distances m [('0x21c', [0.101411, 0.101412]), ('0x222', [0.101411, 0.101412]), ('0x228', [0.101412, 0.101412]), ('0x22e', [0.10141, 0.101411]), ('0x234', [0.101411, 0.101412]), ('0x23a', [0.101411, 0.101413]), ('0x240', [0.101411, 0.101413])]\ndoor 0x289 hinge (26.0901, 6.6049) nearest reference door jamb to hinge [(0.063, (26.0973, 6.501), (26.1475, 6.6014)), (0.923, (25.1431, 6.501), (25.1934, 6.6014))]\ndoor 0x293 hinge (21.9435, 8.103) nearest reference door jamb to hinge [(0.059, (21.9435, 7.999), (21.9937, 8.0994)), (0.923, (20.9965, 7.999), (21.0467, 8.0994))]\ndoor 0x2b3 hinge (9.4403, -1.2454) nearest reference door jamb to hinge [(0.548, (9.0444, -1.6987), (9.0947, -1.5984)), (1.151, (10.4936, -1.6987), (10.5438, -1.5984))]\nreference west heading deg 81.1698335562203\nwindow 0x2e1 width/rotation/end frame 1.36 90.0 0.068\nwindow 0x2e3 width/rotation/end frame 1.35 90.0 0.0675\nwindow 0x2e5 width/rotation/end frame 1.36 90.0 0.068\nwindow 0x2e7 width/rotation/end frame 1.35 90.0 0.0675\nwindow 0x4cd width/rotation/end frame 0.9 0.0 0.045\nwindow 0x2d5 width/rotation/end frame 1.36 0.0 0.068\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_frame_pi_9_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 9",
+          "record_sha256": "0f4dedb9b89e8f8a5b404057b8b9ebd178d2980ce50db05a85697f7520b09871",
+          "file": "pi_9_1.jpg"
+        },
+        "obs_code_0005": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Saved wall and stair lines",
+          "record_sha256": "9a939f39b8374a101934e5bf408d8ece3e3b883387876b651819c28b41a30728",
+          "explanation": {
+            "purpose": "Cross-check decoded saved model lines against independently captured editor entities and list the wall, lift and stair endpoints in handle order.",
+            "result": "The DWG decoder found 295 model lines. The 285 lines also available from the editor had matching coordinates."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nprint('DWG sha',hashlib.sha256(f).hexdigest(),len(idx),'objects')\ndef err(h):\n a,b=w[h];e=E[h];return max(math.dist(a,e['start'][:2]),math.dist(b,e['end'][:2]))\nover=set(w)&set(E)\nprint('overlap',len(over),'largest coordinate deviation',max(err(h) for h in over));print('saved model LINEs',len(w))\nfor h,(a,b) in w.items():print(f'{h:X}',fr(a),fr(b))",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "DWG sha 3f3953f445dabc510d9277310ff6abe0ef7f6b7d6e028941cf157991175652a2 1178 objects\noverlap 285 largest coordinate deviation 0.0\nsaved model LINEs 295\n166 (23.5218, 0.4516) (23.5433, 0.4516)\n167 (23.5433, 0.4516) (30.0, 0.4516)\n168 (30.0, 0.4516) (30.0, 0.0)\n169 (30.0, 0.0) (38.2, 0.0)\n16A (38.2, 0.0) (38.2, 10.35)\n16B (38.2, 10.35) (30.0, 10.35)\n16C (30.0, 10.35) (30.0, 9.5974)\n16D (30.0, 9.5974) (25.2938, 9.5974)\n16E (25.2938, 9.5974) (25.2938, 10.35)\n16F (25.2938, 10.35) (16.0966, 10.35)\n170 (16.0966, 10.35) (16.0966, 9.5974)\n171 (16.0966, 9.5974) (11.3975, 9.5974)\n172 (11.3975, 9.5974) (11.3975, 11.4968)\n173 (11.3975, 11.4968) (3.1904, 11.4968)\n174 (3.1904, 11.4968) (3.1904, 9.5974)\n175 (3.1904, 9.5974) (1.5906, 9.5974)\n176 (1.5906, 9.5974) (-0.1097, -1.3475)\n177 (-0.1097, -1.3475) (3.1904, -1.3475)\n178 (3.1904, -1.3475) (3.1904, -1.7991)\n179 (3.1904, -1.7991) (16.3979, -1.7991)\n17A (16.3979, -1.7991) (16.3979, 0.4516)\n17B (16.3979, 0.4516) (20.2719, 0.4516)\n17C (23.6437, 0.7526) (24.9996, 0.7526)\n17D (25.1001, 0.7526) (27.5967, 0.7526)\n17E (27.6971, 0.7526) (30.2941, 0.7526)\n17F (30.2941, 0.7526) (30.2941, 0.301)\n180 (30.2941, 0.301) (30.8465, 0.301)\n181 (30.947, 0.301) (34.0462, 0.301)\n182 (34.1466, 0.301) (37.8987, 0.301)\n183 (37.8987, 0.301) (37.8987, 3.8992)\n184 (37.8987, 3.9995) (37.8987, 6.501)\n185 (37.8987, 6.6014) (37.8987, 10.049)\n186 (37.8987, 10.049) (34.1466, 10.049)\n187 (34.0462, 10.049) (30.2941, 10.049)\n188 (30.2941, 10.049) (30.2941, 9.2964)\n189 (30.2009, 9.2964) (25.1001, 9.2964)\n18A (24.9996, 9.2964) (24.9996, 10.049)\n18B (24.9996, 10.049) (20.9965, 10.049)\n18C (20.8961, 10.049) (16.3979, 10.049)\n18D (16.3979, 10.049) (16.3979, 9.2964)\n18E (16.3979, 9.2964) (15.2931, 9.2964)\n18F (15.1927, 9.2964) (11.0962, 9.2964)\n190 (11.0962, 9.2964) (11.0962, 11.1958)\n191 (11.0962, 11.1958) (3.4917, 11.1958)\n192 (3.4917, 11.1958) (3.4917, 9.2964)\n193 (3.4917, 9.2964) (1.8488, 9.2964)\n194 (1.8488, 9.2964) (0.2418, -1.0465)\n195 (0.2418, -1.0465) (3.4917, -1.0465)\n196 (3.4917, -1.0465) (3.4917, -1.498)\n197 (3.4917, -1.498) (16.0966, -1.498)\n198 (16.0966, -1.498) (16.0966, 0.6523)\n199 (16.0966, 0.7526) (16.2975, 0.7526)\n19A (16.3979, 0.7526) (20.1428, 0.7526)\n19B (20.1428, 0.7526) (20.8458, 1.4479)\n19C (20.2719, 0.4516) (21.1472, 1.326)\n19D (34.1466, 0.301) (34.1466, 4.9026)\n19E (34.1466, 6.6014) (34.1466, 10.049)\n19F (34.0462, 0.301) (34.0462, 4.9026)\n1A0 (34.0462, 6.6014) (34.0462, 10.049)\n1A1 (30.947, 0.301) (30.947, 4.9026)\n1A2 (30.8465, 0.301) (30.8465, 4.9026)\n1A3 (35.2514, 4.9026) (34.1466, 4.9026)\n1A4 (34.0462, 4.9026) (32.4464, 4.9026)\n1A5 (32.3459, 4.9026) (30.947, 4.9026)\n1A6 (30.8465, 4.9026) (27.6971, 4.9026)\n1A7 (27.5967, 4.9026) (25.1001, 4.9026)\n1A8 (24.9996, 4.9026) (22.747, 4.9026)\n1A9 (19.8486, 4.9026) (18.1986, 4.9026)\n1AA (18.0982, 4.9026) (16.3979, 4.9026)\n1AB (16.2975, 4.9026) (13.6933, 4.9026)\n1AC (35.2514, 5.003) (22.6465, 5.003)\n1AD (19.8845, 5.003) (13.5928, 5.003)\n1AE (37.8987, 6.6014) (36.4997, 6.6014)\n1AF (36.3993, 6.6014) (34.1466, 6.6014)\n1B0 (34.0462, 6.6014) (31.8007, 6.6014)\n1B1 (31.7003, 6.6014) (30.2941, 6.6014)\n1B2 (30.2009, 6.6014) (25.1001, 6.6014)\n1B3 (24.9996, 6.6014) (20.9965, 6.6014)\n1B4 (20.8961, 6.6014) (15.2931, 6.6014)\n1B5 (15.1927, 6.6014) (13.5928, 6.6014)\n1B6 (37.8987, 6.501) (35.3519, 6.501)\n1B7 (35.2514, 6.501) (34.1466, 6.501)\n1B8 (34.1466, 6.501) (13.5928, 6.501)\n1B9 (27.6971, 4.9026) (27.6971, 0.7526)\n1BA (27.5967, 4.9026) (27.5967, 0.7526)\n1BB (25.1001, 4.9026) (25.1001, 0.7526)\n1BC (24.9996, 4.9026) (24.9996, 0.7526)\n1BD (22.9479, 3.2469) (22.9479, 1.4479)\n1BE (22.6465, 5.003) (22.6465, 1.326)\n1BF (21.1472, 3.2469) (21.1472, 1.326)\n1C0 (21.0467, 3.6985) (21.0467, 3.2469)\n1C1 (20.8458, 3.2469) (20.8458, 1.4479)\n1C2 (16.3979, 4.9026) (16.3979, 3.1967)\n1C3 (16.3979, 3.1036) (16.3979, 0.7526)\n1C4 (16.2975, 4.9026) (16.2975, 0.7526)\n1C5 (13.6933, 4.9026) (13.6933, 0.7526)\n1C6 (13.5928, 5.003) (13.5928, 0.6523)\n1C7 (13.6933, 0.7526) (16.0966, 0.7526)\n1C8 (13.5928, 0.6523) (16.0966, 0.6523)\n1C9 (30.2941, 9.2964) (30.2941, 6.6014)\n1CA (30.2009, 9.2964) (30.2009, 8.0994)\n1CB (30.2009, 7.999) (30.2009, 6.6014)\n1CC (24.9996, 9.2964) (24.9996, 6.6014)\n1CD (20.9965, 10.049) (20.9965, 6.6014)\n1CE (20.8961, 10.049) (20.8961, 6.6014)\n1CF (25.1001, 9.2964) (25.1001, 6.6014)\n1D0 (15.2931, 6.6014) (15.2931, 9.2964)\n1D1 (15.1927, 6.6014) (15.1927, 9.2964)\n1D2 (13.5928, 6.501) (13.5928, 6.6013)\n1D3 (6.0026, -1.7991) (6.0026, -1.498)\n1D4 (4.6395, -1.7991) (4.6395, -1.498)\n1D5 (8.0903, -1.7991) (8.0903, -1.498)\n1D6 (6.7344, -1.7991) (6.7344, -1.498)\n1D7 (13.5857, -1.7991) (13.5857, -1.498)\n1D8 (14.9416, -1.7991) (14.9416, -1.498)\n1D9 (16.8929, 0.4516) (16.8929, 0.7526)\n1DA (18.256, 0.4516) (18.256, 0.7526)\n1DB (18.8586, 0.4516) (18.8586, 0.7526)\n1DC (19.7554, 0.4516) (19.7554, 0.7526)\n1DD (24.849, 0.4516) (24.849, 0.7526)\n1DE (23.9451, 0.4516) (23.9451, 0.7526)\n1DF (26.908, 0.4516) (26.908, 0.7526)\n1E0 (25.5449, 0.4516) (25.5449, 0.7526)\n1E1 (29.3041, 0.4516) (29.3041, 0.7526)\n1E2 (27.9482, 0.4516) (27.9482, 0.7526)\n1E3 (32.9055, -0.0) (32.9055, 0.301)\n1E4 (31.5496, -0.0) (31.5496, 0.301)\n1E5 (36.758, -0.0) (36.758, 0.301)\n1E6 (35.4021, -0.0) (35.4021, 0.301)\n1E7 (35.2514, 6.501) (35.2514, 5.003)\n1E8 (35.2514, 4.9026) (35.2514, 3.8992)\n1E9 (35.2514, 3.8992) (36.3993, 3.8992)\n1EA (36.4997, 3.8992) (37.8987, 3.8992)\n1EB (35.3519, 6.501) (35.3519, 3.9995)\n1EC (35.3519, 3.9995) (37.8987, 3.9995)\n1ED (38.2, 3.4476) (37.8987, 3.4476)\n1EE (38.2, 2.5517) (37.8987, 2.5517)\n1EF (38.2, 5.0532) (37.8987, 5.0532)\n1F0 (38.2, 4.15) (37.8987, 4.15)\n1F1 (38.2, 6.3361) (37.8987, 6.3361)\n1F2 (38.2, 5.4402) (37.8987, 5.4402)\n1F3 (38.2, 7.6478) (37.8987, 7.6478)\n1F4 (38.2, 6.7519) (37.8987, 6.7519)\n1F5 (32.9055, 10.35) (32.9055, 10.049)\n1F6 (31.5496, 10.35) (31.5496, 10.049)\n1F7 (36.758, 10.35) (36.758, 10.049)\n1F8 (35.4021, 10.35) (35.4021, 10.049)\n1F9 (27.898, 9.5974) (27.898, 9.2964)\n1FA (28.7947, 9.5974) (28.7947, 9.2964)\n1FB (27.3958, 9.5974) (27.3958, 9.2964)\n1FC (26.499, 9.5974) (26.499, 9.2964)\n1FD (6.0528, 11.4968) (6.0528, 11.1958)\n1FE (4.6898, 11.4968) (4.6898, 11.1958)\n1FF (8.5351, 11.4968) (8.5351, 11.1958)\n200 (9.891, 11.4968) (9.891, 11.1958)\n201 (23.0985, 10.35) (23.0985, 10.049)\n202 (21.7354, 10.35) (21.7354, 10.049)\n203 (19.698, 10.35) (19.698, 10.049)\n204 (18.3349, 10.35) (18.3349, 10.049)\n205 (13.9946, 9.5974) (13.9946, 9.2964)\n206 (14.8913, 9.5974) (14.8913, 9.2964)\n207 (13.4924, 9.5974) (13.4924, 9.2964)\n208 (12.5956, 9.5974) (12.5956, 9.2964)\n209 (2.3941, -1.3475) (2.3941, -1.0465)\n20A (1.031, -1.3475) (1.031, -1.0465)\n20B (0.2777, 1.1325) (0.5718, 1.0823)\n20C (0.0696, -0.215) (0.3638, -0.258)\n20D (0.6507, 3.548) (0.9521, 3.505)\n20E (0.4427, 2.2076) (0.744, 2.1646)\n20F (1.2103, 7.1174) (1.5045, 7.0744)\n210 (1.4184, 8.4649) (1.7125, 8.4147)\n211 (0.8301, 4.7019) (1.1242, 4.6518)\n212 (1.0381, 6.0423) (1.3395, 5.9993)\n213 (23.6437, 0.7526) (22.9479, 1.4479)\n214 (23.5218, 0.4516) (22.6465, 1.326)\n215 (20.8458, 3.2469) (21.0467, 3.2469)\n216 (19.8486, 4.9026) (21.0467, 3.6985)\n217 (19.8845, 5.003) (21.1472, 3.7415)\n218 (21.1472, 3.7415) (21.1472, 3.2469)\n219 (22.747, 4.9026) (22.747, 3.2469)\n21A (22.747, 3.2469) (22.9479, 3.2469)\n21B (36.4997, 6.6014) (36.4997, 7.7482)\n21C (36.4997, 7.7482) (36.7508, 7.999)\n21D (36.7508, 7.999) (37.8987, 7.999)\n21E (36.3993, 6.6014) (36.3993, 7.7912)\n21F (36.3993, 7.7912) (36.7078, 8.0994)\n220 (36.7078, 8.0994) (37.8987, 8.0994)\n221 (31.7003, 6.6014) (31.7003, 7.7482)\n222 (31.7003, 7.7482) (31.4492, 7.999)\n223 (31.4492, 7.999) (30.2941, 7.999)\n224 (31.8007, 6.6014) (31.8007, 7.7912)\n225 (31.8007, 7.7912) (31.4922, 8.0994)\n226 (31.4922, 8.0994) (30.2941, 8.0994)\n227 (22.3955, 6.6014) (22.3955, 7.7482)\n228 (22.3955, 7.7482) (22.1444, 7.999)\n229 (22.1444, 7.999) (20.9965, 7.999)\n22A (22.4959, 6.6014) (22.4959, 7.7912)\n22B (22.4959, 7.7912) (22.1874, 8.0994)\n22C (22.1874, 8.0994) (20.9965, 8.0994)\n22D (30.2009, 7.999) (29.0458, 7.999)\n22E (29.0458, 7.999) (28.7947, 7.7482)\n22F (28.7947, 7.7482) (28.7947, 6.6014)\n230 (30.2009, 8.0994) (29.0028, 8.0994)\n231 (29.0028, 8.0994) (28.6943, 7.7912)\n232 (28.6943, 7.7912) (28.6943, 6.6014)\n233 (36.4997, 3.8992) (36.4997, 2.7524)\n234 (36.4997, 2.7524) (36.7508, 2.5015)\n235 (36.7508, 2.5015) (37.8987, 2.5015)\n236 (36.3993, 3.8992) (36.3993, 2.7093)\n237 (36.3993, 2.7093) (36.7078, 2.4011)\n238 (36.7078, 2.4011) (37.8987, 2.4011)\n239 (29.4476, 4.9026) (29.4476, 3.7486)\n23A (29.4476, 3.7486) (29.6987, 3.4978)\n23B (29.6987, 3.4978) (30.8465, 3.4978)\n23C (29.3472, 4.9026) (29.3472, 3.7056)\n23D (29.3472, 3.7056) (29.6556, 3.3974)\n23E (29.6556, 3.3974) (30.8465, 3.3974)\n23F (32.3459, 4.9026) (32.3459, 3.7486)\n240 (32.3459, 3.7486) (32.0948, 3.4978)\n241 (32.0948, 3.4978) (30.947, 3.4978)\n242 (32.4464, 4.9026) (32.4464, 3.7056)\n243 (32.4464, 3.7056) (32.1379, 3.3974)\n244 (32.1379, 3.3974) (30.947, 3.3974)\n245 (16.3979, 3.1967) (18.0982, 3.1967)\n246 (18.0982, 3.1967) (18.0982, 4.9026)\n247 (16.3979, 3.1036) (18.1986, 3.1036)\n248 (18.1986, 3.1036) (18.1986, 4.9026)\n249 (16.4983, 3.2971) (17.9977, 4.8023)\n24A (16.4983, 4.8023) (17.9977, 3.2971)\n24B (16.5916, 4.8023) (16.5916, 5.003)\n24C (17.8973, 4.8023) (17.8973, 5.003)\n24D (11.4908, -1.7991) (11.4908, -1.498)\n24E (12.8539, -1.7991) (12.8539, -1.498)\n24F (9.0444, -1.498) (9.0444, -1.7991)\n250 (10.5438, -1.498) (10.5438, -1.7991)\n251 (13.6933, 3.5981) (14.7981, 3.5981)\n252 (13.6933, 1.8492) (14.7981, 1.8492)\n253 (13.6933, 2.1001) (14.7981, 2.1001)\n254 (13.6933, 2.351) (14.7981, 2.351)\n255 (13.6933, 2.6018) (14.7981, 2.6018)\n256 (13.6933, 2.8527) (14.7981, 2.8527)\n257 (13.6933, 3.1036) (14.7981, 3.1036)\n258 (13.6933, 3.3473) (14.7981, 3.3473)\n259 (16.2975, 1.8492) (15.1927, 1.8492)\n25A (16.2975, 2.1001) (15.1927, 2.1001)\n25B (16.2975, 2.351) (15.1927, 2.351)\n25C (16.2975, 2.6018) (15.1927, 2.6018)\n25D (16.2975, 2.8527) (15.9029, 2.8527)\n25E (14.7981, 3.6483) (14.7981, 1.6485)\n25F (14.7981, 1.6485) (15.1927, 1.6485)\n260 (15.1927, 1.6485) (15.1927, 2.6305)\n261 (14.7981, 3.6483) (14.8411, 3.6483)\n262 (14.8411, 3.6483) (14.8411, 1.6987)\n263 (14.8411, 1.6987) (15.1424, 1.6987)\n264 (15.1424, 1.6987) (15.1424, 2.6162)\n265 (14.9774, 2.5588) (15.6159, 2.7595)\n266 (15.824, 2.824) (16.2975, 2.9745)\n267 (15.6159, 2.7595) (15.6518, 2.9602)\n268 (15.6518, 2.9602) (15.7522, 2.6878)\n269 (15.7522, 2.6878) (15.824, 2.824)\n26A (27.5967, 3.5981) (26.5493, 3.5981)\n26B (27.5967, 1.8492) (26.5493, 1.8492)\n26C (27.5967, 2.1001) (26.5493, 2.1001)\n26D (27.5967, 2.351) (26.5493, 2.351)\n26E (27.5967, 2.6018) (26.5493, 2.6018)\n26F (27.5967, 2.8527) (26.5493, 2.8527)\n270 (27.5967, 3.1036) (26.5493, 3.1036)\n271 (27.5967, 3.3473) (26.5493, 3.3473)\n272 (25.1001, 1.8492) (26.1475, 1.8492)\n273 (25.1001, 2.1001) (26.1475, 2.1001)\n274 (25.1001, 2.351) (26.1475, 2.351)\n275 (25.1001, 2.6018) (26.1475, 2.6018)\n276 (25.1001, 2.8527) (25.4373, 2.8527)\n277 (26.5493, 3.6483) (26.5493, 1.6485)\n278 (26.5493, 1.6485) (26.1475, 1.6485)\n279 (26.1475, 1.6485) (26.1475, 2.6305)\n27A (26.5493, 3.6483) (26.499, 3.6483)\n27B (26.499, 3.6483) (26.499, 1.6987)\n27C (26.499, 1.6987) (26.1977, 1.6987)\n27D (26.1977, 1.6987) (26.1977, 2.6162)\n27E (26.3699, 2.5588) (25.7242, 2.7595)\n27F (25.5234, 2.824) (25.1001, 2.9602)\n280 (25.7242, 2.7595) (25.6884, 2.9602)\n281 (25.6884, 2.9602) (25.5879, 2.6878)\n282 (25.5879, 2.6878) (25.5234, 2.824)\n481 (59.75, 6.0) (59.95, 6.0)\n482 (59.75, 6.1) (59.95, 6.1)\n483 (60.95, 6.0) (61.15, 6.0)\n484 (60.95, 6.1) (61.15, 6.1)\n4C7 (69.8, 6.0) (70.0, 6.0)\n4C8 (69.8, 6.3) (70.0, 6.3)\n4C9 (70.0, 6.0) (70.0, 6.3)\n4CA (70.9, 6.0) (71.1, 6.0)\n4CB (70.9, 6.3) (71.1, 6.3)\n4CC (70.9, 6.0) (70.9, 6.3)\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0009": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Captured geometry comparisons",
+          "record_sha256": "7d3ec8f08e583d257812847655e7aed402efdd830d0ea7f598a94612d1ce42ae",
+          "explanation": {
+            "purpose": "Recover the reference comparisons for the bathroom doorway, upper corridor doors, lift, stairs and private fixtures.",
+            "result": "The original guest records include measured wall separations and doorway and fixture comparisons. The returned text reaches the tool’s output limit."
+          },
+          "record": {
+            "code": "import json\nfor i in [23,24,25,26,28]:\n d=json.load(open('/evidence/obs_code_%04d.json'%i));print(i,d['data']['stdout'][:7300])",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "23 0x19e 0x1a0 end distances [0.100437, 0.100437] angle deg 0.0\n0x1c0 0x218 end distances [0.100437, 0.100437] angle deg 0.0\n0x216 0x217 end distances [0.096203, 0.10153] angle deg 0.17103\n0x219 0x1be end distances [0.100437, 0.100437] angle deg 0.0\n0x213 0x214 end distances [0.299162, 0.299161] angle deg 8e-05\n0x1c9 0x1ca end distances [0.093263, 0.093263] angle deg 0.0\n0x1a1 0x1a2 end distances [0.100437, 0.100437] angle deg 0.0\n0x1e7 0x1eb end distances [0.100441, 0.100441] angle deg 0.0\n0x1e9 0x1ec end distances [0.100344, 0.100344] angle deg 0.0\n0x21b 0x21e end distances [0.100437, 0.100437] angle deg 0.0\n0x21c 0x21f end distances [0.101411, 0.101412] angle deg 0.00021\n0x21d 0x220 end distances [0.100346, 0.100346] angle deg 0.0\n0x194 0x176 end distances [0.301426, 0.301146] angle deg 0.00145\n19D ((34.1466, 0.301), (34.1466, 4.9026))\n19E ((34.1466, 6.6014), (34.1466, 10.049))\n19F ((34.0462, 0.301), (34.0462, 4.9026))\n1A0 ((34.0462, 6.6014), (34.0462, 10.049))\n1A1 ((30.947, 0.301), (30.947, 4.9026))\n1A2 ((30.8465, 0.301), (30.8465, 4.9026))\n1A5 ((32.3459, 4.9026), (30.947, 4.9026))\n1A6 ((30.8465, 4.9026), (27.6971, 4.9026))\n1A7 ((27.5967, 4.9026), (25.1001, 4.9026))\n1A8 ((24.9996, 4.9026), (22.747, 4.9026))\n1A9 ((19.8486, 4.9026), (18.1986, 4.9026))\n1AC ((35.2514, 5.003), (22.6465, 5.003))\n1AD ((19.8845, 5.003), (13.5928, 5.003))\n1AE ((37.8987, 6.6014), (36.4997, 6.6014))\n1B4 ((20.8961, 6.6014), (15.2931, 6.6014))\n1B5 ((15.1927, 6.6014), (13.5928, 6.6014))\n1B6 ((37.8987, 6.501), (35.3519, 6.501))\n1B7 ((35.2514, 6.501), (34.1466, 6.501))\n1B8 ((34.1466, 6.501), (13.5928, 6.501))\n1BD ((22.9479, 3.2469), (22.9479, 1.4479))\n1BE ((22.6465, 5.003), (22.6465, 1.326))\n1BF ((21.1472, 3.2469), (21.1472, 1.326))\n1C0 ((21.0467, 3.6985), (21.0467, 3.2469))\n215 ((20.8458, 3.2469), (21.0467, 3.2469))\n216 ((19.8486, 4.9026), (21.0467, 3.6985))\n217 ((19.8845, 5.003), (21.1472, 3.7415))\n218 ((21.1472, 3.7415), (21.1472, 3.2469))\n219 ((22.747, 4.9026), (22.747, 3.2469))\n21A ((22.747, 3.2469), (22.9479, 3.2469))\n1E7 ((35.2514, 6.501), (35.2514, 5.003))\n1E8 ((35.2514, 4.9026), (35.2514, 3.8992))\n1E9 ((35.2514, 3.8992), (36.3993, 3.8992))\n1EA ((36.4997, 3.8992), (37.8987, 3.8992))\n1EB ((35.3519, 6.501), (35.3519, 3.9995))\n1EC ((35.3519, 3.9995), (37.8987, 3.9995))\n245 ((16.3979, 3.1967), (18.0982, 3.1967))\n246 ((18.0982, 3.1967), (18.0982, 4.9026))\n247 ((16.3979, 3.1036), (18.1986, 3.1036))\n248 ((18.1986, 3.1036), (18.1986, 4.9026))\n249 ((16.4983, 3.2971), (17.9977, 4.8023))\n24A ((16.4983, 4.8023), (17.9977, 3.2971))\nupper depth 3.447610876236597 datum offset east face 3.7520565768308884 corridor clear 1.4980255137520153\nlift inner outline edges at the four X endpoints\n(16.4983, 3.2971) []\n(17.9977, 4.8023) []\n(16.4983, 4.8023) []\n(17.9977, 3.2971) []\nwest tread intervals [0.25086, 0.25087, 0.25087, 0.25086, 0.25087, 0.2437, 0.25087] ends ((13.6933, 3.5981), (14.7981, 3.5981))\neast tread intervals [0.25086, 0.25087, 0.25087, 0.25086, 0.25087, 0.2437, 0.25087] ends ((27.5967, 3.5981), (26.5493, 3.5981))\nstair&lift layers Counter({230: 8}) Counter({230: 50})\n\n24 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",
+              "stderr": "",
+              "stdout_truncated": true,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_frame_pi_697_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 697",
+          "record_sha256": "fae4ba9a248c95eeb6ce58364ae35c7ee658ccd5af3fd72c2ecf1c25a72d879f",
+          "file": "pi_697_1.jpg"
+        },
+        "obs_code_0026": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Restroom wall connections",
+          "record_sha256": "c1ed3f81ecc372bd56349ce0df59c1fd9376d60e17e93ec0929338f8c0702c85",
+          "explanation": {
+            "purpose": "Verify restroom contact and profile spacing for all seven units and check whether symbol geometry or open wall cuts provide the intended entrances.",
+            "result": "The check traced all seven restroom contours and the adjoining wall contacts and reported the southern corridor segments."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\ndef on(p,a,b):return abs(math.dist(a,p)+math.dist(b,p)-math.dist(a,b))<1e-6\nfor nm,h in [(4,0x21b),(3,0x221),(1,0x227),(2,0x22d),(5,0x233),(7,0x239),(6,0x23f)]:\n row=list(range(h,h+6))\n print('unit',nm,'internal gaps, m',[round(min(math.dist(a,b) for a in w[i] for b in w[j]),6) for i,j in [(h,h+1),(h+1,h+2),(h+3,h+4),(h+4,h+5)]])\n ends=[w[h][0],w[h+2][1],w[h+3][0],w[h+5][1]]\n print('end contacts',[sum(on(p,a,b) for k,(a,b) in w.items() if k<0x21b) for p in ends])\nprint('largest vertical bay separation departure:',w[0x1c9][0][0]-w[0x1ca][0][0])\nprint('southern wall center gap intervals', [(hex(h),fr(w[h][0]),fr(w[h][1])) for h in [0x1a8,0x1a9,0x1ac,0x1ad]])\nprint('lift inner perimeter available model entities',[(h,t) for h,t,o,l in ef if o==0x17 and t not in [1,7,19,21]])\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "unit 4 internal gaps, m [0.0, 0.0, 0.0, 0.0]\nend contacts [1, 1, 1, 1]\nunit 3 internal gaps, m [0.0, 0.0, 0.0, 0.0]\nend contacts [1, 1, 1, 1]\nunit 1 internal gaps, m [0.0, 0.0, 0.0, 0.0]\nend contacts [1, 1, 1, 1]\nunit 2 internal gaps, m [0.0, 0.0, 0.0, 0.0]\nend contacts [1, 1, 1, 1]\nunit 5 internal gaps, m [0.0, 0.0, 0.0, 0.0]\nend contacts [1, 1, 0, 1]\nunit 7 internal gaps, m [0.0, 0.0, 0.0, 0.0]\nend contacts [1, 1, 1, 1]\nunit 6 internal gaps, m [0.0, 0.0, 0.0, 0.0]\nend contacts [1, 1, 1, 1]\nlargest vertical bay separation departure: 0.0932631961247381\nsouthern wall center gap intervals [('0x1a8', (24.9996, 4.9026), (22.747, 4.9026)), ('0x1a9', (19.8486, 4.9026), (18.1986, 4.9026)), ('0x1ac', (35.2514, 5.003), (22.6465, 5.003)), ('0x1ad', (19.8845, 5.003), (13.5928, 5.003))]\nlift inner perimeter available model entities []\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0028": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Wall contacts and stair spacings",
+          "record_sha256": "fa74cbcf1ac1dfcfccfc11c23e6dbaf5f035ee8c4faab3b0890386d1c96c6fcc",
+          "explanation": {
+            "purpose": "Resolve the unit 5 contact tolerance, identify the actual saved scale records, and check the southern passage and tread spacings directly.",
+            "result": "Unit 5 has a wall endpoint discrepancy of about 0.000002 m. Each stair has a measured tread interval of 0.24370 m."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\ndef distseg(p,a,b):\n v=(b[0]-a[0],b[1]-a[1]);t=max(0,min(1,sum((x-y)*z for x,y,z in zip(p,a,v))/sum(z*z for z in v)));return math.dist(p,tuple(x+t*z for x,z in zip(a,v)))\np=w[0x236][0];print('unit 5 return',p,sorted((round(distseg(p,a,b),8),hex(h)) for h,(a,b) in w.items() if h<0x21b)[:3])\nfor t in [500,501,732,733,734,735]:\n print('class',t,[(hex(h),shiftedstrings(obj(h)[1])[:2]) for h in idx if T[h]==t][:10])\nfor h in idx:\n if T[h] in (42,501,732,733,735):\n  s=shiftedstrings(obj(h)[1]);\n  if any(re.search(r'1:(200|16|10|1000)\\b',st) for st in s):print(hex(h),T[h],s)\nprint('stair heights & errors')\nfor start in (0x251,0x26a):\n ys=sorted(w[h][0][1] for h in range(start,start+8));print(fr(ys),[round(b-a,5) for a,b in zip(ys,ys[1:])])\nprint('extent of x=21.8 horizontal linework within approach',[(hex(h),fr(a),fr(b)) for h,(a,b) in w.items() if abs(a[1]-b[1])<1e-5 and 4.8<a[1]<5.1 and min(a[0],b[0])<21.8<max(a[0],b[0])])",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "unit 5 return (36.39929935770155, 3.899167735556816) [(1.82e-06, '0x1e9'), (0.10034582, '0x1ec'), (0.10043701, '0x1ea')]\nclass 500 [('0x12', ['Normalj'])]\nclass 501 [('0x2e', ['1.4.5 @ 2026-11-12T19:38:49.282733+00:00', '@d`dlZbbZbd']), ('0xd8', ['1.4.5 @ 2026-11-26T22:19:29.561722+00:00', '@d`dlZbbZdl']), ('0xdd', ['92E', 'Standard']), ('0xde', ['92E', 'Standard']), ('0xdf', ['1:1000j', 'btb```']), ('0xe0', []), ('0xe1', []), ('0xe2', []), ('0x564', ['Layout1z'])]\nclass 732 [('0x563', ['Table', '_HEADER'])]\nclass 733 [('0x1f', ['ByBlock']), ('0x20', ['ByLayer']), ('0x21', ['Global'])]\nclass 734 [('0x5a', ['2dWireframe', 'strokes_ogs.tif']), ('0x5b', ['Basic', 'strokes_ogs.tif']), ('0x5c', ['Brighten', 'strokes_ogs.tif']), ('0x5d', ['ColorChange', 'strokes_ogs.tif']), ('0x5e', ['Conceptual', 'strokes_ogs.tif']), ('0x5f', ['Dim', 'strokes_ogs.tif']), ('0x60', ['EdgeColorOff', 'strokes_ogs.tif']), ('0x61', ['Facepattern', 'strokes_ogs.tif']), ('0x62', ['Flat', 'strokes_ogs.tif']), ('0x63', ['FlatWithEdges', 'strokes_ogs.tif'])]\nclass 735 [('0x2c', ['Standard'])]\nstair heights & errors\n(1.8492, 2.1001, 2.351, 2.6018, 2.8527, 3.1036, 3.3473, 3.5981) [0.25086, 0.25087, 0.25087, 0.25086, 0.25087, 0.2437, 0.25087]\n(1.8492, 2.1001, 2.351, 2.6018, 2.8527, 3.1036, 3.3473, 3.5981) [0.25086, 0.25087, 0.25087, 0.25086, 0.25087, 0.2437, 0.25087]\nextent of x=21.8 horizontal linework within approach []\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0010": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Reference bathroom entrance",
+          "record_sha256": "9caec3f6be0e9953e115037f4425093a9753ea9376e4522841b5b0fc48e73589",
+          "explanation": {
+            "purpose": "Inspect the preserved close-up of the accessible bathroom entrance in the design.",
+            "result": "The original guest check returned a close-up of the bathroom entrance in the reference PDF."
+          },
+          "record": {
+            "code": "import json\nd=json.load(open('/evidence/obs_code_0025.json'))['data'];print(d['stdout'].strip())",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "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\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          },
+          "file": "obs_code_0010.jpg"
+        },
+        "obs_code_0015": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Geometry against reference lines",
+          "record_sha256": "1c0470d820260464a75c93bbe00336d6c3bb42b4894fd9f5b45149dc63b6e587",
+          "explanation": {
+            "purpose": "Compare reference wall and stair vectors with the saved editable segments, identifying omitted rectangles, dangling corners and endpoint connections.",
+            "result": "All 50 gray stair segments matched. Four edges of the inner lift rectangle had no matching model lines."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nref=json.loads((P/'reference-pdf.json').read_text())[0]\nsx=(717.92-580.76)/8.20;sy=(328.52-155.24)/10.35\ndef xy(p):return (round((p[0]-717.92)/sx+38.2,4),round((328.52-p[1])/sy,4))\ndef kk(a,b):return tuple(sorted([tuple(round(x,3) for x in a),tuple(round(x,3) for x in b)]))\nws={kk(*ab) for ab in w.values()}\nfor color in [0,[0.463]*3]:\n counts=collections.Counter()\n for k in ['lines','rects','curves']:\n  for e in ref[k]:\n   if e['stroking_color']!=color:continue\n   path=e['path'];p=None;start=None\n   for seg in path:\n    if seg[0]=='m':p=xy(seg[1]);start=p\n    if seg[0] in ['l','h']:\n     q=xy(seg[-1]) if seg[0]=='l' else start\n     if p==q:continue\n     fkey=kk(p,q);present=fkey in ws\n     if not present:present=any(min(max(math.dist(p,a),math.dist(q,b)),max(math.dist(q,a),math.dist(p,b)))<.0003 for a,b in w.values())\n     counts[(k,present)]+=1\n     if not present and k=='rects':print('missing',color,k,p,q)\n     p=q\n print('ref comparisons black or stair gray',color,counts)\nprint('restroom adjoining base-wall intersections:')\nfor h in [0x21b,0x21d,0x21e,0x220,0x221,0x223,0x227,0x229,0x22d,0x22f,0x233,0x235,0x239,0x23b,0x23f,0x241]:\n a,b=w[h];p=a if h in [0x21b,0x21e,0x221,0x227,0x22d,0x233,0x239,0x23f] else b\n def on(p,a,b):return abs(math.dist(a,p)+math.dist(p,b)-math.dist(a,b))<1e-6\n print(hex(h),fr(p),[hex(i) for i,(a,b) in w.items() if i<0x21b and on(p,a,b)])\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "missing 0 rects (16.4983, 4.8023) (17.9977, 4.8023)\nmissing 0 rects (17.9977, 4.8023) (17.9977, 3.2971)\nmissing 0 rects (17.9977, 3.2971) (16.4983, 3.2971)\nmissing 0 rects (16.4983, 3.2971) (16.4983, 4.8023)\nmissing 0 rects (-0.8486, -14.2707) (-0.8486, -13.1095)\nmissing 0 rects (-0.8486, -13.1095) (0.3064, -13.1095)\nmissing 0 rects (0.3064, -13.1095) (0.3064, -14.2707)\nmissing 0 rects (0.3064, -14.2707) (-0.8486, -14.2707)\nref comparisons black or stair gray 0 Counter({('lines', True): 131, ('curves', True): 104, ('rects', False): 8})\nref comparisons black or stair gray [0.463, 0.463, 0.463] Counter({('lines', True): 30, ('curves', True): 20})\nrestroom adjoining base-wall intersections:\n0x21b (36.4997, 6.6014) ['0x1ae']\n0x21d (37.8987, 7.999) ['0x185']\n0x21e (36.3993, 6.6014) ['0x1af']\n0x220 (37.8987, 8.0994) ['0x185']\n0x221 (31.7003, 6.6014) ['0x1b1']\n0x223 (30.2941, 7.999) ['0x1c9']\n0x227 (22.3955, 6.6014) ['0x1b3']\n0x229 (20.9965, 7.999) ['0x1cd']\n0x22d (30.2009, 7.999) ['0x1cb']\n0x22f (28.7947, 6.6014) ['0x1b2']\n0x233 (36.4997, 3.8992) ['0x1ea']\n0x235 (37.8987, 2.5015) ['0x183']\n0x239 (29.4476, 4.9026) ['0x1a6']\n0x23b (30.8465, 3.4978) ['0x1a2']\n0x23f (32.3459, 4.9026) ['0x1a5']\n0x241 (30.947, 3.4978) ['0x1a1']\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_frame_pi_11_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 11",
+          "record_sha256": "8ebc9c7323403fa8821527f1a6e11e0099b5461555ca8c2e0f64fdba558c3fc2",
+          "file": "pi_11_1.jpg"
+        },
+        "obs_code_0029": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Saved drawing and sheet contents",
+          "record_sha256": "fe05c9fa76d13ab45a7d8c35f43435164e96e0e4270e1cbaf96c9e68f060b700",
+          "explanation": {
+            "purpose": "Verify persisted block ownership, title-table plot clipping and all seven restroom wall contacts, and compare exact saved bytes with the verified save.",
+            "result": "The saved DWG contains 1,178 objects, both named sheets and their editable title data. The details table extends 5 mm beyond the printable width."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nfor h in [0x147,0x14e,0x157,0x15f]:\n print('saved definition',hex(h),shiftedstrings(obj(h)[1]),'members',[(hex(i),t) for i,t,o,l in ef if o==h])\nfor h in (0x1e,0x553):\n t,r,x,bits=obj(h);nonentity(r);flags=r.bs();m=[r.bd() for _ in range(6)];width=m[4]-m[0]-m[2];height=m[5]-m[1]-m[3]\n print(shiftedstrings(r)[0],'printable paper-space maximum xy',(width,height),'border xy max',(287,200),'title-table xy max',(287,62),'title-table right excess mm',max(0,287-width))\nfor i in [0x54c,0x54d,0x54e,0x54f,0x55c,0x55d,0x55e,0x55f]:print(hex(i),hex(ent(i)[3]),obj(i)[0],shiftedstrings(obj(i)[1])[-1])\nprint('drawing',Path('/home/ga/Documents/CAD/floor plan exercise.dwg').exists(),len(f),hashlib.sha256(f).hexdigest(),'starter',hashlib.sha256(Path('/workspace/assets/floor plan exercise.dwg').read_bytes()).hexdigest());print('verified objects',len(T),'native layout records',[(hex(h),shiftedstrings(obj(h)[1])[0]) for h,t in T.items() if t==82])\nprint('native entity layers around detail window',[(hex(h),hex(ent(h)[4])) for h in range(0x4c7,0x4cd)],'window insert',insert(0x4cd))\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "saved definition 0x147 ['DOOR_SINGLE'] members [('0x14a', 77), ('0x14b', 77), ('0x14c', 77), ('0x14d', 17)]\nsaved definition 0x14e ['DOOR_DOUBLE'] members [('0x151', 77), ('0x152', 77), ('0x153', 77), ('0x154', 77), ('0x155', 17), ('0x156', 17)]\nsaved definition 0x157 ['WINDOW'] members [('0x15a', 19), ('0x15b', 19), ('0x15c', 77), ('0x15d', 77), ('0x15e', 77)]\nsaved definition 0x15f ['RESTROOM'] members [('0x162', 7), ('0x164', 7)]\nLayout1 printable paper-space maximum xy (287.0, 200.0) border xy max (287, 200) title-table xy max (287, 62) title-table right excess mm 0\ndetails printable paper-space maximum xy (282.0, 170.0) border xy max (287, 200) title-table xy max (287, 62) title-table right excess mm 5.0\n0x54c 0x1b 1 Project: Example 1\n0x54d 0x1b 1 Location: Athens\n0x54e 0x1b 1 Drawing name: Ground floor\n0x54f 0x1b 44 Drawn: ga\\PScale: 1:200\\PDate: 2026-11-26\n0x55c 0x550 1 Project: Example 1\n0x55d 0x550 1 Location: Athens\n0x55e 0x550 1 Drawing name: Architectural details\n0x55f 0x550 44 Drawn: ga\\PScale: As shown\\PDate: 2026-11-26\ndrawing True 60998 3f3953f445dabc510d9277310ff6abe0ef7f6b7d6e028941cf157991175652a2 starter 6ee81ab74462e8506ba1a4577a9dbbaa1b2fb376f17942925c34d0ebb8685186\nverified objects 1178 native layout records [('0x1a', 'Model'), ('0x1e', 'Layout1'), ('0x553', 'details')]\nnative entity layers around detail window [('0x4c7', '0xe5'), ('0x4c8', '0xe5'), ('0x4c9', '0xe5'), ('0x4ca', '0xe5'), ('0x4cb', '0xe5'), ('0x4cc', '0xe5')] window insert (343, [70.0, 6.0, 0], (0.9, 1.0, 1.0), 0.0)\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0007": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Captured CAD measurements",
+          "record_sha256": "582f39e91fbb06822d3335414caf621542da1863a76ca04da38e0fdf8e7e97ba",
+          "explanation": {
+            "purpose": "Identify saved definitions, instance transformations, dimension measurements, sheet properties and the archived unit decoding results.",
+            "result": "The original guest checks returned viewport scales, measured entity geometry and block placement records."
+          },
+          "record": {
+            "code": "import json\nfor i in [19,22,27]:\n j=json.load(open('/evidence/obs_code_%04d.json'%i))\n print('records',i,j['data']['stdout'],j['data']['stdout_truncated'])",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "records 19 viewport 0x566 W,H,target3,dir3,twist,viewheight [267.0, 130.0, 19.0, 5.5, 0, 0, 0, 1, 0, 25.0] mm/m 5.2 physical denominator 192.30769230769232 refs [(5, '0x28'), (5, '0x0'), (5, '0x0'), (5, '0x0'), (4, '0x0'), (5, '0x0'), (4, '0x0'), (3, '0x0')]\nviewport 0x568 W,H,target3,dir3,twist,viewheight [114.0, 125.0, 60.45, 6.45, 0, 0, 0, 1, 0, 1.92] mm/m 65.10416666666667 physical denominator 15.36 refs [(4, '0x550'), (5, '0x28'), (5, '0x0'), (5, '0x0'), (5, '0x0'), (4, '0x0'), (5, '0x0'), (4, '0x0'), (3, '0x0')]\nviewport 0x569 W,H,target3,dir3,twist,viewheight [130.0, 125.0, 70.45, 6.15, 0, 0, 0, 1, 0, 1.2] mm/m 104.16666666666667 physical denominator 9.6 refs [(4, '0x550'), (5, '0x28'), (5, '0x0'), (5, '0x0'), (5, '0x0'), (4, '0x0'), (5, '0x0'), (4, '0x0'), (3, '0x0')]\nlayout 0x1a ['Model']\ncommon (0, 1, 0) flags 1024 margins and paper [7.5, 20.0, 7.5, 20.0, 420.0, 297.0] origin [0, 0] units,rotation,plotType [1, 0, 5] plotwindow,scale numerator&denominator [0, 0, 0, 0, 1, 1]\nlayout 0x1e ['Layout1', 'DWG to PDF.pc3', 'ezdxf_(297.00_x_210.00_MM)', 'Pdrn\\\\``', 'db`\\\\``']\ncommon (0, 1, 0) flags 673 margins and paper [5.0, 5.0, 5.0, 5.0, 297.0, 210.0] origin [0, 0] units,rotation,plotType [1, 0, 5] plotwindow,scale numerator&denominator [0, 0, 0, 0, 1, 1]\nlayer 0x27 [] xref 0 flags 1008 plots True\nlayer 0x28 ['Defpoints'] xref 0 flags 992 plots False\nlayer 0x8a ['Furnitures'] xref 0 flags 1008 plots True\nlayer 0x8b ['windowsz'] xref 0 flags 1008 plots True\nlayer 0x8c ['text labels'] xref 0 flags 1008 plots True\nannotation app id 0xc5 ['AcadAnnotative']\nlayer 0xe5 ['A-WALL-EXTR'] xref 0 flags 1008 plots True\nlayer 0xe6 ['A-WALL-INTR'] xref 0 flags 1008 plots True\nlayer 0xe7 ['A-DOORj'] xref 0 flags 1008 plots True\nlayer 0xe8 ['A-GLAZj'] xref 0 flags 1008 plots True\nlayer 0xe9 ['Dimensions'] xref 0 flags 1008 plots True\nlayout 0x553 ['details']\ncommon (0, 1, 0) flags 673 margins and paper [7.5, 20.0, 7.5, 20.0, 297.0, 210.0] origin [0, 0] units,rotation,plotType [1, 0, 5] plotwindow,scale numerator&denominator [0, 0, 0, 0, 1, 1]\n False\nrecords 22 model lines 295 {'0x16a': [(38.2, 0.0), (38.2, 10.35)], '0x177': [(-0.1097, -1.3475), (3.1904, -1.3475)], '0x179': [(3.1904, -1.7991), (16.3979, -1.7991)], '0x1a0': [(34.0462, 6.6014), (34.0462, 10.049)]}\npoly 0x14a (512, [(-0.05, 0.0), (-0.05, 0.1), (0.0, 0.1), (0.0, 0.0)]) owner/layer (327, 39)\npoly 0x14b (512, [(0.9, 0.0), (0.9, 0.1), (0.95, 0.1), (0.95, 0.0)]) owner/layer (327, 39)\npoly 0x14c (512, [(0.0, 0.0), (0.0, 0.9), (0.05, 0.9), (0.05, 0.0)]) owner/layer (327, 39)\npoly 0x151 (512, [(-0.05, 0.0), (-0.05, 0.1), (0.0, 0.1), (0.0, 0.0)]) owner/layer (334, 39)\npoly 0x152 (512, [(1.4, 0.0), (1.4, 0.1), (1.45, 0.1), (1.45, 0.0)]) owner/layer (334, 39)\npoly 0x153 (512, [(0.0, 0.0), (0.0, 0.7), (0.05, 0.7), (0.05, 0.0)]) owner/layer (334, 39)\npoly 0x154 (512, [(1.35, 0.0), (1.35, 0.7), (1.4, 0.7), (1.4, 0.0)]) owner/layer (334, 39)\npoly 0x15c (512, [(0.0, 0.05), (0.05, 0.05), (0.05, 0.13), (0.0, 0.13)]) owner/layer (343, 39)\npoly 0x15d (512, [(0.95, 0.05), (1.0, 0.05), (1.0, 0.13), (0.95, 0.13)]) owner/layer (343, 39)\npoly 0x15e (512, [(0.05, 0.07), (0.95, 0.07), (0.95, 0.11), (0.05, 0.11)]) owner/layer (343, 39)\ndimension 0x30a ([(3.2, 12.0), (11.4, 12.0), (3.2, 14.0)], 8.2) no context dictionary 1 layer 0xe9\ndimension 0x319 ([(11.4, 10.5), (16.1, 10.5), (11.4, 12.5)], 4.7) no context dictionary 1 layer 0xe9\ndimension 0x328 ([(16.1, 10.5), (25.3, 10.5), (16.1, 12.5)], 9.2) no context dictionary 1 layer 0xe9\ndimension 0x337 ([(25.3, 10.5), (30.0, 10.5), (25.3, 12.5)], 4.7) no context dictionary 1 layer 0xe9\ndimension 0x346 ([(30.0, 10.5), (38.2, 10.5), (30.0, 12.5)], 8.2) no context dictionary 1 layer 0xe9\ndimension 0x355 ([(3.2, 12.0), (4.7, 12.0), (3.2, 13.0)], 1.5) no context dictionary 1 layer 0xe9\ndimension 0x364 ([(4.7, 12.0), (6.06, 12.0), (4.7, 13.0)], 1.36) no context dictionary 1 layer 0xe9\ndimension 0x373 ([(6.06, 12.0), (8.54, 12.0), (6.06, 13.0)], 2.48) no context dictionary 1 layer 0xe9\ndimension 0x382 ([(8.54, 12.0), (9.9, 12.0), (8.54, 13.0)], 1.36) no context dictionary 1 layer 0xe9\ndimension 0x391 ([(9.9, 12.0), (11.4, 12.0), (9.9, 13.0)], 1.5) no context dictionary 1 layer 0xe9\ndimension 0x3a0 ([(38.2, 0), (38.2, 10.35), (40.5, 0)], 10.35) no context dictionary 1 layer 0xe9\ndimension 0x3af ([(38.2, 7.65), (38.2, 10.35), (39.2, 7.65)], 2.7) no context dictionary 1 layer 0xe9\ndimension 0x3be ([(38.2, 6.75), (38.2, 7.65), (39.2, 6.75)], 0.9) no context dictionary 1 layer 0xe9\ndimension 0x3cd ([(38.2, 1.8), (38.2, 2.5), (39.2, 1.8)], 0.7) no context dictionary 1 layer 0xe9\ndimension 0x3dc ([(38.2, 0), (38.2, 2.55), (39.2, 0)], 2.55) no context dictionary 1 layer 0xe9\ndimension 0x3eb ([(-0.1, -1.35), (3.2, -1.35), (-0.1, -2.8)], 3.3) no context dictionary 1 layer 0xe9\ndimension 0x3fa ([(3.2, -1.35), (16.4, -1.35), (3.2, -2.8)], 13.2) no context dictionary 1 layer 0xe9\ndimension 0x409 ([(16.4, 0.9), (21.15, 0.9), (16.4, -0.6)], 4.75) no context dictionary 1 layer 0xe9\ndimension 0x418 ([(21.15, 0.9), (22.65, 0.9), (21.15, -0.6)], 1.5) no context dictionary 1 layer 0xe9\ndimension 0x427 ([(22.65, 0), (30.0, 0), (22.65, -1.5)], 7.35) no context dictionary 1 layer 0xe9\ndimension 0x436 ([(30.0, 0), (38.2, 0), (30.0, -1.5)], 8.2) no context dictionary 1 layer 0xe9\ndimension 0x445 ([(-0.1, -1.35), (0.26, 0.44), (-1.4, -1.35)], 1.79) no context dictionary 1 layer 0xe9\ndimension 0x454 ([(0.26, 0.44), (0.64, 2.86), (-1.4, 0.44)], 2.42) no context dictionary 1 layer 0xe9\ndimension 0x463 ([(0.64, 2.86), (1.02, 5.36), (-1.4, 2.86)], 2.5) no context dictionary 1 layer 0xe9\ndimension 0x472 ([(1.02, 5.36), (1.4, 7.78), (-1.4, 5.36)], 2.42) no context dictionary 1 layer 0xe9\ndimension 0x487 ([(59.95, 6.0), (60.0, 6.0), (59.95, 5.92)], 0.05) no context dictionary 1 layer 0xe9\ndimension 0x498 ([(60.0, 6.0), (60.9, 6.0), (60.0, 5.85)], 0.9) no context dictionary 1 layer 0xe9\ndimension 0x4a7 ([(59.95, 6.0), (59.95, 6.1), (59.88, 6.0)], 0.1) no context dictionary 1 layer 0xe9\ndimension 0x4b8 ([(60.0, 6.0), (60.0, 6.9), (59.93, 6.0)], 0.9) no context dictionary 1 layer 0xe9\ndimension 0x4cf ([(70.0, 6.0), (70.9, 6.0), (70.0, 5.92)], 0.9) no context dictionary 1 layer 0xe9\ndimension 0x4de ([(70.0, 6.0), (70.0, 6.05), (69.94, 6.0)], 0.05) no context dictionary 1 layer 0xe9\ndimension 0x4ef ([(70.0, 6.05), (70.0, 6.13), (69.94, 6.05)], 0.08) no context dictionary 1 layer 0xe9\ndimension 0x500 ([(70.0, 6.13), (70.05, 6.13), (70.0, 6.18)], 0.05) no context dictionary 1 layer 0xe9\ndimension 0x511 ([(70.9, 6.07), (70.9, 6.11), (70.96, 6.07)], 0.04) no context dictionary 1 layer 0xe9\ndimension 0x522 ([(70.9, 6.0), (70.9, 6.05), (70.96, 6.0)], 0.05) no context dictionary 1 layer 0xe9\ndimension 0x533 ([(70.9, 6.0), (70.9, 6.3), (71.04, 6.0)], 0.3) no context dictionary 1 layer 0xe9\npoly 0x544 (512, [(10.0, 10.0), (287.0, 10.0), (287.0, 200.0), (10.0, 200.0)]) owner/layer (27, 39)\npoly 0x554 (512, [(10.0, 10.0), (287.0, 10.0), (287.0, 200.0), (10.0, 200.0)]) owner/layer (1360, 39)\nINSUNITS, CPSNTYPE, SORTENTS..HALOGAP 6 0 [127, 0, 1, 1, 2, 0] bit 3488\n False\nrecords 27 block/layout 0xec types/layers {(36, '0x8a'): 46, (19, '0x8a'): 20}\nblock/layout 0x131 types/layers {(36, '0x8a'): 17, (19, '0x8a'): 2}\nblock/layout 0x147 types/layers {(77, '0x27'): 3, (17, '0x27'): 1}\nblock/layout 0x14e types/layers {(77, '0x27'): 4, (17, '0x27'): 2}\nblock/layout 0x157 types/layers {(19, '0x27'): 2, (77, '0x27'): 3}\nblock/layout 0x15f types/layers {(7, '0x27'): 2}\nblock/layout 0x17 types/layers {(19, '0xe6'): 224, (19, '0xe5'): 71, (7, '0xe7'): 26, (7, '0xe8'): 28, (7, '0x8a'): 8, (1, '0x8c'): 15, (21, '0xe9'): 36}\nblock/layout 0x1b types/layers {(77, '0x27'): 1, (19, '0x27'): 7, (1, '0x27'): 3, (44, '0x27'): 1, (34, '0x27'): 1, (34, '0x28'): 1}\nblock/layout 0x550 types/layers {(77, '0x27'): 1, (19, '0x27'): 7, (1, '0x27'): 5, (44, '0x27'): 1, (34, '0x27'): 1, (34, '0x28'): 2}\n0x162 owner 0x15f block 0xec layer 0x27 xy (0.1, 1.45) scale (1, 1, 1) rot 0.0\n0x164 owner 0x15f block 0x131 layer 0x27 xy (0.85, 0.3) scale (1, 1, 1) rot 90.0\n0x283 owner 0x17 block 0x147 layer 0xe7 xy (16.2903, 6.6049) scale (1, 1, 1) rot 0.0\n0x285 owner 0x17 block 0x147 layer 0xe7 xy (20.8332, 4.0551) scale (1, 1, 1) rot 0.0\n0x287 owner 0x17 block 0x147 layer 0xe7 xy (24.8956, 7.5045) scale (1, 1, 1) rot 0.0\n0x289 owner 0x17 block 0x147 layer 0xe7 xy (26.0901, 6.6049) scale (1, 1, 1) rot 0.0\n0x28b owner 0x17 block 0x147 layer 0xe7 xy (33.9422, 7.5045) scale (1, 1, 1) rot 0.0\n0x28d owner 0x17 block 0x147 layer 0xe7 xy (35.1438, 6.6049) scale (1, 1, 1) rot 0.0\n0x28f owner 0x17 block 0x147 layer 0xe7 xy (37.8449, 9.0025) scale (1, 1, 1) rot 0.0\n0x291 owner 0x17 block 0x147 layer 0xe7 xy (31.2411, 8.103) scale (1, 1, 1) rot 0.0\n0x293 owner 0x17 block 0x147 layer 0xe7 xy (21.9435, 8.103) scale (1, 1, 1) rot 0.0\n0x295 owner 0x17 block 0x147 layer 0xe7 xy (28.6907, 7.5546) scale (1, 1, 1) rot 0.0\n0x297 owner 0x17 block 0x147 layer 0xe7 xy (36.9445, 2.4047) scale (1, 1, 1) rot 0.0\n0x299 owner 0x17 block 0x147 layer 0xe7 xy (29.8924, 3.401) scale (1, 1, 1) rot 0.0\n0x29b owner 0x17 block 0x147 layer 0xe7 xy (30.9936, 2.5015) scale (1, 1, 1) rot 0.0\n0x29d owner 0x17 block 0x147 layer 0xe7 xy (23.9953, 4.9062) scale (1, 1, 1) rot 0.0\n0x29f owner 0x17 block 0x147 layer 0xe7 xy (25.1898, 4.0067) scale (1, 1, 1) rot 0.0\n0x2a1 owner 0x17 block 0x147 layer 0xe7 xy (33.0418, 4.9062) scale (1, 1, 1) rot 0.0\n0x2a3 owner 0x17 block 0x147 layer 0xe7 xy (34.2435, 4.0067) scale (1, 1, 1) rot 0.0\n0x2a5 owner 0x17 block 0x147 layer 0xe7 xy (27.794, 4.0067) scale (1, 1, 1) rot 0.0\n0x2a7 owner 0x17 block 0x147 layer 0xe7 xy (15.2895, 4.0067) scale (1, 1, 1) rot 0.0\n0x2a9 owner 0x17 block 0x147 layer 0xe7 xy (18.8443, 6.4544) scale (1, 1, 1) rot 0.0\n0x2ab owner 0x17 block 0x147 layer 0xe7 xy (22.9945, 5.5549) scale (1, 1, 1) rot 0.0\n0x2ad owner 0x17 block 0x14e layer 0xe7 xy (21.543, 1.7794) scale (1, 1, 1) rot 0.0\n0x2af owner 0x17 block 0x14e layer 0xe7 xy (21.543, 3.5497) scale (1, 1, 1) rot 0.0\n0x2b1 owner 0x17 block 0x14e layer 0xe7 xy (13.3394, 5.4062) scale (1, 1, 1) rot 0.0\n0x2b3 owner 0x17 block 0x14e layer 0xe7 xy (9.4403, -1.2454) scale (1, 1, 1) rot 0.0\n0x2b5 owner 0x17 block 0x157 layer 0xe8 xy (4.6395, -1.7489) scale (2.15, 1.0, 1.0) rot 0.0\n0x2b7 owner 0x17 block 0x157 layer 0xe8 xy (6.7344, -1.7489) scale (1.36, 1.0, 1.0) rot 0.0\n0x2b9 owner 0x17 block 0x157 layer 0xe8 xy (12.8037, -1.7489) scale (2.14, 1.0, 1.0) rot 0.0\n0x2bb owner 0x17 block 0x157 layer 0xe8 xy (16.8929, 0.5017) scale (2.86, 1.0, 1.0) rot 0.0\n0x2bd owner 0x17 block 0x157 layer 0xe8 xy (18.8586, 0.5017) scale (0.9, 1.0, 1.0) rot 0.0\n0x2bf owner 0x17 block 0x157 layer 0xe8 xy (23.9451, 0.5017) scale (2.96, 1.0, 1.0) rot 0.0\n0x2c1 owner 0x17 block 0x157 layer 0xe8 xy (25.5449, 0.5017) scale (1.36, 1.0, 1.0) rot 0.0\n0x2c3 owner 0x17 block 0x157 layer 0xe8 xy (27.9482, 0.5017) scale (1.36, 1.0, 1.0) rot 0.0\n0x2c5 owner 0x17 block 0x157 layer 0xe8 xy (31.5496, 0.0502) scale (1.36, 1.0, 1.0) rot 0.0\n0x2c7 owner 0x17 block 0x157 layer 0xe8 xy (35.4021, 0.0502) scale (1.36, 1.0, 1.0) rot 0.0\n0x2c9 owner 0x17 block 0x157 layer 0xe8 xy (38.0709, 2.5517) scale (2.5, 1.0, 1.0) rot 90.0\n0x2cb owner 0x17 block 0x157 layer 0xe8 xy (38.0709, 4.15) scale (2.19, 1.0, 1.0) rot 90.0\n0x2cd owner 0x17 block 0x157 layer 0xe8 xy (38.0709, 6.7519) scale (0.9, 1.0, 1.0) rot 90.0\n0x2cf owner 0x17 block 0x157 layer 0xe8 xy (31.5496, 10.221) scale (1.36, 1.0, 1.0) rot 0.0\n0x2d1 owner 0x17 block 0x157 layer 0xe8 xy (35.4021, 10.221) scale (1.36, 1.0, 1.0) rot 0.0\n0x2d3 owner 0x17 block 0x157 layer 0xe8 xy (26.499, 9.4684) scale (2.3, 1.0, 1.0) rot 0.0\n0x2d5 owner 0x17 block 0x157 layer 0xe8 xy (4.6898, 11.3678) scale (1.36, 1.0, 1.0) rot 0.0\n0x2d7 owner 0x17 block 0x157 layer 0xe8 xy (8.5351, 11.3678) scale (1.36, 1.0, 1.0) rot 0.0\n0x2d9 owner 0x17 block 0x157 layer 0xe8 xy (21.7354, 10.221) scale (1.36, 1.0, 1.0) rot 0.0\n0x2db owner 0x17 block 0x157 layer 0xe8 xy (18.3349, 10.221) scale (1.36, 1.0, 1.0) rot 0.0\n0x2dd owner 0x17 block 0x157 layer 0xe8 xy (12.5956, 9.4684) scale (2.3, 1.0, 1.0) rot 0.0\n0x2df owner 0x17 block 0x157 layer 0xe8 xy (1.031, -1.2973) scale (1.36, 1.0, 1.0) rot 0.0\n0x2e1 owner 0x17 block 0x157 layer 0xe8 xy (0.1199, -0.2365) scale (1.36, 1.0, 1.0) rot 90.0\n0x2e3 owner 0x17 block 0x157 layer 0xe8 xy (0.4929, 2.1861) scale (1.35, 1.0, 1.0) rot 90.0\n0x2e5 owner 0x17 block 0x157 layer 0xe8 xy (1.2534, 7.0959) scale (1.36, 1.0, 1.0) rot 90.0\n0x2e7 owner 0x17 block 0x157 layer 0xe8 xy (0.8803, 4.6804) scale (1.35, 1.0, 1.0) rot 90.0\n0x2e9 owner 0x17 block 0x157 layer 0xe8 xy (11.4908, -1.7489) scale (1.36, 1.0, 1.0) rot 0.0\n0x2eb owner 0x17 block 0x15f layer 0x8a xy (21.5, 6.5) scale (1, 1, 1) rot 0.0\n0x2ed owner 0x17 block 0x15f layer 0x8a xy (29.5, 6.5) scale (-1.0, 1.0, 1.0) rot 0.0\n0x2ef owner 0x17 block 0x15f layer 0x8a xy (30.5, 6.5) scale (1, 1, 1) rot 0.0\n0x2f1 owner 0x17 block 0x15f layer 0x8a xy (37.2, 6.5) scale (-1.0, 1.0, 1.0) rot 0.0\n0x2f3 owner 0x17 block 0x15f layer 0x8a xy (30.5, 4.0) scale (1, 1, 1) rot 0.0\n0x2f5 owner 0x17 block 0x15f layer 0x8a xy (31.8, 4.0) scale (-1.0, 1.0, 1.0) rot 0.0\n0x2f7 owner 0x17 block 0xec layer 0x8a xy (37.0, 3.8) scale (1, 1, 1) rot 0.0\n0x2f9 owner 0x17 block 0x131 layer 0x8a xy (37.2, 4.8) scale (1, 1, 1) rot 270.0\n0x485 owner 0x17 block 0x147 layer 0xe7 xy (60.0, 6.0) scale (1, 1, 1) rot 0.0\n0x4cd owner 0x17 block 0x157 layer 0xe8 xy (70.0, 6.0) scale (0.9, 1.0, 1.0) rot 0.0\narc 0x14d [0, 0, 0] 0.9 angles 0.0 90.0\narc 0x155 [0, 0, 0] 0.7 angles 0.0 90.0\narc 0x156 [1.4, 0, 0] 0.7 angles 90.0 180.0\nblock 0x147 reactors,xdictMissing,DSdata (0, 1, 0) xdata []\nblock 0x14e reactors,xdictMissing,DSdata (0, 1, 0) xdata []\nblock 0x157 reactors,xdictMissing,DSdata (0, 1, 0) xdata []\nblock 0x15f reactors,xdictMissing,DSdata (0, 1, 0) xdata []\n False\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0012": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Published unit 1 fixtures",
+          "record_sha256": "a14927ef7fac39d52a0fef33e753d96c140cc7ed78873da30d0b232ce7e503ae",
+          "explanation": {
+            "purpose": "Inspect the preserved close-up of the published unit 1 fixture positions.",
+            "result": "The original guest check returned a close-up of unit 1 in the solver’s exported PDF."
+          },
+          "record": {
+            "code": "import json\nd=json.load(open('/evidence/obs_code_0028.json'))['data'];print(d['stdout'].strip())",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "/9j/4AAQSkZJRgABAQEA1QDVAAD/2wBDAAsHCAoIBwsKCQoMDAsNEBsSEA8PECEYGRQbJyMpKScjJiUsMT81LC47LyUmNko3O0FDRkdGKjRNUkxEUj9FRkP/2wBDAQwMDBAOECASEiBDLSYtQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0P/wAARCACCAJsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1yuR+Lv8AyTzVf+2P/o5K6uB2lhR3ieJmUExuQWQ+hwSMj2JFcp8Xf+Sear/2x/8ARyUAHhj/AJKH4y/7cf8A0Sa66uR8Mf8AJQ/GX/bj/wCiTW7r+mTavYfY4b6SzSRx57xLl3j/AIkU5+UnjnnvxQBdtrmC7iEttNHNGSV3xsGGQcEZHoQRUlc78P7aKz8PG2t12Qw3t1HGuc4UTuAPyFdFQAV5/wDFrxJq3h1tLOlXf2cTiXzB5SNnbsx94H+8a9Aryv48f8wT/tv/AO0678shGeKjGSutfyZM9InRmPx7YZKTaRqiDsymKRvpjCj86W28fxWtylr4k0260adzhXlG+Fj7OP8ADA9a7Coby0t763a3u4I54X+9HIoZT+BrJV6c9KkF6rR/5fgFn0Y+CaK4hSWCRJYnGVdGBVh6gin1wl3oWp+CpWv/AAwZLrTc7rjSnYtgdzGeT/Xjv0HV6Brdn4g02O+sJN8T8FT95G7qw7Gpq0OWPPB3j+Xk+w0+jNCiiiucYUUUUAFFFFABRVTVtSh0myN1cK7RiSOPCDJy7qg/VhVugArkfi7/AMk81X/tj/6OSuurkfi7/wAk81X/ALY/+jkoAPDH/JQ/GX/bj/6JNddXI+GP+Sh+Mv8Atx/9EmuuoAwvBX/IIn/7CF5/6USVu1Fa2sNnG0dvGI0Z3kIH95mLMfxJJpmoymGyldeuMD8eKmUuWLb6AUbvVpBcbLZVYA45GdxrhfilY3et6dDcrjzLDexjAwSrbd34jaP1rudCgUtJM2NynaPb1qHxAkaXUOPvyqxIxwduAf8A0IVzYfEYihKOKi9nt5bFNJ+6btFQ2MxntI5D1I5+o4qauqLUkmiQrg9dgbwR4gTX7JWGkXriPUoFBxGxPEgA9/8AD+LjvKrapYQapp1xZXK7obiMow+vce4610Yer7OXvfC9GvL+thNXLCOsiK6MGVhkEHIIpa5L4Z3sz6LNpV42bvSJ2tX56qPun6dQP92utqa1J0qjg+gJ3VwooorIYUUUUAc/8QGCeF5nY4VLi2ZiegAnjJP5V0A56Uy4giuYJIJ40likUq6OMqwPUEdxXOn4e+GyeLGVR2VLydQPoA+BQB0tcj8Xf+Sear/2x/8ARyV11cj8Xf8Aknmq/wDbH/0clAB4Y/5KH4y/7cf/AESa66vI9b1j+yfiH4k/4qf+wfN+y/8AMP8AtXnYhHsduM/ju9qP+Ew/6qd/5b3/ANjQB65VXVsHT5cnHT+Yry3/AITD/qp3/lvf/Y1b0fxL9v1GK2/4Tr+1d+f9D/sfyPMwCfv44xjPvis638OXoxrc6qK4kt33QyYJHJHQ/gagvbqaeSMymSTJxhR06c9gB/Os7Ti/2ecNq0l46y8u2ntAyg4+QIeffccjrS3zMsNuP7Va1d5OGXT3mLDn5Cg5HYluB9M15UYSc/ZuWnzsX5na6bt+ww7CCNvOPXvVmvMdS12RNVewtvHUelzEhEsn0wOqMQMZmIxz1yemfat/wb4suLm7fQPESC2122H0W6Ufxp2zjkgfUdwPVpa04+hD3OvooorQR58+rw+GfijeQTxytHrSW/l+WoO2TOwE5I4zuzXoNct4h8EprXijTtbF80D2ZjzEIg2/Y5YYOeOvoa6muvEzpzjBxetrP5afkTFNXCiiiuQoKKKKACiiigArkfi7/wAk81X/ALY/+jkrrq5H4u/8k81X/tj/AOjkoAPDH/JQ/GX/AG4/+iTXXVyPhj/kofjL/tx/9EmuuoAKRlDKVYAg9QaWigCq2m2jHJhH4EihdNtFORCPxJNWqKz9lT/lX3DuzP1vQ7HXdKk06/gD27jgDgoezKexFeW6rpsthcW/h/xJctE8RzoeujIKEHiNz2HT6fTBr2KsHx/ZW194N1dbqFJRFaSzR7h911QlWHoQRWgjO8GeK7i6u5NA8Qxi2122HPZblR/GvbOOSB9R3A6+vJvCM0l1cfDmedjJMU1GMyNyxVQwUZ9AOBXrNABRRRQAUUUUAFFFFABRRRQAVyPxd/5J5qv/AGx/9HJXXVyPxd/5J5qv/bH/ANHJQAeGP+Sh+Mv+3H/0Sa66uR8Mf8lD8Zf9uP8A6JNddQAUUUUAFFFMnmSCJpJDhVpNpK7AfWR4z/5E/W/+wfP/AOi2ph1SaV8rIsKZ4+Td+Zqr4qvX/wCEU1qG5VVZ9OnKOp+V/wB21YwxMJuyHZnD+CP+acf9xP8A9mr1yvI/BH/NOP8AuJ/+zV65W4gooooAKKKKACiiigAooooAK5H4u/8AJPNV/wC2P/o5K66uR+Lv/JPNV/7Y/wDo5KADwx/yUPxl/wBuP/ok111cj4Y/5KH4y/7cf/RJrrqACiiigArK11ixghB+8ST/ACH9a1azNdiYxxzL/AcH8a58Vf2TsOO5PdSwWFosZTcp+UL6/Wuc8QFZ/CmoRclAkirnqFKNxXQSXVndWgadl45KZ5B9qwPEuLfwpfuV2s0UsoT0UI1c9V3knFq1ikcj4I/5px/3E/8A2avXK8j8Ef8ANOP+4n/7NXrlegQFFFFABRRRQAUUUUAFFFFABXI/F3/knmq/9sf/AEclZH/CWeIf+g98P/8AwNk/xrN8R6lrPiLRrjTLzxD4FSCfbvaG+cONrBhjJI6gUAdT4Y/5KH4y/wC3H/0Sa66vNLnUrix8VaxqeheIfCBg1LyMre3x3Dy028bD6k/pU3/CWeIf+g98P/8AwNk/xoA9Forzr/hLPEP/AEHvh/8A+Bsn+NH/AAlniH/oPfD/AP8AA2T/ABoA9FpHVXUqwBUjBBrzv/hLPEP/AEHvh/8A+Bsn+NH/AAlniH/oPfD/AP8AA2T/ABoA7JtJKSboJVC56OgYiqXimyWDwlrkju0sx0+4y7f9c26VzX/CWeIf+g98P/8AwNk/xqtqev67qem3VjN4g8BLFdQvC5S9kDBWBBxk9eayjQpxd0h3ZR8Ef804/wC4n/7NXrleLaTb6jpg0PyPEXgs/wBj+f8AZ/Mv2OfOzu3464zxjH410n/CWeIf+g98P/8AwNk/xrUR6LRXnX/CWeIf+g98P/8AwNk/xo/4SzxD/wBB74f/APgbJ/jQB6LRXnX/AAlniH/oPfD/AP8AA2T/ABo/4SzxD/0Hvh//AOBsn+NAHotFedf8JZ4h/wCg98P/APwNk/xo/wCEs8Q/9B74f/8AgbJ/jQB6LRXnX/CWeIf+g98P/wDwNk/xo/4SzxD/ANB74f8A/gbJ/jQBr/8ACrfCH/QI/wDJqb/4uj/hVvhD/oEf+TU3/wAXXXUUAcj/AMKt8If9Aj/yam/+Lo/4Vb4Q/wCgR/5NTf8AxdddRQByP/CrfCH/AECP/Jqb/wCLo/4Vb4Q/6BH/AJNTf/F111FAHI/8Kt8If9Aj/wAmpv8A4uj/AIVb4Q/6BH/k1N/8XXXUUAcj/wAKt8If9Aj/AMmpv/i6P+FW+EP+gR/5NTf/ABdddRQByP8Awq3wh/0CP/Jqb/4uj/hVvhD/AKBH/k1N/wDF111FAHI/8Kt8If8AQI/8mpv/AIuvNNU8F2Vx8SpfDtgfsduxGxjmTZ+5Eh6nJ5z3717zXlf/ADXr/P8Az616OXJXqNpO0G9VfXQifQpP8Kb3S8umn6brMYP3Hnmhlb6YYKPzqfTdL8CNdix1vw/Po18eiXVzNsb6Puxj3OBXrVVNV0qx1i0a11G2juIW7OOR7g9QfcViq9OelWC9Vo/u2/AdmtjnB8LvB5GRpHH/AF9Tf/F0f8Kt8If9Aj/yam/+LrPI1L4dzKS8+o+GmIB3fNLZdvxX9PoevdWtzDeW0dxbyLJDKodHU8MD0NZ1qPs0pJ3i9n/WzGnc5X/hVvhD/oEf+TU3/wAXR/wq3wh/0CP/ACam/wDi666isBhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABXlf8AzXr/AD/z60UV6OXf8vf8Ev0In09T1SiiivOLI7mJJreWKVFkjdCrIwyGBHIIrhvgtI7eGbtGdisd66oCeFG1TgenJJ/Giiu2n/uk/VfqS/iR3tFFFcRR/9k=\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          },
+          "file": "obs_code_0012.jpg"
+        },
+        "obs_code_0013": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Printed scale and room labels",
+          "record_sha256": "73790bc291fd1de6f742d922d7354ea5f38abb00e41b1b42e0a7385272742a0f",
+          "explanation": {
+            "purpose": "Measure the physical scale from the plotted east wall, locate border and frame paths, and map plotted label extents back into the room bays.",
+            "result": "The east wall measures 5.20 mm per model meter on paper. The output also locates text, border lines and room labels."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\np=json.loads((P/'submission-pdf.json').read_text())[0];ls=p['lines'];east=ls[4];print('east wall',east['pts'],w[0x16a]);print('nearby lines',[q['pts'] for q in ls[:8]])\nxs=ls[5]['width']/8.2; ys=east['height']/10.35;xe=east['x1'];yb=east['bottom'];print('points/m',xs,ys,'mm/m',xs*25.4/72,'physical scale',1000/(xs*25.4/72));print('large lines',[q['pts'] for q in ls if q['width']>300 or q['height']>330][-30:])\nfor e in ee:\n if e['type']=='Text' and e['space']=='*Model_Space':print('TEXT',e['handle'],e.get('text'),e['position'],e['layer'])\nfor w0 in p['words']:\n if not any(c.isalpha() for c in w0['text']) and w0['text'] not in list('1234567'):continue\n x0=(w0['x0']-xe)/xs+38.2;x1=(w0['x1']-xe)/xs+38.2;y=(yb-(w0['top']+w0['bottom'])/2)/ys;print(w0['text'], tuple(round(v,2) for v in [x0,x1,y]))\nprint('sheet text entities:',[(hex(h),hex(o),shiftedstrings(obj(h)[1])) for h,t,o,l in ef if o in [0x1b,0x550] and t in [1,44]])",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "east wall [[718.1292, 293.39368], [718.1292, 140.83300000000003]] ((38.19999897829748, 6.562124648285123e-07), (38.19999897829748, 10.35000058329997))\nnearby lines [[[501.76996, 286.7376], [502.0872, 286.7376]], [[502.0872, 286.7376], [597.2599, 286.7376]], [[597.2599, 286.7376], [597.2599, 293.39368]], [[597.2599, 293.39368], [718.1292, 293.39368]], [[718.1292, 293.39368], [718.1292, 140.83300000000003]], [[718.1292, 140.83300000000003], [597.2599, 140.83300000000003]], [[597.2599, 140.83300000000003], [597.2599, 151.9264]], [[597.2599, 151.9264], [527.8896, 151.9264]]]\npoints/m 14.740158536585362 14.740162318840579 mm/m 5.200000372628725 physical scale 192.30767852704517\nlarge lines [[[658.3819, 197.56784], [355.41553, 197.56784]], [[42.51969, 552.48031], [827.7166, 552.48031]], [[827.7166, 552.48031], [827.7166, 13.897600000000011]], [[827.7166, 13.897600000000011], [42.51969, 13.897600000000011]], [[42.51969, 13.897600000000011], [42.51969, 552.48031]]]\nTEXT 2FB dinning area [4.8, 10.0, 0.0] text labels\nTEXT 2FC common area [8.5, 3.5, 0.0] text labels\nTEXT 2FD kitchen [13.8, 8.5, 0.0] text labels\nTEXT 2FE unit 1 [19.5, 8.5, 0.0] text labels\nTEXT 2FF unit 2 [24.0, 8.5, 0.0] text labels\nTEXT 300 unit 3 [32.0, 8.5, 0.0] text labels\nTEXT 301 unit 4 [35.8, 8.5, 0.0] text labels\nTEXT 302 Disabled bathroom [33.8, 5.0, 0.0] text labels\nTEXT 303 unit 5 [35.8, 1.8, 0.0] text labels\nTEXT 304 unit 6 [32.0, 1.8, 0.0] text labels\nTEXT 305 unit 7 [28.5, 1.8, 0.0] text labels\nTEXT 306 stairs [23.5, 1.8, 0.0] text labels\nTEXT 307 laundry [21.2, 2.5, 0.0] text labels\nTEXT 308 office [18.5, 2.5, 0.0] text labels\nTEXT 309 stairs [14.2, 2.5, 0.0] text labels\ndinning (4.8, 6.59, 10.16)\narea (6.75, 7.86, 10.16)\nkitchen (13.8, 15.56, 8.66)\nunit (19.5, 20.4, 8.66)\n1 (20.55, 20.86, 8.66)\nunit (24.0, 24.9, 8.66)\n2 (25.05, 25.36, 8.66)\nunit (32.0, 32.9, 8.66)\n3 (33.05, 33.36, 8.66)\nunit (35.8, 36.7, 8.66)\n4 (36.85, 37.16, 8.66)\n7 (38.81, 39.3, 8.99)\n6 (-1.79, -1.3, 6.91)\n3 (-1.79, -1.3, 6.64)\n5 (40.11, 40.6, 5.59)\nDisabled (33.8, 35.96, 5.16)\nbathroom (36.12, 38.46, 5.16)\n3 (40.11, 40.6, 5.31)\n1 (40.11, 40.6, 4.64)\ncommon (8.5, 10.63, 3.66)\narea (10.78, 11.9, 3.66)\nstairs (14.2, 15.53, 2.66)\noffice (18.5, 19.83, 2.66)\nlaundry (21.2, 23.02, 2.66)\n6 (-1.79, -1.3, 1.99)\n3 (-1.79, -1.3, 1.72)\nstairs (23.5, 24.83, 1.96)\nunit (28.5, 29.4, 1.96)\n7 (29.55, 29.86, 1.96)\nunit (32.0, 32.9, 1.96)\n6 (33.05, 33.36, 1.96)\nunit (35.8, 36.7, 1.96)\n5 (36.85, 37.16, 1.96)\n7 (38.61, 39.1, 2.17)\n5 (38.81, 39.3, 1.5)\n5 (38.81, 39.3, 1.23)\n5 (-1.79, -1.3, -0.05)\n1 (-1.79, -1.3, -0.32)\nProject: (30.44, 32.71, -9.11)\nExample (32.89, 35.49, -9.11)\n1 (35.67, 36.05, -9.11)\nLocation: (30.44, 33.15, -11.61)\nAthens (33.34, 35.42, -11.61)\nDrawing (30.44, 32.89, -14.11)\nname: (33.08, 34.93, -14.11)\nGround (35.12, 37.34, -14.11)\nfloor (37.53, 38.83, -14.11)\nDrawn: (30.44, 32.13, -15.5)\nga (32.88, 33.47, -15.5)\nScale: (30.44, 31.93, -16.14)\nDate: (30.44, 31.72, -16.78)\nsheet text entities: [('0x54c', '0x1b', ['Project: Example 1']), ('0x54d', '0x1b', ['Location: Athens']), ('0x54e', '0x1b', ['Drawing name: Ground floor']), ('0x54f', '0x1b', ['t@btd``', 't@d`dlZbbZd', 'Drawn: ga\\\\PScale: 1:200\\\\PDate: 2026-11-26']), ('0x55c', '0x550', ['Project: Example 1']), ('0x55d', '0x550', ['Location: Athens']), ('0x55e', '0x550', ['Drawing name: Architectural details']), ('0x55f', '0x550', ['t@d`dlZbbZd', 'Drawn: ga\\\\PScale: As shown\\\\PDate: 2026-11-26']), ('0x560', '0x550', ['Single Door Detail (1:16)', '@Pbtbl']), ('0x561', '0x550', ['Window / Profile Detail (1:10)', '@Pbtb`'])]\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_step_669_p1": {
+          "kind": "tools",
+          "source": "trajectory",
+          "label": "Step 669 · bash",
+          "record_sha256": "f7f50bf450791526257f33dd6875ac72481951cbee96015c6ba1df9202bae59c",
+          "record": {
+            "step": 669,
+            "timestamp": "2026-11-26T22:21:22.486603+00:00",
+            "status": "completed",
+            "tool_calls": [
+              {
+                "tool_call_id": "call_16348615648843044569",
+                "function_name": "bash",
+                "arguments": {
+                  "command": "python3 - << 'EOF'\nimport json\nimport subprocess\n\np = subprocess.Popen(\n    [\"/usr/local/bin/OpenCADStudio\", \"--mcp\"],\n    stdin=subprocess.PIPE,\n    stdout=subprocess.PIPE,\n    stderr=subprocess.PIPE,\n    text=True\n)\n\ndef call_mcp(method, params=None, req_id=1):\n    req = {\"jsonrpc\": \"2.0\", \"id\": req_id, \"method\": method}\n    if params is not None:\n        req[\"params\"] = params\n    p.stdin.write(json.dumps(req) + \"\\n\")\n    p.stdin.flush()\n    while True:\n        line = p.stdout.readline()\n        if not line:\n            break\n        line = line.strip()\n        if line.startswith(\"{\"):\n            return json.loads(line)\n\ncall_mcp(\"initialize\", {\n    \"protocolVersion\": \"2024-11-05\",\n    \"capabilities\": {},\n    \"clientInfo\": {\"name\": \"test\", \"version\": \"1.0\"}\n})\n\nsess = call_mcp(\"tools/call\", {\"name\": \"ocs_sessions\", \"arguments\": {}}, 2)\nsession_id = sess[\"result\"][\"structuredContent\"][\"result\"][0][\"session_id\"]\n\nsave_res = call_mcp(\"tools/call\", {\n    \"name\": \"ocs_save_verified\",\n    \"arguments\": {\n        \"ocs_session_id\": session_id,\n        \"path\": \"/home/ga/Documents/CAD/floor plan exercise.dwg\",\n        \"overwrite\": True\n    }\n})\nprint(\"Save verified result:\", save_res.get(\"result\", {}).get(\"content\", [{}])[0].get(\"text\"))\n\np.kill()\nEOF\n",
+                  "timeout": 30
+                }
+              }
+            ],
+            "results": [
+              {
+                "call_id": "call_16348615648843044569",
+                "text": "Save verified result: {\"changes\":[],\"error\":null,\"ok\":true,\"request_id\":\"c131fe6753b9e7e3fc80b49d31d0b610\",\"result\":{\"audit\":{\"bounds\":{\"max\":[420.0,297.0,0.0],\"min\":[-5.0,-5.0,0.0]},\"document_id\":2,\"issues\":[],\"manifest\":{\"by_layer\":{\"0\":49,\"A-DOOR\":26,\"A-GLAZ\":28,\"A-WALL-EXTR\":71,\"A-WALL-INTR\":224,\"Defpoints\":3,\"Dimensions\":36,\"Furnitures\":93,\"text labels\":15},\"by_type\":{\"Arc\":3,\"Block Reference\":64,\"Dimension\":36,\"Line\":333,\"MText\":3,\"Polyline\":14,\"Solid\":1,\"Spline\":63,\"Text\":23,\"Viewport\":5},\"total\":545},\"ok\":true,\"source\":{\"dxf_structure\":null,\"format\":\"dwg\",\"path\":\"/home/ga/Documents/CAD/floor plan exercise.dwg\",\"sha256\":\"5547c3700221221d6fda8afd45c79be2d82c9be4bf9f104af1ac68159de8156b\",\"version\":\"AC1032\"},\"status\":\"passed\",\"summary\":{\"errors\":0,\"warnings\":0},\"target\":{\"dropped_on_save\":0,\"format\":\"dwg\",\"lossless\":true,\"mtext_losses\":[],\"version\":\"AC1032\"},\"unknown_entities\":0},\"bytes\":60998,\"dropped_on_save\":0,\"dxf_structure\":null,\"manifest\":{\"by_layer\":{\"0\":49,\"A-DOOR\":26,\"A-GLAZ\":28,\"A-WALL-EXTR\":71,\"A-WALL-INTR\":224,\"Defpoints\":3,\"Dimensions\":36,\"Furnitures\":93,\"text labels\":15},\"by_type\":{\"Arc\":3,\"Block Reference\":64,\"Dimension\":36,\"Line\":333,\"MText\":3,\"Polyline\":14,\"Solid\":1,\"Spline\":63,\"Text\":23,\"Viewport\":5},\"total\":545},\"mtext_losses\":[],\"ok\":true,\"saved\":\"/home/ga/Documents/CAD/floor plan exercise.dwg\",\"sha256\":\"3f3953f445dabc510d9277310ff6abe0ef7f6b7d6e028941cf157991175652a2\",\"status\":\"completed\",\"target_format\":\"dwg\",\"target_version\":\"AC1032\",\"verified\":true},\"state\":{\"camera_revision\":4,\"command\":null,\"document_id\":2,\"event_cursor\":14,\"geometry_revision\":20,\"modal\":null,\"operation\":null,\"revision\":6,\"selection\":[],\"selection_revision\":2,\"session_id\":\"d79902e8ad0849dce3c7643da83f39c9\"},\"status\":\"completed\"}\n"
+              }
+            ]
+          },
+          "explanation": {
+            "purpose": "Save the DWG at its assigned path and verify the saved content.",
+            "result": "The CAD application reported a verified 60,998-byte DWG, zero dropped entities and the SHA-256 of the saved file."
+          }
+        },
+        "obs_code_0021": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Physical viewport scales",
+          "record_sha256": "1d066d1aba20b2c70715b5bdece081ed26fe111389d39d8c0970fec582c5bb38",
+          "explanation": {
+            "purpose": "Independently decode the saved sheet cameras, physical margins, printable fields and door-dimension text positions relative to the detail viewport.",
+            "result": "The three saved viewports give physical scale denominators of 192.31, 15.36 and 9.60. The check also decoded paper margins and detail bounds."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nfor h,t,own,l in ef:\n if h in [0x566,0x568,0x569]:\n  r=ent(h)[1];xyz=[r.bd() for j in range(3)];W,H=r.bd(),r.bd();target=[r.bd() for j in range(3)];direction=[r.bd() for j in range(3)];twist=r.bd();vh=r.bd()\n  vw=W/H*vh;print('viewport',hex(h),'center',xyz,'width height',W,H,'target',target,'viewheight',vh,'denom',1000*vh/H,'model view xy ranges',(target[0]-vw/2,target[0]+vw/2),(target[1]-vh/2,target[1]+vh/2))\nfor h in (0x1e,0x553):\n t,r,x,b=obj(h);nonentity(r);flags=r.bs();left,bot,right,top,W,H=[r.bd() for _ in range(6)];origin=[r.bd() for _ in range(2)];u,rot,pt=[r.bs() for _ in range(3)];win=[r.bd() for _ in range(4)];rn,rd=r.bd(),r.bd()\n print('layout',hex(h),shiftedstrings(r)[:1],flags,W,H,'margins L B R T',left,bot,right,top,'origin',origin,'mm units',u,'plot type',pt,'ratio',rn,rd,'media paper space range',[-left,W-left,-bot,H-bot],'printable range',[0,W-left-right,0,H-bot-top])\nprint('details border',poly(0x554),'table',line(0x556))\nfor h in [0x487,0x498,0x4a7,0x4b8]:print('measurement and text position',hex(h),dim(h)[1],fr(dim(h)[-1]))\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "viewport 0x566 center [148.5, 130.0, 0] width height 267.0 130.0 target [19.0, 5.5, 0] viewheight 25.0 denom 192.30769230769232 model view xy ranges (-6.67307692307692, 44.67307692307692) (-7.0, 18.0)\nviewport 0x568 center [75.0, 132.5, 0] width height 114.0 125.0 target [60.45, 6.45, 0] viewheight 1.92 denom 15.36 model view xy ranges (59.57448, 61.325520000000004) (5.49, 7.41)\nviewport 0x569 center [210.0, 132.5, 0] width height 130.0 125.0 target [70.45, 6.15, 0] viewheight 1.2 denom 9.6 model view xy ranges (69.82600000000001, 71.074) (5.550000000000001, 6.75)\nlayout 0x1e ['Layout1'] 673 297.0 210.0 margins L B R T 5.0 5.0 5.0 5.0 origin [0, 0] mm units 1 plot type 5 ratio 1 1 media paper space range [-5.0, 292.0, -5.0, 205.0] printable range [0, 287.0, 0, 200.0]\nlayout 0x553 ['details'] 673 297.0 210.0 margins L B R T 7.5 20.0 7.5 20.0 origin [0, 0] mm units 1 plot type 5 ratio 1 1 media paper space range [-7.5, 289.5, -20.0, 190.0] printable range [0, 282.0, 0, 170.0]\ndetails border (512, [(10.0, 10.0), (287.0, 10.0), (287.0, 200.0), (10.0, 200.0)]) table ((287.0, 10.0), (287.0, 62.0))\nmeasurement and text position 0x487 0.05 (59.975, 6.585, 0)\nmeasurement and text position 0x498 0.9 (60.45, 6.495, 0)\nmeasurement and text position 0x4a7 0.1 (59.215, 6.05, 0)\nmeasurement and text position 0x4b8 0.9 (59.285, 6.45, 0)\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_screen": {
+          "kind": "screenshots",
+          "source": "live_environment",
+          "label": "Final screenshot",
+          "record_sha256": "1b37f272bcab062c7b6124a8cfebf1f2b258bbfaa546741edf379a07075d8945",
+          "file": "final-screen.jpg"
+        },
+        "obs_submitted_sheet_pdf_text": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Submitted sheet pdf text",
+          "record_sha256": "acc6e81275e491af9ffdb95d871e9f94ccf4281b5a9e4589425c84b36a3b02bf",
+          "inspection": {
+            "view": "submitted_sheet_pdf_text",
+            "page": 1
+          },
+          "record": "                          8.20\n\n              1.50 1.36   2.48    1.36   1.50\n                                                4.70                      9.20                               4.70                          8.20\n\n\n\n\n                   dinning area\n\n\n\n\n                                                                                                                                                                  2.70\n                                                  kitchen              unit 1                unit 2                               unit 3           unit 4\n\n\n\n\n                                                                                                                                                                0.90\n1.36\n\n\n\n\n                                                                                                                                                                           10.35\n                                                                                                                                            Disabled bathroom\n1.09\n\n\n\n\n                                  common area\n                                                       stairs    office          laundry\n\n\n\n\n                                                                                                                                                                2.550.70\n                                                                                           stairs                   unit 7        unit 6           unit 5\n1.36\n1.15\n\n\n\n\n                                                                4.75             1.50\n                                                                                                      7.35                                 8.20\n\n       3.30                         13.20\n\n\n\n\n                                                                                                                             Project: Example 1\n\n\n                                                                                                                             Location: Athens\n\n\n                                                                                                                             Drawing name: Ground floor\n\n                                                                                                                             Drawn: ga\n                                                                                                                             Scale: 1:200\n                                                                                                                             Date: 2026-11-26\n\f",
+          "explanation": {
+            "purpose": "Read the text in the published PDF.",
+            "result": "The original guest extracted room labels, dimensions and title-block text."
+          }
+        },
+        "obs_delivered_files": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Delivered files",
+          "record_sha256": "465007e9dd4716a0a61b2da8a0d69c5dff8205d101c51cf05da94dff0ea58d4c",
+          "inspection": {
+            "view": "delivered_files",
+            "page": 1
+          },
+          "record": "total 318\n-rw-r--r-- 1 ga ga  32566 Nov 26 21:14 bath furnitures.dwg\ndrwxr-xr-x 1 ga ga     80 Nov 26 21:14 Blocks\n-rw-r--r-- 1 ga ga  73884 Nov 26 22:24 example 2.pdf\n-rw-r--r-- 1 ga ga  60998 Nov 26 22:21 floor plan exercise.dwg\n-rw-r--r-- 1 ga ga 156488 Nov 26 21:14 floor plan exercise reference.pdf\n",
+          "explanation": {
+            "purpose": "Locate the original deliverables in the guest.",
+            "result": "The original guest file listing reports the DWG and PDF."
+          }
+        },
+        "obs_submitted_sheet_pdf_info": {
+          "kind": "environment",
+          "source": "live_environment",
+          "label": "Submitted sheet pdf info",
+          "record_sha256": "72ea480802620376d943e547501170fccdc9c81a514137e01c06337b7f57a5b3",
+          "inspection": {
+            "view": "submitted_sheet_pdf_info",
+            "page": 1
+          },
+          "record": "Title:           Open CAD Studio Export\nSubject:         \nKeywords:        \nAuthor:          \nCreator:         \nProducer:        \nCreationDate:    Thu Jan  1 00:00:00 1970 UTC\nModDate:         Thu Jan  1 00:00:00 1970 UTC\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           1\nEncrypted:       no\nPage size:       842 x 595 pts (A4)\nPage rot:        0\nFile size:       73884 bytes\nOptimized:       no\nPDF version:     1.3\nPDF subtype:    \n    Title:         ISO 15930 - Electronic document file format for prepress digital data exchange (PDF/X)\n    Abbreviation:  PDF/X\n    Subtitle:      Part 9\n    Standard:      ISO 15930-9\n",
+          "explanation": {
+            "purpose": "Inspect the published ground-floor PDF.",
+            "result": "The original guest reported its page count and paper dimensions."
+          }
+        },
+        "obs_code_0027": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Dimension endpoints and legibility",
+          "record_sha256": "840ed813fb2effefd7655994ffca7bbb38684ee30a6a832baa118b58b17d0008",
+          "explanation": {
+            "purpose": "Compare the entered overall north-facade dimensions with their wall endpoints, and evaluate label locations and clipping on the dimensioned details.",
+            "result": "The output locates facade endpoints and projects dimension labels into paper space, including labels outside the printable area."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nfor h,wall in [(0x337,0x16d),(0x346,0x16b)]:\n p,v,xd,x,mid=dim(h);print('overall',hex(h),'origins',p[:2],'measurement',v,'actual wall',w[wall],'span',math.dist(*w[wall]),'horizontal discrepancies', [round(abs(a[0]-b[0]),5) for a,b in zip(sorted(p[:2]),sorted(w[wall]))])\nfor h,t,o,l in ef:\n if t==21 and h>=0x487:\n  ps,meas,xd,mark,mid=dim(h);v=0x568 if h<0x4cf else 0x569;r=ent(v)[1]\n  ctr=[r.bd() for _ in range(3)];W,H=r.bd(),r.bd();tx,ty,tz=[r.bd() for _ in range(3)]\n  for _ in range(4):r.bd()\n  vh=r.bd();factor=H/vh;X=ctr[0]+(mid[0]-tx)*factor;Y=ctr[1]+(mid[1]-ty)*factor\n  visible=abs(X-ctr[0])<=W/2 and abs(Y-ctr[1])<=H/2\n  offset=(mid[1]-ps[2][1] if abs(ps[0][1]-ps[1][1])<.00001 else mid[0]-ps[2][0])*factor\n  print(hex(h),'value',meas,'text paper XY',round(X,2),round(Y,2),'in view',visible,'in printable area',0<=X<=282 and 0<=Y<=170,'perpendicular text distance from dimension line mm',round(abs(offset),2))\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "overall 0x337 origins [(25.3, 10.5), (30.0, 10.5)] measurement 4.7 actual wall ((30.00000058383002, 9.597403265828902), (25.29378696284791, 9.597403265828902)) span 4.706213620982108 horizontal discrepancies [0.00621, 0.0]\noverall 0x346 origins [(30.0, 10.5), (38.2, 10.5)] measurement 8.2 actual wall ((38.19999897829748, 10.35000058329997), (30.00000058383002, 10.35000058329997)) span 8.19999839446746 horizontal discrepancies [0.0, 0.0]\n0x487 value 0.05 text paper XY 44.08 141.29 in view True in printable area True perpendicular text distance from dimension line mm 43.29\n0x498 value 0.9 text paper XY 75.0 135.43 in view True in printable area True perpendicular text distance from dimension line mm 41.99\n0x4a7 value 0.1 text paper XY -5.4 106.46 in view False in printable area False perpendicular text distance from dimension line mm 43.29\n0x4b8 value 0.9 text paper XY -0.85 132.5 in view False in printable area False perpendicular text distance from dimension line mm 41.99\n0x4cf value 0.9 text paper XY 210.0 174.95 in view True in printable area False perpendicular text distance from dimension line mm 66.41\n0x4de value 0.05 text paper XY 89.14 119.48 in view False in printable area True perpendicular text distance from dimension line mm 67.74\n0x4ef value 0.08 text paper XY 89.14 126.25 in view False in printable area True perpendicular text distance from dimension line mm 67.74\n0x500 value 0.05 text paper XY 165.73 203.36 in view False in printable area False perpendicular text distance from dimension line mm 67.74\n0x511 value 0.04 text paper XY 195.39 126.25 in view True in printable area True perpendicular text distance from dimension line mm 67.74\n0x522 value 0.05 text paper XY 195.39 119.48 in view True in printable area True perpendicular text distance from dimension line mm 67.74\n0x533 value 0.3 text paper XY 205.05 132.5 in view True in printable area True perpendicular text distance from dimension line mm 66.41\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_code_0023": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "PDF clipping boundary",
+          "record_sha256": "ed550de53f97f006230410e15a87c52bf8d7f71edd42f49333b47c8ab36eca76",
+          "explanation": {
+            "purpose": "Inspect actual PDF content streams for hard plot clipping and compare border placement with margin and media extents.",
+            "result": "The exported Layout1 PDF contains a clipping path in its content stream."
+          },
+          "record": {
+            "code": "import re,zlib\nfrom pathlib import Path\np=Path('/home/ga/Documents/CAD/example 2.pdf').read_bytes();print(p[:300])\nfor a in re.finditer(rb'(?ms)(\\d+) 0 obj\\b(.*?)endobj',p):\n b=a[2]\n if b'/MediaBox' in b:print(b[:1200])\n m=re.search(rb'stream\\r?\\n(.*?)\\r?\\n?endstream',b,re.S)\n if not m:continue\n data=m[1]\n if b'/FlateDecode' in b[:m.start()]:\n  try:data=zlib.decompress(data)\n  except:continue\n if b' l' in data and b' m' in data:\n  print('stream',a[1],len(data),'initial commands',data[:660], 'clip operations',len(re.findall(rb'\\bW\\*?\\b',data)), 'rect clips',re.findall(rb'[-\\d. ]+ re\\s+W\\*?',data)[:8])\n",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "b'%PDF-1.3\\n%\\xbb\\xad\\xc0\\xde\\n1 0 obj\\n<</Type/Pages/Count 1/Kids[30 0 R]>>\\nendobj\\n2 0 obj\\n<</Type/OCG/CreatorInfo<</Creator(Open CAD Studio)/Subtype/Artwork>>>>\\nendobj\\n3 0 obj\\n[/View/Design]\\nendobj\\n4 0 obj\\n<</Type/OCG/Name(A-DOOR)/Intent 3 0 R/Usage 2 0 R>>\\nendobj\\n5 0 obj\\n<</Type/OCG/CreatorInfo<</Creator(Open CAD'\nb'\\n<</Type/Page/MediaBox[0 0 842 595]/TrimBox[0 0 842 595]/CropBox[0 0 842 595]/Parent 1 0 R/Resources 31 0 R/Contents 32 0 R/Annots[]>>\\n'\nstream b'32' 260122 initial commands b'1 1 1 rg\\n0 0 841.88983 595.27563 re\\nn\\n1 J\\n1 j\\nq\\n1 0 -0 1 0 0 cm\\n14.173225 14.173225 m\\n827.7164 14.173225 l\\n827.7164 581.10223 l\\n14.173225 581.10223 l\\nh\\nW\\nn\\n/OC /HEIGIDGCBAAHFGBHAEFHCBHGAJHCJDHF BDC\\n0 0 0 RG\\n0 0 0 rg\\n0.7499998 w\\n[] 0 d\\n501.76996 308.2624 m\\n502.0872 308.2624 l\\nS\\n502.0872 308.2624 m\\n597.2599 308.2624 l\\nS\\n597.2599 308.2624 m\\n597.2599 301.60632 l\\nS\\nEMC\\n/OC /HGJBDAIGCHFGIHDGCIGHCIGJEBHIGBEF BDC\\n597.2599 301.60632 m\\n718.1292 301.60632 l\\nS\\n718.1292 301.60632 m\\n718.1292 454.167 l\\nS\\n718.1292 454.167 m\\n597.2599 454.167 l\\nS\\nEMC\\n/OC /HEIGIDGCBAAHFGBHAEFHCBHGAJHCJDHF BDC\\n597.2599 454.167 m\\n597.2599 443.0736 l\\nS\\n597.2599 443.0736 m\\n527.8896 443.0736 ' clip operations 1 rect clips []\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        },
+        "obs_frame_pi_675_1": {
+          "kind": "screenshots",
+          "source": "recorded_screenshot",
+          "label": "Screenshot · step 675",
+          "record_sha256": "59715481bb3164e9720888b3c48895ee5f638532cfa4ed9d5d05038a1e2fad22",
+          "file": "pi_675_1.jpg"
+        },
+        "obs_code_0016": {
+          "kind": "analysis",
+          "source": "archived_file_check",
+          "label": "Sheet geometry and printing settings",
+          "record_sha256": "5c720d0fa87d003e9904cb77c288991d8714e183a3f5f12e0f475aaf2b6e0ebf",
+          "explanation": {
+            "purpose": "Verify viewport, border and title-table placement against each sheet's actual paper and plot limits, and inspect native plot properties.",
+            "result": "The returned layout and calibration records locate the two sheets’ viewports, borders and title-block lines."
+          },
+          "record": {
+            "code": "import json,hashlib\nfrom pathlib import Path\nP=Path('/evidence')\ndef hist(i):return json.loads((P/f'obs_code_{i:04}.json').read_text())\nexec(hist(27)['code'].split('entities=[]')[0])\nee=json.loads((P/'current_editor_entities_first_500.txt').read_text())['entities']\nE={int(e['handle'],16):e for e in ee}\nw=lines()\nT={h:obj(h)[0] for h in idx}\nef=[(h,t,*ent(h)[3:5]) for h,t in T.items() if t in [1,7,17,19,21,27,31,34,36,44,77]]\nprint(hist(19)['code'].split('def nonentity')[-1][-5200:])\nprint('sheet lines and owners',[(hex(h),hex(o),tuple(fr(p) for p in line(h))) for h,t,o,l in ef if t==19 and o in [0x1b,0x550]])\nprint('plotting code references:',hist(16)['data']['stdout'][-1600:]);print('original calibration',hist(8)['data']['stdout'][-2200:])",
+            "result": {
+              "ok": true,
+              "exit_code": 0,
+              "stdout": "(r):\n reactors=bl(r);xdmissing=r.r(1);ds=r.r(1);return reactors,xdmissing,ds\ndef handles(r,b):\n r.i=len(r.bits)-b\n result=[]\n while r.i+8<=len(r.bits):\n  c=r.r(4);n=r.r(4)\n  if r.i+8*n>len(r.bits):break\n  result.append((c,int.from_bytes(r.raw(n),'big')))\n return result\nfor h,w,ht in [(0x566,267,130),(0x568,114,125),(0x569,130,125)]:\n t,r,x,b=obj(h);i=r.bits.index(bd(w)+bd(ht));r.i=i\n v=[r.bd() for j in range(10)]\n print('viewport',hex(h), 'W,H,target3,dir3,twist,viewheight',v, 'mm/m',v[1]/v[-1], 'physical denominator',1000*v[-1]/v[1],'refs',[(c,hex(k)) for c,k in handles(r,b)])\nfor h in idx:\n t,r,x,b=obj(h)\n if t==82:\n  print('layout',hex(h),shiftedstrings(r));print('common',nonentity(r),'flags',r.bs(),'margins and paper', [r.bd() for j in range(6)],'origin',[r.bd() for j in range(2)],'units,rotation,plotType',[r.bs() for j in range(3)],'plotwindow,scale numerator&denominator',[r.bd() for j in range(6)])\n if t==51:\n  nonentity(r);xref=r.bs();flags=r.bs(); print('layer',hex(h),shiftedstrings(r),'xref',xref,'flags',flags,'plots',bool(flags&16))\n if t==67 and h==197: print('annotation app id',hex(h),shiftedstrings(r))\n\nsheet lines and owners [('0x545', '0x1b', ((205.0, 10.0), (205.0, 62.0))), ('0x546', '0x1b', ((287.0, 10.0), (287.0, 62.0))), ('0x547', '0x1b', ((205.0, 10.0), (287.0, 10.0))), ('0x548', '0x1b', ((205.0, 24.0), (287.0, 24.0))), ('0x549', '0x1b', ((205.0, 36.0), (287.0, 36.0))), ('0x54a', '0x1b', ((205.0, 49.0), (287.0, 49.0))), ('0x54b', '0x1b', ((205.0, 62.0), (287.0, 62.0))), ('0x555', '0x550', ((205.0, 10.0), (205.0, 62.0))), ('0x556', '0x550', ((287.0, 10.0), (287.0, 62.0))), ('0x557', '0x550', ((205.0, 10.0), (287.0, 10.0))), ('0x558', '0x550', ((205.0, 24.0), (287.0, 24.0))), ('0x559', '0x550', ((205.0, 36.0), (287.0, 36.0))), ('0x55a', '0x550', ((205.0, 49.0), (287.0, 49.0))), ('0x55b', '0x550', ((205.0, 62.0), (287.0, 62.0)))]\nplotting code references: Insert(insert)) = doc.get_entity(common.owner_handle) {\n            return annotation_flag(&insert.common.extended_data)\n                .or_else(|| insert_annotation_flag(doc, insert))\n                .filter(|flag| !flag);\n        }\n        None\n    })\n}\n\n/// Whether an entity participates in annotation scaling.\npub fn is_annotative(doc: &Document, entity: &EntityType) -> bool {\n    if object_is_annotative(doc, entity.common()) {\n        return true;\n    }\n    // Annotative via the entity's own flag.\n    // Text styles can be made annotative without converting existing text;\n    // those objects must keep their stored height until explicitly updated.\n    match entity {\n        EntityType::Text(_) => false,\n        EntityType::MText(t) => t.is_annotative,\n        EntityType::AttributeEntity(attribute) => attribute.flags.annotative,\n        EntityType::AttributeDefinition(attribute) => attribute.flags.annotative,\n        EntityType::MultiLeader(ml) => mleader_is_annotative(doc, ml),\n        _ => false,\n    }\n}\n\n/// Whether an object participates in annotation scaling. Explicit object and\n/// effective block-definition flags outrank contexts; text styles do not count.\npub fn object_is_annotative(doc: &Document, common: &EntityCommon) -> bool {\n    let xd = &common.extended_data;\n    if let Some(flag) = explicit_annotation_flag(doc, common) {\n        return flag;\n    }\n    // Per-object annotation context (works regardless of style).\n    has_context_manager(doc, common)\n        || xd.get_record(\"AcAnnoPO\").is_some()\n        || xd.get_record(\"AcAnnotativeData\").is_some()\n}\n[]\n\noriginal calibration 281.742188 L 202.082031 275.085938  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 202.082031 275.085938 L 396.761719 275.085938  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 396.761719 275.085938 L 396.761719 308.261719  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 396.761719 308.261719 L 453.867188 308.261719  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 503.566406 312.699219 L 523.554688 312.699219  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 525.035156 312.699219 L 561.835938 312.699219  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 563.316406 312.699219 L 601.59375 312.699219  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 601.59375 312.699219 L 601.59375 306.042969  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 601.59375 306.042969 L 609.738281 306.042969  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\nM 611.21875 306.042969 L 656.902344 306.042969  matrix(1,0,0,-1,0,595) fill:none;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:\n[('matrix(1,0,0,-1,0,595)', 2227)]\n[('unit', [442.49, 162.22, 455.69, 169.8]), ('1', [457.97, 162.22, 462.52, 169.8]), ('unit', [508.82, 162.22, 522.02, 169.8]), ('unit', [626.74, 162.22, 639.94, 169.8]), ('unit', [682.75, 162.22, 695.95, 169.8]), ('kitchen', [358.47, 162.22, 384.41, 169.8]), ('dinning', [225.81, 140.11, 252.21, 147.69]), ('Disabled', [653.27, 213.81, 685.13, 221.39]), ('bathroom', [687.4, 213.81, 721.99, 221.39]), ('stairs', [364.37, 250.66, 383.93, 258.24]), ('office', [427.75, 250.66, 447.32, 258.24]), ('laundry', [467.55, 250.66, 494.4, 258.24]), ('stairs', [501.45, 260.98, 521.01, 268.56]), ('unit', [575.15, 260.98, 588.35, 268.56]), ('unit', [682.75, 260.98, 695.95, 268.56]), ('unit', [626.74, 260.98, 639.94, 268.56]), ('common', [280.35, 235.92, 311.74, 243.5]), ('1', [680.91, 423.52, 686.38, 432.63])]\n\n",
+              "stderr": "",
+              "stdout_truncated": false,
+              "stderr_truncated": false
+            }
+          }
+        }
+      },
+      "runtime_seconds": 4322,
+      "total_tokens": 85287341,
+      "output_files": [
+        {
+          "name": "example 2.pdf",
+          "guest_path": "/home/ga/Documents/CAD/example 2.pdf",
+          "bytes": 73884,
+          "sha256": "0175446b340643fdd36a960089f411888e202f89c5df0f704ff1f29fe82a713a"
+        },
+        {
+          "name": "floor plan exercise.dwg",
+          "guest_path": "/home/ga/Documents/CAD/floor plan exercise.dwg",
+          "bytes": 60998,
+          "sha256": "3f3953f445dabc510d9277310ff6abe0ef7f6b7d6e028941cf157991175652a2"
+        }
+      ],
+      "action_count": 351,
+      "archive": {
+        "url": "https://github.com/yyu6969/aab_benchmark_website/releases/download/instruction-run-archives-20261125/autocad_pi_20261126_161147_11288530.zip",
+        "bytes": 391914,
+        "sha256": "28c0b975f642eba2c86de431971a3b419a9ff3c697904f78c5fb35144f8408b6"
+      },
+      "reverification": {
+        "checklist_sha256": "133736d90f284db422a15a84de674a2fa7765f0a1a4d78b9ea0151a62a516903",
+        "changed": 85,
+        "carried": 0,
+        "results": "reverification.zip",
+        "evidence_summary": "The original solver run finished, but its verifier timed out. Codex graded all 85 criteria from the saved trajectory, screenshots, guest records, DWG and PDF. New Python checks used read-only copies of the archived files."
+      }
+    },
     "agent_runs": {
       "guided": {
         "job": "autocad_pi_guidance_rubrics_20261119_040023_11207585",

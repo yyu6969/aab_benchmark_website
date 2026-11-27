@@ -218,6 +218,8 @@ def evidence_template(ref, item, directory):
         if item.get("cropped"):
             label += " · cropped"
         blocks.append(f'<a href="{src}" aria-label="Open {label} at full size"><img src="{src}" alt="{label}"></a>')
+        if item["kind"] == "analysis" and "record" in item:
+            blocks.append('<h5>Analysis result</h5>' + evidence_code(item["record"]))
     elif item["kind"] == "tools" and isinstance(item["record"], dict) and "tool_calls" in item["record"]:
         step = item["record"]
         blocks.append('<p class="evidence-meta">' + escape(" · ".join(filter(None, [step.get("timestamp"), step.get("status")]))) + '</p>')
@@ -285,10 +287,12 @@ def render_instruction_run(task, prefix, inline):
             "No evidence cited yet." if not record else "No evidence cited.")
         value = "null" if score is None else str(score)
         carried = ' <small>(Original verdict retained.)</small>' if record.get("origin") == "carried_forward" else ""
+        review_note = record.get("review_note")
+        note = f'<p><strong>Review note</strong> {escape(review_note)}</p>' if review_note else ""
         reference = f'{number:02}' if historical else f'<a href="#rubric-{number}">{number:02}</a>'
         rows.append(f'<tr data-rubric-id="{escape(key)}"><th scope="row">{reference}</th>'
                     f'<td>{inline(rubric["criterion"])}</td><td data-label="Score"><strong>{value}</strong></td>'
-                    f'<td data-label="Reason">{escape(reason)}{carried}</td><td data-label="Evidence">{refs}</td></tr>')
+                    f'<td data-label="Reason">{escape(reason)}{carried}{note}</td><td data-label="Evidence">{refs}</td></tr>')
     scored = [r["score"] for r in run["rows"].values() if r["score"] is not None]
     total = len(rows)
     status = (f'{sum(scored)} / {total}' if len(scored) == total else
@@ -307,7 +311,8 @@ def render_instruction_run(task, prefix, inline):
             reviewed = f"Codex regraded {review['changed']} criteria using evidence saved from this run."
         if review["carried"]:
             reviewed += f" {review['carried']} unchanged criteria retain their original verdicts."
-        review_info = (f'<p>{reviewed} Live environment records were captured before the original guest shut down.</p>'
+        summary_text = review.get("evidence_summary") or (reviewed + " Live environment records were captured before the original guest shut down.")
+        review_info = (f'<p>{escape(summary_text)}</p>'
                        f'<p><a class="text-link" href="{directory}{file_url(review["results"])}" download>Download revised verification (ZIP)</a></p>')
         if review.get("preview"):
             review_info += (f'<p><a class="text-link" href="{directory}{file_url(review["preview"])}">'
